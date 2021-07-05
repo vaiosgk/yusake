@@ -1,0 +1,2058 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>FishEye: history svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.java</title>
+        <link rel="SHORTCUT ICON" href="http://yusuke.homeip.net/fisheye/static/k9s70z/images/favicon.ico"/>
+<link rel="stylesheet" href="../../../../../../../../../fisheye/static/k9s70z/css/headerfooter.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../fisheye/static/k9s70z/main.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../fisheye/static/k9s70z/diff.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../fisheye/uar/browser.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../fisheye/static/k9s70z/custom.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../fisheye/static/k9s70z/synhi.css" type="text/css"/>
+<script src="../../../../../../../../../fisheye/static/k9s70z/global.js" type="text/javascript" language="Javascript1.2" charset="utf-8"></script>
+<script type="text/javascript" language="Javascript1.2">
+var fishEyePageContext = '/fisheye';
+var fishEyeSTATICDIR = 'static/k9s70z';
+</script>
+  <script src="../../../../../../../../../fisheye/static/k9s70z/prototype.js" type="text/javascript"></script>
+  <script src="../../../../../../../../../fisheye/static/k9s70z/filehist_utils.js" type="text/javascript" language="Javascript1.2" charset="utf-8"></script>
+  <script type="text/javascript">
+    function postLoadResources() {
+    new Ajax.Updater('imageMapDiv','/fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.java',{method: 'get', parameters: 'imageMap=imageMap', asynchronous: true});
+    }
+    ;
+  </script>
+</head>
+<body onload="postLoadResources();">
+<div id="header">
+    <h1>
+                <a class="fe_logo" href="/">FishEye</a>
+    </h1>
+    <ul>
+                <li>
+                    <a href="/">Chart</a>
+                </li>
+                <li>
+                    <a href="/">Search</a>
+                </li>
+                <li>
+                    <a href="/">Changelog</a>
+                </li>
+                <li class="active">
+                    <a href="../../../../../../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j.html">Browse</a>
+                </li>
+        <li id="headerUserDetails">
+                    Guest |
+                    <a href="/">Login</a>
+                    |
+            <a target="_help" href="http://docs.atlassian.com/fisheye/docs-016/Viewing+a+File+History" class="head_help" title="">Help</a>
+        </li>
+    </ul>
+</div>
+<table id="secondHeader" cellspacing="0">
+  <tr>
+    <td id="breadCrumb">
+      <!-- queryStrSuffix should be html escaped if necessary before being passed in--><a class="breadCrumbRepository" href="/">svn</a>:/<a href="/">twitter4j</a>/<a href="../../../../../../../../../fisheye/browse/svn/twitter4j/trunk.html">trunk</a>/<a href="/">src</a>/<a href="/">main</a>/<a href="/">java</a>/<a href="../../../../../../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j.html">twitter4j</a>/<a href="../../../../../../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.html">Twitter.java</a>
+    </td>
+    <form method="get" action="/">
+      <td id="quickSearch">
+        Quick Search:
+        <input class="qsInput" name="q" type="text" size="15"/>
+      </td>
+    </form>
+  </tr>
+</table>
+<table class="layout" cellspacing="0">
+  <tr>
+    <td class="layoutLeftPane">
+<div class="box">
+  <h3>
+        <span class="boxIcon"><span class="boxIconText">
+          <a href="/">View
+            detailed chart</a>
+      </span></span>
+    Line History <c:if test="false"> <c:out value=""/></c:if></h3>
+  <div class="dirPane">
+    <div id="imageMapDiv"></div>
+  </div>
+</div>
+      <div class="box">
+        <h3>View Mode</h3>
+        <div class="formPane">
+          <table>
+            <tr>
+              <td>
+                    <a href="/">Logical</a>
+              </td>
+              <td>
+                    <strong>Physical</strong>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Show Arbitrary Diff</h3>
+        <div class="formPane">
+          <a name="diff_form"></a>
+          <table>
+            <tr>
+              <td>
+                <form name="diffsubmitform" action="../../../../../../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.html" method="get">
+                  From <input type="text" size="7" name="r1">
+                  to <input type="text" size="7" name="r2">
+                  <input type="submit" value="Show Diffs">
+                </form>
+                <p class="hint">Supports revisions and tags.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Watches and RSS</h3>
+        <div class="formPane">
+              <a type="application/rss+xml" href="http://yusuke.homeip.net/fisheye/changelog/~rss/svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.java/rss.xml">
+                </a>
+        </div>
+      </div>
+    </td>
+    <td class="layoutRightPane2" style="text-align:center">
+<div class="box">
+  <h3>
+    History
+  </h3>
+  <div class="dirPane">
+    <map name="histimagemap">
+      <area href="#btrunk" alt="trunk" shape="rect" coords="10,10,87,40">
+<area href="#r238" alt="238" shape="rect" coords="13,50,84,80">
+<area href="#r2" alt="2" shape="rect" coords="14,90,83,120">
+    </map>
+  </div>
+</div>
+    </td>
+    <td class="layoutRightPane"/>
+  </tr>
+</table>
+<table class="layout" cellspacing="0">
+<tr><td class="layoutFullPane">
+  <a name="btrunk"></a>
+  <div class="box">
+   <h3 style="border-bottom-width:0;">
+       <span class="boxIcon"><span class="boxIconText">
+                <a href="/">latest revision</a>
+                <a href="/" title="download"></a>
+       </span></span>
+                <a href="../../../../../../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.html">trunk</a>
+   </h3>
+<div class="history">
+ <a name="r238"></a>
+ <p>
+ <strong>238</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('238')">other</a>
+    | Lines: 1775 ( +69, -4 )
+ </p>
+ <p>
+  Created: 2009-04-25 23:52:25 +0900
+  (53 hours ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">238</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-119 rename follow() / leave() to enableNotification() / disableNotification(), create() / destoy() to createFriendship() / destroyFriendship()</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r233"></a>
+ <p>
+ <strong>233</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('233')">other</a>
+    | Lines: 1710 ( +8, -8 )
+ </p>
+ <p>
+  Created: 2009-04-19 01:05:34 +0900
+  (9 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">233</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-114 verifyCredentials() should return extended user information</span>
+ <p>
+ </p>
+ <p>
+   Tags:
+      twitter4j-2_0_0
+</p>
+</div>
+<div class="history">
+ <a name="r232"></a>
+ <p>
+ <strong>232</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('232')">other</a>
+    | Lines: 1710 ( +6, -6 )
+ </p>
+ <p>
+  Created: 2009-04-19 00:43:00 +0900
+  (9 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">232</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-102 release Twtter4J 2.0.0</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r231"></a>
+ <p>
+ <strong>231</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('231')">other</a>
+    | Lines: 1710 ( +41, -4 )
+ </p>
+ <p>
+  Created: 2009-04-19 00:28:19 +0900
+  (9 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">231</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-97 support since_id with getDirectMessages and getSentDirectMessages</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r230"></a>
+ <p>
+ <strong>230</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('230')">other</a>
+    | Lines: 1673 ( +50, -0 )
+ </p>
+ <p>
+  Created: 2009-04-18 23:31:42 +0900
+  (9 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">230</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-96 support since_id with getUserTimeline</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r229"></a>
+ <p>
+ <strong>229</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('229')">other</a>
+    | Lines: 1623 ( +47, -1 )
+ </p>
+ <p>
+  Created: 2009-04-18 22:41:50 +0900
+  (9 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">229</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-49 support update_profile_colors method <br/></span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r227"></a>
+ <p>
+ <strong>227</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('227')">other</a>
+    | Lines: 1577 ( +70, -0 )
+ </p>
+ <p>
+  Created: 2009-04-18 20:33:54 +0900
+  (9 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">227</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-75 implemented social graph methods</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r224"></a>
+ <p>
+ <strong>224</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('224')">other</a>
+    | Lines: 1507 ( +8, -24 )
+ </p>
+ <p>
+  Created: 2009-04-18 18:37:38 +0900
+  (9 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">224</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-83 method name refactors</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r220"></a>
+ <p>
+ <strong>220</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('220')">other</a>
+    | Lines: 1523 ( +3, -0 )
+ </p>
+ <p>
+  Created: 2009-04-18 13:13:32 +0900
+  (9 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">220</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-92&nbsp;&nbsp;ensuring userid and password are initialized</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r211"></a>
+ <p>
+ <strong>211</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('211')">other</a>
+    | Lines: 1520 ( +30, -15 )
+ </p>
+ <p>
+  Created: 2009-04-15 23:58:50 +0900
+  (12 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">211</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-83 OAuth support <br/>added some javadoc comments</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r210"></a>
+ <p>
+ <strong>210</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('210')">other</a>
+    | Lines: 1505 ( +58, -12 )
+ </p>
+ <p>
+  Created: 2009-04-15 01:54:21 +0900
+  (13 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">210</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-83 OAuth support <br/>OAuth support initial implementation</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r209"></a>
+ <p>
+ <strong>209</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('209')">other</a>
+    | Lines: 1459 ( +5, -5 )
+ </p>
+ <p>
+  Created: 2009-04-09 02:12:29 +0900
+  (19 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">209</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-95 : getFriends(String id) and getFriends(String id, int page) return authenticating user's friends' timeline instead</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r208"></a>
+ <p>
+ <strong>208</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('208')">other</a>
+    | Lines: 1459 ( +4, -4 )
+ </p>
+ <p>
+  Created: 2009-04-09 01:46:43 +0900
+  (19 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">208</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-103 : User element is out of sync <br/>fix for TFJ-104 : UserWithStatus element is out of sync <br/>Introducing ExtendedUser, deprecating UserWithStatus to make the class name consistent with the API Doc <br/><a href="http://apiwiki.twitter.com/REST+API+Documentation#Extendeduserinformationelement">http://apiwiki.twitter.com/REST+API+Documentation#Extendeduserinformationelement</a></span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r204"></a>
+ <p>
+ <strong>204</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('204')">other</a>
+    | Lines: 1459 ( +3, -0 )
+ </p>
+ <p>
+  Created: 2009-04-07 02:07:23 +0900
+  (21 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">204</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-99 getAuthenticatedUser() fails with TwitterException if login is done with email address and password</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r203"></a>
+ <p>
+ <strong>203</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('203')">other</a>
+    | Lines: 1456 ( +49, -0 )
+ </p>
+ <p>
+  Created: 2009-04-07 01:53:03 +0900
+  (21 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">203</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-90 support since_id with getFriendsTimeline() and getReplies()</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r202"></a>
+ <p>
+ <strong>202</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('202')">other</a>
+    | Lines: 1407 ( +139, -1 )
+ </p>
+ <p>
+  Created: 2009-04-07 01:40:27 +0900
+  (21 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">202</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-90 support since_id with getFriendsTimeline() and getReplies()</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r199"></a>
+ <p>
+ <strong>199</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('199')">other</a>
+    | Lines: 1269 ( +4, -2 )
+ </p>
+ <p>
+  Created: 2009-03-23 00:39:29 +0900
+  (36 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">199</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-92 introduce System properties override userid and password <br/></span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r180"></a>
+ <p>
+ <strong>180</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('180')">other</a>
+    | Lines: 1267 ( +50, -24 )
+ </p>
+ <p>
+  Created: 2009-03-12 11:59:08 +0900
+  (46 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">180</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-84&nbsp;&nbsp;add license term to each source file <br/>cosmetic fixes @since twitter4j -&gt; @since Twitter4J <br/>added author tag</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r179"></a>
+ <p>
+ <strong>179</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('179')">other</a>
+    | Lines: 1241 ( +76, -16 )
+ </p>
+ <p>
+  Created: 2009-03-12 11:23:41 +0900
+  (46 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">179</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-86&nbsp;&nbsp;send User-Agent header <br/>TFJ-89&nbsp;&nbsp;System properties should win explicit setter methods</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r177"></a>
+ <p>
+ <strong>177</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('177')">other</a>
+    | Lines: 1181 ( +2, -2 )
+ </p>
+ <p>
+  Created: 2009-03-09 01:07:02 +0900
+  (50 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">177</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-82 release Twtter4J 1.1.7</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r176"></a>
+ <p>
+ <strong>176</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('176')">other</a>
+    | Lines: 1181 ( +70, -26 )
+ </p>
+ <p>
+  Created: 2009-03-09 00:57:37 +0900
+  (50 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">176</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-40 Search API support</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r175"></a>
+ <p>
+ <strong>175</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('175')">other</a>
+    | Lines: 1137 ( +4, -0 )
+ </p>
+ <p>
+  Created: 2009-03-07 23:03:59 +0900
+  (51 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">175</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-79 release Twtter4J 1.1.6</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r173"></a>
+ <p>
+ <strong>173</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('173')">other</a>
+    | Lines: 1133 ( +2, -2 )
+ </p>
+ <p>
+  Created: 2009-03-07 21:45:00 +0900
+  (51 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">173</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-79 release Twtter4J 1.1.6</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r172"></a>
+ <p>
+ <strong>172</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('172')">other</a>
+    | Lines: 1133 ( +39, -0 )
+ </p>
+ <p>
+  Created: 2009-03-07 21:08:27 +0900
+  (51 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">172</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-80 ability to specify connection / read timeout <br/>TFJ-81 http proxy authentication support</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r171"></a>
+ <p>
+ <strong>171</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('171')">other</a>
+    | Lines: 1094 ( +18, -0 )
+ </p>
+ <p>
+  Created: 2009-03-07 19:27:29 +0900
+  (51 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">171</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-78 ability to specify &#034;in_reply_to_status_id&#034; with update() method</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r166"></a>
+ <p>
+ <strong>166</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('166')">other</a>
+    | Lines: 1076 ( +2, -2 )
+ </p>
+ <p>
+  Created: 2009-01-12 15:00:44 +0900
+  (3 months 13 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">166</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-73 release twitter4j 1.1.5</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r164"></a>
+ <p>
+ <strong>164</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('164')">other</a>
+    | Lines: 1076 ( +2, -2 )
+ </p>
+ <p>
+  Created: 2009-01-12 01:15:35 +0900
+  (3 months 14 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">164</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-72 - release Twtter4J1.1.4</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r161"></a>
+ <p>
+ <strong>161</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('161')">other</a>
+    | Lines: 1076 ( +16, -6 )
+ </p>
+ <p>
+  Created: 2009-01-02 22:11:21 +0900
+  (3 months 23 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">161</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-52 support exists method</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r160"></a>
+ <p>
+ <strong>160</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('160')">other</a>
+    | Lines: 1066 ( +1, -1 )
+ </p>
+ <p>
+  Created: 2009-01-02 16:16:42 +0900
+  (3 months 23 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">160</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-48 support update_delivery_device method</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r159"></a>
+ <p>
+ <strong>159</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('159')">other</a>
+    | Lines: 1066 ( +13, -0 )
+ </p>
+ <p>
+  Created: 2009-01-02 15:55:50 +0900
+  (3 months 23 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">159</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-53 support rate_limit_status method</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r158"></a>
+ <p>
+ <strong>158</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('158')">other</a>
+    | Lines: 1053 ( +2, -2 )
+ </p>
+ <p>
+  Created: 2008-12-13 01:28:52 +0900
+  (4 months 14 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">158</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-68 release Twtter4J1.1.3</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r157"></a>
+ <p>
+ <strong>157</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('157')">other</a>
+    | Lines: 1053 ( +1, -1 )
+ </p>
+ <p>
+  Created: 2008-12-13 00:54:13 +0900
+  (4 months 14 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">157</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-67 verifyCredentials() returns always false since 10/12/2008</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r154"></a>
+ <p>
+ <strong>154</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('154')">other</a>
+    | Lines: 1053 ( +16, -0 )
+ </p>
+ <p>
+  Created: 2008-12-04 00:50:44 +0900
+  (4 months 23 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">154</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-33 ability to get the authenticated user</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r153"></a>
+ <p>
+ <strong>153</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('153')">other</a>
+    | Lines: 1037 ( +55, -54 )
+ </p>
+ <p>
+  Created: 2008-12-04 00:15:26 +0900
+  (4 months 23 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">153</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-65 methods don't have to be final</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r152"></a>
+ <p>
+ <strong>152</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('152')">other</a>
+    | Lines: 1036 ( +2, -2 )
+ </p>
+ <p>
+  Created: 2008-12-02 00:13:01 +0900
+  (4 months 25 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">152</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-64 releasing twitter4j 1.1.2</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r146"></a>
+ <p>
+ <strong>146</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('146')">other</a>
+    | Lines: 1036 ( +2, -2 )
+ </p>
+ <p>
+  Created: 2008-11-22 11:56:31 +0900
+  (5 months 3 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">146</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-59 release Twtter4J1.1.1</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r145"></a>
+ <p>
+ <strong>145</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('145')">other</a>
+    | Lines: 1036 ( +14, -1 )
+ </p>
+ <p>
+  Created: 2008-11-22 11:50:00 +0900
+  (5 months 3 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">145</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for: <br/>TFJ-54 Show method should take long instead of int <br/>TFJ-55 &nbsp;Show method shouldn't require userid and password <br/></span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r143"></a>
+ <p>
+ <strong>143</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('143')">other</a>
+    | Lines: 1023 ( +7, -17 )
+ </p>
+ <p>
+  Created: 2008-11-22 10:58:09 +0900
+  (5 months 3 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">143</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-57 Date is encoded twice, and therefore &#034;since&#034; doesn't work <br/></span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r142"></a>
+ <p>
+ <strong>142</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('142')">other</a>
+    | Lines: 1033 ( +3, -2 )
+ </p>
+ <p>
+  Created: 2008-11-22 10:00:02 +0900
+  (5 months 3 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">142</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-60 hashCode and equals are not properly implemented <br/></span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r141"></a>
+ <p>
+ <strong>141</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('141')">other</a>
+    | Lines: 1032 ( +3, -0 )
+ </p>
+ <p>
+  Created: 2008-11-22 09:36:46 +0900
+  (5 months 3 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">141</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-58 added a pointer to twitter API doc.</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r140"></a>
+ <p>
+ <strong>140</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('140')">other</a>
+    | Lines: 1029 ( +65, -49 )
+ </p>
+ <p>
+  Created: 2008-11-03 10:19:04 +0900
+  (5 months 22 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">140</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-47 implement toString()</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r137"></a>
+ <p>
+ <strong>137</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('137')">other</a>
+    | Lines: 1013 ( +38, -1 )
+ </p>
+ <p>
+  Created: 2008-11-02 14:10:29 +0900
+  (5 months 23 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">137</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-45 getFollowers() should accept id and/or page parameter</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r135"></a>
+ <p>
+ <strong>135</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('135')">other</a>
+    | Lines: 976 ( +0, -40 )
+ </p>
+ <p>
+  Created: 2008-11-02 01:08:06 +0900
+  (5 months 24 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">135</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-43 remove unsupported methods</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r131"></a>
+ <p>
+ <strong>131</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('131')">other</a>
+    | Lines: 1016 ( +5, -5 )
+ </p>
+ <p>
+  Created: 2008-10-30 19:37:38 +0900
+  (5 months 26 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">131</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-41 Status.getId() should return long instead of int <br/>twitter.Status.getId() now returns long. <br/>twitter.Twitter.destroyStatus()/createFavorite()/destroyFavorite() takes long.</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r130"></a>
+ <p>
+ <strong>130</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('130')">other</a>
+    | Lines: 1016 ( +10, -9 )
+ </p>
+ <p>
+  Created: 2008-10-29 01:10:34 +0900
+  (5 months 28 days ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">130</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-42 : maximum number of count is now 200</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r129"></a>
+ <p>
+ <strong>129</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('129')">other</a>
+    | Lines: 1015 ( +1, -1 )
+ </p>
+ <p>
+  Created: 2008-10-01 23:37:29 +0900
+  (6 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">129</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-38 getDirectMessage(int since) fails with 500 Internal Server Error</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r128"></a>
+ <p>
+ <strong>128</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('128')">other</a>
+    | Lines: 1015 ( +3, -2 )
+ </p>
+ <p>
+  Created: 2008-09-29 00:53:50 +0900
+  (6 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">128</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-37 : Unexpected root node name:nilclasses. Expected:nil-classes</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r126"></a>
+ <p>
+ <strong>126</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('126')">other</a>
+    | Lines: 1014 ( +17, -0 )
+ </p>
+ <p>
+  Created: 2008-09-16 01:31:30 +0900
+  (7 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">126</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-35 <br/>Implemented destoryStatus() method.</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r125"></a>
+ <p>
+ <strong>125</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('125')">other</a>
+    | Lines: 997 ( +14, -13 )
+ </p>
+ <p>
+  Created: 2008-09-16 01:13:40 +0900
+  (7 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">125</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-36 <br/>some methods now support only POST method.</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r89"></a>
+ <p>
+ <strong>89</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('89')">other</a>
+    | Lines: 996 ( +67, -67 )
+ </p>
+ <p>
+  Created: 2008-06-01 02:32:19 +0900
+  (10 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">89</a>
+  <!-- -->
+ </p>
+ <span class="csComment">javadoc updates</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r87"></a>
+ <p>
+ <strong>87</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('87')">other</a>
+    | Lines: 996 ( +68, -0 )
+ </p>
+ <p>
+  Created: 2008-06-01 01:45:18 +0900
+  (10 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">87</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-24 : support new APIs introduced on April 29th, 2008 <br/>block() / unblock() / test() / getDowntimeSchedule()</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r86"></a>
+ <p>
+ <strong>86</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('86')">other</a>
+    | Lines: 928 ( +26, -1 )
+ </p>
+ <p>
+  Created: 2008-06-01 00:29:36 +0900
+  (10 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">86</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-24 <br/>added updateLocation and updateDeliverlyDevice</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r85"></a>
+ <p>
+ <strong>85</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('85')">other</a>
+    | Lines: 903 ( +1, -1 )
+ </p>
+ <p>
+  Created: 2008-05-31 22:54:10 +0900
+  (10 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">85</a>
+  <!-- -->
+ </p>
+ <span class="csComment">some javadoc updates <br/>fix for TFJ-27 add &#034;source&#034;, &#034;truncated&#034;, &#034;in_reply_to_status_id&#034;, &#034;in_reply_to_user_id&#034;, &#034;favorited&#034; to Status, &#034;followers_count&#034; to User</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r84"></a>
+ <p>
+ <strong>84</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('84')">other</a>
+    | Lines: 903 ( +34, -18 )
+ </p>
+ <p>
+  Created: 2008-05-31 02:10:02 +0900
+  (10 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">84</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-21 post method was wrongly used.</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r82"></a>
+ <p>
+ <strong>82</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('82')">other</a>
+    | Lines: 887 ( +144, -148 )
+ </p>
+ <p>
+  Created: 2008-05-31 01:32:31 +0900
+  (10 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">82</a>
+  <!-- -->
+ </p>
+ <span class="csComment">some refactor and javadoc updates</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r81"></a>
+ <p>
+ <strong>81</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('81')">other</a>
+    | Lines: 891 ( +294, -203 )
+ </p>
+ <p>
+  Created: 2008-05-31 00:11:38 +0900
+  (10 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">81</a>
+  <!-- -->
+ </p>
+ <span class="csComment">TFJ-21 </span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r60"></a>
+ <p>
+ <strong>60</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('60')">other</a>
+    | Lines: 800 ( +4, -9 )
+ </p>
+ <p>
+  Created: 2008-05-08 01:09:09 +0900
+  (11 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">60</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-21</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r59"></a>
+ <p>
+ <strong>59</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('59')">other</a>
+    | Lines: 805 ( +117, -52 )
+ </p>
+ <p>
+  Created: 2008-05-08 00:56:32 +0900
+  (11 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">59</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-21</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r58"></a>
+ <p>
+ <strong>58</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('58')">other</a>
+    | Lines: 740 ( +28, -4 )
+ </p>
+ <p>
+  Created: 2008-05-07 11:59:31 +0900
+  (11 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">58</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-25</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r52"></a>
+ <p>
+ <strong>52</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('52')">other</a>
+    | Lines: 716 ( +58, -0 )
+ </p>
+ <p>
+  Created: 2008-01-19 23:46:47 +0900
+  (15 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">52</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fixed TFJ-19 support for favorite methods</span>
+ <p>
+ </p>
+ <p>
+   Tags:
+      twitter4j-1_0_3
+</p>
+</div>
+<div class="history">
+ <a name="r51"></a>
+ <p>
+ <strong>51</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('51')">other</a>
+    | Lines: 658 ( +34, -0 )
+ </p>
+ <p>
+  Created: 2008-01-19 22:16:49 +0900
+  (15 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">51</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fixed TFJ-18 support for Account Methods</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r50"></a>
+ <p>
+ <strong>50</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('50')">other</a>
+    | Lines: 624 ( +25, -0 )
+ </p>
+ <p>
+  Created: 2008-01-19 21:24:40 +0900
+  (15 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">50</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fixed TFJ-17 ability to specify &#034;page&#034; to getFriends() method</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r49"></a>
+ <p>
+ <strong>49</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('49')">other</a>
+    | Lines: 599 ( +29, -6 )
+ </p>
+ <p>
+  Created: 2008-01-19 15:59:46 +0900
+  (15 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">49</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fixed TFJ-16 support for follow / leave methods</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r45"></a>
+ <p>
+ <strong>45</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('45')">other</a>
+    | Lines: 576 ( +2, -2 )
+ </p>
+ <p>
+  Created: 2007-07-16 14:24:27 +0900
+  (21 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">45</a>
+  <!-- -->
+ </p>
+ <span class="csComment">changed version string for release 1.0.2</span>
+ <p>
+   Branch point for:
+    <a class="branchName" href="#btwitter4j-1_0_2">twitter4j-1_0_2</a>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r44"></a>
+ <p>
+ <strong>44</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('44')">other</a>
+    | Lines: 576 ( +29, -5 )
+ </p>
+ <p>
+  Created: 2007-07-16 14:22:23 +0900
+  (21 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">44</a>
+  <!-- -->
+ </p>
+ <span class="csComment">code for TFJ-8 : ability to set &#034;source&#034; parameter and request headers <br/> <br/>-added following methods to Twitter class <br/> &nbsp;&nbsp;&nbsp;public void setSource(String source) <br/> &nbsp;&nbsp;&nbsp;public void setRequestHeader(String name,String value)</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r43"></a>
+ <p>
+ <strong>43</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('43')">other</a>
+    | Lines: 552 ( +63, -0 )
+ </p>
+ <p>
+  Created: 2007-07-16 14:08:42 +0900
+  (21 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">43</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-12  <br/>-added following methods to Twitter class <br/> &nbsp;&nbsp;&nbsp;public final synchronized List&lt;Status&gt; getFriendsTimelineByPage(int page) <br/> &nbsp;&nbsp;&nbsp;public final synchronized List&lt;Status&gt; getFriendsTimelineByPage(String id,int page) <br/> &nbsp;&nbsp;&nbsp;public final synchronized List&lt;Status&gt; getRepliesByPage(int page) <br/> &nbsp;&nbsp;&nbsp;public final synchronized List&lt;DirectMessage&gt; getDirectMessagesByPage(int page) <br/> <br/>-added following methods to AsyncTwitter class <br/> &nbsp;&nbsp;&nbsp;public final synchronized void getFriendsTimelineByPageAsync(int page, TwitterListener listener)  <br/> &nbsp;&nbsp;&nbsp;public final synchronized void getFriendsTimelineByPageAsync(String id,int page, TwitterListener listener) <br/> &nbsp;&nbsp;&nbsp;public final synchronized void getRepliesByPageAsync(int page,TwitterListener listener)  <br/> &nbsp;&nbsp;&nbsp;public final synchronized void getDirectMessagesByPageAsync(int page, TwitterListener listener)</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r42"></a>
+ <p>
+ <strong>42</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('42')">other</a>
+    | Lines: 489 ( +15, -1 )
+ </p>
+ <p>
+  Created: 2007-07-16 13:02:57 +0900
+  (21 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">42</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-14 <br/>deprecated getPublicTimeline(java.lang.String sinceID)  <br/>added getPublicTimeline(int sinceID)</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r41"></a>
+ <p>
+ <strong>41</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('41')">other</a>
+    | Lines: 475 ( +44, -0 )
+ </p>
+ <p>
+  Created: 2007-07-16 12:16:20 +0900
+  (21 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">41</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-11 <br/>supported &#034;sent&#034; API</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r40"></a>
+ <p>
+ <strong>40</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('40')">other</a>
+    | Lines: 431 ( +1, -1 )
+ </p>
+ <p>
+  Created: 2007-07-16 11:55:03 +0900
+  (21 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">40</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-10 <br/>code for supporting &#034;sender&#034; and &#034;recipient&#034; elements in direct messages.</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r20"></a>
+ <p>
+ <strong>20</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('20')">other</a>
+    | Lines: 431 ( +13, -0 )
+ </p>
+ <p>
+  Created: 2007-06-23 00:46:02 +0900
+  (22 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">20</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-1 <br/><a href="../../../../../../../../../jira/browse/TFJ-1.html">http://yusuke.homeip.net/jira/browse/TFJ-1</a> <br/> <br/>implemented Twitter#destroyMessage() / AsyncTwitter#destroyMessage()</span>
+ <p>
+ </p>
+ <p>
+   Tags:
+      twitter4j-1_0_1
+</p>
+</div>
+<div class="history">
+ <a name="r17"></a>
+ <p>
+ <strong>17</strong>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+     | Diffs:
+     <a href="/">previous</a>,
+     <a href="javascript:fh_diffOther('17')">other</a>
+    | Lines: 418 ( +26, -29 )
+ </p>
+ <p>
+  Created: 2007-06-23 00:02:49 +0900
+  (22 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">17</a>
+  <!-- -->
+ </p>
+ <span class="csComment">fix for TFJ-5 <br/><a href="../../../../../../../../../jira/browse/TFJ-5.html">http://yusuke.homeip.net/jira/browse/TFJ-5</a> <br/> <br/>Corrected URI. <br/>Added Testcase.</span>
+ <p>
+ </p>
+ <p>
+</p>
+</div>
+<div class="history">
+ <a name="r2"></a>
+ <p>
+ <strong>2</strong>
+<em>new</em>
+<!-- -->
+            <a href="/">annotated</a>
+            /
+    <a href="/">raw</a>
+    | Lines: 421 ( +421, -0 )
+ </p>
+ <p>
+  Created: 2007-06-21 01:38:46 +0900
+  (22 months ago)
+  | Author: yusuke 
+  | Changeset: <a href="/">2</a>
+  <!-- -->
+ </p>
+ <span class="csComment"><em>no_comment</em></span>
+ <p>
+   Branch point for:
+    <a class="branchName" href="#btag:twitter4j-TWITTER4J_1_0_0">tag:twitter4j-TWITTER4J_1_0_0</a>
+ </p>
+ <p>
+   Tags:
+      twitter4j-TWITTER4J_1_0_0
+      twitter4j-1_0_0
+      twitter4j-1_1_8
+</p>
+</div>
+  </div>
+</td></tr>
+</table>
+        <div class="licensemessage">
+            FishEye: Open Source License registered to Yusuke Yamamoto.
+        </div>
+<div class="bottomshadow"> </div>
+    <div class="licensemessage">
+        <strong>
+            <a class="smalltext" href="http://downloads.atlassian.com/software/fisheye/FishEyeDownloadCenter.jspa">
+            Version 1.6.6 is available.</a>
+        </strong>
+    </div>
+<div id="poweredby" class="smalltext">
+    <a class="smalltext" href="http://www.atlassian.com/software/fisheye/">Atlassian FishEye</a>,
+                <a class="smalltext" href="http://www.atlassian.com/software/fisheye/">Subversion analysis</a>.
+    (Version:1.6.3
+    Build:build-336 2008-11-04) -
+    <a class="smalltext" href="/">Administration</a>
+    - Page generated 2009-04-28 05:17 +0900
+</div>
+<!--
+page produced in 910 ms
+-->
+</body>
+</html>

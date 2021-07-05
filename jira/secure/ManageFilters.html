@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Manage Filters - JIRA </title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/images/icons/favicon.png">
+<link rel="stylesheet" type="text/css" media="print" href="../../jira/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/235/1/0/_/styles/global.css"/>
+    <script language="JavaScript" type="text/javascript" src="../../jira/includes/js/combined-javascript.js"></script>
+        <script type="text/javascript" src="../../jira/s/235/1/_/includes/js/calendar/calendar.js"></script>
+        <script type="text/javascript" src="../../jira/s/235/1/_/includes/js/calendar/lang/calendar-en.js"></script>
+        <script type="text/javascript" src="../../jira/s/235/1/_/includes/js/calendar/calendar-setup.js"></script>
+        <script type="text/javascript">
+            // Hack to avoid bug in jscalendar - JRA-7713
+            if (!Calendar._TT["WEEKEND"]) { Calendar._TT["WEEKEND"] = "0,6";}
+            if (!Calendar._TT["DAY_FIRST"]) { Calendar._TT["DAY_FIRST"] = "Display %s first";}
+        </script>
+</head>
+<body bgcolor="#f0f0f0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#003366" vlink="#003366" alink="#660000">
+<script type="text/javascript" src="../../jira/s/235/1/_/includes/js/quicksearch.js"></script>
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+      <td bgcolor="#003366">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+            <td valign="top" width="5%" nowrap><a href="../../jira/secure/Dashboard.html"></a></td>
+            <td valign="bottom" width="65%" nowrap>&nbsp;</td>
+            <td valign="bottom" align="right" width="30%" nowrap>
+<font class="toptext" size="1">
+                        <a href="../../jira/secure/popups/recenthistory.html" title="Quick link to recently viewed issues" onclick="window.open('../../jira/secure/popups/recenthistory.html','user_history', 'width=620, height=135, resizable'); return false;">History</a>
+                 |                         <a rel="nofollow" href="/">Log In</a>
+&nbsp; &nbsp;
+                        <a rel="nofollow" href="/"></a>
+                    <a class="helpLink" href="http://www.atlassian.com/software/jira/docs/v3.9/index.html?clicked=jirahelp" target="_jirahelp">
+        </a>
+&nbsp;
+</font>
+            </td>
+        </tr></table>
+      </td>
+  </tr>
+</table>
+<table class="menu" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td bgcolor="#3c78b5">
+    <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="5"></td>
+                        <td nowrap onclick="window.document.location='/jira/secure/Dashboard.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../jira/secure/Dashboard.html" id="home_link" title="A configurable overview of JIRA" accesskey="h"><u>H</u>OME</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/BrowseProject.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../jira/secure/BrowseProject.html" id="browse_link" title="Browse currently active project 'Twitter4J'" accesskey="b"><u>B</u>ROWSE PROJECT</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../jira/secure/IssueNavigator.html" id="find_link" title="Find issues in the projects you have permissions to view" accesskey="f"><u>F</u>IND ISSUES</a> &nbsp;&nbsp;
+    </td>
+        <td align="right" class="navItem" valign="middle" bgcolor="#3c78b5" width="100%">
+            <form name="quicksearch" action="../../jira/secure/QuickSearch.html" method="post" style="padding: 0; margin: 0;">
+                <span class="navItem" onmouseover="showToolTip()" onmouseout="hideToolTip()">&nbsp; &nbsp;
+                    <u>Q</u>UICK SEARCH:
+                </span>
+                <span class="navItem">
+                    <input class="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." type="text" size="25" name="searchString" accesskey="q" id="quickSearchInput" valign="absmiddle">&nbsp;
+                </span>
+            </form>
+        </td>
+        <td width="5"></td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+<div class="alertHeader">
+<script src="../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<div onmouseover="recordInTip()" onmouseout="recordOutTip()" id="quicksearchhelp" class="informationBox" style="display: none; text-align: center; width: 20em; position: absolute; top: 55px; right: 10px; padding: 0.5em;">
+    Learn more about <a href="http://www.atlassian.com/software/jira/docs/v3.9/quicksearch.html?clicked=jirahelp" target="_jirahelp">Quick Search</a>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+<td class="filterSummaryCell">
+<div id="filterForm">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="dddddd" align="center">
+<tr><td></td></tr>
+<tr><td><table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" id="filterFormHeader">
+<tr>
+    <td width="1%" align="center">
+        Filter:
+    </td>
+        <td width="1%">
+            <a href="../../jira/secure/IssueNavigator_mode_hide.html" class="item" title="View the issues in your current search / filter" accesskey="V">View</a>
+        </td>
+        <td width="1%">
+            <a id="new_filter" href="../../jira/secure/IssueNavigator_mode_show_createNew_true.html" class="item" title="Create new search / filter" accesskey="N">New</a>
+        </td>
+        <td width="1%">
+            <span class="selectedItem">Manage</span>
+        </td>
+    <td width="100%" align="right">&nbsp;</td>
+</tr>
+</table>
+</td></tr></table>
+<table cellpadding="3" cellspacing="0" border="0">
+        <tr>
+            <td>
+            You do not currently have a search or filter selected.
+                <br>
+                <b><a href="../../jira/secure/IssueNavigator_mode_show_createNew_true.html">Create new</a></b> search
+            </td>
+        </tr>
+</table>
+<p>
+<br/>
+</div>
+</td>
+<td bgcolor="ffffff" valign="top">
+<table width="100%" cellpadding="10" cellspacing="0" border="0"><tr><td>
+<table class="jiraform  maxWidth">
+<tr>
+    <td class="jiraformheader">
+    <h3 class="formtitle">Manage Filters</h3></td>
+</tr>
+<tr>
+    <td class="jiraformheader">
+        These are the currently saved filters you have. You can view or delete them from here.
+    </td>
+</tr>
+    <tr>
+    <td class="jiraformbody">
+    </td>
+    </tr>
+</table>
+<p></p>
+<p></p>
+<table width="100%" bgcolor="#bbbbbb" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
+	<tr bgcolor="#f0f0f0">
+        <td class="colHeaderLink" width="50%">
+			<b>Viewable Filters</b>
+		</td>
+		<td class="colHeaderLink" width="5%">
+			<b>Issues</b>
+		</td>
+		<td class="colHeaderLink" width="10%">
+			<b>Sharing</b>
+		</td>
+        <td class="colHeaderLink" width="20%">
+			<b>Author</b>
+		</td>
+    </tr>
+        <tr>
+            <td colspan="5" bgcolor="#ffffff">
+                There are no shared filters.
+            </td>
+        </tr>
+    </table>
+</td></tr></table>
+<span class="subText">Note that you can only see your own subscriptions for viewable filters</span>
+</td></tr></table>
+</td></tr></table>
+<div class="footer">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td bgcolor="#bbbbbb"></td>
+</tr>
+<tr><td class="licensemessage">
+    Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+</td></tr>
+<tr>
+    <td height="12" style="background-image:url(http://yusuke.homeip.net/jira/images/border/border_bottom.gif)"></td>
+</tr>
+</table>
+<span class="poweredbymessage">
+<a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+the Professional <a href="http://www.atlassian.com/software/jira">Issue Tracker</a>.
+<span style="color: #666666;">(Enterprise Edition, Version: 3.9.2-#235)</span>
+- <a href="http://jira.atlassian.com/default.jsp?clicked=footer">Bug/feature request</a>
+- <a href="../../jira/secure/Administrators.html">Contact Administrators</a>
+</span>
+</div>
+</body>
+</html>

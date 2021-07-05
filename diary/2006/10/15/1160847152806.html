@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href=".">
+    <meta name="description" content="侍ズム"/>
+    <meta name="abstract" content=""/>
+    <meta name="author" content="Yusuke Yamamoto"/>
+    <meta name="generator" content="Pebble (http://pebble.sourceforge.net)"/>
+    <title>どこでも一発ログイン - 侍ズム</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/../../../../diary/rss.xml"/>
+    <link rel="alternate" type="application/rdf+xml" title="RDF" href="http://yusuke.homeip.net/diary/rdf.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="../../../../diary/atom.xml"/>
+    <link rel="stylesheet" href="../../../../diary/pebble.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../../../diary/themes/user-diary/screen.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../../../diary/themes/_pebble/print.css" type="text/css" media="print"/>
+    <link rel="stylesheet" href="../../../../diary/themes/_pebble/handheld.css" type="text/css" media="handheld"/>
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/themes/user-diary/images/favicon.ico" type="image/x-icon"/>
+    <script type="text/javascript" src="../../../../FCKeditor/fckeditor.js"></script>
+    <script type="text/javascript" src="../../../../scripts/pebble.js"></script>
+    <script type="text/javascript" src="../../../../scripts/prototype.js"></script>
+    <script type="text/javascript" src="../../../../scripts/scriptaculous.js"></script>
+    <script type="text/javascript" src="../../../../scripts/dwr-engine.js"></script>
+    <script type="text/javascript" src="../../../../dwr/util.js"></script>
+    <script type="text/javascript" src="../../../../dwr/interface/Pebble.js"></script>
+  </head>
+  <body>
+  <div id="body">
+    <script src="../../../../maps_file_api_v_1_key_ABQIAAAAtS2fi_RnBiuUs4BlVHjt6BRABsBgP8wqQh7kS3FgnXJL7vMCZhRCUVBp4cfEBxevDEQRKjj9DJC-Yg.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript" src="../../../../diary/themes/user-diary/lightbox/lightbox.js"></script>
+    <div id="header">
+      <div id="blogName"><a href="../../../../diary.html">侍ズム</a></div>
+      <div id="blogDescription"><span></span></div>
+    </div>
+    <div id="linearNavigation">
+      <a href="../../../../diary/2006/10/15/1160843970441.html">&lt;&lt; JavaScript メモ - Bookmarklet 内で再帰処理</a> |
+    <a href="../../../../diary.html">Home</a>
+      | <a href="../../../../diary/2006/10/15/1160917682887.html">エンジニアと英語 &gt;&gt;</a>
+    </div>
+    <div id="sidebar">
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>About</span></div>
+  <div class="sidebarItemBody">
+    山本裕介のweblog。<br><br>映画、アーチェリー、Java 好き。<br>
+このブログでは日々の出来事、IT関連のニュース、映画の感想など種々雑多なエントリを書き連ねています。<br><br>Twitter:<a href="http://twitter.com/yusukey">yusukey</a><br><br>
+<a href="http://www.sbibusiness.com/pub/yusuke"><img src="../../../../image/personsetting/banners/120_30_2.gif" width="120" height="30" border="0" alt="山本裕介"></a><br><br> <a href="http://www.linkedin.com/in/yusuke"><img src="../../../../img/webpromo/btn_viewmy_160x33.gif" width="160" height="33" border="0" alt="View Yusuke Yamamoto's profile on LinkedIn"/></a><br><br>
+最近人気の俳優 "山本裕典"とは違います。間違えて訪問してしまった方は<a href="http://www.yusukefc.com/">山本裕典 オフィシャルウェブサイト</a>へどうぞ
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>検索</span></div>
+  <div class="sidebarItemBody">
+    <form name="searchForm" method="post" action="../../../../diary/search.html" accept-charset="UTF-8">
+  <input type="text" name="query" size="15" value=""/>
+  <input type="submit" value="検索"/>
+</form>
+    <a href="../../../../diary/categories.html">カテゴリー</a> |
+    <a href="../../../../diary/tags.html">タグ</a> |
+    <a href="../../../../diary/search.html">詳細な検索</a>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Ad</span></div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+/* 200x200, 作成済み 08/09/06 */
+google_ad_slot = "3834106799";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript" src="../../../../pagead/show_ads.js">
+</script>  <div class="sidebarItemBody">
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Tools & Utilities</span></div>
+  <div class="sidebarItemBody">
+    <ul>
+      <li><a href="../../../../samurai.html">侍</a></li>
+      <li><a href="../../../../komuso.html">虚無僧</a></li>
+      <li><a href="../../../../waraji.html">わらじ</a></li>
+      <li><a href="../../../../twitter4j.html">Twitter4J</a></li>
+      <li><a href="../../../../log4twitter.html">Log4Twitter</a></li>
+    </ul>  
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>最近のレスポンス <a href="../../../../diary/responses/../../../../diary/rss.xml"></a></span></div>
+  <div class="sidebarItemBody">
+    <ul>
+      <li><a href="../../../../diary/2009/03/17/1237222800000.html#trackback1237314758234" title="http://yusuke.homeip.net/diary/2009/03/17/1237222800000.html#trackback1237314758234">JBoss Rules 入門資料</a><br/>JBoss ナイトセミナ 第3回での「JBoss Rules 入門」が 山本さんのブログで公開されております。  JBoss Rulesって何？ビジネスルールエンジン...</li>
+      <li><a href="../../../../diary/2009/02/01/1233414480000.html#comment1234021237324" title="http://yusuke.homeip.net/diary/2009/02/01/1233414480000.html#comment1234021237324">Re: iPhone にお勧めのモバイルUSB充電器 - Topland のコード式ミニ充電器foma用</a><br/>やってみました。20%切っていても10%...</li>
+      <li><a href="../../../../diary/2009/02/01/1233414480000.html#comment1233673028669" title="http://yusuke.homeip.net/diary/2009/02/01/1233414480000.html#comment1233673028669">Re: iPhone にお勧めのモバイルUSB充電器 - Topland のコード式ミニ充電器foma用</a><br/>この記事を見てtoplandのを買おうか...</li>
+    </ul>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>最近のエントリー <a href="../../../../diary/rss.xml"></a></span></div>
+  <div class="sidebarItemBody">
+    <ul>
+      <li><a href="../../../../diary/2009/03/17/1237222800000.html" title="http://yusuke.homeip.net/diary/2009/03/17/1237222800000.html">JJBug、JJug共催 - JBoss ナイトセミナ第３回へ行ってきました</a>
+        <br/>標記の通り、JBossナイトセミナ第3回...
+      </li>
+      <li><a href="../../../../diary/2009/03/16/1237200060000.html" title="http://yusuke.homeip.net/diary/2009/03/16/1237200060000.html">ログ監視ツール QB をリリースしました</a>
+        <br/>ログ監視ツール、QB をリリースしました。http://yus...
+      </li>
+      <li><a href="../../../../diary/2009/03/11/1236733920000.html" title="http://yusuke.homeip.net/diary/2009/03/11/1236733920000.html">IntelliJ IDEA9 が WebBeans に対応</a>
+        <br/>相変わらず速すぎ！・WebBeans (JSR-299) Binding Navigation in IntelliJ IDEA 9 (Maia) | JetBrains IntelliJ IDEA Blogタグ : java
+      </li>
+      <li><a href="../../../../diary/2009/02/26/1235579220000.html" title="http://yusuke.homeip.net/diary/2009/02/26/1235579220000.html">Twitter4J 1.1.5 リリース</a>
+        <br/>Twitter4J 1.1.5 をリリースしました。maven central repository にもアップされています。Twitter4...
+      </li>
+      <li><a href="../../../../diary/2009/02/24/1235451720000.html" title="http://yusuke.homeip.net/diary/2009/02/24/1235451720000.html">JBoss AS 5.0.1 リリース</a>
+        <br/>JBoss AS 5 最初のメンテナンスリリースであるバージョ...
+      </li>
+      <li><a href="../../../../diary/2009/02/23/1235350800000.html" title="http://yusuke.homeip.net/diary/2009/02/23/1235350800000.html">JBoss EAP、OpenJDK でサポート開始</a>
+        <br/>１月に登場した RHEL(Red Hat Enterprise Linux) では待望のオープンソース版JDK、Ope...
+      </li>
+      <li><a href="../../../../diary/2009/02/17/1234879680000.html" title="http://yusuke.homeip.net/diary/2009/02/17/1234879680000.html">【楽天市場】困ります、私たち。〜ネットで薬が買えないなんて〜 </a>
+        <br/>今のところネットで薬を買ったことはありま...
+      </li>
+    </ul>
+  </div>
+</div>
+  <div class="sidebarItemTitle"><span>このサイトのはてなブックマーク</span><br><br></div>
+  <div class="sidebarItemBody">
+<a href="http://b.hatena.ne.jp/entrylist?url=http://yusuke.homeip.net/"><img src="http://b.hatena.ne.jp/bc/bl/http://yusuke.homeip.net/" class="bcounter" alt="このサイトのはてなブックマーク数" title="このサイトのはてなブックマーク数"></a><br><br></div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>ナビゲート</span></div>
+  <div class="sidebarItemBody">
+    <div class="calendar"><table width="100%"><tr><td colspan="7" align="center"><b><a href="../../../../diary/2006/10.html">10月 2006</a></b></td></tr><tr><td class="calendarDayHeader" width="14%">日</td><td class="calendarDayHeader" width="14%">月</td><td class="calendarDayHeader" width="14%">火</td><td class="calendarDayHeader" width="14%">水</td><td class="calendarDayHeader" width="14%">木</td><td class="calendarDayHeader" width="14%">金</td><td class="calendarDayHeader" width="14%">土</td></tr><tr><td class="calendarDay">&nbsp;&nbsp;1&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/02.html">&nbsp;2</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/03.html">&nbsp;3</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/04.html">&nbsp;4</a>&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;5&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/06.html">&nbsp;6</a>&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;7&nbsp;</td></tr><tr><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/08.html">&nbsp;8</a>&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;9&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/10.html">10</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/11.html">11</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/12.html">12</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/13.html">13</a>&nbsp;</td><td class="calendarDay">&nbsp;14&nbsp;</td></tr><tr><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/15.html">15</a>&nbsp;</td><td class="calendarDay">&nbsp;16&nbsp;</td><td class="calendarDay">&nbsp;17&nbsp;</td><td class="calendarDay">&nbsp;18&nbsp;</td><td class="calendarDay">&nbsp;19&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/20.html">20</a>&nbsp;</td><td class="calendarDay">&nbsp;21&nbsp;</td></tr><tr><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/22.html">22</a>&nbsp;</td><td class="calendarDay">&nbsp;23&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/24.html">24</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/25.html">25</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/26.html">26</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/27.html">27</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/28.html">28</a>&nbsp;</td></tr><tr><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/29.html">29</a>&nbsp;</td><td class="calendarDay">&nbsp;30&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2006/10/31.html">31</a>&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td></tr><tr><td colspan="7" align="center"><a href="../../../../diary/2006/09.html">9</a>&nbsp; | &nbsp;<a href="../../../../diary/2009/03/19.html">今日</a>&nbsp; | &nbsp;<a href="../../../../diary/2006/11.html">11</a></td></tr></table></div>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Archives</span></div>
+  <div class="sidebarItemBody">
+    <table width="99%" cellpadding="0" cellspacing="0">
+        <tr>
+        <td valign="top">
+          <b>2009</b><br/>
+          <a href="../../../../diary/2009/03.html">3月</a> (3)
+          <br/>
+          <a href="../../../../diary/2009/02.html">2月</a> (11)
+          <br/>
+          <a href="../../../../diary/2009/01.html">1月</a> (5)
+          <br/>
+          <br/>
+        </td>
+        <td valign="top">
+          <b>2008</b><br/>
+          <a href="../../../../diary/2008/12.html">12月</a> (15)
+          <br/>
+          <a href="../../../../diary/2008/11.html">11月</a> (28)
+          <br/>
+          <a href="../../../../diary/2008/10.html">10月</a> (21)
+          <br/>
+          <a href="../../../../diary/2008/09.html">9月</a> (29)
+          <br/>
+          <a href="../../../../diary/2008/08.html">8月</a> (6)
+          <br/>
+          <a href="../../../../diary/2008/07.html">7月</a> (12)
+          <br/>
+          <a href="../../../../diary/2008/06.html">6月</a> (11)
+          <br/>
+          <a href="../../../../diary/2008/05.html">5月</a> (10)
+          <br/>
+          <a href="../../../../diary/2008/04.html">4月</a> (10)
+          <br/>
+          <a href="../../../../diary/2008/03.html">3月</a> (16)
+          <br/>
+          <a href="../../../../diary/2008/02.html">2月</a> (27)
+          <br/>
+          <a href="../../../../diary/2008/01.html">1月</a> (17)
+          <br/>
+          <br/>
+        </td>
+        </tr>
+        <tr>
+        <td valign="top">
+          <b>2007</b><br/>
+          <a href="../../../../diary/2007/12.html">12月</a> (7)
+          <br/>
+          <a href="../../../../diary/2007/11.html">11月</a> (5)
+          <br/>
+          <a href="../../../../diary/2007/10.html">10月</a> (30)
+          <br/>
+          <a href="../../../../diary/2007/09.html">9月</a> (4)
+          <br/>
+          <a href="../../../../diary/2007/08.html">8月</a> (4)
+          <br/>
+          <a href="../../../../diary/2007/07.html">7月</a> (4)
+          <br/>
+          <a href="../../../../diary/2007/06.html">6月</a> (21)
+          <br/>
+          <a href="../../../../diary/2007/05.html">5月</a> (4)
+          <br/>
+          <a href="../../../../diary/2007/04.html">4月</a> (25)
+          <br/>
+          <a href="../../../../diary/2007/03.html">3月</a> (24)
+          <br/>
+          <a href="../../../../diary/2007/02.html">2月</a> (13)
+          <br/>
+          <a href="../../../../diary/2007/01.html">1月</a> (18)
+          <br/>
+          <br/>
+        </td>
+        <td valign="top">
+          <b>2006</b><br/>
+          <a href="../../../../diary/2006/12.html">12月</a> (25)
+          <br/>
+          <a href="../../../../diary/2006/11.html">11月</a> (18)
+          <br/>
+          <a href="../../../../diary/2006/10.html">10月</a> (36)
+          <br/>
+          <a href="../../../../diary/2006/09.html">9月</a> (14)
+          <br/>
+          <a href="../../../../diary/2006/08.html">8月</a> (5)
+          <br/>
+          <a href="../../../../diary/2006/07.html">7月</a> (7)
+          <br/>
+          <a href="../../../../diary/2006/06.html">6月</a> (17)
+          <br/>
+          <a href="../../../../diary/2006/05.html">5月</a> (8)
+          <br/>
+          <a href="../../../../diary/2006/04.html">4月</a> (19)
+          <br/>
+          <a href="../../../../diary/2006/03.html">3月</a> (45)
+          <br/>
+          <a href="../../../../diary/2006/02.html">2月</a> (52)
+          <br/>
+          <a href="../../../../diary/2006/01.html">1月</a> (47)
+          <br/>
+          <br/>
+        </td>
+        </tr>
+        <tr>
+        <td valign="top">
+          <b>2005</b><br/>
+          <a href="../../../../diary/2005/12.html">12月</a> (5)
+          <br/>
+          <a href="../../../../diary/2005/11.html">11月</a> (7)
+          <br/>
+          <a href="../../../../diary/2005/10.html">10月</a> (10)
+          <br/>
+          <a href="../../../../diary/2005/09.html">9月</a> (5)
+          <br/>
+          <a href="../../../../diary/2005/08.html">8月</a> (22)
+          <br/>
+          <a href="../../../../diary/2005/07.html">7月</a> (6)
+          <br/>
+          <a href="../../../../diary/2005/06.html">6月</a> (16)
+          <br/>
+          <a href="../../../../diary/2005/05.html">5月</a> (9)
+          <br/>
+          <a href="../../../../diary/2005/04.html">4月</a> (29)
+          <br/>
+          <a href="../../../../diary/2005/03.html">3月</a> (19)
+          <br/>
+          <a href="../../../../diary/2005/02.html">2月</a> (25)
+          <br/>
+          <a href="../../../../diary/2005/01.html">1月</a> (18)
+          <br/>
+          <br/>
+        </td>
+        <td valign="top">
+          <b>2004</b><br/>
+          <a href="../../../../diary/2004/12.html">12月</a> (11)
+          <br/>
+          <a href="../../../../diary/2004/11.html">11月</a> (17)
+          <br/>
+          <a href="../../../../diary/2004/10.html">10月</a> (18)
+          <br/>
+          <a href="../../../../diary/2004/09.html">9月</a> (25)
+          <br/>
+          <a href="../../../../diary/2004/08.html">8月</a> (7)
+          <br/>
+          <a href="../../../../diary/2004/07.html">7月</a> (14)
+          <br/>
+          <a href="../../../../diary/2004/06.html">6月</a> (21)
+          <br/>
+          <a href="../../../../diary/2004/05.html">5月</a> (12)
+          <br/>
+          <a href="../../../../diary/2004/04.html">4月</a> (30)
+          <br/>
+          <br/>
+        </td>
+        </tr>
+    </table>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>タグ</span></div>
+  <div class="sidebarItemBody">
+    <div class="sidebarTagCloud">
+    <ul>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/apache.html" title="rank=1, blog entries=1">apache</a></span></li>
+      <li><span class="tagCloud2"><a href="../../../../diary/tags/archery.html" title="rank=2, blog entries=61">archery</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/bea.html" title="rank=1, blog entries=10">bea</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/bookmarklet.html" title="rank=1, blog entries=2">bookmarklet</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/bts.html" title="rank=1, blog entries=4">bts</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/c.html#/" title="rank=1, blog entries=3">c#</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/car.html" title="rank=1, blog entries=10">car</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/english.html" title="rank=1, blog entries=6">english</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/fast.html" title="rank=1, blog entries=1">fast</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/fisheye.html" title="rank=1, blog entries=1">fisheye</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/game.html" title="rank=1, blog entries=15">game</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/google.html" title="rank=1, blog entries=5">google</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/googlemaps.html" title="rank=1, blog entries=1">googlemaps</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/gps.html" title="rank=1, blog entries=7">gps</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/idea.html" title="rank=1, blog entries=1">idea</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/iphone.html" title="rank=1, blog entries=3">iphone</a></span></li>
+      <li><span class="tagCloud10"><a href="../../../../diary/tags/java.html" title="rank=10, blog entries=307">java</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/java6.html" title="rank=1, blog entries=1">java6</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/javascript.html" title="rank=1, blog entries=3">javascript</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/javawebstart.html" title="rank=1, blog entries=1">javawebstart</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jboss.html" title="rank=1, blog entries=26">jboss</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jbug.html" title="rank=1, blog entries=1">jbug</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jdbc.html" title="rank=1, blog entries=1">jdbc</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jira.html" title="rank=1, blog entries=2">jira</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jmx.html" title="rank=1, blog entries=2">jmx</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jmxremote.html" title="rank=1, blog entries=1">jmxremote</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jrockit.html" title="rank=1, blog entries=3">jrockit</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jvm.html" title="rank=1, blog entries=1">jvm</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/komuso.html" title="rank=1, blog entries=1">komuso</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/language.html" title="rank=1, blog entries=1">language</a></span></li>
+      <li><span class="tagCloud4"><a href="../../../../diary/tags/mac.html" title="rank=4, blog entries=95">mac</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/maps.html" title="rank=1, blog entries=5">maps</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/marsphoenix.html" title="rank=1, blog entries=1">marsphoenix</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/maven.html" title="rank=1, blog entries=2">maven</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mbean.html" title="rank=1, blog entries=1">mbean</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mod_python.html" title="rank=1, blog entries=1">mod_python</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mono.html" title="rank=1, blog entries=1">mono</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/movabletype.html" title="rank=1, blog entries=2">movabletype</a></span></li>
+      <li><span class="tagCloud4"><a href="../../../../diary/tags/movie.html" title="rank=4, blog entries=94">movie</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mvn.html" title="rank=1, blog entries=1">mvn</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mysql.html" title="rank=1, blog entries=1">mysql</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/oracle.html" title="rank=1, blog entries=14">oracle</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/pebble.html" title="rank=1, blog entries=18">pebble</a></span></li>
+      <li><span class="tagCloud2"><a href="../../../../diary/tags/photolog.html" title="rank=2, blog entries=42">photolog</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/postgres.html" title="rank=1, blog entries=1">postgres</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/python.html" title="rank=1, blog entries=5">python</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/rakuten.html" title="rank=1, blog entries=1">rakuten</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/redhat.html" title="rank=1, blog entries=2">redhat</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/rfms.html" title="rank=1, blog entries=1">rfms</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/samurai.html" title="rank=1, blog entries=7">samurai</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/seam.html" title="rank=1, blog entries=3">seam</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/secondlife.html" title="rank=1, blog entries=3">secondlife</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/shoot.html" title="rank=1, blog entries=7">shoot</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/skype.html" title="rank=1, blog entries=2">skype</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/sql.html" title="rank=1, blog entries=1">sql</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/subversion.html" title="rank=1, blog entries=4">subversion</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/thin.html" title="rank=1, blog entries=1">thin</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/tomcat.html" title="rank=1, blog entries=2">tomcat</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/tools.html" title="rank=1, blog entries=1">tools</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/trac.html" title="rank=1, blog entries=5">trac</a></span></li>
+      <li><span class="tagCloud3"><a href="../../../../diary/tags/travel.html" title="rank=3, blog entries=76">travel</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/twitter.html" title="rank=1, blog entries=9">twitter</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/twitter4j.html" title="rank=1, blog entries=10">twitter4j</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/vegas.html" title="rank=1, blog entries=7">vegas</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/virtualhost.html" title="rank=1, blog entries=1">virtualhost</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/webbenas.html" title="rank=1, blog entries=1">webbenas</a></span></li>
+      <li><span class="tagCloud2"><a href="../../../../diary/tags/weblogic.html" title="rank=2, blog entries=41">weblogic</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/wls.html" title="rank=1, blog entries=7">wls</a></span></li>
+    </ul>
+    </div>
+   </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Subscribe <a href="../../../../diary/rss.xml"></a></span></div>
+  <div class="sidebarItemBody">
+    <a href="http://yusuke.homeip.net/diary/../../../../diary/rss.xml">RSS</a> |
+    <a href="../../../../diary/atom.xml">Atom</a> |
+    <a href="../../../../diary/subscribe.html">E-mail</a>
+  </div>
+</div>
+<div class="sidebarItem">
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>ログイン</span></div>
+  <form id="loginForm" name="loginForm" method="post" action="../../../../j_acegi_security_check.html">
+    <div class="sidebarItemBody">
+    <input type="hidden" name="redirectUrl" value="/diary/"/>
+      <table>
+        <tr>
+          <td>ユーザー名</td>
+          <td><input id="j_username" name="j_username" type="text" size="16"/></td>
+        </tr>
+        <tr>
+          <td>パスワード</td>
+          <td><input type="password" name="j_password" size="16"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            次回から入力を省略<input type="checkbox" name="_acegi_security_remember_me"/>
+            <input type="submit" value="ログイン"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+<script type="text/javascript">
+//  $('loginForm').style.display = 'none';
+</script>
+    </div>
+</div>
+    <div id="content">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+/* サムライズム 水平バナー */
+google_ad_slot = "5984579660";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="../../../../pagead/show_ads.js">
+</script>
+<div class="contentItem published">
+  <div class="contentItemLinks">
+</div>
+  <a name="a1160847152806"></a>
+  <h1><a href="../../../../diary/2006/10/15/1160847152806.html">どこでも一発ログイン</a></h1>
+  <h2></h2>
+  <div class="contentItemBody">
+        <p>を作ってみました。<br/>一発ログインとはブックマークを選択するだけでログインフォームを表示することなくログインできるブックマークレットのことです。<br/>パソコンを複数の人で共用している場合や、同じサイトに複数のアカウントを持っている場合、ログインボタンを押すのすら面倒な場合、回線が細くてログインフォームを表示する時間/パケット代がもったいない場合などに便利です。<br/><br/>・<a href="javascript:(z=function(y){if(f=y.getElementsByTagName(%22iframe%22)){for(i=0;i%3Cf.length;i++){try{if(f[i].document!=y){z(f[i].document)};}catch(e){}}}f=y.forms;for(i=0;i%3Cf.length;i++){x=f[i];url=x.action+%22?%22;e=x.elements;for(j=0;j%3Ce.length;j++){url+=e[j].name+%22=%22+e[j].value+%22&amp;%22;}a=y.createElement(%22a%22);a.href=url;a.innerHTML=%22一発ログイン%22;x.appendChild(a);y.body.appendChild(a.cloneNode(true));}})(document)" onclick="alert('クリックしないでブックマークしてください');return false;">どこでも一発ログイン</a><br/><br/>使い方は以下の通り。<br/>1. 上のリンクをブックマーク<br/>IE では ”追加しようとしているお気に入りは、安全でない可能性があります。続行しますか？" と表示されます。信用できる場合は"はい"を押してください。<br/>2. 一発ログインしたいフォームを表示<br/>3. ユーザID、パスワードなど必要事項を記入<br/>4. "どこでも一発ログイン"をブックマークより起動<br/>5. 突如現れる "一発ログイン" リンクをブックマーク<br/>ちょっとわかりにくいのでそのうち図解します。<br/><br/>注意：<br/>GET メソッドによるログインに対応していないフォーム、JavaScript で action を動的に変更するなど複雑なことをしているフォームなどには対応していません。<br/>一発ログインのブックマークはアドレスよりパスワードが丸見えになります。<br/>一発ログインを利用している、していないに関わらずセキュアでない環境では席を離れるときにパソコンをロックすることをお勧めします。<br/>同一ユーザが複数のアカウントをもつことが許されているかどうかは各サイトの規約をご確認ください。<br/>例えば <a href="http://mixi.jp/rules.pl">mixi(ミクシィ) はマルチアカウントを禁止</a>していて、<a href="http://q.hatena.ne.jp/1134618720">Gmail は特に禁止していないらしい</a>です。<br/><br/>動作確認：<br/>Safari,Firefox,IE 以外のブラウザではテストしていません。<br/>IE6のbookmarkletの文字数制限対策のため、フレームには対応していません。<br/>Google などでよく使われているインナーフレームには対応しています。<br/>フレームを使っているサイトではこちら↓をお試しください。こちらはインナーフレームに対応していません。<br/>・<a href="javascript:(z=function(y){if(f=y.frames){for(i=0;i<f.length;i++){try{if(f[i]!=document){z(f[i]);}}catch(e){}}}f=y.forms;for(i=0;i%3Cf.length;i++){x=f[i];url=x.action+%22?%22;e=x.elements;for(j=0;j%3Ce.length;j++){url+=e[j].name+%22=%22+e[j].value+%22&amp;%22;}a=y.createElement(%22a%22);a.href=url;a.innerHTML=%22一発ログイン%22;x.appendChild(a);y.body.appendChild(a.cloneNode(true));}})(document)" onclick="alert('クリックしないでブックマークしてください');return false;">どこでも一発ログイン(フレーム対応版)</a><br/><br/>はてな、.Mac、mixi(ミクシィ)、Google Adsense / Analytics / Reader で動作確認できました。<br/>残念ながら Yahoo! Japan、livedoor では現在のところ動作しないようです。<br/><br/><strike>mixi(ミクシィ)とIEの組み合わせで、"一発ログイン"リンクが大量に表示される現象が確認できています。将来的に修正予定です。</strike><br/>修正しました(2006/10/15)。<br/>これ以外に動作する・しないサイト、ブラウザなど確認とれましたらコメント頂ければ幸いです。技術的に可能であれば対応できるようにしたいと思います。<br/><br/>更新 2006/10/15:<br/>IEで無限ループする現象を修正。<br/></p><div class="tags"><span>タグ : </span><a href="../../../../diary/tags/bookmarklet.html" rel="tag">bookmarklet</a> <a href="../../../../diary/tags/javascript.html" rel="tag">javascript</a></div>
+    <div class="metadata">
+      <div class="contentItemLinks">
+      <a href="/">コメント追加</a>
+      <a href="http://yusuke.homeip.net/diary/../../../../diary/responses/../../../../diary/rss.xml?entry=1160847152806"></a>
+</div>
+      投稿者 <a href="../../../../diary.html">山本 裕介</a> : 2006/10/15 2:32:32 JST
+      <a href="../../../../diary/2006/10/15/1160847152806.html" title="http://yusuke.homeip.net/diary/2006/10/15/1160847152806.html">#</a>
+    </div>
+  </div>
+    <br/><br/>
+    <a name="responses"></a>
+<a name="comments"></a>
+<a name="trackbacks"></a>
+    <div align="center">
+      <br/>
+        <a href="/" onclick="showCommentForm(); return false;">コメント追加</a>
+        <a href="/">トラックバック送信</a>
+    </div>
+    <div id="commentFormDiv" style="display:none;">
+  <script type="text/javascript" src="../../../../FCKeditor/fckeditor.js"></script>
+  <script type="text/javascript">
+  window.onload = function()
+  {
+    var oFCKeditor = new FCKeditor( 'commentBody' ) ;
+    oFCKeditor.BasePath = '/FCKeditor/' ;
+    oFCKeditor.Config["CustomConfigurationsPath"] = '/fckconfig_pebble.js';
+    oFCKeditor.ToolbarSet = 'Comment' ;
+    oFCKeditor.ReplaceTextarea() ;
+  }
+  </script>
+<form id="commentForm" name="commentForm" action="/" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="blogId" value="diary"/>
+  <input type="hidden" name="entry" value="1160847152806"/>
+  <input type="hidden" name="comment" value=""/>
+<table width="99%">
+  <tr>
+    <td colspan="2">
+      <div id="previewComment">
+<div id="previewComment" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+</div>
+  <h1>
+    <span id="previewComment.title"><a name="comment1237434811790"></a>Re: どこでも一発ログイン</span>
+  </h1>
+  <div class="metadata">
+    投稿者 <span id="previewComment.author" class="unauthenticated">Anonymous</span> : 2009/03/19 12:53:31 JST
+    <a href="../../../../diary/2006/10/15/1160847152806.html#comment1237434811790" title="http://yusuke.homeip.net/diary/2006/10/15/1160847152806.html#comment1237434811790">#</a>
+  </div>
+  <div id="previewComment.body" class="responseBody">
+  </div>
+</div>
+</div>
+      <br/>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>タイトル</b></td>
+    <td><input type="text" name="title" size="40" value="Re: どこでも一発ログイン"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>本文</b></td>
+    <td>
+      <textarea id="commentBody" name="commentBody" rows="8" cols="40"></textarea>
+      <div class="small"><b>HTML</b> : b, strong, i, em, blockquote, br, p, pre, a href="", ul, ol, li, sub, sup</div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>名前</b></td>
+    <td><input type="text" id="author" name="author" size="40" value="Anonymous"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>E-mail</b></td>
+    <td>
+      <input type="text" name="email" size="40" value=""/>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Webサイト</b></td>
+    <td><input type="text" name="website" size="40" value=""/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>保存しますか?</b></td>
+    <td>
+      はい&nbsp;
+      <input type="radio" name="rememberMe" value="true"/>
+      いいえ&nbsp;<input type="radio" name="rememberMe" value="false" checked="checked"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <p>
+      <b>E-mailは公開されません</b>, このエントリーの新規コメント通知が必要なら記入します。(解除可能)
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right">
+      <input name="submit" type="submit" value="プレビュー" onclick="previewComment(); return false;"/>
+      <input name="submit" type="submit" value="コメント投稿"/>
+    </td>
+  </tr>
+</table>
+</form></div>
+</div>
+    </div>
+    <div id="footer">
+Powered by <a href="http://pebble.sourceforge.net/">Pebble 2.3.1</a>
+      |
+      <a href="../../../../diary/login.html">ログイン</a>
+    </div>
+  </div>
+<script src="../../../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+  </body>
+</html>

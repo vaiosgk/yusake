@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>JIRA - Local help</title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+<link rel="stylesheet" type="text/css" media="print" href="../../jira/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/235/1/0/_/styles/global.css"/>
+    <script language="JavaScript" type="text/javascript" src="../../jira/includes/js/combined-javascript.js"></script>
+</head>
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#003366" vlink="#003366" alink="#660000">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
+<tr><td bgcolor="#003366"></td></tr>
+<tr><td bgcolor="#3c78b5"></td></tr>
+</table>
+<table border="0" cellpadding="5" cellspacing="0" width="100%" bgcolor="#ffffff">
+<tr><td>
+		<h4 class="headline">JIRA - Local help</h4>
+		<p>
+<table>
+<tr>
+<td>
+<p> JIRA tracks issues, which can be bugs, feature requests, or any other tasks you want to track. </p>
+<p>Each issue has a variety of associated information including:</p>
+<ul>
+    <li>
+        the <a href="#IssueTypes">issue type</a>
+    </li>
+    <li>a summary</li>
+    <li>a description of the issue</li>
+    <li>the project which the issue belongs to</li>
+    <li>
+        <a href="http://www.atlassian.com/software/jira/docs/v3.9/component_management.html?clicked=jirahelp">components</a> within a project which are associated with this issue
+    </li>
+    <li>
+        <a href="http://www.atlassian.com/software/jira/docs/v3.9/version_management.html?clicked=jirahelp">versions</a> of the project which are affected by this issue
+    </li>
+    <li>versions of the project which will resolve the issue</li>
+    <li>the environment in which it occurs</li>
+    <li>
+        a <a href="#PriorityLevels">priority</a> for being fixed
+    </li>
+    <li>an assigned developer to work on the task</li>
+    <li>a reporter - the user who entered the issue into the system</li>
+    <li>
+        the current <a href="#StatusTypes">status</a> of the issue
+    </li>
+    <li>a full history log of all field changes that have occurred</li>
+    <li>a comment trail added by users</li>
+    <li>
+        if the issue is resolved - the <a href="#ResolutionTypes">resolution</a>
+    </li>
+</ul>
+<a name="IssueTypes"/>
+<div class="formtitle" style="border-bottom: 2px solid #a5b6c6 ;">Issue Types</div>
+<div class="section">
+    <p>JIRA can be used to track many different types of issues. Below are the types configured in your system. More can be added from the administration section.</p>
+    <dl>
+            <dt>
+                <b>Bug</b>
+            </dt>
+            <dd>A problem which impairs or prevents the functions of the product.</dd>
+            <dt>
+                <b>Improvement</b>
+            </dt>
+            <dd>An improvement or enhancement to an existing feature or task.</dd>
+            <dt>
+                <b>New Feature</b>
+            </dt>
+            <dd>A new feature of the product, which has yet to be developed.</dd>
+            <dt>
+                <b>Task</b>
+            </dt>
+            <dd>A task that needs to be done.</dd>
+    </dl>
+</div>
+<a name="PriorityLevels"/>
+<div class="formtitle" style="border-bottom: 2px solid #a5b6c6 ;">Priority Levels</div>
+<div class="section">
+    <p>An issue has a priority level which indicates its importance. The currently defined priorities are listed below. In addition, you can add more priority levels at the administration section.</p>
+    <dl>
+        <dt>
+            <b>Blocker</b>
+        </dt>
+        <dd>Blocks development and/or testing work, production could not run.</dd>
+        <dt>
+            <b>Critical</b>
+        </dt>
+        <dd>Crashes, loss of data, severe memory leak.</dd>
+        <dt>
+            <b>Major</b>
+        </dt>
+        <dd>Major loss of function.</dd>
+        <dt>
+            <b>Minor</b>
+        </dt>
+        <dd>Minor loss of function, or other problem where easy workaround is present.</dd>
+        <dt>
+            <b>Trivial</b>
+        </dt>
+        <dd>Cosmetic problem like misspelt words or misaligned text.</dd>
+    </dl>
+</div>
+<a name="StatusTypes"/>
+<div class="formtitle" style="border-bottom: 2px solid #a5b6c6 ;">Statuses</div>
+<div class="section">
+    <p>Each issue has a status, which indicates the stage of the issue. In the default workflow, issues start as being Open, progressing to In Progress, Resolved and then Closed. Other workflows may have other status transitions.</p>
+    <dl>
+        <dt>
+            <b>Open</b>
+        </dt>
+        <dd>The issue is open and ready for the assignee to start work on it.</dd>
+        <dt>
+            <b>In Progress</b>
+        </dt>
+        <dd>This issue is being actively worked on at the moment by the assignee.</dd>
+        <dt>
+            <b>Reopened</b>
+        </dt>
+        <dd>This issue was once resolved, but the resolution was deemed incorrect. From here issues are either marked assigned or resolved.</dd>
+        <dt>
+            <b>Resolved</b>
+        </dt>
+        <dd>A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.</dd>
+        <dt>
+            <b>Closed</b>
+        </dt>
+        <dd>The issue is considered finished, the resolution is correct. Issues which are closed can be reopened.</dd>
+    </dl>
+</div>
+<a name="ResolutionTypes"/>
+<div class="formtitle" style="border-bottom: 2px solid #a5b6c6 ;">Resolutions</div>
+    <div class="section">
+    <p>An issue can be resolved in many ways, only one of them being "Fixed". The defined resolutions are listed below. You can add more in the administration section.</p>
+    <dl>
+    <dt><b>Fixed</b></dt><dd>A fix for this issue is checked into the tree and tested. </dd>
+    <dt><b>Won't Fix</b></dt><dd>The problem described is an issue which will never be fixed. </dd>
+    <dt><b>Duplicate</b></dt><dd>The problem is a duplicate of an existing issue. </dd>
+    <dt><b>Incomplete</b></dt><dd>The problem is not completely described. </dd>
+    <dt><b>Cannot Reproduce</b></dt><dd>All attempts at reproducing this issue failed, or not enough information was available to reproduce the issue. Reading the code produces no clues as to why this behavior would occur. If more information appears later, please reopen the issue. </dd>
+    </dl>
+    </div>
+</td></tr></table>
+</td></tr>
+</table>
+</body>
+</html>

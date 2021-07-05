@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム - 食べ物 category</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaとアーチェリーと</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/04/01/1175355742101.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/03/06/1173151555331.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/03/05/1173093028000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/01/16/1168875074252.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/01/15/1168788438357.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/01/07/1168158908901.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/01/06/1168072232000.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/04/01/1175355742101.html">
+    <title>ハーイ ガンジーです。 とってもおいしいヨ。</title>
+    <link>http://yusuke.homeip.net/diary/2007/04/01/1175355742101.html</link>
+    
+      
+        <description>
+          &lt;p&gt;金曜日は会社の近所のカレー屋さんに行きました。&lt;br/&gt;&lt;br/&gt;ここは焼きたてのナンが食べ放題でお気に入り。&lt;br/&gt;今回が２回目ですがローテーションに組み入れたいなーと思っています。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/03/31/P3302346.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/03/31/P3302346-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;今日は豪勢に色んな味を楽しめるメニューを選びました。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/03/31/P3302347.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/03/31/P3302347-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;これが食べ放題のナン。&lt;br/&gt;焼きたてで香ばしくてメチャメチャうまい！&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/03/31/P3302343-large.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/03/31/P3302343-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;レジのところで売っている突っ込みどころだらけのカレー(レトルト?)&lt;br/&gt;「ガンジーさんのCurry。ハーイ ガンジーです。とってもおいしいヨ。」&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/03/31/P3302340.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/03/31/P3302340-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;食後に食べるとスッキリするやつ。名前は知らない。&lt;br/&gt;&lt;br/&gt;&lt;div id=&#039;map200743151550&#039; style=&#039;width: 300px; height: 300px&#039;&gt;&lt;/div&gt;&lt;script type=&#039;text/javascript&#039;&gt;var func200743151550 = document.body.onload;function init200743151550(){var map200743151550 = new GMap(document.getElementById(&#039;map200743151550&#039;));map200743151550.addControl(new GLargeMapControl());map200743151550.centerAndZoom(new GPoint(139.7514259815216,35.668000466914485),0);map200743151550.setMapType(G_MAP_TYPE);map200743151550.addControl(new GMapTypeControl());map200743151550.addOverlay(new GMarker(map200743151550.getCenterLatLng()));if(func200743151550){func200743151550();}}if(-1 != navigator.userAgent.indexOf(&#039;MSIE&#039;)){document.body.onload=init200743151550;}else{func200743151550=null;init200743151550();}&lt;/script&gt;&lt;br/&gt;場所はここらへん&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/03/06/1173151555331.html">
+    <title>本製品はプレミアムチロルです。価格にご注意下さい。</title>
+    <link>http://yusuke.homeip.net/diary/2007/03/06/1173151555331.html</link>
+    
+      
+        <description>
+          &lt;p&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/03/06/chirol-large.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/03/06/chirol-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;今日のおやつにと、「チロルチョコ宇治まっ茶」早速買ってきました。&lt;br/&gt;箱買いはしてないです。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/03/05/1173093028000.html">
+    <title>チロルチョコ宇治まっ茶 登場！</title>
+    <link>http://yusuke.homeip.net/diary/2007/03/05/1173093028000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;良く仕事中に抜け出しておやつを買いにオフィス近くのAM/PMに行きます。&lt;br/&gt;せんべい、ガム、チョコレート等を買うんですが良くやられてしまうのがレジ前の&lt;a href=&#034;http://www.tirol-choco.com/info.html&#034;&gt;チロルチョコ&lt;/a&gt;。&lt;br/&gt;おむつと一緒にビールを買ってしまうがごとく無意識で買ってしまいます!?&lt;br/&gt;「いちご」とか「きなこもち」とか、不思議な名前ながらも食べてみるとどれも美味しくてやみつきになってしまいますね。&lt;br/&gt;&lt;br/&gt;で、どうやら今度は&lt;a href=&#034;http://www.tirol-choco.com/info.html&#034;&gt;チロルチョコ&lt;/a&gt;に新しい仲間「宇治まっ茶」が加わるようです。&lt;br/&gt;&lt;br/&gt;最近食べたイチゴ味は確か 20円するちょっと高級なバージョンでしたが、まっ茶味は「プレミアム」を謳っていて 30円もします！&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://www.tirol-choco.com/info.html&#034;&gt;チロルチョコ&lt;/a&gt;に30円はちょっと高い気がしますが、30円で味わえる「プレミアム」なんてなかなかないですね。&lt;br/&gt;昨日、3月5日発売らしいので明日早速食べてみようかと思います。&lt;br/&gt;&lt;br/&gt;&lt;img src=&#034;http://www2.pressblog.jp/watch/releaseimg.aspx?watchid=aaaaaaaaaabaajahaiag%5e%7b-)gaaaaaaaggchkj&#034; width=&#034;121px&#034; height=&#034;72px&#034;&gt;&lt;br/&gt;&lt;img src=&#034;http://www2.pressblog.jp/watch/releaseimg.aspx?watchid=aaaaaaaaaabaajahaiag%5e%7b-)caaaaaaaggchkj&#034; width=&#034;103px&#034; height=&#034;127px&#034;&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://hb.afl.rakuten.co.jp/hgc/045925c3.4eed7cc7.045925c4.9654a07b/?pc=http%3a%2f%2fwww.rakuten.co.jp%2fcarayoko%2f557357%2f635920%2f%23950896&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fcarayoko%2fi%2f950896%2f&#034; target=&#034;_blank&#034;&gt;&lt;img src=&#034;http://hbb.afl.rakuten.co.jp/hgb/?pc=http%3a%2f%2fimage.rakuten.co.jp%2fwshop%2fdata%2fws-mall-img%2fcarayoko%2fimg64%2fimg10013905693.jpeg&amp;m=http%3a%2f%2fimage.rakuten.co.jp%2fwshop%2fdata%2fws-mall-img%2fcarayoko%2fimg64%2fimg10013905693.jpeg&#034; border=&#034;0&#034;&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&#034;http://hb.afl.rakuten.co.jp/hgc/045925c3.4eed7cc7.045925c4.9654a07b/?pc=http%3a%2f%2fwww.rakuten.co.jp%2fcarayoko%2f557357%2f635920%2f%23950896&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fcarayoko%2fi%2f950896%2f&#034; target=&#034;_blank&#034;&gt;チロルチョコ　きなこもち&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://hb.afl.rakuten.co.jp/hgc/045925c1.a0dead0d.045925c2.fd4149b7/?pc=http%3a%2f%2fitem.rakuten.co.jp%2fbelleseve%2ftirol_funwari%2f&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbelleseve%2fi%2f10001630%2f&#034; target=&#034;_blank&#034;&gt;&lt;img src=&#034;http://hbb.afl.rakuten.co.jp/hgb/?pc=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fbelleseve%2fcabinet%2fchocolate%2ftirol-4.jpg%3f_ex%3d64x64&amp;m=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fbelleseve%2fcabinet%2fchocolate%2ftirol-4.jpg%3f_ex%3d40x40&#034; border=&#034;0&#034;&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&#034;http://hb.afl.rakuten.co.jp/hgc/045925c1.a0dead0d.045925c2.fd4149b7/?pc=http%3a%2f%2fitem.rakuten.co.jp%2fbelleseve%2ftirol_funwari%2f&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbelleseve%2fi%2f10001630%2f&#034; target=&#034;_blank&#034;&gt;チロルチョコ　ふんわりいちご　100粒入り&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://hb.afl.rakuten.co.jp/hgc/03b55efe.0a11d970.03b55eff.86cd0909/?pc=http%3a%2f%2fitem.rakuten.co.jp%2fbook%2f4290090%2f&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f12001878%2f&#034; target=&#034;_blank&#034;&gt;&lt;img src=&#034;http://hbb.afl.rakuten.co.jp/hgb/?pc=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fbook%2fcabinet%2f8470%2f84701703.jpg%3f_ex%3d80x80&amp;m=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fbook%2fcabinet%2f8470%2f84701703.jpg%3f_ex%3d64x64&#034; border=&#034;0&#034;&gt;&lt;/a&gt;&lt;br/&gt;&lt;a href=&#034;http://hb.afl.rakuten.co.jp/hgc/03b55efe.0a11d970.03b55eff.86cd0909/?pc=http%3a%2f%2fitem.rakuten.co.jp%2fbook%2f4290090%2f&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f12001878%2f&#034; target=&#034;_blank&#034;&gt;チロルチョコofficial book&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/01/16/1168875074252.html">
+    <title>ポテトパラダイスへGo!</title>
+    <link>http://yusuke.homeip.net/diary/2007/01/16/1168875074252.html</link>
+    
+      
+        <description>
+          &lt;p&gt;前々から目を付けていた&lt;a href=&#034;http://carat.diamondcity.co.jp/shoplist/tenant_10135.html&#034;&gt;ポテトパラダイス&lt;/a&gt;へ行ってきました。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://carat.diamondcity.co.jp/shoplist/tenant_10135.html&#034;&gt;ポテトパラダイス&lt;/a&gt;はファーストキッチン系列のフライドポテト専門店です。&lt;br/&gt;&lt;br/&gt;フライドポテトといえば日本ではハンバーガー屋さんで食べることが多いですが、揚げたてを食べられるかどうかは運次第！&lt;br/&gt;&lt;br/&gt;でもポテトパラダイスではポテトの形、味付けを選ぶとその場で揚げてくれます。&lt;br/&gt;ホクホクサクサクの美味しいフライドポテトがいつでも確実に食べられるのは素晴らしいですね！&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/14/potato.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/14/potato-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;揚げたてでザクザク美味しい！&lt;br/&gt;&lt;br/&gt;お値段はレギュラーサイズが300円、大盛りが400円。&lt;br/&gt;&lt;br/&gt;昔から妻は「フライドポテトをソフトクリームに付けて食べると栗の味がする！大発明」と叫んでいましたが、ファーストキッチンもその味に目を付けていたのでしょうか。&lt;br/&gt;チョコレートコーティングされたフライドポテトをソフトクリームにディップして食べる変わり種のメニューもあります。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/01/15/1168788438357.html">
+    <title>MEGA MAC を食す</title>
+    <link>http://yusuke.homeip.net/diary/2007/01/15/1168788438357.html</link>
+    
+      
+        <description>
+          &lt;p&gt;話題沸騰！？のメガマックを食べました。&lt;br/&gt;ボリュームはそこそこ満足。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/14/megamac1.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/14/megamac1-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;メガマック直前&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;「腹一杯！もう食べられない！」って事態に陥るかと思ったけどもハンバーグ一枚一枚はそれほどの厚さがあるわけではないので十分食べられる大きさでした。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/14/megamac2.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/14/megamac2-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;四枚のハンバーグがドーン！&lt;br/&gt;&lt;br/&gt;途中飽きかけたらケチャップを付けて食べるのがオススメです。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/01/07/1168158908901.html">
+    <title>七草がゆ</title>
+    <link>http://yusuke.homeip.net/diary/2007/01/07/1168158908901.html</link>
+    
+      
+        <description>
+          &lt;p&gt;今日は七草粥を頂きました。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/07/nanakusa.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/07/nanakusa-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;実家ではいつも夕食に食べていまいしたが、本来は朝に頂くものなんですね。&lt;br/&gt;セリ、ナズナ、ゴギョウ、ハコベラ、ホトケリザ、スズナ、スズシロの七草を入れて、無病息災を願う習慣は平安時代からあるそうです。&lt;br/&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.tiger.jp/life/scene7/special_edition2_1.html&#034;&gt;タイガー魔法瓶 &gt; 素敵暮らしの達人 &gt; 春の七草がゆをつくる&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/01/06/1168072232000.html">
+    <title>チーズフォンデュ</title>
+    <link>http://yusuke.homeip.net/diary/2007/01/06/1168072232000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;今日は久しぶりにチーズフォンデュを食べました。&lt;br/&gt;奥さんの友達がもってきてくれたおいしいバゲットと、エメンタールチーズで大変美味しく頂きました。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/07/cheese.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/07/cheese-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;簡単に美味しく、そして楽しく食べられるフォンデュは大好物です。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+
+</rdf:RDF>

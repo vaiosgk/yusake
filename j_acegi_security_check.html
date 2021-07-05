@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href=".">
+    <meta name="description" content="My blogs"/>
+    <meta name="abstract" content=""/>
+    <meta name="author" content="Various"/>
+    <meta name="generator" content="Pebble (http://pebble.sourceforge.net)"/>
+    <title>Login - My blogs</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/rss.xml"/>
+    <link rel="alternate" type="application/rdf+xml" title="RDF" href="http://yusuke.homeip.net/rdf.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/atom.xml"/>
+    <link rel="stylesheet" href="http://yusuke.homeip.net/pebble.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="http://yusuke.homeip.net/themes/_pebble/screen.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="http://yusuke.homeip.net/themes/_pebble/print.css" type="text/css" media="print"/>
+    <link rel="stylesheet" href="http://yusuke.homeip.net/themes/_pebble/handheld.css" type="text/css" media="handheld"/>
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/themes/_pebble/images/favicon.ico" type="image/x-icon"/>
+    <script type="text/javascript" src="FCKeditor/fckeditor.js"></script>
+    <script type="text/javascript" src="scripts/pebble.js"></script>
+    <script type="text/javascript" src="scripts/prototype.js"></script>
+    <script type="text/javascript" src="scripts/scriptaculous.js"></script>
+    <script type="text/javascript" src="scripts/dwr-engine.js"></script>
+    <script type="text/javascript" src="dwr/util.js"></script>
+    <script type="text/javascript" src="dwr/interface/Pebble.js"></script>
+  </head>
+  <body>
+  <div id="body">
+    <div id="header">
+      <div id="blogName"><span>My blogs</span></div>
+      <div id="blogDescription"><span></span></div>
+    </div>
+    <div id="content">
+<table width="99%" cellspacing="0" cellpadding="8">
+  <tr>
+    <td width="50%" align="right" valign="top" style="border-right: #c0c0c0 solid 1px">
+      <h1>Login</h1>
+    </td>
+    <td width="50%" align="left">
+      <div>An incorrect username/password was entered - please try again.</div><br/>
+      <form id="loginForm" name="loginForm" method="post" action="j_acegi_security_check.html">
+        <input type="hidden" name="redirectUrl" value="/"/>
+        <table>
+          <tr><td>Username</td><td><input id="j_username" type="text" name="j_username"/></td></tr>
+          <tr><td>Password</td><td><input type="password" name="j_password"/></td></tr>
+          <tr><td>Remember me</td><td><input type="checkbox" name="_acegi_security_remember_me"/></td></tr>
+          <tr><td colspan="2" align="right"><input type="submit" value="Login"/></td></tr>
+        </table>
+      </form>
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+window.onload = function()
+{
+  document.loginForm.j_username.focus();
+}
+</script>
+    </div>
+    <div id="footer">
+    </div>
+  </div>
+  </body>
+</html>

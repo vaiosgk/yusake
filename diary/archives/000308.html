@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: WebLogic Platform 8.1SP5</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/000307.html" title="Spring on WebLogic Server kit"/>
+<link rel="next" href="../../diary/archives/000314.html" title="歯医者へGo!"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000308.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/308"
+    dc:title="WebLogic Platform 8.1SP5"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000308.html"
+    dc:subject="Java"
+    dc:description="がリリースされた。 ・Supported Configurations: Rev..."
+    dc:creator="yusuke"
+    dc:date="2005-10-06T10:16:42+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/000307.html">&laquo; Spring on WebLogic Server kit</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/000314.html">歯医者へGo! &raquo;</a>
+</p>
+<h2>2005&#24180;10&#26376;06&#26085;</h2>
+<h3>WebLogic Platform 8.1SP5</h3>
+<p>がリリースされた。<br/>
+・Supported Configurations: Revision History<br/>
+<a href="http://e-docs.bea.com/platform/suppconfigs/configs_history/history_2005.html#1056857">http://e-docs.bea.com/platform/suppconfigs/configs_history/history_2005.html#1056857</a></p>
+<p>ちなみに新しいサービスパックのリリース情報などはこのRSS↓からで確認できる。<br/>
+<a href="../../platform/suppconfigs/configs_history/xml/rss.xml">http://e-docs.bea.com/platform/suppconfigs/configs_history/xml/rss.xml</a></p>
+<p>英語版ダウンロード<br/>
+・WebLogic Platform 8.1 with SP5<br/>
+<a href="http://commerce.bea.com/showproduct.jsp?family=WLP&amp;major=8.1&amp;minor=5">http://commerce.bea.com/showproduct.jsp?family=WLP&major;=8.1&minor;=5</a></p>
+<p>日本語版はまだ。たぶんここ↓でダウンロードできるようになる。<br/>
+<a href="http://commerce.bea.com/showallversions.jsp?family=WLPJA">http://commerce.bea.com/showallversions.jsp?family=WLPJA</a><br/>
+<a href="https://www.beasys.co.jp/BeaPortal/download/generalNew/begin.do?ID=1&amp;VERSION_KEY=20">https://www.beasys.co.jp/BeaPortal/download/generalNew/begin.do?ID=1&VERSION;_KEY=20</a></p>
+<p>・Resolved Problems for Service Pack 5(英語)<br/>
+<a href="http://e-docs.bea.com/wls/docs81/notes/resolved_sp05.html">http://e-docs.bea.com/wls/docs81/notes/resolved_sp05.html</a></p>
+<p>・サービス パック 5 で解決された問題<br/>
+10/6時点で未公開、傾向からしてたぶんこの URL になる<br/>
+<a href="http://edocs.beasys.co.jp/e-docs/wls/docs81/notes/resolved_sp05.html">http://edocs.beasys.co.jp/e-docs/wls/docs81/notes/resolved_sp05.html</a></p>
+<div id="a000308more"><div id="more">
+<p>追記(16:35):<br/>
+日本語版も出た。</p>
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;10&#26376;06&#26085; 10:16</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/308</p>
+<h2 id="comments">コメント</h2>
+<h2>コメントしてください</h2>
+<form method="post" action="http://yusuke.homeip.net/diary/mt/kakikomi.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<input type="hidden" name="static" value="1"/>
+<input type="hidden" name="entry_id" value="308"/>
+<div id="name_email">
+<p><label for="author">名前:</label><br/>
+<input tabindex="1" id="author" name="author"/></p>
+<p><label for="email">メールアドレス:</label><br/>
+<input tabindex="2" id="email" name="email"/></p>
+</div>
+<p><label for="url">URL:</label><br/>
+<input tabindex="3" type="text" name="url" id="url"/>
+保存しますか?
+<input type="radio" id="remember" onclick="rememberMe(this.form)" name="bakecookie"/><label for="remember">はい</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"/><label for="forget">いいえ</label><br style="clear: both;"/>
+</p>
+<p><label for="text">コメント:</label> <br/>
+<textarea tabindex="4" id="text" name="text" rows="10" cols="50"></textarea></p>
+<div align="center">
+<input type="submit" name="preview" tabindex="5" value=" 確認 "/>
+<input style="font-weight: bold;" type="submit" name="post" tabindex="6" value=" 投稿 "/>
+</div>
+</form>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>[#TFJ-153] OAuth rarely fails with &quot;Invalid / used nonce&quot; - JIRA </title>
+    <meta content="issuesummary" name="decorator"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/s/466/1/_/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/s/466/1/_/images/icons/favicon.png">
+<link rel="stylesheet" type="text/css" media="print" href="../../jira/s/466/1/_/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/466/1/_/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/466/1/6/_/styles/global.css"/>
+    <script type="text/javascript">var contextPath = '/jira';</script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/1.2.2/_/download/batch/com.atlassian.auiplugin_ajs/com.atlassian.auiplugin_ajs.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/jira/s/466/1/1.2.2/_/download/batch/com.atlassian.auiplugin:ajs/com.atlassian.auiplugin:ajs.css?ieonly=true" media="all">
+<![endif]-->
+<script type="text/javascript" src="../../jira/s/466/1/1.2.2/_/download/batch/com.atlassian.auiplugin_ajs/com.atlassian.auiplugin_ajs.js"></script>
+<script type="text/javascript" src="../../jira/s/466/1/1.0/_/download/batch/jira.webresources_jira-global/jira.webresources_jira-global.js"></script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/1.0/_/download/batch/jira.webresources_jira-global/jira.webresources_jira-global.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/jira/s/466/1/1.0/_/download/batch/jira.webresources:jira-global/jira.webresources:jira-global.css?ieonly=true" media="all">
+<![endif]-->
+<script type="text/javascript" src="../../jira/s/466/1/1.0/_/download/batch/jira.webresources_header/jira.webresources_header.js"></script>
+</head>
+<body id="jira">
+<div id="header">
+    <div id="header-top">
+        <a id="logo" href="../../jira/secure/Dashboard.html">
+                    </a>
+                <form id="quicksearch" action="../../jira/secure/QuickSearch.html" method="post">
+            <label for="quickSearchInput" class="overlabel">Quick Search
+                <span id="quicksearchhelp" class="informationBox">
+                                                 Learn more about <a href="http://docs.atlassian.com/jira/docs-040/Using+Quick+Search?clicked=jirahelp" target="_jirahelp">Quick Search</a>
+                </span>
+            </label>
+            <input id="quickSearchInput" class="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." type="text" size="25" name="searchString" accesskey="q" valign="absmiddle"/>
+        </form>
+        <div id="header-details-user" class="aui-dd-parent header-link-container">
+         <a class="lnk" rel="nofollow" href="/">Log In</a>
+        <span class="drop-wrap">
+        <a class="drop aui-dd-link" href="#"><span>Access more options</span>
+        </a>
+    </span>
+    <div class="aui-dropdown standard hidden">
+                                                                <ul id="jira-help" class="  first     last  ">
+                                            <li><a id="view_help" class="" title="Goto the online documentation for JIRA" href="http://docs.atlassian.com/jira/docs-040/Home?clicked=jirahelp">Online Help</a></li>
+                                            <li><a id="user_history" class="" title="Get more information about JIRA" href="http://www.atlassian.com/software/jira">About JIRA</a></li>
+                                    </ul>
+                        </div>
+</div>
+    </div>
+    <div id="header-bottom">
+                <div id="menu">
+<ul id="main-nav" class="menu-bar">
+                        <li class="aui-dd-parent lazy  ">
+                    <a class="lnk" href="../../jira/secure/Dashboard.html" id="home_link" accesskey="h" title="View your current Dashboard">Dashboards</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="home_link_drop" rel="home_link" accesskey="d" title="Access more options (Alt+D)" href="#"><span>Access more options (Alt+D)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+                        <li class="aui-dd-parent lazy  ">
+                    <a class="lnk" href="../../jira/browse/TFJ.html" id="browse_link" accesskey="b" title="Browse currently active project 'Twitter4J'">Projects</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="browse_link_drop" rel="browse_link" accesskey="p" title="Access more options (Alt+P)" href="#"><span>Access more options (Alt+P)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+                        <li class="aui-dd-parent lazy  selected  ">
+                    <a class="lnk" href="../../jira/secure/IssueNavigator.html" id="find_link" accesskey="f" title="View your current filter">Issues</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="find_link_drop" rel="find_link" accesskey="i" title="Access more options (Alt+I)" href="#"><span>Access more options (Alt+I)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+    </ul>
+        </div>
+    </div>
+</div>
+<fieldset class="hidden parameters">
+    <input type="hidden" id="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost.">
+</fieldset>
+<!--This should always be included as it is not part of a themable plugin, instead it is core functionality-->
+<div class="alertHeader">
+<script src="../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td width="200" bgcolor="#f0f0f0" valign="top" style="border-right:1px solid #bbb">
+            <table cellpadding="0" cellspacing="0" border="0" width="200">
+<tr><td>
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+    <tr><td bgcolor="#dddddd">
+        <span style="float:left"><b>Issue Details</b></span>
+        <span class="small" style="float:right">
+                                        (<a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-xml/TFJ-153/TFJ-153.xml">XML</a> | <a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-word/TFJ-153/TFJ-153.doc">Word</a> | <a rel="nofollow" class="small" href="/">Printable</a>)
+                    </span>
+    </td></tr>
+    </table>
+                        <br>
+                <table id="issuedetails" cellpadding="3" cellspacing="0" border="0">
+            <tr>
+                <td valign="top"><b>Key:</b></td>
+                <td valign="top">
+                    <b><a id="issue_key_TFJ-153" href="../../jira/browse/TFJ-153.html">TFJ-153</a></b>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Type:</b></td>
+                <td valign="top">
+             Bug
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Status:</b></td>
+                <td valign="top">
+             Closed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Resolution:</b></td>
+                <td valign="top">
+                                             Fixed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Priority:</b></td>
+                <td valign="top">
+             Major
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Assignee:</b></td>
+                <td valign="top">
+                            <a id="issue_summary_assignee_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Reporter:</b></td>
+                <td valign="top">
+                            <a id="issue_summary_reporter_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Votes:</b></td>
+                <td valign="top">
+                                                                        0
+                                                            </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Watchers:</b></td>
+                <td valign="top">
+                                                                                    0
+                                    </td>
+            </tr>
+                    </table>
+                <div class="operations">
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+        <tr><td bgcolor="#dddddd">
+            <b>Operations</b>
+        </td></tr>
+        </table>
+        <br>
+        <table cellpadding="3" cellspacing="0" border="0" id="operationsSection">
+                    <tr><td class="issueOperation lazyOperation">
+                If you were <a class="lnk" rel="nofollow" href="/">logged in</a> you would be able to see more operations.
+            </td></tr>
+                </table>
+        </div>
+            </td></tr>
+</table>
+        </td>
+        <td bgcolor="#ffffff" valign="top">
+            <div style="padding:1em" id="issueContent">
+                <style type="text/css">
+<!--
+.fieldArea .fieldLabelArea { width: 10%; }
+.fieldArea .fieldValueArea { width: 90%; }
+#pinCommentContainer { float: right; font-size: 10px; }
+#pinCommentContainer a { margin: 0 0.2em; }
+-->
+</style>
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="#bbbbbb" width="100%" align="center">
+<tr><td width="100%" colspan="2" valign="top">
+<table id="issue_header" cellpadding="4" cellspacing="0" border="0" width="100%" bgcolor="#ffffff">
+<tr>
+    <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+    <table id="issue_header_summary" width="100%" cellpadding="0" cellspacing="0">
+        <tr><td bgcolor="#f0f0f0" width="80%" valign="top">
+            <b><a href="../../jira/browse/TFJ.html">
+                Twitter4J</a></b><br>
+            <h3 class="formtitle"> OAuth rarely fails with &quot;Invalid / used nonce&quot;</h3>
+            <font size="1">
+                Created: <span class="date">22/May/09 10:15 AM</span> &nbsp;
+                Updated: <span class="date">24/May/09 12:07 AM</span>
+                    &nbsp; Resolved: <span class="date">24/May/09 12:07 AM</span>
+            </font>
+        </td>
+        </tr></table>
+</tr>
+        <tr>
+            <td width="20%"><b>Component/s:</b></td>
+            <td width="80%">
+        <a href="../../jira/browse/TFJ/component/10003.html" title="Core ">Core</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Affects Version/s:</b></td>
+            <td width="80%">
+    None
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Fix Version/s:</b></td>
+            <td width="80%">
+        <a href="/" title="2.0.5 ">2.0.5</a>
+            </td>
+        </tr>
+</table>
+</td></tr></table>
+<br>
+<br>
+    <div class="tabwrap">
+            <div class="sortwrap">
+                Sort Order:
+                    <a rel="nofollow" href="/"></a>
+            </div>
+        <ul class="tabs horizontal">
+                <li><a href="/"><strong>All</strong></a></li>
+                <li class="active"><strong>Comments</strong></li>
+                <li><a href="/"><strong>Change History</strong></a></li>
+                <li><a href="/"><strong>Activity Stream</strong></a></li>
+                <li><a href="/"><strong>Source</strong></a></li>
+        </ul>
+    </div>
+        <div class="issuePanelContainer" id="issue_actions_container">
+                <div id="comment-10343-open">
+<div class="actionContainer">
+    <div class="action-links subText smallgrey">
+    [
+        <a href="/#action_10343" title="A permanent link to this comment." class="smallgrey">Permalink</a>
+                      | <a id="comment-10343-hide" href="" onclick="toggleDivsWithCookie('comment-10343-closed', 'comment-10343-open'); return false;" class="smallgrey">&laquo; Hide</a>
+    ]
+    </div>
+    <div class="action-details">    <a name="action_10343"/>
+                <a id="comment_10343_header_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> added a comment  - <span class="subText"><span class="date">22/May/09 10:24 AM</span></span>  </div>
+    <div class="action-body">[Fri May 22 10:01:05 JST 2009]Request: <br/>
+[Fri May 22 10:01:05 JST 2009]POST <a href="http://twitter.com/account/update_profile_colors.xml">http://twitter.com/account/update_profile_colors.xml</a><br/>
+[Fri May 22 10:01:05 JST 2009]OAuth base string:POST&http%3A%2F%2Ftwitter.com%2Faccount%2Fupdate_profile_colors.xml&oauth_consumer_key%3DcoJhWe2wD0plkGfYBAsfg%26oauth_nonce%3D1242954065658%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1242954065%26oauth_token%3D6358482-wwqkzmI3YOmM0JwouHCLd1rvuUJVf0QA5VD0s7Y04M%26oauth_version%3D1.0%26profile_background_color%3D9ae4e8%26profile_link_color%3D0000ff%26profile_sidebar_border_color%3D87bc44%26profile_sidebar_fill_color%3De0ff92%26profile_text_color%3D000000<br/>
+[Fri May 22 10:01:05 JST 2009]OAuth signature:yPrMlBqOOF9M9qPLrs6hcXcA8zE=<br/>
+[Fri May 22 10:01:05 JST 2009]Authorization: OAuth oauth_consumer_key=&quot;coJhWe2wD0plkGfYBAsfg&quot;,oauth_signature_method=&quot;HMAC-SHA1&quot;,oauth_timestamp=&quot;1242954065&quot;,oauth_nonce=&quot;1242954065658&quot;,oauth_version=&quot;1.0&quot;,oauth_token=&quot;6358482-wwqkzmI3YOmM0JwouHCLd1rvuUJVf0QA5VD0s7Y04M&quot;,oauth_signature=&quot;yPrMlBqOOF9M9qPLrs6hcXcA8zE%3D&quot;<br/>
+[Fri May 22 10:01:05 JST 2009]X-Twitter-Client-URL: <a href="http://yusuke.homeip.net/twitter4j/en/twitter4j-undefined.xml">http://yusuke.homeip.net/twitter4j/en/twitter4j-undefined.xml</a><br/>
+[Fri May 22 10:01:05 JST 2009]Accept-Encoding: gzip<br/>
+[Fri May 22 10:01:05 JST 2009]User-Agent: twitter4j <a href="../../twitter4j.html">http://yusuke.homeip.net/twitter4j/</a> /undefined<br/>
+[Fri May 22 10:01:05 JST 2009]X-Twitter-Client-Version: undefined<br/>
+[Fri May 22 10:01:05 JST 2009]Post Params: profile_background_color=9ae4e8&profile_text_color=000000&profile_link_color=0000ff&profile_sidebar_fill_color=e0ff92&profile_sidebar_border_color=87bc44<br/>
+[Fri May 22 10:01:13 JST 2009]Response: <br/>
+[Fri May 22 10:01:13 JST 2009]HTTP/1.1 401 Unauthorized<br/>
+[Fri May 22 10:01:13 JST 2009]WWW-Authenticate: Basic realm=&quot;Twitter API&quot;<br/>
+[Fri May 22 10:01:13 JST 2009]Content-Length: 141<br/>
+[Fri May 22 10:01:13 JST 2009]Expires: Fri, 22 May 2009 01:31:13 GMT<br/>
+[Fri May 22 10:01:13 JST 2009]Set-Cookie: _twitter_sess=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7AA%253D%253D--1164b91ac812d853b877e93ddb612b7471bebc74; domain=.twitter.com; path=/<br/>
+[Fri May 22 10:01:13 JST 2009]Connection: close<br/>
+[Fri May 22 10:01:13 JST 2009]Server: hi<br/>
+[Fri May 22 10:01:13 JST 2009]Cache-Control: no-cache, max-age=1800<br/>
+[Fri May 22 10:01:13 JST 2009]Status: 401 Unauthorized<br/>
+[Fri May 22 10:01:13 JST 2009]Vary: Accept-Encoding<br/>
+[Fri May 22 10:01:13 JST 2009]Date: Fri, 22 May 2009 01:01:13 GMT<br/>
+[Fri May 22 10:01:13 JST 2009]Content-Encoding: gzip<br/>
+[Fri May 22 10:01:13 JST 2009]Content-Type: application/xml; charset=utf-8<br/>
+[Fri May 22 10:01:13 JST 2009]&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br/>
+&lt;hash&gt;<br/>
+&nbsp;&nbsp;&lt;request&gt;/account/update_profile_colors.xml&lt;/request&gt;<br/>
+&nbsp;&nbsp;&lt;error&gt;Invalid / used nonce&lt;/error&gt;<br/>
+&lt;/hash&gt;<br/>
+<br/>
+<br/>
+twitter4j.TwitterException: 401:Authentication credentials were missing or incorrect.<br/>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br/>
+&lt;hash&gt;<br/>
+&nbsp;&nbsp;&lt;request&gt;/account/update_profile_colors.xml&lt;/request&gt;<br/>
+&nbsp;&nbsp;&lt;error&gt;Invalid / used nonce&lt;/error&gt;<br/>
+&lt;/hash&gt;<br/>
+<br/>
+	at twitter4j.http.HttpClient.httpRequest(HttpClient.java:409)<br/>
+	at twitter4j.http.HttpClient.post(HttpClient.java:333)<br/>
+	at twitter4j.Twitter.updateProfileColors(Twitter.java:1889)<br/>
+	at twitter4j.TwitterTestUnit.testAccountMethods(TwitterTestUnit.java:323)<br/>
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)<br/>
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)<br/>
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:40)<br/>
+<br/>
+ </div>
+</div>
+</div>
+<div id="comment-10343-closed" style="display: none;">
+<div class="actionContainer" style="background-color:#f0f0f0;">
+    <div class="action-links subText smallgrey">
+    [ <a id="comment-10343-show" href="" onclick="toggleDivsWithCookie('comment-10343-open', 'comment-10343-closed'); return false;" class="smallgrey">Show &raquo;</a> ]
+    </div>
+    <div class="action-details" style="overflow: hidden; height: 1em;">
+                <a name="action_10343"/>
+                <a id="comment_10343_header_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> added a comment  - <span class="subText"><span class="date">22/May/09 10:24 AM</span></span>               [Fri May 22 10:01:05 JST 2009]Request: 
+[Fri May 22 10:01:05 JST 2009]POST <a href="http://twitter.com/account/update_profile_colors.xml">http://twitter.com/account/update_profile_colors.xml</a>
+[Fri May 22 10:01:05 JST 2009]OAuth base string:POST&http%3A%2F%2Ftwitter.com%2Faccount%2Fupdate_profile_colors.xml&oauth_consumer_key%3DcoJhWe2wD0plkGfYBAsfg%26oauth_nonce%3D1242954065658%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1242954065%26oauth_token%3D6358482-wwqkzmI3YOmM0JwouHCLd1rvuUJVf0QA5VD0s7Y04M%26oauth_version%3D1.0%26profile_background_color%3D9ae4e8%26profile_link_color%3D0000ff%26profile_sidebar_border_color%3D87bc44%26profile_sidebar_fill_color%3De0ff92%26profile_text_color%3D000000
+[Fri May 22 10:01:05 JST 2009]OAuth signature:yPrMlBqOOF9M9qPLrs6hcXcA8zE=
+[Fri May 22 10:01:05 JST 2009]Authorization: OAuth oauth_consumer_key=&quot;coJhWe2wD0plkGfYBAsfg&quot;,oauth_signature_method=&quot;HMAC-SHA1&quot;,oauth_timestamp=&quot;1242954065&quot;,oauth_nonce=&quot;1242954065658&quot;,oauth_version=&quot;1.0&quot;,oauth_token=&quot;6358482-wwqkzmI3YOmM0JwouHCLd1rvuUJVf0QA5VD0s7Y04M&quot;,oauth_signature=&quot;yPrMlBqOOF9M9qPLrs6hcXcA8zE%3D&quot;
+[Fri May 22 10:01:05 JST 2009]X-Twitter-Client-URL: <a href="http://yusuke.homeip.net/twitter4j/en/twitter4j-undefined.xml">http://yusuke.homeip.net/twitter4j/en/twitter4j-undefined.xml</a>
+[Fri May 22 10:01:05 JST 2009]Accept-Encoding: gzip
+[Fri May 22 10:01:05 JST 2009]User-Agent: twitter4j <a href="../../twitter4j.html">http://yusuke.homeip.net/twitter4j/</a> /undefined
+[Fri May 22 10:01:05 JST 2009]X-Twitter-Client-Version: undefined
+[Fri May 22 10:01:05 JST 2009]Post Params: profile_background_color=9ae4e8&profile_text_color=000000&profile_link_color=0000ff&profile_sidebar_fill_color=e0ff92&profile_sidebar_border_color=87bc44
+[Fri May 22 10:01:13 JST 2009]Response: 
+[Fri May 22 10:01:13 JST 2009]HTTP/1.1 401 Unauthorized
+[Fri May 22 10:01:13 JST 2009]WWW-Authenticate: Basic realm=&quot;Twitter API&quot;
+[Fri May 22 10:01:13 JST 2009]Content-Length: 141
+[Fri May 22 10:01:13 JST 2009]Expires: Fri, 22 May 2009 01:31:13 GMT
+[Fri May 22 10:01:13 JST 2009]Set-Cookie: _twitter_sess=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7AA%253D%253D--1164b91ac812d853b877e93ddb612b7471bebc74; domain=.twitter.com; path=/
+[Fri May 22 10:01:13 JST 2009]Connection: close
+[Fri May 22 10:01:13 JST 2009]Server: hi
+[Fri May 22 10:01:13 JST 2009]Cache-Control: no-cache, max-age=1800
+[Fri May 22 10:01:13 JST 2009]Status: 401 Unauthorized
+[Fri May 22 10:01:13 JST 2009]Vary: Accept-Encoding
+[Fri May 22 10:01:13 JST 2009]Date: Fri, 22 May 2009 01:01:13 GMT
+[Fri May 22 10:01:13 JST 2009]Content-Encoding: gzip
+[Fri May 22 10:01:13 JST 2009]Content-Type: application/xml; charset=utf-8
+[Fri May 22 10:01:13 JST 2009]&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;hash&gt;
+&nbsp;&nbsp;&lt;request&gt;/account/update_profile_colors.xml&lt;/request&gt;
+&nbsp;&nbsp;&lt;error&gt;Invalid / used nonce&lt;/error&gt;
+&lt;/hash&gt;
+twitter4j.TwitterException: 401:Authentication credentials were missing or incorrect.
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;hash&gt;
+&nbsp;&nbsp;&lt;request&gt;/account/update_profile_colors.xml&lt;/request&gt;
+&nbsp;&nbsp;&lt;error&gt;Invalid / used nonce&lt;/error&gt;
+&lt;/hash&gt;
+	at twitter4j.http.HttpClient.httpRequest(HttpClient.java:409)
+	at twitter4j.http.HttpClient.post(HttpClient.java:333)
+	at twitter4j.Twitter.updateProfileColors(Twitter.java:1889)
+	at twitter4j.TwitterTestUnit.testAccountMethods(TwitterTestUnit.java:323)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:40)
+     </div>
+</div>
+</div>
+<br clear="all"/>
+<script language="JavaScript" type="text/javascript">
+<!--
+    restoreDivFromCookie('comment-10343-open', 'jira.viewissue.cong.cookie', '1');
+    restoreDivFromCookie('comment-10343-closed', 'jira.viewissue.cong.cookie', '0');
+//-->
+</script>
+        </div>
+            </div>
+        </td>
+    </tr>
+</table>
+<div class="footer">
+<div class="poweredbymessage">
+        <a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+        <span id="footer-build-information" style="color: #666666;">(v4.0#466)</span>        | <a href="http://support.atlassian.com/secure/CreateIssue.jspa?issuetype=1&amp;pid=10000">Report a problem</a>
+        | <a href="http://jira.atlassian.com/secure/CreateIssue.jspa?pid=10240&amp;issuetype=2">Request a feature</a>
+        | <a href="../../jira/secure/Administrators.html">Contact administrators</a>
+    </div>
+                        <div class="licensemessage">
+                Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+            </div>
+</div>
+<!--
+	                 REQUEST ID : 64003x4282x1
+	          REQUEST TIMESTAMP : [18/Oct/2009:17:46:43 +0900]
+	               REQUEST TIME : 0.5610
+	                 ASESSIONID : uocexg
+-->
+</body>
+</html>

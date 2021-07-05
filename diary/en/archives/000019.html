@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Samuraism-blog: Samurai updated</title>
+<link rel="stylesheet" href="../../../diary/en/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/en/index.rdf"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/en/" title="Home"/>
+<link rel="prev" href="../../../diary/en/archives/000011.html" title="subscribed Samurai to the dev2dev"/>
+<link rel="next" href="../../../diary/en/archives/000026.html" title="movabletype3.0"/>
+<script type="text/javascript" language="javascript">
+<!--
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/en/archives/000019.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/20"
+    dc:title="Samurai updated"
+    dc:identifier="http://yusuke.homeip.net/diary/en/archives/000019.html"
+    dc:subject="Java"
+    dc:description="Barry san, who is a WebLogic Portal DRE requests Samurai to get more flexible thread dump detection mechanizm. Now Samurai(v1.2.2) can detect a thread dump which tabs(&quot;\t&quot;) are replaced to white spaces(&quot; &quot;) by editors...."
+    dc:creator="yusuke"
+    dc:date="2004-04-16T08:30:52-07:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="banner">
+<h1><a href="/" accesskey="1">Samuraism-blog</a></h1>
+<span class="description"></span>
+</div>
+<div id="container">
+<div class="blog">
+<div id="menu">
+<a href="../../../diary/en/archives/000011.html">&laquo; subscribed Samurai to the dev2dev</a> |
+<a href="/">Main</a>
+| <a href="../../../diary/en/archives/000026.html">movabletype3.0 &raquo;</a>
+</div>
+</div>
+<div class="blog">
+<h2 class="date">April 16, 2004</h2>
+<div class="blogbody">
+<h3 class="title">Samurai updated</h3>
+<p>Barry san, who is a WebLogic Portal DRE requests <a href="../../../samurai/english.html">Samurai</a> to get more flexible thread dump detection mechanizm.<br/>
+Now <a href="../../../samurai/english.html">Samurai(v1.2.2)</a> can detect a thread dump which tabs("\t") are replaced to white spaces(" ") by editors.</p>
+<a name="more"></a>
+<span class="posted">Posted by yusuke at April 16, 2004 08:30 AM
+| <a href="http://yusuke.homeip.net/diary/mt/mt-tb.cgi?__mode=view&amp;entry_id=19" onclick="OpenTrackback(this.href); return false">TrackBack</a>
+<br/></span>
+</div>
+<div class="comments-head"><a name="comments"></a>Comments</div>
+<div class="comments-head">Post a comment</div>
+<div class="comments-body">
+<form method="post" action="http://yusuke.homeip.net/diary/mt/mt-comments.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<input type="hidden" name="static" value="1"/>
+<input type="hidden" name="entry_id" value="19"/>
+<!--div style="width:180px; padding-right:15px; margin-right:15px; float:left; text-align:left; border-right:1px dotted #bbb;"-->
+	<label for="author">Name:</label><br/>
+	<input tabindex="1" id="author" name="author"/><br/><br/>
+	<label for="email">Email Address:</label><br/>
+	<input tabindex="2" id="email" name="email"/><br/><br/>
+	<label for="url">URL:</label><br/>
+	<input tabindex="3" id="url" name="url"/><br/><br/>
+<!--/div-->
+Remember personal info?<br/>
+<input type="radio" id="bakecookie" name="bakecookie"/><label for="bakecookie">Yes</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"/><label for="forget">No</label><br style="clear: both;"/>
+<label for="text">Comments:</label><br/>
+<textarea tabindex="4" id="text" name="text" rows="10" cols="50"></textarea><br/><br/>
+<input type="submit" name="preview" value=" Preview "/>
+<input style="font-weight: bold;" type="submit" name="post" value=" Post "/><br/><br/>
+</form>
+<script type="text/javascript" language="javascript">
+<!--
+document.comments_form.email.value = getCookie("mtcmtmail");
+document.comments_form.author.value = getCookie("mtcmtauth");
+document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</div>
+</body>
+</html>

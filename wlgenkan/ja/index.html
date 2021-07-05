@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+	<meta http-equiv="Content-Language" content="ja"/>
+	<title>一発 WebLogic</title>
+<meta name="keywords" content="weblogic,wls,admin console,login,weblogic document,管理コンソール">
+	<link rel="STYLESHEET" type="text/css" href="http://yusuke.homeip.net/wlgenkan/ja/portal.css"/>
+  <link rel="SHORTCUT ICON" href="http://yusuke.homeip.net/wlgenkan/ja/favicon.ico"/>
+</head>
+<body>
+<table cellspacing="0" width="100%">
+  <tr nowrap="true">
+	<td align="right" nowrap="true">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="right" height="32">
+<br/>
+  <a href="http://www.google.com/">Google:</a>
+</td></tr></table>
+  	</td>
+	<td><table><tr><td width="10%"><br><!-- Search Google -->
+<center>
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+<input type="text" name="q" size="32" maxlength="255" value=""></input>
+<input type="submit" name="sa" value="Google 検索"></input>
+<input type="hidden" name="client" value="pub-3583922429486444"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="Shift_JIS"></input>
+<input type="hidden" name="oe" value="Shift_JIS"></input>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1"></input>
+<input type="hidden" name="hl" value="ja"></input>
+</td></tr></table>
+</form>
+</center>
+<!-- Search Google -->
+</td><td width="100%" align="right"><a href="../../wlgenkan/en/index.html">English</a>|Japanese
+</td></tr></table>
+	</td>
+  </tr>
+<!-- ↓bug parade search -->
+<form method="get" action="http://bugs.sun.com/bugdatabase/search.do">
+  <tr nowrap="true">
+		<td align="right" nowrap="true">
+      <a href="http://bugs.sun.com/bugdatabase/index.jsp">Bug parade(<u>b</u>):</a>
+  	</td>
+		<td>
+			<input type="hidden" name="process" value="1">
+			<input type="hidden" name="subcategory" value="">
+			<input type="hidden" name="type" value="">
+			<input tabindex="11" accesskey="b" type="text" name="keyword" size="30" maxlength="50">
+			<input type="submit" value="go">
+			<select name="category"><option value="" selected="selected">Any</option>
+			<option value="java">JDK</option>
+			<option value="jmq">Java Message Queue</option>
+			<option value="hotspot">HotSpot</option>
+			<option value="javahelp">JavaHelp</option>
+			<option value="hotjava_views">HotJava Views</option>
+			<option value="java_bdk">JavaBeans Dev Kit</option>
+			<option value="java_server">JavaServer</option>
+			<option value="javax_servlet">Java Servlet</option>
+			<option value="java_web">Java Web Server</option>
+			<option value="idl">Java IDL</option>
+			<option value="idl_compiler">IDL Compiler</option>
+			<option value="java_plugin">Java Plugin</option>
+			<option value="java3d">Java3D</option>
+			<option value="jmf">Java Media Framework</option>
+			<option value="java_mail">JavaMail</option>
+			<option value="j2ee">Java 2 SDK Enterprise Edition</option>
+			<option value="kvm">K Virtual Machine</option>
+			<option value="jsdt">Java Shared Data Toolkit</option>
+			<option value="java_deployment">Java Deployment</option>
+			<option value="java_imageio">Java Image IO</option>
+			<option value="jiro">Jiro</option>
+			<option value="jaxb-xsd">Java Architecture for XML Binding (JAXB-XSD)</option>
+			<option value="jaxp">JAXP</option>
+			<option value="jaxr">JAXR</option>
+			<option value="javawebstart">Java Web Start</option>
+			<option value="forte4j|netbeans_ro|sun_one_application_framework">Sun Java Studio</option>
+			<option value="e_p_java">Personal and Embedded Java</option>
+			<option value="cldc-spec">CLDC Specification</option>
+			<option value="mid-profile">Mobile Information Device Profile (MIDP) Reference Implementation</option>
+			<option value="midp-palm">Mobile Information Device Profile for Palm OS (MIDP)</option>
+			<option value="customdoclets">Custom Doclets for the Javadoc tool</option>
+			<option value="jai">JAI is Advanced Imaging</option>
+			<option value="jsr89_service_activation">OSS Service Activation </option>
+			<option value="jsr90_quality_of_service">OSS Quality of Service </option>
+			<option value="jsr91_trouble_ticket">OSS Trouble Ticket</option>
+			<option value="jsr144_common">OSS Common </option>
+			<option value="jsr130_ip_billing">OSS IP Billing</option>
+			<option value="jsr142_inventory">OSS Inventory</option>
+			<option value="jini">Jini Network Technology</option>
+			<option value="jdo">Java Data Objects (JDO)</option>
+			<option value="sunone_application_server">Sun ONE Application Server</option>
+			<option value="iplanet_web_server">Sun One Web Server</option>
+			<option value="jmx">Java Management Extensions (JMX)</option>
+			<option value="jmx-remote">Java Management Extensions (JMX) Remote API</option>
+			<option value="jstl">JavaServer Pages Standard Tag Library (JSTL)</option>
+			<option value="accessbridge">Java Access Bridge for Assistive Technology</option>
+			<option value="jsfaces">JavaServer Faces Technology</option></select>
+			<select name="bugStatus">
+			<option value="">Any
+			<option value="open">Open
+			<option value="closed">Closed
+			</select>
+		</td>
+	</tr>
+</form>
+<!-- ↑bug parade search -->
+<!-- ↓solution #-->
+<script language="JavaScript">
+  function showSolution(languageIsEnglish,solutionId){
+	  if(true == languageIsEnglish){
+      if(solutionId.length == 0){
+        location.href='http://support.bea.com/application?event=link.browse.advanced&namespace=browse&portlet=BrowseBugs&origin=browse_portlet.jsp&highlight%20%20%20%20%20=browse';
+      }else{
+        location.href='http://support.bea.com/application?namespace=askbea&origin=ask_bea_answer.jsp&event=link.view_answer_page_clfydoc&answerpage=solution&page=wls%2FS-'  +solutionId +'.htm';
+      }
+		}else{
+		  location.href='http://www.beasys.co.jp/BeaPortal/cs/solution/getSolution.do?solutionId='  +solutionId + '&page=0';
+		}
+	}
+</script>
+     <form name="solutionForm" method="GET" action="" onsubmit="return false;">
+	<tr nowrap="true">
+	  <td align="right" nowrap="true">
+      <a href="http://www.beasys.co.jp/BeaPortal/cs/solution/">Solution(<u>s</u>):</a>
+    </td>
+		<td>
+		  <input tabindex="20" accesskey="s" type="text" name="solutionId" value="" size="9" maxlength="5">
+			<input type="submit" value="JP" name="btnG" onclick="showSolution(false,document.solutionForm.solutionId.value)">
+			<input tabindex="21" type="button" value="EN" name="btnG" onclick="showSolution(true,document.solutionForm.solutionId.value)">
+		</td>
+	</tr>
+		</form>
+<!-- ↑solution #-->
+  <tr>
+	    <td align="right"><a href="../../tools.html">JWS App:</a> 
+      </td>
+		<td valign="middle">
+<a href="../../samurai/samurai.html"></a>
+&nbsp;
+<a href="../../waraji/waraji.html"></a>
+&nbsp;
+<a href="/"></a>
+      </td>
+	</tr>
+</table>
+<script language="JavaScript">
+ var config = getCookieOrDefault("consolePreferences3","127.0.0.1,system,weblogic,7601,system,weblogic,7701,weblogic,weblogic,7801,weblogic,weblogic,7001");
+ var host_name = config.split(",")[0];
+ var wl_user61 = config.split(",")[1];
+ var wl_password61 = config.split(",")[2];
+ var wl_admin_port61 = config.split(",")[3];
+ var wl_user70 = config.split(",")[4];
+ var wl_password70 = config.split(",")[5];
+ var wl_admin_port70 = config.split(",")[6];
+ var wl_user81 = config.split(",")[7];
+ var wl_password81 = config.split(",")[8];
+ var wl_admin_port81 = config.split(",")[9];
+ var wl_user90 = config.split(",")[10];
+ var wl_password90 = config.split(",")[11];
+ var wl_admin_port90 = config.split(",")[12];
+	function setCookie(key,val){
+			var theCookie = key + "=" + escape(val) + ";";
+			theCookie  = "expires=Fri, 31-Dec-2030 23:59:59;";
+			document.cookie = theCookie;
+	}
+	function getCookieOrDefault(key,defaultValue){
+	  var theValue = getCookie(key);
+		if("" == theValue){
+		  setCookie(key,defaultValue);
+			theValue = defaultValue;
+		}
+		return theValue;
+	}
+	function getCookie(key){
+			var allCookies = document.cookie+ ";";
+			var cookieIndex = allCookies.indexOf(key);
+			if(cookieIndex != -1){
+			  cookieIndex  = key.length +1;
+					return(unescape(allCookies.substring(cookieIndex,allCookies.indexOf(";",cookieIndex))));
+			}else{
+  			return("");
+			}
+	}
+	function delCookie(key){
+			expiredate = new Date();
+			expiredate.setYear(expiredate.getYear()-1);
+			tmp = key+ "=;";
+			tmp  = "expires="+ expiredate.toGMTString();
+			document.cookie = tmp;
+	}
+</script>
+              <script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead/show_ads.js">
+</script><br>
+<table><tr><td><table cellspacing="1">
+  <tr>
+	  <td align="center"><a href="http://edocs.beasys.co.jp/e-docs/index.html">eDocs</a></td>
+		<td align="center">
+		  <a href="/"></a>
+</td>
+	</tr>
+<tr>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		<td align="right" nowrap="true">
+<script language="JavaScript">
+ddpages9 = new Array(10);
+ddpages9[0] = "";
+ddpages9[1] = "";
+ddpages9[2] = "";
+ddpages9[3] = "http://edocs.beasys.co.jp/e-docs/wls/docs92/webapp/web_xml.html";
+ddpages9[4] = "http://edocs.beasys.co.jp/e-docs/wls/docs92/webapp/weblogic_xml.html";
+ddpages9[5] = "http://java.sun.com/j2ee/dtds/ejb-jar_1_1.dtd";
+ddpages9[6] = "http://edocs.beasys.co.jp/e-docs/wls/docs92/ejb/DDreference-ejb-jar.html";
+ddpages9[7] = "http://edocs.beasys.co.jp/e-docs/wls/docs92/ejb/DDreference-cmp-jar.html";
+ddpages9[8] = "http://edocs.beasys.co.jp/e-docs/wls/docs92/programming/app_xml.html#1007302";
+ddpages9[9] = "http://edocs.beasys.co.jp/e-docs/wls/docs92/programming/app_xml.html#1007582";
+function setVersionLink9x(version){
+  if(version==0){
+   //WLS9.2
+   document.getElementById("wls9xja").href="http://edocs.beasys.co.jp/e-docs/wls/docs92/index.html";
+   document.getElementById("wls9xen").href="http://edocs.beasys.co.jp/e-docs/wls/docs92/index.html";
+  }else if(version==1){
+   //WLS9.1
+document.getElementById("wls9xja").href="http://edocs.beasys.co.jp/e-docs/wls/docs91/index.html";
+   document.getElementById("wls9xen").href="http://edocs.beasys.co.jp/e-docs/wls/docs91/index.html";
+  }else if(version==2){
+   //WLS9.0
+document.getElementById("wls9xja").href="http://edocs.beasys.co.jp/e-docs/wls/docs90/index.html";
+   document.getElementById("wls9xen").href="http://edocs.beasys.co.jp/e-docs/wls/docs90/index.html";
+  }
+}
+</script>
+<select name="idxname" onchange="if(this.selectedIndex <=2){setVersionLink9x(this.selectedIndex)}else{document.location.href=ddpages9[this.selectedIndex]}">
+<option value="e-docs/wls/docs92" selected>WLS9.2</option>
+<option value="e-docs/wls/docs91">WLS9.1</option>
+<option value="e-docs/wls/docs90">WLS9.0</option>
+<option>web.xml</option>
+<option>weblogic.xml</option>
+<option>ejb-jar.xml</option>
+<option>weblogic-ejb-jar.xml</option>
+<option>weblogic-cmp-jar.xml</option>
+<option>application.xml</option>
+<option>weblogic-application.xml</option>
+</select>
+			<a id="wls9xja" href="http://edocs.beasys.co.jp/e-docs/wls/docs92/index.html">JA</a>
+			<a id="wls9xen" href="http://e-docs.bea.com/wls/docs92/index.html">EN(<u>9</u>)</a>
+			<input tabindex="23" accesskey="9" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td><a href="#" id="wls90admin"></a>
+<script language="JavaScript">
+document.getElementById("wls90admin").href='http://'+ host_name +':'+ wl_admin_port90 +'/console/j_security_check?j_username='+ wl_user90 +'&j_password='+ wl_password90;
+</script>
+    </td>
+  </tr>
+		</form>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		<td align="right">
+<script language="JavaScript">
+ddpages8 = new Array(8);
+ddpages8[0] = "";
+ddpages8[1] = "http://edocs.beasys.co.jp/e-docs/wls/docs81/webapp/web_xml.html";
+ddpages8[2] = "http://edocs.beasys.co.jp/e-docs/wls/docs81/webapp/weblogic_xml.html";
+ddpages8[3] = "http://java.sun.com/j2ee/dtds/ejb-jar_1_1.dtd";
+ddpages8[4] = "http://edocs.beasys.co.jp/e-docs/wls/docs81/ejb/DDreference-ejb-jar.html";
+ddpages8[5] = "http://edocs.beasys.co.jp/e-docs/wls/docs81/ejb/DDreference-cmp-jar.html";
+ddpages8[6] = "http://edocs.beasys.co.jp/e-docs/wls/docs81/programming/app_xml.html#1007302";
+ddpages8[7] = "http://edocs.beasys.co.jp/e-docs/wls/docs81/programming/app_xml.html#1007582";
+</script>
+<select onchange="if(this.selectedIndex !=0){document.location.href=ddpages8[this.selectedIndex]}">
+<option>WLS8.1</option>
+<option>web.xml</option>
+<option>weblogic.xml</option>
+<option>ejb-jar.xml</option>
+<option>weblogic-ejb-jar.xml</option>
+<option>weblogic-cmp-jar.xml</option>
+<option>application.xml</option>
+<option>weblogic-application.xml</option>
+</select>
+			<a href="http://edocs.beasys.co.jp/e-docs/wls/docs81/index.html">JA</a>
+			<a href="http://e-docs.bea.com/wls/docs81/index.html">EN(<u>8</u>)</a>
+			<input tabindex="26" accesskey="8" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="idxname" value="e-docs/wls/docs81">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td><a href="#" id="wls81admin"></a>
+<script language="JavaScript">
+document.getElementById("wls81admin").href='http://'+ host_name+ ':'+ wl_admin_port81+ '/console/j_security_check?j_username=' +wl_user81+ '&j_password='+ wl_password81;
+</script>
+    </td>
+  </tr>
+		</form>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		<td align="right">
+<script language="JavaScript">
+ddpages7 = new Array(8);
+ddpages7[0] = "";
+ddpages7[1] = "http://edocs.beasys.co.jp/e-docs/wls/docs70/webapp/web_xml.html";
+ddpages7[2] = "http://edocs.beasys.co.jp/e-docs/wls/docs70/webapp/weblogic_xml.html";
+ddpages7[3] = "http://java.sun.com/j2ee/dtds/ejb-jar_1_1.dtd";
+ddpages7[4] = "http://edocs.beasys.co.jp/e-docs/wls/docs70/ejb/reference.html";
+ddpages7[5] = "http://edocs.beasys.co.jp/e-docs/wls/docs70/ejb/EJB_reference.html";
+ddpages7[6] = "http://edocs.beasys.co.jp/e-docs/wls/docs70/programming/app_xml.html#822751";ddpages7[7] = "http://edocs.beasys.co.jp/e-docs/wls/docs70/programming/app_xml.html#822964";
+</script>
+<select onchange="if(this.selectedIndex !=0){document.location.href=ddpages7[this.selectedIndex]}">
+<option>WLS7.0</option>
+<option>web.xml</option>
+<option>weblogic.xml</option>
+<option>ejb-jar.xml</option>
+<option>weblogic-ejb-jar.xml</option>
+<option>weblogic-cmp-rdbms-jar.xml</option>
+<option>application.xml</option>
+<option>weblogic-application.xml</option>
+</select>
+			<a href="http://edocs.beasys.co.jp/e-docs/wls/docs70/index.html">JA</a>
+			<a href="http://e-docs.bea.com/wls/docs70/index.html">EN(<u>7</u>)</a>
+			<input tabindex="29" accesskey="7" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="idxname" value="e-docs/wls/docs70">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td>
+		<a href="#" id="wls70admin"></a>
+<script language="JavaScript">
+document.getElementById("wls70admin").href='http://'+ host_name +':'+ wl_admin_port70+ '/console/j_security_check?j_username='+ wl_user70 +'&j_password='+ wl_password70;
+</script>
+    </td>
+	</tr>
+		</form>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		  <td align="right">
+<script language="JavaScript">
+ddpages6 = new Array(7);
+ddpages6[0] = "";
+ddpages6[1] = "http://edocs.beasys.co.jp/e-docs/wls61/webapp/webappdeployment.html";
+ddpages6[2] = "http://edocs.beasys.co.jp/e-docs/wls61/webapp/weblogic_xml.html";
+ddpages6[3] = "http://java.sun.com/j2ee/dtds/ejb-jar_1_1.dtd";
+ddpages6[4] = "http://edocs.beasys.co.jp/e-docs/wls61/ejb/reference.html";
+ddpages6[5] = "http://edocs.beasys.co.jp/e-docs/wls61/ejb/EJB_reference.html";
+ddpages6[6] = "http://edocs.beasys.co.jp/e-docs/wls61/programming/app_xml.html";
+</script>
+<select onchange="if(this.selectedIndex !=0){document.location.href=ddpages6[this.selectedIndex]}">
+<option>WLS6.1</option>
+<option>web.xml</option>
+<option>weblogic.xml</option>
+<option>ejb-jar.xml</option>
+<option>weblogic-ejb-jar.xml</option>
+<option>weblogic-cmp-rdbms-jar.xml</option>
+<option>application.xml</option>
+</select>
+ <a href="http://edocs.beasys.co.jp/e-docs/wls61/index.html">JA</a> 
+        <a href="http://e-docs.bea.com/wls/docs61/index.html">EN(<u>6</u>)</a> 
+        <input tabindex="32" accesskey="6" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="idxname" value="e-docs/wls/docs61">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td>
+		<a href="#" id="wls61admin"></a>
+<script language="JavaScript">
+document.getElementById("wls61admin").href="http://"+ wl_user61 +":"+ wl_password61  + "@" +  host_name +  ":"  + wl_admin_port61+ "/console/";
+</script>
+    </td>
+  </tr>
+		</form>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		  <td align="right"> WLS5.1 <a href="http://edocs.beasys.co.jp/weblogic/docs/resources.html">JA</a> 
+        <a href="http://www.weblogic.com/docs51/resources.html">EN(<u>5</u>)</a> 
+        <input tabindex="35" accesskey="5" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="idxname" value="weblogic/docs">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		</form>
+		<td></td>
+  </tr>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		<td align="right">
+      <select name="idxname">
+<option value="e-docs/workshop/docs92">WLW9.2</option>
+			  <option value="e-docs/workshop/docs81">WLW8.1</option>
+			  <option value="e-docs/workshop/docs70">WLW7.0</option>
+			</select>
+			<a href="http://edocs.beasys.co.jp/e-docs/workshop/docs81/index.html">JA</a>
+			<a href="http://e-docs.bea.com/workshop/docs81/index.html">EN(<u>j</u>)</a>
+			<input tabindex="38" accesskey="j" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td></td>
+  </tr>
+		</form>
+<script>
+function setVersionLinkWLI(version){
+  if(version==0){
+   //WLI9.2
+   document.getElementById("wlija").href="http://edocs.beasys.co.jp/e-docs/wli/docs92/index.html";
+   document.getElementById("wlien").href="http://e-docs.bea.com/wli/docs92/index.html";
+  }else if(version==1){
+   //WLI8.1
+   document.getElementById("wlija").href="http://edocs.beasys.co.jp/e-docs/wli/docs81/index.html";
+   document.getElementById("wlien").href="http://e-docs.bea.com/wli/docs81/index.html";
+  }else if(version==2){
+   //WLP7.0
+   document.getElementById("wlija").href="http://edocs.beasys.co.jp/e-docs/wli/docs70/index.html";
+   document.getElementById("wlien").href="http://e-docs.bea.com/wli/docs70/index.html";
+  }else if(version==3){
+   //WLI2.1
+   document.getElementById("wlija").href="http://edocs.beasys.co.jp/e-docs/wlintegration/v2_1/index.html";
+   document.getElementById("wlien").href="http://e-docs.bea.com/wlintegration/v2_1sp/index.html";
+  }
+}
+</script>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		<td align="right">
+      <select onchange="setVersionLinkWLI(this.selectedIndex)" name="idxname">
+			  <option value="e-docs/wli/docs92">WLI9.2</option>
+			  <option value="e-docs/wli/docs81">WLI8.1</option>
+			  <option value="e-docs/wli/docs70">WLI7.0</option>
+			  <option value="e-docs/wli/wlintegration/v2_1">WLI2.1</option>
+			</select>
+			<a id="wlija" href="http://edocs.beasys.co.jp/e-docs/wli/docs92/index.html">JA</a>
+			<a id="wlien" href="http://e-docs.bea.com/wli/docs92/index.html">EN(<u>i</u>)</a>
+			<input tabindex="41" accesskey="i" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td>
+<script language="JavaScript">
+//  document.write('<a href=＼"http://' host_name ':' wl_default_port '/wliconsole/main?cusrname=' wl_user81 '&cusrpwd=' wl_password81 '＼">wliconsole</a>＼n');
+//  document.write('<a href=＼"http://' host_name ':' wl_default_port '/wlai/j_security_check?j_username=' wl_user81 '&j_password=' wl_password81 '＼">wlaiconsole</a>＼n');
+</script>
+		</td>
+  </tr>
+		</form>
+<script>
+function setVersionLinkWLP(version){
+  if(version==0){
+   //WLP9.2
+   document.getElementById("wlpja").href="http://edocs.beasys.co.jp/e-docs/wlp/docs92/index.html";
+   document.getElementById("wlpen").href="http://edocs.beasys.co.jp/e-docs/wlp/docs92/index.html";
+  }else if(version==1){
+   //WLP8.1
+   document.getElementById("wlpja").href="http://edocs.beasys.co.jp/e-docs/wlp/docs81/index.html";
+   document.getElementById("wlpen").href="http://edocs.beasys.co.jp/e-docs/wlp/docs81/index.html";
+  }else if(version==2){
+   //WLP7.0
+   document.getElementById("wlpja").href="http://edocs.beasys.co.jp/e-docs/wlp/docs70/index.html";
+   document.getElementById("wlpen").href="http://edocs.beasys.co.jp/e-docs/wlp/docs70/index.html";
+  }else if(version==3){
+   //WLP4.0
+   document.getElementById("wlpja").href="http://edocs.beasys.co.jp/e-docs/wlp40/index.htm";
+   document.getElementById("wlpen").href="http://edocs.beasys.co.jp/e-docs/wlp/docs40/index.htm";
+  }else if(version==4){
+   //WLCS3.5
+   document.getElementById("wlpja").href="http://edocs.beasys.co.jp/e-docs/wlcs/docs35/index.htm";
+   document.getElementById("wlpen").href="http://edocs.beasys.co.jp/e-docs/wlcs/docs35/index.htm";
+  }else if(version==5){
+   //WLCS3.2
+   document.getElementById("wlpja").href="http://edocs.beasys.co.jp/e-docs/wlcs32e/index.htm";
+   document.getElementById("wlpen").href="http://edocs.beasys.co.jp/e-docs/wlcs/docs32/index.html";
+  }else if(version==6){
+   //WLCS3.1
+   document.getElementById("wlpja").href="http://edocs.beasys.co.jp/e-docs/wlcs/index.htm";
+   document.getElementById("wlpen").href="http://edocs.beasys.co.jp/e-docs/wlcs/docs31/index.html";
+  }else if(version==7){
+   //WLCS2.0
+   document.getElementById("wlpja").href="http://edocs.beasys.co.jp/weblogic/wlcs20doc/index.htm";
+   document.getElementById("wlpen").href="http://e-docs.bea.com/wlcs/docs20/index.html";
+  }
+}
+</script>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		<td align="right">
+      <select onchange="setVersionLinkWLP(this.selectedIndex)" name="idxname">
+			  <option value="e-docs/wlp/docs92">WLP9.2</option>
+			  <option value="e-docs/wlp/docs81">WLP8.1</option>
+			  <option value="e-docs/wlp/docs70">WLP7.0</option>
+			  <option value="e-docs/wlp40">WLP4.0</option>
+			  <option value="e-docs/wlcs35">WLCS3.5</option>
+			  <option value="e-docs/wlcs32e">WLCS3.2</option>
+			  <option value="e-docs/wlcs">WLCS3.1</option>
+			  <option value="e-docs/wlcs20docs">WLCS2.0</option>
+			</select>
+			<a id="wlpja" href="http://edocs.beasys.co.jp/e-docs/wlp/docs92/index.html">JA</a>
+			<a id="wlpen" href="http://e-docs.bea.com/wlp/docs92/index.html">EN(<u>p</u>)</a>
+			<input tabindex="44" accesskey="p" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td></td>
+  </tr>
+		</form>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		<td align="right">
+      <select name="idxname">
+			  <option value="e-docs/wljrockit/docs50">JRockit5.0</option>
+			  <option value="e-docs/wljrockit/docs142">JRockit1.4.2</option>
+			</select>
+			<a href="http://edocs.beasys.co.jp/e-docs/wljrockit/docs50/">JA</a>
+			<a href="http://e-docs.bea.com/jrockit/docs50/">EN(<u>p</u>)</a>
+			<input tabindex="47" accesskey="p" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td></td>
+  </tr>
+		</form>
+<script>
+function setVersionLinkALSB(version){
+  if(version==0){
+   //ALSB2.5
+   document.getElementById("alsbja").href="http://edocs.beasys.co.jp/e-docs/alsb/docs25/index.html";
+   document.getElementById("alsben").href="http://e-docs.bea.com/alsb/docs25/index.html";
+  }else if(version==1){
+   //ALSB2.1
+   document.getElementById("alsbja").href="http://edocs.beasys.co.jp/e-docs/alsb/docs21/index.html";
+   document.getElementById("alsben").href="http://e-docs.bea.com/alsb/docs21/index.html";
+  }else if(version==2){
+   //ALSB2.0
+   document.getElementById("alsbja").href="http://edocs.beasys.co.jp/e-docs/alsb/docs20/index.html";
+   document.getElementById("alsben").href="http://e-docs.bea.com/alsb/docs20/index.html";
+  }
+}
+</script>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		<td align="right">
+      <select onchange="setVersionLinkALSB(this.selectedIndex)" name="idxname">
+			  <option value="e-docs/alsb/docs25
+" selected>AquaLogic Service Bus 2.5</option>
+			  <option value="e-docs/alsb/docs21
+">AquaLogic Service Bus 2.1</option>
+			  <option value="e-docs/alsb/docs20
+">AquaLogic Service Bus 2.0</option>
+			</select>
+			<a href="http://edocs.beasys.co.jp/e-docs/alsb/docs25/index.html" id="alsbja">JA</a>
+			<a href="http://e-docs.bea.com/alsb/docs25/index.html" id="alsben">EN(b)</a>
+			<input tabindex="50" accesskey="b" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td></td>
+  </tr>
+		</form>
+		<form method="get" action="http://search.beasys.co.jp/cgi-bin/namazu.cgi">
+	<tr nowrap="true">
+		<td align="right">
+      <select name="idxname">
+			  <option value="e-docs/liquiddata/docs85
+">AquaLogic Data Service2.0</option>
+			  <option value="e-docs/liquiddata/docs81
+" selected>Liquid Data 8.1</option>
+			</select>
+			<a href="http://edocs.beasys.co.jp/e-docs/liquiddata/docs81/index.html">JA</a>
+			<a href="http://e-docs.bea.com/liquiddata/docs81/index.html">EN(d)</a>
+			<input tabindex="53" accesskey="d" type="text" name="query" size="20" value="">
+			<input type="submit" name="submit" value="go">
+			<input type="hidden" name="whence" value="0">
+			<input type="hidden" name="max" value="10">
+			<input type="hidden" name="result" value="normal">
+			<input type="hidden" name="sort" value="score">
+		</td>
+		<td></td>
+  </tr>
+		</form>
+</table></td><td width="30"></td><td width="336">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 200;
+google_ad_height = 200;
+google_ad_format = "200x200_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="../../pagead/show_ads.js">
+</script>
+</td>
+</table>
+<table>
+	<tr>
+	  <td align="left"><br>
+<a href="http://www.beasys.co.jp/news_events/index.html">関連ニュース</a>:<br>
+<!-- 
+2007/2/9 <a href=""></a> <font color="red">new!</font><br>
+2007/2/8 <a href=""></a> <font color="red">new!</font><br>
+-->
+2007/5/18 <a href="http://www.beasys.co.jp/news/japan/2007/2007051801.html">日本BEA、企業向けWeb 2.0対応新製品を発表</a> <font color="red">new!</font><br>
+- <a href="http://www.bea.com/enterprise/pages/">BEA AquaLogic Pages<br>
+- <a href="http://www.bea.com/enterprise/ensemble/">BEA AquaLogic Ensemble<br>
+- <a href="http://www.bea.com/enterprise/pathways/">BEA AquaLogic Pathways</a><br>
+2007/4/12 <a href="http://www.beasys.co.jp/news/japan/2007/2007041201.html">CTCと日本BEA、BEA WebLogic Server 最新版対応の公式解説書を発刊</a> <font color="red">new!</font><br>
+Amazon:<a href="http://www.amazon.co.jp/dp/4798113328?tag=samuraism-22&amp;camp=243&amp;creative=1615&amp;linkCode=as1&amp;creativeASIN=4798113328&amp;adid=12455AT2525RWZ50SGWP&amp;">BEA WebLogic Server 9.x/10 構築・運用ガイド</a><br>
+2007/4/11 <a href="http://www.beasys.co.jp/news/japan/2007/2007041101.html">日本BEA、Java EE 5に準拠したアプリケーション・サーバの最新リリースBEA WebLogic Server 10Jを発表</a> <font color="red">new!</font><br>
+2007/4/9 <a href="http://www.beasys.co.jp/news/japan/2007/2007040901.html">日本BEA、業界初の障害早期発見型ソフトウェアサポートツールの提供を開始</a> <font color="red">new!</font><br>
+2007/2/27<a href="http://e-docs.bea.com/platform/suppconfigs/configs_history/history_2007.html#1087238">WebLogic Server 9.2 で Spring 2.0 をサポート</a><br>
+2007/2/22 <a href="http://www.beasys.co.jp/news_events/index.html#f5c47b9b265b480ea7d7339ad318a849">日本BEA、 BEA WebLogic Integration 9.2Jを発表</a><br>
+2007/2/21 <a href="http://www.bea.com/framework.jsp?CNT=pr01776.htm&amp;FP=/content/news_events/press_releases/2007">BEA が Eコマースの新ソリューション、AquaLogic Commerce Services を発表</a><br>
+<a href="http://www.bea.com/framework.jsp?CNT=index.htm&amp;FP=/content/products/aqualogic/commerce_services/">BEA AquaLogic? Commerce Services</a><br>
+2007/2/10 <a href="http://www.theserverside.com/news/thread.tss?thread_id=44219">WebLogic Server 10 が Java EE 5 に対応 - 3月に正式リリースへ</a><br>
+2007/2/8 <a href="http://japan.cnet.com/news/media/story/0,2000056023,20342628,00.htm">SBIホールディングスとFASTが提携--検索技術を金融に応用し「Web2.0金融」目指す</a><br>
+- <a href="http://jp.fastsearch.com/">ファスト</a><br>
+2007/3/15 <a href="http://www.beasys.co.jp/news_events/bea_seminar/soa_university.html">SOA University　東京</a><br>
+2007/2/21 <a href="http://www.beasys.co.jp/news_events/bea_seminar/soa_university.html">SOA University　大阪</a><br>
+2007/2/20 <a href="http://www.beasys.co.jp/news_events/index.html#090d546fc53c16e1a397651e73d62f07">SOAの今を知るSOA実践的セミナー</a><br>
+2007/2/19 <a href="http://www.beasys.co.jp/news_events/bea_seminar/soa_university.html">SOA University　東京</a><br>
+2007/2/6 <a href="http://japan.cnet.com/news/media/story/0,2000056023,20342418,00.htm">ファスト、グーグルと競合する新しい広告プラットフォームを発表</a><br>
+- <a href="http://jp.fastsearch.com/">ファスト サーチ & トランスファ</a><br>
+<!--おことわり:<br>
+本ページは個人的に作成されたもので、米BEA Systems社、日本BEAシステムズ社とは一切関係ありません。
+<br><br>-->
+更新履歴:<br>
+2006/11/13&nbsp;&nbsp;FireFox2.0 でレイアウトが崩れるのを修正 <font color="red">new!</font><br>
+2006/10/12&nbsp;&nbsp;Tcpmon の起動が出来なかったのを修正<br>
+2006/10/7&nbsp;&nbsp;<a href="../../diary/2006/10/08/1160235042086.html">公開</a> 
+		</td>
+	</tr>
+</table>
+<script src="../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+<script language="JavaScript">
+<!--
+var titles = new Array(2);
+titles[0] = "一発 WebLogic";
+titles[1] = "一撃必殺 WebLogic";
+document.title= titles[new Date().getSeconds() % titles.length];
+//-->
+</script>
+</body>
+</html>

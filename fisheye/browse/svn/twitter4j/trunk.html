@@ -1,0 +1,550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>FishEye: browsing svn/twitter4j/trunk</title>
+        <link rel="SHORTCUT ICON" href="http://yusuke.homeip.net/fisheye/static/k9s70z/images/favicon.ico"/>
+<link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/static/k9s70z/css/headerfooter.css" type="text/css"/>
+<link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/static/k9s70z/main.css" type="text/css"/>
+<link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/static/k9s70z/diff.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../fisheye/uar/browser.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../fisheye/static/k9s70z/custom.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../fisheye/static/k9s70z/synhi.css" type="text/css"/>
+<script src="http://yusuke.homeip.net/fisheye/static/k9s70z/global.js" type="text/javascript" language="Javascript1.2" charset="utf-8"></script>
+<script type="text/javascript" language="Javascript1.2">
+var fishEyePageContext = '/fisheye';
+var fishEyeSTATICDIR = 'static/k9s70z';
+</script>
+  <script src="http://yusuke.homeip.net/fisheye/static/k9s70z/behaviour.js" type="text/javascript"></script>
+  <script src="../../../../fisheye/static/k9s70z/prototype.js" type="text/javascript"></script>
+  <script src="../../../../fisheye/static/k9s70z/behaviour_dirtree.js" type="text/javascript"></script>
+    <link rel="alternate" type="application/rss+xml" title="FishEye on svn/twitter4j/trunk (RSS)" href="http://yusuke.homeip.net/fisheye/changelog/~rss/svn/twitter4j/trunk/rss.xml"/>
+  <style type="text/css">@import url(../../../../fisheye/static/k9s70z/calendar-blue.css);</style>
+<script type="text/javascript" src="../../../../fisheye/static/k9s70z/calendar.js"></script>
+<script type="text/javascript" src="../../../../fisheye/static/k9s70z/lang/calendar-en.js"></script>
+<script type="text/javascript" src="../../../../fisheye/static/k9s70z/calendar-setup.js"></script>
+  <script type="text/javascript">
+    function postLoadResources() {
+    new Ajax.Updater('imageMapDiv','/fisheye/browse/svn/twitter4j/trunk',{method: 'get', parameters: 'imageMap=imageMap', asynchronous: true});
+    }
+    ;
+  </script>
+</head>
+<body onload="postLoadResources();">
+<div id="header">
+    <h1>
+                <a class="fe_logo" href="/">FishEye</a>
+    </h1>
+    <ul>
+                <li>
+                    <a href="/">Chart</a>
+                </li>
+                <li>
+                    <a href="/">Search</a>
+                </li>
+                <li>
+                    <a href="/">Changelog</a>
+                </li>
+                <li class="active">
+                    <a href="../../../../fisheye/browse/svn/twitter4j/trunk.html">Browse</a>
+                </li>
+        <li id="headerUserDetails">
+                    Guest |
+                    <a href="/">Login</a>
+                    |
+            <a target="_help" href="http://docs.atlassian.com/fisheye/docs-016/Browsing+through+a+Repository" class="head_help" title="">Help</a>
+        </li>
+    </ul>
+</div>
+<table id="secondHeader" cellspacing="0">
+  <tr>
+    <td id="breadCrumb">
+      <form method="get" action="/">
+        <!-- queryStrSuffix should be html escaped if necessary before being passed in--><a class="breadCrumbRepository" href="/">svn</a>:/<a href="/">twitter4j</a>/<a href="../../../../fisheye/browse/svn/twitter4j/trunk.html">trunk</a>/
+        <input class="qsInput" name="filename" type="text" size="15">
+      </form>
+    </td>
+    <td id="quickSearch">
+      <form method="get" action="/">
+        Quick Search:
+        <input class="qsInput" name="q" type="text" size="15">
+      </form>
+    </td>
+  </tr>
+</table>
+<table class="layout" cellspacing="0">
+<tr>
+<td class="layoutLeftPane">
+    <div class="box">
+      <h3>
+      <span class="boxIcon"><span class="boxIconText">
+          <a href="/">jump
+            to detailed chart</a>
+          |
+      <a href="/">hide</a>
+      </span></span>
+        Line History
+        </h3>
+        <div class="linehistory">
+        </div>
+        <div id="imageMapDiv"></div>
+    </div>
+  <div class="box">
+<h3>
+  Constraint
+</h3>
+<div class="formPane">
+ <form method="get" action="../../../../fisheye/browse/svn/twitter4j/trunk.html">
+ <table>
+  <tr>
+   <td>Branch:</td>
+   <td><select class="branchSelect" name="wbbr" onchange="submit()">
+     <option value="" id="wbbr_" selected="selected">(any)</option>
+       <option value="" id="wbbr_"></option>
+       <option value="tag:twitter4j-1_0_0" id="wbbr_tag:twitter4j-1_0_0">tag:twitter4j-1_0_0</option>
+       <option value="tag:twitter4j-1_0_1" id="wbbr_tag:twitter4j-1_0_1">tag:twitter4j-1_0_1</option>
+       <option value="tag:twitter4j-TWITTER4J_1_0_0" id="wbbr_tag:twitter4j-TWITTER4J_1_0_0">tag:twitter4j-TWITTER4J_1_0_0</option>
+       <option value="trunk" id="wbbr_trunk">trunk</option>
+       <option value="twitter4j-1_0_2" id="wbbr_twitter4j-1_0_2">twitter4j-1_0_2</option>
+   </select></td>
+  </tr>
+  <tr>
+   <td>Author:</td>
+   <td><select name="wbauthor" onchange="submit()">
+     <option value="" id="wbauthor_" selected="selected">(any)</option>
+       <option value="yusuke" id="wbauthor_yusuke">yusuke</option>
+   </select></td>
+  </tr>
+  <tr>
+   <td>Tag:</td>
+   <td>
+     <input type="text" size="15" name="wbtag" value="">
+   </td>
+  </tr>
+  <tr>
+   <td>Date:</td>
+   <td>
+     <input type="text" size="10" id="wbdate" name="wbdate" value="">
+     <input type="button" value="..." id="cal"/>
+     <input type="hidden" name="wbjump" value="jump">
+     <input type="submit" value="Apply">
+       <a target="fisheyehelp" href="http://docs.atlassian.com/fisheye/docs-016/Browsing+through+a+Repository" class="help" title="">help</a>
+   </td>
+  </tr>
+ </table>
+ </form>
+ <script type="text/javascript">
+  Calendar.setup(
+    {
+      inputField  : "wbdate",     // ID of the input field
+      ifFormat    : "%Y-%m-%dT00:00:00",    // the date format
+      button      : "cal"      // ID of the button
+    }
+  );
+ </script>
+</div>
+  </div>
+  <div class="box">
+<h3>
+  <span class="boxIcon"><span class="boxIconText">
+  Sort:
+    path
+    |
+      <a href="/">last-commit</a>
+    |
+      <a href="/">first-commit</a>
+  </span></span>
+  Sub Directories</h3>
+<div class="toolBar">
+        <span class="toolBarEmpty"><a href="/">Hide Empty</a></span>
+</div>
+<div class="dirPane"><ul><li><span class="folder"><a href="/">..</a></span></li>
+ <li>
+<span class="folder"><a href="/"></a><a href="/"><span class="folderPlain">bin</span></a>/</span>
+ </li>
+ <li>
+<span class="folder"><a href="/"></a><a href="/"><span class="folderEmpty">classes</span></a>/</span>
+ </li>
+ <li>
+<span class="folder"><a href="../../../../fisheye/browse/svn/twitter4j/trunk/lib.html"></a><a href="../../../../fisheye/browse/svn/twitter4j/trunk/lib.html"><span class="folderPlain">lib</span></a>/</span>
+ </li>
+ <li>
+<span class="folder"><a href="/"></a><a href="/"><span class="folderPlain">response_samples</span></a>/</span>
+ </li>
+ <li>
+<span class="folder"><a href="/"><span class="folderPlain">site</span></a>/</span>
+ </li>
+ <li>
+<span class="folder"><a href="/"><span class="folderPlain">src</span></a>/</span>
+ </li>
+</ul></div>
+  </div>
+    <div class="box">
+    <h3>Directory Properties</h3>
+      <div class="pane">
+          <ul>
+                  <li>svn:ignore = twitter4j.iml
+twitter4j.iws
+twitter4j.ipr</li>
+           </ul>
+      </div>
+    </div>
+</td>
+<td class="layoutRightPane">
+  <div class="box">
+<h3 class="changelog">
+    <div class="changelog-nav">
+        <form action="/" class="changelog-form">
+            Go to changeset: <input type="text" name="jumptoid"/> |
+            <a href="/">Full Changelog</a> |
+            <a href="/">
+                Customize Feeds</a>
+            <a type="application/rss+xml" href="http://yusuke.homeip.net/fisheye/changelog/~rss/svn/twitter4j/trunk/rss.xml">
+            </a>
+        </form>
+    </div>
+  Recent Changelog
+</h3>
+  <div class="changesetList">
+    <a class="csId" href="/">244</a>
+    by <span class="csAuthor">yusuke</span> 
+    01 May 2009, 02:09:09 +0900
+    (
+    12 hours ago)
+    <!-- -->
+        <span class="csComment">TFJ-125 introduce a System property that specifies number of dispatcher thread <br/> <br/>now the number of dispatcher thread can be specified by -Dtwitter4j.async.numThreads</span>
+      <p class="csFilename">
+        <a href="/">./src/main/java/twitter4j/AsyncTwitter.java</a>
+<a class="csFilename" href="/" title="view">244</a>
+<a class="csFilename" href="/#r244" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+8 -2)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.html">./src/main/java/twitter4j/Twitter.java</a>
+<a class="csFilename" href="/" title="view">244</a>
+<a class="csFilename" href="../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.html#r244" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+1 -1)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+  </div>
+  <div class="changesetList">
+    <a class="csId" href="/">243</a>
+    by <span class="csAuthor">yusuke</span> 
+    01 May 2009, 02:01:13 +0900
+    (
+    12 hours ago)
+    <!-- -->
+        <span class="csComment">TFJ-110 remove unnecessary synchronized modifier for better multi-thread performance</span>
+      <p class="csFilename">
+        <a href="/">./src/main/java/twitter4j/AsyncTwitter.java</a>
+<a class="csFilename" href="/" title="view">243</a>
+<a class="csFilename" href="/#r243" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+109 -110)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.html">./src/main/java/twitter4j/Twitter.java</a>
+<a class="csFilename" href="/" title="view">243</a>
+<a class="csFilename" href="../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j/Twitter.html#r243" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+101 -101)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+  </div>
+  <div class="changesetList">
+    <a class="csId" href="/">242</a>
+    by <span class="csAuthor">yusuke</span> 
+    01 May 2009, 01:54:58 +0900
+    (
+    12 hours ago)
+    <!-- -->
+        <span class="csComment">TFJ-126 dispatcher thread should be held statically</span>
+      <p class="csFilename">
+        <a href="/">./src/main/java/twitter4j/AsyncTwitter.java</a>
+<a class="csFilename" href="/" title="view">242</a>
+<a class="csFilename" href="/#r242" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+1 -1)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+  </div>
+  <div class="changesetList">
+    <a class="csId" href="/">241</a>
+    by <span class="csAuthor">yusuke</span> 
+    01 May 2009, 01:54:51 +0900
+    (
+    12 hours ago)
+    <!-- -->
+        <span class="csComment">merging conflicts</span>
+      <p class="csFilename">
+        <a href="/">./src/main/java/twitter4j/AsyncTwitter.java</a>
+<a class="csFilename" href="/" title="view">241</a>
+<a class="csFilename" href="/#r241" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+1 -0)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+  </div>
+  </div>
+<div class="box">
+  <h3>
+      <span class="boxIcon">
+            Deleted files:
+            <a href="/">Hide</a> | Show
+      </span>
+    Files</h3>
+  <table id="fileTable" cellspacing="0">
+          <tr id="ftTitle">
+            <td>&nbsp;</td>
+            <td><a href="/">NAME</a>&#171;</td>
+            <td>REV</td>
+            <td><a href="/">AGE</a></td>
+            <td><a href="/">AUTHOR</a></td>
+          </tr>
+          <tr class="ftFileRow">
+            <td class="ftIconCol" rowspan="2">
+              &nbsp;
+            </td>
+            <td>
+              <a class="ftFileName" href="../../../../fisheye/browse/svn/twitter4j/trunk/build.html" alt="_">build.properties</a>
+            </td>
+            <td>
+<a class="ftRev" href="/" title="view">177</a>
+<a class="ftRev" href="../../../../fisheye/browse/svn/twitter4j/trunk/build.html#r177" title="history"></a>&nbsp;<a class="ftRev" href="/" title="download"></a>
+            </td>
+            <td>
+              53 days
+            </td>
+            <td>
+              <span class="ftAuthor">yusuke</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ftComment" colspan="4">
+              TFJ-82 release Twtter4J 1.1.7
+            </td>
+          </tr>
+          <tr class="ftFileRow">
+            <td class="ftIconCol" rowspan="2">
+              &nbsp;
+            </td>
+            <td>
+              <a class="ftFileName" href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/build.xml" alt="_">build.xml</a>
+            </td>
+            <td>
+<a class="ftRev" href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/build.xml?r=147" title="view">147</a>
+<a class="ftRev" href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/build.xml#r147" title="history"></a>&nbsp;<a class="ftRev" href="http://yusuke.homeip.net/fisheye/browse/~raw,r=147/svn/twitter4j/trunk/build.xml" title="download"></a>
+            </td>
+            <td>
+              5 months 7 days
+            </td>
+            <td>
+              <span class="ftAuthor">yusuke</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ftComment" colspan="4">
+              TFJ-59 release Twtter4J1.1.1
+            </td>
+          </tr>
+          <tr class="ftFileRowDeleted">
+            <td class="ftIconCol" rowspan="2">
+              &nbsp;
+            </td>
+            <td>
+              <a class="ftFileName" href="/" alt="_">feedmonitor.properties</a>
+                <i>(deleted)</i>
+            </td>
+            <td>
+<a class="ftRev" href="/#48" title="history">48
+</a>
+                (twitter4j-1_0_2)
+            </td>
+            <td>
+              21 months
+            </td>
+            <td>
+              <span class="ftAuthor">yusuke</span>
+            </td>
+          </tr>
+          <tr class="ftFileRowDeletedComment">
+            <td class="ftComment" colspan="4">
+              <em>no_comment</em>
+            </td>
+          </tr>
+          <tr class="ftFileRow">
+            <td class="ftIconCol" rowspan="2">
+              &nbsp;
+            </td>
+            <td>
+              <a class="ftFileName" href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/LICENSE.txt" alt="_">LICENSE.txt</a>
+            </td>
+            <td>
+<a class="ftRev" href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/LICENSE.txt?r=177" title="view">177</a>
+<a class="ftRev" href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/LICENSE.txt#r177" title="history"></a>&nbsp;<a class="ftRev" href="http://yusuke.homeip.net/fisheye/browse/~raw,r=177/svn/twitter4j/trunk/LICENSE.txt" title="download"></a>
+            </td>
+            <td>
+              53 days
+            </td>
+            <td>
+              <span class="ftAuthor">yusuke</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ftComment" colspan="4">
+              TFJ-82 release Twtter4J 1.1.7
+            </td>
+          </tr>
+          <tr class="ftFileRow">
+            <td class="ftIconCol" rowspan="2">
+              &nbsp;
+            </td>
+            <td>
+              <a class="ftFileName" href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/pom.xml" alt="_">pom.xml</a>
+            </td>
+            <td>
+<a class="ftRev" href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/pom.xml?r=237" title="view">237</a>
+<a class="ftRev" href="http://yusuke.homeip.net/fisheye/browse/svn/twitter4j/trunk/pom.xml#r237" title="history"></a>&nbsp;<a class="ftRev" href="http://yusuke.homeip.net/fisheye/browse/~raw,r=237/svn/twitter4j/trunk/pom.xml" title="download"></a>
+            </td>
+            <td>
+              7 days
+            </td>
+            <td>
+              <span class="ftAuthor">yusuke</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ftComment" colspan="4">
+              TFJ-107 Twitter API now returns 404 when trying to befriending with non-existing&#8230;
+            </td>
+          </tr>
+          <tr class="ftFileRow">
+            <td class="ftIconCol" rowspan="2">
+              &nbsp;
+            </td>
+            <td>
+              <a class="ftFileName" href="/" alt="_">test.properties</a>
+            </td>
+            <td>
+<a class="ftRev" href="/" title="view">210</a>
+<a class="ftRev" href="/#r210" title="history"></a>&nbsp;<a class="ftRev" href="/" title="download"></a>
+            </td>
+            <td>
+              16 days
+            </td>
+            <td>
+              <span class="ftAuthor">yusuke</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="ftComment" colspan="4">
+              TFJ-83 OAuth support <br/>OAuth support initial implementation
+            </td>
+          </tr>
+          <tr class="ftFileRowDeleted">
+            <td class="ftIconCol" rowspan="2">
+              &nbsp;
+            </td>
+            <td>
+              <a class="ftFileName" href="/" alt="_">twitter4j-1.0.1.jar</a>
+                <i>(deleted)</i>
+            </td>
+            <td>
+<a class="ftRev" href="/#19" title="history">19
+</a>
+            </td>
+            <td>
+              22 months
+            </td>
+            <td>
+              <span class="ftAuthor">yusuke</span>
+            </td>
+          </tr>
+          <tr class="ftFileRowDeletedComment">
+            <td class="ftComment" colspan="4">
+              fix for TFJ-5 <br/><a href="../../../../jira/browse/TFJ-5.html">http://yusuke.homeip.net/jira/browse/TFJ-5</a>&#8230;
+            </td>
+          </tr>
+          <tr class="ftFileRowDeleted">
+            <td class="ftIconCol" rowspan="2">
+              &nbsp;
+            </td>
+            <td>
+              <a class="ftFileName" href="/" alt="_">twitter4j-1.0.1b.jar</a>
+                <i>(deleted)</i>
+            </td>
+            <td>
+<a class="ftRev" href="/#35" title="history">35
+</a>
+            </td>
+            <td>
+              22 months
+            </td>
+            <td>
+              <span class="ftAuthor">yusuke</span>
+            </td>
+          </tr>
+          <tr class="ftFileRowDeletedComment">
+            <td class="ftComment" colspan="4">
+              <em>no_comment</em>
+            </td>
+          </tr>
+          <tr class="ftFileRowDeleted">
+            <td class="ftIconCol" rowspan="2">
+              &nbsp;
+            </td>
+            <td>
+              <a class="ftFileName" href="/" alt="_">twitter4j-1.0.jar</a>
+                <i>(deleted)</i>
+            </td>
+            <td>
+<a class="ftRev" href="/#18" title="history">18
+</a>
+            </td>
+            <td>
+              22 months
+            </td>
+            <td>
+              <span class="ftAuthor">yusuke</span>
+            </td>
+          </tr>
+          <tr class="ftFileRowDeletedComment">
+            <td class="ftComment" colspan="4">
+              <em>no_comment</em>
+            </td>
+          </tr>
+  </table>
+</div>
+</td>
+</tr>
+</table>
+        <div class="licensemessage">
+            FishEye: Open Source License registered to Yusuke Yamamoto.
+        </div>
+<div class="bottomshadow"> </div>
+    <div class="licensemessage">
+        <strong>
+            <a class="smalltext" href="http://downloads.atlassian.com/software/fisheye/FishEyeDownloadCenter.jspa">
+            Version 1.6.6 is available.</a>
+        </strong>
+    </div>
+<div id="poweredby" class="smalltext">
+    <a class="smalltext" href="http://www.atlassian.com/software/fisheye/">Atlassian FishEye</a>,
+                <a class="smalltext" href="http://www.atlassian.com/software/fisheye/">Subversion analysis</a>.
+    (Version:1.6.3
+    Build:build-336 2008-11-04) -
+    <a class="smalltext" href="/">Administration</a>
+    - Page generated 2009-05-01 14:41 +0900
+</div>
+<!--
+page produced in 352 ms
+-->
+<script type="text/javascript" language="Javascript1.2">
+  Behaviour.apply();
+</script>
+</body>
+</html>

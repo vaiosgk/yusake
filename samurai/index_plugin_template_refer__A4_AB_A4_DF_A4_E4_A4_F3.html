@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="ja" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP"/>
+ <meta http-equiv="content-style-type" content="text/css"/>
+ <meta http-equiv="Content-Language" content="ja"/>
+ <!--title>Samurai - PukiWiki</title-->
+<title>Samurai</title>
+ <link rel="stylesheet" href="../samurai/skin/default.en.css" type="text/css" media="screen" charset="EUC-JP"/>
+ <link rel="stylesheet" href="../samurai/skin/print.en.css" type="text/css" media="print" charset="EUC-JP"/>
+</head>
+<body>
+<div id="header">
+ <a href="../samurai.html"><img id="logo" src="../samurai/image/pukiwiki.png" width="80" height="80" alt="[PukiWiki]" title="[PukiWiki]"/></a>
+ <h1 class="title"><a href="../samurai/index_cmd_search_word_Samurai.html">Samurai</a> </h1>
+ <a href="../samurai/index_Samurai.html"><span class="small">index.php?Samurai</span></a>
+</div>
+<div id="navigator">
+ [ <a href="../samurai/index_Samurai.html">Reload</a> ]
+ &nbsp;
+ [ <a href="../samurai/index_plugin_newpage_refer_Samurai.html">New</a>
+ | <a href="../samurai/index_cmd_edit_page_Samurai.html">Edit</a>
+ | <a href="../samurai/index_cmd_unfreeze_page_Samurai.html">Unfreeze</a>
+ | <a href="../samurai/index_cmd_diff_page_Samurai.html">Diff</a>
+ | <a href="../samurai/index_plugin_attach_pcmd_upload_page_Samurai.html">Upload</a>
+ ]
+ &nbsp;
+ [ <a href="../samurai/index_Samurai.html">Front page</a>
+ | <a href="../samurai/index_cmd_list.html">List of pages</a>
+ | <a href="../samurai/index_cmd_search.html">Search</a>
+ | <a href="../samurai/index_RecentChanges.html">Recent changes</a>
+ | <a href="../samurai/index_cmd_backup_page_Samurai.html">Backup</a>
+ | <a href="../samurai/index__A5_D8_A5_EB_A5_D7.html">Help</a>
+ ]
+ [ <a href="../samurai/index_plugin_referer_page_Samurai.html">Referer</a> ]
+</div>
+<hr class="full_hr"/>
+<table border="0" style="width:100%">
+ <tr>
+  <td class="menubar">
+   <div id="menubar">
+<p>&nbsp;<a href="../samurai/english.html">English</a>&nbsp;/&nbsp;<a href="../samurai/index.html">Japanese</a></p>
+   </div>
+  </td>
+  <td valign="top">
+   <div id="body">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "0D8F63";
+google_color_bg = "FFFFFF";
+google_color_link = "1B703A";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script>
+<h2 id="content_1_0">侍 2.1.1  <a class="anchor_super" id="tcc03d86" href="../samurai/index_Samurai.html#tcc03d86" title="tcc03d86">&dagger;</a></h2>
+<p><a href="../samurai/samurai.html"><img src="../samurai/launchSamuraiAni.gif" alt="http://yusuke.homeip.net/samurai/samurai.jnlp"/></a>
+起動(要JDK1.4以降)</p>
+<div class="contents">
+<a id="contents_1"></a><ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_0"> 侍 2.1.1 </a></li>
+<li><a href="#content_1_1">  &quot;侍&quot; とは </a></li>
+<li><a href="#content_1_2">  システム要件 </a></li>
+<li><a href="#content_1_3">  起動方法 </a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_4">  Java Web Start による起動 </a></li>
+<li><a href="#content_1_5"> コマンドラインからの起動 </a></li></ul></li>
+<li><a href="#content_1_6">  スレッドダンプの解析 </a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_7">  初期画画面 </a></li>
+<li><a href="#content_1_8">  スレッドダンプタブ </a></li></ul></li>
+<li><a href="#content_1_9">  ヒープ使用状況の解析 </a></li>
+<li><a href="#content_1_10">  CSV ファイルのグラフ化 </a></li>
+<li><a href="#content_1_11">  グラフ表示のカスタマイズ </a></li>
+<li><a href="#content_1_12">  ログのインクリメンタルサーチ機能 </a></li>
+<li><a href="#content_1_13">  FAQ </a></li>
+<li><a href="#content_1_14">  ライセンス </a></li>
+<li><a href="#content_1_15">  免責事項 </a></li>
+<li><a href="#content_1_16"> What's new! </a></li>
+<li><a href="#content_1_17">  サポート </a></li>
+<li><a href="#content_1_18">  PayPal による寄付 </a></li></ul></div>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1">&quot;侍&quot; とは  <a class="anchor_super" id="j93663d4" href="../samurai/index_Samurai.html#j93663d4" title="j93663d4">&dagger;</a></h2>
+<p>侍 はタブ表示できる GUI の tail ツールです。<br/>
+標準出力・標準エラー出力をリダイレクトしたログファイルより Java のスレッドダンプのみを切り出して色分け表示したり、-verbosegcオプションによるログをグラフ表示したりできるため特に Java のトラブルシューティングに役立ちます。</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">システム要件  <a class="anchor_super" id="eba30784" href="../samurai/index_Samurai.html#eba30784" title="eba30784">&dagger;</a></h2>
+<p>OS: JDK 1.4 以降の実行環境をサポートする Windows や Unix<br/>
+JDKは以下のページからダウンロードできます。<br/>
+<a href="http://java.sun.com/j2se/1.5.0/ja/download.html">http://java.sun.com/j2se/1.5.0/ja/download.html</a><br/>
+検証済みの解析対象JVM: JDK 1.3.x,JDK 1.4.x,JDK5.0 準拠の Apple/BEA/Sun/HP/IBM 製JVM<br/>
+JRE がインストールされていない環境では <a href="../samurai/samurai_jre_autoinstall.html">ActiveX ベースのインストーラ</a> をご利用ください(IE のみ)。</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_3">起動方法  <a class="anchor_super" id="z0570941" href="../samurai/index_Samurai.html#z0570941" title="z0570941">&dagger;</a></h2>
+<p>侍 は以下の2種類どちらかの方法で起動させることができます。</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_4">Java Web Start による起動  <a class="anchor_super" id="sdebbc8d" href="../samurai/index_Samurai.html#sdebbc8d" title="sdebbc8d">&dagger;</a></h3>
+<p>ネットワーク経由で起動する方法です。デスクトップやスタートメニューにショートカットを作成できたり、バージョンアップ時に自動的にアップデートされたりなどの特徴があり、お勧めの起動方法です。
+J2SDK1.4.0 以上がインストールされている環境でブラウザから以下のアイコンをクリックすることで自動的にインストール、起動を行うことが出来ます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>侍を起動→<a href="../samurai/samurai.html"><img src="../samurai/launchSamuraiAni.gif" alt="http://yusuke.homeip.net/samurai/samurai.jnlp"/></a><br/>
+JRE がインストールされていない環境では <a href="../samurai/samurai_jre_autoinstall.html">ActiveX ベースのインストーラ</a> をご利用ください(IE のみ)。</li></ul>
+<p>初回起動時にはセキュリティ上安全でない、起動を勧めない旨のメッセージが表示されますが、気にせず「開始」を押して起動してください。
+これは侍がログファイルの読み取り、解析結果のキャッシュとしてローカルファイルシステムにアクセスする必要があるためです。これはテンポラリディレクトリに出力されます。悪意のあるコードは含まれておりませんが心配のある場合は付属のソースコードをご覧頂くか、コードを逆コンパイルの上解析して頂いて構いません。
+信頼の出来ない署名付きのJava Web Startを起動することは危険な行為であることを常に認識してください。
+技術上、Java Web Start アプリケーションはあなたの PC を乗っ取り、重大な損害をもたらすことが可能です。
+コンピュータのセキュリティの設定によっては samurai.jnlp というファイルがダウンロードされるだけで侍が起動しない場合があります。その場合はダウンロードした samurai.jnlp をダブルクリックしてください。
+<a href="../samurai/alert.png"><img src="../samurai/alert.png" alt="http://yusuke.homeip.net/samurai/alert.png"/></a><br/>
+画面1　セキュリティ警告画面</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_5">コマンドラインからの起動  <a class="anchor_super" id="sdebbc8d" href="../samurai/index_Samurai.html#sdebbc8d" title="sdebbc8d">&dagger;</a></h3>
+<p>DOSプロンプトなどのターミナルから起動する方法です。<br/>
+<a href="../samurai/samurai.html">http://yusuke.homeip.net/samurai/samurai.jar</a> をダウンロードしてください。<br/>
+$java -jar samurai.jar で起動できます。
+ただし自動アップデートはされないので定期的に更新がないかチェックしてください。</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_6">スレッドダンプの解析  <a class="anchor_super" id="rdd9430b" href="../samurai/index_Samurai.html#rdd9430b" title="rdd9430b">&dagger;</a></h2>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_7">初期画画面  <a class="anchor_super" id="b69c6a3b" href="../samurai/index_Samurai.html#b69c6a3b" title="b69c6a3b">&dagger;</a></h3>
+<p>侍 を起動すると画面2のようなウィンドウが表示されます。ログファイルをドロップすると監視が開始され、メッセージが追加される毎にリアルタイムで読み込まれます。</p>
+<p><a href="../samurai/first.png"><img src="../samurai/first.png" alt="http://yusuke.homeip.net/samurai/first.png"/></a><br/>
+画面2　初期画面</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_8">スレッドダンプタブ  <a class="anchor_super" id="rdd08581" href="../samurai/index_Samurai.html#rdd08581" title="rdd08581">&dagger;</a></h3>
+<p>ログファイル中にスレッドダンプを検出すると自動的にスレッドダンプタブ(画面3)が表示されます。<br/></p>
+<p><a href="../samurai/logDropped.png"><img src="../samurai/logDropped.png" alt="http://yusuke.homeip.net/samurai/logDropped.png"/></a><br/>
+画面3　スレッドダンプタブの表示</p>
+<p>スレッドダンプタブをクリックすると、解析結果が表示されます。
+アイドル状態のスレッドは灰色で、ブロック(同期待ち)状態のスレッドは赤で表示されます。
+解析結果にはテーブル表示(画面4)/全スレッド表示(画面5)/時系列表示(画面6)の３通りの表示があります。  多くの場合はテーブル表示でスレッドの使用状況を確認し、時系列表示でスレッドの動きを確認することで解析を進めます。
+常に赤く表示されているスレッドや、全てのスレッドダンプにおいて同じ個所で停止しているスレッドは問題を抱えている可能性があります。</p>
+<p><a href="../samurai/threadTab.png"><img src="../samurai/threadTab.png" alt="http://yusuke.homeip.net/samurai/threadTab.png"/></a><br/>
+画面4　テーブル表示</p>
+<p><a href="../samurai/threadAll.png"><img src="../samurai/threadAll.png" alt="http://yusuke.homeip.net/samurai/threadAll.png"/></a><br/>
+画面5 全スレッド表示</p>
+<p><a href="../samurai/threadChronological.png"><img src="../samurai/threadChronological.png" alt="http://yusuke.homeip.net/samurai/threadChronological.png"/></a><br/>
+画面6　時系列表示</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9"><a class="anchor" id="memory" href="#memory" title="memory"></a> ヒープ使用状況の解析  <a class="anchor_super" id="q1ee871a" href="../samurai/index_Samurai.html#q1ee871a" title="q1ee871a">&dagger;</a></h2>
+<p>Java は起動時に -verbose:gc というオプションをつけるとガベージコレクションを行った際にメッセージが標準エラー出力に記録されます。 メモリリークしていないか、ヒープが十分に確保されているかなどがこのメッセージからわかるのですが、文字で表現されているため解析が困難です。 侍にこのログを渡すと「メモリ」というタブが現れます。赤い線がガベージコレクション前の使用量、黄色い線がガベージコレクション後の使用量、グレーの線がコレクションに要した時間を表します。
+表示中のグラフは Ctrl+C (Macでは Cmd+C) でコピーすることができます。</p>
+<p><a href="../samurai/memory.png"><img src="../samurai/memory.png" alt="http://yusuke.homeip.net/samurai/memory.png"/></a><br/>
+画面7　メモリタブ</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">CSV ファイルのグラフ化  <a class="anchor_super" id="p81a71ac" href="../samurai/index_Samurai.html#p81a71ac" title="p81a71ac">&dagger;</a></h2>
+<p>侍は CSV 形式のテキストファイルを渡すことで即座に内容をグラフ化してくれます。 <br/>
+表示中のグラフは Ctrl+C (Macでは Cmd+C) でコピーすることができます。<br/>
+侍に渡したファイルが CSV 形式かどうかは拡張子で判断されます。<br/>
+<a href="../samurai/komuso.png"><img src="../samurai/komuso.png" alt="http://yusuke.homeip.net/samurai/komuso.png"/></a><br/>
+画面8　CSVファイルのグラフ化</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">グラフ表示のカスタマイズ  <a class="anchor_super" id="q27759e8" href="../samurai/index_Samurai.html#q27759e8" title="q27759e8">&dagger;</a></h2>
+<p>ヒープ使用状況・CSVファイルはグラフ表示されますが、この画面は簡単なカスタマイズを行うことが可能です。<br/>
+やりかたは簡単で、グラフ左上に表示されているラベルをクリックして現れるダイアログで設定後、[設定]ボタンを押すだけです。 折れ線の色、表示ラベル、最大値(グラフの X 軸方向の可視領域)を設定できます。</p>
+<p><a href="../samurai/graphCustomize.png"><img src="../samurai/graphCustomize.png" alt="http://yusuke.homeip.net/samurai/graphCustomize.png"/></a><br/>
+画面9　グラフのカスタマイズ</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_12">ログのインクリメンタルサーチ機能  <a class="anchor_super" id="zc20d27c" href="../samurai/index_Samurai.html#zc20d27c" title="zc20d27c">&dagger;</a></h2>
+<p>侍は手放しでも便利ですが、スレッドダンプやヒープ使用状況の解析だけがとりえではありません。侍へドロップしたファイルはリアルタイムに監視され、ログが追加されると都度ログタブに表示されます。つまり Unix における tail -f filename と同等に利用できます。 また、ログ・スレッドダンプどちらのタブでも内容の検索を行うことが出来ます。いわゆるインクリメンタルサーチ機能で、キーボードをタイプした瞬間からキーワードがハイライトされます。キーワードを入力後は Ctrl+G(Mac では Cmd+G)または F3で次、Shift+Ctrl+G(Mac では Shift+Cmd+G)または Shift+F3 で前の候補がハイライトされます。 設定パネルより正規表現の使用・不使用、大文字小文字の区別・無視も設定できます。</p>
+<p><a href="../samurai/highlight.gif"><img src="../samurai/highlight.gif" alt="http://yusuke.homeip.net/samurai/highlight.gif"/></a><br/>
+画面10　候補のハイライト</p>
+<p><a href="../samurai/config.gif"><img src="../samurai/config.gif" alt="http://yusuke.homeip.net/samurai/config.gif"/></a><br/>
+画面11　設定パネル</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_13"><a class="anchor" id="faq" href="#faq" title="faq"></a> FAQ  <a class="anchor_super" id="pd73846d" href="../samurai/index_Samurai.html#pd73846d" title="pd73846d">&dagger;</a></h2>
+<pre>Q1. 侍は WebLogic 専用ですか？
+A1. いいえ。侍はどのような Java プログラムにも使えます。ただし、スレッドダンプ / verbosegc ログの解析機能は Apple(1.4.2_05),BEA(7.0SP4,8.1SP2,8.1SP4,9.0GA),Sun(1.3.1_08,1.4.1_05)の JVM でのみ検証されています。
+Q2. 侍の名前の由来はなんですか？
+A2. 意味はありません。商標上の問題が発生しないよう一般名詞にしています。
+Q3. 侍はJDK1.3.x(またはそれ以前)で動きますか？
+A3.いいえ。JDK1.4〜のAPIを使っているため1.3.1以前では動きません。ただし、JDK1.3.x以前のログの解析に使うことはできます。
+Q4. CSV  をグラフ化してくれるのは便利そう。データには数字だけじゃなく文字列もふくまれているのですが、読み込めますか？
+A4.はい。データ中に文字列があった場合はハッシュ値で無理矢理プロットします。グラフに動きがあったら何か値が変わったと思ってください。
+Q5. CSV ファイルをうまく認識してくれません。何をもって CSV ファイルだと判断していますか？
+A5. 拡張子が&quot;.csv&quot;となっている場合だけグラフ化してくれます。
+Q6. Kill Bill モードってなんですか？
+A6. 配色が異なり、日本刀の扱いがうまくなったような気がするモードです。&quot;kill bill&quot; とタイプすれば突入します。
+Q7. スレッドダンプが正常に表示されません
+A7. 未確認のJVMであったり、予期していないフォーマットでスレッドダンプが出力されている場合など正常にスレッドダンプをパースできないことがあります。出来る限り対応したいと思いますので yusuke＠mac.com へファイルをご送付いただければ幸いです。
+Q8. Kill Bill2 モードってなんですか？
+A8. 配色が異なり、五点掌爆心拳をマスターした気持ちになれるモードです。
+Q9. Matrix モードってなんですか？
+A9. 配色が異なり、ログファイルの向こう側に仮想世界が見えるような気がするモードです。
+</pre>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_14">ライセンス  <a class="anchor_super" id="v38c9388" href="../samurai/index_Samurai.html#v38c9388" title="v38c9388">&dagger;</a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>侍は営利、非営利目的を問わずどなたでも無償で使用、改変を加えない複製、またそれの配布を行うことが出来ます。</li>
+<li>個人、会社内での利用の範囲内であれば付属のソースを改変してご利用頂くことが出来ます。改変したものはソース、バイナリ等いかなる形でも個人間、組織内を超えた再配布はご遠慮ください。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_15">免責事項  <a class="anchor_super" id="gdf4ef18" href="../samurai/index_Samurai.html#gdf4ef18" title="gdf4ef18">&dagger;</a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>スレッドダンプの解析には Java に関する専門的な知識が必要です。侍は Java アプリケーションのハング、スローダウン時のスレッドダンプ解析を助けますが、トラブルの解決をお約束するものではありません。</li>
+<li>侍を利用することによって発生した損害に対して作者は一切責任を負いません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_16">What's new!  <a class="anchor_super" id="e364de90" href="../samurai/index_Samurai.html#e364de90" title="e364de90">&dagger;</a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>2.1.1リリース(2006/5/12)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>IBM JDK1.4.2の-verbosegcログをサポート(JDK1.4.2_08でテスト)</li>
+<li>IBMのJavacoreでブロック状態を検出できない場合があったのを修正</li>
+<li>スレッドダンプ表示を調整</li>
+<li>スレッドダンプ表示のフォントファミリ/フォントサイズ設定が反映されていなかったのを調整</li></ul></li>
+<li>2.1リリース(2006/5/11)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>デッドロック検出機能の追加</li>
+<li>スレッドダンプ解析結果のクリア機能を追加</li>
+<li>ロック依存関係にアンカー、ハイパーリンクを追加</li>
+<li>IBM Javacore でロック状況をスタックトレースに表示する機能を追加</li></ul></li>
+<li>2.0.6リリース(2006/5/05)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>スレッドダンプ解析結果保存機能の追加</li>
+<li>weblogic.Admin コマンドによるスレッドダンプ出力に対応</li></ul></li>
+<li>2.0.5リリース(2006/4/29)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>スレッドダンプ表示の改善</li>
+<li>スレッドダンプ表示のパフォーマンス改善</li>
+<li>検索機能のパフォーマンスをさらに最適化</li>
+<li><span class="noexists">WebLogic<a href="../samurai/index_cmd_edit_page_WebLogic_refer_Samurai.html">?</a></span> Server 9.x のスレッドダンプ名に対応</li>
+<li>ログファイルがローテーションしたときにリフレッシュ出来ていなかったのを修正</li>
+<li>グラフをクリップボードにコピー出来なくなっていたのを修正</li>
+<li>検索時の「大文字小文字を一致」の動作が逆になっていたのを修正</li></ul></li>
+<li>2.0.4リリース(2006/1/16)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>JRockit1.4.2_08のverbosegcログに対応</li>
+<li>検索機能のパフォーマンス(特に前方検索)を最適化</li></ul></li>
+<li>2.0.3リリース(2006/1/13)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>検索フィールドを追加</li></ul></li>
+<li>2.0.2リリース(2006/1/6)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ドラッグイベントへの視覚的フィードバックを追加</li>
+<li>CSVファイルでマルチバイトのタイトルが文字化けしていたのを修正</li></ul></li>
+<li>2.0.1リリース(2006/1/3)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>Xloggc オプションで出力されたGCログの解析に対応</li></ul></li>
+<li>2.0.0リリース(2005/12/31)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>複数ファイルのモニタに対応</li>
+<li>Mac OS X環境でアプリケーションメニューに対応</li>
+<li>「最近のファイルを開く」機能を追加</li>
+<li>CSVファイルのグラフ化は拡張子が&quot;.csv&quot;のファイルの場合のみ働くようになった</li>
+<li>存在しないスレッドがテーブル表示で黒く表示されるようになった</li>
+<li>Matrix モードを追加</li></ul></li>
+<li>1.2.9リリース(2005/10/19)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>複数ファイルの読み込みが出来なくなっていたのを修正。</li>
+<li>kill bill モードを復活。</li></ul></li>
+<li>1.2.8リリース(2005/9/2)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>スレッドのリストをクリックした際にスレッドの時系列表示が空になってしまう現象を修正。1.2.7におけるリグレッション。</li></ul></li>
+<li>1.2.7リリース(2005/8/23)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>スレッド名が途中で変わる場合、スレッド名が重複している場合に解析が正常に出来ていなかった不具合を修正</li>
+<li>IBMのjavacoreに対応するため複数のファイルの読み込みに対応した。複数のファイルをドロップした場合は辞書順で読み込みます。</li>
+<li>MacOSXのスクリーンメニューバーに対応</li>
+<li>MacOSXのBrush metal LAFに対応<br/>
+これは OS の制限によるものです<br/></li></ul></li>
+<li>1.2.6リリース(2005/8/23)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>IBM JDK1.4.0/1.3.1 の javacore に対応</li></ul></li>
+<li>1.2.5リリース(2005/8/18)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>JRockit1.5.0_03(WLS9.0GA付属) に対応</li></ul></li>
+<li>1.2.4リリース(2005/8/17)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>JRockit1.4.2_05(WLS8.1SP4付属) に対応</li></ul></li>
+<li>1.2リリース(2004/4/4)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="http://www.beasys.co.jp/dev2dev/resourcelibrary/utilitiestools/monitoring.html">虚無僧</a>や CSV ファイルのグラフ化機能が追加されました。<a href="http://edocs.beasys.co.jp/e-docs/wls/docs81/index.html">WebLogic</a> その他のJava アプリケーションのチューニングに。</li></ul></li>
+<li>1.1リリース(2004/3/31)</li>
+<li>verbose:gc ログの解析ができるようになりました。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ヒープサイズやガベージコレクションのチューニングに。</li></ul></li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_17">サポート  <a class="anchor_super" id="v7a478e4" href="../samurai/index_Samurai.html#v7a478e4" title="v7a478e4">&dagger;</a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>侍に関するご意見、ご感想、改善要求などはお気軽にどうぞ。</li></ul>
+<hr class="full_hr"/>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>すみません。虚無僧タブがでないんですけど。CSVファイルをドラッグするだけじゃだめですか？ -- <span class="noexists">mask<a href="../samurai/index_cmd_edit_page_mask_refer_Samurai.html">?</a></span> <span class="comment_date">2004-06-09 (水) 21:33:19</span><br/>
+ファイルの先頭から CSV でないと認識してくれません。余分な改行などが入っていたら消してみてください。うまくいかない場合は yusuke＠mac.com へ送っていただくようお願いします。</li>
+<li>ナイスです。赤が多すぎると、ハラキリするようにしてください。 -- <span class="noexists">akitada<a href="../samurai/index_cmd_edit_page_akitada_refer_Samurai.html">?</a></span> <span class="comment_date">2004-04-17 (土) 20:41:35</span><br/>
+すばらしいアイディアですね。Kill Billモードと共に検討させていただきます。</li>
+<li>BEA Korea エンジニアです. 本?に立派なツ?ルです. 視力の?くなる事が消えますね. (翻訳機を通じる文) -- <span class="noexists">チョン・ミョンフン<a href="../samurai/index_cmd_edit_page__A5_C1_A5_E7_A5_F3_A1_A6_A5_DF_A5_E7_A5_F3_A5_D5_A5_F3_refer_Samurai.html">?</a></span> <span class="comment_date">2004-05-18 (火) 13:59:30</span></li>
+<li>すばらしいです。SUNのJVMの標準出力をそのままグラフにしてくれました。感激です。IBMのJDKでの対応計画はいかがですか？ -- <span class="noexists">naonao<a href="../samurai/index_cmd_edit_page_naonao_refer_Samurai.html">?</a></span> <span class="comment_date">2005-01-16 (日) 23:20:44</span><br/>
+javacore については1.2.6 で対応しました。verbosegcはまだです。</li>
+<li>かなりのお役立ちツールです。文字列検索の強化が望まれます -- <span class="noexists">m-ksk<a href="../samurai/index_cmd_edit_page_m-ksk_refer_Samurai.html">?</a></span> <span class="comment_date">2005-01-26 (水) 13:53:08</span><br/>
+tail としてお使いですね？具体的にどのような機能強化をお望みでしょうか？</li>
+<li>JRockit 1.4.2_05 で使えません -- <span class="noexists">akitada<a href="../samurai/index_cmd_edit_page_akitada_refer_Samurai.html">?</a></span> <span class="comment_date">2005-03-08 (火) 15:39:23</span><br/>
+バージョン1.2.4で対応しました</li>
+<li>ヒープ使用状況の解析について、-verbose:gc の出力だけではなく、-Xloggc の出力フォーマットにも対応していただけないでしょうか？あと、ものすごくヒトゴトなんですが、<span class="noexists">EclipsePlugin<a href="../samurai/index_cmd_edit_page_EclipsePlugin_refer_Samurai.html">?</a></span> な「侍」を作ってみませんか？(なれなれしくてごめんなさい) -- <span class="noexists">おれ<a href="../samurai/index_cmd_edit_page__A4_AA_A4_EC_refer_Samurai.html">?</a></span> <span class="comment_date">2005-10-06 (木) 14:26:50</span><br/>
+毎度ありがとうございます！GCログは各種VMで出力が異なるので、順に対応していきたいと思っています。<br/>
+Eclipse Plugin のバージョンが欲しい！って声は幾つか頂いているので、そのうちやりたいと思います。</li>
+<li>GCログはモノによって半角SP区切りですが、中身をどう区切ったらうまくグラフ化されるのでしょうか？？単にカンマ区切りにしてもNGでした。。 -- <span class="noexists">おじ<a href="../samurai/index_cmd_edit_page__A4_AA_A4_B8_refer_Samurai.html">?</a></span> <span class="comment_date">2006-02-05 (日) 21:11:05</span><br/>
+半角SP区切り・・、何のJVMをお使いでしょう？</li>
+<li>やー、すごく便利。うまく動きました。<span class="noexists">JavaWebStart<a href="../samurai/index_cmd_edit_page_JavaWebStart_refer_Samurai.html">?</a></span>アプリも初めて起動しました(笑) -- <span class="noexists">かみやん<a href="../samurai/index_cmd_edit_page__A4_AB_A4_DF_A4_E4_A4_F3_refer_Samurai.html">?</a></span> <span class="comment_date">2006-03-30 (木) 01:26:36</span></li>
+<li>ログの文字コードを(指定できるように変更できないものかと思いまして -- <span class="noexists">harawata<a href="../samurai/index_cmd_edit_page_harawata_refer_Samurai.html">?</a></span> <span class="comment_date">2006-05-12 (金) 16:35:58</span></li>
+<li>すみません、途中で送信してしまいました。ログの文字コードを（出来ればタブごとに）指定できると嬉しいです。ちなみに、現在ソースコードの配布はされていないのでしょうか？ -- <span class="noexists">harawata<a href="../samurai/index_cmd_edit_page_harawata_refer_Samurai.html">?</a></span> <span class="comment_date">2006-05-12 (金) 16:37:55</span><br/>
+文字コードの指定は近いうちに実装予定です。今しばらくお待ち下さい。<br/>
+ソースコードは現在頻繁にリファクタリングが行われている状態で、クラス構成が不安定なので公開しておりません。<br/>
+設計が安定したら公開する予定です。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_18"><a href="../samurai/index_PayPal.html" title="PayPal (4d)">PayPal</a> による寄付  <a class="anchor_super" id="o5b9686d" href="../samurai/index_Samurai.html#o5b9686d" title="o5b9686d">&dagger;</a></h2>
+<p>侍は無償で全ての機能をご利用頂けます。
+<a href="../samurai/index_PayPal.html" title="PayPal (4d)">PayPal</a>で寄付をして頂くことも可能です。<br/>
+<br/>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=yusuke%40mac%2ecom&amp;item_name=Samurai2%2e0&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=JPY&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8"><img src="../en_US/i/btn/x-click-but04.gif" alt="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=yusuke%40mac%2ecom&amp;item_name=Samurai2%2e0&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=JPY&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8"/></a></p>
+<div class="counter">
+Counter: 37319,
+today: 85,
+yesterday: 96
+</div>
+<p>Copyright 2003-2007 (c) Yusuke Yamamoto All rights reserved.</p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "0D8F63";
+google_color_bg = "FFFFFF";
+google_color_link = "1B703A";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script>
+</div>
+  </td>
+ </tr>
+</table>
+<hr class="full_hr"/><div id="toolbar">
+ <a href="../samurai/index_Samurai.html"><img src="../samurai/image/reload.png" width="20" height="20" alt="Reload" title="Reload"/></a>
+ &nbsp;
+ <a href="../samurai/index_plugin_newpage.html"><img src="../samurai/image/new.png" width="20" height="20" alt="New" title="New"/></a>
+ <a href="../samurai/index_cmd_edit_page_Samurai.html"><img src="../samurai/image/edit.png" width="20" height="20" alt="Edit" title="Edit"/></a>
+ <a href="../samurai/index_cmd_unfreeze_page_Samurai.html"><img src="../samurai/image/unfreeze.png" width="20" height="20" alt="Unfreeze" title="Unfreeze"/></a>
+ <a href="../samurai/index_cmd_diff_page_Samurai.html"><img src="../samurai/image/diff.png" width="20" height="20" alt="Diff" title="Diff"/></a>
+ <a href="../samurai/index_plugin_attach_pcmd_upload_page_Samurai.html"><img src="../samurai/image/file.png" width="20" height="20" alt="Upload" title="Upload"/></a>
+ <a href="../samurai/index_plugin_template_refer_Samurai.html"><img src="../samurai/image/copy.png" width="20" height="20" alt="Copy" title="Copy"/></a>
+ <a href="../samurai/index_plugin_rename_refer_Samurai.html"><img src="../samurai/image/rename.png" width="20" height="20" alt="Rename" title="Rename"/></a>
+ &nbsp;
+ <a href="../samurai/index_Samurai.html"><img src="../samurai/image/top.png" width="20" height="20" alt="Front page" title="Front page"/></a>
+ <a href="../samurai/index_cmd_list.html"><img src="../samurai/image/list.png" width="20" height="20" alt="List of pages" title="List of pages"/></a>
+ <a href="../samurai/index_cmd_search.html"><img src="../samurai/image/search.png" width="20" height="20" alt="Search" title="Search"/></a>
+ <a href="../samurai/index_RecentChanges.html"><img src="../samurai/image/recentchanges.png" width="20" height="20" alt="Recent changes" title="Recent changes"/></a>
+ <a href="../samurai/index_cmd_backup_page_Samurai.html"><img src="../samurai/image/backup.png" width="20" height="20" alt="Backup" title="Backup"/></a>
+ &nbsp;
+ <a href="../samurai/index__A5_D8_A5_EB_A5_D7.html"><img src="../samurai/image/help.png" width="20" height="20" alt="Help" title="Help"/></a>
+ &nbsp;
+ <a href="../samurai/index_cmd_rss10.html"><img src="../samurai/image/rss.png" width="36" height="14" alt="RSS of recent changes" title="RSS of recent changes"/></a>
+</div>
+<div id="lastmodified">
+ Last-modified: Tue, 20 Feb 2007 07:14:20 JST  (8d)</div>
+<div id="related">
+ Link: <a href="../samurai/index_PayPal.html">PayPal</a>(4d)</div>
+<div id="footer">
+ Modified by <a href="../samurai.html">yusuke</a>
+ <br/><br/>
+ <strong>PukiWiki 1.4.4_php5</strong> Copyright &copy; 2001-2004 <a href="http://pukiwiki.org/">PukiWiki Developers Team</a>. License is <a href="http://www.gnu.org/licenses/gpl.html">GPL</a>.<br/> Based on "PukiWiki" 1.3 by <a href="http://factage.com/yu-ji/">yu-ji</a> <br/>
+ <br/><br/>
+ HTML convert time to 1.247 sec.
+</div>
+<script src="../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</body>
+</html>

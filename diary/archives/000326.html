@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: Apache Lenya インストールメモ</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="/" title="Java アプリケーションで MacOSのアプリケーションメニュー操作、のメモ"/>
+<link rel="next" href="../../diary/archives/000327.html" title="侍2.0"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000326.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/326"
+    dc:title="Apache Lenya インストールメモ"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000326.html"
+    dc:subject="Java"
+    dc:description="侍とかわらじのドキュメントに、多言語が使えて無償のCMS(Content Man..."
+    dc:creator="yusuke"
+    dc:date="2005-12-31T02:24:39+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="/">&laquo; Java アプリケーションで MacOSのアプリケーションメニュー操作、のメモ</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/000327.html">侍2.0 &raquo;</a>
+</p>
+<h2>2005&#24180;12&#26376;31&#26085;</h2>
+<h3>Apache Lenya インストールメモ</h3>
+<p><a href="../../samurai.html">侍</a>とか<a href="../../waraji.html">わらじ</a>のドキュメントに、多言語が使えて無償のCMS(Content Management System)がないものかと思っていたらよさそうなのがあった。<br/>
+・Apache Lenya<br/>
+<a href="http://lenya.apache.org/">http://lenya.apache.org/</a></p>
+<p>Cocoon ベースのCMSで、サーブレットコンテナ上ならなんでも動くはず。<br/>
+じゃぁ WebLogic にデプロイしてみよう。今回使ったのは WLS8.1SP4。<br/>
+バイナリをダウンロードして展開したら lenya.war が出てきたので、とりあえずデプロイ・・・したら<br/>
+----<br/>
+Unable to use getRealPath to locate /WEB-INF<br/>
+java.lang.NullPointerException<br/>
+----<br/>
+との例外。getRealPath 関連 null ってことは展開ディレクトリ形式でデプロイしないといけないっぽいので展開してデプロイ・・・したらTransformationを取得できないとかの例外。今度はXMLパーサの問題っぽい。<br/>
+たぶん WebLogic 内蔵のパーサと WEB-INF/lib に配置されているパーサが衝突しているのだろうということで、WEB-INF のクラスを優先してロードするように weblogic.xml に設定。<br/>
+------weblogic.xml<br/>
+&lt;!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web Application 8.1//EN" "http://www.bea.com/servers/wls810/dtd/weblogic810-web-jar.dtd"&gt;<br/>
+&lt;weblogic-web-app&gt;<br/>
+  &lt;container-descriptor&gt;<br/>
+    &lt;prefer-web-inf-classes&gt;true&lt;/prefer-web-inf-classes&gt;<br/>
+  &lt;/container-descriptor&gt;<br/>
+&lt;/weblogic-web-app&gt;<br/>
+-----<br/>
+よし、うまく動いたぞ。<br/>
+<a href="../../diary/archives/images/051231/lenya_installed.jpg"><img alt="lenya_installed.jpg" src="../../diary/archives/images/051231/lenya_installed-thumb.jpg" width="320" height="199"/></a></p>
+<p>なんか最初は英語とドイツ語のコンテンツしか作れない。メニューから新しい言語セットを作るような仕組みは見あたらない。FAQにデフォルトの言語を設定するにはどうしたら良いか？という項目があり、publication.xconf というファイルをいじれば良いことが分かった。<br/>
+How do I switch the default language for an existing publication?<br/>
+<a href="http://lenya.apache.org/1_2_x/how-to/faq.html">http://lenya.apache.org/1_2_x/how-to/faq.html</a><br/>
+英語がデフォルト、日本語のコンテンツも作成ならばこんな感じ。<br/>
+----<br/>
+  &lt;languages&gt;<br/>
+    &lt;language default="true"&gt;en&lt;/language&gt;<br/>
+    &lt;language&gt;ja&lt;/language&gt;<br/>
+  &lt;/languages&gt;<br/>
+----</p>
+<p>さて、ドキュメントを公開するには編集した後に、パブリッシュ-&gt;承認を経なければいけない。wikiと違ってCMSはそうそうカジュアルにドキュメントを公開することを想定していないので、当然といえば当然。<br/>
+デフォルトでは lenya という編集者と、alice という承認者がいる。<br/>
+２人を使いこなすのは面倒なので、両方のグループに属した人を作れば良いらしいのだけど、ユーザを編集する画面で ClassCastException が・・・。<br/>
+どうやら<a href="http://www.nabble.com/Cocoon-2.1.7-in-Weblogic-8.1.4-t91433.html>rhino.jar というのに問題があるらしい</a>。<br />
+rhino1.6R1 を使えということで、<a href=" http: www.mozilla.org rhino download.html">それっぽいところ</a>探し出してきてダウンロード。もうちょっと新しめの 1.6R2 があったのでそっちを使ってみた。<br/>
+rhino.jar というのは含まれていなくて、js.jar ってのがある。はて、中身は lenya に含まれている rhino1.5r4-continuations-20040629T1232.jar と同じものなのだろうか？<br/>
+こんなときは<a href="../../waraji.html">わらじ</a>でチェック。かなり多くのクラスが衝突しているので間違いなさそう。<br/>
+<a href="../../diary/archives/images/051231/waraji.jpg"><img alt="waraji.jpg" src="../../diary/archives/images/051231/waraji-thumb.jpg" width="320" height="288"/></a><br/>
+とういわけで、rhino1.5r4-continuations-20040629T1232.jar を外して、js.jar をあとでわかるようにrhino1_6R2.jarという名前に変えて、WEB-INF/lib へ配置-&gt;再デプロイ。<br/>
+・・したら NoSuchFieldError だ。バージョンがいけなかったか。<br/>
+-----<br/>
+&lt;2005/12/31 3時16分57秒 JST&gt; <error> <http> <bea-101017> &lt;[ServletContext(id=13726349,name=lenya,context-path=/lenya)] ServletException の根本的原因。<br/>
+java.lang.NoSuchFieldError: instance   <br/>
+-----<br/>
+再度 1.6R1 をダウンロードしたら無事所属グループの設定画面を表示することができた。<br/>
+<a href="../../diary/archives/images/051231/lenya_installed.jpg"><img alt="lenya_group.jpg" src="../../diary/archives/images/051231/lenya_group-thumb.jpg"/></a><br/>
+面倒くさくて危うく挫折するとこだった・・・。面倒なのは WebLogic にインストールしたからなのか、lenya がまだまだ枯れていないからなのかはよくわからない。Tomcat とかバンドルされているJetty で検証するのも面倒なので放っておこう。とりあえず動いたっぽいし。</p>
+<p>まとめ<br/>
+・lenya は展開ディレクトリ形式でデプロイ<br/>
+・WEB-INFクラスを優先に設定(weblogic.xml)<br/>
+・付属の rhino1.5r4-continuations-20040629T1232.jar ではだめ、Rhino1.6R2もだめ、Rhino1.6R1を使え</p>
+<div id="a000326more"><div id="more">
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;12&#26376;31&#26085; 02:24</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/326</p>
+<h2 id="comments">コメント</h2>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

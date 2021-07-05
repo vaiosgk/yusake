@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: WebLogic Server 9.1 リリース</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/000322.html" title="BEA サポートパターン"/>
+<link rel="next" href="../../diary/archives/000324.html" title="Net Beans 5.0インストール"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000323.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/323"
+    dc:title="WebLogic Server 9.1 リリース"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000323.html"
+    dc:subject="Java"
+    dc:description="WebLogic Server 9.1 がリリースされた。 ・dev2dev h..."
+    dc:creator="yusuke"
+    dc:date="2005-12-21T10:52:24+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/000322.html">&laquo; BEA サポートパターン</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/000324.html">Net Beans 5.0インストール &raquo;</a>
+</p>
+<h2>2005&#24180;12&#26376;21&#26085;</h2>
+<h3>WebLogic Server 9.1 リリース</h3>
+<p>WebLogic Server 9.1 がリリースされた。<br/>
+・dev2dev home &gt; BEA Downloads &gt; WebLogic Server 9.1 <br/>
+<a href="http://commerce.bea.com/showproduct.jsp?family=WLS&amp;major=9.1&amp;minor=0">http://commerce.bea.com/showproduct.jsp?family=WLS&major;=9.1&minor;=0</a></p>
+<p>いやいや夏に9.0がでたばっかでしょというツッコミたくなるけど、際だった新機能もないので実質 WLS9.0SP1 とみて良い。「海外では X.0 は所詮ベータ」という認識が強いので .1 をつけると引き合いが増えるのでしょう。<br/>
+・What's New in WebLogic Server 9.1<br/>
+<a href="http://e-docs.bea.com/wls/docs91/notes/new.html">http://e-docs.bea.com/wls/docs91/notes/new.html</a></p>
+<p>実質 SP1 ? とはいえドキュメントは 90 とは別のものが用意されている。<br/>
+<a href="http://e-docs.bea.com/wls/docs91/index.html">http://e-docs.bea.com/wls/docs91/index.html</a><br/>
+WLS9.0 からの差分はこちら。かなり多くの問題が修正されていることが分かる。<br/>
+・WebLogic Server Known and Resolved Issues<br/>
+<a href="http://e-docs.bea.com/wls/docs91/issues/known_resolved.html">http://e-docs.bea.com/wls/docs91/issues/known_resolved.html</a><br/>
+6.1/7.0からのアップグレードを渋っている人はそろそろ検証を始めては？</p>
+<p>日本語版はまだ。<br/>
+<a href="http://www.beasys.co.jp/evaluation/index.html">http://www.beasys.co.jp/evaluation/index.html</a></p>
+<div id="a000323more"><div id="more">
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;12&#26376;21&#26085; 10:52</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/323</p>
+<h2 id="comments">コメント</h2>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

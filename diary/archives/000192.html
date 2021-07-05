@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: WebLogic Server + MacOSX = ∞</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="/" title="PostgreSQLのバックアップ"/>
+<link rel="next" href="/" title="H2Aロケット"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000192.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/192"
+    dc:title="WebLogic Server + MacOSX = ∞"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000192.html"
+    dc:subject="Java"
+    dc:description="随分前にいれたんだけどインストールメモ まずはここを参考にインストール。 run..."
+    dc:creator="yusuke"
+    dc:date="2005-02-25T22:27:41+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="/">&laquo; PostgreSQLのバックアップ</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="/">H2Aロケット &raquo;</a>
+</p>
+<h2>2005&#24180;02&#26376;25&#26085;</h2>
+<h3>WebLogic Server + MacOSX = ∞</h3>
+<p>随分前にいれたんだけどインストールメモ<br/>
+まずはここを参考にインストール。<br/>
+<a href="http://www.oreillynet.com/pub/wlg/4091">run WebLogic Server 8.1 on Mac OS X (Panther)</a></p>
+<p>注!!!<br/>
+WebLogic Server は一部分をのぞきJavaでかかれた製品なので大抵のJVMの上で稼働しますがサポートされるのは結構ｷﾋﾞｼｲ試験を耐え抜いたと考えるのが妥当な限られたプラットフォームのみです。<br/>
+現在のところ MacOSX でのサポートはアナウンスされていません。インストール、起動する事自体問題はありませんがあくまで自分の責任に置いて行う必要があります。<br/>
+ピクりとも予断を許さない商用環境で利用するにはドキュメントを良く確認してサポート対象のプラットフォームを利用するのが無難です。<br/>
+・WebLogic Platform Supported Configurations<br/>
+<a href="http://e-docs.bea.com/platform/suppconfigs/index.html">http://e-docs.bea.com/platform/suppconfigs/index.html</a><br/>
+・WebLogic Platform サポート対象のコンフィグレーション<br/>
+→翻訳の関係上英語版より若干遅れて更新されるので確実を期すには英語版を確認するのがお勧め<br/>
+<a href="http://edocs.beasys.co.jp/e-docs/platform/suppconfigs/index.html">http://edocs.beasys.co.jp/e-docs/platform/suppconfigs/index.html</a></p>
+<div id="a000192more"><div id="more">
+<p>・限定非商用ライセンスの有効化<br/>
+license_scale_limited.bea を license.bea にリネームするだけ<br/>
+$ mv license.bea license.bea.dev<br/>
+$ mv license_scale_limited.bea license.bea</p>
+<p>・ネイティブIOの有効化<br/>
+ネイティブIO はその名の通り JNI を使ってかかれた IO を行うライブラリ。java.net.* や java.nio.* などより高速なネットワークパフォーマンスを発揮してくれる。<br/>
+<a href="http://www.beasys.co.jp/e-docs/wls/docs81/perform/WLSTuning.html#1142800">http://www.beasys.co.jp/e-docs/wls/docs81/perform/WLSTuning.html#1142800</a><br/>
+ライブラリをコピーする<br/>
+$ cd /bea81sp4/weblogic81/server/lib<br/>
+$ mkdir mac<br/>
+$ cp wls4mac/lib/* ./mac/<br/>
+$ cd mac<br/>
+$ chmod +x *</p>
+<p>commEnv.sh 215 行目よりに以下を追加してライブラリのパスを通す<br/>
+--------<br/>
+Darwin)<br/>
+  if [ -n "${DYLD_LIBRARY_PATH}" ]; then<br/>
+    DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:${WL_HOME}/server/lib/mac<br/>
+  else<br/>
+    DYLD_LIBRARY_PATH=${WL_HOME}/server/lib/mac<br/>
+  fi<br/>
+  export DYLD_LIBRARY_PATH<br/>
+;;<br/>
+--------</p>
+<p>スレッドダンプをとって NaitiveIO が有効になっていることを確認。<br/>
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x00581090 nid=0x1f21200 waiting for monitor entry [f18a1000..f18a1b20]<br/>
+        at weblogic.socket.PosixSocketMuxer.processSockets(PosixSocketMuxer.java:93)<br/>
+        - waiting to lock &lt;0x67e2d530&gt; (a java.lang.String)<br/>
+        at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)<br/>
+        at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:219)<br/>
+        at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:178)<br/>
+-&gt;weblogic.socket.Muxer って実行キューができている。</p>
+<p>・なんとなくチューニング<br/>
+-実行スレッド数<br/>
+そんなに過負荷になる（なっては困る）所詮自宅サーバなので実行スレッド数は少なめに。scale_limited ライセンスなのできっとデフォルトの25あっても使い切れないでしょう。<br/>
+サーバ -&gt; コンフィグレーション -&gt; 一般 -&gt; 実行スレッドの設定-&gt; スレッド数  -&gt;15</p>
+<p>-Apache プラグインを介してもクライアントの IP アドレスを正常にうけとれるように<br/>
+サーバ -&gt; コンフィグレーション -&gt; 一般 -&gt; WebLogic Pluginを有効化 [on]</p>
+<p>・OSスタートアップ時の WLS 起動<br/>
+マシン起動時に WLS も起動するように設定。</p>
+<p>/Library/StartupItems/ 以下にディレクトリを掘る<br/>
+# cd /Library/StartupItems/<br/>
+# mkdir WebLogic</p>
+<p>MacOSX 独自の起動スクリプトを書く<br/>
+# cd /Library/StartupItems/WebLogic<br/>
+# vi WebLogic<br/>
+------------------こんな感じ<br/>
+#!/bin/sh</p>
+<p>##<br/>
+# WebLogic<br/>
+##</p>
+<p>. /etc/rc.common</p>
+<p>StartService ()<br/>
+{<br/>
+        ConsoleMessage "Starting WebLogic"<br/>
+        cd /bea81sp4/user_projects/domains/mydomain/<br/>
+        sudo -u yusukey ./startWebLogic.sh &gt; admin.out 2&gt;&1 &<br/>
+}</p>
+<p>StopService ()<br/>
+{<br/>
+    ConsoleMessage "Stopping WebLogic"<br/>
+    cd /bea81sp4/user_projects/domains/mydomain/<br/>
+    sudo -u yusukey ./stopWebLogic.sh weblogic weblogic<br/>
+}</p>
+<p>RestartService ()<br/>
+{<br/>
+        ConsoleMessage "Restarting WebLogic"<br/>
+      cd /bea81sp4/user_projects/domains/mydomain/<br/>
+   sudo -u yusukey ./stopWebLogic.sh weblogic weblogic<br/>
+        sudo -u yusukey ./startWebLogic.sh &gt; admin.out 2&gt;&1 &<br/>
+}</p>
+<p>RunService "$1"<br/>
+------------------こんな感じ↑</p>
+<p># vi StartupParameters.plist<br/>
+------------------こんな感じ<br/>
+{<br/>
+  Description     = "WebLogic";<br/>
+  Provides        = ("Application Server");<br/>
+  Requires        = ("");<br/>
+  Uses            = ("Disks");<br/>
+  OrderPreference = "None";<br/>
+}<br/>
+------------------こんな感じ↑<br/>
+WebLogic/StartupParameters.plist の２つのファイルをみて勝手に起動してくれる。<br/>
+Windows の net start にあたるコマンドは<br/>
+# SystemStarter start|stop|restart "スタートアップアイテム名"</p>
+<p><br/>
+・最近日本語化された<a href="http://www.beasys.co.jp/dev2dev/resourcelibrary/advisoriesnotifications/index.html">セキュリティーアドバイザリ</a>を見て危ないところを設定</p>
+<p>-<a href"http: dev2dev.bea.com resourcelibrary advisoriesnotifications bea04-73.00.jsp">BEA04-73.00 - Documentation is available to configure the server for encryption of administrative data. </a><br/>
+サーバ間通信を sniff されるとパスワードなどが漏れる可能性があるという脆弱性。管理サーバと管理対象サーバは同じサーバ上にあるので無視。<br/>
+第一ファイアウォール内のパケットを盗み見されてしまう状況だったらもう終わってるでしょう・・・。<br/>
+管理ポートを設定してサーバ間通信を SSL にしろ、とのこと。<br/>
+weblogic.Admin とか SSL 使わないで実行するひとはめちゃめちゃ多いと思うので気にしない人も多いのでは？<br/>
+個人情報とかたくさん管理しているような内部犯にもセンシティブな環境では気をつける必要があるでしょう。</p>
+<p>-<a href="http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04-70.00.jsp">BEA04-70.00 - Patches are available to protect Server version information</a><br/>
+レスポンスヘッダにサーバのバージョンがデフォルトで含まれるという話。直接脆弱性にはならないけどもバージョン特有の脆弱性がみつかった場合に攻撃対象となりやすい。<br/>
+パッチがでているけども、ヘッダを送るかどうかのデフォルト値が変わるだけ。<br/>
+手動で設定することとする。<br/>
+Protcols &gt; HTTP &gt; Advanced Options &gt; Send Server Header [off]</p>
+<p>褒められた設定じゃないけれども管理対象サーバはいまのとこたてないので一応管理コンソールは off。<br/>
+手前の Apache からプロキシしなければ関係ないけれども。</p>
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;02&#26376;25&#26085; 22:27</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/192</p>
+<p>このリストは、次のエントリーを参照しています:  <a href="../../diary/archives/000192.html">WebLogic Server + MacOSX = ∞</a>:</p>
+<p id="p60">
+&raquo; <a href="http://blog.goo.ne.jp/quadbase/e/e72ce5216781558ce8a757b3c3c96fd3">EspressReportと MacOS X とWebObjects</a> from Climb Soft Tech Blog<br/>
+EspressReportは MacOS X とWebObjectsをサポートする唯一のJavaレポート・ツールだと思います。
+詳しくはhttp://www.q... <a href="http://blog.goo.ne.jp/quadbase/e/e72ce5216781558ce8a757b3c3c96fd3">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;05&#26376;08&#26085; 11:25</p>
+<h2 id="comments">コメント</h2>
+<h2>コメントしてください</h2>
+<form method="post" action="http://yusuke.homeip.net/diary/mt/kakikomi.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<input type="hidden" name="static" value="1"/>
+<input type="hidden" name="entry_id" value="192"/>
+<div id="name_email">
+<p><label for="author">名前:</label><br/>
+<input tabindex="1" id="author" name="author"/></p>
+<p><label for="email">メールアドレス:</label><br/>
+<input tabindex="2" id="email" name="email"/></p>
+</div>
+<p><label for="url">URL:</label><br/>
+<input tabindex="3" type="text" name="url" id="url"/>
+保存しますか?
+<input type="radio" id="remember" onclick="rememberMe(this.form)" name="bakecookie"/><label for="remember">はい</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"/><label for="forget">いいえ</label><br style="clear: both;"/>
+</p>
+<p><label for="text">コメント:</label> <br/>
+<textarea tabindex="4" id="text" name="text" rows="10" cols="50"></textarea></p>
+<div align="center">
+<input type="submit" name="preview" tabindex="5" value=" 確認 "/>
+<input style="font-weight: bold;" type="submit" name="post" tabindex="6" value=" 投稿 "/>
+</div>
+</form>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

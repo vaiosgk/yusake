@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: Linux アーカイブ</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000345"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/345"
+    dc:title="自宅サーバ復活！"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000345"
+    dc:subject="Linux"
+    dc:description="自宅サーバをもってて困るのがサーバのトラブル。 去年なんて自宅サーバが落ちて５分..."
+    dc:creator="yusuke"
+    dc:date="2006-01-23T05:57:08+09:00" />
+</rdf:RDF>
+-->
+<h2>2006&#24180;01&#26376;23&#26085;</h2>
+<h3 id="a000345">自宅サーバ復活！</h3>
+<p>自宅サーバをもってて困るのがサーバのトラブル。<br/>
+去年なんて自宅サーバが落ちて５分後くらいに見知らぬガイジンからメールが来ました。<br/>
+------<br/>
+Subject: Please send me Samurai<br/>
+I cannot access your web site, please send me samurai zip file. <br/>
+Thanks, <br/>
+- XXXX <br/>
+------<br/>
+うーん、なんてチェックの早いヤツ！！！<br/>
+<a href="../../samurai.html">侍</a>は Java Web Start アプリケーションだからサーバ落ちてても起動はできるはず。<br/>
+ってことは初めて使う人かな？<br/>
+でも何で私のメールアドレス知ってるんだろう、とかナゾです。Googleのキャッシュ？</p>
+<p>Mac OSX で動かしているので今時 OS 自体がイカれて飛んでしまうことはないですが、 AirMac とかケーブルモデムの調子が悪くなって繋がらなくなることが残念ながら数ヶ月から半年に一度くらいあります。<br/>
+まぁ一旦ACアダプタ抜いてリセットかければ繋がるようになるんだけど。</p>
+<p>サーバ用の機器を使ってるわけではない(サーバ向けの機器だって壊れますが)のでハードウェアのトラブルはしょうがないけど、今回やってしまいました、遠く離れたサンフランシスコからヒューマンエラーを！<br/>
+先のエントリにある VNC over SSH でいくつか OS X のセキュリティアップデートをかけてやり、再起動をかけたらなんとつながらない！！<br/>
+VNC どころか SSH でも繋がらないし・・・。<br/>
+うーん、再起動じゃなくてシャットダウンを選んでしまったかな？</p>
+<p>自分専用のファイルサーバだったら別に我慢すれば良い話だけれども、最近また<a href="http://secure.ddo.jp/~kaku/tdiary/">オレンジニュース</a>で紹介していただいたり、<a href="http://www.versiontracker.com/">VersionTracker</a>に登録したりで特に<a href="../../samurai.html">侍</a>のアクセスが増えているので気になってしょうがない。</p>
+<p>急遽日本にいる義理の父(って表現あんまり好きでないですが)にメンテナンスをお願いしました。<br/>
+Mac は起動していたみたいだけど、再起動してみたら復旧したとのこと。<br/>
+シャットダウン中になんらかのGUIアプリケーションがシャットダウンをキャンセルしてしまったんではないかと思われる。うーん、気をつけよう。</p>
+<p>雪の中メンテナンスありがとうございました！！！</p>
+<p>次回出張があったらサーバも持ってくるかなぁ・・・。やっぱり Mac mini?</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000345.html">05:57</a>
+| <a href="../../diary/archives/000345.html#comments">コメント (2)</a>
+| <a href="../../diary/archives/000345.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000344"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/344"
+    dc:title="MacOSX で VNC over SSHメモ"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000344"
+    dc:subject="Linux"
+    dc:description="1. ポートフォワーディングを有効にしつつ接続 $ ssh -L 5900:12..."
+    dc:creator="yusuke"
+    dc:date="2006-01-21T14:26:51+09:00" />
+</rdf:RDF>
+-->
+<h2>2006&#24180;01&#26376;21&#26085;</h2>
+<h3 id="a000344">MacOSX で VNC over SSHメモ</h3>
+<p>1. ポートフォワーディングを有効にしつつ接続<br/>
+$ ssh -L 5900:127.0.0.1:5900 接続ホスト<br/>
+2. 向こう側で OSXVncを起動する<br/>
+$ open /Applications/OSXVnc.app<br/>
+3. こちら側で 127.0.0.1:5900 に接続</p>
+<p>以上</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000344.html">14:26</a>
+| <a href="../../diary/archives/000344.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000344.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000238"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/238"
+    dc:title="PostgreSQL 文字コードの切り替え"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000238"
+    dc:subject="Linux"
+    dc:description="PostgreSQL のデータベースの文字コードが図らず EUC_JP になって..."
+    dc:creator="yusuke"
+    dc:date="2005-04-23T02:35:13+09:00" />
+</rdf:RDF>
+-->
+<h2>2005&#24180;04&#26376;23&#26085;</h2>
+<h3 id="a000238">PostgreSQL 文字コードの切り替え</h3>
+<p>PostgreSQL のデータベースの文字コードが図らず EUC_JP になっており、ありがちな "〜" とかの文字化けが発生していたので Unicode へ切り替えたのをメモ。<br/>
+バックアップして、psql でリストアする際、適当に文字コードは直してくれるらしい。<br/>
+./pg_dump -d bbs &gt; バックアップファイル名<br/>
+./create_db --encoding 好きなエンコーディング データベース名<br/>
+./psql データベース名 &lt; バックアップファイル名<br/>
+</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000238.html">02:35</a>
+| <a href="../../diary/archives/000238.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000238.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000191"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/191"
+    dc:title="PostgreSQLのバックアップ"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000191"
+    dc:subject="Linux"
+    dc:description="PowerBook2400の古いサーバにあるPostgreSQLのデータをバック..."
+    dc:creator="yusuke"
+    dc:date="2005-02-25T22:15:41+09:00" />
+</rdf:RDF>
+-->
+<h2>2005&#24180;02&#26376;25&#26085;</h2>
+<h3 id="a000191">PostgreSQLのバックアップ</h3>
+<p>PowerBook2400の古いサーバにあるPostgreSQLのデータをバックアップ、のメモ<br/>
+# su - postgres <br/>
+$ pg_ctl -w start<br/>
+waiting for postmaster to start...FATAL 2:  control file context is broken<br/>
+/usr/local/pgsql/bin/postmaster: Startup proc 1206 exited with status 512 - abort<br/>
+あれ、postmaster を起動できない。以前停電になったときに壊れてしまったのだろうか。<br/>
+調べてみると pg_control ってファイルにあり得ない値が記録されていると発生するとのこと。前回シャットダウンしたときにシステムクロックがおかしな値になっていないか？と。確かに時計用の電池はもう切れてるので時々時間が狂ってる。<br/>
+確認してみるとタイムスタンプは 1904 年に。<br/>
+cd /usr/local/pgsql/data/global<br/>
+$ ls -la pg_control <br/>
+-rw-------    1 postgres postgres     8192 Jan  1  1904 pg_control</p>
+<p><a href="http://www.mail-archive.com/pgsql-admin@postgresql.org/msg05176.html">http://www.mail-archive.com/pgsql-admin@postgresql.org/msg05176.html</a><br/>
+src/backend/access/transam/xlog.c でチェックしている箇所をコメントアウトすれば復活できるかも、とのこと。C言語なんて読みたくないけれどもしかたない。<br/>
+なんとなくここっぽい。<br/>
+------<br/>
+        if (ControlFile-&gt;logSeg == 0 ||<br/>
+                ControlFile-&gt;time &lt;= 0 ||<br/>
+                ControlFile-&gt;state &lt; DB_SHUTDOWNED ||<br/>
+                ControlFile-&gt;state &gt; DB_IN_PRODUCTION ||<br/>
+                !XRecOffIsValid(ControlFile-&gt;checkPoint.xrecoff))<br/>
+                elog(STOP, "control file context is broken");<br/>
+------<br/>
+"ControlFile-&gt;time &lt;= 0 ||" の部分をコメントアウト、data フォルダをバックアップして再インストールしてみた<br/>
+$  ./configure --enable-multibyte=EUC_JP<br/>
+$ make<br/>
+$ make check<br/>
+====================================================<br/>
+ 2 of 76 tests failed, 1 of these failures ignored. <br/>
+====================================================<br/>
+なんかテストが失敗してるけど無視。もうこの環境で運用する訳じゃないし。</p>
+<p>$ make install<br/>
+$ pg_ctl -w start<br/>
+$ pg_ctl -w start<br/>
+waiting for postmaster to start....DEBUG:  database system was interrupted at 1904-01-01 00:05:22 CJT<br/>
+DEBUG:  CheckPoint record at (0, 18009432)<br/>
+DEBUG:  Redo record at (0, 18009432); Undo record at (0, 0); Shutdown TRUE<br/>
+DEBUG:  NextTransactionId: 72060; NextOid: 77273<br/>
+DEBUG:  database system was not properly shut down; automatic recovery in progress...<br/>
+DEBUG:  ReadRecord: record with zero len at (0, 18009496)<br/>
+DEBUG:  redo is not required<br/>
+The Data Base System is starting up<br/>
+.The Data Base System is starting up<br/>
+.INSERT @ 0/18009496: prev 0/18009432; xprev 0/0; xid 0: XLOG - checkpoint: redo 0/18009496; undo 0/0; sui 75; xid 72060; oid 77273; shutdown<br/>
+XLogFlush: rqst 0/18009560; wrt 0/18009496; flsh 0/18009496<br/>
+DEBUG:  database system is in production state<br/>
+done<br/>
+postmaster successfully started<br/>
+無理矢理起動成功！<br/>
+$ pg_dump ${バックアップデータベース名} &gt; backup.dump</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000191.html">22:15</a>
+| <a href="../../diary/archives/000191.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000191.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000169"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/169"
+    dc:title="とりあえず多カ国語化"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000169"
+    dc:subject="Linux"
+    dc:description="   Options All MultiViews とかすればブラウザに設定され..."
+    dc:creator="yusuke"
+    dc:date="2005-01-24T22:38:31+09:00" />
+</rdf:RDF>
+-->
+<h2>2005&#24180;01&#26376;24&#26085;</h2>
+<h3 id="a000169">とりあえず多カ国語化</h3>
+<p><location ディレクトリ><br/>
+  Options All MultiViews<br/>
+</location><br/>
+とかすればブラウザに設定されてる言語に対応したコンテンツを配信してくれるらしい。パフォーマンスはやや劣るとのこと。Apache って便利ね。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000169.html">22:38</a>
+| <a href="../../diary/archives/000169.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000169.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000119"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/119"
+    dc:title="サーバ復活"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000119"
+    dc:subject="Linux"
+    dc:description="自宅サーバを立ててるとサーバが落ちたときとても心臓に悪い。 たぶん一番アクセスし..."
+    dc:creator="yusuke"
+    dc:date="2004-10-26T00:00:24+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;10&#26376;26&#26085;</h2>
+<h3 id="a000119">サーバ復活</h3>
+<p>自宅サーバを立ててるとサーバが落ちたときとても心臓に悪い。<br/>
+たぶん一番アクセスしているのは自分なのに:p</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000119.html">00:00</a>
+| <a href="../../diary/archives/000119.html#comments">コメント (1)</a>
+| <a href="../../diary/archives/000119.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000020"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/20"
+    dc:title="movabletype3.0ベータテスト"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000020"
+    dc:subject="Linux"
+    dc:description="movabletype3.0のベータテストが今週中に開始される(されている？）ら..."
+    dc:creator="yusuke"
+    dc:date="2004-04-21T02:05:35+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;04&#26376;21&#26085;</h2>
+<h3 id="a000020">movabletype3.0ベータテスト</h3>
+<p><a href="http://www.movabletype.org/">movabletype3.0のベータテストが今週中に開始される</a>(されている？）らしい。現行バージョンの機能さえ把握できてないけど何が変わるんだろうか・・・？<br/>
+エントリの少ないうちに3.0に移行するのが得策かも。</p>
+<p>というわけでベータテスタに応募してみました。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000020.html">02:05</a>
+| <a href="../../diary/archives/000020.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000020.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000008"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/8"
+    dc:title="コメント&gt;メール通知でエラー発生"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000008"
+    dc:subject="Linux"
+    dc:description="コメントが記録されたらメールで通知するように設定・・・してテストしてみたらエラー..."
+    dc:creator="yusuke"
+    dc:date="2004-04-09T02:58:41+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;04&#26376;09&#26085;</h2>
+<h3 id="a000008">コメント&gt;メール通知でエラー発生</h3>
+<p>コメントが記録されたらメールで通知するように設定・・・してテストしてみたらエラーがでました。</p>
+<p>&gt;An error occurred:</p>
+<p>Can't locate MIME/Base64.pm in @INC (@INC contains: /usr/local/apache2/cgi-bin/extlib /usr/local/apache2/cgi-bin/lib /usr/lib/perl5/5.00503/ppc-linux /usr/lib/perl5/5.00503 /usr/lib/perl5/site_perl/5.005/ppc-linux /usr/lib/perl5/site_perl/5.005 .) at /usr/local/apache2/cgi-bin/extlib/Jcode.pm line 290.</p>
+<p>どうやらメール文面にエンコードするためにBase64のperl用のライブラリが必要な模様。調べてみたらありました。<br/>
+とりあえずこっから↓ダウンロードできるって。<br/>
+http://www.roynet.co.uk/docs/Intershop/Base64.pm</p>
+<p>cgi-bin/extlib/MIME/Base64.pm に配置したらエラーでなくなった。なんかメールは受信できてないけど、それはまた調べよう。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000008.html">02:58</a>
+| <a href="../../diary/archives/000008.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000008.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000007"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/7"
+    dc:title="Apacheのエイリアス機能"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000007"
+    dc:subject="Linux"
+    dc:description="Wiki/blog はじめたてのホヤホヤなのでアクセスがきになる。Wikiにはr..."
+    dc:creator="yusuke"
+    dc:date="2004-04-09T02:29:31+09:00" />
+</rdf:RDF>
+-->
+<h3 id="a000007">Apacheのエイリアス機能</h3>
+<p>Wiki/blog はじめたてのホヤホヤなのでアクセスがきになる。Wikiにはrefererを使ってリンク元を記録する機能があるんだけど、<a href="../../samurai.html">侍</a>のサイトは Wiki が配置されている /samurai/index.php じゃなくて /samurai/index.html が広まっている。<br/>
+とりあえず index.php にへジャンプする html を配置してるんだけど referer が失われてしまうのでアクセスログを見ないとリンク元がわからないという面倒な事態に。<br/>
+Apache になんか便利な機能がないかとしらべてみればそのままずばりエイリアスというのがあるではないですか。<br/>
+やり方は簡単で、httpd.conf に<br/>
+Alias /samurai/index.html "/usr/local/apache2/htdocs/samurai/index.php"<br/>
+とか記述する。<br/>
+/samurai/index.html へのアクセスは index.php へのアクセスと評価されるので無事<a href="../../samurai/index_plugin_referer_page_Samurai.html">リンク元</a>が取得できるようになりました。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000007.html">02:29</a>
+| <a href="../../diary/archives/000007.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000007.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000004"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/4"
+    dc:title="Apache刷新"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000004"
+    dc:subject="Linux"
+    dc:description="古すぎる Apache1.3.19 を廃止して 9000 番でテスト稼動していた..."
+    dc:creator="yusuke"
+    dc:date="2004-04-08T02:28:44+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;04&#26376;08&#26085;</h2>
+<h3 id="a000004">Apache刷新</h3>
+<p>古すぎる Apache1.3.19 を廃止して 9000 番でテスト稼動していた 2.0.49 を 80 番でサービスさせる。<br/>
+うーん、ポートが変わったがただしくトラックバックできるんでしょうか？</p>
+<p>追加メモ：<br/>
+Apacheのポート変えたら[blogの設定]も変えないとね。あたりまえです。ちゃんとmovabletypeにそういう設定項目がありました。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000004.html">02:28</a>
+| <a href="../../diary/archives/000004.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000004.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000002"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/2"
+    dc:title="jkコネクタをインストール"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000002"
+    dc:subject="Linux"
+    dc:description="Apache2.0.49にJKコネクタをインストール。JK2ってやつらしい。mo..."
+    dc:creator="yusuke"
+    dc:date="2004-04-08T01:46:29+09:00" />
+</rdf:RDF>
+-->
+<h3 id="a000002">jkコネクタをインストール</h3>
+<p>Apache2.0.49にJKコネクタをインストール。JK2ってやつらしい。mod_webappとかってどこいったんだろう？</p>
+<p>#./configure --with-apxs2=/usr/local/apache2/bin/apxs --with-tomcat40=/home/tomcat/jakarta-tomcat-4.0.3<br/>
+#make</p>
+<p>#cp ../build/jk2/apache2/mod_jk2.so /usr/local/apache2/modules/</p>
+<p>#cp ../conf/workers2.properties /usr/local/apache2/conf/ </p>
+<p>workers2.properties をなんとなく書き換えるだけで動いた。<br/>
+以前より設定簡単かも。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000002.html">01:46</a>
+| <a href="../../diary/archives/000002.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000002.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/cat_linux.html#000001"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/1"
+    dc:title="movabletypeをインストール"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/cat_linux.html#000001"
+    dc:subject="Linux"
+    dc:description="めでたしめでたし。 PostgreSQLにはうまくつなげられてないけどとりあえず..."
+    dc:creator="yusuke"
+    dc:date="2004-04-07T01:32:35+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;04&#26376;07&#26085;</h2>
+<h3 id="a000001">movabletypeをインストール</h3>
+<p>めでたしめでたし。<br/>
+PostgreSQLにはうまくつなげられてないけどとりあえず後回し。一人で使ってるぶんにはたいして変わりないでしょう。フラットファイルのほうが移行も楽だし。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000001.html">01:32</a>
+| <a href="../../diary/archives/000001.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000001.html#trackbacks">トラックバック</a>
+</p>
+</div>
+</div>
+</body>
+</html>

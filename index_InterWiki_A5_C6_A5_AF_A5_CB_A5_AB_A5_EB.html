@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP"/>
+ <meta http-equiv="content-style-type" content="text/css"/>
+ <title>InterWikiテクニカル</title>
+ <link rel="stylesheet" href="skin/default.en.css" type="text/css" media="screen" charset="EUC-JP"/>
+ <link rel="stylesheet" href="skin/print.en.css" type="text/css" media="print" charset="EUC-JP"/>
+</head>
+<body>
+<div id="header">
+ <a href="/"><img id="logo" src="pukiwiki.png" width="512" height="64" alt="[PukiWiki]" title="[PukiWiki]"/></a>
+ <h1 class="title"><a href="/">InterWikiテクニカル</a> </h1>
+ <a href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html"><span class="small">http://yusuke.homeip.net/index.html?InterWiki%A5%C6%A5%AF%A5%CB%A5%AB%A5%EB</span></a>
+</div>
+<div id="navigator">
+ [ <a href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">Reload</a> ]
+ &nbsp;
+ [ <a href="index_plugin_newpage_refer_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">New</a>
+ | <a href="index_cmd_edit_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">Edit</a>
+ | <a href="index_cmd_freeze_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">Freeze</a>
+ | <a href="index_cmd_diff_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">Diff</a>
+ | <a href="index_plugin_attach_pcmd_upload_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">Upload</a>
+ ]
+ &nbsp;
+ [ <a href="index_Samuraism.html">Front page</a>
+ | <a href="index_cmd_list.html">List of pages</a>
+ | <a href="index_cmd_search.html">Search</a>
+ | <a href="index_RecentChanges.html">Recent changes</a>
+ | <a href="index_cmd_backup_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">Backup</a>
+ | <a href="index__A5_D8_A5_EB_A5_D7.html">Help</a>
+ ]
+ [ <a href="index_plugin_referer_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">Referer</a> ]
+</div>
+<hr class="full_hr"/>
+<table border="0" style="width:100%">
+ <tr>
+  <td class="menubar">
+   <div id="menubar">
+<ul><li><a href="/">top</a>&nbsp;&gt;
+<br/>
+<br/>
+&nbsp;<a href="tools.html">ツール</a>&nbsp;/&nbsp;<a href="index_tools.html" title="tools (60d)">tools</a>
+<br/>
+<br/>
+&nbsp;<a href="diary.html">日記</a></li></ul>
+   </div>
+  </td>
+  <td valign="top">
+   <div id="body">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="pagead/show_ads.js">
+</script>
+<h2 id="content_1_0"><a href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html" title="InterWikiテクニカル (1359d)">InterWikiテクニカル</a>  <a class="anchor_super" id="v2a7f90e" href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html#v2a7f90e" title="v2a7f90e">&dagger;</a></h2>
+<div class="contents">
+<a id="contents_1"></a><ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_0"> InterWikiテクニカル </a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_1"> InterWikiへのアクセス(InterWikiNameの生成) </a></li>
+<li><a href="#content_1_2"> サーバーリストへの追加 </a></li>
+<li><a href="#content_1_3"> WikiNameの挿入位置 </a></li>
+<li><a href="#content_1_4"> 文字コード変換タイプ </a></li>
+<li><a href="#content_1_5"> YukiWiki系へのエンコーディング </a></li></ul></li></ul></div>
+<hr class="full_hr"/>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_1"><span class="noexists">InterWiki<a href="index_cmd_edit_page_InterWiki_refer_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">?</a></span>へのアクセス(<a href="index_InterWikiName.html" title="InterWikiName (1359d)">InterWikiName</a>の生成)  <a class="anchor_super" id="nb5bafb9" href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html#nb5bafb9" title="nb5bafb9">&dagger;</a></h3>
+<p>サーバリストにあるサーバ名:<a href="index_WikiName.html" title="WikiName (1859d)">WikiName</a>を<a href="index_BracketName.html" title="BracketName (1359d)">BracketName</a>で作れば<a href="index_InterWikiName.html" title="InterWikiName (1359d)">InterWikiName</a>の完成。<br/>
+これをページに記述すれば、そのサーバの<a href="index_WikiName.html" title="WikiName (1859d)">WikiName</a>へのハイパーリンクが生成されます。</p>
+<pre> [[サーバ名:WikiName]]
+ [[pukiwiki:FrontPage]]</pre>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_2">サーバーリストへの追加  <a class="anchor_super" id="a71a4d66" href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html#a71a4d66" title="a71a4d66">&dagger;</a></h3>
+<p><a href="index_InterWikiName.html" title="InterWikiName (1359d)">InterWikiName</a> のページに以下のようにサーバの定義をすることで
+サーバーリストに追加することができます。</p>
+<pre> [URL サーバ名] タイプ
+ [http://pukiwiki.org/index.php pukiwiki] utf8</pre>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_3"><a href="index_WikiName.html" title="WikiName (1859d)">WikiName</a>の挿入位置  <a class="anchor_super" id="q7ad1d6d" href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html#q7ad1d6d" title="q7ad1d6d">&dagger;</a></h3>
+<p>要求しようとするURLへの<a href="index_WikiName.html" title="WikiName (1859d)">WikiName</a>の挿入位置を $1 で指定することができます。省略するとお尻にくっつきます。</p>
+<pre> -[http://pukiwiki.org/index.php?cmd=backup&page=$1&age=1 pukiwiki] utf8</pre>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_4">文字コード変換タイプ  <a class="anchor_super" id="k34801d3" href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html#k34801d3" title="k34801d3">&dagger;</a></h3>
+<p><span class="noexists">PukiWiki<a href="index_cmd_edit_page_PukiWiki_refer_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">?</a></span>ページ以外にも飛ばせます。日本語をURLに含む可能性もあるのでその場合のエンコーディングの指定をタイプとして指定できます。</p>
+<pre> -[http://pukiwiki.org/index.php?cmd=read&page=$1 sng] utf8</pre>
+<dl class="list1" style="padding-left:16px;margin-left:16px"><dt>std 省略時</dt>
+<dd>内部文字エンコーディング(標準はSJIS)のままURLエンコードします。</dd>
+<dt>raw asis</dt>
+<dd>URLエンコードしないでそのまま使用。</dd>
+<dt>sjis</dt>
+<dd>文字列をSJISに変換し、URLエンコードします。(mb_stringのSJISへのエイリアスです)</dd>
+<dt>euc</dt>
+<dd>文字列を日本語EUCに変換し、URLエンコードします。(mb_stringのEUC-JPへのエイリアスです)</dd>
+<dt>utf8</dt>
+<dd>文字列をUTF-8に変換し、URLエンコードします。(mb_stringのUTF-8へのエイリアスです)</dd>
+<dt>yw</dt>
+<dd><span class="noexists">YukiWiki<a href="index_cmd_edit_page_YukiWiki_refer_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">?</a></span>系へのエンコーディング。</dd>
+<dt>moin</dt>
+<dd><span class="noexists">MoinMoin<a href="index_cmd_edit_page_MoinMoin_refer_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">?</a></span>用に変換します。</dd></dl>
+<p>その他、PHP4のmb_stringでサポートされている以下のエンコード文字が使用できます。</p>
+<p><strong>UCS-4, UCS-4BE, UCS-4LE, UCS-2, UCS-2BE, UCS-2LE, UTF-32, UTF-32BE, UTF-32LE, UCS-2LE, UTF-16, UTF-16BE, UTF-16LE, UTF-8, UTF-7, ASCII, EUC-JP, SJIS, eucJP-win, SJIS-win, ISO-2022-JP, JIS, ISO-8859-1, ISO-8859-2, ISO-8859-3, ISO-8859-4, ISO-8859-5, ISO-8859-6, ISO-8859-7, ISO-8859-8, ISO-8859-9, ISO-8859-10, ISO-8859-13, ISO-8859-14, ISO-8859-15, byte2be, byte2le, byte4be, byte4le, BASE64, 7bit, 8bit, UTF7-IMAP</strong></p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_5"><span class="noexists">YukiWiki<a href="index_cmd_edit_page_YukiWiki_refer_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html">?</a></span>系へのエンコーディング  <a class="anchor_super" id="zeb5d7f0" href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html#zeb5d7f0" title="zeb5d7f0">&dagger;</a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="index_WikiName.html" title="WikiName (1859d)">WikiName</a>のものへはそのままURLエンコード。</li>
+<li><a href="index_BracketName.html" title="BracketName (1359d)">BracketName</a>のものは[[ ]]を付加してURLエンコード。</li></ul>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="pagead/show_ads.js">
+</script>
+</div>
+  </td>
+ </tr>
+</table>
+<hr class="full_hr"/><div id="toolbar">
+ <a href="index_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html"><img src="image/reload.png" width="20" height="20" alt="Reload" title="Reload"/></a>
+ &nbsp;
+ <a href="index_plugin_newpage.html"><img src="image/new.png" width="20" height="20" alt="New" title="New"/></a>
+ <a href="index_cmd_edit_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html"><img src="image/edit.png" width="20" height="20" alt="Edit" title="Edit"/></a>
+ <a href="index_cmd_freeze_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html"><img src="image/freeze.png" width="20" height="20" alt="Freeze" title="Freeze"/></a>
+ <a href="index_cmd_diff_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html"><img src="image/diff.png" width="20" height="20" alt="Diff" title="Diff"/></a>
+ <a href="index_plugin_attach_pcmd_upload_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html"><img src="image/file.png" width="20" height="20" alt="Upload" title="Upload"/></a>
+ <a href="index_plugin_template_refer_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html"><img src="image/copy.png" width="20" height="20" alt="Copy" title="Copy"/></a>
+ <a href="/"><img src="image/rename.png" width="20" height="20" alt="Rename" title="Rename"/></a>
+ &nbsp;
+ <a href="index_Samuraism.html"><img src="image/top.png" width="20" height="20" alt="Front page" title="Front page"/></a>
+ <a href="index_cmd_list.html"><img src="image/list.png" width="20" height="20" alt="List of pages" title="List of pages"/></a>
+ <a href="index_cmd_search.html"><img src="image/search.png" width="20" height="20" alt="Search" title="Search"/></a>
+ <a href="index_RecentChanges.html"><img src="image/recentchanges.png" width="20" height="20" alt="Recent changes" title="Recent changes"/></a>
+ <a href="index_cmd_backup_page_InterWiki_A5_C6_A5_AF_A5_CB_A5_AB_A5_EB.html"><img src="image/backup.png" width="20" height="20" alt="Backup" title="Backup"/></a>
+ &nbsp;
+ <a href="index__A5_D8_A5_EB_A5_D7.html"><img src="image/help.png" width="20" height="20" alt="Help" title="Help"/></a>
+ &nbsp;
+ <a href="index_cmd_rss10.html"><img src="image/rss.png" width="36" height="14" alt="RSS of recent changes" title="RSS of recent changes"/></a>
+</div>
+<div id="lastmodified">
+ Last-modified: Mon, 03 Nov 2003 00:12:27 JST  (1359d)</div>
+<div id="related">
+ Link: <a href="index_InterWikiName.html">InterWikiName</a>(1359d)
+ <a href="index_BracketName.html">BracketName</a>(1359d)
+ <a href="index_WikiName.html">WikiName</a>(1859d)</div>
+<div id="footer">
+ Modified by <a href="/">yusuke</a>
+ <br/><br/>
+<strong>"PukiWiki" 1.4.3</strong> Copyright &copy; 2001,2002,2003
+<a href="http://pukiwiki.org/">PukiWiki Developers Team</a>.
+License is <a href="http://www.gnu.org/">GNU/GPL</a>.<br/>
+Based on "PukiWiki" 1.3 by <a href="http://factage.com/sng/">sng</a>
+ <br/>
+ Powered by PHP 4.3.9 <br/><br/>
+ HTML convert time to 1.666 sec.
+</div>
+<script src="urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script></body>
+</html>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム - 映画 category</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaとアーチェリーと</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/01/26/1169819731000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/10/06/1160060852670.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/07/19/1153312584000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/04/03/1144075347257.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/25/1143252574140.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/13/1142224235399.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2005/10/27/1130425094000.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/01/26/1169819731000.html">
+    <title>DOA - Dead or Alive</title>
+    <link>http://yusuke.homeip.net/diary/2007/01/26/1169819731000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;を観た。&lt;br/&gt;・デッド オア アライブ 公式サイト&lt;br/&gt;&lt;a href=&#034;http://www.doa-movie.jp/&#034;&gt;http://www.doa-movie.jp/&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://www.tecmo.co.jp/product/doa/&#034;&gt;TECMO の同名格闘ゲーム&lt;/a&gt;をベースにしたハリウッド映画。2月10日公開。&lt;br/&gt;申し込んだのすら忘れていたんですが、試写会のチケットが届いたので観に行きました。&lt;br/&gt;&lt;br/&gt;ケイン・コスギのハリウッドデビュー作に当たるみたいです。&lt;br/&gt;&lt;a href=&#034;http://imdb.com/title/tt0398913/&#034;&gt;IMDB&lt;/a&gt;では主要キャストの中で、一番最後に記載されているのでチョイ役かと思っていました。&lt;br/&gt;が、しかし、冒頭で殺されてしまうようなこともなくしっかりストーリーに絡んでいました。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://imdb.com/title/tt0401792/&#034;&gt;Sin CITY&lt;/a&gt;の&lt;a href=&#034;http://imdb.com/name/nm1226817/&#034;&gt;デヴォン青木&lt;/a&gt;というヒロインがなかなかカワイイです。&lt;br/&gt;現代に生き延びる忍びの一族の末裔？みたいな設定だけどもケイン・コスギと共に平気で英語をペラペラしゃべっていて一言も日本語を発しません。&lt;br/&gt;&lt;br/&gt;史実ベースとゲームベースということで大きな違いがありますが、ジャンヌ・ダルクを観るフランス人もこんな気持でしょうか？&lt;br/&gt;#あ、フランス人は字幕じゃなくて吹き替えで観る？&lt;br/&gt;&lt;br/&gt;内容は結構単純明快。DOA という選ばれた者だけが出場できる格闘技の世界大会に出場者それぞれの目的を持って優勝を目指すけど、実は陰謀があって・・みたいなストーリー。&lt;br/&gt;&lt;br/&gt;ゲームは全然やったことがなくて、思い入れも予備知識も全くない状態で観ましたが、良い意味でメチャクチャなアクションやハデなシーンがあって楽しませてくれました。&lt;br/&gt;きっとゲーム内のストーリー、ステージとシンクロする部分があってファンをニヤリとさせる演出があるんだろうけど、そういうのが分からなくても単純に楽しめます。&lt;br/&gt;&lt;br/&gt;「&#034;チャーリーズ・エンジェル&#034;よりセクシーで、&#034;Hero&#034;より過酷な戦い」というキャッチはなかなか言い得ていて、それぞれの美味しいところを足して 3.1415926535 で割った感じです。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/10/06/1160060852670.html">
+    <title>haven</title>
+    <link>http://yusuke.homeip.net/diary/2006/10/06/1160060852670.html</link>
+    
+      
+        <description>
+          &lt;p&gt;を観た。&lt;br/&gt;&lt;a href=&#034;http://www.haven.jp/&#034;&gt;http://www.haven.jp/&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;脱税で摘発される寸前に手持ちの資金をもって娘とケイマン諸島へ来たらｺﾞﾆｮｺﾞﾆｮという話。&lt;br/&gt;最近、同僚と昼飯時に「最近の小説では悪党はスイス銀行ではなく税制的に優遇されるケイマン諸島とかでマネーロンダリングするんだ」などという話を偶然にも聞いたところだったのでちょっとワクワク。&lt;br/&gt;２つのストーリーが別々に時間も前後して展開していき、途中から繋がっていくタランティーノよろしくな編集。&lt;br/&gt;とある出来事の腹いせに硫酸（？）をかけられて顔がただれてしまい、人前に顔を出さなくなって思い悩むのがオーランド・ブルームなのですが、それほどひどくただれておらず、ハンサム君はハンサムのままスクリーンに映してもらえるんだなーと淡々と観ました。&lt;br/&gt;実際は顔がただれたことよりも恋人の事で思い悩んでいるので、トム・クルーズ版のバニラ・スカイみたいに「おまえ、その程度で落ち込むなよ」みたいな反感は覚えませんが。&lt;br/&gt;&lt;br/&gt;ちなみに、heaven じゃなくて haven なの？と思って&lt;a href=&#034;http://www2.alc.co.jp/ejr/index.php?word_in=haven&amp;word_in2=%82%A0%82%A2%82%A4%82%A6%82%A8&amp;word_in3=PVawEWi72JXCKoa0Je&#034;&gt;調べてみたら&lt;/a&gt;天国ではなくて避難場所という意味でした。&lt;br/&gt;・&lt;a href=&#034;http://ja.wikipedia.org/wiki/タックス・ヘイヴン&#034;&gt;Wikipedia - タックス・ヘイヴン&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/07/19/1153312584000.html">
+    <title>M:i:III</title>
+    <link>http://yusuke.homeip.net/diary/2006/07/19/1153312584000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;を観た。&lt;br/&gt;&lt;a href=&#034;http://www.mi-3.jp/&#034;&gt;http://www.mi-3.jp/&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;2のバイクで正面衝突するような意味不明なシーンはないけどやはり1にはかなわない感じ。&lt;br/&gt;&lt;br/&gt;ステディカムやスローモーションを駆使してとことん洗練されたカメラワークばかりだった2とはうって変わって、臨場感を出すためか手持ちカメラで激しくぶれるシーンが多かった。ちょっとくたびれる。&lt;br/&gt;終盤イーサンが川べりをダッシュするのを反対岸から追いかけて撮っているシーンは圧巻！&lt;br/&gt;一体どれくらいレールを敷いたのか・・・。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/04/03/1144075347257.html">
+    <title>モンスターズ・インク</title>
+    <link>http://yusuke.homeip.net/diary/2006/04/03/1144075347257.html</link>
+    
+      
+        <description>
+          &lt;p&gt;を見た。&lt;br/&gt;・&lt;a href=&#034;http://posren.livedoor.com/a/yusukeyamamoto/detail-2627.html&#034;&gt;モンスターズ・インク&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;今更な感じもするけれども、帰りの飛行機で妻のオススメにより鑑賞。&lt;br/&gt;心温まるストーリーとちょっとしたどんでん返しで最後まで飽きの来ない展開でした。&lt;br/&gt;さすがディズニーのアニメははずれがない。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/25/1143252574140.html">
+    <title>ぽすれんの運命や如何に？</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/25/1143252574140.html</link>
+    
+      
+        <description>
+          &lt;p&gt;&lt;br/&gt;オンラインDVDレンタルは Web サイトで DVD をポチっと選ぶだけで DVD が郵便かメール便で送られてきて、ポストに入れて返すっていうもの。&lt;br/&gt;延滞料金かからなかったり、いちいちレンタルビデオ屋に行かなくて良かったり、貸し出し中の DVD があっても保留リストにため込んでおけば後で発送してくれたりと、リアルビデオ屋を超える使い勝手が大変魅力的です。&lt;br/&gt;&lt;br/&gt;日本には幾つか業者があって、どこも２週間くらい無料お試し期間があるので一通り試してみました。&lt;br/&gt;そこそこ品揃えが良い、発送/返却の対応が素早い、DVD の検索がしやすい、携帯電話に対応してる、ということで最終的に落ち着いたのが ぽすれん。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=77438.10000009&amp;type=4&amp;subid=0&#034;&gt;&lt;IMG alt=&#034;バナー 10000009&#034; border=&#034;0&#034; src=&#034;http://posren.livedoor.com/img/bunner/12060/12060_blue.gif&#034;&gt;&lt;/a&gt;&lt;IMG border=&#034;0&#034; width=&#034;1&#034; height=&#034;1&#034; src=&#034;http://ad.linksynergy.com/fs-bin/show?id=hxCejh1j00I&amp;bids=77438.10000009&amp;type=4&amp;subid=0&#034;&gt;&lt;br/&gt;&lt;br/&gt;忙しいとか出張だとかで利用しない月があれば一時的に休会しておくことで月会費が発生しなくなるのも魅力的。&lt;br/&gt;しかも2月20日から年会費が撤廃されてるらしい！&lt;br/&gt;・お客様の声に応え、年会費永年無料へ！&lt;br/&gt;&lt;a href=&#034;http://posren.livedoor.com/info?id=91&#034;&gt;http://posren.livedoor.com/info?id=91&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;さて、４月になればまた東京に帰るので復帰の手続きをしよう、と思ったけどそういえば ぽすれん は今話題のライブドア傘下の企業でした。&lt;br/&gt;大丈夫かな？と思い訪問してみたら大丈夫です宣言が。&lt;br/&gt;・ぽすれんをご利用の皆様へ&lt;br/&gt;&lt;a href=&#034;http://posren.livedoor.com/static/corner/info_20060302.html&#034;&gt;http://posren.livedoor.com/static/corner/info_20060302.html&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;なんだか唐突に ぽすれん の社長日記の宣伝までしてます。&lt;br/&gt;&gt;尚、本日「ぽすれん日記」を立ち上げましたので、今後はこちらで最新の情報を&lt;br/&gt;&gt;お伝えして参ります。&lt;br/&gt;社長からもがんばります宣言が。&lt;br/&gt;・ぽすれんからのお知らせです&lt;br/&gt;&lt;a href=&#034;http://blog.livedoor.jp/posren13/archives/50107883.html&#034;&gt;http://blog.livedoor.jp/posren13/archives/50107883.html&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;ひとまず大丈夫宣言を信じることにして４月から休会解除することにします。&lt;br/&gt;がんばれ ぽすれん！逆境をチャンスに変えるんだ！&lt;br/&gt;いっぱい映画みるぞ！&lt;br/&gt;&lt;br/&gt;というわけで ぽすれん、とてもオススメです。&lt;br/&gt;アメリカンな感じに言えば Satisfaction Guaranteed, absolutely risk free!&lt;br/&gt;興味がありましたらどうぞ↓。２週間無料で試せます。&lt;br/&gt;&lt;a href=&#034;http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=77438.10000036&amp;type=4&amp;subid=0&#034;&gt;&lt;IMG alt=&#034;&#034; border=&#034;0&#034; src=&#034;http://posren.livedoor.com/img/bunner/37853/37853_navy.jpg&#034;&gt;&lt;/a&gt;&lt;IMG border=&#034;0&#034; width=&#034;1&#034; height=&#034;1&#034; src=&#034;http://ad.linksynergy.com/fs-bin/show?id=hxCejh1j00I&amp;bids=77438.10000036&amp;type=4&amp;subid=0&#034;&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/13/1142224235399.html">
+    <title>Ultraviolet</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/13/1142224235399.html</link>
+    
+      
+        <description>
+          &lt;p&gt;&lt;br/&gt;を見た。&lt;br/&gt;&lt;a href=&#034;http://www.imdb.com/title/tt0370032/&#034;&gt;http://www.imdb.com/title/tt0370032/&lt;/a&gt;&lt;br/&gt;ミラ・ジョヴォビッチ主演の SF 映画。アメコミが原作らしい。&lt;br/&gt;&lt;br/&gt;重力を自由に操るデバイスや、４次元ポケット的なもの（dimension compressionとかいってた)とか出てきて楽しい映像が続く。&lt;br/&gt;内容はあんまりなく、マトリックス・スターウォーズ・甲殻機動隊・AKIRAのおいしいシーンをつなぎ合わせた感じ。&lt;br/&gt;撮ってみたい映像が先行して脚本を書いていったんじゃないかと思う。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2005/10/27/1130425094000.html">
+    <title>シザー ハンズ</title>
+    <link>http://yusuke.homeip.net/diary/2005/10/27/1130425094000.html</link>
+    
+      
+        <description>
+          を観た。&lt;br /&gt;&lt;a href=&#034;http://www.amazon.co.jp/exec/obidos/ASIN/B000657OJE/samuraism-22/249-7259650-1413158&#034;&gt;&lt;img src=&#034;http://images-jp.amazon.com/images/P/B000657OJE.09._OU09_PE0_SCMZZZZZZZ_.jpg&#034;/&gt;&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;かれこれ３，４回ほど観たけれどもチャーリーとチョコーレート工場を観てもう一度観たくなった！&lt;br /&gt;あれれ、こんなに悲しい話だったっけ？もっと心温まる流れだったような・・・。&lt;br /&gt;「ちょっと早めのクリスマスプレゼント」のシーンでは号泣。&lt;br /&gt;&lt;br /&gt;ティム・バートンの想像力はすごいなー。頭の中を覗いてみたい。&lt;br /&gt;&lt;br /&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+
+</rdf:RDF>

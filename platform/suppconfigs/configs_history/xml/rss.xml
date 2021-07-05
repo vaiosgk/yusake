@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN"
+            "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+
+<rss version="0.91">
+
+<channel>
+<title>Oracle | BEA Products Supported Configurations Documentation: Revision History</title>
+<link>http://e-docs.bea.com/platform/suppconfigs/configs_history/xml/rss.xml</link>
+<description>Notification of changes to the Oracle | BEA Products Supported Configurations documentation.
+</description>
+<language>en-us</language>
+<copyright>Oracle 2008</copyright>
+<pubDate>July 2008</pubDate>
+
+<item>
+<title>Changes as of 9/3/2008</title>
+<link>http://e-docs.bea.com/platform/suppconfigs/configs_history/history_2008.html</link>
+<description>Added support for Oracle Weblogic Server 10g R3. Check it out!</description>
+</item>
+
+</channel>
+</rss>

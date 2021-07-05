@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>FishEye 1.6.3: rdiff</title>
+        <link rel="SHORTCUT ICON" href="http://yusuke.homeip.net/fisheye/static/k9s70z/images/favicon.ico"/>
+<link rel="stylesheet" href="../../fisheye/static/k9s70z/css/headerfooter.css" type="text/css"/>
+<link rel="stylesheet" href="../../fisheye/static/k9s70z/main.css" type="text/css"/>
+<link rel="stylesheet" href="../../fisheye/static/k9s70z/diff.css" type="text/css"/>
+<link rel="stylesheet" href="../../fisheye/uar/browser.css" type="text/css"/>
+<link rel="stylesheet" href="../../fisheye/static/k9s70z/custom.css" type="text/css"/>
+<link rel="stylesheet" href="../../fisheye/static/k9s70z/synhi.css" type="text/css"/>
+<script src="../../fisheye/static/k9s70z/global.js" type="text/javascript" language="Javascript1.2" charset="utf-8"></script>
+<script type="text/javascript" language="Javascript1.2">
+var fishEyePageContext = '/fisheye';
+var fishEyeSTATICDIR = 'static/k9s70z';
+</script>
+</head>
+<body>
+<div class="cmdlineHelpPane">
+  <h1>rdiff</h1>
+  <p>
+    This command produced diffs of files, similar to CVS's <code>rdiff</code> command.
+    It is particularly useful for producing patchsets.
+  </p>
+  <h2>Usage</h2>
+  <p>
+    This command can be executed by submitting a correctly formatted url. If successful,
+    it returns a text/plain diff. With no parameters given, this help is returned.
+    This command has several formats:
+  </p>
+  <p>
+    Diff of changeset <i>csid</i>:
+  </p>
+  <pre>http://yusuke.homeip.net/fisheye/rdiff/<i>repname</i>/<i>path</i>?csid=<i>csid</i>&<i>diffopts</i></pre>
+  <p>
+    Diff between two tags/revisions <i>A</i> and <i>B</i>:
+  </p>
+  <pre>http://yusuke.homeip.net/fisheye/rdiff/<i>repname</i>/<i>path</i>?r1=<i>A</i>&r2=<i>B</i>&<i>diffopts</i></pre>
+  <h3>Options</h3>
+  <dl>
+    <dt>repname</dt>
+    <dd>
+      Specifies the repository to access. Required.
+    </dd>
+    <dt>path</dt>
+    <dd>
+      (Optional) Returned files are constrained to be below this directory.
+      If <i>path</i> is a file, then only the diff for that file is shown.
+    </dd>
+  </dl>
+  <p>The <i>diffopts</i> control how the diff is produced, and are optional. Defaults are specified below.</p>
+  <dl>
+    <dt>R</dt>
+    <dd>Process directories under <i>path</i> recursively (default).</dd>
+    <dt>l</dt>
+    <dd>Do not recurse into directories under <i>path</i>.</dd>
+    <dt>u</dt>
+    <dt>u=<i>NUM</i></dt>
+    <dd>Output <i>NUM</i> (default is 3) lines of unified context. This is the only output format supported.</dd>
+    <dt>k=<i>kopt</i></dt>
+    <dd>Specify keyword expansion mode.</dd>
+    <dt>N</dt>
+    <dd>Treat absent files as empty.</dd>
+    <dt>w</dt>
+    <dd>Ignore all white space.</dd>
+    <dt>b</dt>
+    <dd>Ignore changes in the amount of white space.</dd>
+    <dt>B</dt>
+    <dd>Ignore changes whose lines are all blank.</dd>
+  </dl>
+  <h2>Comments</h2>
+  <p>
+    For single-valued parameters, you may specify the name of the option as its value. For example
+    <code>?R</code> and <code>?R=R</code> are equivalent.
+  </p>
+</div>
+</body>
+</html>

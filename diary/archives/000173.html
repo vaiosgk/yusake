@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: そば1.1リリース</title>
+<link rel="stylesheet" href="http://yusuke.homeip.net/diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/000172.html" title="ラン"/>
+<link rel="next" href="../../diary/archives/000174.html" title="そば改善要望"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000173.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/173"
+    dc:title="そば1.1リリース"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000173.html"
+    dc:subject="Java"
+    dc:description="いくつかのフィードバックと、未実装だったアイディアの一部を実装。 とりあえず実用..."
+    dc:creator="yusuke"
+    dc:date="2005-01-30T21:37:45+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/000172.html">&laquo; ラン</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/000174.html">そば改善要望 &raquo;</a>
+</p>
+<h2>2005&#24180;01&#26376;30&#26085;</h2>
+<h3>そば1.1リリース</h3>
+<p>いくつかのフィードバックと、未実装だったアイディアの一部を実装。<br/>
+とりあえず実用度が増したと思う。<br/>
+-&gt;<a href="../../soba.html">そば1.1</a></p>
+<p>追加した内容:<br/>
+・Sobanizeブックマークレットの追加<br/>
+サイトをブラウズ中任意のページをSobanize!可能。<br/>
+・URL入力エリアの追加 <br/>
+好きなページをそばから開ける。<br/>
+・favicon.ico-アイコンの追加<br/>
+「蕎」のアイコン。<br/>
+・保存時に4kbを超えていると警告が出るようにした<br/>
+トリミングされて大事なところが消えてしまった！ってことのないように。<br/>
+・ダウンロードして好きなサイトへ展開可能に by kazさん<br/>
+ファイルを置くだけで yusuke.homeip.net 以外でも使えます。簡単。<br/>
+・T字型フレームに変更  by ffさん<br/>
+まだ UI のチューニングは必要そうだけど。<br/>
+・エキスとエリアの自動フィット by danny さん<br/>
+編集エリアを広くしたり、狭くしたり。自由自在。</p>
+<p>次回見送り(優先順):<br/>
+・タイプ毎にリフレッシュの最適化<br/>
+素早くタイプしているときは１タイプ毎にリフレッシュする必要ないので、１〜２秒タイプが収まったときだけリフレッシュすれば良いですね。Firefoxでも実用的になるでしょう。<br/>
+あと、カーソルの移動でもリフレッシュしているので変更がなければリフレッシュは行わないようにする必要もあり。<br/>
+・CSSの編集機能 by 橘子さん<br/>
+早く欲しいですね。とりあえず技術的なめどは立ちました。<br/>
+WikiやBlogが普及しているので今時htmlよりもCSS編集のほうが重要だし。<br/>
+・4kb以上の保存機能（サーバへFTPしなくても良い？） by 橘子さん<br/>
+サーバに保存するとなるとセキュリティ面を考えないといけない。<br/>
+・テキストエリアの検索、置換など簡単なエディタサポート機能 by Joshさん<br/>
+SafariだとUndoもできないので現状はちと不便。<br/>
+・サーバ保存＆自動リフレッシュ<br/>
+編集過程をサーバ側で保存しておき、編集している以外のブラウザで編集中のhtmlを確認できる。<br/>
+あと、５秒とか10秒置きに自動的にリフレッシュするようmetaタグを自動的に挿入することでいちいちリロードせずに確認できる機能。<br/>
+ブラウザ切り替え-&gt;リロード-&gt;確認、って手順がいらなくなるのでブラウザ毎のチューニングを効率的に行える。<br/>
+・Opera7.x 対応。<br/>
+XMLHttpRequestがないので・・・うーん。</p>
+<div id="a000173more"><div id="more">
+<p>IE(Win)でエディタペインの表示が崩れてたので IE に合わせてスタイルシートを調整して 1.11 とした。<br/>
+機能に変わりはなし。</p>
+<p>--editor.html<br/>
+.prefs {<br/>
+  height: 100%;<br/>
+}<br/>
+を削除。<br/>
+textarea の height を 90% から 86% へ。<br/>
+--top.html<br/>
+body の  background を削除。<br/>
+たぶん、そもそもが正しい書き方じゃないんだろうけど IE では // でコメントアウトは効かないみたい。<br/>
+/*コメント */って形式が正しいんでしょうね。</p>
+<p>--index.html<br/>
+soba.html の スクロールバーを非表示に <br/>
+  <frame src="/" name="soba" scrolling="no"><br/>
+--soba.html<br/>
+みっちりツールを表示させるように body のスタイルのマージンを設定。 <br/>
+  margin-top: 0.5em;<br/>
+  margin-bottom: 0.0em;<br/>
+  margin-left:0.5em;<br/>
+  margin-right: 0.0em;</p>
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;01&#26376;30&#26085; 21:37</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/173</p>
+<p>このリストは、次のエントリーを参照しています:  <a href="../../diary/archives/000173.html">そば1.1リリース</a>:</p>
+<p id="p10">
+&raquo; <a href="http://blog.livedoor.jp/a_sleepy_boy/archives/13383628.html">Rintaro[call-you]</a> from ε-blog<br/>
+そばが早くも1,1に。
+しかもわざわざトラックバックで連絡頂いて。
+それで見てみた。
+インターフェイスが変わって、だいぶ親切になってます。
+なるほど... <a href="http://blog.livedoor.jp/a_sleepy_boy/archives/13383628.html">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;01&#26376;31&#26085; 01:54</p>
+<p id="p11">
+&raquo; <a href="http://www.hello-world.jp/nikki/archives/2005/01/soba11.php">soba1.1</a> from Hello-World.jp<br/>
+そば1.1置いてみました 改変が認められていたのでちょこっとイジってあります。テキトーですみませんが…。 cssについてはインラインで書くとかすれば問題無いです... <a href="http://www.hello-world.jp/nikki/archives/2005/01/soba11.php">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;01&#26376;31&#26085; 03:40</p>
+<p id="p12">
+&raquo; <a href="http://www.hello-world.jp/nikki/archives/2005/01/soba11.php">soba1.1</a> from Hello-World.jp<br/>
+そば1.1置いてみました 改変が認められていたのでちょこっとイジってあります。テキトーですみませんが…。... <a href="http://www.hello-world.jp/nikki/archives/2005/01/soba11.php">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;01&#26376;31&#26085; 03:53</p>
+<p id="p61">
+&raquo; <a href="http://harumaco.qp.land.to/diary/?e=3">HTMLエディタ：そば1.1</a> from 日記 -マイルド<br/>
+ちょっと風変わりなHTMLエディタをWeb上で発見しました。 <a href="http://harumaco.qp.land.to/diary/?e=3">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;05&#26376;31&#26085; 13:14</p>
+<p id="p62">
+&raquo; <a href="http://harumaco.qp.land.to/diary/?e=3">HTMLエディタ：そば1.1</a> from 日記 -マイルド<br/>
+ちょっと風変わりなHTMLエディタをWeb上で発見しました。 <a href="http://harumaco.qp.land.to/diary/?e=3">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;05&#26376;31&#26085; 13:15</p>
+<p id="p72">
+&raquo; <a href="http://titalog.gorise.net/?e=111">HTMLエディタ「そば」</a> from ちたろぐ<br/>
+　こういう機能のエディタなら欲しいなと思っていた矢先に、偶然巡り逢ったエディタ「そば1.1」。詳細は開発・配布元の侍ズム-blogさんにてどうぞ。 <a href="http://titalog.gorise.net/?e=111">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;08&#26376;20&#26085; 13:15</p>
+<h2 id="comments">コメント</h2>
+<div id="c928">
+<p>コメントありがとうございました。<br/>
+soba、期待しております。</p>
+</div>
+<p class="posted">投稿者 hiro  : 2005&#24180;01&#26376;31&#26085; 03:42</p>
+<div id="c929">
+<p>いえいえ。フィードバックや感想は創作意欲の糧になりますので今後ともよろしくお願い致します。</p>
+</div>
+<p class="posted">投稿者 裕介  : 2005&#24180;01&#26376;31&#26085; 15:22</p>
+<div id="c1000">
+<p>オープン・アレキサンドリア管理人のMOONGIFTと申します。当サイトはオープンソース（またはそれに類する）の優れたソフトウェアを毎日紹介しています。</p>
+<p>事後になってしまい申し訳ありませんが、本日当サイトにて「そば」を紹介させていただきました。コンセプトが面白く、可能性を感じさせるソフトウェアだと思いました。宜しければご一読下さい。間違った点などがありましたらご指摘下さい。修正いたします。</p>
+</div>
+<p class="posted">投稿者 <a target="_blank" title="http://www.openalexandria.com/item_597.html" href="http://yusuke.homeip.net/diary/mt/kakikomi.cgi?__mode=red;id=1000">moongift</a>  : 2005&#24180;05&#26376;20&#26085; 19:28</p>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

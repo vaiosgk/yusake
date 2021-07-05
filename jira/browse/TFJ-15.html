@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>[#TFJ-15] ability to pass since_id to getDirectMessges() - JIRA </title>
+    <meta content="issuesummary" name="decorator"/>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/images/icons/favicon.png">
+<link rel="stylesheet" type="text/css" media="print" href="../../jira/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/235/1/0/_/styles/global.css"/>
+    <script language="JavaScript" type="text/javascript" src="../../jira/includes/js/combined-javascript.js"></script>
+        <script type="text/javascript" src="../../jira/s/235/1/_/includes/js/calendar/calendar.js"></script>
+        <script type="text/javascript" src="../../jira/s/235/1/_/includes/js/calendar/lang/calendar-en.js"></script>
+        <script type="text/javascript" src="../../jira/s/235/1/_/includes/js/calendar/calendar-setup.js"></script>
+        <script type="text/javascript">
+            // Hack to avoid bug in jscalendar - JRA-7713
+            if (!Calendar._TT["WEEKEND"]) { Calendar._TT["WEEKEND"] = "0,6";}
+            if (!Calendar._TT["DAY_FIRST"]) { Calendar._TT["DAY_FIRST"] = "Display %s first";}
+        </script>
+<script type="text/javascript" src="../../jira/s/235/1/1.0/_/download/resources/jira.webresources_yui/yahoo-min.js"></script>
+<script type="text/javascript" src="../../jira/s/235/1/1.0/_/download/resources/jira.webresources_yui/dom-min.js"></script>
+<script type="text/javascript" src="../../jira/s/235/1/1.0/_/download/resources/jira.webresources_yui/event-min.js"></script>
+<script type="text/javascript" src="../../jira/s/235/1/1.0/_/download/resources/jira.webresources_yui/animation-min.js"></script>
+<script type="text/javascript" src="../../jira/s/235/1/1.0/_/download/resources/jira.webresources_issueoperations/issueoperations.js"></script>
+</head>
+<body bgcolor="#f0f0f0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#003366" vlink="#003366" alink="#660000">
+<script type="text/javascript" src="../../jira/s/235/1/_/includes/js/quicksearch.js"></script>
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+      <td bgcolor="#003366">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+            <td valign="top" width="5%" nowrap><a href="../../jira/secure/Dashboard.html"></a></td>
+            <td valign="bottom" width="65%" nowrap>&nbsp;</td>
+            <td valign="bottom" align="right" width="30%" nowrap>
+<font class="toptext" size="1">
+                        <a href="../../jira/secure/popups/recenthistory.html" title="Quick link to recently viewed issues" onclick="window.open('../../jira/secure/popups/recenthistory.html','user_history', 'width=620, height=285, resizable'); return false;">History</a>
+                 |                         <a rel="nofollow" href="/">Log In</a>
+&nbsp; &nbsp;
+                        <a rel="nofollow" href="/"></a>
+                    <a class="helpLink" href="http://www.atlassian.com/software/jira/docs/v3.9/index.html?clicked=jirahelp" target="_jirahelp">
+        </a>
+&nbsp;
+</font>
+            </td>
+        </tr></table>
+      </td>
+  </tr>
+</table>
+<table class="menu" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td bgcolor="#3c78b5">
+    <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="5"></td>
+                        <td nowrap onclick="window.document.location='/jira/secure/Dashboard.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../jira/secure/Dashboard.html" id="home_link" title="A configurable overview of JIRA" accesskey="h"><u>H</u>OME</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/BrowseProject.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../jira/secure/BrowseProject.html" id="browse_link" title="Browse currently active project 'Twitter4J'" accesskey="b"><u>B</u>ROWSE PROJECT</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../jira/secure/IssueNavigator.html" id="find_link" title="Find issues in the projects you have permissions to view" accesskey="f"><u>F</u>IND ISSUES</a> &nbsp;&nbsp;
+    </td>
+        <td align="right" class="navItem" valign="middle" bgcolor="#3c78b5" width="100%">
+            <form name="quicksearch" action="../../jira/secure/QuickSearch.html" method="post" style="padding: 0; margin: 0;">
+                <span class="navItem" onmouseover="showToolTip()" onmouseout="hideToolTip()">&nbsp; &nbsp;
+                    <u>Q</u>UICK SEARCH:
+                </span>
+                <span class="navItem">
+                    <input class="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." type="text" size="25" name="searchString" accesskey="q" id="quickSearchInput" valign="absmiddle">&nbsp;
+                </span>
+            </form>
+        </td>
+        <td width="5"></td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+<div class="alertHeader">
+<script src="../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<div onmouseover="recordInTip()" onmouseout="recordOutTip()" id="quicksearchhelp" class="informationBox" style="display: none; text-align: center; width: 20em; position: absolute; top: 55px; right: 10px; padding: 0.5em;">
+    Learn more about <a href="http://www.atlassian.com/software/jira/docs/v3.9/quicksearch.html?clicked=jirahelp" target="_jirahelp">Quick Search</a>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td width="200" bgcolor="#f0f0f0" valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" width="200">
+<tr><td>
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+    <tr><td bgcolor="dddddd">
+        <span style="float:left"><b>Issue Details</b></span>
+        <span class="small" style="float:right">
+                                        (<a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-xml/TFJ-15/TFJ-15.xml">XML</a> | <a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-word/TFJ-15/TFJ-15.doc">Word</a> | <a rel="nofollow" class="small" href="../../jira/si/jira.issueviews_issue-html/TFJ-15/TFJ-15.html">Printable</a>)
+                    </span>
+    </td></tr>
+    </table>
+                        <br>
+        <table id="issuedetails" cellpadding="3" cellspacing="0" border="0">
+            <tr>
+                <td valign="top"><b>Key:</b></td>
+                <td valign="top">
+                    <b><a id="issue_key_TFJ-15" href="../../jira/browse/TFJ-15.html">TFJ-15</a></b>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Type:</b></td>
+                <td valign="top">
+             New Feature
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Status:</b></td>
+                <td valign="top">
+             Closed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Resolution:</b></td>
+                <td valign="top">
+                                             Fixed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Priority:</b></td>
+                <td valign="top">
+             Major
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Assignee:</b></td>
+                <td valign="top">
+                    <a href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Reporter:</b></td>
+                <td valign="top">
+                    <a href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Votes:</b></td>
+                <td valign="top">
+                                            0
+                                                        </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Watchers:</b></td>
+                <td valign="top">
+                                            0
+                                    </td>
+            </tr>
+                    </table>
+                <div class="operations">
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+        <tr><td bgcolor="dddddd">
+            <b>Operations</b>
+        </td></tr>
+        </table>
+        <br>
+        <table cellpadding="3" cellspacing="0" border="0" id="operationsSection">
+                    <tr><td class="issueOperation lazyOperation">
+                If you were <a rel="nofollow" href="/">logged in</a> you would be able to see more operations.
+            </td></tr>
+                </table>
+        </div>
+            </td></tr>
+</table>
+        </td>
+        <td bgcolor="#ffffff" valign="top">
+            <div style="padding:10px 10px 10px 10px" id="issueContent">
+                <style>
+<!--
+.fieldArea .fieldLabelArea { width: 10%; }
+.fieldArea .fieldValueArea { width: 90%; }
+#pinCommentContainer { float: right; font-size: 10px; }
+#pinCommentContainer a { margin: 0px 0.2em; }
+-->
+</style>
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="bbbbbb" width="100%" align="center">
+<tr><td width="100%" colspan="2" valign="top">
+<table cellpadding="4" cellspacing="0" border="0" width="100%" bgcolor="ffffff">
+<tr>
+    <td bgcolor="f0f0f0" width="100%" colspan="2" valign="top">
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr><td bgcolor="f0f0f0" width="80%" valign="top">
+            <b><a href="../../jira/browse/TFJ.html">
+                Twitter4J</a></b><br>
+            <h3 class="formtitle"> ability to pass since_id to getDirectMessges()</h3>
+            <font size="1">
+                Created: <span class="date">16/Jul/07 01:17 PM</span> &nbsp;
+                Updated: <span class="date">16/Jul/07 01:20 PM</span>
+            </font>
+        </td>
+        </tr></table>
+</tr>
+        <tr>
+            <td width="20%"><b>Component/s:</b></td>
+            <td width="80%">
+        <a title="Core " href="../../jira/secure/IssueNavigator_component_10003_sorter/field_priority_mode_hide_reset_true_pid_10002_sorter/order_ASC.html">Core</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Affects Version/s:</b></td>
+            <td width="80%">
+        <a title="1.0 Initial release" href="../../jira/secure/IssueNavigator_sorter/field_priority_mode_hide_reset_true_pid_10002_version_10006_sorter/order_ASC.html">1.0</a>, 
+        <a title="1.0.1 some bug fixes and support for direct message deletion API" href="../../jira/secure/IssueNavigator_sorter/field_priority_mode_hide_reset_true_pid_10002_version_10010_sorter/order_ASC.html">1.0.1</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Fix Version/s:</b></td>
+            <td width="80%">
+        <a title="1.0.2 " href="../../jira/secure/IssueNavigator_fixfor_10020_sorter/field_priority_mode_hide_reset_true_pid_10002_sorter/order_ASC.html">1.0.2</a>
+            </td>
+        </tr>
+</table>
+</td></tr></table>
+<br>
+<br>
+<div id="description-open">
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	<td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+	</td>
+    <td align="right"><a href="" onclick="toggleDivsWithCookie('description-closed', 'description-open'); return false;" class="smallgrey">&laquo; Hide</a></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+	<td id="descriptionArea">
+        <div id="description_full">
+            Twitter API now &quot;officially&quot; supports passing since_id to &quot;direct_messages&quot; method.<br/>
+        </div>
+    </td>
+</tr>
+</table>
+</div>
+<div id="description-closed" style="display:none;">
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center" class="table-layout: fixed;">
+<tr>
+	<td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+	</td>
+    <td style="padding: 1px; margin: 0px; border-bottom: #bbb 1px solid;"><div style="height: 1.2em; overflow: hidden; text-overflow: ellipsis;">&nbsp; &nbsp;Twitter API now &quot;officially&quot; supports passing since_id to &quot;direct_messages&quot; method.</div></td>
+    <td width="1%" align="right" nowrap style="padding: 1px; margin: 0px; border-bottom: #bbb 1px solid;"><a href="" onclick="toggleDivsWithCookie('description-open', 'description-closed'); return false;" class="smallgrey">Show &raquo;</a></td>
+</tr>
+</table>
+</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+    restoreDivFromCookie('description-open', 'jira.viewissue.cong.cookie', '1');
+    restoreDivFromCookie('description-closed', 'jira.viewissue.cong.cookie', '0');
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description rdf:about="http://yusuke.homeip.net/jira/browse/TFJ-15"
+    dc:title="[#TFJ-15] ability to pass since_id to getDirectMessges()"
+    dc:subject="Twitter4J"
+    dc:description="Twitter API now &quot;officially&quot; supports passing since_id to &quot;direct_messages&quot; method."
+    dc:date="2007-07-16 13:17:52,000"
+    dc:identifier="http://yusuke.homeip.net/jira/browse/TFJ-15"
+    trackback:ping="http://yusuke.homeip.net/jira/rpc/trackback/TFJ-15"/>
+<rdf:Description rdf:about="http://yusuke.homeip.net/jira/secure/ViewIssue.jspa?id=10067"
+    dc:title="[#TFJ-15] ability to pass since_id to getDirectMessges()"
+    dc:subject="Twitter4J"
+    dc:description="Twitter API now &quot;officially&quot; supports passing since_id to &quot;direct_messages&quot; method."
+    dc:date="2007-07-16 13:17:52,000"
+    dc:identifier="http://yusuke.homeip.net/jira/secure/ViewIssue.jspa?id=10067"
+    trackback:ping="http://yusuke.homeip.net/jira/rpc/trackback/TFJ-15"/>
+<rdf:Description rdf:about="http://yusuke.homeip.net/jira/secure/ViewIssue.jspa?key=TFJ-15"
+    dc:title="[#TFJ-15] ability to pass since_id to getDirectMessges()"
+    dc:subject="Twitter4J"
+    dc:description="Twitter API now &quot;officially&quot; supports passing since_id to &quot;direct_messages&quot; method."
+    dc:date="2007-07-16 13:17:52,000"
+    dc:identifier="http://yusuke.homeip.net/jira/secure/ViewIssue.jspa?key=TFJ-15"
+    trackback:ping="http://yusuke.homeip.net/jira/rpc/trackback/TFJ-15"/>
+</rdf:RDF>-->
+<br>
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+            <td width="1%" nowrap align="center">
+                &nbsp;<b><a href="/">All</a></b>&nbsp;
+            </td>
+            <td bgcolor="bbbbbb" width="1%" nowrap align="center">
+                &nbsp;<font color="ffffff"><b>Comments</b></font>&nbsp;
+            </td>
+            <td width="1%" nowrap align="center">
+                &nbsp;<b><a href="/">Change History</a></b>&nbsp;
+            </td>
+            <td width="1%" nowrap align="center">
+                &nbsp;<b><a href="/">Subversion Commits</a></b>&nbsp;
+            </td>
+	<td>&nbsp;</td>
+    <td width="1%" bgcolor="e5e5e5" nowrap>
+        &nbsp;
+        Sort Order:
+            <a rel="nofollow" href="../../jira/browse/TFJ-15_actionOrder_desc.html"></a>
+    </td>
+</tr>
+</table>
+    <div class="issuePanelContainer" id="issue_actions_container">
+            <div id="comment-10034-open">
+<div class="actionContainer">
+    <div class="action-links subText smallgrey">
+    [
+        <a href="../../jira/browse/TFJ-15.html#action_10034" title="A permanent link to this comment." class="smallgrey">Permlink</a>
+                      | <a href="" onclick="toggleDivsWithCookie('comment-10034-closed', 'comment-10034-open'); return false;" class="smallgrey">&laquo; Hide</a>
+    ]
+    </div>
+    <div class="action-details">    <a name="action_10034"/>
+        <a href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> - [<span class="subText"><span class="date">16/Jul/07 01:20 PM</span></span>  ] 
+</div>
+    <div class="action-body">- Added following method to Twitter class.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;public final synchronized List&lt;DirectMessage&gt; getDirectMessages(int sinceId)
+<br/>
+- Added following method to AsyncTwitter class.
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;public final synchronized void getDirectMessagesAsync(int sinceId,TwitterListener)
+<br/>
+<br/>
+The fix was committed in revision#41.
+<br/>
+<a href="../../files/tartrev_40_endrev_41_4cmvubi4r28wbq6yx5bord.html">http://yusuke.homeip.net/svnwebclient/fileCompare.jsp?url=%2Ftwitter4j%2Ftrunk%2Fsrc%2Fmain%2Fjava%2Ftwitter4j%2FTwitter.java&pegrev=41&startrev=40&endrev=41</a> </div>
+</div>
+</div>
+<div id="comment-10034-closed" style="display: none;">
+    <div style="background: #f0f0f0;">
+    <div class="action-links subText smallgrey">
+    [ <a href="" onclick="toggleDivsWithCookie('comment-10034-open', 'comment-10034-closed'); return false;" class="smallgrey">Show &raquo;</a> ]
+    </div>
+    <div class="action-details" style="overflow: hidden; height: 1em; ">
+                <a name="action_10034"/>
+        <a href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> - [<span class="subText"><span class="date">16/Jul/07 01:20 PM</span></span>  ] 
+             - Added following method to Twitter class.
+&nbsp;&nbsp;&nbsp;&nbsp;public final synchronized List&lt;DirectMessage&gt; getDirectMessages(int sinceId)
+- Added following method to AsyncTwitter class.
+&nbsp;&nbsp;&nbsp;&nbsp;public final synchronized void getDirectMessagesAsync(int sinceId,TwitterListener)
+The fix was committed in revision#41.
+<a href="../../files/tartrev_40_endrev_41_4cmvubi4r28wbq6yx5bord.html">http://yusuke.homeip.net/svnwebclient/fileCompare.jsp?url=%2Ftwitter4j%2Ftrunk%2Fsrc%2Fmain%2Fjava%2Ftwitter4j%2FTwitter.java&pegrev=41&startrev=40&endrev=41</a>     </div>
+    </div>
+</div>
+<br clear="all"/>
+<script language="JavaScript" type="text/javascript">
+<!--
+    restoreDivFromCookie('comment-10034-open', 'jira.viewissue.cong.cookie', '1');
+    restoreDivFromCookie('comment-10034-closed', 'jira.viewissue.cong.cookie', '0');
+//-->
+</script>
+    </div>
+<br/>
+            </div>
+        </td>
+    </tr>
+</table>
+<div class="footer">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td bgcolor="#bbbbbb"></td>
+</tr>
+<tr><td class="licensemessage">
+    Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+</td></tr>
+<tr>
+    <td height="12" style="background-image:url(http://yusuke.homeip.net/jira/images/border/border_bottom.gif)"></td>
+</tr>
+</table>
+<span class="poweredbymessage">
+<a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+the Professional <a href="http://www.atlassian.com/software/jira">Issue Tracker</a>.
+<span style="color: #666666;">(Enterprise Edition, Version: 3.9.2-#235)</span>
+- <a href="http://jira.atlassian.com/default.jsp?clicked=footer">Bug/feature request</a>
+- <a href="../../jira/secure/Administrators.html">Contact Administrators</a>
+</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム - Java category</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaとアーチェリーと</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/15/1181895091054.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/14/1181750937995.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/14/1181747472036.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/09/1181316879313.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/05/29/1180374923829.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/05/23/1179878793000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/04/13/1176474607129.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/15/1181895091054.html">
+    <title>Spring Framework 勉強会</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/15/1181895091054.html</link>
+    
+      
+        <description>
+          &lt;p&gt;に行って来ました。&lt;br/&gt;・&lt;a href=&#034;http://springframework.jp/?%CA%D9%B6%AF%B2%F1#kb7646c5&#034;&gt;Japan Springframework User Group - 第4回 6/15「Springframework in JavaOne2007 + Spring MVC &amp; WebFlow」&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;spring.jar をクラスパスに通したことすらない無謀な状態での参加でしたが Spring をとりまく状況を感じることが出来てよかったです。&lt;br/&gt;&lt;br/&gt;特に&lt;a href=&#034;http://www.springframework.org/webflow&#034;&gt;Spring Web Flow&lt;/a&gt;の概要についての説明は面白かったです。&lt;br/&gt;リクエスト-レスポンスの羅列だけじゃなくて会話状態遷移を管理するコンポーネントといのは生まれるべくして生まれた感があります。&lt;br/&gt;とはいえ既視感もあって、&lt;a href=&#034;http://beehive.apache.org/&#034;&gt;Beehive&lt;/a&gt;とか、Beehive のベースになっている WebLogic の Workshop フレームワークにもよく似ています。&lt;br/&gt;Beehive から Struts への依存を取り除いて拡張性を高めたもの、と理解しました。&lt;br/&gt;&lt;br/&gt;勉強会の後の懇親会では&lt;a href=&#034;http://www.eisbahn.jp/yoichiro/2007/04/twitterclipse.html&#034;&gt;Twitterclipse&lt;/a&gt;とか危険な(?)物を作っている&lt;a href=&#034;http://www.eisbahn.jp/yoichiro/&#034;&gt;田中さん&lt;/a&gt;を初めとして&lt;a href=&#034;http://www.a2suite.com/index.jsp&#034;&gt;ATL Systems&lt;/a&gt;の方々、&lt;a href=&#034;http://ameblo.jp/ouobpo&#034;&gt;オージス総研&lt;/a&gt;の方と同席させていただきました。&lt;br/&gt;SIer を離れて久しく、ここ５年くらい趣味ベースでしか開発をやっていないのでなんだか浦島太郎感たっぷり。&lt;br/&gt;第一戦で開発をされている方々は良くアンテナを張っているなーと感心しきり。&lt;br/&gt;&lt;br/&gt;ちなみに会社の名刺が切れて飛び出した個人名刺は&lt;a href=&#034;http://www.moo.com/&#034;&gt;これ&lt;/a&gt;です。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/14/1181750937995.html">
+    <title>JBuilder 2007 インストール</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/14/1181750937995.html</link>
+    
+      
+        <description>
+          &lt;p&gt;インストールから起動に至るまでのスクリーンショットをとってみました。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder1-large.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder1-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;インストーラ初期画面&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder2.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder2-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;ライセンス&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder3.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder3-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;いつものところにインストール&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder4.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder4-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;各種オープンソースのサーバを一緒にインストールできるみたい&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder5.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder5-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;確認画面&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder6.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder6-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;インストール中&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder7.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder7-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Macintosh HD 直下の Applications フォルダを指定したつもりだけれどもユーザディレクトリ以下に Applications フォルダを掘ってインストールしてくれた・・・&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder9.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder9-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;起動直後。Eclipse でお馴染みのワークスペースを選択するダイアログが。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder10-large.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder10-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;起動後。ん！？まったくもって Eclipse だ！！&lt;br/&gt;「よぉ！久しぶり」&lt;br/&gt;「ん？誰？」&lt;br/&gt;「俺だよ、オ・レ！ JBuilder！」&lt;br/&gt;「え？ Eclipse じゃなくて？」&lt;br/&gt;「Eclipse のパワーを得てより強力になったのさ！」&lt;br/&gt;「そ、そぉ・・・。君もなんだか変わっちゃったね・・・」&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder11.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder11-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;About 画面。アイコンをクリックすると各種プラグインの説明が表示される。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder12.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder12-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;もちろん過去の JBuilder プロジェクトを移行することもできます。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/14/1181747472036.html">
+    <title>JBuilder 2007 for Mac OSX リリース</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/14/1181747472036.html</link>
+    
+      
+        <description>
+          &lt;p&gt;JBuilder 2007 の Mac 版がリリースされました。&lt;br/&gt;&lt;a href=&#034;http://www.codegear.com/products/jbuilder&#034;&gt;http://www.codegear.com/products/jbuilder&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;Windows 版、なんだかんだと試せていませんでした。&lt;br/&gt;とりあえずインストールしてみます。&lt;br/&gt;&lt;br/&gt;念のために説明しておくと、JBuilder とはDelphi で有名な Borland がリリースすｒマルチプラットフォームの Java 開発環境です。&lt;br/&gt;&lt;br/&gt;会社名が Inprise に変わったり、Borland に戻ったり、IDE 部門の身売りが検討されたりと紆余曲折を経て IDE 部門の別会社化を昨年果たしました。&lt;br/&gt;・&lt;a href=&#034;http://www.codegear.com/&#034;&gt;CodeGear&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;元々は OpenTools という独自のプラットフォーム上に構築された非常に軽くて使いやすい IDE でしたが、JBuilder 2007 はかねてより計画されていた Eclipse ベースの初のバージョンとなります。&lt;br/&gt;&lt;br/&gt;今は Eclipse, NetBeans, IDEA の３強で影が薄くなっていますが、適応力に乏しい私は幾度となく Eclipse, NetBeans に手を染めては挫折し、手慣れた JBuilder がどうしても手放せません・・。&lt;br/&gt;&lt;br/&gt;ちょっと調べたら楽天でも売っていました↓&lt;br/&gt;・&lt;a href=&#034;http://pt.afl.rakuten.co.jp/c/038479a6.db691fb3/?url=http%3a%2f%2fitem.rakuten.co.jp%2fplusyu%2f4988725405217%2f&#034; target=&#034;_blank&#034;&gt;JBuilder 2007&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;無償版の Turbo もあるみたいなんで、購入するかどうか検討します。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/09/1181316879313.html">
+    <title>Twitter4J 1.0 リリース</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/09/1181316879313.html</link>
+    
+      
+        <description>
+          &lt;p&gt;先日 &lt;a href=&#034;http://yusuke.homeip.net/diary/2007/05/29/1180374923829.html&#034;&gt;Log4Twitter&lt;/a&gt;をリリースしたばかりですが、今度は &lt;a href=&#034;http://yusuke.homeip.net/twitter4j/ja/index.html&#034;&gt;Twitter4J&lt;/a&gt; をリリースしました。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/ja/index.html&#034;&gt;&lt;img border=&#034;2&#034; src=&#034;http://yusuke.homeip.net/diary/images/2007/06/09/twitter4j.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;その名の通り、Java から&lt;a href=&#034;http://groups.google.com/group/twitter-development-talk/web/api-documentation&#034;&gt;TwitterAPI&lt;/a&gt;を操作するためのライブラリで、REST とか XML とか気にせず、タイプセーフに手軽に Twitter をいじることができます。&lt;br/&gt;&lt;br/&gt;実際の利用イメージはというと、例えば現在の状態をアップデートするのはこんな感じ。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;Twitter twitter = new Twitter(twitterID,twitterPassword);&lt;br/&gt;Status status = twitter.update(latestStatus);&lt;br/&gt;System.out.println(&#034;Successfully updated the status to [&#034; + status.getText() + &#034;].&#034;);&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;自分のステータスの更新、public,friends,自分のタイムラインの取得、ダイレクトメッセージの送受信といったメソッドに加え、5月末に実装されたばかりの友達の追加、削除のメソッドにも対応しています。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/ja/index.html#license&#034;&gt;ライセンスは BSD&lt;/a&gt;。&lt;br/&gt;結構&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/ja/javadoc/twitter4j/examples/package-frame.html&#034;&gt;サンプル&lt;/a&gt;もわかりやすく書いたつもりなので使うのにとまどうことはないと思います。&lt;br/&gt;&lt;br/&gt;オープンソースプロジェクトには無償で使えると言うことで、バグトラッキングには&lt;a href=&#034;http://www.atlassian.com/software/jira/&#034;&gt;Jira&lt;/a&gt;をセットアップしてみました。&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/jira/browse/TFJ&#034;&gt;Twitter4J - Jira&lt;/a&gt;&lt;br/&gt;まだライセンス請求中の状態ですが。&lt;br/&gt;&lt;br/&gt;あと、需要があるかはわかりませんが Google Groups で&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/ja/index.html#mailingList&#034;&gt;メーリングリスト&lt;/a&gt;も作ってみました。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/ja/index.html&#034;&gt;Twitter4J&lt;/a&gt;、自分でも既に社内システムをモニタリングして、特定のイベントでアラートを上げるようにして活用しています。&lt;br/&gt;同じタイミングでメールでも通知してるんですが、&lt;a href=&#034;http://netafull.net/macsoft/019251.html&#034;&gt;Twitterrific&lt;/a&gt; なんかをつかうと Twitter 友達のアップデートはポップアップ表示されるため、メールによるアラートよりもリアルタイム性が高く反応できるので大変重宝しています。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/05/29/1180374923829.html">
+    <title>Log4Twitter リリース</title>
+    <link>http://yusuke.homeip.net/diary/2007/05/29/1180374923829.html</link>
+    
+      
+        <description>
+          &lt;p&gt;Log4Twitter をリリースしました。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/log4twitter/ja/index.html&#034;&gt;&lt;img border=&#034;1&#034; src=&#034;http://yusuke.homeip.net/diary/images/2007/05/29/twit.jpg&#034;&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/log4twitter/ja/index.html&#034;&gt;Log4Twitter&lt;/a&gt; はその名の通り &lt;a href=&#034;http://twitter.com/&#034;&gt;Twitter&lt;/a&gt; をログメッセージ出力先として使うためのライブラリで、&lt;a href=&#034;http://logging.apache.org/Log4j/&#034;&gt;Log4j&lt;/a&gt; と &lt;a href=&#034;http://logback.qos.ch/&#034;&gt;Logback&lt;/a&gt; に対応しています。&lt;br/&gt;&lt;a href=&#034;http://logging.apache.org/Log4j/&#034;&gt;Log4j&lt;/a&gt;、または &lt;a href=&#034;http://logback.qos.ch/&#034;&gt;Logback&lt;/a&gt; を使ったアプリケーションならばコードの変更なしに &lt;a href=&#034;http://twitter.com/&#034;&gt;Twitter&lt;/a&gt; と統合させることができます。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://twitter.com/&#034;&gt;Twitter&lt;/a&gt; への出力対象/非対象を正規表現で選択することもできます。既存のアプリケーションが大量のログを吐くように出来ていても、不用意に &lt;a href=&#034;http://twitter.com/&#034;&gt;Twitter&lt;/a&gt; をアップデートしすぎてしまう心配はありません。&lt;br/&gt;また、Twitter への出力は非同期で行われるため &lt;a href=&#034;http://twitter.com/&#034;&gt;Twitter&lt;/a&gt; サーバの反応が悪くてもアプリケーションのパフォーマンスを劣化させることはありません(&lt;a href=&#034;http://yusuke.homeip.net/log4twitter/ja/index.html#option&#034;&gt;オプション&lt;/a&gt;で同期化も可能)。&lt;br/&gt;&lt;br/&gt;自前アプリケーションの簡単 &lt;a href=&#034;http://groups.google.com/group/twitter-development-talk/web/api-documentation&#034;&gt;TwitterAPI&lt;/a&gt; ラッパとして使うも良し、既存のアプリケーションに組み込んで定時バッチの起動を知らせるのも良し。&lt;br/&gt;色々と応用が効きそうです。&lt;br/&gt;&lt;br/&gt;ライセンス:BSD&lt;br/&gt;&lt;br/&gt;・今後の抱負&lt;br/&gt;- リトライオプション(回数、間隔)を追加する&lt;br/&gt;ユーザの増加に追いついていないのか、Twitter はよくビジーで接続に失敗するので。&lt;br/&gt;- ダイレクトメッセージで送るオプションを追加する&lt;br/&gt;- URL を短縮するオプションを追加する&lt;br/&gt;TinyURL とか使って。&lt;br/&gt;- Log4Twiter4Log4net&lt;br/&gt;&lt;a href=&#034;http://logging.apache.org/log4net/&#034;&gt;Log4net&lt;/a&gt; とか、Java 以外のロギングフレームワークにも対応させる。&lt;br/&gt;&lt;br/&gt;ログとしてではなく、もっと柔軟に Twitter をいじりたい！という場合は &lt;a href=&#034;http://yusuke.homeip.net/twitter4j/ja/index.html&#034;&gt;Twitter4J&lt;/a&gt; をどうぞ。&lt;br/&gt;&lt;br/&gt;追記:&lt;br/&gt;マイコミジャーナルで取りあげていただきました。&lt;br/&gt;しかし・・・残念なことにリンクが張られてない。&lt;br/&gt;Google さん、早くクロールしてください。&lt;br/&gt;・マイコミジャーナル &gt; エンタープライズ &gt; Java &gt; ログをTwitterへ出力 - Log4Twitter 1.0.0登場&lt;br/&gt;&lt;a href=&#034;http://journal.mycom.co.jp/news/2007/05/29/017/&#034;&gt;http://journal.mycom.co.jp/news/2007/05/29/017/&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;追記その2:&lt;br/&gt;リンクが張られていないのは手違いだったそうです。&lt;br/&gt;メールで連絡したらすぐに直して頂きました。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/05/23/1179878793000.html">
+    <title>虚無僧2.0 - BSD ライセンスでリリース</title>
+    <link>http://yusuke.homeip.net/diary/2007/05/23/1179878793000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/komuso/ja/index.html&#034;&gt;&lt;img border=&#034;1&#034; src=&#034;http://yusuke.homeip.net/diary/images/2007/05/23/komuso-blog.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;虚無僧は JMX に準拠したサーバを定期的に監視して CSV 形式で出力するツールです。&lt;br/&gt;本体のソースコードはたった１５０行でできていて、ヒープサイズは 10MB で動作します。&lt;br/&gt;先日暫定公開したものから大幅にリファクタリングを加え、ドキュメントもそれなりにしっかり書いたつもりです。&lt;br/&gt;&lt;br/&gt;暫定公開からの変更点は&lt;br/&gt;・マトモな html ドキュメントを書いた&lt;br/&gt;・Tomcat のモニタリングが出来なかったのを修正&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/komuso/ja/index.html#mbeandoc&#034;&gt;MBeanDoc&lt;/a&gt; の追加&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/komuso/ja/mbeandocja/index.html&#034;&gt;MBeanDoc のサンプルはこちら&lt;/a&gt;。&lt;br/&gt;設定ファイルが簡単に作れます。&lt;br/&gt;・CSV 出力を &lt;a href=&#034;http://logback.qos.ch/&#034;&gt;logback&lt;/a&gt; に任せることでローテション等柔軟にできるようになった&lt;br/&gt;・複数の MBean サーバを監視できるようになった&lt;br/&gt;・BSD 準拠のライセンスにした&lt;br/&gt;&lt;br/&gt;一部パラメータの名前やフォーマットが変わっているので先日の虚無僧2.0用の設定ファイルは使えません。&lt;br/&gt;&lt;br/&gt;従来、本体はシンプルなものの設定ファイルを記述するには監視したい MBean の ObjectName や属性名を一生懸命かき集めなければならず面倒でした。&lt;br/&gt;今回 MBeanDoc を追加したことで、ブラウザを使ってポチポチと劇的に簡単に監視したい MBean 属性を選択できるようになりました。&lt;br/&gt;&lt;br/&gt;追記(5/25):&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/komuso/ja/mbeandocja/index.html&#034;&gt;MBeanDoc&lt;/a&gt; で ObjectName が一つ分しか表示されないという致命的なバグを修正しました。&lt;br/&gt;とりあえずバージョン2.0.1として差し替え済みです。&lt;br/&gt;リファクタリングしているうちに織り込んでしまったバグのようです。&lt;br/&gt;シンプルなコードとはいえユニットテストが全くない恥ずかしい状態です。&lt;br/&gt;Velocity を使ったコードのテストユニットってどう書くのがいいのかしら?&lt;br/&gt;出力そのものを検証するよりも VelocityContext に必要なオブジェクトが必要な数だけ積まれているかを確認するのが簡単でいいかな?&lt;br/&gt;&lt;br/&gt;追記(5/25):&lt;br/&gt;mbeandoc.cmd/sh がアーカイブに含まれていなかったのを修正。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/04/13/1176474607129.html">
+    <title>地球上で最高速の JVM - JRockit 6.0 リリース</title>
+    <link>http://yusuke.homeip.net/diary/2007/04/13/1176474607129.html</link>
+    
+      
+        <description>
+          &lt;p&gt;だそうです。&lt;br/&gt;・&lt;a href=&#034;http://dev2dev.bea.com/blog/hstahl/archive/2007/04/jrockit_for_jav.html&#034;&gt;JRockit for Java SE 6 is GA&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;・dev2dev home &amp;gt; BEA downloads &amp;gt; &lt;a href=&#034;http://commerce.bea.com/products/weblogicjrockit/jrockit_prod_fam.jsp&#034;&gt;BEA JRockit®&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+
+</rdf:RDF>

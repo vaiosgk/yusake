@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: 侍2.0</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/000326.html" title="Apache Lenya インストールメモ"/>
+<link rel="next" href="../../diary/archives/000328.html" title="さて、MacWorldでは？"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000327.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/327"
+    dc:title="侍2.0"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000327.html"
+    dc:subject="Java"
+    dc:description="を公開した。だいぶ使いやすくなりました。 侍2.0 ・複数ファイルのモニタに対応..."
+    dc:creator="yusuke"
+    dc:date="2005-12-31T21:56:42+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/000326.html">&laquo; Apache Lenya インストールメモ</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/000328.html">さて、MacWorldでは？ &raquo;</a>
+</p>
+<h2>2005&#24180;12&#26376;31&#26085;</h2>
+<h3>侍2.0</h3>
+<p>を公開した。だいぶ使いやすくなりました。<br/>
+<a href="../../samurai.html">侍2.0</a></p>
+<p>・複数ファイルのモニタに対応<br/>
+タブ表示または上下/左右に並べて表示できる。<br/>
+・「最近のファイルを開く」機能を追加<br/>
+そもそもあって然るべき機能です。<br/>
+・Mac OS X環境でアプリケーションメニューに対応<br/>
+aboutメニュー、環境設定がアプリケーションメニューから呼び出せるようになった。<br/>
+・CSVファイルのグラフ化は拡張子が".csv"のファイルの場合のみ働くようになった<br/>
+GCログをかませた場合などCSVファイルと勘違いしてグラフ化してしまうことがあったので。<br/>
+・存在しないスレッドがテーブル表示で黒く表示されるようになった<br/>
+今まで白く表示されていたので、running状態のスレッドと区別がつかなかった。<br/>
+・Matrix モードを追加<br/>
+あの興奮をもう一度！ログが黒字に緑色で流れるのはかなり良いです。Neoがスクリーンの向こう側で飛んでいるのが見える。</p>
+<p>起動はこちらから -&gt; <a href="../../samurai/samurai.html"><img src="../../samurai/launchSamuraiAni.gif" alt="http://yusuke.homeip.net/samurai/samurai.jnlp"/></a><br/>
+(要JDK1.4以降)<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_s-xclick"><br/>
+寄付はこちらから -&gt; <input type="image" src="../../en_US/i/btn/x-click-but04.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!"><br/>
+(要PayPalアカウント)<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHJwYJKoZIhvcNAQcEoIIHGDCCBxQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYB5FdSbx/KBwL+HX295KFAqrEc/I2apLTxuNyPWJYqpp4lFsNd1J8A5/wdpt4TgTMAwHmF6p7m76yQfsd4bv3DV0PefQrqbIChooeCHgj3jryVYs9mo+DkxC9qu1FWfUCXY2S/+Ooz8yazyd4CjOqWMpv+EzhKTc9MYj5LeNm53hDELMAkGBSsOAwIaBQAwgaQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIlKgm5lzQLDSAgYBGwu0DOBudkvsFBTR1abS7XBhBoQjvh+fkHNnGkHfnl/ZgUTp81olx9dOaL8OLKWTQ12QIaJ+IJrlSpCw9W2mtTg6xG24vcJM6Q4nCruKXfk0s0FpigLKn2zOhoT4DqUBfu/havWYcp86MN7ATwZjfIXWkKHPkI+43ODtjJ0qLn6CCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTA2MDEyMDE5MzAwMlowIwYJKoZIhvcNAQkEMRYEFMDoRnqHNhLmeuEqf6XW/ODVAKX1MA0GCSqGSIb3DQEBAQUABIGASMqUXyk1xm1gAijbyuuAj1vbF9xWre5fYJ12cdhwhwNGZ6anwxt28KnzJDQdQYA0TlEtUlX+TBrizlQGlC28jg6UIDtxvDOfrE79hRoqsr6bvM+XQXFZ9TZLAaQhXsaYBOlJN9XdicfEDImHlL7SyFrgTxI32ztJRmeqtCuzZyQ=-----END PKCS7-----<br />
+"></form></p>
+<p><a href="../../diary/archives/images/051231/samurai2.gif"><img alt="samurai2.gif" src="../../diary/archives/images/051231/samurai2-thumb.gif" width="320" height="222"/></a><br/>
+上のペインでCSVファイルを監視しているとこ。下のペインはMatrixモードでスレッドダンプとGCログを含むログファイルを監視しているとこ。<br/>
+スレッドダンプはブロックされまくりのひどい状態。</p>
+<p>タブ表示するにあたって、閉じるためのボタンを配置したかったんだけど、JTabbedPaneにそんな機能はなかった。<br/>
+手頃な既製品も見あたらなかったので車輪から作ったら恐ろしいほど手間がかかった。<br/>
+<img alt="tabbed.png" src="../../diary/archives/images/051231/tabbed.png" width="438" height="73"/><br/>
+まぁ手間に見合ったぶんキレイにできたかな？</p>
+<p>3つ以上のペインを上下左右に並べて表示するのはJTabbedPane をネストして無理矢理表現。みかけはそんなに変わってないけど相当手間暇かかってるのでなんとなく2.0とした。<br/>
+だいぶリファクタリングが進んで中身が整理されてきたので今後の機能追加は楽になると思う。<br/>
+SpringやVelocityを使ってもっと楽をしたいな。</p>
+<div id="a000327more"><div id="more">
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;12&#26376;31&#26085; 21:56</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/327</p>
+<h2 id="comments">コメント</h2>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

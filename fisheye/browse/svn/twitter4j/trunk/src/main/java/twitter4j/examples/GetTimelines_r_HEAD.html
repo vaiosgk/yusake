@@ -1,0 +1,976 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>FishEye: file svn/twitter4j/trunk/src/main/java/twitter4j/examples/GetTimelines.java</title>
+        <link rel="SHORTCUT ICON" href="http://yusuke.homeip.net/fisheye/static/k9s70z/images/favicon.ico"/>
+<link rel="stylesheet" href="../../../../../../../../../../fisheye/static/k9s70z/css/headerfooter.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../../fisheye/static/k9s70z/main.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../../fisheye/static/k9s70z/diff.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../../fisheye/uar/browser.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../../fisheye/static/k9s70z/custom.css" type="text/css"/>
+<link rel="stylesheet" href="../../../../../../../../../../fisheye/static/k9s70z/synhi.css" type="text/css"/>
+<script src="../../../../../../../../../../fisheye/static/k9s70z/global.js" type="text/javascript" language="Javascript1.2" charset="utf-8"></script>
+<script type="text/javascript" language="Javascript1.2">
+var fishEyePageContext = '/fisheye';
+var fishEyeSTATICDIR = 'static/k9s70z';
+</script>
+  <link rel="stylesheet" href="../../../../../../../../../../fisheye/static/k9s70z/synhi.css" type="text/css"/>
+  <link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/static/k9s70z/synhi/java.css" type="text/css"/>
+  <link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/uar/annot.css" type="text/css"/>
+</head>
+<body>
+<div id="header">
+    <h1>
+                <a class="fe_logo" href="/">FishEye</a>
+    </h1>
+    <ul>
+                <li>
+                    <a href="/">Chart</a>
+                </li>
+                <li>
+                    <a href="/">Search</a>
+                </li>
+                <li>
+                    <a href="/">Changelog</a>
+                </li>
+                <li class="active">
+                    <a href="/">Browse</a>
+                </li>
+        <li id="headerUserDetails">
+                    Guest |
+                    <a href="/">Login</a>
+                    |
+            <a target="_help" href="http://docs.atlassian.com/fisheye/docs-016/FishEye+Documentation+Home" class="head_help" title="">Help</a>
+        </li>
+    </ul>
+</div>
+<table id="secondHeader" cellspacing="0">
+  <tr>
+    <td id="breadCrumb">
+      <!-- queryStrSuffix should be html escaped if necessary before being passed in--><a class="breadCrumbRepository" href="/">svn</a>:/<a href="/">twitter4j</a>/<a href="../../../../../../../../../../fisheye/browse/svn/twitter4j/trunk.html">trunk</a>/<a href="/">src</a>/<a href="/">main</a>/<a href="/">java</a>/<a href="../../../../../../../../../../fisheye/browse/svn/twitter4j/trunk/src/main/java/twitter4j.html">twitter4j</a>/<a href="/">examples</a>/<a href="/">GetTimelines.java</a>
+      revision <a href="/#r210">210</a>
+      <a href="/" title="download">
+      </a>
+    </td>
+    <td id="quickSearch">
+      <form method="get" action="/">
+        Quick Search:
+        <input class="qsInput" name="q" type="text" size="15">
+      </form>
+    </td>
+  </tr>
+</table>
+<table class="layout" cellspacing="0">
+<tr>
+<td class="layoutLeftPane">
+  <div class="box">
+    <h3>View</h3>
+    <div class="formPane">
+      <form action="/" method="get">
+        <table>
+          <tr>
+            <td>Revision:</td>
+            <td>
+              <select name="r">
+                <option selected>
+                    210
+                </option>
+                <option>
+                    180
+                </option>
+                <option>
+                    2
+                </option>
+              </select>
+            </td>
+            <td><input type="submit" value="Go"/></td>
+          </tr>
+            <tr>
+                <td>Changeset:</td>
+                <td><a href="/">210</a></td>
+            </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+  <div class="box">
+    <h3>Diff</h3>
+    <div class="formPane">
+      <form action="/" method="get">
+        <table>
+          <tr>
+            <td>Diff from 210 to:</td>
+            <td>
+              <input type="hidden" name="r2" value="210"/>
+              <select name="r1" onchange="submit()">
+                  <option value="">Previous</option>
+                  <option>
+                      210
+                  </option>
+                  <option selected>
+                      180
+                  </option>
+                  <option>
+                      2
+                  </option>
+              </select>
+            </td>
+            <td>
+              <input type="submit" value="Go"/>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+  <!-- -->
+</td>
+<td class="layoutRightPane">
+  <div class="box">
+    <h3>Annotations</h3>
+    <div class="annPaneLegend">
+      Annotate by
+      Age
+      |
+        <a href="/">Author</a>
+      |
+        <a href="/">Mixed</a>
+      |
+        <a href="/">None</a>
+      <div>
+          <map id="age" name="age">
+<area shape="rect" coords="481,154,539,156" title="> 28 days, 1" alt="" nohref="nohref"/>
+<area shape="rect" coords="270,94,328,155" title="> 2 months 1 day, 29" alt="" nohref="nohref"/>
+<area shape="rect" coords="60,29,118,155" title="> 22 months, 60" alt="" nohref="nohref"/>
+</map>
+      </div>
+    </div>
+  </div>
+</td>
+</tr>
+</table>
+<div class="navigation">
+    <span class="navigationPrev">
+      <a class="navPrevious" title="Previous Diff" href="/">Prev</a>
+    </span>
+    <span class="navigationNext">
+      <span class="navNext">Next</span>
+    </span>
+</div>
+<table class="layout" cellspacing="0">
+  <tr>
+    <td class="layoutFullPane">
+      <div class="box"><h3>Annotated File View
+      </h3>
+        <div class="annPane">
+          <table cellspacing="0">
+              <tr>
+              <td class="annotAge243" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="3">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge243" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="3">
+                <pre><a href="/#l1">180</a></pre>
+              </td>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l1" href="#l1">1</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">/*</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l2" href="#l2">2</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">Copyright&nbsp;(c)&nbsp;2007-2009,&nbsp;Yusuke&nbsp;Yamamoto</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l3" href="#l3">3</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">All&nbsp;rights&nbsp;reserved.</span></span>
+                </td>
+              </tr>
+              <tr>
+              <td class="annotAge0" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="1">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge0" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="1">
+                <pre><a href="/#l4">2</a></pre>
+              </td>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l4" href="#l4">4</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_comment"></span></span>
+                </td>
+              </tr>
+              <tr>
+              <td class="annotAge243" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="23">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge243" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="23">
+                <pre><a href="/#l5">180</a></pre>
+              </td>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l5" href="#l5">5</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">Redistribution&nbsp;and&nbsp;use&nbsp;in&nbsp;source&nbsp;and&nbsp;binary&nbsp;forms,&nbsp;with&nbsp;or&nbsp;without</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l6" href="#l6">6</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">modification,&nbsp;are&nbsp;permitted&nbsp;provided&nbsp;that&nbsp;the&nbsp;following&nbsp;conditions&nbsp;are&nbsp;met:</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l7" href="#l7">7</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Redistributions&nbsp;of&nbsp;source&nbsp;code&nbsp;must&nbsp;retain&nbsp;the&nbsp;above&nbsp;copyright</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l8" href="#l8">8</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;notice,&nbsp;this&nbsp;list&nbsp;of&nbsp;conditions&nbsp;and&nbsp;the&nbsp;following&nbsp;disclaimer.</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l9" href="#l9">9</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Redistributions&nbsp;in&nbsp;binary&nbsp;form&nbsp;must&nbsp;reproduce&nbsp;the&nbsp;above&nbsp;copyright</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l10" href="#l10">10</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;notice,&nbsp;this&nbsp;list&nbsp;of&nbsp;conditions&nbsp;and&nbsp;the&nbsp;following&nbsp;disclaimer&nbsp;in&nbsp;the</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l11" href="#l11">11</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;documentation&nbsp;and/or&nbsp;other&nbsp;materials&nbsp;provided&nbsp;with&nbsp;the&nbsp;distribution.</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l12" href="#l12">12</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Neither&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;Yusuke&nbsp;Yamamoto&nbsp;nor&nbsp;the</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l13" href="#l13">13</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;names&nbsp;of&nbsp;its&nbsp;contributors&nbsp;may&nbsp;be&nbsp;used&nbsp;to&nbsp;endorse&nbsp;or&nbsp;promote&nbsp;products</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l14" href="#l14">14</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;derived&nbsp;from&nbsp;this&nbsp;software&nbsp;without&nbsp;specific&nbsp;prior&nbsp;written&nbsp;permission.</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l15" href="#l15">15</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment"></span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l16" href="#l16">16</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">THIS&nbsp;SOFTWARE&nbsp;IS&nbsp;PROVIDED&nbsp;BY&nbsp;Yusuke&nbsp;Yamamoto&nbsp;``AS&nbsp;IS''&nbsp;AND&nbsp;ANY</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l17" href="#l17">17</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">EXPRESS&nbsp;OR&nbsp;IMPLIED&nbsp;WARRANTIES,&nbsp;INCLUDING,&nbsp;BUT&nbsp;NOT&nbsp;LIMITED&nbsp;TO,&nbsp;THE&nbsp;IMPLIED</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l18" href="#l18">18</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">WARRANTIES&nbsp;OF&nbsp;MERCHANTABILITY&nbsp;AND&nbsp;FITNESS&nbsp;FOR&nbsp;A&nbsp;PARTICULAR&nbsp;PURPOSE&nbsp;ARE</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l19" href="#l19">19</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">DISCLAIMED.&nbsp;IN&nbsp;NO&nbsp;EVENT&nbsp;SHALL&nbsp;Yusuke&nbsp;Yamamoto&nbsp;BE&nbsp;LIABLE&nbsp;FOR&nbsp;ANY</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l20" href="#l20">20</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">DIRECT,&nbsp;INDIRECT,&nbsp;INCIDENTAL,&nbsp;SPECIAL,&nbsp;EXEMPLARY,&nbsp;OR&nbsp;CONSEQUENTIAL&nbsp;DAMAGES</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l21" href="#l21">21</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">(INCLUDING,&nbsp;BUT&nbsp;NOT&nbsp;LIMITED&nbsp;TO,&nbsp;PROCUREMENT&nbsp;OF&nbsp;SUBSTITUTE&nbsp;GOODS&nbsp;OR&nbsp;SERVICES;</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l22" href="#l22">22</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">LOSS&nbsp;OF&nbsp;USE,&nbsp;DATA,&nbsp;OR&nbsp;PROFITS;&nbsp;OR&nbsp;BUSINESS&nbsp;INTERRUPTION)&nbsp;HOWEVER&nbsp;CAUSED&nbsp;AND</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l23" href="#l23">23</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">ON&nbsp;ANY&nbsp;THEORY&nbsp;OF&nbsp;LIABILITY,&nbsp;WHETHER&nbsp;IN&nbsp;CONTRACT,&nbsp;STRICT&nbsp;LIABILITY,&nbsp;OR&nbsp;TORT</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l24" href="#l24">24</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">(INCLUDING&nbsp;NEGLIGENCE&nbsp;OR&nbsp;OTHERWISE)&nbsp;ARISING&nbsp;IN&nbsp;ANY&nbsp;WAY&nbsp;OUT&nbsp;OF&nbsp;THE&nbsp;USE&nbsp;OF&nbsp;THIS</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l25" href="#l25">25</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">SOFTWARE,&nbsp;EVEN&nbsp;IF&nbsp;ADVISED&nbsp;OF&nbsp;THE&nbsp;POSSIBILITY&nbsp;OF&nbsp;SUCH&nbsp;DAMAGE.</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l26" href="#l26">26</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">*/</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l27" href="#l27">27</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_keyword">package</span>&nbsp;<span class="hl_identifier">twitter4j</span>.<span class="hl_identifier">examples</span>;</span>
+                </td>
+              </tr>
+              <tr>
+              <td class="annotAge0" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="5">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge0" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="5">
+                <pre><a href="/#l28">2</a></pre>
+              </td>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l28" href="#l28">28</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l29" href="#l29">29</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_keyword">import</span>&nbsp;<span class="hl_identifier">twitter4j</span>.<span class="hl_identifier">Status</span>;</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l30" href="#l30">30</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_keyword">import</span>&nbsp;<span class="hl_identifier">twitter4j</span>.<span class="hl_identifier">Twitter</span>;</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l31" href="#l31">31</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_keyword">import</span>&nbsp;<span class="hl_identifier">twitter4j</span>.<span class="hl_identifier">TwitterException</span>;</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l32" href="#l32">32</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"></span>
+                </td>
+              </tr>
+              <tr>
+              <td class="annotAge243" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="2">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge243" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="2">
+                <pre><a href="/#l33">180</a></pre>
+              </td>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l33" href="#l33">33</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_keyword">import</span>&nbsp;<span class="hl_identifier">java</span>.<span class="hl_identifier">util</span>.<span class="hl_identifier">List</span>;</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l34" href="#l34">34</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"></span>
+                </td>
+              </tr>
+              <tr>
+              <td class="annotAge0" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="3">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge0" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="3">
+                <pre><a href="/#l35">2</a></pre>
+              </td>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l35" href="#l35">35</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_comment">/**</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l36" href="#l36">36</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_comment">&nbsp;*&nbsp;Example&nbsp;application&nbsp;that&nbsp;gets&nbsp;public,&nbsp;user&nbsp;and&nbsp;friend&nbsp;timeline&nbsp;using&nbsp;specified&nbsp;account.&lt;br&gt;</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l37" href="#l37">37</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_comment">&nbsp;*&nbsp;Usage:&nbsp;java&nbsp;twitter4j.examples.GetTimelines&nbsp;ID&nbsp;Password</span></span>
+                </td>
+              </tr>
+              <tr>
+              <td class="annotAge243" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="1">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge243" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="1">
+                <pre><a href="/#l38">180</a></pre>
+              </td>
+                <td class="annotAge243" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"> <a name="l38" href="#l38">38</a></span>
+                </td>
+                <td class="annotAge243" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="180 yusuke > 2 months 1 day"><span class="hl_comment">&nbsp;*&nbsp;<span class="hl_commentmeta">@author</span>&nbsp;Yusuke&nbsp;Yamamoto&nbsp;-&nbsp;yusuke&nbsp;at&nbsp;mac.com</span></span>
+                </td>
+              </tr>
+              <tr>
+              <td class="annotAge0" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="40">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge0" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="40">
+                <pre><a href="/#l39">2</a></pre>
+              </td>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l39" href="#l39">39</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_comment">&nbsp;*/</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l40" href="#l40">40</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_keyword">public</span>&nbsp;<span class="hl_keyword">class</span>&nbsp;<span class="hl_identifier">GetTimelines</span>&nbsp;{</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l41" href="#l41">41</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_comment">/**</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l42" href="#l42">42</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Usage:&nbsp;java&nbsp;twitter4j.examples.GetTimelines&nbsp;ID&nbsp;Password</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l43" href="#l43">43</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;<span class="hl_commentmeta">@param</span>&nbsp;args&nbsp;String[]</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l44" href="#l44">44</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"><span class="hl_comment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l45" href="#l45">45</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_keyword">public</span>&nbsp;<span class="hl_keyword">static</span>&nbsp;<span class="hl_keyword">void</span>&nbsp;<span class="hl_identifier">main</span>(<span class="hl_identifier">String</span>[]&nbsp;<span class="hl_identifier">args</span>)&nbsp;{</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l46" href="#l46">46</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l47" href="#l47">47</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">Twitter</span>&nbsp;<span class="hl_identifier">unauthenticatedTwitter</span>&nbsp;=&nbsp;<span class="hl_keyword">new</span>&nbsp;<span class="hl_identifier">Twitter</span>();</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l48" href="#l48">48</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_string">&#034;Showing&nbsp;public&nbsp;timeline.&#034;</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l49" href="#l49">49</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_keyword">try</span>&nbsp;{</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l50" href="#l50">50</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">List</span>&lt;<span class="hl_identifier">Status</span>&gt;&nbsp;<span class="hl_identifier">statuses</span>&nbsp;=&nbsp;<span class="hl_identifier">unauthenticatedTwitter</span>.<span class="hl_identifier">getPublicTimeline</span>();</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l51" href="#l51">51</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_keyword">for</span>&nbsp;(<span class="hl_identifier">Status</span>&nbsp;<span class="hl_identifier">status</span>&nbsp;:&nbsp;<span class="hl_identifier">statuses</span>)&nbsp;{</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l52" href="#l52">52</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_identifier">status</span>.<span class="hl_identifier">getUser</span>().<span class="hl_identifier">getName</span>()&nbsp;+&nbsp;<span class="hl_string">&#034;:&#034;</span>&nbsp;+</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l53" href="#l53">53</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">status</span>.<span class="hl_identifier">getText</span>());</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l54" href="#l54">54</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l55" href="#l55">55</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_keyword">if</span>&nbsp;(<span class="hl_identifier">args</span>.<span class="hl_identifier">length</span>&nbsp;&lt;&nbsp;<span class="hl_numeric">2</span>)&nbsp;{</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l56" href="#l56">56</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l57" href="#l57">57</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_string">&#034;You&nbsp;need&nbsp;to&nbsp;specify&nbsp;TwitterID/Password&nbsp;combination&nbsp;to&nbsp;show&nbsp;UserTimelines.&#034;</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l58" href="#l58">58</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l59" href="#l59">59</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_string">&#034;Usage:&nbsp;java&nbsp;twitter4j.examples.GetTimelines&nbsp;ID&nbsp;Password&#034;</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l60" href="#l60">60</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">exit</span>(<span class="hl_numeric">0</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l61" href="#l61">61</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l62" href="#l62">62</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months"></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l63" href="#l63">63</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_comment">//&nbsp;Other&nbsp;methods&nbsp;require&nbsp;authentication</span></span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l64" href="#l64">64</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">Twitter</span>&nbsp;<span class="hl_identifier">twitter</span>&nbsp;=&nbsp;<span class="hl_keyword">new</span>&nbsp;<span class="hl_identifier">Twitter</span>(<span class="hl_identifier">args</span>[<span class="hl_numeric">0</span>],&nbsp;<span class="hl_identifier">args</span>[<span class="hl_numeric">1</span>]);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l65" href="#l65">65</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">statuses</span>&nbsp;=&nbsp;<span class="hl_identifier">twitter</span>.<span class="hl_identifier">getFriendsTimeline</span>();</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l66" href="#l66">66</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_string">&#034;------------------------------&#034;</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l67" href="#l67">67</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_string">&#034;Showing&nbsp;&#034;</span>&nbsp;+&nbsp;<span class="hl_identifier">args</span>[<span class="hl_numeric">0</span>]&nbsp;+&nbsp;<span class="hl_string">&#034;'s&nbsp;friends&nbsp;timeline.&#034;</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l68" href="#l68">68</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_keyword">for</span>&nbsp;(<span class="hl_identifier">Status</span>&nbsp;<span class="hl_identifier">status</span>&nbsp;:&nbsp;<span class="hl_identifier">statuses</span>)&nbsp;{</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l69" href="#l69">69</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_identifier">status</span>.<span class="hl_identifier">getUser</span>().<span class="hl_identifier">getName</span>()&nbsp;+&nbsp;<span class="hl_string">&#034;:&#034;</span>&nbsp;+</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l70" href="#l70">70</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">status</span>.<span class="hl_identifier">getText</span>());</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l71" href="#l71">71</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l72" href="#l72">72</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">statuses</span>&nbsp;=&nbsp;<span class="hl_identifier">twitter</span>.<span class="hl_identifier">getUserTimeline</span>();</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l73" href="#l73">73</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_string">&#034;------------------------------&#034;</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l74" href="#l74">74</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_string">&#034;Showing&nbsp;&#034;</span>&nbsp;+&nbsp;<span class="hl_identifier">args</span>[<span class="hl_numeric">0</span>]&nbsp;+&nbsp;<span class="hl_string">&#034;'s&nbsp;timeline.&#034;</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l75" href="#l75">75</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_keyword">for</span>&nbsp;(<span class="hl_identifier">Status</span>&nbsp;<span class="hl_identifier">status</span>&nbsp;:&nbsp;<span class="hl_identifier">statuses</span>)&nbsp;{</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l76" href="#l76">76</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_identifier">status</span>.<span class="hl_identifier">getUser</span>().<span class="hl_identifier">getName</span>()&nbsp;+&nbsp;<span class="hl_string">&#034;:&#034;</span>&nbsp;+</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l77" href="#l77">77</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">status</span>.<span class="hl_identifier">getText</span>());</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l78" href="#l78">78</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+                </td>
+              </tr>
+              <tr>
+              <td class="annotAge256" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="1">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge256" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="1">
+                <pre><a href="/#l79">210</a></pre>
+              </td>
+                <td class="annotAge256" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="210 yusuke > 28 days"> <a name="l79" href="#l79">79</a></span>
+                </td>
+                <td class="annotAge256" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="210 yusuke > 28 days">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">Status</span>&nbsp;<span class="hl_identifier">status</span>&nbsp;=&nbsp;<span class="hl_identifier">twitter</span>.<span class="hl_identifier">show</span>(<span class="hl_numeric">81642112l</span>);</span>
+                </td>
+              </tr>
+              <tr>
+              <td class="annotAge0" style="font-size:.9em; text-align:left; color:#000; border-right:1px solid #ccc;" rowspan="11">
+                <pre>yusuke</pre>
+              </td>
+              <td class="annotAge0" style="font-size:.95em; color:#000; background-color:#FFF; border-bottom:1px solid #efefef;" rowspan="11">
+                <pre><a href="/#l80">2</a></pre>
+              </td>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l80" href="#l80">80</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_string">&#034;------------------------------&#034;</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l81" href="#l81">81</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_string">&#034;Showing&nbsp;&#034;</span>&nbsp;+&nbsp;<span class="hl_identifier">status</span>.<span class="hl_identifier">getUser</span>().<span class="hl_identifier">getName</span>()&nbsp;+</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l82" href="#l82">82</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_string">&#034;'s&nbsp;status&nbsp;updated&nbsp;at&nbsp;&#034;</span>&nbsp;+&nbsp;<span class="hl_identifier">status</span>.<span class="hl_identifier">getCreatedAt</span>());</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l83" href="#l83">83</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_identifier">status</span>.<span class="hl_identifier">getText</span>());</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l84" href="#l84">84</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">exit</span>(<span class="hl_numeric">0</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l85" href="#l85">85</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="hl_keyword">catch</span>&nbsp;(<span class="hl_identifier">TwitterException</span>&nbsp;<span class="hl_identifier">te</span>)&nbsp;{</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l86" href="#l86">86</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">out</span>.<span class="hl_identifier">println</span>(<span class="hl_string">&#034;Failed&nbsp;to&nbsp;get&nbsp;timeline:&nbsp;&#034;</span>&nbsp;+&nbsp;<span class="hl_identifier">te</span>.<span class="hl_identifier">getMessage</span>());</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l87" href="#l87">87</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hl_identifier">System</span>.<span class="hl_identifier">exit</span>(&nbsp;-<span class="hl_numeric">1</span>);</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l88" href="#l88">88</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l89" href="#l89">89</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+                </td>
+                </tr>
+                <tr>
+                <td class="annotAge0" style="border-right:1px solid #ccc; border-left:1px solid #ccc">
+                  <span class="annLine" title="2 yusuke > 22 months"> <a name="l90" href="#l90">90</a></span>
+                </td>
+                <td class="annotAge0" style="padding-left:10px; text-align:left; color:#000; background-color:#FFF; border-width:0px 4px 0 0; border-style:solid">
+                  <span class="annLine" title="2 yusuke > 22 months">}</span>
+                </td>
+              </tr>
+          </table>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+        <div class="licensemessage">
+            FishEye: Open Source License registered to Yusuke Yamamoto.
+        </div>
+<div class="bottomshadow"> </div>
+    <div class="licensemessage">
+        <strong>
+            <a class="smalltext" href="http://downloads.atlassian.com/software/fisheye/FishEyeDownloadCenter.jspa">
+            Version 1.6.6 is available.</a>
+        </strong>
+    </div>
+<div id="poweredby" class="smalltext">
+    <a class="smalltext" href="http://www.atlassian.com/software/fisheye/">Atlassian FishEye</a>,
+                <a class="smalltext" href="http://www.atlassian.com/software/fisheye/">Subversion analysis</a>.
+    (Version:1.6.3
+    Build:build-336 2008-11-04) -
+    <a class="smalltext" href="/">Administration</a>
+    - Page generated 2009-05-13 18:22 +0900
+</div>
+<!--
+page produced in 1029 ms
+-->
+</body>
+</html>

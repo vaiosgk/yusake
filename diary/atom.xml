@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:yusuke.homeip.net,0000-00-00:diary</id>
+  <title>侍ズム</title>
+  <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/diary/"/>
+  <link rel="self" type="application/atom+xml" href="http://yusuke.homeip.net/diary/atom.xml"/>
+  <updated>2008-12-27T15:57:11Z</updated>
+  <author>
+    <name>Yusuke Yamamoto</name>
+  </author>
+  
+  <subtitle></subtitle>
+  <rights>Yusuke Yamamoto</rights>
+  <generator uri="http://pebble.sourceforge.net" version="2.3.1">Pebble</generator>
+
+  
+  <entry>
+    <title>Wall･E</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/diary/2008/12/28/1230393431296.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-12-27:diary/1230393431296</id>
+    <updated>2008-12-27T15:57:11Z</updated>
+    <published>2008-12-27T15:57:11Z</published>
+    
+    <category term="/Movie" label="映画" scheme="http://yusuke.homeip.net/diary/categories/Movie/" />
+    
+    
+    <category term="movie" label="movie" scheme="http://yusuke.homeip.net/diary/tags/movie/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;を観た。&lt;br/&gt;・&lt;a href=&#034;http://www.disney.co.jp/movies/wall-e/index.html&#034;&gt;WALL・E／ウォーリー&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;人間がいなくなった地球で700年間もごみ掃除をしつづけるロボット、WALL・Eの話。&lt;br/&gt;&lt;br/&gt;ごみの中から自分の気に入った物を見つけてはコレクションに加えるというロボットのくせにお茶目なヤツ。&lt;br/&gt;&lt;br/&gt;どうして地球から人間がいなくなったのか、そして突然現れるクリオネ型のロボット、イブの秘密などがテンポ良く説明されていき、ハラハラドキドキの97分です。&lt;br/&gt;&lt;br/&gt;大人も子どもも楽しめる素晴らしい作品です。&lt;br/&gt;&lt;br/&gt;2001年宇宙の旅をなぞらえた箇所(※)がいくつかあり、特にSF好きにはお勧めです。&lt;br/&gt;&lt;br/&gt;関連記事：&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/02/05/1202141488586.html&#034;&gt;2001年宇宙の旅 - 侍ズム&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;※&lt;br/&gt;- WALL・Eの相棒の名前(劇中で名前は出てこなかった気がするけれども、公式サイトに載ってた)&lt;br/&gt;- auto のデザイン&lt;br/&gt;- 船長が立ち上がるところ&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>JBoss WS メモ</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/diary/2008/12/17/1229502480000.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-12-17:diary/1229502480000</id>
+    <updated>2008-12-17T08:28:00Z</updated>
+    <published>2008-12-17T08:28:00Z</published>
+    
+    <category term="/Java" label="Java" scheme="http://yusuke.homeip.net/diary/categories/Java/" />
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/diary/tags/java/" />
+    
+    <category term="jboss" label="jboss" scheme="http://yusuke.homeip.net/diary/tags/jboss/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;Webサービスのデプロイで&lt;b&gt;java.lang.IllegalStateException: Cannot find endpoint meta data for: サービス名&lt;/b&gt;が出るという現象に15分くらい悩まされました。&lt;br/&gt;&lt;br/&gt;jsr181-api-1.0.jar をWebアプリケーションから削除することで解決。&lt;br/&gt;・&lt;a href=&#034;http://webui.sourcelabs.com/jboss/mail/user/threads/%5BJBossWS%5D_-_Re%3A_Cannot_find_endpoint_meta_data_with.meta&#034;&gt;[JBossWS] - Re: Cannot find endpoint meta data with super-simple WS&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;以下は検索用スタックトレース。&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;17:11:44,253 ERROR [MainDeployer] Could not start deployment: file: ............../tmp22646ear-1.0.ear-contents/webapp-1.0.war&lt;br/&gt;java.lang.IllegalStateException: Cannot find endpoint meta data for: myWS&lt;br/&gt;	at org.jboss.wsf.stack.jbws.UnifiedMetaDataDeploymentAspect.getEndpointMetaData(UnifiedMetaDataDeploymentAspect.java:117)&lt;br/&gt;	at org.jboss.wsf.stack.jbws.UnifiedMetaDataDeploymentAspect.create(UnifiedMetaDataDeploymentAspect.java:86)&lt;br/&gt;	at org.jboss.wsf.framework.deployment.DeploymentAspectManagerImpl.deploy(DeploymentAspectManagerImpl.java:115)&lt;br/&gt;	at org.jboss.wsf.container.jboss42.ArchiveDeployerHook.deploy(ArchiveDeployerHook.java:97)&lt;br/&gt;	at org.jboss.wsf.container.jboss42.DeployerInterceptor.start(DeployerInterceptor.java:90)&lt;br/&gt;	at org.jboss.deployment.SubDeployerInterceptorSupport$XMBeanInterceptor.start(SubDeployerInterceptorSupport.java:188)&lt;br/&gt;	at org.jboss.deployment.SubDeployerInterceptor.invoke(SubDeployerInterceptor.java:95)&lt;br/&gt;	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)&lt;br/&gt;	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)&lt;br/&gt;	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:659)&lt;br/&gt;	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:291)&lt;br/&gt;	at org.jboss.mx.util.MBeanProxyExt.invoke(MBeanProxyExt.java:210)&lt;br/&gt;	at $Proxy45.start(Unknown Source)&lt;br/&gt;	at org.jboss.deployment.MainDeployer.start(MainDeployer.java:1025)&lt;br/&gt;	at org.jboss.deployment.MainDeployer.start(MainDeployer.java:1015)&lt;br/&gt;	at org.jboss.deployment.MainDeployer.deploy(MainDeployer.java:819)&lt;br/&gt;	at org.jboss.deployment.MainDeployer.deploy(MainDeployer.java:782)&lt;br/&gt;	at sun.reflect.GeneratedMethodAccessor23.invoke(Unknown Source)&lt;br/&gt;	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)&lt;br/&gt;	at java.lang.reflect.Method.invoke(Method.java:585)&lt;br/&gt;	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:155)&lt;br/&gt;	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:94)&lt;br/&gt;	at org.jboss.mx.interceptor.AbstractInterceptor.invoke(AbstractInterceptor.java:133)&lt;br/&gt;	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)&lt;br/&gt;	at org.jboss.mx.interceptor.ModelMBeanOperationInterceptor.invoke(ModelMBeanOperationInterceptor.java:142)&lt;br/&gt;	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)&lt;br/&gt;	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)&lt;br/&gt;	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:659)&lt;br/&gt;	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:291)&lt;br/&gt;	at org.jboss.mx.util.MBeanProxyExt.invoke(MBeanProxyExt.java:210)&lt;br/&gt;	at $Proxy9.deploy(Unknown Source)&lt;br/&gt;	at org.jboss.deployment.scanner.URLDeploymentScanner.deploy(URLDeploymentScanner.java:421)&lt;br/&gt;	at org.jboss.deployment.scanner.URLDeploymentScanner.scan(URLDeploymentScanner.java:634)&lt;br/&gt;	at org.jboss.deployment.scanner.AbstractDeploymentScanner$ScannerThread.doScan(AbstractDeploymentScanner.java:263)&lt;br/&gt;	at org.jboss.deployment.scanner.AbstractDeploymentScanner$ScannerThread.loop(AbstractDeploymentScanner.java:274)&lt;br/&gt;	at org.jboss.deployment.scanner.AbstractDeploymentScanner$ScannerThread.run(AbstractDeploymentScanner.java:225)&lt;/div&gt;&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>JBoss トレーニング実施中</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/diary/2008/12/16/1229403600000.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-12-16:diary/1229403600000</id>
+    <updated>2008-12-16T05:00:00Z</updated>
+    <published>2008-12-16T05:00:00Z</published>
+    
+    <category term="/Java" label="Java" scheme="http://yusuke.homeip.net/diary/categories/Java/" />
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/diary/tags/java/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;JBoss のトレーニングコースもいくつか担当しています。&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/11/08/1226072820000.html&#034;&gt;JBoss トレーニングコース開催中 - 侍ズム&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;今週はサーブレット/JSP、JSF、JPA、EJB3といった J2EEの基本要素を一通り学べる&lt;a href=&#034;http://www.jp.redhat.com/training/jb/courses/jb161_jboss_and_ejb3_for_java_developers/&#034;&gt;JB161&lt;/a&gt;をやっています。&lt;br/&gt;&lt;br/&gt;他にも様々なトレーニングコースを展開しています。&lt;br/&gt;・&lt;a href=&#034;http://www.jp.redhat.com/training/jb/courses/jboss_dev/&#034;&gt;レッドハット - JBoss トレーニングコース&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.jp.redhat.com/training/&#034;&gt;レッドハット - トレーニング&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://journal.mycom.co.jp/news/2008/12/11/023/index.html&#034;&gt;NEC、「JBoss Enterprise Middleware」とトレーニングコースを提供開始 | エンタープライズ | マイコミジャーナル&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.itmedia.co.jp/enterprise/articles/0812/15/news105.html&#034;&gt;NEC、JBoss Enterprise Middlewareの販売開始 - ITmedia エンタープライズ&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.nec.co.jp/oss/middle_support/jboss/training.html&#034;&gt;OSSミドルウェアサポートサービス : JBoss Enterprise Middleware | NEC&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.redhat.co.jp/jboss/flash/&#034;&gt;JBoss - オープンソースの JBoss に移行する理由とは?&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>Red HatがGoogleと提携、Google Web Toolkit の開発・運用サポートを提供</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/diary/2008/12/12/1229055553487.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-12-12:diary/1229055553487</id>
+    <updated>2008-12-12T04:19:13Z</updated>
+    <published>2008-12-12T04:19:13Z</published>
+    
+    <category term="/Java" label="Java" scheme="http://yusuke.homeip.net/diary/categories/Java/" />
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/diary/tags/java/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;レッドハットはオープンソースのリーダーであると共に、オープンソースのユーザーでもあります。&lt;br/&gt;&lt;br/&gt;いいもの、便利なものは自社製品でなくても積極的に活用しており特に Google の Web アプリケーションフレームワークである GWT : Google Web Toolkit は JBoss ブランドの製品でも積極的に使われています。&lt;br/&gt;&lt;br/&gt;たとえばルールエンジンの JBoss Rules の管理インターフェースや、BPM 製品である jBPM の次世代コンソールである &amp;quot;GWT-Console&amp;quot; がそうです。&lt;br/&gt;・&lt;a href=&#034;http://www.jboss.org/community/docs/DOC-12879&#034;&gt;GWT-Console-JBPM&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.jboss.org/drools/featuresandscreenshots.html#screenshots&#034;&gt;JBoss Rules screen shots&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;GWT は Java ベースでリッチな AJAX Web アプリケーションを開発できる、私個人的には非常に注目しているフレームワークです。&lt;br/&gt;今回 Red Hat は JBoss と共にサポートを提供出来るよう Google と提携したことを発表しました。&lt;br/&gt;・&lt;a href=&#034;http://www.redhat.com/about/news/prarchive/2008/google_and_jboss.html&#034;&gt;redhat.com | The World&#039;s Open Source Leader&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://itpro.nikkeibp.co.jp/article/NEWS/20081212/321336/&#034;&gt;Red Hat，Ajax開発キット「GWT」でGoogleと提携：ITpro&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;これで JBoss が提供できるオープンソースのリッチクライアントソリューションは２つになります。GWT ともう一つは RichFaces になります。&lt;br/&gt;・&lt;a href=&#034;http://www.jboss.org/jbossrichfaces/&#034;&gt;JBoss RichFaces&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>「JBoss Enterprise Middleware」の販売を開始| NEC</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/diary/2008/12/11/1228958371207.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-12-11:diary/1228958371207</id>
+    <updated>2008-12-11T01:19:31Z</updated>
+    <published>2008-12-11T01:19:31Z</published>
+    
+    <category term="/Java" label="Java" scheme="http://yusuke.homeip.net/diary/categories/Java/" />
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/diary/tags/java/" />
+    
+    <category term="jboss" label="jboss" scheme="http://yusuke.homeip.net/diary/tags/jboss/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;だそうです。&lt;br/&gt;・&lt;a href=&#034;http://www.nec.co.jp/products/soft/press/ja/0812/1101.html&#034;&gt;「JBoss Enterprise Middleware」の販売を開始| NEC&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.neclearning.jp/co_recommend/200812jboss.html&#034;&gt;【新コース】『JBoss Enterprise Middleware』トレーニングコース開始！&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.nec.co.jp/oss/middle_support/jboss/&#034;&gt;OSSミドルウェアサポートサービス : JBoss Enterprise Middleware | NEC&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://journal.mycom.co.jp/news/2008/12/11/023/index.html&#034;&gt;NEC、「JBoss Enterprise Middleware」とトレーニングコースを提供開始 | エンタープライズ | マイコミジャーナル&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;関連記事：&lt;br/&gt;・&lt;a href=&#034;https://www.oss.ecl.ntt.co.jp/ossc/techno/jboss.html&#034;&gt;NTT OSSセンタ &gt; 技術情報 &gt; 製品情報 &gt; JBossの紹介&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/12/10/1228919662044.html&#034;&gt;JBoss AS 5 の登場 - 侍ズム&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/12/09/1228751783686.html&#034;&gt;OSSアプリサーバのサポート市場が急拡大 - 侍ズム&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/12/05/1228461018074.html&#034;&gt;JBoss AS 5 リリース - 侍ズム&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>JBoss AS 5 の登場</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/diary/2008/12/10/1228919662044.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-12-10:diary/1228919662044</id>
+    <updated>2008-12-10T14:34:22Z</updated>
+    <published>2008-12-10T14:34:22Z</published>
+    
+    <category term="/Java" label="Java" scheme="http://yusuke.homeip.net/diary/categories/Java/" />
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/diary/tags/java/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;JBoss の最新版の登場がマイコミジャーナルでも取りあげられました。&lt;br/&gt;・&lt;a href=&#034;http://journal.mycom.co.jp/news/2008/12/09/041/&#034;&gt;JBoss AS 5登場、3年開発でマイクロコンテナ化 | エンタープライズ | マイコミジャーナル&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;いくつか気になる記述があったので補足を。&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;Red Hatは5日(米国時間)、同社の最新アプリケーションサーバとなるJBoss Application Server 5.0.0.GAを公開した。&lt;/div&gt;&lt;br/&gt;今回のリリースはあくまでコミュニティベースのものであり、Red Hat としてサポートを提供するバージョン(JBoss EAP: Enterprise Application Platform)ではありません。&lt;br/&gt;Linux で言い換えれば、Fedora は出たけれども RHEL(Red Hat Enterprise Linux) がリリースされたわけではあいｍせん。&lt;br/&gt;&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;Java EE 5に対応したプラットフォームを検討している場合、JBoss AS 5.0は検討に値するプロダクトだ。一つ前の4.2系はJ2EE 1.4に準拠しており、JBoss AS 5.0へ移行するためのバージョンと位置付けられている。より古いバージョンを採用している場合、一旦4.2系へアップグレードしてから5.0へアップグレードするといいだろう。&lt;/div&gt;&lt;br/&gt;過去のどのバージョンを使っていても、AS 5.0 を利用することが決まっているのであれば 4.2 を経ることなくアップグレードしていいと思います。一旦 4.2 にアップグレードするのは二度手間になりそう。&lt;br/&gt;&lt;br/&gt;ただ、趣味で使うのは楽しいと思いますが、まだリリースされたばかりでしかもアーキテクチャが刷新されて最初のバージョンです。ミッションクリティカルな領域で使うのであれば安定、サポータブルバージョンである JBoss EAP のリリースをお待ちいただくのをお勧めします。&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>OSSアプリサーバのサポート市場が急拡大</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/diary/2008/12/09/1228751783686.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-12-08:diary/1228751783686</id>
+    <updated>2008-12-08T15:56:23Z</updated>
+    <published>2008-12-08T15:56:23Z</published>
+    
+    <category term="/Java" label="Java" scheme="http://yusuke.homeip.net/diary/categories/Java/" />
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/diary/tags/java/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;&lt;a href=&#034;http://www.mic-r.co.jp/&#034;&gt;ミック経済研究所&lt;/a&gt;による市場調査によると、&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;これまでWebシステムなど比較的小規模なシステムでの利用が多かったOSSアプリケーションサーバが、レッドハットの「JBoss」買収を機に大規模システムに拡大していると指摘する。レッドハット自身がJBossのサポートを提供するようになり、企業が安心して大規模システムでOSSアプリケーションサーバを使うようになった&lt;/div&gt;だそうです。&lt;br/&gt;・&lt;a href=&#034;http://www.atmarkit.co.jp/news/200812/08/oss_app.html&#034;&gt;OSSアプリサーバのサポート市場が急拡大 － ＠IT&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://japan.zdnet.com/news/software/story/0,2000056195,20384947,00.htm&#034;&gt;OSSアプリケーションサーバのサポート需要、Red HatのJBoss買収で伸長 - ソフトウェア - ZDNet Japan&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;存じ上げなかったのですが、&lt;a href=&#034;http://www.mic-r.co.jp/&#034;&gt;ミック経済研究所&lt;/a&gt;は「ＩＴ分野専門の調査機関」だそうです。&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;一昔前、個人的にですがマトモに使える・動くのは WebLogic Serverだけと感じていました。業界標準をリードして真っ先に実装するのも BEA で、事実 BEA の動きを追っていれば業界の波から取り残されることはありませんでした。&lt;br/&gt;&lt;br/&gt;最近はどうでしょう？&lt;br/&gt; JBoss は真っ先に J2EE 標準の EoD の走りである EJB3 にいち早く対応し、Hibernate をベースに JPA という標準技術の策定をリードしました。&lt;br/&gt;今度は Seam をベースに JSF2.0 や WebBeans といった標準を作り上げてきている段階です。&lt;br/&gt;&lt;br/&gt;さて、あなたならどれを選びますか？&lt;br/&gt;・&lt;a href=&#034;http://www.redhat.co.jp/jboss/flash/&#034;&gt;JBoss - オープンソースの JBoss に移行する理由とは?&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.oracle.com/technology/global/jp/software/products/ias/htdocs/wls_main.html&#034;&gt;wls_main.html&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www-06.ibm.com/jp/software/websphere/&#034;&gt;IBM WebSphere ソフトウェア - Japan&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://jp.sun.com/products/software/javasystem/applicationserver/appsrvr9_1.html&#034;&gt;Sun Java System Application Server - サン・マイクロシステムズ&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.hitachi.co.jp/Prod/comp/soft1/cosminexus/&#034;&gt;SOAプラットフォーム Cosminexus：ソフトウェア：日立&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://interstage.fujitsu.com/jp/&#034;&gt;ビジネスアプリケーション基盤 Interstage (インターステージ）: 富士通&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.nec.co.jp/WebOTX/&#034;&gt;WebOTX ： NGN時代の企業/ビジネスが求めるサービス実行基盤へと進化 : ソフトウェア | NEC&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;関連記事：&lt;br/&gt;・&lt;a href=&#034;http://d.hatena.ne.jp/kurosaka/20081210/p1&#034;&gt; レッドハットのJBoss買収で案件が大型化〜OSSアプリサーバのサポート市場が急拡大 - いい加減なblog (Kurosaka)&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://blog.livedoor.jp/cosminexus_fan/archives/258027.html&#034;&gt;みんなの Cosminexus NEWS!!:OSSアプリサーバのサポート市場が急拡大 - livedoor Blog（ブログ）&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;更新(12/18):&lt;br/&gt;国産アプリケーションサーバのリンクを追加いたしました。&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+</feed>

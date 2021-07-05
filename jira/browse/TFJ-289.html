@@ -1,0 +1,396 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>[#TFJ-289] async support spam reporting API - JIRA </title>
+    <meta content="general" name="decorator"/>
+    <link rel="index" href="/jira/secure/IssueNavigator.jspa?atl_token=6c92ecfa4768bc081e4e4e3a1ec5251c51458825"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+<meta id="atlassian-token" name="atlassian-token" content="6c92ecfa4768bc081e4e4e3a1ec5251c51458825">
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/s/587/3/_/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/s/587/3/_/images/icons/favicon.png">
+    <script type="text/javascript">var contextPath = '/jira';</script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/587/3/3.0.9/_/download/batch/com.atlassian.auiplugin_ajs/com.atlassian.auiplugin_ajs.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/jira/s/587/3/3.0.9/_/download/batch/com.atlassian.auiplugin:ajs/com.atlassian.auiplugin:ajs.css?ieonly=true" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_jira-global/jira.webresources_jira-global.css" media="all">
+<link type="text/css" rel="stylesheet" href="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_jquery-fancybox/jira.webresources_jquery-fancybox.css" media="all">
+<link type="text/css" rel="stylesheet" href="../../jira/s/587/3/1.0/_/download/resources/jira.webresources_calendar/calendar.css" media="all">
+<link type="text/css" rel="stylesheet" href="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_autocomplete/jira.webresources_autocomplete.css" media="all">
+<link type="text/css" rel="stylesheet" href="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_global-static/jira.webresources_global-static.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/jira/s/587/3/1.0/_/download/batch/jira.webresources:global-static/jira.webresources:global-static.css?ieonly=true" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_global-static/jira.webresources_global-static.css?media=print" media="print">
+<link type="text/css" rel="stylesheet" href="../../jira/s/587/3/1.0/_/download/resources/jira.webresources_global-static/global.css" media="all">
+<script type="text/javascript" src="../../jira/s/587/3/3.0.9/_/download/batch/com.atlassian.auiplugin_ajs/com.atlassian.auiplugin_ajs.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_jira-global/jira.webresources_jira-global.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_jquery-fancybox/jira.webresources_jquery-fancybox.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_calendar/jira.webresources_calendar.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_viewissue/jira.webresources_viewissue.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_autocomplete/jira.webresources_autocomplete.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_jira-fields/jira.webresources_jira-fields.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_calendar-en/jira.webresources_calendar-en.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_key-commands/jira.webresources_key-commands.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_header/jira.webresources_header.js"></script>
+<script type="text/javascript" src="../../jira/s/587/3/1.0/_/download/batch/jira.webresources_set-focus/jira.webresources_set-focus.js"></script>
+        <script type="text/javascript" src="../../jira/rest/api/1.0/shortcuts/587/d0150b9eb77f814bb2f50f9f9bb468c0/shortcuts.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml" href="http://yusuke.homeip.net/jira/osd.jsp" title="JIRA"/>
+</head>
+<body id="jira" class="nl type-ab stalker">
+<div id="header">
+    <div id="header-top">
+        <a id="logo" href="../../jira/secure/Dashboard.html">
+                    </a>
+                <form id="quicksearch" action="../../jira/secure/QuickSearch.html" method="post" class="dont-default-focus">
+            <div>
+                <label for="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." class="overlabel">Quick Search</label>
+                <input id="quickSearchInput" class="quickSearchInput" type="text" size="25" title="Go directly to an issue by typing a valid issue key, or run a free-text search." name="searchString" accesskey="q"/>
+            </div>
+        </form>
+        <div id="header-details-user" class="aui-dd-parent header-link-container">
+         <a class="lnk" rel="nofollow" href="/">Log In</a>
+        <span class="drop-wrap">
+        <a class="drop aui-dd-link" href="#"><span>Access more options</span>
+        </a>
+    </span>
+    <div class="aui-dropdown standard hidden">
+                                                                <ul id="jira-help" class="  first     last  ">
+                                            <li class="dropdown-item"><a id="view_help" class="item-link " title="Goto the online documentation for JIRA" href="http://docs.atlassian.com/jira/docs-042/JIRA+Documentation?clicked=jirahelp">Online Help</a></li>
+                                            <li class="dropdown-item"><a id="keyshortscuthelp" class="item-link " title="Get more information about JIRA's Keyboard Shortcuts" href="/">Keyboard Shortcuts</a></li>
+                                            <li class="dropdown-item"><a id="view_about" class="item-link " title="Get more information about JIRA" href="http://www.atlassian.com/software/jira">About JIRA</a></li>
+                                    </ul>
+                        </div>
+</div>
+    </div>
+    <div id="header-bottom">
+                <div id="menu">
+<ul id="main-nav" class="menu-bar">
+                        <li class="aui-dd-parent lazy  ">
+                    <a class="lnk" href="../../jira/secure/Dashboard.html" id="home_link" accesskey="h" title="View your current Dashboard">Dashboards</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="home_link_drop" rel="home_link" accesskey="d" title="Access more options (Alt+d)" href="#"><span>Access more options (Alt+d)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+                        <li class="aui-dd-parent lazy  ">
+                    <a class="lnk" href="../../jira/browse/TFJ.html" id="browse_link" accesskey="b" title="Browse currently active project 'Twitter4J'">Projects</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="browse_link_drop" rel="browse_link" accesskey="p" title="Access more options (Alt+p)" href="#"><span>Access more options (Alt+p)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+                        <li class="aui-dd-parent lazy  selected  ">
+                    <a class="lnk" href="../../jira/secure/IssueNavigator.html" id="find_link" accesskey="f" title="View your current filter">Issues</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="find_link_drop" rel="find_link" accesskey="i" title="Access more options (Alt+i)" href="#"><span>Access more options (Alt+i)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+    </ul>
+        </div>
+    </div>
+</div>
+<fieldset class="hidden parameters">
+    <input type="hidden" title="ajaxTimeout" value="The call to the JIRA server did not complete within the timeout period.  We are unsure of the result of this operation.">
+    <input type="hidden" title="ajaxUnauthorised" value="You are not authorised to perform this operation.  Please try to <a href='/jira/login.jsp?os_destination=%2Fbrowse%2FTFJ-289'>log in</a>
+       or <a href='/jira/secure/Signup!default.jspa'>sign up</a> for an account.
+    ">
+    <input type="hidden" title="ajaxCommsError" value="The JIRA server could not be contacted.  This may be a temporary glitch or the server may be down.">
+    <input type="hidden" title="ajaxServerError" value="The JIRA server was contacted but has returned an error response. We are unsure of the result of this operation.">
+    <input type="hidden" title="ajaxErrorCloseDialog" value="Close this dialog and press refresh in your browser">
+    <input type="hidden" title="ajaxErrorDialogHeading" value="Communications Breakdown">
+    <input type="hidden" title="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost.">
+    <input type="hidden" title="dirtyDialogMessage" value="You have entered new data in this dialog. If you navigate away from this dialog without first saving your data, the changes will be lost. Click cancel to return to the dialog.">
+    <input type="hidden" title="keyType" value="Type">
+    <input type="hidden" title="keyThen" value="then">
+    <input type="hidden" title="dblClickToExpand" value="Double click to expand">
+    <input type="hidden" title="actions" value="Actions">
+    <input type="hidden" title="removeItem" value="Remove">
+    <input type="hidden" title="workflow" value="Workflow">
+    <input type="hidden" title="labelNew" value="New Label">
+    <input type="hidden" title="enterIssueKey" value="Enter issue key">
+    <input type="hidden" title="issueActionsHint" value="Begin typing for available operations or press down to see all">
+    <input type="hidden" title="closelink" value="Close">
+    <input type="hidden" title="dotOperations" value="Operations">
+    <input type="hidden" title="dotLoading" value="Loading...">
+    <input type="hidden" title="frotherSuggestions" value="Suggestions">
+    <input type="hidden" title="frotherNomatches" value="No Matches">
+    <input type="hidden" title="attachmentsUnknownError" value="Unknown error occurred uploading file.">
+    <input type="hidden" title="attachmentsXsrfTimeout" value="Your session has timed out or you were logged out. Please save your work and reload the page.">
+    <input type="hidden" title="multiselectVersionsError" value="{0} is not a valid version.">
+    <input type="hidden" title="multiselectComponentsError" value="{0} is not a valid component.">
+    <input type="hidden" title="multiselectGenericError" value="The value {0} is invalid.">
+</fieldset>
+<div class="alertHeader">
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+/* Jira */
+google_ad_slot = "1586897956";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="../../pagead/show_ads.js">
+</script>
+<script src="../../urchin.js" type="text/javascript">
+</script>
+</center>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<fieldset class="hidden parameters">
+    <input type="hidden" id="viewMoreMsg" value="Click to view {0} more">
+    <input type="hidden" id="hideMsg" value="Hide">
+    <input type="hidden" id="error-401" value="Cannot perform this operation. You are not logged in.">
+    <input type="hidden" id="issueOpTitleUnvote" value="Remove vote for this issue">
+    <input type="hidden" id="issueOpTitleVote" value="Vote for this issue">
+    <input type="hidden" id="issueOpTitleWatch" value="Start watching this issue">
+    <input type="hidden" id="issueOpTitleUnwatch" value="Stop watching this issue">
+    <input type="hidden" id="issueOpUnvote" value="Remove Vote">
+    <input type="hidden" id="issueOpVote" value="Add Vote">
+    <input type="hidden" id="issueOpWatch" value="Watch Issue">
+    <input type="hidden" id="issueOpUnwatch" value="Stop Watching">
+    <input type="hidden" id="i18nVote" value="Vote">
+    <input type="hidden" id="i18nVoted" value="Voted">
+    <input type="hidden" id="i18nWatch" value="Watch">
+    <input type="hidden" id="i18nWatching" value="Watching">
+</fieldset>
+<div id="stalker" class="stalker">
+    <div class="item-header">
+<h1 class="item-name avatar" style="background-image:url(http://yusuke.homeip.net/jira/secure/projectavatar?pid=10002&amp;avatarId=10021&amp;size=large)">
+        <span>Twitter4J</span>
+</h1>
+<ul class="breadcrumbs">
+    <li><a id="project-name-val" href="../../jira/browse/TFJ.html">Twitter4J</a></li>
+    <li><a id="key-val" rel="10740" href="../../jira/browse/TFJ-289.html">TFJ-289</a></li>
+</ul>
+<h2 id="issue_header_summary" class="item-summary"><a href="../../jira/browse/TFJ-289.html">async support spam reporting API</a></h2>
+    </div>
+    <div class="command-bar">
+        <div class="ops-cont">
+            <div class="ops-menus">
+                    <ul id="opsbar-login" class="first ops">
+                        <li id="ops-login" class="last">
+                            <a id="ops-login-lnk" class="button first last" href="/">Log In</a>
+                        </li>
+                    </ul>
+                        <ul class="ops" id="view-drop">
+                            <li>
+                                <div class="aui-dd-parent">
+                                    <a href="#" title="View this issue in another format" class="drop lnk aui-dd-link standard icon-views"><span>Views</span></a>
+                                        <div class="aui-dropdown standard hidden">
+                                        <ul class="first last">
+                                                <li class="dropdown-item">
+                                                    <a class="item-link" rel="nofollow" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-xml/TFJ-289/TFJ-289.xml">XML</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a class="item-link" rel="nofollow" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-word/TFJ-289/TFJ-289.doc">Word</a>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <a class="item-link" rel="nofollow" href="/">Printable</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+            </div>
+        </div>
+    </div>          
+    <div class="btm"></div>
+</div>
+<div id="main-content">
+    <div class="active-area">
+        <div class="column" id="primary">
+            <div class="content">
+                    <div id="details-module" class="module toggle-wrap">
+                        <div class="mod-header">
+                            <h3 class="toggle-title">Details</h3>
+                        </div>
+                        <div class="mod-content">
+                            <ul id="issuedetails" class="property-list two-cols">
+    <li class="item">
+        <div class="wrap">
+            <strong class="name">Type:</strong>
+            <span id="type-val" class="value">
+             New Feature
+            </span>
+        </div>
+    </li>
+    <li class="item item-right">
+        <div class="wrap">
+            <strong class="name">Status:</strong>
+            <span id="status-val" class="value">
+             Closed
+            </span>
+        </div>
+    </li>
+            <li class="item">
+            <div class="wrap">
+                <strong class="name">Priority:</strong>
+                <span id="priority-val" class="value">
+             Major
+                </span>
+            </div>
+        </li>
+                                <li class="item item-right">
+            <div class="wrap">
+                <strong class="name">Resolution:</strong>
+                <span id="resolution-val" class="value resolved">
+                                         Fixed
+                                </span>
+            </div>
+        </li>
+                <li class="item">
+            <div class="wrap">
+                <strong class="name">Affects Version/s:</strong>
+                <span id="versions-val" class="value">
+                                            None
+                                    </span>
+            </div>
+        </li>
+                <li class="item item-right">
+            <div class="wrap">
+                <strong class="name">Fix Version/s:</strong>
+                <span id="fixfor-val" class="value">
+                                            <span class="shorten" id="fixVersions-field">
+                                                            <a href="/" title="2.1.0 refactored version - retiring all deprecated methods">2.1.0</a>                                                    </span>
+                                    </span>
+            </div>
+        </li>
+                <li class="item">
+            <div class="wrap">
+                <strong class="name">Component/s:</strong>
+                <span id="components-val" class="value">
+                                            <span class="shorten" id="components-field">
+                                                            <a href="../../jira/browse/TFJ/component/10003.html" title="Core ">Core</a>                                                    </span>
+                                    </span>
+            </div>
+        </li>
+                    <li class="item full-width">
+            <div class="wrap" id="wrap-labels">
+                <strong class="name">Labels:</strong>
+                    <div class="labels-wrap value">
+            <span class="labels" id="labels-10740-value">None</span>
+                </div>
+            </div>
+        </li>
+        </ul>
+                        </div>
+                    </div>
+                <div id="activitymodule" class="module toggle-wrap">
+                    <div class="mod-header">
+                        <h3 class="toggle-title">Activity</h3>
+                    </div>
+                    <div class="mod-content">
+    <div class="tabwrap tabs2">
+            <div class="sortwrap">
+                    <a class="icon icon-sort-down" rel="nofollow" href="/#issue-tabs" title="Ascending order - Click to sort in descending order"><span>Ascending order - Click to sort in descending order</span></a>
+            </div>
+        <ul id="issue-tabs" class="tabs horizontal">
+                <li><a id="all-tabpanel" href="/#issue-tabs"><strong>All</strong></a></li>
+                <li id="comment-tabpanel" class="active"><strong>Comments</strong></li>
+                <li><a id="changehistory-tabpanel" href="/#issue-tabs"><strong>History</strong></a></li>
+                <li><a id="activity-stream-issue-tab" href="/#issue-tabs"><strong>Activity</strong></a></li>
+                <li><a id="fisheye-issuepanel" href="/#issue-tabs"><strong>Source</strong></a></li>
+        </ul>
+    </div>
+        <div class="issuePanelContainer" id="issue_actions_container">
+                <div class="message-container">
+    There are no comments yet on this issue.
+</div>
+        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column" id="secondary">
+            <div class="content">
+                        <div id="peoplemodule" class="module toggle-wrap">
+    <div class="mod-header">
+        <h3 class="toggle-title">People</h3>
+    </div>
+    <div class="mod-content">
+        <ul class="item-details" id="peopledetails">
+            <li class="people-details">
+                                <dl>
+                    <dt>Assignee:</dt>
+                    <dd id="assignee-val">
+                                <a class="user-hover" rel="yusuke" id="issue_summary_assignee_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                    </dd>
+                </dl>
+                                                <dl>
+                    <dt>Reporter:</dt>
+                    <dd id="reporter-val">
+                                <a class="user-hover" rel="yusuke" id="issue_summary_reporter_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                    </dd>
+                </dl>
+                                            </li>
+        </ul>
+                <div id="votes-val">
+                                        <span id="vote-label" title="You cannot vote or change your vote on resolved issues."><span class="icon icon-vote-disabled"></span><span class="action-text">Vote</span></span>
+                                        (<span id="vote-data">0</span>)
+                    </div>
+                        <div id="watchers-val">
+                            <span id="watch-label" title="You have to be logged in to watch an issue."><span class="icon icon-watch-disabled"></span>Watch</span>
+                            (<span id="watcher-data">0</span>)
+                    </div>
+            </div>
+</div>
+<div id="datesmodule" class="module toggle-wrap">
+    <div class="mod-header">
+        <h3 class="toggle-title">Dates</h3>
+    </div>
+    <div class="mod-content">
+        <ul class="item-details">
+            <li>
+                <dl class="dates">
+                    <dt>Created:</dt>
+                    <dd id="create-date" class="date">23/Jan/10 2:50 PM</dd>
+                </dl>
+                <dl class="dates">
+                    <dt>Updated:</dt>
+                    <dd id="updated-date" class="date">23/Jan/10 3:05 PM</dd>
+                </dl>
+                <dl class="dates">
+                    <dt>Resolved:</dt>
+                    <dd id="resolved-date" class="date">23/Jan/10 3:05 PM</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+<div class="poweredbymessage">
+        <a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+        <span id="footer-build-information" style="color: #666666;">(v4.2#587)</span>
+        | <a href="http://support.atlassian.com/secure/CreateIssue.jspa?issuetype=1&amp;pid=10000">Report a problem</a>
+    </div>
+            <div class="licensemessage">
+                    Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+                </div>
+    </div>
+<form id="jira_request_timing_info" class="dont-default-focus">
+	<fieldset class="hidden">
+		<input type="hidden" name="jira.request.start.millis" value="1288562720530"/>
+		<input type="hidden" name="jira.request.server.time" value="45"/>
+		<input type="hidden" name="jira.session.expiry.time" value="1288566315423"/>
+		<input type="hidden" name="jira.session.expiry.in.mins" value="59"/>
+	</fieldset>
+</form>
+<!--
+	                 REQUEST ID : 425x139724x1
+	          REQUEST TIMESTAMP : [01/Nov/2010:07:05:20 +0900]
+	               REQUEST TIME : 0.0450
+	                 ASESSIONID : aghr6r
+	        CONCURRENT REQUESTS : 1
+-->
+</body>
+</html>

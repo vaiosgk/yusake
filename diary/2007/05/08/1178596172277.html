@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href=".">
+    <title>侍ズム | Samuraism - htmlのセレクト要素をインクリメンタルサーチする bookmarklet</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/../../../../diary/rss.xml"/>
+    <link rel="alternate" type="application/rdf+xml" title="RDF" href="http://yusuke.homeip.net/diary/../../../../diary/rdf.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/../../../../diary/atom.xml"/>
+        <link rel="stylesheet" href="../../../../diary/themes/custom/theme.css" type="text/css"/>
+    <script src="../../../../maps_file_api_v_1_key_ABQIAAAAtS2fi_RnBiuUs4BlVHjt6BRABsBgP8wqQh7kS3FgnXJL7vMCZhRCUVBp4cfEBxevDEQRKjj9DJC-Yg.js" type="text/javascript" charset="UTF-8"></script>
+  <link rel="stylesheet" href="../../../../diary/themes/custom/lightbox/lightbox.css" type="text/css">
+  <script type="text/javascript" src="../../../../diary/themes/custom/lightbox/spica.js"></script>
+<script type="text/javascript" src="../../../../diary/themes/custom/lightbox/lightbox_plus.js"></script>
+    <script type="text/javascript" src="../../../../diary/pebble.js">
+    </script>
+  </head>
+  <body>
+    <div class="bodyContent">
+<div class="header">
+  <div class="search">
+    <form method="post" action="../../../../diary/search.html" accept-charset="UTF-8">
+    <table cellpadding="4" cellspacing="0">
+      <tr>
+        <td align="right">
+          <a href="../../../../diary/today.html">今日</a> |
+          <a href="../../../../diary/rss.xml">RSS</a> |
+          <a href="../../../../diary/rdf.xml">RDF</a> |
+          <a href="../../../../diary/atom.xml">Atom</a> |
+          <a href="../../../../diary/viewFeeds.html">その他</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" align="right">
+          <input type="text" name="query"/>&nbsp;<input type="submit" value="検索"/>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" valign="top">
+          <a href="../../../../diary/search.html">詳細な検索</a>
+        </td>
+      </tr>
+    </table>
+    </form>
+  </div>
+  <div class="blogName">
+    <a href="../../../../diary.html">侍ズム | Samuraism</a>
+  </div>
+  <div class="blogDescription">
+    MacとJavaと映画と
+  </div>
+  <br/>
+    <div id="categories">
+    <a href="../../../../diary/tags.html">タグ</a>
+     - 
+      カテゴリー :
+          <span class="selectedCategory">All</span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Archery.html">アーチェリー</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Car.html">車</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Cooking.html">食べ物</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Fitness.html">Fitness</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Game.html">ゲーム</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Java.html">Java</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Mac.html">Mac</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Misc.html">雑多</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Movie.html">映画</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Photo.html">写真</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Python.html">Python</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Server.html">自宅サーバ</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/Travel.html">旅行・散歩</a></span>
+        |
+            <span class="category"><a href="../../../../diary/categories/gps.html">GPS</a></span>
+  </div>
+</div>
+<div style="text-align: center"><br/>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_alternate_color = "FFFFFF";
+google_ad_width = 728;
+google_ad_height = 15;
+google_ad_format = "728x15_0ads_al";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../../../../pagead/show_ads.js">
+</script>
+</div>
+<div class="sidebar">
+  <!-- google_ad_section_start(weight=ignore) -->
+<div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_alternate_ad_url = "../../../../160x600.html";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "4188DD";
+google_color_text = "4169AA";
+google_color_url = "4169AA";
+//--></script>
+<script type="text/javascript" src="../../../../pagead/show_ads.js">
+</script>
+<center>
+<!-- Start of Flickr Badge -->
+<style type="text/css">
+.zg_div {margin:0px 5px 5px 0px; width:117px;}
+.zg_div_inner {border: solid 1px #000000; background-color:#ffffff;  color:#666666; text-align:center; font-family:arial, helvetica; font-size:11px;}
+.zg_div a, .zg_div a:hover, .zg_div a:visited {color:#3993ff; background:inherit !important; text-decoration:none !important;}
+</style>
+<script type="text/javascript">
+zg_insert_badge = function() {
+var zg_bg_color = 'ffffff';
+var zgi_url = 'http://www.flickr.com/apps/badge/badge_iframe.gne?zg_bg_color='+zg_bg_color+'&zg_person_id=46579916%40N00';
+document.write('<iframe style="background-color:#'+zg_bg_color+'; border-color:#'+zg_bg_color+'; border:none;" width="113" height="151" frameborder="0" scrolling="no" src="'+zgi_url+'" title="Flickr Badge"><\/iframe>');
+if (document.getElementById) document.write('<div id="zg_whatlink"><a href="http://www.flickr.com/badge.gne"	style="color:#3993ff;" onclick="zg_toggleWhat(); return false;">What is this?<\/a><\/div>');
+}
+zg_toggleWhat = function() {
+document.getElementById('zg_whatdiv').style.display = (document.getElementById('zg_whatdiv').style.display != 'none') ? 'none' : 'block';
+document.getElementById('zg_whatlink').style.display = (document.getElementById('zg_whatdiv').style.display != 'none') ? 'none' : 'block';
+return false;
+}
+</script>
+<div class="zg_div"><div class="zg_div_inner"><a href="http://www.flickr.com/">www.<strong style="color:#3993ff">flick<span style="color:#ff1c92">r</span></strong>.com</a><br>
+<script type="text/javascript">zg_insert_badge();</script>
+<div id="zg_whatdiv">This is a Flickr badge showing public photos from <a href="http://www.flickr.com/photos/46579916@N00">Yusuke Yamamoto</a>. Make your own badge <a href="http://www.flickr.com/badge.gne">here</a>.</div>
+<script type="text/javascript">if (document.getElementById) document.getElementById('zg_whatdiv').style.display = 'none';</script>
+</div>
+</div>
+<!-- End of Flickr Badge -->
+</center>
+<!-- SiteSearch Google -->
+<!--form method="get" action="http://www.google.com/custom" target="_top">
+<table border="0" bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+<a href="http://www.google.com/">
+<img src="http://www.google.com/logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+<br/>
+<input type="hidden" name="domains" value="yusuke.homeip.net"></input>
+<input type="text" name="q" size="15" maxlength="255" value=""></input>
+<input type="submit" name="sa" value="検索"></input>
+</td></tr>
+<tr>
+<td nowrap="nowrap">
+<table>
+<tr>
+<td>
+<input type="radio" name="sitesearch" value=""></input>
+<font size="-1" color="#000000">Web</font>
+</td>
+<td>
+<input type="radio" name="sitesearch" value="yusuke.homeip.net" checked="checked"></input>
+<font size="-1" color="#000000">yusuke.homeip.net</font>
+</td>
+</tr>
+</table>
+<input type="hidden" name="client" value="pub-3583922429486444"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="UTF-8"></input>
+<input type="hidden" name="oe" value="UTF-8"></input>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;"></input>
+<input type="hidden" name="hl" value="ja"></input>
+</td></tr></table>
+</form-->
+<!-- SiteSearch Google -->
+  <br/>
+  <br/>
+</div>
+<!-- google_ad_section_end -->
+</div>
+<div class="left">
+  <div>
+    <b>最近のエントリー</b>
+    <br/>
+      <div class="small">
+        <a href="../../../../diary/2008/04/03/1207156999114.html" title="http://yusuke.homeip.net/diary/2008/04/03/1207156999114.html">赤い帽子</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/04/02/1207142982000.html" title="http://yusuke.homeip.net/diary/2008/04/02/1207142982000.html">シンガポール出張 - 2日目</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/04/01/1206976159000.html" title="http://yusuke.homeip.net/diary/2008/04/01/1206976159000.html">シンガポール出張 - 1日目</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/31/1206900148759.html" title="http://yusuke.homeip.net/diary/2008/03/31/1206900148759.html">Mac OSX ネイティブ Twitter クライアント - 夏ライオン</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/29/1206762064076.html" title="http://yusuke.homeip.net/diary/2008/03/29/1206762064076.html">No Country for Old Men</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/26/1206462109479.html" title="http://yusuke.homeip.net/diary/2008/03/26/1206462109479.html">Oracle, MySQL, PostgreSQL, SQL Server それぞれでテーブル一覧を取得する SQL</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/23/1206280250172.html" title="http://yusuke.homeip.net/diary/2008/03/23/1206280250172.html">Click</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/23/1206260180424.html" title="http://yusuke.homeip.net/diary/2008/03/23/1206260180424.html">ア・フュー・グッドメン</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/23/1206201641097.html" title="http://yusuke.homeip.net/diary/2008/03/23/1206201641097.html">トレインスポッティング</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/23/1206201097947.html" title="http://yusuke.homeip.net/diary/2008/03/23/1206201097947.html">アンドリューNDR114</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/21/1206027860962.html" title="http://yusuke.homeip.net/diary/2008/03/21/1206027860962.html">それでも僕はやっていない</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/18/1205770869595.html" title="http://yusuke.homeip.net/diary/2008/03/18/1205770869595.html">帯状疱疹 - かゆみ、水ぶくれにピンと来たらすぐに病院へ！！！</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/04/1204635040040.html" title="http://yusuke.homeip.net/diary/2008/03/04/1204635040040.html">コマンドラインメモ - .svn ディレクトリを再帰的に削除</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/04/1204606922702.html" title="http://yusuke.homeip.net/diary/2008/03/04/1204606922702.html">楽天ファストモバイルサーチ - モバイル検索サービスをリリース</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/02/1204430072151.html" title="http://yusuke.homeip.net/diary/2008/03/02/1204430072151.html">プラダを着た悪魔</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/02/1204386240548.html" title="http://yusuke.homeip.net/diary/2008/03/02/1204386240548.html">魅惑のアフロディーテ</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/01/1204368573658.html" title="http://yusuke.homeip.net/diary/2008/03/01/1204368573658.html">博士の愛した数式</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/01/1204367599645.html" title="http://yusuke.homeip.net/diary/2008/03/01/1204367599645.html">日本以外全部沈没</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/01/1204365920185.html" title="http://yusuke.homeip.net/diary/2008/03/01/1204365920185.html">17歳のカルテ</a>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/02/28/1204164963552.html" title="http://yusuke.homeip.net/diary/2008/02/28/1204164963552.html">JavaScriptメモ - スタイルシート、JavaScript で特定要素の表示/非表示を切り替え</a>
+      </div>
+  </div>
+<br/>
+<br/>
+  <div>
+    <b>最近のレスポンス</b>
+    <br/>
+      <div class="small">
+        <a href="../../../../diary/2008/04/03/1207156999114.html#comment1207708739413" title="http://yusuke.homeip.net/diary/2008/04/03/1207156999114.html#comment1207708739413">Re: 赤い帽子</a>
+        <br/>
+        はいっ。またJavaジャヴァした世界に飛...
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/04/03/1207156999114.html#comment1207663483339" title="http://yusuke.homeip.net/diary/2008/04/03/1207156999114.html#comment1207663483339">Re: 赤い帽子</a>
+        <br/>
+        こんにちは。移籍したのですね。今後ともよ...
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/21/1206027860962.html#comment1207597698817" title="http://yusuke.homeip.net/diary/2008/03/21/1206027860962.html#comment1207597698817">Re: それでも僕はやっていない</a>
+        <br/>
+        映画のタイトルがそれを示唆しているのだと...
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/21/1206027860962.html#comment1207329375079" title="http://yusuke.homeip.net/diary/2008/03/21/1206027860962.html#comment1207329375079">Re: それでも僕はやっていない</a>
+        <br/>
+        わたしもその映画見ました。
+ラストが衝撃かな。。。
+だってHappy Endじゃないんだもーん。
+でも良質。たしかに役所広司はかっこいい！
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/21/1206027860962.html#comment1206088646086" title="http://yusuke.homeip.net/diary/2008/03/21/1206027860962.html#comment1206088646086">Re: それでも僕はやっていない</a>
+        <br/>
+        確かに、ラストの落としどころは良いですね...
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/21/1206027860962.html#comment1206057921432" title="http://yusuke.homeip.net/diary/2008/03/21/1206027860962.html#comment1206057921432">Re: それでも僕はやっていない</a>
+        <br/>
+        ボクもこないだ観たよ～。
+いや～、怖いね、満員電車。
+ラストシーンが好きだったね～。小日向文世...
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/18/1205770869595.html#comment1205828636622" title="http://yusuke.homeip.net/diary/2008/03/18/1205770869595.html#comment1205828636622">Re: 帯状疱疹</a>
+        <br/>
+        おぉ、聞いたことないけれども何かとかかっ...
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/18/1205770869595.html#comment1205809762943" title="http://yusuke.homeip.net/diary/2008/03/18/1205770869595.html#comment1205809762943">Re: 帯状疱疹</a>
+        <br/>
+        家のカミサンもなったことがあります。
+早くよくなるといいですね。
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/18/1205770869595.html#comment1205806125252" title="http://yusuke.homeip.net/diary/2008/03/18/1205770869595.html#comment1205806125252">Re: 帯状疱疹</a>
+        <br/>
+        うーん、仲間がいると思うと気が休まります...
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../../../../diary/2008/03/18/1205770869595.html#comment1205805567448" title="http://yusuke.homeip.net/diary/2008/03/18/1205770869595.html#comment1205805567448">Re: 帯状疱疹</a>
+        <br/>
+        聞いたことなかったですけど、結構かかる人...
+      </div>
+  </div>
+  <div class="calendar"><table width="100%"><tr><td colspan="7" align="center"><b><a href="../../../../diary/2007/05.html">5月 2007</a></b></td></tr><tr><td class="calendarDayHeader" width="14%">日</td><td class="calendarDayHeader" width="14%">月</td><td class="calendarDayHeader" width="14%">火</td><td class="calendarDayHeader" width="14%">水</td><td class="calendarDayHeader" width="14%">木</td><td class="calendarDayHeader" width="14%">金</td><td class="calendarDayHeader" width="14%">土</td></tr><tr><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;1&nbsp;</td><td class="calendarDay">&nbsp;2&nbsp;</td><td class="calendarDay">&nbsp;3&nbsp;</td><td class="calendarDay">&nbsp;4&nbsp;</td><td class="calendarDay">&nbsp;5&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;6&nbsp;</td><td class="calendarDay">&nbsp;7&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="/">8</a>&nbsp;</td><td class="calendarDay">&nbsp;9&nbsp;</td><td class="calendarDay">&nbsp;10&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2007/05/11.html">11</a>&nbsp;</td><td class="calendarDay">&nbsp;12&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;13&nbsp;</td><td class="calendarDay">&nbsp;14&nbsp;</td><td class="calendarDay">&nbsp;15&nbsp;</td><td class="calendarDay">&nbsp;16&nbsp;</td><td class="calendarDay">&nbsp;17&nbsp;</td><td class="calendarDay">&nbsp;18&nbsp;</td><td class="calendarDay">&nbsp;19&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;20&nbsp;</td><td class="calendarDay">&nbsp;21&nbsp;</td><td class="calendarDay">&nbsp;22&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2007/05/23.html">23</a>&nbsp;</td><td class="calendarDay">&nbsp;24&nbsp;</td><td class="calendarDay">&nbsp;25&nbsp;</td><td class="calendarDay">&nbsp;26&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;27&nbsp;</td><td class="calendarDay">&nbsp;28&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2007/05/29.html">29</a>&nbsp;</td><td class="calendarDay">&nbsp;30&nbsp;</td><td class="calendarDay">&nbsp;31&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td></tr><tr><td colspan="7" align="center"><a href="../../../../diary/2007/04.html">4</a>&nbsp; | &nbsp;<a href="/">今日</a>&nbsp; | &nbsp;<a href="../../../../diary/2007/06.html">6</a></td></tr></table></div>
+<br/>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = "120x600_as";
+google_cpa_choice = "CAEaCAMRRli4OpNPUAhQBVC3A1A0UC0";
+//-->
+</script>
+<script type="text/javascript" src="../../../../pagead/show_ads.js">
+</script>
+<br/>
+<br/>
+<a href="http://www.beasys.co.jp/service/service/certified_prog.html"><img border="0" src="../../../../diary/images/web.gif"/></a>
+<br/>
+<br/>
+<a href="http://b.hatena.ne.jp/entrylist?url=http://yusuke.homeip.net/"><img src="http://b.hatena.ne.jp/bc/http://yusuke.homeip.net/" class="bcounter" alt="はてなブックマーク数" title="はてなブックマーク数"></a>
+<br/>
+<br/>
+<a href="http://awasete.com/show.phtml?u=http%3A%2F%2Fyusuke.homeip.net%2Fdiary%2F"><img src="http://img.awasete.com/image.phtml?u=http%3A%2F%2Fyusuke.homeip.net%2Fdiary%2F" width="160" height="140" alt="あわせて読みたい" border="0"></a>
+<br>
+<br>
+<div style="width:176px;text-align:center"><embed src="../../../../flash/twitter_badge.swf" flashvars="color1=10079487&amp;type=user&amp;id=4933401" quality="high" width="176" height="176" name="twitter_badge" align="middle" allowscriptaccess="always" wmode="transparent" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"/><br><a style="font-size: 10px; color: #99CCFF; text-decoration: none" href="http://twitter.com/yusukey">follow yusukey at http://twitter.com</a></div>
+<br>
+<br>
+<!-- nakanohito -->
+<script language="Javascript">
+<!--
+var refer = document.referrer;
+document.write("<a href='http://nakanohito.jp/'>");
+document.write("<img src='http://nakanohito.jp/an/?u=102598&h=397829&w=160&refer="+escape(parent.document.referrer)+"&url="+escape(parent.document.URL)+"' border='0' width='160' height='160' />");
+document.write("</a>");
+//-->
+</script>
+<noscript>
+<img src="../../../../an/_u_102598_h_397829_w_160.jpg" width="160" height="160" alt="Map" border="0"/>
+</noscript>
+<!-- nakanohito end -->
+</center>
+</div>
+<div class="content">
+<div class="linearNavigationLinks">
+    &lt;&lt; <a href="../../../../diary/2007/04/27/1177639042618.html">Parallels Virtual Appliances Directory</a> |
+  <a href="../../../../diary.html">Home</a>
+    | <a href="../../../../diary/2007/05/11/1178863089965.html">SQL Server メモ - テーブル名一覧を取得する</a> &gt;&gt;
+</div>
+<div class="blogEntry approved">
+  <div class="blogEntryHeader">
+    <span class="blogEntryLinks">
+      <a href="../../../../diary/2007/05/08/1178596172277.html" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html">固定リンク</a> 
+        [<a href="../../../../diary/categories/Misc.html">雑多</a>]
+    </span>
+    <span class="blogEntryTitle">
+    <a href="../../../../diary/2007/05/08/1178596172277.html" name="a1178596172277" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html">htmlのセレクト要素をインクリメンタルサーチする bookmarklet</a>
+    </span>
+    <br/>
+    <span class="blogEntrySubtitle">
+    </span>
+  </div>
+  <div class="blogEntryBody">
+<div class="ad_center"><script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 250;
+google_ad_height = 250;
+google_ad_format = "250x250_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "994400";
+google_color_bg = "FFFFFF";
+google_color_link = "443300";
+google_color_text = "994400";
+google_color_url = "994400";
+google_ui_features = "rc:10";
+//-->
+</script>
+<script type="text/javascript" src="../../../../pagead/show_ads.js">
+</script></div>
+        <p>Webのフォームで非常に多くの選択肢があるプルダウンリスト、またはリストボックスから目的のアイテムを選択するのは非常に面倒です。<br/>残念ながら私の会社のとある社内システムでoption数が800を超えるリストから選択しなければいけない部分があり、非常に苦痛です。<br/><br/>エクスプローラ や Finder のファイルを選択するのと同じく、表示されているテキストの先頭数文字を入力することでその文字列から始まるリストにジャンプしてくれるブラウザもあります。<br/>しかし、<br/>・テキストの途中の文字列で絞り込めない<br/>・リストが辞書順に並んでいないと似ているアイテムを選択するのが難しい<br/>・タイプが遅いとうまく絞り込めない<br/>・Safari にはそもそもそんな機能がない<br/>・日本語表示のアイテムにはジャンプできない<br/>という問題があります。<br/><br/>そこでリストをインクリメンタルサーチできるテキストボックスをダイナミックに追加してくれる bookmarklet を作ってみました。<br/><br/><a href="#"></a><br/>動作をわかりやすく（？）マンガに。<br/><br/>あらかじめ下のリンクをブックマークしておき、目的のフォームを表示した状態でブックマークをクリックすると絞り込みボックスが現れます。<br/>なお、絞り込みを行うと選択状態が解けてしまうので注意してください。<br/><br/>・<a href="javascript:(function (){var q=String.fromCharCode(39);var s=document.getElementsByTagName('SELECT');for(var i=0;i<s.length;i++){ var a = document.createElement('div');s[i].parentNode.insertBefore(a,s[i].nextSibling);a.innerHTML='<input onkeyup=&quot;var s=document.getElementsByTagName('+q+'SELECT'+q+')['+i+'];if(!s.a){var original=s.options;s.a=new Array(original.length);for(var i=0;i<s.a.length;i++){s.a[i]=s.options.item(i);}}s.length=0;for(var i=0;i<s.a.length;i++){if(-1!=(s.a[i].text).toLowerCase().indexOf(this.value)){s[s.length]=s.a[i];}}if(this.value.length==0){s.a=null};&quot;>';}})()">Option Filter</a> &lt;-クリックすると動作を確認できます(RSSリーダ上では不可)<br/><form><br/><select id="sel" size="5"><br/><option value="hoge">type<br/><option value="foo">to<br/><option value="bar">refine<br/></select><br/><select><br/><option value="0">United States</option><br/><option value="1">Aland</option><br/><option value="2">Albania</option><br/><option value="3">Algeria</option><br/><option value="4">American Samoa</option><br/><option value="5">Andorra</option><br/><option value="6">Angola</option><br/><option value="7">Anguilla</option><br/><option value="8">Antarctica</option><br/><option value="9">Antigua And Barbuda</option><br/><option value="10">Argentina</option><br/><option value="11">Armenia</option><br/><option value="12">Aruba</option><br/><option value="13">Australia</option><br/><option value="14">Austria</option><br/><option value="15">Azerbaijan</option><br/><option value="16">Bahamas</option><br/><option value="17">Bahrain</option><br/><option value="18">Bangladesh</option><br/><option value="19">Barbados</option><br/><option value="20">Belarus</option><br/><option value="21">Belgium</option><br/><option value="22">Belize</option><br/><option value="23">Benin</option><br/><option value="24">Bermuda</option><br/><option value="25">Bhutan</option><br/><option value="26">Bolivia</option><br/><option value="27">Bosnia And Herzegovina</option><br/><option value="28">Botswana</option><br/><option value="29">Bouvet Island</option><br/><option value="30">Brazil</option><br/><option value="31">British Indian Ocean Territory</option><br/><option value="32">Brunei Darussalam</option><br/><option value="33">Bulgaria</option><br/><option value="34">Burkina Faso</option><br/><option value="35">Burundi</option><br/><option value="36">Cambodia</option><br/><option value="37">Cameroon</option><br/><option value="38">Canada</option><br/><option value="39">Canary Islands</option><br/><option value="40">Cape Verde</option><br/><option value="41">Cayman Islands</option><br/><option value="42">Central African Republic</option><br/><option value="43">Chad</option><br/><option value="44">Chile</option><br/><option value="45">China</option><br/><option value="46">Christmas Island</option><br/><option value="47">Cocos (Keeling) Islands</option><br/><option value="48">Colombia</option><br/><option value="49">Comorian</option><br/><option value="50">Congo</option><br/><option value="51">Congo (Democratic Republic)</option><br/><option value="52">Cook Islands</option><br/><option value="53">Costa Rica</option><br/><option value="54">Cote D'Ivoire</option><br/><option value="55">Croatia</option><br/><option value="56">Cyprus</option><br/><option value="57">Czech Republic</option><br/><option value="58">Denmark</option><br/><option value="59">Djibouti</option><br/><option value="60">Dominica</option><br/><option value="61">Dominican Republic</option><br/><option value="62">East Timor</option><br/><option value="63">Ecuador</option><br/><option value="64">Egypt</option><br/><option value="65">El Salvador</option><br/><option value="66">Equatorial Guinea</option><br/><option value="67">Eritrea</option><br/><option value="68">Estonia</option><br/><option value="69">Ethiopia</option><br/><option value="70">Falkland Islands (Malvinas)</option><br/><option value="71">Faroe Islands</option><br/><option value="72">Fiji</option><br/><option value="73">Finland</option><br/><option value="74">France</option><br/><option value="75">French Guiana</option><br/><option value="76">French Polynesia</option><br/><option value="77">French Southern Territories</option><br/><option value="78">Gabon</option><br/><option value="79">Gambia</option><br/><option value="80">Georgia, Republic of</option><br/><option value="81">Germany</option><br/><option value="82">Ghana</option><br/><option value="83">Gibraltar</option><br/><option value="84">Greece</option><br/><option value="85">Greenland</option><br/><option value="86">Grenada</option><br/><option value="87">Guadeloupe</option><br/><option value="88">Guam</option><br/><option value="89">Guatemala</option><br/><option value="90">Guernsey</option><br/><option value="91">Guinea</option><br/><option value="92">Guinea-Bissau</option><br/><option value="93">Guyana</option><br/><option value="94">Haiti</option><br/><option value="95">Heard And Mc Donald Islands</option><br/><option value="96">Honduras</option><br/><option value="97">Hong Kong</option><br/><option value="98">Hungary</option><br/><option value="99">Iceland</option><br/><option value="100">India</option><br/><option value="101">Indonesia</option><br/><option value="102">Iraq</option><br/><option value="103">Ireland</option><br/><option value="104">Isle of Man</option><br/><option value="105">Israel</option><br/><option value="106">Italy</option><br/><option value="107">Jamaica</option><br/><option value="108">Japan</option><br/><option value="109">Jersey</option><br/><option value="110">Jordan</option><br/><option value="111">Kazakhstan</option><br/><option value="112">Kenya</option><br/><option value="113">Kiribati</option><br/><option value="114">Korea, Democratic People's Rep</option><br/><option value="115">Korea, Republic Of</option><br/><option value="116">Kuwait</option><br/><option value="117">Kyrgyzstan</option><br/><option value="118">Lao People'S Democratic R. Of</option><br/><option value="119">Latvia</option><br/><option value="120">Lebanon</option><br/><option value="121">Lesotho</option><br/><option value="122">Liberia</option><br/><option value="123">Liechtenstein</option><br/><option value="124">Lithuania</option><br/><option value="125">Luxembourg</option><br/><option value="126">Macau</option><br/><option value="127">Macedonia</option><br/><option value="128">Madagascar</option><br/><option value="129">Malawi</option><br/><option value="130">Malaysia</option><br/><option value="131">Maldives</option><br/><option value="132">Mali</option><br/><option value="133">Malta</option><br/><option value="134">Marshall Islands</option><br/><option value="135">Martinique</option><br/><option value="136">Mauritania</option><br/><option value="137">Mauritius</option><br/><option value="138">Mayotte</option><br/><option value="139">Mexico</option><br/><option value="140">Micronesia</option><br/><option value="141">Moldova, Republic of</option><br/><option value="142">Monaco</option><br/><option value="143">Mongolia</option><br/><option value="144">Montserrat</option><br/><option value="145">Morocco</option><br/><option value="146">Mozambique</option><br/><option value="147">Myanmar</option><br/><option value="148">Namibia</option><br/><option value="149">Nauru</option><br/><option value="150">Nepal</option><br/><option value="151">Netherlands</option><br/><option value="152">Netherlands Antilles</option><br/><option value="153">New Caledonia</option><br/><option value="154">New Zealand</option><br/><option value="155">Nicaragua</option><br/><option value="156">Niger</option><br/><option value="157">Nigeria</option><br/><option value="158">Niue</option><br/><option value="159">Norfolk Island</option><br/><option value="160">Northern Mariana Islands</option><br/><option value="161">Norway</option><br/><option value="162">Oman</option><br/><option value="163">Pakistan</option><br/><option value="164">Palau</option><br/><option value="165">Palestinian Territory</option><br/><option value="166">Panama</option><br/><option value="167">Papua New Guinea</option><br/><option value="168">Paraguay</option><br/><option value="169">Peru</option><br/><option value="170">Philippines</option><br/><option value="171">Pitcairn</option><br/><option value="172">Poland</option><br/><option value="173">Portugal</option><br/><option value="174">Puerto Rico</option><br/><option value="175">Qatar</option><br/><option value="176">Reunion</option><br/><option value="177">Romania</option><br/><option value="178">Russia</option><br/><option value="179">Rwanda</option><br/><option value="180">S Georgia & The S Sandwich Isl</option><br/><option value="181">Saint Kitts And Nevis</option><br/><option value="182">Saint Lucia</option><br/><option value="183">Saint Vincent & The Grenadines</option><br/><option value="184">San Marino</option><br/><option value="185">Sao Tome And Principe</option><br/><option value="186">Saudi Arabia</option><br/><option value="187">Scotland</option><br/><option value="188">Senegal</option><br/><option value="189">Seychelles</option><br/><option value="190">Sierra Leone</option><br/><option value="191">Singapore</option><br/><option value="192">Slovakia</option><br/><option value="193">Slovenia</option><br/><option value="194">Solomon Islands</option><br/><option value="195">Somalia</option><br/><option value="196">South Africa</option><br/><option value="197">Spain</option><br/><option value="198">Sri Lanka</option><br/><option value="199">St. Helena</option><br/><option value="200">St. Pierre And Miquelon</option><br/><option value="201">Suriname</option><br/><option value="202">Svalbard And Jan Mayen Islands</option><br/><option value="203">Swaziland</option><br/><option value="204">Sweden</option><br/><option value="205">Switzerland</option><br/><option value="206">Taiwan</option><br/><option value="207">Tajikistan</option><br/><option value="208">Tanzania, United Republic Of</option><br/><option value="209">Thailand</option><br/><option value="210">Togo</option><br/><option value="211">Tokelau</option><br/><option value="212">Tonga</option><br/><option value="213">Trinidad And Tobago</option><br/><option value="214">Tunisia</option><br/><option value="215">Turkey</option><br/><option value="216">Turkmenistan</option><br/><option value="217">Turks And Caicos Islands</option><br/><option value="218">Tuvalu</option><br/><option value="219">Uganda</option><br/><option value="220">Ukraine</option><br/><option value="221">United Arab Emirates</option><br/><option value="222">United Kingdom</option><br/><option value="223">United States</option><br/><option value="224">United States Minor Outlying</option><br/><option value="225">Uruguay</option><br/><option value="226">Uzbekistan</option><br/><option value="227">Vanuatu</option><br/><option value="228">Vatican City State (Holy See)</option><br/><option value="229">Venezuela</option><br/><option value="230">Viet Nam</option><br/><option value="231">Virgin Islands (British)</option><br/><option value="232">Virgin Islands (U.S.)</option><br/><option value="233">Wallis And Futuna Islands</option><br/><option value="234">Western Sahara</option><br/><option value="235">Yemen</option><br/><option value="236">Yugoslavia</option><br/><option value="237">Zambia</option><br/><option value="238">Zimbabwe</option><br/></select><br/><select id="sel" size="5"><br/><option value="hoge">you<br/><option value="foo">can<br/><option value="bar">filter<br/><option value="bar">incremantally<br/></select><br/><select id="sel" size="5"><br/><option value="hoge">日本語の<br/><option value="foo">リストも<br/><option value="bar">絞り込み<br/><option value="bar">できるよ<br/></select> <br></form><br/>長さ制限を超えているため IE6 では使えません。IE7では長さ制限には引っかかっていないはずですがテストしていません。<br/>Safari, Firefox でのみ動作確認しています。<br/></p>
+  </div>
+  <div class="blogEntryMetadata">
+    <span class="floatRight">
+        <a href="../../../../diary/2007/05/08/1178596172277.html#trackbacks">トラックバック[0]</a>
+        <a href="../../../../diary/2007/05/08/1178596172277.html#comments">コメント[5]</a>
+    </span>
+    <form action="../../../../diary/modifyBlogEntryDate.html" method="GET">
+    投稿者 yusuke : 2007/05/08 12:49:32 JST
+</form>
+</div>
+    <br/>
+    <a name="comments"></a>
+          <div class="itemBodyOdd" style="padding-left: 16px; padding-top: 16px; padding-bottom: 16px; padding-right: 16px">
+<div class="comment approved">
+  <div class="commentHeader">
+    <span class="commentLinks">
+      <a href="/#form">返信</a> |
+      <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178623971346" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178623971346">固定リンク</a>
+    </span>
+    <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178623971346" name="comment1178623971346" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178623971346">Re: htmlのセレクト要素をインクリメンタルサーチする bookmarklet</a>
+  </div>
+  <div class="commentBody">
+    面白いことが出来るもんだねぇ。
+  </div>
+  <div class="commentMetadata">
+    投稿者 <a href="http://kdaiji.jugem.cc/" target="_blank" title="http://kdaiji.jugem.cc/" rel="nofollow">Danny</a> : 2007/05/08 20:32:51 JST
+  </div>
+</div>
+          </div>
+          <div class="itemBodyEven" style="padding-left: 16px; padding-top: 16px; padding-bottom: 16px; padding-right: 16px">
+<div class="comment approved">
+  <div class="commentHeader">
+    <span class="commentLinks">
+      <a href="/#form">返信</a> |
+      <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178792726257" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178792726257">固定リンク</a>
+    </span>
+    <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178792726257" name="comment1178792726257" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178792726257">Re: htmlのセレクト要素をインクリメンタルサーチする bookmarklet</a>
+  </div>
+  <div class="commentBody">
+    社内システムでンガー！となってウゲー！と作ってしまいました。まぁ、良ければ使ってください。
+  </div>
+  <div class="commentMetadata">
+    投稿者 Yusuke : 2007/05/10 19:25:26 JST
+  </div>
+</div>
+          </div>
+          <div class="itemBodyOdd" style="padding-left: 16px; padding-top: 16px; padding-bottom: 16px; padding-right: 16px">
+<div class="comment approved">
+  <div class="commentHeader">
+    <span class="commentLinks">
+      <a href="/#form">返信</a> |
+      <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178834385343" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178834385343">固定リンク</a>
+    </span>
+    <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178834385343" name="comment1178834385343" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178834385343">Re: htmlのセレクト要素をインクリメンタルサーチする bookmarklet</a>
+  </div>
+  <div class="commentBody">
+    凄い便利ですね！
+画面系のデモを作る機会が有れば活用させて頂きます。
+  </div>
+  <div class="commentMetadata">
+    投稿者 NUMA : 2007/05/11 6:59:45 JST
+  </div>
+</div>
+          </div>
+          <div class="itemBodyEven" style="padding-left: 32px; padding-top: 16px; padding-bottom: 16px; padding-right: 16px">
+<div class="comment approved">
+  <div class="commentHeader">
+    <span class="commentLinks">
+      <a href="/#form">返信</a> |
+      <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178837378649" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178837378649">固定リンク</a>
+    </span>
+    <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178837378649" name="comment1178837378649" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178837378649">Re: htmlのセレクト要素をインクリメンタルサーチする bookmarklet</a>
+  </div>
+  <div class="commentBody">
+    どうぞどうぞ！bookmarkletじゃなくて最初から組み込んじゃってください！
+  </div>
+  <div class="commentMetadata">
+    投稿者 Yusuke : 2007/05/11 7:49:38 JST
+  </div>
+</div>
+          </div>
+          <div class="itemBodyOdd" style="padding-left: 16px; padding-top: 16px; padding-bottom: 16px; padding-right: 16px">
+<div class="comment approved">
+  <div class="commentHeader">
+    <span class="commentLinks">
+      <a href="/#form">返信</a> |
+      <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178921958926" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178921958926">固定リンク</a>
+    </span>
+    <a href="../../../../diary/2007/05/08/1178596172277.html#comment1178921958926" name="comment1178921958926" title="http://yusuke.homeip.net/diary/2007/05/08/1178596172277.html#comment1178921958926">Re: htmlのセレクト要素をインクリメンタルサーチする bookmarklet</a>
+  </div>
+  <div class="commentBody">
+    面白い Commic Life の使い方ですね。次のトレーニングで使ってみようかなー
+  </div>
+  <div class="commentMetadata">
+    投稿者 akr : 2007/05/12 7:19:18 JST
+  </div>
+</div>
+          </div>
+    <a name="trackbacks"></a>
+      <br/>
+      <br/>
+      <div class="blogEntryBody"><a name="form"></a>
+<div>
+<b>コメント追加</b>
+<br/><br/>
+<form name="addComment" action="/#form" method="POST" accept-charset="UTF-8">
+<input type="hidden" name="entry" value="1178596172277">
+<input type="hidden" name="parent" value="">
+<table width="99%">
+  <tr>
+    <td valign="top"><b>タイトル</b></td>
+    <td><input type="text" name="title" size="40" value="Re: htmlのセレクト要素をインクリメンタルサーチする bookmarklet"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>本文</b></td>
+    <td>
+      <textarea name="body" rows="8" cols="40"></textarea>
+      <div class="small"><b>HTML</b> : b, i, blockquote, br, p, pre, a href="", ul, ol, li</div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>名前</b></td>
+    <td><input type="text" name="author" size="40" value="Anonymous"></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>E-mail</b></td>
+    <td>
+      <input type="text" name="email" size="40" value="">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Webサイト</b></td>
+    <td><input type="text" name="website" size="40" value=""></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>保存しますか?</b></td>
+    <td>
+      はい&nbsp;
+      <input type="radio" name="rememberMe" value="true"/>
+      いいえ&nbsp;<input type="radio" name="rememberMe" value="false" checked="checked"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <p>
+      <b>E-mailは公開されません</b>, このエントリーの新規コメント通知が必要なら記入します。(解除可能)
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right">
+      <input name="submit" type="submit" onclick="this.form.action='noSpamAddComment.action#form'" value="プレビュー"/>
+      <input name="submit" type="submit" onclick="this.form.action='noSpamAddComment.action#form'" value="コメント投稿"/>
+      <noscript>JavaScript ÇóLå¯Ç…ÇµÇƒÇ¢Ç»Ç¢ÉuÉâÉEÉUÇ≈ÇÕìäçeèoóàÇ‹ÇπÇÒÅB</noscript>
+    </td>
+  </tr>
+</table>
+</form>
+</div>
+</div>
+      <div class="small" style="text-align: center">トラックバックURL http://yusuke.homeip.net/diary/<script>document.write('noSpamAddTrackBack');</script>.action?entry=1178596172277</div>
+      <br/>
+</div>
+</div>
+<div class="footer">
+  <span class="footerLinks">
+    Powered by <a href="http://pebble.sourceforge.net/"><b>Pebble 1.9</b></a>
+    [
+        <a href="../../../../diary/login.html">ログイン</a>
+    ]
+  </span>
+  <span>
+    Content (c) yusuke
+  </span>
+</div>
+    </div>
+<script src="../../../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+  </body>
+</html>

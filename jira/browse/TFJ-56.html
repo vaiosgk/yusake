@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>[#TFJ-56] TwitterResponse from AsyncTwitter is not Serializable - JIRA </title>
+    <meta content="issuesummary" name="decorator"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/s/333/1/_/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/s/333/1/_/images/icons/favicon.png">
+<link rel="stylesheet" type="text/css" media="print" href="../../jira/s/333/1/_/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/333/1/_/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/333/1/3/_/styles/global.css"/>
+    <script language="JavaScript" type="text/javascript" src="../../jira/s/333/1/_/includes/js/combined-javascript.js"></script>
+<script type="text/javascript" src="../../jira/s/333/1/1.0/_/download/resources/jira.webresources_yui/yahoo-dom-event-min.js"></script>
+<script type="text/javascript" src="../../jira/s/333/1/1.0/_/download/resources/jira.webresources_yui-container/connection.js"></script>
+<script type="text/javascript" src="../../jira/s/333/1/1.0/_/download/resources/jira.webresources_yui-container/container.js"></script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/333/1/1.0/_/download/resources/jira.webresources_yui-container/container.css" media="all"/>
+<script type="text/javascript" src="../../jira/s/333/1/1.0/_/download/resources/jira.webresources_json/json.js"></script>
+<script type="text/javascript" src="../../jira/s/333/1/1.0/_/download/resources/jira.webresources_jira-menubutton/menubutton-widget.js"></script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/333/1/1.0/_/download/resources/jira.webresources_jira-menubutton/menubutton-widget.css" media="all"/>
+</head>
+<body bgcolor="#f0f0f0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#003366" vlink="#003366" alink="#660000">
+<div id="header">
+    <div id="header-top">
+            <a id="logo" href="../../jira/secure/Dashboard.html">
+                        </a>
+            <ul id="account-options">
+                <li>
+                                    <a class="dropdownmenu" id="user_history" title="View and open your recently viewed issues" href="../../jira/secure/RecentIssueHistory.html" onclick="return false;"><span>History</span></a>
+                <script type="text/javascript">
+                    YAHOO.util.Event.addListener(window, 'load', function() { new jira.widget.MenuButton('user_history','/jira/secure/RecentIssueHistory.jspa', '/jira')});
+                </script>
+                            </li>
+            <li>
+                    <a rel="nofollow" href="/">Log In</a>
+                </li>
+                <li class="icon">
+                    <a rel="nofollow" href="/"></a>
+                </li>
+            <li class="icon">
+                    <a class="helpLink" href="http://www.atlassian.com/software/jira/docs/v3.13/index.html?clicked=jirahelp" target="_jirahelp">
+        </a>
+                </li>
+    </ul>
+    </div>
+    <div id="menu">
+        <ul id="main-nav">
+        <li>
+        <a href="../../jira/secure/Dashboard.html" id="home_link" title="A configurable overview of JIRA" accesskey="h"><u>h</u>ome</a>
+    </li>
+        <li>
+        <a href="../../jira/secure/BrowseProject.html" id="browse_link" title="Browse currently active project 'Twitter4J'" accesskey="b"><u>b</u>rowse project</a>
+    </li>
+        <li>
+        <a href="../../jira/secure/IssueNavigator.html" id="find_link" title="Find issues in the projects you have permissions to view" accesskey="f"><u>f</u>ind issues</a>
+    </li>
+    </ul>
+                <form id="quicksearch" action="../../jira/secure/QuickSearch.html" method="post">
+            <label onclick="quickSearchTextBoxSetFocus();" onmouseover="showToolTip()" onmouseout="hideToolTip()">&nbsp; &nbsp;<u>Q</u>uick Search:</label>
+            <input id="quickSearchInput" class="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." type="text" size="25" name="searchString" accesskey="q" valign="absmiddle"/>
+        </form>
+        <div onmouseover="recordInTip()" onmouseout="recordOutTip()" id="quicksearchhelp" class="informationBox" style="display: none; text-align: center; width: 20em; position: absolute; top: 55px; right: 10px; padding: 0.5em;">
+                        Learn more about <a href="http://www.atlassian.com/software/jira/docs/v3.13/quicksearch.html?clicked=jirahelp" target="_jirahelp">Quick Search</a>
+        </div>
+            </div>
+</div>
+<!--This should always be included as it is not part of a themable plugin, instead it is core functionality-->
+<div class="alertHeader">
+<script src="../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td width="200" bgcolor="#f0f0f0" valign="top">
+            <table cellpadding="0" cellspacing="0" border="0" width="200">
+<tr><td>
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+    <tr><td bgcolor="dddddd">
+        <span style="float:left"><b>Issue Details</b></span>
+        <span class="small" style="float:right">
+                                        (<a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-xml/TFJ-56/TFJ-56.xml">XML</a> | <a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-word/TFJ-56/TFJ-56.doc">Word</a> | <a rel="nofollow" class="small" href="/">Printable</a>)
+                    </span>
+    </td></tr>
+    </table>
+                        <br>
+                <table id="issuedetails" cellpadding="3" cellspacing="0" border="0">
+            <tr>
+                <td valign="top"><b>Key:</b></td>
+                <td valign="top">
+                    <b><a id="issue_key_TFJ-56" href="../../jira/browse/TFJ-56.html">TFJ-56</a></b>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Type:</b></td>
+                <td valign="top">
+             Bug
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Status:</b></td>
+                <td valign="top">
+             Closed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Resolution:</b></td>
+                <td valign="top">
+                                             Fixed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Priority:</b></td>
+                <td valign="top">
+             Major
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Assignee:</b></td>
+                <td valign="top">
+                            <a id="issue_summary_assignee_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Reporter:</b></td>
+                <td valign="top">
+                            <a id="issue_summary_reporter_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Votes:</b></td>
+                <td valign="top">
+                                                                        0
+                                                            </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Watchers:</b></td>
+                <td valign="top">
+                                                                                    0
+                                    </td>
+            </tr>
+                    </table>
+                <div class="operations">
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+        <tr><td bgcolor="dddddd">
+            <b>Operations</b>
+        </td></tr>
+        </table>
+        <br>
+        <table cellpadding="3" cellspacing="0" border="0" id="operationsSection">
+                    <tr><td class="issueOperation lazyOperation">
+                If you were <a rel="nofollow" href="/">logged in</a> you would be able to see more operations.
+            </td></tr>
+                </table>
+        </div>
+            </td></tr>
+</table>
+        </td>
+        <td bgcolor="#ffffff" valign="top">
+            <div style="padding:10px 10px 10px 10px" id="issueContent">
+                <style type="text/css">
+<!--
+.fieldArea .fieldLabelArea { width: 10%; }
+.fieldArea .fieldValueArea { width: 90%; }
+#pinCommentContainer { float: right; font-size: 10px; }
+#pinCommentContainer a { margin: 0 0.2em; }
+-->
+</style>
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="#bbbbbb" width="100%" align="center">
+<tr><td width="100%" colspan="2" valign="top">
+<table id="issue_header" cellpadding="4" cellspacing="0" border="0" width="100%" bgcolor="#ffffff">
+<tr>
+    <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr><td bgcolor="#f0f0f0" width="80%" valign="top">
+            <b><a href="../../jira/browse/TFJ.html">
+                Twitter4J</a></b><br>
+            <h3 class="formtitle"> TwitterResponse from AsyncTwitter is not Serializable</h3>
+            <font size="1">
+                Created: <span class="date">21/Nov/08 01:59 AM</span> &nbsp;
+                Updated: <span class="date">22/Nov/08 11:31 AM</span>
+            </font>
+        </td>
+        </tr></table>
+</tr>
+        <tr>
+            <td width="20%"><b>Component/s:</b></td>
+            <td width="80%">
+        <a href="../../jira/browse/TFJ/component/10003.html" title="Core ">Core</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Affects Version/s:</b></td>
+            <td width="80%">
+    None
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Fix Version/s:</b></td>
+            <td width="80%">
+        <a href="../../jira/browse/TFJ/fixforversion/10110.html" title="1.1.1 ">1.1.1</a>
+            </td>
+        </tr>
+</table>
+</td></tr></table>
+<br>
+<br>
+<div id="description-open">
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	<td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+	</td>
+    <td align="right"><a href="" onclick="toggleDivsWithCookie('description-closed', 'description-open'); return false;" class="smallgrey">&laquo; Hide</a></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+	<td id="descriptionArea">
+        <div id="description_full">
+            <a href="http://groups.google.com/group/twitter4j/browse_thread/thread/a50031643cedfc0">http://groups.google.com/group/twitter4j/browse_thread/thread/a50031643cedfc0</a>
+<br/>
+---------
+<br/>
+java.io.NotSerializableException: twitter4j.Dispatcher
+<br/>
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1081)
+<br/>
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1375)
+<br/>
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1347)
+<br/>
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1290)
+<br/>
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1079)
+<br/>
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1375)
+<br/>
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1347)
+<br/>
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1290)
+<br/>
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1079)
+<br/>
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1375)
+<br/>
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1347)
+<br/>
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1290)
+<br/>
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1079)
+<br/>
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:302)
+<br/>
+	at java.util.ArrayList.writeObject(ArrayList.java:569)
+<br/>
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br/>
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br/>
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:917)
+<br/>
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1339)
+<br/>
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1290)
+<br/>
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1079)
+<br/>
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:302)
+<br/>
+	at twitter4j.AsyncTwitterTestUnit.trySerializable(AsyncTwitterTestUnit.java:348)
+<br/>
+	at twitter4j.AsyncTwitterTestUnit.testGetPublicTimeline(AsyncTwitterTestUnit.java:183)
+<br/>
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+<br/>
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+<br/>
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:40)
+<br/>
+------------<br/>
+        </div>
+    </td>
+</tr>
+</table>
+</div>
+<div id="description-closed" style="display:none;">
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center" class="table-layout: fixed;">
+<tr>
+	<td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+	</td>
+    <td style="padding: 1px; margin: 0px; border-bottom: #bbb 1px solid;"><div style="height: 1.2em; overflow: hidden; text-overflow: ellipsis;">&nbsp; &nbsp;<a href="http://groups.google.com/group/twitter4j/browse_thread/thread/a50031643cedfc0">http://groups.google.com/group/twitter4j/browse_thread/thread/a50031643cedfc0</a>
+---------
+java.io.NotSerializableException: twitter4j.Dispatcher
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1081)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1375)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1347)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1290)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1079)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1375)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1347)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1290)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1079)
+	at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1375)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1347)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1290)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1079)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:302)
+	at java.util.ArrayList.writeObject(ArrayList.java:569)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:917)
+	at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1339)
+	at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1290)
+	at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1079)
+	at java.io.ObjectOutputStream.writeObject(ObjectOutputStream.java:302)
+	at twitter4j.AsyncTwitterTestUnit.trySerializable(AsyncTwitterTestUnit.java:348)
+	at twitter4j.AsyncTwitterTestUnit.testGetPublicTimeline(AsyncTwitterTestUnit.java:183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:40)
+------------</div></td>
+    <td width="1%" align="right" nowrap style="padding: 1px; margin: 0px; border-bottom: #bbb 1px solid;"><a href="" onclick="toggleDivsWithCookie('description-open', 'description-closed'); return false;" class="smallgrey">Show &raquo;</a></td>
+</tr>
+</table>
+</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+    restoreDivFromCookie('description-open', 'jira.viewissue.cong.cookie', '1');
+    restoreDivFromCookie('description-closed', 'jira.viewissue.cong.cookie', '0');
+//-->
+</script>
+<br>
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+            <td width="1%" nowrap align="center">
+                &nbsp;<b><a href="/">All</a></b>&nbsp;
+            </td>
+            <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+                &nbsp;<font color="#ffffff"><b>Comments</b></font>&nbsp;
+            </td>
+            <td width="1%" nowrap align="center">
+                &nbsp;<b><a href="/">Change History</a></b>&nbsp;
+            </td>
+            <td width="1%" nowrap align="center">
+                &nbsp;<b><a href="/">FishEye</a></b>&nbsp;
+            </td>
+	<td>&nbsp;</td>
+    <td width="1%" bgcolor="#e5e5e5" nowrap>
+        &nbsp;
+        Sort Order:
+            <a rel="nofollow" href="../../jira/browse/TFJ-56_actionOrder_desc.html"></a>
+    </td>
+</tr>
+</table>
+    <div class="issuePanelContainer" id="issue_actions_container">
+            <div id="comment-10200-open">
+<div class="actionContainer">
+    <div class="action-links subText smallgrey">
+    [
+        <a href="../../jira/browse/TFJ-56_focusedCommentId_10200_page_com_atlassian_jira_plugin_system_issuetabpanels_comment-tabpanel.html#action_10200" title="A permanent link to this comment." class="smallgrey">Permlink</a>
+                      | <a href="" onclick="toggleDivsWithCookie('comment-10200-closed', 'comment-10200-open'); return false;" class="smallgrey">&laquo; Hide</a>
+    ]
+    </div>
+    <div class="action-details">    <a name="action_10200"/>
+                <a id="comment_10200_header_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> added a comment  - <span class="subText"><span class="date">22/Nov/08 11:31 AM</span></span>  </div>
+    <div class="action-body">fixed </div>
+</div>
+</div>
+<div id="comment-10200-closed" style="display: none;">
+<div class="actionContainer" style="background-color:#f0f0f0;">
+    <div class="action-links subText smallgrey">
+    [ <a href="" onclick="toggleDivsWithCookie('comment-10200-open', 'comment-10200-closed'); return false;" class="smallgrey">Show &raquo;</a> ]
+    </div>
+    <div class="action-details" style="overflow: hidden; height: 1em;">
+                <a name="action_10200"/>
+                <a id="comment_10200_header_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> added a comment  - <span class="subText"><span class="date">22/Nov/08 11:31 AM</span></span>               fixed     </div>
+</div>
+</div>
+<br clear="all"/>
+<script language="JavaScript" type="text/javascript">
+<!--
+    restoreDivFromCookie('comment-10200-open', 'jira.viewissue.cong.cookie', '1');
+    restoreDivFromCookie('comment-10200-closed', 'jira.viewissue.cong.cookie', '0');
+//-->
+</script>
+    </div>
+<br/>
+            </div>
+        </td>
+    </tr>
+</table>
+    <div class="footer">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                <td bgcolor="#bbbbbb"></td>
+            </tr>
+                        <tr>
+            <td class="licensemessage">
+        Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+            </td>
+    </tr>
+    <tr>
+        <td height="12" style="background-image:url(http://yusuke.homeip.net/jira/s/333/1/_/images/border/border_bottom.gif)"></td>
+    </tr>
+</table>
+<span class="poweredbymessage">
+    <a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+    the Professional <a href="http://www.atlassian.com/software/jira">Issue Tracker</a>.
+    <span style="color: #666666;">(Enterprise Edition, Version: 3.13.1-#333)</span>    - <a href="http://jira.atlassian.com/default.jsp?clicked=footer">Bug/feature request</a>
+    - <a href="http://www.atlassian.com/about/connected.jsp?s_kwcid=jira-stayintouch">Atlassian news</a>
+    - <a href="../../jira/secure/Administrators.html">Contact Administrators</a>
+</span>
+</div>
+</body>
+</html>

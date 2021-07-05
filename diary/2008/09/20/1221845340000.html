@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href=".">
+    <meta name="description" content="侍ズム"/>
+    <meta name="abstract" content=""/>
+    <meta name="author" content="Yusuke Yamamoto"/>
+    <meta name="generator" content="Pebble (http://pebble.sourceforge.net)"/>
+    <title>WebLogic Server 10g Release 3 - Mac OSX で WLST - 侍ズム</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/../../../../diary/rss.xml"/>
+    <link rel="alternate" type="application/rdf+xml" title="RDF" href="http://yusuke.homeip.net/diary/rdf.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="../../../../diary/atom.xml"/>
+    <link rel="stylesheet" href="../../../../diary/pebble.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../../../diary/themes/user-diary/screen.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../../../diary/themes/_pebble/print.css" type="text/css" media="print"/>
+    <link rel="stylesheet" href="../../../../diary/themes/_pebble/handheld.css" type="text/css" media="handheld"/>
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/themes/user-diary/images/favicon.ico" type="image/x-icon"/>
+    <script type="text/javascript" src="../../../../FCKeditor/fckeditor.js"></script>
+    <script type="text/javascript" src="../../../../scripts/pebble.js"></script>
+    <script type="text/javascript" src="../../../../scripts/prototype.js"></script>
+    <script type="text/javascript" src="../../../../scripts/scriptaculous.js"></script>
+    <script type="text/javascript" src="../../../../scripts/dwr-engine.js"></script>
+    <script type="text/javascript" src="../../../../dwr/util.js"></script>
+    <script type="text/javascript" src="../../../../dwr/interface/Pebble.js"></script>
+  </head>
+  <body>
+  <div id="body">
+    <script src="../../../../maps_file_api_v_1_key_ABQIAAAAtS2fi_RnBiuUs4BlVHjt6BRABsBgP8wqQh7kS3FgnXJL7vMCZhRCUVBp4cfEBxevDEQRKjj9DJC-Yg.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript" src="../../../../diary/themes/user-diary/lightbox/lightbox.js"></script>
+    <div id="header">
+      <div id="blogName"><a href="../../../../diary.html">侍ズム</a></div>
+      <div id="blogDescription"><span></span></div>
+    </div>
+    <div id="linearNavigation">
+      <a href="../../../../diary/2008/09/20/1221842883416.html">&lt;&lt; WebLogic Server 10g Release 3 を Mac OSX にインストール</a> |
+    <a href="../../../../diary.html">Home</a>
+      | <a href="../../../../diary/2008/09/22/1222051740000.html">JBoss勉強会 &gt;&gt;</a>
+    </div>
+    <div id="sidebar">
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>検索</span></div>
+  <div class="sidebarItemBody">
+    <form name="searchForm" method="post" action="../../../../diary/search.html" accept-charset="UTF-8">
+  <input type="text" name="query" size="15" value=""/>
+  <input type="submit" value="検索"/>
+</form>
+    <a href="../../../../diary/categories.html">カテゴリー</a> |
+    <a href="../../../../diary/tags.html">タグ</a> |
+    <a href="../../../../diary/search.html">詳細な検索</a>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Ad</span></div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+/* 200x200, ä½ææ¸ã¿ 08/09/06 */
+google_ad_slot = "3834106799";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript" src="../../../../pagead/show_ads.js">
+</script>  <div class="sidebarItemBody">
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>最近のレスポンス <a href="../../../../diary/responses/../../../../diary/rss.xml"></a></span></div>
+  <div class="sidebarItemBody">
+    <ul>
+      <li><a href="../../../../diary/2008/09/20/1221845340000.html#comment1222049908584" title="http://yusuke.homeip.net/diary/2008/09/20/1221845340000.html#comment1222049908584">Re: WebLogic Server 10g Release 3 - Mac OSX で WLST</a><br/>まぁ、WLST 自体は Pure Java ですから当たり前といえば当たり前ですね。 WLS9.0 でも普通に動いていましたし。  ほんと強力ですが取っつき悪い。毎回カッコ...</li>
+      <li><a href="../../../../diary/2008/09/20/1221842883416.html#comment1222049828889" title="http://yusuke.homeip.net/diary/2008/09/20/1221842883416.html#comment1222049828889">Re: WebLogic Server 10g Release 3 を Mac OSX にインストール</a><br/>なるほどっ、OEPEはもう 3.4 に対応しているんですね。早い！</li>
+      <li><a href="../../../../diary/2008/09/20/1221845340000.html#comment1221968340910" title="http://yusuke.homeip.net/diary/2008/09/20/1221845340000.html#comment1221968340910">Re: WebLogic Server 10g Release 3 - Mac OSX で WLST</a><br/>動くだろうなぁ、とは思うけど。このとっつ...</li>
+      <li><a href="../../../../diary/2008/09/20/1221845340000.html#comment1221874008890" title="http://yusuke.homeip.net/diary/2008/09/20/1221845340000.html#comment1221874008890">Re: WebLogic Server 10g Release 3 - Mac OSX で WLST</a><br/>WLSTまで動くとは、流石、「Write once, run anywhere」の精神、WebLogi...</li>
+      <li><a href="../../../../diary/2008/09/20/1221842883416.html#comment1221843813053" title="http://yusuke.homeip.net/diary/2008/09/20/1221842883416.html#comment1221843813053">Re: WebLogic Server 10g Release 3 を Mac OSX にインストール</a><br/> 最新版の 3.4 - Ganymede ではバージョンが違う、と言われだめでした...</li>
+    </ul>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>最近のエントリー <a href="../../../../diary/rss.xml"></a></span></div>
+  <div class="sidebarItemBody">
+    <ul>
+      <li><a href="../../../../diary/2008/09/23/1222099260000.html" title="http://yusuke.homeip.net/diary/2008/09/23/1222099260000.html">ねこ</a>
+        <br/>週末に行ってきたアーチェリーの合宿先にて...
+      </li>
+      <li><a href="/" title="http://yusuke.homeip.net/diary/2008/09/23/1222097700000.html">新種発見！</a>
+        <br/>昨日ポストへ郵便物をとりに行ったところ、...
+      </li>
+      <li><a href="../../../../diary/2008/09/22/1222051740000.html" title="http://yusuke.homeip.net/diary/2008/09/22/1222051740000.html">JBoss勉強会</a>
+        <br/>日本の JBoss コミュニティ - JBug - の勉強会が 9月30日 に開催されることになりました。・第7回J...
+      </li>
+      <li><a href="../../../../diary/2008/09/20/1221845340000.html" title="http://yusuke.homeip.net/diary/2008/09/20/1221845340000.html">WebLogic Server 10g Release 3 - Mac OSX で WLST</a>
+        <br/>WLST は WebLogic Scripting Tool の略。WebLogic を Jython(Java上の Python 実装)で操作する不思議なツールです。ちょ...
+      </li>
+      <li><a href="../../../../diary/2008/09/20/1221842883416.html" title="http://yusuke.homeip.net/diary/2008/09/20/1221842883416.html">WebLogic Server 10g Release 3 を Mac OSX にインストール</a>
+        <br/>WebLogic Server の最新版を Mac OSX にインストールしてみました。続きを読む....
+      </li>
+      <li><a href="/" title="http://yusuke.homeip.net/diary/2008/09/17/1221663420000.html">Re: Re: Welcome BEA Developer Event その1~その3</a>
+        <br/>先日の Welcome BEA Developer Event のレポート、よく分かっていなかった点、間...
+      </li>
+      <li><a href="/" title="http://yusuke.homeip.net/diary/2008/09/16/1221572580000.html">コマンドラインメモ - iTunes のライブラリを rsync でバックアップ</a>
+        <br/>家で起動しっぱなしのサーバの iTunes ライブラリをローカルのものと差し替えるた...
+      </li>
+      <li><a href="../../../../diary/2008/09/16/1221500700000.html" title="http://yusuke.homeip.net/diary/2008/09/16/1221500700000.html">Twitter4J 1.0.5 リリース</a>
+        <br/>Java からTwitterAPIを簡単に操作でき...
+      </li>
+      <li><a href="/" title="http://yusuke.homeip.net/diary/2008/09/12/1221150120000.html">Welcome BEA Developer Event - その３: Dev2DevからOracle Technology Networkへ！</a>
+        <br/>&quot;Welcome BEA Developer Event&quot; レポートその３です。・Welcome BEA Developer Eventすでに発表されている通りですが...
+      </li>
+      <li><a href="../../../../diary/2008/09/12/1221149040000.html" title="http://yusuke.homeip.net/diary/2008/09/12/1221149040000.html">Welcome BEA Developer Event - その２: 分散データグリッドの技術を学ぼう！ - それ JBoss Cacheだと無料だよ</a>
+        <br/>&quot;Welcome BEA Developer Event&quot; レポートその２です。・Welcome BEA Developer Event「分散データグリッドの技術を学...
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>タグ</span></div>
+  <div class="sidebarItemBody">
+    <div class="sidebarTagCloud">
+    <ul>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/apache.html" title="rank=1, blog entries=1">apache</a></span></li>
+      <li><span class="tagCloud3"><a href="../../../../diary/tags/archery.html" title="rank=3, blog entries=59">archery</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/bea.html" title="rank=1, blog entries=8">bea</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/bookmarklet.html" title="rank=1, blog entries=2">bookmarklet</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/bts.html" title="rank=1, blog entries=4">bts</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/c.html#/" title="rank=1, blog entries=3">c#</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/car.html" title="rank=1, blog entries=10">car</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/english.html" title="rank=1, blog entries=6">english</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/fast.html" title="rank=1, blog entries=1">fast</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/game.html" title="rank=1, blog entries=15">game</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/google.html" title="rank=1, blog entries=5">google</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/googlemaps.html" title="rank=1, blog entries=1">googlemaps</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/gps.html" title="rank=1, blog entries=7">gps</a></span></li>
+      <li><span class="tagCloud10"><a href="../../../../diary/tags/java.html" title="rank=10, blog entries=250">java</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/java6.html" title="rank=1, blog entries=1">java6</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/javascript.html" title="rank=1, blog entries=3">javascript</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/javawebstart.html" title="rank=1, blog entries=1">javawebstart</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jboss.html" title="rank=1, blog entries=9">jboss</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jbug.html" title="rank=1, blog entries=1">jbug</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jira.html" title="rank=1, blog entries=1">jira</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jmx.html" title="rank=1, blog entries=2">jmx</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jmxremote.html" title="rank=1, blog entries=1">jmxremote</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jrockit.html" title="rank=1, blog entries=3">jrockit</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/jvm.html" title="rank=1, blog entries=1">jvm</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/komuso.html" title="rank=1, blog entries=1">komuso</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/language.html" title="rank=1, blog entries=1">language</a></span></li>
+      <li><span class="tagCloud4"><a href="../../../../diary/tags/mac.html" title="rank=4, blog entries=88">mac</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/maps.html" title="rank=1, blog entries=5">maps</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/maven.html" title="rank=1, blog entries=1">maven</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mbean.html" title="rank=1, blog entries=1">mbean</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mod_python.html" title="rank=1, blog entries=1">mod_python</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mono.html" title="rank=1, blog entries=1">mono</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/movabletype.html" title="rank=1, blog entries=2">movabletype</a></span></li>
+      <li><span class="tagCloud4"><a href="../../../../diary/tags/movie.html" title="rank=4, blog entries=92">movie</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mvn.html" title="rank=1, blog entries=1">mvn</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/mysql.html" title="rank=1, blog entries=1">mysql</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/oracle.html" title="rank=1, blog entries=9">oracle</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/pebble.html" title="rank=1, blog entries=17">pebble</a></span></li>
+      <li><span class="tagCloud2"><a href="../../../../diary/tags/photolog.html" title="rank=2, blog entries=40">photolog</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/postgres.html" title="rank=1, blog entries=1">postgres</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/python.html" title="rank=1, blog entries=5">python</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/rakuten.html" title="rank=1, blog entries=1">rakuten</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/redhat.html" title="rank=1, blog entries=1">redhat</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/rfms.html" title="rank=1, blog entries=1">rfms</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/samurai.html" title="rank=1, blog entries=7">samurai</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/seam.html" title="rank=1, blog entries=1">seam</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/secondlife.html" title="rank=1, blog entries=3">secondlife</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/shoot.html" title="rank=1, blog entries=7">shoot</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/sql.html" title="rank=1, blog entries=1">sql</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/subversion.html" title="rank=1, blog entries=4">subversion</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/tomcat.html" title="rank=1, blog entries=1">tomcat</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/trac.html" title="rank=1, blog entries=5">trac</a></span></li>
+      <li><span class="tagCloud4"><a href="../../../../diary/tags/travel.html" title="rank=4, blog entries=76">travel</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/twitter.html" title="rank=1, blog entries=3">twitter</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/twitter4j.html" title="rank=1, blog entries=3">twitter4j</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/vegas.html" title="rank=1, blog entries=7">vegas</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/virtualhost.html" title="rank=1, blog entries=1">virtualhost</a></span></li>
+      <li><span class="tagCloud2"><a href="../../../../diary/tags/weblogic.html" title="rank=2, blog entries=40">weblogic</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../diary/tags/wls.html" title="rank=1, blog entries=6">wls</a></span></li>
+    </ul>
+    </div>
+   </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>ナビゲート</span></div>
+  <div class="sidebarItemBody">
+    <div class="calendar"><table width="100%"><tr><td colspan="7" align="center"><b><a href="../../../../diary/2008/09.html">9月 2008</a></b></td></tr><tr><td class="calendarDayHeader" width="14%">日</td><td class="calendarDayHeader" width="14%">月</td><td class="calendarDayHeader" width="14%">火</td><td class="calendarDayHeader" width="14%">水</td><td class="calendarDayHeader" width="14%">木</td><td class="calendarDayHeader" width="14%">金</td><td class="calendarDayHeader" width="14%">土</td></tr><tr><td class="calendarDay">&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/01.html">&nbsp;1</a>&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;2&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;3&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/04.html">&nbsp;4</a>&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;5&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;6&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;&nbsp;7&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/08.html">&nbsp;8</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/09.html">&nbsp;9</a>&nbsp;</td><td class="calendarDay">&nbsp;10&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/11.html">11</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/12.html">12</a>&nbsp;</td><td class="calendarDay">&nbsp;13&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;14&nbsp;</td><td class="calendarDay">&nbsp;15&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/16.html">16</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/17.html">17</a>&nbsp;</td><td class="calendarDay">&nbsp;18&nbsp;</td><td class="calendarDay">&nbsp;19&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/20.html">20</a>&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;21&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../../../../diary/2008/09/22.html">22</a>&nbsp;</td><td class="calendarToday">&nbsp;<a href="../../../../diary/2008/09/23.html">23</a>&nbsp;</td><td class="calendarDay">&nbsp;24&nbsp;</td><td class="calendarDay">&nbsp;25&nbsp;</td><td class="calendarDay">&nbsp;26&nbsp;</td><td class="calendarDay">&nbsp;27&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;28&nbsp;</td><td class="calendarDay">&nbsp;29&nbsp;</td><td class="calendarDay">&nbsp;30&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td></tr><tr><td colspan="7" align="center"><a href="../../../../diary/2008/08.html">8</a>&nbsp; | &nbsp;<a href="../../../../diary/2008/09/23.html">今日</a>&nbsp; | &nbsp;10</td></tr></table></div>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Archives</span></div>
+  <div class="sidebarItemBody">
+    <table width="99%" cellpadding="0" cellspacing="0">
+        <tr>
+        <td valign="top">
+          <b>2008</b><br/>
+          <a href="../../../../diary/2008/09.html">9月</a> (21)
+          <br/>
+          <a href="../../../../diary/2008/08.html">8月</a> (6)
+          <br/>
+          <a href="../../../../diary/2008/07.html">7月</a> (12)
+          <br/>
+          <a href="../../../../diary/2008/06.html">6月</a> (11)
+          <br/>
+          <a href="../../../../diary/2008/05.html">5月</a> (10)
+          <br/>
+          <a href="../../../../diary/2008/04.html">4月</a> (10)
+          <br/>
+          <a href="../../../../diary/2008/03.html">3月</a> (16)
+          <br/>
+          <a href="../../../../diary/2008/02.html">2月</a> (27)
+          <br/>
+          <a href="../../../../diary/2008/01.html">1月</a> (17)
+          <br/>
+          <br/>
+        </td>
+        <td valign="top">
+          <b>2007</b><br/>
+          <a href="../../../../diary/2007/12.html">12月</a> (7)
+          <br/>
+          <a href="../../../../diary/2007/11.html">11月</a> (5)
+          <br/>
+          <a href="../../../../diary/2007/10.html">10月</a> (30)
+          <br/>
+          <a href="../../../../diary/2007/09.html">9月</a> (4)
+          <br/>
+          <a href="../../../../diary/2007/08.html">8月</a> (4)
+          <br/>
+          <a href="../../../../diary/2007/07.html">7月</a> (4)
+          <br/>
+          <a href="../../../../diary/2007/06.html">6月</a> (21)
+          <br/>
+          <a href="../../../../diary/2007/05.html">5月</a> (4)
+          <br/>
+          <a href="../../../../diary/2007/04.html">4月</a> (25)
+          <br/>
+          <a href="../../../../diary/2007/03.html">3月</a> (24)
+          <br/>
+          <a href="../../../../diary/2007/02.html">2月</a> (13)
+          <br/>
+          <a href="../../../../diary/2007/01.html">1月</a> (18)
+          <br/>
+          <br/>
+        </td>
+        </tr>
+        <tr>
+        <td valign="top">
+          <b>2006</b><br/>
+          <a href="../../../../diary/2006/12.html">12月</a> (25)
+          <br/>
+          <a href="../../../../diary/2006/11.html">11月</a> (18)
+          <br/>
+          <a href="../../../../diary/2006/10.html">10月</a> (36)
+          <br/>
+          <a href="../../../../diary/2006/09.html">9月</a> (14)
+          <br/>
+          <a href="../../../../diary/2006/08.html">8月</a> (5)
+          <br/>
+          <a href="../../../../diary/2006/07.html">7月</a> (7)
+          <br/>
+          <a href="../../../../diary/2006/06.html">6月</a> (17)
+          <br/>
+          <a href="../../../../diary/2006/05.html">5月</a> (8)
+          <br/>
+          <a href="../../../../diary/2006/04.html">4月</a> (19)
+          <br/>
+          <a href="../../../../diary/2006/03.html">3月</a> (45)
+          <br/>
+          <a href="../../../../diary/2006/02.html">2月</a> (52)
+          <br/>
+          <a href="../../../../diary/2006/01.html">1月</a> (47)
+          <br/>
+          <br/>
+        </td>
+        <td valign="top">
+          <b>2005</b><br/>
+          <a href="../../../../diary/2005/12.html">12月</a> (5)
+          <br/>
+          <a href="../../../../diary/2005/11.html">11月</a> (7)
+          <br/>
+          <a href="../../../../diary/2005/10.html">10月</a> (10)
+          <br/>
+          <a href="../../../../diary/2005/09.html">9月</a> (5)
+          <br/>
+          <a href="../../../../diary/2005/08.html">8月</a> (22)
+          <br/>
+          <a href="../../../../diary/2005/07.html">7月</a> (6)
+          <br/>
+          <a href="../../../../diary/2005/06.html">6月</a> (16)
+          <br/>
+          <a href="../../../../diary/2005/05.html">5月</a> (9)
+          <br/>
+          <a href="../../../../diary/2005/04.html">4月</a> (29)
+          <br/>
+          <a href="../../../../diary/2005/03.html">3月</a> (19)
+          <br/>
+          <a href="../../../../diary/2005/02.html">2月</a> (25)
+          <br/>
+          <a href="../../../../diary/2005/01.html">1月</a> (18)
+          <br/>
+          <br/>
+        </td>
+        </tr>
+        <tr>
+        <td valign="top">
+          <b>2004</b><br/>
+          <a href="../../../../diary/2004/12.html">12月</a> (11)
+          <br/>
+          <a href="../../../../diary/2004/11.html">11月</a> (17)
+          <br/>
+          <a href="../../../../diary/2004/10.html">10月</a> (18)
+          <br/>
+          <a href="../../../../diary/2004/09.html">9月</a> (25)
+          <br/>
+          <a href="../../../../diary/2004/08.html">8月</a> (7)
+          <br/>
+          <a href="../../../../diary/2004/07.html">7月</a> (14)
+          <br/>
+          <a href="../../../../diary/2004/06.html">6月</a> (21)
+          <br/>
+          <a href="../../../../diary/2004/05.html">5月</a> (12)
+          <br/>
+          <a href="../../../../diary/2004/04.html">4月</a> (30)
+          <br/>
+          <br/>
+        </td>
+        </tr>
+    </table>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>About</span></div>
+  <div class="sidebarItemBody">
+    映画、Apple、プログラミング、Java 好き。<br>
+このブログでは日々の雑記、IT関連のニュース、映画の感想など雑多なエントリを書き連ねています。
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Subscribe <a href="../../../../diary/rss.xml"></a></span></div>
+  <div class="sidebarItemBody">
+    <a href="http://yusuke.homeip.net/diary/../../../../diary/rss.xml">RSS</a> |
+    <a href="../../../../diary/atom.xml">Atom</a> |
+    <a href="../../../../diary/subscribe.html">E-mail</a>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>ログイン</span></div>
+  <form id="loginForm" name="loginForm" method="post" action="../../../../j_acegi_security_check.html">
+    <div class="sidebarItemBody">
+    <input type="hidden" name="redirectUrl" value="/diary/"/>
+      <table>
+        <tr>
+          <td>ユーザー名</td>
+          <td><input id="j_username" name="j_username" type="text" size="16"/></td>
+        </tr>
+        <tr>
+          <td>パスワード</td>
+          <td><input type="password" name="j_password" size="16"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            次回から入力を省略<input type="checkbox" name="_acegi_security_remember_me"/>
+            <input type="submit" value="ログイン"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+<script type="text/javascript">
+//  $('loginForm').style.display = 'none';
+</script>
+    </div>
+    <div id="content">
+<div class="contentItem published">
+  <div class="contentItemLinks">
+</div>
+  <a name="a1221845340000"></a>
+  <h1><a href="../../../../diary/2008/09/20/1221845340000.html">WebLogic Server 10g Release 3 - Mac OSX で WLST</a></h1>
+  <h2></h2>
+  <div class="contentItemBody">
+        <p>WLST は WebLogic Scripting Tool の略。<br/>WebLogic を Jython(Java上の Python 実装)で操作する不思議なツールです。<br/>ちょっととっつきはわるいですが、使いこなせば強力なツールです。<br/>#個人的には昔から慣れ親しんでいる weblogic.Admin が好みですが<br/><br/>もちろん Mac でも WLST は動きます。<br/><br/>以下、Mac で WLST を起動、WLS に接続、シャットダウンしたところ：<br/><div class="codeSample">/Users/yusukey/bea103/user_projects/domains/base_domain/bin$ . setDomainEnv.sh <br/>-bash: Don't know how to set the shared library path for Darwin.  <br/>yusukey@ymacbook-3:/Users/yusukey/bea103/user_projects/domains/base_domain$ java weblogic.WLST<br/><br/>Initializing WebLogic Scripting Tool (WLST) ...<br/><br/>Jython scans all the jar files it can find at first startup. Depending on the system, this process may take a few minutes to complete, and WLST may not return a prompt right away.<br/><br/>Welcome to WebLogic Server Administration Scripting Shell<br/><br/>Type help() for help on available commands<br/><br/>wls:/offline&gt; connect('weblogic','weblogic','t3://localhost:7001')<br/>Connecting to t3://localhost:7001 with userid weblogic ...<br/>Successfully connected to Admin Server 'AdminServer' that belongs to domain 'base_domain'.<br/><br/>Warning: An insecure protocol was used to connect to the <br/>server. To ensure on-the-wire security, the SSL port or <br/>Admin port should be used instead.<br/><br/>wls:/base_domain/serverConfig&gt; ls()<br/>dr--   AdminConsole<br/>dr--   AppDeployments<br/>dr--   BridgeDestinations<br/>dr--   Clusters<br/>dr--   CustomResources<br/>dr--   DeploymentConfiguration<br/>dr--   Deployments<br/>dr--   EmbeddedLDAP<br/>dr--   ErrorHandlings<br/>dr--   FileStores<br/>dr--   InternalAppDeployments<br/>dr--   InternalLibraries<br/>dr--   JDBCDataSourceFactories<br/>dr--   JDBCStores<br/>dr--   JDBCSystemResources<br/>dr--   JMSBridgeDestinations<br/>dr--   JMSInteropModules<br/>dr--   JMSServers<br/>dr--   JMSSystemResources<br/>dr--   JMX<br/>dr--   JTA<br/>dr--   JoltConnectionPools<br/>dr--   Libraries<br/>dr--   Log<br/>dr--   LogFilters<br/>dr--   Machines<br/>dr--   MailSessions<br/>dr--   MessagingBridges<br/>dr--   MigratableTargets<br/>dr--   RemoteSAFContexts<br/>dr--   SAFAgents<br/>dr--   SNMPAgent<br/>dr--   SNMPAgentDeployments<br/>dr--   Security<br/>dr--   SecurityConfiguration<br/>dr--   SelfTuning<br/>dr--   Servers<br/>dr--   ShutdownClasses<br/>dr--   SingletonServices<br/>dr--   StartupClasses<br/>dr--   SystemResources<br/>dr--   Targets<br/>dr--   VirtualHosts<br/>dr--   WLDFSystemResources<br/>dr--   WLECConnectionPools<br/>dr--   WSReliableDeliveryPolicies<br/>dr--   WTCServers<br/>dr--   WebAppContainer<br/>dr--   WebserviceSecurities<br/>dr--   XMLEntityCaches<br/>dr--   XMLRegistries<br/><br/>-r--   AdminServerName                              AdminServer<br/>-r--   AdministrationMBeanAuditingEnabled           false<br/>-r--   AdministrationPort                           9002<br/>-r--   AdministrationPortEnabled                    false<br/>-r--   AdministrationProtocol                       t3s<br/>-r--   ArchiveConfigurationCount                    0<br/>-r--   ClusterConstraintsEnabled                    false<br/>-r--   ConfigBackupEnabled                          false<br/>-r--   ConfigurationAuditType                       none<br/>-r--   ConfigurationVersion                         10.3.0.0<br/>-r--   ConsoleContextPath                           console<br/>-r--   ConsoleEnabled                               true<br/>-r--   ConsoleExtensionDirectory                    console-ext<br/>-r--   DomainVersion                                10.3.0.0<br/>-r--   GuardianEnabled                              false<br/>-r--   InternalAppsDeployOnDemandEnabled            true<br/>-r--   LastModificationTime                         0<br/>-r--   Name                                         base_domain<br/>-r--   Notes                                        null<br/>-r--   Parent                                       null<br/>-r--   ProductionModeEnabled                        false<br/>-r--   RootDirectory                                /Users/yusukey/bea103/user_projects/domains/base_domain<br/>-r--   Type                                         Domain<br/><br/>-r-x   freezeCurrentValue                           Void : String(attributeName)<br/>-r-x   isSet                                        Boolean : String(propertyName)<br/>-r-x   unSet                                        Void : String(propertyName)<br/><br/>wls:/base_domain/serverConfig&gt; shutdown()<br/>Shutting down the server AdminServer with force=false while connected to AdminServer ...<br/>Disconnected from weblogic server: AdminServer<br/>wls:/offline&gt; <br/></div><br/></p><div class="tags"><span>タグ : </span><a href="../../../../diary/tags/bea.html" rel="tag">bea</a> <a href="../../../../diary/tags/java.html" rel="tag">java</a> <a href="../../../../diary/tags/oracle.html" rel="tag">oracle</a> <a href="../../../../diary/tags/weblogic.html" rel="tag">weblogic</a></div>
+    <div class="metadata">
+      <div class="contentItemLinks">
+      <a href="../../../../diary/2008/09/20/1221845340000.html#responses">レスポンス[3]</a>
+      <a href="http://yusuke.homeip.net/diary/../../../../diary/responses/../../../../diary/rss.xml?entry=1221845340000"></a>
+</div>
+      投稿者 <a href="/">Yusuke Yamamoto</a> : 2008/09/20 2:29:00 JST
+      <a href="../../../../diary/2008/09/20/1221845340000.html" title="http://yusuke.homeip.net/diary/2008/09/20/1221845340000.html">#</a>
+    </div>
+  </div>
+    <br/><br/>
+    <a name="responses"></a>
+<a name="comments"></a>
+      <div class="odd">
+<div id="comment1221874008890" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">返信</a>
+</div>
+  <h1>
+    <span id="comment1221874008890.title"><a name="comment1221874008890"></a>Re: WebLogic Server 10g Release 3 - Mac OSX で WLST</span>
+  </h1>
+  <div class="metadata">
+    投稿者 <span id="comment1221874008890.author" class="unauthenticated">futokiyo</span> : 2008/09/20 10:26:48 JST
+    <a href="../../../../diary/2008/09/20/1221845340000.html#comment1221874008890" title="http://yusuke.homeip.net/diary/2008/09/20/1221845340000.html#comment1221874008890">#</a>
+  </div>
+  <div id="comment1221874008890.body" class="responseBody">
+    <p>WLSTまで動くとは、流石、「Write once, run anywhere」の精神、WebLogicって。</p>
+<p>あと、WebLogic上にＬＣＤＳとかBlazeDSを乗せるノウハウが確立されて枯れてきたら、大崎に日本法人がある会社とかWebクリエイターとかから、WebLogicをMacOSに移植して、正式にサポートして欲しいという要望などが強くあがってくるかもしれませんね。</p>
+  </div>
+</div>
+      </div>
+      <div class="even">
+<div id="comment1221968340910" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="../../../../diary/replyToBlogEntry_entry_1221845340000_comment_1221968340910.html">返信</a>
+</div>
+  <h1>
+    <span id="comment1221968340910.title"><a name="comment1221968340910"></a>Re: WebLogic Server 10g Release 3 - Mac OSX で WLST</span>
+  </h1>
+  <div class="metadata">
+    投稿者 <span id="comment1221968340910.author" class="unauthenticated"><a href="http://kdaiji.jugem.cc/" target="_blank" title="http://kdaiji.jugem.cc/" rel="nofollow">Danny</a></span> : 2008/09/21 12:39:00 JST
+    <a href="../../../../diary/2008/09/20/1221845340000.html#comment1221968340910" title="http://yusuke.homeip.net/diary/2008/09/20/1221845340000.html#comment1221968340910">#</a>
+  </div>
+  <div id="comment1221968340910.body" class="responseBody">
+    動くだろうなぁ、とは思うけど。このとっつきの悪さはタダモノじゃないなと思った。<br/>
+<br/>
+最近触ってないけど。<br/>
+<br/>
+がっ、どんどん宣伝してねｗ
+  </div>
+</div>
+      </div>
+      <div class="odd">
+<div id="comment1222049908584" class="response approved" style="padding-left: 46px;">
+  <div class="contentItemLinks">
+      <a href="../../../../diary/replyToBlogEntry_entry_1221845340000_comment_1222049908584.html">返信</a>
+</div>
+  <h1>
+    <span id="comment1222049908584.title"><a name="comment1222049908584"></a>Re: WebLogic Server 10g Release 3 - Mac OSX で WLST</span>
+  </h1>
+  <div class="metadata">
+    投稿者 <span id="comment1222049908584.author" class="authenticated"><a href="/" target="_blank" title="http://yusuke.homeip.net/" rel="nofollow">Yusuke Yamamoto</a></span> : 2008/09/22 11:18:28 JST
+    <a href="../../../../diary/2008/09/20/1221845340000.html#comment1222049908584" title="http://yusuke.homeip.net/diary/2008/09/20/1221845340000.html#comment1222049908584">#</a>
+  </div>
+  <div id="comment1222049908584.body" class="responseBody">
+    まぁ、WLST 自体は Pure Java ですから当たり前といえば当たり前ですね。
+WLS9.0 でも普通に動いていましたし。
+ほんと強力ですが取っつき悪い。毎回カッコ書くのも面倒だし・・・。
+  </div>
+</div>
+      </div>
+<a name="trackbacks"></a>
+    <div align="center">
+      <br/>
+        <a href="../../../../diary/replyToBlogEntry_entry_1221845340000.html" onclick="showCommentForm(); return false;">コメント追加</a>
+        <a href="/">トラックバック送信</a>
+    </div>
+    <div id="commentFormDiv" style="display:none;">
+  <script type="text/javascript" src="../../../../FCKeditor/fckeditor.js"></script>
+  <script type="text/javascript">
+  window.onload = function()
+  {
+    var oFCKeditor = new FCKeditor( 'commentBody' ) ;
+    oFCKeditor.BasePath = '/FCKeditor/' ;
+    oFCKeditor.Config["CustomConfigurationsPath"] = '/fckconfig_pebble.js';
+    oFCKeditor.ToolbarSet = 'Comment' ;
+    oFCKeditor.ReplaceTextarea() ;
+  }
+  </script>
+<form id="commentForm" name="commentForm" action="/" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="blogId" value="diary"/>
+  <input type="hidden" name="entry" value="1221845340000"/>
+  <input type="hidden" name="comment" value=""/>
+<table width="99%">
+  <tr>
+    <td colspan="2">
+      <div id="previewComment">
+<div id="previewComment" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+</div>
+  <h1>
+    <span id="previewComment.title"><a name="comment1222171711752"></a>Re: WebLogic Server 10g Release 3 - Mac OSX で WLST</span>
+  </h1>
+  <div class="metadata">
+    投稿者 <span id="previewComment.author" class="unauthenticated">Anonymous</span> : 2008/09/23 21:08:31 JST
+    <a href="../../../../diary/2008/09/20/1221845340000.html#comment1222171711752" title="http://yusuke.homeip.net/diary/2008/09/20/1221845340000.html#comment1222171711752">#</a>
+  </div>
+  <div id="previewComment.body" class="responseBody">
+  </div>
+</div>
+</div>
+      <br/>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>タイトル</b></td>
+    <td><input type="text" name="title" size="40" value="Re: WebLogic Server 10g Release 3 - Mac OSX で WLST"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>本文</b></td>
+    <td>
+      <textarea id="commentBody" name="commentBody" rows="8" cols="40"></textarea>
+      <div class="small"><b>HTML</b> : b, strong, i, em, blockquote, br, p, pre, a href="", ul, ol, li, sub, sup</div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>名前</b></td>
+    <td><input type="text" id="author" name="author" size="40" value="Anonymous"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>E-mail</b></td>
+    <td>
+      <input type="text" name="email" size="40" value=""/>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Webサイト</b></td>
+    <td><input type="text" name="website" size="40" value=""/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>保存しますか?</b></td>
+    <td>
+      はい&nbsp;
+      <input type="radio" name="rememberMe" value="true"/>
+      いいえ&nbsp;<input type="radio" name="rememberMe" value="false" checked="checked"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <p>
+      <b>E-mailは公開されません</b>, このエントリーの新規コメント通知が必要なら記入します。(解除可能)
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right">
+      <input name="submit" type="submit" value="プレビュー" onclick="previewComment(); return false;"/>
+      <input name="submit" type="submit" value="コメント投稿"/>
+    </td>
+  </tr>
+</table>
+</form></div>
+</div>
+    </div>
+    <div id="footer">
+Powered by <a href="http://pebble.sourceforge.net/">Pebble 2.3.1</a>
+      |
+      <a href="../../../../diary/login.html">ログイン</a>
+    </div>
+  </div>
+<script src="../../../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+  </body>
+</html>

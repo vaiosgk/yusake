@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>FishEye: browsing svn/samurai/trunk</title>
+        <link rel="SHORTCUT ICON" href="http://yusuke.homeip.net/fisheye/static/k9s70z/images/favicon.ico"/>
+<link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/static/k9s70z/css/headerfooter.css" type="text/css"/>
+<link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/static/k9s70z/main.css" type="text/css"/>
+<link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/static/k9s70z/diff.css" type="text/css"/>
+<link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/uar/browser.css" type="text/css"/>
+<link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/static/k9s70z/custom.css" type="text/css"/>
+<link rel="stylesheet" href="http://yusuke.homeip.net/fisheye/static/k9s70z/synhi.css" type="text/css"/>
+<script src="http://yusuke.homeip.net/fisheye/static/k9s70z/global.js" type="text/javascript" language="Javascript1.2" charset="utf-8"></script>
+<script type="text/javascript" language="Javascript1.2">
+var fishEyePageContext = '/fisheye';
+var fishEyeSTATICDIR = 'static/k9s70z';
+</script>
+  <script src="http://yusuke.homeip.net/fisheye/static/k9s70z/behaviour.js" type="text/javascript"></script>
+  <script src="http://yusuke.homeip.net/fisheye/static/k9s70z/prototype.js" type="text/javascript"></script>
+  <script src="http://yusuke.homeip.net/fisheye/static/k9s70z/behaviour_dirtree.js" type="text/javascript"></script>
+    <link rel="alternate" type="application/rss+xml" title="FishEye on svn/samurai/trunk (RSS)" href="http://yusuke.homeip.net/fisheye/changelog/~rss/svn/samurai/trunk/rss.xml"/>
+  <style type="text/css">@import url(http://yusuke.homeip.net/fisheye/static/k9s70z/calendar-blue.css);</style>
+<script type="text/javascript" src="http://yusuke.homeip.net/fisheye/static/k9s70z/calendar.js"></script>
+<script type="text/javascript" src="http://yusuke.homeip.net/fisheye/static/k9s70z/lang/calendar-en.js"></script>
+<script type="text/javascript" src="http://yusuke.homeip.net/fisheye/static/k9s70z/calendar-setup.js"></script>
+  <script type="text/javascript">
+    function postLoadResources() {
+    new Ajax.Updater('imageMapDiv','/fisheye/browse/svn/samurai/trunk',{method: 'get', parameters: 'imageMap=imageMap', asynchronous: true});
+    }
+    ;
+  </script>
+</head>
+<body onload="postLoadResources();">
+<div id="header">
+    <h1>
+                <a class="fe_logo" href="/">FishEye</a>
+    </h1>
+    <ul>
+                <li>
+                    <a href="/">Chart</a>
+                </li>
+                <li>
+                    <a href="/">Search</a>
+                </li>
+                <li>
+                    <a href="/">Changelog</a>
+                </li>
+                <li class="active">
+                    <a href="../../../../fisheye/browse/svn/samurai/trunk.html">Browse</a>
+                </li>
+        <li id="headerUserDetails">
+                    Guest |
+                    <a href="/">Login</a>
+                    |
+            <a target="_help" href="http://docs.atlassian.com/fisheye/docs-016/Browsing+through+a+Repository" class="head_help" title="">Help</a>
+        </li>
+    </ul>
+</div>
+<table id="secondHeader" cellspacing="0">
+  <tr>
+    <td id="breadCrumb">
+      <form method="get" action="/">
+        <!-- queryStrSuffix should be html escaped if necessary before being passed in--><a class="breadCrumbRepository" href="/">svn</a>:/<a href="/">samurai</a>/<a href="../../../../fisheye/browse/svn/samurai/trunk.html">trunk</a>/
+        <input class="qsInput" name="filename" type="text" size="15">
+      </form>
+    </td>
+    <td id="quickSearch">
+      <form method="get" action="/">
+        Quick Search:
+        <input class="qsInput" name="q" type="text" size="15">
+      </form>
+    </td>
+  </tr>
+</table>
+<table class="layout" cellspacing="0">
+<tr>
+<td class="layoutLeftPane">
+    <div class="box">
+      <h3>
+      <span class="boxIcon"><span class="boxIconText">
+          <a href="/">jump
+            to detailed chart</a>
+          |
+      <a href="/">hide</a>
+      </span></span>
+        Line History
+        </h3>
+        <div class="linehistory">
+        </div>
+        <div id="imageMapDiv"></div>
+    </div>
+  <div class="box">
+<h3>
+  Constraint
+</h3>
+<div class="formPane">
+ <form method="get" action="../../../../fisheye/browse/svn/samurai/trunk.html">
+ <table>
+  <tr>
+   <td>Branch:</td>
+   <td><select class="branchSelect" name="wbbr" onchange="submit()">
+     <option value="" id="wbbr_" selected="selected">(any)</option>
+       <option value="trunk" id="wbbr_trunk">trunk</option>
+   </select></td>
+  </tr>
+  <tr>
+   <td>Author:</td>
+   <td><select name="wbauthor" onchange="submit()">
+     <option value="" id="wbauthor_" selected="selected">(any)</option>
+       <option value="yusuke" id="wbauthor_yusuke">yusuke</option>
+   </select></td>
+  </tr>
+  <tr>
+   <td>Tag:</td>
+   <td>
+     <input type="text" size="15" name="wbtag" value="">
+   </td>
+  </tr>
+  <tr>
+   <td>Date:</td>
+   <td>
+     <input type="text" size="10" id="wbdate" name="wbdate" value="">
+     <input type="button" value="..." id="cal"/>
+     <input type="hidden" name="wbjump" value="jump">
+     <input type="submit" value="Apply">
+       <a target="fisheyehelp" href="http://docs.atlassian.com/fisheye/docs-016/Browsing+through+a+Repository" class="help" title="">help</a>
+   </td>
+  </tr>
+ </table>
+ </form>
+ <script type="text/javascript">
+  Calendar.setup(
+    {
+      inputField  : "wbdate",     // ID of the input field
+      ifFormat    : "%Y-%m-%dT00:00:00",    // the date format
+      button      : "cal"      // ID of the button
+    }
+  );
+ </script>
+</div>
+  </div>
+  <div class="box">
+<h3>
+  <span class="boxIcon"><span class="boxIconText">
+  Sort:
+    path
+    |
+      <a href="/">last-commit</a>
+    |
+      <a href="/">first-commit</a>
+  </span></span>
+  Sub Directories</h3>
+<div class="toolBar">
+</div>
+<div class="dirPane"><ul><li><span class="folder"><a href="/">..</a></span></li>
+ <li>
+<span class="folder"><a href="/"><span class="folderPlain">core</span></a>/</span>
+ </li>
+ <li>
+<span class="folder"><a href="/"><span class="folderPlain">gui</span></a>/<a href="/"><span class="folderPlain">src</span></a>/</span>
+ </li>
+ <li>
+<span class="folder"><a href="/"><span class="folderPlain">site</span></a>/</span>
+ </li>
+</ul></div>
+  </div>
+</td>
+<td class="layoutRightPane">
+  <div class="box">
+<h3 class="changelog">
+    <div class="changelog-nav">
+        <form action="/" class="changelog-form">
+            Go to changeset: <input type="text" name="jumptoid"/> |
+            <a href="/">Full Changelog</a> |
+            <a href="/">
+                Customize Feeds</a>
+            <a type="application/rss+xml" href="http://yusuke.homeip.net/fisheye/changelog/~rss/svn/samurai/trunk/rss.xml">
+            </a>
+        </form>
+    </div>
+  Recent Changelog
+</h3>
+  <div class="changesetList">
+    <a class="csId" href="/">123</a>
+    by <span class="csAuthor">yusuke</span> 
+    09 August 2008, 16:46:51 +0900
+    (
+    4 months 16 days ago)
+    <!-- -->
+        <span class="csComment">SMR-28 NullPoinerException on the first launch</span>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/resources/samurai/swing/default.properties</a>
+<a class="csFilename" href="/#123" title="history">123
+</a>
+<em>deleted</em>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/resources/samurai/swing/messages.properties</a>
+<a class="csFilename" href="/" title="view">123</a>
+<a class="csFilename" href="/#r123" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+3 -1)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/resources/samurai/swing/messages_ja.properties</a>
+<a class="csFilename" href="/" title="view">123</a>
+<a class="csFilename" href="/#r123" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+3 -1)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/resources/samurai/util/default.properties</a>
+<a class="csFilename" href="/" title="view">123</a>
+<a class="csFilename" href="/#r123" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+14 -1)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+  </div>
+  <div class="changesetList">
+    <a class="csId" href="/">122</a>
+    by <span class="csAuthor">yusuke</span> 
+    04 August 2008, 19:21:32 +0900
+    (
+    4 months 21 days ago)
+    <!-- -->
+        <span class="csComment">SMR-26 ability to clear log buffer</span>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/swing/GraphPanel.java</a>
+<a class="csFilename" href="/" title="view">122</a>
+<a class="csFilename" href="/#r122" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+6 -0)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/swing/LogPanel.java</a>
+<a class="csFilename" href="/" title="view">122</a>
+<a class="csFilename" href="/#r122" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+3 -0)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/swing/LogRenderer.java</a>
+<a class="csFilename" href="/" title="view">122</a>
+<a class="csFilename" href="/#r122" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+9 -0)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/swing/MainFrame.java</a>
+<a class="csFilename" href="/" title="view">122</a>
+<a class="csFilename" href="/#r122" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+16 -0)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/swing/SamuraiPanel.java</a>
+<a class="csFilename" href="/" title="view">122</a>
+<a class="csFilename" href="/#r122" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+8 -0)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      &#8230; 5 more files in <a href="/">changeset</a>.
+  </div>
+  <div class="changesetList">
+    <a class="csId" href="/">121</a>
+    by <span class="csAuthor">yusuke</span> 
+    04 August 2008, 18:50:57 +0900
+    (
+    4 months 21 days ago)
+    <!-- -->
+        <span class="csComment">SMR-5 <br/>retiring encoding-display-names_*.properties, merging them into messages_*.properties.</span>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/swing/MainFrame.java</a>
+<a class="csFilename" href="/" title="view">121</a>
+<a class="csFilename" href="/#r121" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+4 -3)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/swing/TileTabPanel.java</a>
+<a class="csFilename" href="/" title="view">121</a>
+<a class="csFilename" href="/#r121" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+2 -4)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/util/CustomizableKeyStroke.java</a>
+<a class="csFilename" href="/" title="view">121</a>
+<a class="csFilename" href="/#r121" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+9 -1)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/resources/samurai/swing/encoding-display-names_en.properties</a>
+<a class="csFilename" href="/#121" title="history">121
+</a>
+<em>deleted</em>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/resources/samurai/swing/encoding-display-names_ja.properties</a>
+<a class="csFilename" href="/#121" title="history">121
+</a>
+<em>deleted</em>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/resources/samurai/swing/messages.properties</a>
+<a class="csFilename" href="/" title="view">121</a>
+<a class="csFilename" href="/#r121" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+157 -2)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/resources/samurai/swing/messages_ja.properties</a>
+<a class="csFilename" href="/" title="view">121</a>
+<a class="csFilename" href="/#r121" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+155 -0)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+  </div>
+  <div class="changesetList">
+    <a class="csId" href="/">120</a>
+    by <span class="csAuthor">yusuke</span> 
+    01 August 2008, 01:13:59 +0900
+    (
+    4 months 25 days ago)
+    <!-- -->
+        <span class="csComment">SMR-5 <br/>refactoring I18nized message injection part</span>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/swing/MainFrame.java</a>
+<a class="csFilename" href="/" title="view">120</a>
+<a class="csFilename" href="/#r120" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+21 -21)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/swing/TileTabPanel.java</a>
+<a class="csFilename" href="/" title="view">120</a>
+<a class="csFilename" href="/#r120" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+9 -9)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/util/CustomizableKeyStroke.java</a>
+<a class="csFilename" href="/" title="view">120</a>
+<a class="csFilename" href="/#r120" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+19 -14)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/java/samurai/util/GUIResourceBundle.java</a>
+<a class="csFilename" href="/" title="view">120</a>
+<a class="csFilename" href="/#r120" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+4 -0)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+      <p class="csFilename">
+        <a href="/">./gui/src/main/resources/samurai/swing/messages_ja.properties</a>
+<a class="csFilename" href="/" title="view">120</a>
+<a class="csFilename" href="/#r120" title="history"></a>&nbsp;<a class="csFilename" href="/" title="download"></a>
+(+1 -1)
+<a href="/">diffs</a>
+<!-- -->
+      </p>
+  </div>
+  </div>
+<div class="box">
+  <h3>
+    Files</h3>
+  <table id="fileTable" cellspacing="0">
+        <tr>
+          <td class="boxMessage">No Files</td>
+        </tr>
+  </table>
+</div>
+</td>
+</tr>
+</table>
+        <div class="licensemessage">
+            FishEye: Open Source License registered to Yusuke Yamamoto.
+        </div>
+<div class="bottomshadow"> </div>
+    <div class="licensemessage">
+        <strong>
+            <a class="smalltext" href="http://downloads.atlassian.com/software/fisheye/FishEyeDownloadCenter.jspa">
+            Version 1.6.5.a is available.</a>
+        </strong>
+    </div>
+<div id="poweredby" class="smalltext">
+    <a class="smalltext" href="http://www.atlassian.com/software/fisheye/">Atlassian FishEye</a>,
+                <a class="smalltext" href="http://www.atlassian.com/software/fisheye/">Subversion analysis</a>.
+    (Version:1.6.3
+    Build:build-336 2008-11-04) -
+    <a class="smalltext" href="/">Administration</a>
+    - Page generated 2008-12-26 05:16 +0900
+</div>
+<!--
+page produced in 307 ms
+-->
+<script type="text/javascript" language="Javascript1.2">
+  Behaviour.apply();
+</script>
+</body>
+</html>

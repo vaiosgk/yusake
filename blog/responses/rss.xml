@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+
+  
+  
+<title>Samuraism - Responses</title>
+<link>http://yusuke.homeip.net/blog/</link>
+<description></description>
+<language>en</language>
+<managingEditor>Yusuke Yamamoto</managingEditor>
+<lastBuildDate>Wed, 24 Dec 2008 01:09:10 GMT</lastBuildDate>
+  
+
+  <generator>Pebble (http://pebble.sourceforge.net)</generator>
+  <docs>http://backend.userland.com/rss</docs>
+  
+  
+  <item>
+    <title>Re: Twitter4J 1.1.2 released</title>
+    <link>http://yusuke.homeip.net/blog/2008/12/02/twitter4j_1_1_2_released.html#comment1230080950281</link>
+    <description>
+      The following thread might be helpful.
+http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Integrate;action=display;num=1192732862
+
+Cheers,
+    </description>
+    <author>Yusuke Yamamoto</author>
+    <comments>http://yusuke.homeip.net/blog/2008/12/02/twitter4j_1_1_2_released.html#comments</comments>
+    <guid isPermaLink="true">http://yusuke.homeip.net/blog/2008/12/02/twitter4j_1_1_2_released.html#comment1230080950281</guid>
+    <pubDate>Wed, 24 Dec 2008 01:09:10 GMT</pubDate>
+  </item>
+  
+  <item>
+    <title>Re: Running WebLogic Server 10g Release 3 on a Mac</title>
+    <link>http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1229508838000</link>
+    <description>
+      Thanks a lot!&lt;br /&gt;
+&lt;br /&gt;
+I also had to add the os.name argument and add the following line to my startWebLogic.sh:&lt;br /&gt;
+&lt;pre&gt;USER_MEM_ARGS=&amp;quot;-Xms256m -Xmx512m -XX:MaxPermSize=256m&amp;quot;&amp;amp;&lt;/pre&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+There is also a small typo at point 4: -Xmx1024 should be -Xmx102&lt;strong&gt;m&lt;/strong&gt;
+    </description>
+    <author>Jeroen van Wilgenburg</author>
+    <comments>http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comments</comments>
+    <guid isPermaLink="true">http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1229508838000</guid>
+    <pubDate>Wed, 17 Dec 2008 10:13:58 GMT</pubDate>
+  </item>
+  
+  <item>
+    <title>Re: Twitter4J 1.1.2 released</title>
+    <link>http://yusuke.homeip.net/blog/2008/12/02/twitter4j_1_1_2_released.html#comment1229480304331</link>
+    <description>
+      Can you please give me a hint on how to use this with Processing on Windows XP?  I put the .jar file into the CLASSPATH, but when I try to compile a Processing sketch it returns &#034;Cannot find a class or tyoe named &#039;Twitter&#039;&#034;.
+    </description>
+    <author>Patrick Di Justo</author>
+    <comments>http://yusuke.homeip.net/blog/2008/12/02/twitter4j_1_1_2_released.html#comments</comments>
+    <guid isPermaLink="true">http://yusuke.homeip.net/blog/2008/12/02/twitter4j_1_1_2_released.html#comment1229480304331</guid>
+    <pubDate>Wed, 17 Dec 2008 02:18:24 GMT</pubDate>
+  </item>
+  
+  <item>
+    <title>Re: Running WebLogic Server 10g Release 3 on a Mac</title>
+    <link>http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1229020126455</link>
+    <description>
+      Thanks for posting it. It&#039;s a great resource.&lt;br /&gt;
+One note: &lt;br /&gt;
+I had to add -Dos.name=unix to &amp;quot;java ...server_103generic.jar&amp;quot; command to avoid having out of space error during install.&lt;br /&gt;
+Once again- thanks for the post.
+    </description>
+    <author>Piotr Wyrwinski</author>
+    <comments>http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comments</comments>
+    <guid isPermaLink="true">http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1229020126455</guid>
+    <pubDate>Thu, 11 Dec 2008 18:28:46 GMT</pubDate>
+  </item>
+  
+  <item>
+    <title>Re: Running WebLogic Server 10g Release 3 on a Mac</title>
+    <link>http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1228409531836</link>
+    <description>
+      thank you man!&amp;nbsp; You saved me from having to develop on windows!
+    </description>
+    <author>Anonymous</author>
+    <comments>http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comments</comments>
+    <guid isPermaLink="true">http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1228409531836</guid>
+    <pubDate>Thu, 04 Dec 2008 16:52:11 GMT</pubDate>
+  </item>
+  
+  <item>
+    <title>Re: Running WebLogic Server 10g Release 3 on a Mac</title>
+    <link>http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1227596929375</link>
+    <description>
+      Thanks a lot !&lt;br /&gt;
+&lt;br /&gt;
+I am writing Java EE applications on Oracle BEA Weblogic Server 10g 3 and I believe if my mac could run the heavy application server and workshop, I will feel more satisfied when I spend a lot of time on these code. &lt;br /&gt;
+&lt;br /&gt;
+anyway, thank you very much.
+    </description>
+    <author>Huang</author>
+    <comments>http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comments</comments>
+    <guid isPermaLink="true">http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1227596929375</guid>
+    <pubDate>Tue, 25 Nov 2008 07:08:49 GMT</pubDate>
+  </item>
+  
+  <item>
+    <title>Re: Running JBoss on iPhone</title>
+    <link>http://yusuke.homeip.net/blog/2008/08/24/running_jboss_on_iphone.html#comment1227003260374</link>
+    <description>
+      WRT: running this on JBoss5&lt;br /&gt;
+&lt;br /&gt;
+I guess I can reproduce this with having JamVM on my laptop?&lt;br /&gt;
+As it looks like JamVM treats annotations differently than other JVMs.&lt;br /&gt;
+&lt;br /&gt;
+I try to make MethodInfoImpl handle this kind of annotations arrays,&lt;br /&gt;
+but I suspect there might be other similar issues.&lt;br /&gt;
+&lt;br /&gt;
+Will post my findings if I can get JamVM run on my machine.
+    </description>
+    <author>Ales Justin</author>
+    <comments>http://yusuke.homeip.net/blog/2008/08/24/running_jboss_on_iphone.html#comments</comments>
+    <guid isPermaLink="true">http://yusuke.homeip.net/blog/2008/08/24/running_jboss_on_iphone.html#comment1227003260374</guid>
+    <pubDate>Tue, 18 Nov 2008 10:14:20 GMT</pubDate>
+  </item>
+  
+  </channel>
+</rss>

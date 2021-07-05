@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href=".">
+    <title>侍ズム - Core 2 Duo MacBook Pro ベンチマークテスト</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/../diary/rss.xml"/>
+    <link rel="alternate" type="application/rdf+xml" title="RDF" href="http://yusuke.homeip.net/diary/../diary/rdf.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/../diary/atom.xml"/>
+        <link rel="stylesheet" href="../diary/themes/custom/theme.css" type="text/css"/>
+    <script src="../maps_file_api_v_1_key_ABQIAAAAtS2fi_RnBiuUs4BlVHjt6BRABsBgP8wqQh7kS3FgnXJL7vMCZhRCUVBp4cfEBxevDEQRKjj9DJC-Yg.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript" src="../diary/themes/custom/lightbox_plus.js"></script>
+    <script type="text/javascript" src="../diary/pebble.js">
+    </script>
+  </head>
+  <body>
+    <div class="bodyContent">
+<div class="header">
+  <div class="search">
+    <form method="post" action="../diary/search.html" accept-charset="UTF-8">
+    <table cellpadding="4" cellspacing="0">
+      <tr>
+        <td align="right">
+          <a href="../diary/today.html">今日</a> |
+          <a href="../diary/rss.xml">RSS</a> |
+          <a href="../diary/rdf.xml">RDF</a> |
+          <a href="../diary/atom.xml">Atom</a> |
+          <a href="../diary/viewFeeds.html">その他</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" align="right">
+          <input type="text" name="query"/>&nbsp;<input type="submit" value="検索"/>
+        </td>
+      </tr>
+      <tr>
+        <td align="right" valign="top">
+          <a href="../diary/search.html">詳細な検索</a>
+        </td>
+      </tr>
+    </table>
+    </form>
+  </div>
+  <div class="blogName">
+    <a href="../diary.html">侍ズム</a>
+  </div>
+  <div class="blogDescription">
+    Javaとアーチェリーと
+  </div>
+  <br/>
+    <div id="categories">
+    <a href="../diary/tags.html">タグ</a>
+     - 
+      カテゴリー :
+          <span class="selectedCategory">All</span>
+        |
+            <span class="category"><a href="../diary/categories/Archery.html">アーチェリー</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Car.html">車</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Cooking.html">食べ物</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Game.html">ゲーム</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Java.html">Java</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Mac.html">Mac</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Misc.html">雑多</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Movie.html">映画</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Photo.html">写真</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Python.html">Python</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Server.html">自宅サーバ</a></span>
+        |
+            <span class="category"><a href="../diary/categories/Travel.html">旅行・散歩</a></span>
+        |
+            <span class="category"><a href="../diary/categories/gps.html">GPS</a></span>
+  </div>
+</div>
+<div class="sidebar">
+<div>
+  <div class="calendar"><table width="100%"><tr><td colspan="7" align="center"><b><a href="../diary/2006/10.html">10月 2006</a></b></td></tr><tr><td class="calendarDayHeader" width="14%">日</td><td class="calendarDayHeader" width="14%">月</td><td class="calendarDayHeader" width="14%">火</td><td class="calendarDayHeader" width="14%">水</td><td class="calendarDayHeader" width="14%">木</td><td class="calendarDayHeader" width="14%">金</td><td class="calendarDayHeader" width="14%">土</td></tr><tr><td class="calendarDay">&nbsp;1&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/02.html">2</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/03.html">3</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/04.html">4</a>&nbsp;</td><td class="calendarDay">&nbsp;5&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/06.html">6</a>&nbsp;</td><td class="calendarDay">&nbsp;7&nbsp;</td></tr><tr><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/08.html">8</a>&nbsp;</td><td class="calendarDay">&nbsp;9&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/10.html">10</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/11.html">11</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/12.html">12</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/13.html">13</a>&nbsp;</td><td class="calendarDay">&nbsp;14&nbsp;</td></tr><tr><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/15.html">15</a>&nbsp;</td><td class="calendarDay">&nbsp;16&nbsp;</td><td class="calendarDay">&nbsp;17&nbsp;</td><td class="calendarDay">&nbsp;18&nbsp;</td><td class="calendarDay">&nbsp;19&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/20.html">20</a>&nbsp;</td><td class="calendarDay">&nbsp;21&nbsp;</td></tr><tr><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/22.html">22</a>&nbsp;</td><td class="calendarDay">&nbsp;23&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/24.html">24</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/25.html">25</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/26.html">26</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/27.html">27</a>&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/28.html">28</a>&nbsp;</td></tr><tr><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/29.html">29</a>&nbsp;</td><td class="calendarDay">&nbsp;30&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="../diary/2006/10/31.html">31</a>&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td></tr><tr><td colspan="7" align="center"><a href="../diary/2006/09.html">9</a>&nbsp; | &nbsp;<a href="/">今日</a>&nbsp; | &nbsp;<a href="../diary/2006/11.html">11</a></td></tr></table></div>
+<br/>
+<div><a href="http://www.beasys.co.jp/service/service/certified_prog.html"><img border="0" src="../diary/images/web.gif"/></a>
+<br/>
+<br/>
+<!-- Google AdSense banner-->
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQ_fnyiwIaCDqmJQ-S8AfXKNnH93M";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script>
+<br/><!-- SiteSearch Google -->
+<form method="get" action="http://www.google.com/custom" target="_top">
+<table border="0" bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+<a href="http://www.google.com/">
+<img src="../logos/Logo_25wht.gif" border="0" alt="Google" align="middle"></img></a>
+<br/>
+<input type="hidden" name="domains" value="yusuke.homeip.net"></input>
+<input type="text" name="q" size="15" maxlength="255" value=""></input>
+<input type="submit" name="sa" value="検索"></input>
+</td></tr>
+<tr>
+<td nowrap="nowrap">
+<table>
+<tr>
+<td>
+<input type="radio" name="sitesearch" value=""></input>
+<font size="-1" color="#000000">Web</font>
+</td>
+<td>
+<input type="radio" name="sitesearch" value="yusuke.homeip.net" checked="checked"></input>
+<font size="-1" color="#000000">yusuke.homeip.net</font>
+</td>
+</tr>
+</table>
+<input type="hidden" name="client" value="pub-3583922429486444"></input>
+<input type="hidden" name="forid" value="1"></input>
+<input type="hidden" name="ie" value="UTF-8"></input>
+<input type="hidden" name="oe" value="UTF-8"></input>
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;"></input>
+<input type="hidden" name="hl" value="ja"></input>
+</td></tr></table>
+</form>
+<!-- SiteSearch Google -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 120;
+google_ad_height = 60;
+google_ad_format = "120x60_as_rimg";
+google_cpa_choice = "CAAQxe7UlwIaCMBHsWH7YxzwKOe693M";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script></div>
+  <br/>
+  <div>
+    <b>最近のエントリー</b>
+    <br/>
+      <div class="small">
+        <a href="../diary/2006/11/29/1164729027157.html" title="http://yusuke.homeip.net/diary/2006/11/29/1164729027157.html">プレステ3：コンポーネントケーブル在庫薄！</a>
+      </div>
+      <div class="small">
+        <a href="/" title="http://yusuke.homeip.net/diary/2006/11/28/1164642611443.html">Playstation 3 ゲット！</a>
+      </div>
+      <div class="small">
+        <a href="../diary/2006/11/26/1164548932821.html" title="http://yusuke.homeip.net/diary/2006/11/26/1164548932821.html">TOEIC 受検</a>
+      </div>
+      <div class="small">
+        <a href="../diary/2006/11/24/1164352005882.html" title="http://yusuke.homeip.net/diary/2006/11/24/1164352005882.html">今日のおやつ</a>
+      </div>
+      <div class="small">
+        <a href="../diary/2006/11/21/1164069056070.html" title="http://yusuke.homeip.net/diary/2006/11/21/1164069056070.html">JBuidler 2007 リリース</a>
+      </div>
+      <div class="small">
+        <a href="../diary/2006/11/18/1163821446467.html" title="http://yusuke.homeip.net/diary/2006/11/18/1163821446467.html">Java屋が触る C# / その3 - Mac OS X で Mono のインストール・実行</a>
+      </div>
+      <div class="small">
+        <a href="../diary/2006/11/17/1163689537951.html" title="http://yusuke.homeip.net/diary/2006/11/17/1163689537951.html">Java屋が触る C# / その2 - コマンドラインでコンパイル・実行</a>
+      </div>
+      <div class="small">
+        <a href="../diary/2006/11/16/1163661300392.html" title="http://yusuke.homeip.net/diary/2006/11/16/1163661300392.html">'Second Life' 仮想世界内で無限増殖！？</a>
+      </div>
+  </div>
+<br/>
+<a href="http://b.hatena.ne.jp/entrylist?url=http://yusuke.homeip.net/"><img src="http://b.hatena.ne.jp/bc/http://yusuke.homeip.net/" class="bcounter" alt="はてなブックマーク数" title="はてなブックマーク数"></a>
+<br/>
+<br/>
+<a href="http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=78559.10000148&amp;subid=0&amp;type=4"></a>
+<br/>
+<br/><div>
+<a href="http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=102056.10000608&amp;type=4&amp;subid=0"><img alt="Apple Store（Japan） " border="0" src="../jp/store/affiliate/img/macbookpro/20061024/180_150.jpg"></a>
+</div>
+  <br/>
+  <div>
+    <b>最近のレスポンス</b>
+    <br/>
+      <div class="small">
+        <a href="../diary/2006/07/08/1152293519259.html#trackback1164814828766" title="http://yusuke.homeip.net/diary/2006/07/08/1152293519259.html#trackback1164814828766">Billy Idol</a>
+        <br/>
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../diary/2006/02/19/1140330356836.html#trackback1164814661928" title="http://yusuke.homeip.net/diary/2006/02/19/1140330356836.html#trackback1164814661928">http://blink182.mp3melody.info/</a>
+        <br/>
+        <br/><br/>
+      </div>
+      <div class="small">
+        <a href="../diary/2006/09/23/1158945225780.html#trackback1164814660572" title="http://yusuke.homeip.net/diary/2006/09/23/1158945225780.html#trackback1164814660572">from autumn to ashes</a>
+        <br/>
+      </div>
+  </div>
+  <br/>
+<div>
+<a href="http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=102056.10000604&amp;type=4&amp;subid=0"><img alt="Apple Store（Japan） " border="0" src="../jp/store/affiliate/img/macbookpro/20061024/120_600.jpg"></a>
+<br/>
+<a href="http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=98799.10000011&amp;type=4&amp;subid=0"><img alt="kakaku.com" border="0" src="../ad/linkshare/88-31.gif"></a>
+<br/>
+<iframe src="../e/cm_t_samuraism-20_o_1_p_20_l_ur1_category_home_banner_046QZN7HP2KFGC3R1E82_f_ifr_f_ifr_ext_iframe.html" width="120" height="90" scrolling="no" border="0" style="border:none;" frameborder="0"></iframe>
+<br/>
+<br/>
+<br/>
+<br/></div>
+</div>
+</div>
+<div class="ads">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "FFFFFF";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_text = "4169AA";
+google_color_url = "4169AA";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script></div>
+<div class="content">
+<div class="linearNavigationLinks">
+    &lt;&lt; <a href="../diary/2006/10/28/1162034751442.html">Core 2 Duo MacBook Pro セットアップメモ</a> |
+  <a href="../diary.html">Home</a>
+    | <a href="../diary/2006/10/31/1162274803584.html">エクスプローラのデフォルト表示を設定する方法</a> &gt;&gt;
+</div>
+<div class="blogEntry approved">
+  <div class="blogEntryHeader">
+    <span class="blogEntryLinks">
+      <a href="../diary/2006/10/29/1162103142127.html" title="http://yusuke.homeip.net/diary/2006/10/29/1162103142127.html">固定リンク</a><br/>
+        [<a href="../diary/categories/Mac.html">Mac</a>]
+    </span>
+    <span class="blogEntryTitle">
+    <a href="../diary/2006/10/29/1162103142127.html" name="a1162103142127" title="http://yusuke.homeip.net/diary/2006/10/29/1162103142127.html">Core 2 Duo MacBook Pro ベンチマークテスト</a>
+    </span>
+    <br/>
+    <span class="blogEntrySubtitle">
+    </span>
+  </div>
+  <div class="blogEntryBody">
+        <p><a href="http://www.maxon.net/pages/download/cinebench_e.html">Cinebench</a>でベンチマークテストをしてみました。<br/><br/>うちのMacBook Pro は 2.16GHz、メモリ1GB です。<br/><div class="codeSample">CINEBENCH 9.5<br/>****************************************************<br/><br/>Tester           : <br/><br/>Processor        : MacBook Pro<br/>MHz              : 2.16<br/>Number of CPUs   : 2<br/>Operating System : Mac OS X 10.4.8<br/><br/>Graphics Card    : Radeon1600<br/>Resolution       : <fill this out><br/>Color Depth      : <fill this out><br/><br/>****************************************************<br/><br/>Rendering (Single   CPU): 358 CB-CPU <br/>Rendering (Multiple CPU): 669 CB-CPU <br/><br/>Multiprocessor Speedup: 1.87<br/><br/>Shading (CINEMA 4D)                : 434 CB-GFX <br/>Shading (OpenGL Software Lighting) : 1645 CB-GFX <br/>Shading (OpenGL Hardware Lighting) : 3383 CB-GFX <br/><br/>OpenGL Speedup: 7.79<br/><br/>****************************************************</div><br/>先代 PowerBook G4 1.5GHz の結果は以下の通り。<br/>今でも十分早いんですけどね。<br/><div class="codeSample">CINEBENCH 9.5<br/>****************************************************<br/><br/>Tester           : <br/><br/>Processor        : PowerBook G4<br/>MHz              : 1.5<br/>Number of CPUs   : 1<br/>Operating System : Mac OS X 10.4.8<br/><br/>Graphics Card    : ATI Mobility Radeon 9700<br/>Resolution       : <fill this out><br/>Color Depth      : <fill this out><br/><br/>****************************************************<br/><br/>Rendering (Single   CPU): 149 CB-CPU <br/>Rendering (Multiple CPU): --- CB-CPU <br/><br/><br/>Shading (CINEMA 4D)                : 160 CB-GFX <br/>Shading (OpenGL Software Lighting) : 479 CB-GFX <br/>Shading (OpenGL Hardware Lighting) : 1025 CB-GFX <br/><br/>OpenGL Speedup: 6.43<br/><br/>****************************************************</div><br/><br/>先代PowerBook と比べると Rendering が149 -&gt; 668 CB-CPU 、Shading (OpenGL Hardware Lighting) が1025 -&gt; 3383。それぞれ448.32%、330.04% と大幅に向上しているのがわかります。<br/>シェーディングパフォーマンスが PowerBook で ハードウェアアクセラレーション を効かせた場合よりも MacBook でソフトウェア処理した場合の方が高速なのは凄いです。<br/><br/><br/>Core Duo の MacBook Pro 2.0GHz のテスト結果は<a href="http://mac.ascii24.com/mac/review/portable/2006/02/23/660723-000.html">こちら(ASCII24 &gt; Mac24)</a>にあります。<br/>Core Duo の MacBook Pro 2.0GHz と比べても Rendering が559 -&gt; 668 CB-CPU 、Shading (OpenGL Hardware Lighting) が1262 -&gt; 3383。それぞれ19.49%、268.06% の向上になります。<br/><br/>ASCII24 &gt; Mac24 の結果と合わせたグラフも作ってみました。<br/>グラフィックチップのパフォーマンスが相対的に異様に高いのが分かります。<br/><a href="#"></a><br/></p><div class="tags">タグ : <a href="../diary/tags/mac.html" rel="tag">mac</a></div>
+  </div>
+  <div class="blogEntryMetadata">
+    <span class="floatRight">
+        <a href="../diary/2006/10/29/1162103142127.html#trackbacks">トラックバック[0]</a>
+        <a href="../diary/2006/10/29/1162103142127.html#comments">コメント[3]</a>
+    </span>
+    <form action="../diary/modifyBlogEntryDate.html" method="GET">
+    投稿者 yusuke : 2006/10/29 15:25:42 JST
+</form>
+</div>
+    <br/>
+    <a name="comments"></a>
+          <div class="itemBodyOdd" style="padding-left: 16px; padding-top: 16px; padding-bottom: 16px; padding-right: 16px">
+<div class="comment approved">
+  <div class="commentHeader">
+    <span class="commentLinks">
+      <a href="../diary/replyToComment_entry_1162103142127_comment_1164378792313.html#form">返信</a> |
+      <a href="../diary/2006/10/29/1162103142127.html#comment1164378792313" title="http://yusuke.homeip.net/diary/2006/10/29/1162103142127.html#comment1164378792313">固定リンク</a>
+    </span>
+    <a href="../diary/2006/10/29/1162103142127.html#comment1164378792313" name="comment1164378792313" title="http://yusuke.homeip.net/diary/2006/10/29/1162103142127.html#comment1164378792313">Parallels + WebLogic + Orcale?</a>
+  </div>
+  <div class="commentBody">
+    macbook pro/parallelsでWindows環境を構築し、その上でWebLogicとかAquaLogicを稼動しても使える（開発とか簡単なテストができる）レベルでしょうか？複数のサーバインスタンスを立ち上げるためにOracleなども一緒に動かす必要がある場合もありますが、如何でしょうかね？macbookかmacbook proの購入を検討していますがこの辺が分からなくて迷っています。もしよろしかったら経験談をお願いします。
+（私は、同じビル１３階にいるものです。）
+  </div>
+  <div class="commentMetadata">
+    投稿者 kim : 2006/11/24 23:33:12 JST
+  </div>
+</div>
+          </div>
+          <div class="itemBodyEven" style="padding-left: 16px; padding-top: 16px; padding-bottom: 16px; padding-right: 16px">
+<div class="comment approved">
+  <div class="commentHeader">
+    <span class="commentLinks">
+      <a href="../diary/replyToComment_entry_1162103142127_comment_1164381519559.html#form">返信</a> |
+      <a href="../diary/2006/10/29/1162103142127.html#comment1164381519559" title="http://yusuke.homeip.net/diary/2006/10/29/1162103142127.html#comment1164381519559">固定リンク</a>
+    </span>
+    <a href="../diary/2006/10/29/1162103142127.html#comment1164381519559" name="comment1164381519559" title="http://yusuke.homeip.net/diary/2006/10/29/1162103142127.html#comment1164381519559">Re: Core 2 Duo MacBook Pro ベンチマークテスト</a>
+  </div>
+  <div class="commentBody">
+    はい。AquaLogic だろうが Oracle だろうが問題なく動作しますよ！
+Windows側にどの程度メモリを割り当てるかが悩みどころですが・・・。
+最近はLinuxとWindows 同時に動かしてることもあります。
+私は実は９月から１２階にいないんですが:p。
+  </div>
+  <div class="commentMetadata">
+    投稿者 裕介 : 2006/11/25 0:18:39 JST
+  </div>
+</div>
+          </div>
+          <div class="itemBodyOdd" style="padding-left: 16px; padding-top: 16px; padding-bottom: 16px; padding-right: 16px">
+<div class="comment approved">
+  <div class="commentHeader">
+    <span class="commentLinks">
+      <a href="../diary/replyToComment_entry_1162103142127_comment_1164383896436.html#form">返信</a> |
+      <a href="../diary/2006/10/29/1162103142127.html#comment1164383896436" title="http://yusuke.homeip.net/diary/2006/10/29/1162103142127.html#comment1164383896436">固定リンク</a>
+    </span>
+    <a href="../diary/2006/10/29/1162103142127.html#comment1164383896436" name="comment1164383896436" title="http://yusuke.homeip.net/diary/2006/10/29/1162103142127.html#comment1164383896436">ありがとうございます。</a>
+  </div>
+  <div class="commentBody">
+    ほお、そうですか？じゃあ、macbook proでなく、macbookでもメモリーさえちゃんと積めば問題なさそうですね。（なら、さっそく購入ですかね？）macbook proは、今スペック比較をして見たところ、macbookに比べあまり差がないような気がします。サイズが大きすぎって感じもありますし。
+９月から？あれ？もしかして、退社されたんでしょうか？（すみません、サイトの情報だけではどなたか良く分かりませんので。ただ、侍というツールは以前会社の人から聞いた事があり、同じ会社の方だろうとは思っていましたが・・。）
+  </div>
+  <div class="commentMetadata">
+    投稿者 kim : 2006/11/25 0:58:16 JST
+  </div>
+</div>
+          </div>
+    <a name="trackbacks"></a>
+      <br/>
+      <br/>
+      <div class="blogEntryBody"><a name="form"></a>
+<div>
+<b>コメント追加</b>
+<br/><br/>
+<form name="addComment" action="/#form" method="POST" accept-charset="UTF-8">
+<input type="hidden" name="entry" value="1162103142127">
+<input type="hidden" name="parent" value="1164383896436">
+<table width="99%">
+  <tr>
+    <td valign="top"><b>タイトル</b></td>
+    <td><input type="text" name="title" size="40" value="ありがとうございます。"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>本文</b></td>
+    <td>
+      <textarea name="body" rows="8" cols="40"></textarea>
+      <div class="small"><b>HTML</b> : b, i, blockquote, br, p, pre, a href="", ul, ol, li</div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>名前</b></td>
+    <td><input type="text" name="author" size="40" value="Anonymous"></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>E-mail</b></td>
+    <td>
+      <input type="text" name="email" size="40" value="">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Webサイト</b></td>
+    <td><input type="text" name="website" size="40" value=""></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>保存しますか?</b></td>
+    <td>
+      はい&nbsp;
+      <input type="radio" name="rememberMe" value="true"/>
+      いいえ&nbsp;<input type="radio" name="rememberMe" value="false" checked="checked"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <p>
+      <b>E-mailは公開されません</b>, このエントリーの新規コメント通知が必要なら記入します。(解除可能)
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right">
+      <input name="submit" type="submit" onclick="this.form.action='noSpamAddComment.action#form'" value="プレビュー"/>
+      <input name="submit" type="submit" onclick="this.form.action='noSpamAddComment.action#form'" value="コメント投稿"/>
+      <noscript>JavaScript を有効にしていないブラウザでは投稿出来ません。</noscript>
+    </td>
+  </tr>
+</table>
+</form>
+</div>
+</div>
+      <div class="small" style="text-align: center">トラックバックURL http://yusuke.homeip.net/diary/addTrackBack.action?entry=1162103142127</div>
+      <br/>
+</div>
+</div>
+<div class="footer">
+  <span class="footerLinks">
+    Powered by <a href="http://pebble.sourceforge.net/"><b>Pebble 1.9</b></a>
+    [
+        <a href="../diary/login.html">ログイン</a>
+    ]
+  </span>
+  <span>
+    Content (c) yusuke
+  </span>
+</div>
+    </div>
+<script src="../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+  </body>
+</html>

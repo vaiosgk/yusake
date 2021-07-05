@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム - 写真 category</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaとアーチェリーと</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/03/05/1173101316965.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/01/02/1167747582000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/10/27/1161876627000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/10/22/1161446681514.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/10/20/1161270586152.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/09/17/1158419970212.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/08/17/1155812392049.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/03/05/1173101316965.html">
+    <title>オリンパス 重さ375g の世界最小・最薄・最軽量の一眼を発表 E-410 / E-510</title>
+    <link>http://yusuke.homeip.net/diary/2007/03/05/1173101316965.html</link>
+    
+      
+        <description>
+          &lt;p&gt;E-400 として欧州で発売されていたものの焼き直しかと思えばライブビューを搭載しての登場です。&lt;br/&gt;・CNET Japan - &lt;a href=&#034;http://japan.cnet.com/news/tech/story/0,2000056025,20344580,00.htm&#034;&gt;重さ375g！オリンパス、軽くて薄い一眼デジカメを発表--E1後継機もお披露目&lt;/a&gt;&lt;br/&gt;&lt;br/&gt; 今回発表されたのは軽い、小さい E-410と手ぶれ補正付きのE-510。&lt;br/&gt;最近のオリンパスのコンパクトデジカメは手ぶれ補正を搭載していたので、いずれ一眼にも載っけてくるのは既定路線でしたが、こんなにすぐ出してくるとは思いませんでした！&lt;br/&gt;・&lt;a href=&#034;http://www.olympus.co.jp/jp/news/2007a/nr070305e410j.cfm&#034;&gt;世界最小・最薄・最軽量 “ライブビュー”デジタル一眼レフカメラ「E-410」発売&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.olympus.co.jp/jp/news/2007a/nr070305e510j.cfm&#034;&gt;ボディー内手ぶれ補正機構を搭載した“ライブビュー” デジタル一眼レフカメラ「E-510」を発売&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;手ぶれ補正はレンズではなくセンサー側をシフトさせる方式。&lt;br/&gt;レンジシフト方式はパナソニックに任せる方針でしょうか。&lt;br/&gt;&lt;br/&gt;ホコリ落とし機能で先を行っていたと思えば去年夏から他社の新機種ラッシュで手ぶれ補正、ホコリ落とし、1000万画素というトレンドができて置いて行かれていたオリンパスです。&lt;br/&gt;ここでトレンドをふまえつつ、小型、ライブビュー、さらには露出補正効果、ホワイトバランスのプレビューというユニークな機能を搭載してきました。&lt;br/&gt;小型ながら xD ピクチャカードだけでなく、コンパクトフラッシュにもちゃんと対応しているのがエライです。&lt;br/&gt;惜しいのはせっかくライブビューができるのに液晶が動かないことくらい？&lt;br/&gt;せめて上下方向の視野角が確保されていることを願うばかりです。&lt;br/&gt;&lt;br/&gt;一眼レフのシェアではいまいちパットしないOlympusですが、最近はコンパクトデジカメで魅力的な機種を投入して売れてきてるらしいので、そのまま一眼でもがんばってほしいところです。&lt;br/&gt;&lt;br/&gt;特に小型の一眼という分野ではフォーサーズ規格は有利なはず。&lt;br/&gt;女性や一眼初心者の新規顧客も開拓できそうですね。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/01/02/1167747582000.html">
+    <title>箱根駅伝</title>
+    <link>http://yusuke.homeip.net/diary/2007/01/02/1167747582000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;年末年始は義姉の家にお邪魔していました。&lt;br/&gt;１月２日には箱根駅伝の往路四区、酒匂(サカワ)川で応援。&lt;br/&gt;母校は残念ながら優勝を逃したものの、ひたむきに走るランナー達にエネルギーを貰いました。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/waseda.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/waseda-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/P1021110.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/P1021110-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/P1021137.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/P1021137-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/P1021175.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/P1021175-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;曇っていたので ISO感度400 で撮りましたが、もうすこし感度を落として背景を流すと面白かったかもしれません。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/10/27/1161876627000.html">
+    <title>マクロレンズ ED 50mm F2.0 Macro 購入</title>
+    <link>http://yusuke.homeip.net/diary/2006/10/27/1161876627000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;標準レンズだとどうしても寄って撮れないし、背景のボケ具合にも限界があるので、花とかを撮るのはなかなか難しいです。&lt;br/&gt;一ヶ月以上前になりますがえいやっ、とマクロレンズを買いました。&lt;br/&gt;&lt;br/&gt;マクロレンズで接写すると普通目で見えていないものが写るので面白いです。&lt;br/&gt;花なんかはたぶん誰がどう撮ってもきれいに、それなりに味のある写りになります。&lt;br/&gt;誰でもウマっぽく撮れるということは、そこからさらに個性を出すのが難しいということかもしれませんが。&lt;br/&gt;&lt;br/&gt;とりあえずパシャパシャ、と撮ったものを３つほど。&lt;br/&gt;&lt;br/&gt;室内でフラッシュを焚きつつ、露出をかなりオーバーに撮って輪郭を飛ばしてみました。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/09/04/macro.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/09/04/macro-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/09/04/macro2.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/09/04/macro2-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/10/27/two-hana.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/10/27/two-hana-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;買ったレンズはこれ。Olympus の ズイコーデジタルブランドのマクロは２つありますが、これは 35mm 換算で100mm、等倍相当の中望遠マクロです。&lt;br/&gt;&lt;a href=&#034;http://pt.afl.rakuten.co.jp/c/0386bd2b.c091f12f/?url=http://www.rakuten.co.jp/fujicamera/485312/676287/676298/#861188&#034; target=&#034;_blank&#034;&gt;&lt;img src=&#034;http://image.rakuten.co.jp/wshop/data/ws-mall-img/fujicamera/img64/img10442223533.jpeg&#034; border=0 alt=&#034;オリンパス ズイコーデジタル ED 50mm F2.0 Macro【送料無料】&#034;&gt;&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://pt.afl.rakuten.co.jp/c/0386bd2b.c091f12f/?url=http://www.rakuten.co.jp/fujicamera/485312/676287/676298/#861188&#034; target=&#034;_blank&#034;&gt;オリンパス ズイコーデジタル ED 50mm F2.0 Macro&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;F2.0 ということで被写界深度が大変浅いです。上の三つの写真は開放絞りですが普段はやや絞り込んで撮った方が良さそう。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/10/22/1161446681514.html">
+    <title>Yerba Buena Garden パノラマ写真</title>
+    <link>http://yusuke.homeip.net/diary/2006/10/22/1161446681514.html</link>
+    
+      
+        <description>
+          &lt;p&gt;Yerba Buena Garden はサンフランシスコの&lt;a href=&#034;http://www.sfmoma.org/&#034;&gt;MOMA&lt;/a&gt;や&lt;a href=&#034;http://www.moscone.com/&#034;&gt;Moscone Center&lt;/a&gt;、&lt;a href=&#034;http://www.metreon.com/&#034;&gt;Metreon&lt;/a&gt;といった名所に囲まれた公園です。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/03/26/yerbabuena.jpg&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/03/26/yerbabuena-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Yerba Buena Garden パノラマ写真&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/03/26/yerbabuena_VR.mov&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/03/26/yerbabuena-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Yerba Buena Garden パノラマ写真(要QuickTime)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;無機質な都会の風景に突然飛び込んでくる芝生の緑。結構癒される場所です。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/10/20/1161270586152.html">
+    <title>いたばし花火大会写真コンテスト入選っ！</title>
+    <link>http://yusuke.homeip.net/diary/2006/10/20/1161270586152.html</link>
+    
+      
+        <description>
+          &lt;p&gt;８月に行われた板橋区の花火大会、パシャパシャと写真を撮りまくって写真コンテストに応募してみました。&lt;br/&gt;このテのコンテストに応募するのはもちろん初めてなのですが、なんといきなり入選してしまいました！&lt;br/&gt;・&lt;a href=&#034;http://itabashihanabi.jp/contest/contest6-4.htm&#034;&gt;いたばし花火大会2006 写真コンテスト受賞作品&lt;/a&gt;&lt;br/&gt;応募制限点数一杯の３点応募したのですが、自分で一番お気に入りの写真が選ばれたのでとってもうれしいです！&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;しかしこの写真コンテスト、9月下旬に入賞作品発表のはずが「写真コンテストはただいま最終審査中です。まもなく受賞作品の発表となります。どうぞ楽しみにお待ち下さい！」と表示されたまま今日までずれこみました。&lt;br/&gt;なんの弁解もなく3週間近く遅れるのはなかなか立派なお役所仕事です。 ＞ 板橋区観光協会の方々&lt;br/&gt;&lt;br/&gt;&lt;strike&gt;しかも今見ると受賞作品発表ページへのリンクが消えています。何か手違いで発表が遅れた？早まった？？&lt;br/&gt;ただのテストページで実は受賞してない、なんてことがないことを祈ります。&lt;/strike&gt;&lt;br/&gt;補足(2006/10/26 0:37):&lt;br/&gt;たった今&lt;a href=&#034;http://itabashihanabi.jp/index.htm&#034;&gt;トップページ&lt;/a&gt;の「お待ちください」が消え、リンクが復活しました。&lt;br/&gt;7時間くらいかけて1ページずつ、じっくり更新していたようです。&lt;br/&gt;担当者様、お疲れさまです。&lt;br/&gt;でもここまで遅れたのは自業自得（？）ですから、税金使ってタクシーとか乗らないでくださいね！&lt;br/&gt;9月下旬発表とのことで、9月21日から発表を首を長くして毎日チェックしており辛口です。&lt;br/&gt;ごめんなさい。&lt;br/&gt;&lt;br/&gt;来年は是非とも&lt;br/&gt;・予定通り発表&lt;br/&gt;・遅れるなら遅れるで状況の説明を&lt;br/&gt;・html の更新はいっぺんに(^^;&lt;br/&gt;できるようがんばってください！&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/09/17/1158419970212.html">
+    <title>文葡両萄</title>
+    <link>http://yusuke.homeip.net/diary/2006/09/17/1158419970212.html</link>
+    
+      
+        <description>
+          &lt;p&gt;近所のアーチェリー場で管理人さん達が一生懸命育てている葡萄が綺麗に実っていました。&lt;br/&gt;&lt;br/&gt;市販されている葡萄みたいな強烈な甘さはないですがちょっと酸っぱくて素朴な味わいです。&lt;br/&gt;もちろん無農薬。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/09/16/budo.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/09/16/budo-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/08/17/1155812392049.html">
+    <title>ピョンが治る！</title>
+    <link>http://yusuke.homeip.net/diary/2006/08/17/1155812392049.html</link>
+    
+      
+        <description>
+          &lt;p&gt;茅場町にて。&lt;br/&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/08/17/DVC00024.JPG&#034;/&gt;&lt;br/&gt;&lt;br/&gt;で、ピョンって何でしたっけ？&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+
+</rdf:RDF>

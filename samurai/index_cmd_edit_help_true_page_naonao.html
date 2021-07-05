@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="ja" lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP"/>
+ <meta http-equiv="content-style-type" content="text/css"/>
+ <meta http-equiv="Content-Language" content="ja"/>
+ <meta name="robots" content="NOINDEX,NOFOLLOW"/>
+ <!--title>naonao の編集 - PukiWiki</title-->
+<title>Samurai</title>
+ <link rel="stylesheet" href="../samurai/skin/default.en.css" type="text/css" media="screen" charset="EUC-JP"/>
+ <link rel="stylesheet" href="../samurai/skin/print.en.css" type="text/css" media="print" charset="EUC-JP"/>
+</head>
+<body>
+<div id="header">
+ <a href="../samurai.html"><img id="logo" src="../samurai/image/pukiwiki.png" width="80" height="80" alt="[PukiWiki]" title="[PukiWiki]"/></a>
+ <h1 class="title"><a href="../samurai/index_cmd_search_word_naonao.html">naonao</a>  の編集</h1>
+ <a href="../samurai/index_naonao.html"><span class="small">index.php?naonao</span></a>
+</div>
+<div id="navigator">
+ [ <a href="../samurai/index_naonao.html">Reload</a> ]
+ &nbsp;
+ [ <a href="../samurai/index_plugin_newpage_refer_naonao.html">New</a>
+ | <a href="../samurai/index_cmd_edit_page_naonao.html">Edit</a>
+ | <a href="../samurai/index_cmd_diff_page_naonao.html">Diff</a>
+ | <a href="../samurai/index_plugin_attach_pcmd_upload_page_naonao.html">Upload</a>
+ ]
+ &nbsp;
+ [ <a href="../samurai/index_Samurai.html">Front page</a>
+ | <a href="../samurai/index_cmd_list.html">List of pages</a>
+ | <a href="../samurai/index_cmd_search.html">Search</a>
+ | <a href="../samurai/index_RecentChanges.html">Recent changes</a>
+ | <a href="../samurai/index_cmd_backup_page_naonao.html">Backup</a>
+ | <a href="../samurai/index__A5_D8_A5_EB_A5_D7.html">Help</a>
+ ]
+ [ <a href="../samurai/index_plugin_referer_page_naonao.html">Referer</a> ]
+</div>
+<hr class="full_hr"/>
+<div id="body"><script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="3323290003";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script>
+<br/>
+<form action="../samurai/index.html" method="post">
+<div><input type="hidden" name="encode_hint" value="ぷ"/></div>
+ <div class="edit_form">
+  <select name="template_page">
+   <option value="">-- 雛形とするページ --</option>
+   <option value="InterWikiName">InterWikiName</option>
+   <option value="MenuBar">MenuBar</option>
+   <option value="PayPal">PayPal</option>
+   <option value="RecentDeleted">RecentDeleted</option>
+   <option value="Samurai">Samurai</option>
+   <option value="english">english</option>
+   <option value="interwikiname">interwikiname</option>
+   <option value="samurai">samurai</option>
+   <option value="todo">todo</option>
+   <option value="ヘルプ">ヘルプ</option>
+   <option value="整形ルール">整形ルール</option>
+  </select>
+  <input type="submit" name="template" value="読込" accesskey="r"/>
+  <br/>
+  <input type="hidden" name="cmd" value="edit"/>
+  <input type="hidden" name="page" value="naonao"/>
+  <input type="hidden" name="digest" value="d41d8cd98f00b204e9800998ecf8427e"/>
+  <textarea name="msg" rows="20" cols="80"></textarea>
+  <br/>
+  <input type="submit" name="preview" value="プレビュー" accesskey="p"/>
+  <input type="submit" name="write" value="ページの更新" accesskey="s"/>
+  <input type="checkbox" name="notimestamp" value="true"/>
+  <span style="small">タイムスタンプを変更しない</span>
+  <textarea name="original" rows="1" cols="1" style="display:none"></textarea>
+ </div>
+</form><hr class="full_hr"/>
+<div class="contents">
+<a id="contents_1"></a><ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_0"> ブロック要素 </a>
+<ul class="list3" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_1"> 段落 </a></li>
+<li><a href="#content_1_2"> 引用文 </a></li>
+<li><a href="#content_1_3"> リスト構造 </a></li>
+<li><a href="#content_1_4"> 整形済みテキスト </a></li>
+<li><a href="#content_1_5"> 表組み </a></li>
+<li><a href="#content_1_6"> CSV形式の表組み </a></li>
+<li><a href="#content_1_7"> 見出し </a></li>
+<li><a href="#content_1_8"> 目次 </a></li>
+<li><a href="#content_1_9"> 左寄せ・センタリング・右寄せ </a></li>
+<li><a href="#content_1_10"> 水平線 </a></li>
+<li><a href="#content_1_11"> 行間開け </a></li>
+<li><a href="#content_1_12"> 添付ファイル・画像の貼り付け </a></li>
+<li><a href="#content_1_13"> テキストの回り込みの解除 </a></li>
+<li><a href="#content_1_14"> フォーム </a></li></ul></li>
+<li><a href="#content_1_15"> インライン要素 </a>
+<ul class="list3" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_16"> 文字列 </a></li>
+<li><a href="#content_1_17"> 改行 </a></li>
+<li><a href="#content_1_18"> 強調・斜体 </a></li>
+<li><a href="#content_1_19"> 文字サイズ </a></li>
+<li><a href="#content_1_20"> 文字色 </a></li>
+<li><a href="#content_1_21"> 取消線 </a></li>
+<li><a href="#content_1_22"> 注釈 </a></li>
+<li><a href="#content_1_23"> 添付ファイル・画像の貼り付け </a></li>
+<li><a href="#content_1_24"> ルビ構造 </a></li>
+<li><a href="#content_1_25"> アンカーの設定 </a></li>
+<li><a href="#content_1_26"> カウンタ表示 </a></li>
+<li><a href="#content_1_27"> オンライン表示 </a></li>
+<li><a href="#content_1_28"> バージョン表示 </a></li>
+<li><a href="#content_1_29"> WikiName </a></li>
+<li><a href="#content_1_30"> ページ名 </a></li>
+<li><a href="#content_1_31"> InterWiki </a></li>
+<li><a href="#content_1_32"> リンク </a></li>
+<li><a href="#content_1_33"> エイリアス </a></li>
+<li><a href="#content_1_34"> タブコード </a></li>
+<li><a href="#content_1_35"> ページ名置換文字 </a></li>
+<li><a href="#content_1_36"> 日時置換文字 </a></li>
+<li><a href="#content_1_37"> 文字参照文字 </a></li>
+<li><a href="#content_1_38"> 数値参照文字 </a></li></ul></li>
+<li><a href="#content_1_39"> その他 </a>
+<ul class="list3" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_40"> コメント行 </a></li></ul></li></ul></div>
+<p>ここでは、プラグインについてはよく使われるものだけを簡略に説明しています。プラグインのオプションなど詳細な説明については<a href="../samurai/index__5B_5Bpukiwiki_3APukiWiki_2F_A5_D7_A5_E9_A5_B0_A5_A4_A5_F3_2F1_4_5D_5D.html" title="pukiwiki:PukiWiki/プラグイン/1.4">pukiwiki:PukiWiki/プラグイン/1.4</a>を参照してください。</p>
+<h3 id="content_1_0">ブロック要素  <a class="anchor_super" id="vd593893" href="../samurai/index_naonao.html#vd593893" title="vd593893">&dagger;</a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ブロック要素は、インライン要素と他のブロック要素を子要素にすることができます。ただし、段落、見出し、水平線、#から始まるブロック要素は他のブロック要素を子要素にすることはできません。</li>
+<li>空行はトップレベルのブロック要素の区切りになります。空行が現われると、すべてのブロック要素は終了します。</li>
+<li>ブロック要素は、他のブロック要素の子要素になることができます。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>リスト構造と引用文は他のブロック要素を子要素にすることができます。子要素のブロック要素は親要素のレベルに従ってインデントされて表示されます。空行が現われるとブロック要素は終了します。</li>
+<li>リスト構造と引用文のネストには3段階のレベルがありますが、リスト構造のレベルと引用文のレベルは独立しています。従って、リスト構造を引用文の子要素にする場合や引用文をリスト構造の子要素にする場合は、レベルを1段階増やさずに記述します。リスト構造を他のリスト構造の子要素にする場合や引用文を他の引用文の子要素にする場合は、レベルを1段階増やして記述します。</li>
+<li>他のブロック要素の子要素となっている引用文から脱出するとき、親のブロック要素を継続したい場合は行頭に&lt;、&lt;&lt;、&lt;&lt;&lt;を記述します。&lt;で第1レベルの引用文から、&lt;&lt;で第2レベルの引用文から、&lt;&lt;&lt;で第3レベルの引用文から脱出します。空行を記述すると引用文だけでなく親のブロック要素からも脱出します。</li></ul></li>
+<li>ブロック要素となるプラグインは#〜の形式になっています。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_1">段落  <a class="anchor_super" id="n6691793" href="../samurai/index_naonao.html#n6691793" title="n6691793">&dagger;</a></h4>
+<pre>インライン要素</pre>
+<p>他のブロック要素を明示しない限り、段落となります。</p>
+<pre>~インライン要素</pre>
+<p>行頭で~を指定した場合も段落になります。行頭書式の文字(~、-、+、:、&gt;、|、#、//)を通常の文字として段落の先頭に書きたい場合は、行頭に~を記述して書くことができます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>段落の先頭は1文字分字下げされます。但し、番号なしリスト構造、番号付きリスト構造、引用文内の段落では字下げされません。定義リスト内の段落の先頭は1文字分字下げされます。</li>
+<li>段落は、新たなブロック要素が現われるまで継続します。</li>
+<li>段落は、他のブロック要素の子要素になることができます。</li>
+<li>段落は、他のブロック要素を子要素にすることはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_2">引用文  <a class="anchor_super" id="af1781b1" href="../samurai/index_naonao.html#af1781b1" title="af1781b1">&dagger;</a></h4>
+<pre>&gt;インライン要素</pre>
+<p>行頭で&gt;を指定すると、引用文になります。引用文は &gt;、&gt;&gt;、&gt;&gt;&gt; の3レベルあります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>引用文の中は、ブロック要素を明示しない限り、段落となります。</li>
+<li>引用文は、空行が現われるまで継続します。</li>
+<li>引用文内の段落は、新たな引用文またはブロック要素が現われるまで継続します。</li>
+<li>引用文は、他のブロック要素の子要素になることができます。他の引用文の子要素にする場合は、レベルを1段増やして記述します。リスト構造の子要素にする場合はレベルを1段増やさずに記述します。</li>
+<li>引用文は、他のブロック要素を子要素にすることができます。引用文の子要素となるリスト構造はレベルを1段増やさずに記述します。</li>
+<li>リスト構造内の引用文から脱出する場合で、リスト構造を継続する場合は、&lt;、&lt;&lt;、&lt;&lt;&lt;を行頭に記述します。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_3">リスト構造  <a class="anchor_super" id="q8abd9a8" href="../samurai/index_naonao.html#q8abd9a8" title="q8abd9a8">&dagger;</a></h4>
+<pre>-インライン要素</pre>
+<p>行頭で - を指定すると、番号なしリストになります。番号なしリストは -、--、--- の3レベルあります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>番号なしリストは、他のブロック要素の子要素になることができます。他のリスト構造の子要素にする場合は、レベルを1段増やして記述します。引用文の子要素にする場合は、レベルを増やさずに記述します。</li>
+<li>-の直後に ~を記述すると段落を子要素にすることができます。</li>
+<li>番号なしリストは、<strong>リストの先頭がインライン要素または段落である場合に限り</strong>、リストの次の行に他のブロック要素を記述することで、他のブロック要素を子要素にすることができます。</li></ul>
+<pre>+インライン要素</pre>
+<p>行頭で + を指定すると、番号付きリストになります。番号付きリストは +、++、+++ の3レベルあります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>番号付きリストは、他のブロック要素の子要素になることができます。他のリスト構造の子要素にする場合は、レベルを1段増やして記述します。引用文の子要素にする場合は、レベルを増やさずに記述します。</li>
+<li>+の直後に ~を記述すると段落を子要素にすることができます。</li>
+<li>番号付きリストは、<strong>リストの先頭がインライン要素または段落である場合に限り</strong>、リストの次の行に他のブロック要素を記述することで、他のブロック要素を子要素にすることができます。</li></ul>
+<pre>:定義語|説明文</pre>
+<p>行頭を : で始め、| 記号で区切ると、定義リストになります。定義リストは :、::、::: の3段階あります。定義リストの定義語、説明文は省略することができます。複数の連続した定義リストを記述し、2つ目以降の定義語を省略することで1つの定義語に対する複数の説明文を記述することができます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>行中に | がないと定義リストにはなりません。</li>
+<li>定義語・説明文は、インライン要素のみ記述することができます。</li>
+<li>定義リストは、他のブロック要素の子要素になることができます。他のリスト構造の子要素にする場合は、レベルを1段増やして記述します。引用文の子要素にする場合は、レベルを増やさずに記述します。</li>
+<li>|の直後に ~を記述すると段落を子要素にすることができます。</li>
+<li>定義リストは、定義リストの次の行に他のブロック要素を記述することで、他のブロック要素を子要素にすることができます。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_4">整形済みテキスト  <a class="anchor_super" id="g72f3a72" href="../samurai/index_naonao.html#g72f3a72" title="g72f3a72">&dagger;</a></h4>
+<p>行頭が半角空白で始まる行は整形済みテキストとなります。行の自動折り返しは行なわれません。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>整形済みテキストは、他のブロック要素の子要素になることができます。</li>
+<li>整形済みテキストは、他のブロック要素を子要素にすることができません。</li>
+<li>整形済みテキストは、すべての子要素を文字列として扱います。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_5">表組み  <a class="anchor_super" id="k7c49df4" href="../samurai/index_naonao.html#k7c49df4" title="k7c49df4">&dagger;</a></h4>
+<pre>|インライン要素|インライン要素|</pre>
+<p>行頭から | でインライン要素を区切ることで表組みになります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>各要素の先頭に下記の記述子を指定できます。
+<pre>LEFT:
+CENTER:
+RIGHT:
+BGCOLOR(色):
+COLOR(色):
+SIZE(サイズ):</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>要素の表示位置及び背景色・文字色・文字サイズ(px単位)を指定します。デフォルトはセンタリングされます。</li></ul>
+<div class="ie5"><table class="style_table" cellspacing="1" border="0"><tbody><tr><td class="style_td">表組みの</td><td class="style_td">各セルの要素の配置に</td><td class="style_td">関するサンプル</td></tr><tr><td class="style_td" style="text-align:left;">左寄せ</td><td class="style_td">センタリング</td><td class="style_td" style="background-color:yellow; text-align:right;">右寄せ</td></tr><tr><td class="style_td" style="color:crimson; text-align:right;">右寄せ</td><td class="style_td" style="text-align:left;">左寄せ</td><td class="style_td">センタリング</td></tr></tbody></table></div></li>
+<li>行末にcを記述すると、書式指定行となります。書式指定行では、次の記述子が指定できます。
+<pre>LEFT:
+CENTER:
+RIGHT:
+BGCOLOR(色):
+COLOR(色):
+SIZE(サイズ):</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>記述子の後ろに数値を記述すると、セル幅がpx単位で指定できます。</li></ul></li>
+<li>行末にhを記述すると、ヘッダ行(thead)になります。</li>
+<li>行末にfを記述すると、フッタ行(tfoot)になります。</li>
+<li>セル内のインライン要素の先頭に~を付けると、ヘッダ(th)になります。</li>
+<li>セル内に&gt;を単独で記述すると右のセルと連結します(colspan)。</li>
+<li>セル内に~を単独で記述すると上のセルと連結します(rowspan)。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>表組みは、他のブロック要素の子要素になることができます。</li>
+<li>表組みは、他のブロック要素を子要素にすることができません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_6">CSV形式の表組み  <a class="anchor_super" id="zc726b7e" href="../samurai/index_naonao.html#zc726b7e" title="zc726b7e">&dagger;</a></h4>
+<pre>,データ,データ,…</pre>
+<p>行頭でカンマ(.)を記述し、インライン要素をカンマ区切りで記述すると表組みになります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>インライン要素はダブルクォーテーション(&quot;)で囲むことができます。ダブルクォーテーションで囲むことで、カンマ(,)を含むインライン要素を記述できます。</li>
+<li>ダブルクォーテーション(&quot;)で囲んだデータの中で、ダブルクォーテーションを2つ(&quot;&quot;)続けることで、ダブルクォーテーション(&quot;)を含むインライン要素を記述できます。</li>
+<li>インライン要素の代わりにイコールを2つ(==)記述すると、colspanを意味します。</li>
+<li>インライン要素の左に1つ以上の半角空白文字を記述すると右寄せに、インライン要素の左右に1つ以上の半角空白文字を記述するとセンタリングになります。</li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>表組みは、他のブロック要素の子要素になることができます。</li>
+<li>表組みは、他のブロック要素を子要素にすることができません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_7">見出し  <a class="anchor_super" id="z15343da" href="../samurai/index_naonao.html#z15343da" title="z15343da">&dagger;</a></h4>
+<pre>*インライン要素</pre>
+<p>行頭で * を記述すると、見出しになります。見出しは *、**、*** の3段階あります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>見出しは、他のブロック要素の子要素になることはできません。見出しが現われると他のブロック要素は終了します。</li>
+<li>見出しは、他のブロック要素を子要素にすることはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_8">目次  <a class="anchor_super" id="l6dfa631" href="../samurai/index_naonao.html#l6dfa631" title="l6dfa631">&dagger;</a></h4>
+<pre>#contents</pre>
+<p>行頭で#contensを記述すると、見出しに基づいて目次を作成します。一般的に#contentsはページの最初のほうに記述します。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>目次は、他のブロック要素の子要素になることができますが、トップレベルに設置することを前提に左マージンを設定してありますので、他のブロック要素の子要素にはしないでください。</li>
+<li>目次は、他のブロック要素を子要素にすることはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_9">左寄せ・センタリング・右寄せ  <a class="anchor_super" id="bbc1f21c" href="../samurai/index_naonao.html#bbc1f21c" title="bbc1f21c">&dagger;</a></h4>
+<pre>LEFT:インライン要素
+CENTER:インライン要素
+RIGHT:インライン要素</pre>
+<p>行頭でLEFT:、CENTER:、RIGHT:を記述すると、インライン要素が左寄せ、センタリング、右寄せされます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>LEFT:、CENTER:、RIGHT:は、他のブロック要素の子要素になることができます。</li>
+<li>LEFT:、CENTER:、RIGHT:は、他のブロック要素を子要素にすることができません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_10">水平線  <a class="anchor_super" id="s9799d2c" href="../samurai/index_naonao.html#s9799d2c" title="s9799d2c">&dagger;</a></h4>
+<pre>----</pre>
+<p>行頭で4つの - を書くと水平線になります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>水平線は、他のブロック要素の子要素になることはできません。水平線が現われると他のブロック要素は終了します。</li>
+<li>水平線は、他のブロック要素を子要素にすることはできません。</li></ul>
+<pre>#hr</pre>
+<p>行頭で#hrを記述すると、区切り線になります。区切り線は上位のブロック要素の幅の60%の長さの水平線がセンタリングされて引かれます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>区切り線は、他のブロック要素の子要素になることができます。</li>
+<li>区切り線は、他のブロック要素を子要素にすることはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_11">行間開け  <a class="anchor_super" id="j2656808" href="../samurai/index_naonao.html#j2656808" title="j2656808">&dagger;</a></h4>
+<pre>#br</pre>
+<p>行頭で#brを記述すると、ブロック要素間またはブロック要素内で行間を開けることができます<a id="notetext_1" href="#notefoot_1" class="note_super">*1</a>。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>行間開けは、他のブロック要素の子要素になることができます。</li>
+<li>行間開けは、他のブロック要素を子要素にすることはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_12">添付ファイル・画像の貼り付け  <a class="anchor_super" id="p1971296" href="../samurai/index_naonao.html#p1971296" title="p1971296">&dagger;</a></h4>
+<pre>#ref(添付ファイル名)
+#ref(ファイルのURL)</pre>
+<p>行頭で#refを記述すると、添付ファイルまたは指定されたURLにあるファイルへのリンクを貼り付けることができます。ファイルが画像ファイルの場合は、その画像を表示します。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>#refには、カンマで区切って下記のパラメタを指定できます。パラメタを省略した場合はデフォルト値となります。
+<pre>添付ファイルのページ</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>添付ファイルが存在するページ名を指定します。デフォルトは現在のページです。</li>
+<li>このパラメタを指定する場合は、添付ファイル名の次に記述します。</li></ul>
+<pre>left
+center
+right</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ファイルへのリンク・画像を表示する位置を指定します。デフォルトではセンタリングされます。</li></ul>
+<pre>wrap
+nowrap</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ファイルへのリンク・画像を枠で囲むかどうかを指定します。デフォルトは囲みません。</li></ul>
+<pre>around</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>テキストの回り込みを指定します。デフォルトでは回り込みを行ないません。</li></ul>
+<pre>nolink</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>デフォルトでは添付ファイルへのリンクが張られますが、nolinkを指定するとリンクを張りません。</li></ul>
+<pre>代替文字列</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ファイル名の代わりに表示する文字列や画像の代替文字列を指定できます。指定しない場合は、ファイル名になります。</li>
+<li>代替文字列には文字列以外のインライン要素を含めることはできません。ページ名、文字列以外のインライン要素を記述しても文字列として扱われます。</li>
+<li>このパラメタを指定する場合は、最後に記述します。</li></ul></li>
+<li>#refは、他のブロック要素の子要素になることができます。</li>
+<li>#refは、他のブロック要素を子要素にすることはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_13">テキストの回り込みの解除  <a class="anchor_super" id="a800a528" href="../samurai/index_naonao.html#a800a528" title="a800a528">&dagger;</a></h4>
+<pre>#clear</pre>
+<p>行頭で#clearを記述すると、#refで指定したテキストの回り込みを解除します。#clearを指定しなくても、記事の末尾でテキストの回り込みが自動的に解除されます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>#clearは、他のブロック要素の子要素になることができます。</li>
+<li>#clearは、他のブロック要素を子要素にすることができません。</li></ul>
+<pre>#img(,clear)</pre>
+<p>#clearと同じ。</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_14">フォーム  <a class="anchor_super" id="x23849ca" href="../samurai/index_naonao.html#x23849ca" title="x23849ca">&dagger;</a></h4>
+<pre>#comment</pre>
+<p>行頭で#commentを記述すると、コメントを挿入するためのフォームが埋め込まれます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>#commentは、他のブロック要素の子要素になることができますが、トップレベルに設置することを前提に左マージンを設定してありますので、他のブロック要素の子要素にはしないでください。</li>
+<li>#commentは、他のブロック要素を子要素にすることはできません。</li></ul>
+<pre>#pcomment</pre>
+<p>行頭で#pcommentを記述すると、コメントを挿入するためのフォームが埋め込まれます。#commentとは異なり、コメントは別ページに記録されます。また、コメントに対するレスポンスを階層状に表示します。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>#pcommentは、他のブロック要素の子要素になることができますが、トップレベルに設置することを前提に左マージンを設定してありますので、他のブロック要素の子要素にはしないでください。</li>
+<li>#pcommentは、他のブロック要素を子要素にすることはできません。</li></ul>
+<pre>#article</pre>
+<p>行頭で#articleを記述すると、簡易掲示板のフォームが埋め込まれます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>#articleは、他のブロック要素の子要素になることができますが、トップレベルに設置することを前提に左マージンを設定してありますので、他のブロック要素の子要素にはしないでください。</li>
+<li>#articleは、他のブロック要素を子要素にすることはできません。</li></ul>
+<pre>#vote(選択肢1,選択肢2,...)</pre>
+<p>行頭で#voteを記述すると、簡易投票フォームが埋め込まれます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>選択肢は文字列、ページ名、<span class="noexists">InterWiki<a href="../samurai/index_cmd_edit_page_InterWiki_refer_naonao.html">?</a></span>、リンクを含めることができます。その他のインライン要素を含めることができません。</li>
+<li>#voteは、他のブロック要素の子要素になることができますが、トップレベルに設置することを前提に左マージンを設定してありますので、他のブロック要素の子要素にはしないでください。</li>
+<li>#voteは、他のブロック要素を子要素にすることはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_15">インライン要素  <a class="anchor_super" id="l7110f11" href="../samurai/index_naonao.html#l7110f11" title="l7110f11">&dagger;</a></h3>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>インライン要素は、必ずブロック要素の子要素になっています。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>行頭書式でブロック要素を明示しない場合は、段落の子要素となります。</li>
+<li>行頭書式でブロック要素を明示した場合は、指定したブロック要素の子要素になります。</li></ul></li>
+<li>インライン要素は、インライン要素を子要素にすることができます。</li>
+<li>インライン要素はブロック要素を子要素にすることはできません。</li>
+<li>インライン要素となるプラグイン及びユーザー定義は&〜の形式になっています。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_16">文字列  <a class="anchor_super" id="bd24e4ad" href="../samurai/index_naonao.html#bd24e4ad" title="bd24e4ad">&dagger;</a></h4>
+<pre>文字列</pre>
+<p>文字列はインライン要素です。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>文字列は、他のインライン要素の子要素になることができます。</li>
+<li>文字列は、他のインライン要素を子要素にすることができません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_17">改行  <a class="anchor_super" id="f383c24f" href="../samurai/index_naonao.html#f383c24f" title="f383c24f">&dagger;</a></h4>
+<pre>インライン要素~</pre>
+<p>行末に~を書くと行末改行になります。行末改行はブロック要素内での改行になります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>行末改行の次の行の行頭書式は無効になり、文字列として扱われます。</li>
+<li>行末改行は、他のインライン要素の子要素になることはできません。</li>
+<li>行末改行は、他のインライン要素を子要素にすることはできません。</li>
+<li>行末改行は、定義リストの定義語、表組みの要素、#で始まるブロック要素のパラメタの中では使用できません。</li></ul>
+<pre>&br;</pre>
+<p>行中に&br;書くと行中改行になります。行末の ~と違い、定義リストの定義語や表組の要素、#で始まるブロック要素のパラメタの中でも使用できます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>行中改行は、他のインライン要素の子要素になることができます。</li>
+<li>行中改行は、他のインライン要素を子要素にすることはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_18">強調・斜体  <a class="anchor_super" id="n38a029f" href="../samurai/index_naonao.html#n38a029f" title="n38a029f">&dagger;</a></h4>
+<pre>''インライン要素''</pre>
+<p>行中のインライン要素を &#39;&#39; ではさむと、インライン要素が強調表示になります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>強調は、他のインライン要素の子要素になることができます。</li>
+<li>強調は、他のインライン要素を子要素にすることができます。</li></ul>
+<pre>'''インライン要素'''</pre>
+<p>行中のインライン要素を &#39;&#39;&#39; ではさむと、インライン要素が斜体表示になります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>斜体は、他のインライン要素の子要素になることができます。</li>
+<li>斜体は、他のインライン要素を子要素にすることができます。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_19">文字サイズ  <a class="anchor_super" id="t513b12d" href="../samurai/index_naonao.html#t513b12d" title="t513b12d">&dagger;</a></h4>
+<pre>&size(サイズ){インライン要素};</pre>
+<p>行中に&sizeを書くとインライン要素の文字サイズを指定することができます。サイズはピクセル単位(px)で指定します。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>文字サイズは、他のインライン要素の子要素になることができます。</li>
+<li>文字サイズは、他のインライン要素を子要素にすることができます。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_20">文字色  <a class="anchor_super" id="sf40816a" href="../samurai/index_naonao.html#sf40816a" title="sf40816a">&dagger;</a></h4>
+<pre>&color(文字色,背景色){インライン要素};</pre>
+<p>行中に&colorを書くとインライン要素の文字色と背景色を指定することができます。背景色は省略できます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>色の指定は、次のいずれかの形式で行ないます。
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><span class="noexists">色キーワード<a href="../samurai/index_cmd_edit_page__BF_A7_A5_AD_A1_BC_A5_EF_A1_BC_A5_C9_refer_naonao.html">?</a></span></li>
+<li>#16進数6桁</li>
+<li>#16進数3桁</li></ul></li>
+<li>文字色は、他のインライン要素の子要素になることができます。</li>
+<li>文字色は、他のインライン要素を子要素にすることができます。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_21">取消線  <a class="anchor_super" id="r81ec79f" href="../samurai/index_naonao.html#r81ec79f" title="r81ec79f">&dagger;</a></h4>
+<pre>%%インライン要素%%</pre>
+<p>行中のインライン要素を&#37;&#37;ではさむと、インライン要素に取消線が付きます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>取消線は、他のインライン要素の子要素になることができます。</li>
+<li>取消線は、他のインライン要素を子要素にすることができます。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_22">注釈  <a class="anchor_super" id="s21cf12e" href="../samurai/index_naonao.html#s21cf12e" title="s21cf12e">&dagger;</a></h4>
+<pre>((インライン要素))</pre>
+<p>行中でインライン要素を&#40;&#40;と&#41;&#41;ではさむと、注釈が作成され、行中に注釈へのリンクが貼られます。<del>注釈文の中では注釈を使用できません(ネストはできません)。</del></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>注釈は、他のインライン要素の子要素になることができます。親要素は注釈文ではなく、注釈へのリンクに反映されます。</li>
+<li>注釈は、他のインライン要素を子要素にすることができます。子要素は注釈文に反映されます。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_23">添付ファイル・画像の貼り付け  <a class="anchor_super" id="v181e939" href="../samurai/index_naonao.html#v181e939" title="v181e939">&dagger;</a></h4>
+<pre>&ref(添付ファイル名);
+&ref(ファイルのURL);</pre>
+<p>行中で&refを記述すると、添付ファイルまたは指定されたURLにあるファイルへのリンクを貼り付けることができます。ファイルが画像ファイルの場合は、その画像を表示します。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>&refには、カンマで区切って下記のパラメタを指定できます。パラメタを省略した場合はデフォルト値となります。
+<pre>添付ファイルのページ</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>添付ファイルが存在するページ名を指定します。デフォルトは現在のページです。</li>
+<li>このパラメタを指定する場合は、添付ファイル名の次に記述します。</li></ul>
+<pre>nolink</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>デフォルトでは添付ファイルへのリンクが張られますが、nolinkを指定するとリンクを張りません。</li></ul>
+<pre>代替文字列</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>ファイル名の代わりに表示する文字列や画像の代替文字列を指定できます。指定しない場合は、ファイル名になります。</li>
+<li>代替文字列には文字列以外のインライン要素を含めることはできません。ページ名、文字列以外のインライン要素を記述しても文字列として扱われます。</li>
+<li>このパラメタを指定する場合は、最後に記述します。</li></ul></li>
+<li>&refは、他のインライン要素の子要素になることができます。</li>
+<li>&refは、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_24">ルビ構造  <a class="anchor_super" id="j137cd8e" href="../samurai/index_naonao.html#j137cd8e" title="j137cd8e">&dagger;</a></h4>
+<pre>&ruby(ルビ){インライン要素};</pre>
+<p>行中で&rubyを書くとインライン要素に対するルビをふることができます。ルビに対応していないブラウザではルビが本文中に ( と ) に囲まれて表示されます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ルビ構造のルビにはインライン要素を記述します。ただし、ルビの特性上、期待通りの表示になるとは限りません。</li>
+<li>ルビ構造は、他のインライン要素の子要素になることができます。</li>
+<li>ルビ構造は、他のインライン要素を子要素にすることができます。</li>
+<li>ルビ構造をルビ構造の子要素にはできません(ネストはできません)。</li>
+<li>注釈内や文字サイズを小さくしている部分での使用は、ルビが判読できなくなるので避けてください。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_25">アンカーの設定  <a class="anchor_super" id="mb297616" href="../samurai/index_naonao.html#mb297616" title="mb297616">&dagger;</a></h4>
+<pre>&aname(アンカー名);
+&aname(アンカー名){インライン要素};</pre>
+<p>行中で&anameを記述するとリンクのアンカーを設定することができます。リンクの飛び先にしたい位置に記述します。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>アンカー名は、半角アルファベットから始まる半角アルファベット・数字・ハイフン・アンダースコアからなる文字列を指定します。</li>
+<li>アンカー名の中には、全角文字や半角空白文字、半角記号を含めることはできません。</li>
+<li>アンカー設定は、他のインライン要素の子要素になることができます。</li>
+<li>アンカー設定は、他のインライン要素を子要素にすることができます。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_26">カウンタ表示  <a class="anchor_super" id="h7beb6ac" href="../samurai/index_naonao.html#h7beb6ac" title="h7beb6ac">&dagger;</a></h4>
+<pre>&counter;
+&counter(オプション);</pre>
+<p>行中で&counterを記述するとそのページにアクセスした人の数を表示することができます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>&counterには次のオプションを指定できます。オプションを省略した場合はallが指定されたものとみなされます。
+<pre>today</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>今日のアクセス数を表示します。</li></ul>
+<pre>yesterday</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>昨日のアクセス数を表示します。</li></ul>
+<pre>all</pre>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>アクセス総数を表示します。</li></ul></li>
+<li>カウンタ表示は、他のインライン要素の子要素になることができます。</li>
+<li>カウンタ表示は、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_27">オンライン表示  <a class="anchor_super" id="ab42f827" href="../samurai/index_naonao.html#ab42f827" title="ab42f827">&dagger;</a></h4>
+<pre>&online;</pre>
+<p>行中で&onlineを記述すると現在アクセス中の人数を表示することができます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>オンライン表示は、他のインライン要素の子要素になることができます。</li>
+<li>オンライン表示は、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_28">バージョン表示  <a class="anchor_super" id="f09f9e4b" href="../samurai/index_naonao.html#f09f9e4b" title="f09f9e4b">&dagger;</a></h4>
+<pre>&version;</pre>
+<p>行中で&versionを記述すると<span class="noexists">PukiWiki<a href="/">?</a></span>のバージョンを表示することができます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>バージョン表示は、他のインライン要素の子要素になることができます。</li>
+<li>バージョン表示は、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_29"><span class="noexists">WikiName<a href="../samurai/index_cmd_edit_page_WikiName_refer_naonao.html">?</a></span>  <a class="anchor_super" id="u8188184" href="../samurai/index_naonao.html#u8188184" title="u8188184">&dagger;</a></h4>
+<pre>WikiName</pre>
+<p>行中で、1つ以上の大文字→1つ以上の小文字→1つ以上の大文字→1つ以上の小文字の組合わせからなる半角//文字列は<span class="noexists">WikiName<a href="../samurai/index_cmd_edit_page_WikiName_refer_naonao.html">?</a></span>になります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><span class="noexists">WikiName<a href="../samurai/index_cmd_edit_page_WikiName_refer_naonao.html">?</a></span>の中には、全角文字や半角空白文字、記号、数字を含めることはできません。</li>
+<li><span class="noexists">WikiName<a href="../samurai/index_cmd_edit_page_WikiName_refer_naonao.html">?</a></span>は、<span class="noexists">PukiWiki<a href="/">?</a></span>内のページ名になります。すでに存在するページであればそのページへのリンクが自動的に貼られます。存在しない場合は<span class="noexists">WikiName<a href="../samurai/index_cmd_edit_page_WikiName_refer_naonao.html">?</a></span>の後ろに?が自動的に付き、そのページを新規作成するためのリンクが貼られます。</li>
+<li><span class="noexists">WikiName<a href="../samurai/index_cmd_edit_page_WikiName_refer_naonao.html">?</a></span>は、他のインライン要素の子要素になることができます。</li>
+<li><span class="noexists">WikiName<a href="../samurai/index_cmd_edit_page_WikiName_refer_naonao.html">?</a></span>は、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_30">ページ名  <a class="anchor_super" id="gce935d9" href="../samurai/index_naonao.html#gce935d9" title="gce935d9">&dagger;</a></h4>
+<pre>[[ぷきうぃき]]</pre>
+<p>行中で&#91;&#91;と&#93;&#93;で囲まれた文字列はページ名になります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ページ名の中には、全角文字、記号、数字、半角空白文字を含めることができます。</li>
+<li>ページ名の中には、&quot;#&&lt;&gt;を含めることはできません。</li>
+<li>すでに存在するページであればそのページへのリンクが自動的に貼られます。存在しない場合はページ名の後ろに?が自動的に付き、そのページを新規作成するためのリンクが貼られます。</li></ul>
+<p>ページ名にアンカー名をつけることもできます。</p>
+<dl class="list1" style="padding-left:16px;margin-left:16px">
+<dd><pre>[[ページ名#アンカー名]]</pre></dd></dl>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ページ名は、他のインライン要素の子要素になることができます。</li>
+<li>ページ名は、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_31"><span class="noexists">InterWiki<a href="../samurai/index_cmd_edit_page_InterWiki_refer_naonao.html">?</a></span>  <a class="anchor_super" id="g0dec0fe" href="../samurai/index_naonao.html#g0dec0fe" title="g0dec0fe">&dagger;</a></h4>
+<pre>[[InterWikiName:ページ名]]</pre>
+<p>行中のページ名形式の文字列の中で、:で2つの文字列を区切ると<span class="noexists">InterWiki<a href="../samurai/index_cmd_edit_page_InterWiki_refer_naonao.html">?</a></span>になります。:の前には<a href="../samurai/index_InterWikiName.html" title="InterWikiName (21d)">InterWikiName</a>のページで定義した<a href="../samurai/index_InterWikiName.html" title="InterWikiName (21d)">InterWikiName</a>を、:の後ろにはページ名を記述します。</p>
+<p>ページ名の後ろにアンカー名をつけることもできます。</p>
+<dl class="list1" style="padding-left:16px;margin-left:16px">
+<dd><pre>[[InterWikiName:ページ名#アンカー名]]</pre></dd></dl>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="../samurai/index_InterWikiName.html" title="InterWikiName (21d)">InterWikiName</a>の中には、全角文字を含めることができます。</li>
+<li><a href="../samurai/index_InterWikiName.html" title="InterWikiName (21d)">InterWikiName</a>の中には、半角空白文字を含めるができます。</li>
+<li><span class="noexists">InterWiki<a href="../samurai/index_cmd_edit_page_InterWiki_refer_naonao.html">?</a></span>は、他のインライン要素の子要素になることができます。</li>
+<li><span class="noexists">InterWiki<a href="../samurai/index_cmd_edit_page_InterWiki_refer_naonao.html">?</a></span>は、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_32">リンク  <a class="anchor_super" id="bd6593e1" href="../samurai/index_naonao.html#bd6593e1" title="bd6593e1">&dagger;</a></h4>
+<pre>[[リンク名:URL]]</pre>
+<p>行中の<a href="../samurai/index_InterWikiName.html" title="InterWikiName (21d)">InterWikiName</a>の形式の文字列の中で、:の前に任意のリンク名を、:の後ろにURLを記述すると、そのリンク名でURLに対するリンクを貼ることができます。</p>
+<br class="spacer"/>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>リンク名には、全角文字や半角空白文字を含めることができます。メールアドレスを指定する場合は、mailto:を書かずにアドレスだけを記述します。
+<pre>http://www.example.com/
+https://www.example.com/
+ftp://ftp.example.com/
+news://news.example.com/
+foo@example.com</pre></li></ul>
+<p>行中に直接、URLを記述した場合は自動的にそのURLに対するリンクが貼られます。</p>
+<p>記述したURLが画像ファイルである場合は、その画像を表示します。</p>
+<br class="spacer"/>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>リンクは、他のインライン要素の子要素になることができます。</li>
+<li>リンクは、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_33">エイリアス  <a class="anchor_super" id="u1026558" href="../samurai/index_naonao.html#u1026558" title="u1026558">&dagger;</a></h4>
+<pre>[[エイリアス名&gt;ページ名]]</pre>
+<p>行中のページ名形式の文字列の中で、&gt;で2つの文字列を区切るとエイリアスになります。&gt;の前にはエイリアス名を、&gt;の後ろにはページ名を記述します。</p>
+<p>エイリアスは<span class="noexists">PukiWiki<a href="/">?</a></span>内のページ名とは別のエイリアス名で、指定したページへのリンクを貼ります。</p>
+<br class="spacer"/>
+<p>ページ名にアンカー名を付け加えてアンカーへのリンクを貼ることができます。ページ名とアンカー名の間には#をつけます。カレントページのアンカーへリンクを貼る場合はページ名を省略することができます。</p>
+<dl class="list1" style="padding-left:16px;margin-left:16px">
+<dd><pre>[[エイリアス名&gt;ページ名#アンカー名]]
+[[エイリアス名&gt;#アンカー名]]</pre></dd></dl>
+<br class="spacer"/>
+<p>エイリアスをURLや<span class="noexists">InterWiki<a href="../samurai/index_cmd_edit_page_InterWiki_refer_naonao.html">?</a></span>と組み合わせることもできます。URLを指定する場合は、&gt;の代わりに:も使用できます。</p>
+<dl class="list1" style="padding-left:16px;margin-left:16px">
+<dd><pre>[[エイリアス名&gt;http://www.example.com/]]
+[[エイリアス名&gt;https://www.example.com/]]
+[[エイリアス名&gt;ftp://ftp.example.com/]]
+[[エイリアス名&gt;news://news.example.com/]]
+[[エイリアス名&gt;foo@example.com]]
+[[エイリアス名&gt;InterWikiName:ページ名]]
+[[エイリアス名&gt;InterWikiName:ページ名#アンカー名]]</pre></dd></dl>
+<dl class="list1" style="padding-left:16px;margin-left:16px">
+<dd><pre>[[エイリアス名:http://www.example.com/]]
+[[エイリアス名:https://www.example.com/]]
+[[エイリアス名:ftp://ftp.example.com/]]
+[[エイリアス名:news://news.example.com/]]
+[[エイリアス名:foo@example.com]]</pre></dd></dl>
+<br class="spacer"/>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>エイリアス名の中には、全角文字を含めることができます。</li>
+<li>エイリアス名の中には、半角空白文字を含めることができます。</li>
+<li>階層化されたページでは、ページ名を相対指定することができます。</li>
+<li>エイリアスは、他のインライン要素の子要素になることができます。</li>
+<li>エイリアスは、他のインライン要素を子要素にできます。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_34">タブコード  <a class="anchor_super" id="d2561bef" href="../samurai/index_naonao.html#d2561bef" title="d2561bef">&dagger;</a></h4>
+<pre>&t;</pre>
+<p>行中で&t;と書くと、タブコードに置換されます。</p>
+<p>通常、フォーム内ではキーボードからタブコードを直接入力できない<a id="notetext_2" href="#notefoot_2" class="note_super">*2</a>ので、タブコードを入力したい位置に&t;を記述すると、保存時にタブコードに置換します。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>タブコードは、記事が書き込まれるときに置換されて記録されます。</li>
+<li>タブコードは、他のインライン要素の子要素になることができます。</li>
+<li>タブコードは、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_35">ページ名置換文字  <a class="anchor_super" id="hc95e608" href="../samurai/index_naonao.html#hc95e608" title="hc95e608">&dagger;</a></h4>
+<pre>&page;
+&fpage;</pre>
+<p>行中で&page;及び&fpage;と書くと、編集中のページ名に置換されます。ページ名が階層化されたページで「hogehoge/hoge」となっている場合、&page;は「hoge」に、&fpage;は「hogehoge/hoge」に置換されます。階層化されていないページでは、&page;も&fpage;も同じになります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ページ名置換文字は、記事が書き込まれるときに置換されて記録されます。</li>
+<li>ページ名置換文字は、他のインライン要素の子要素になることができます。</li>
+<li>ページ名置換文字は、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_36">日時置換文字  <a class="anchor_super" id="f03aaf0a" href="../samurai/index_naonao.html#f03aaf0a" title="f03aaf0a">&dagger;</a></h4>
+<pre>&date;
+&time;
+&now;</pre>
+<p>行中で&date;と書くと、更新時の日付に置換されます。<br/>
+行中で&time;と書くと、更新時の時刻に置換されます。<br/>
+行中で&now;と書くと、更新時の日時に置換されます。</p>
+<p><span class="noexists">PukiWiki<a href="/">?</a></span> 1.3系との後方互換性のために下記のものも使用できるようにしてあります。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li><span class="noexists">PukiWiki<a href="/">?</a></span> 1.3系との後方互換性のために下記のものも使用できるようにしてあります。
+<pre>date?
+time?
+now?</pre></li>
+<li>&date;、&time;、&now;は、記事が書き込まれるときに置換されて記録されます。</li>
+<li>&date;、&time;、&now;は、他のインライン要素の子要素になることができます。</li>
+<li>&date;、&time;、&now;は、他のインライン要素を子要素にはできません。
+<pre>&_date;
+&_time;
+&_now;
+&lastmod;</pre></li></ul>
+<p>行中で&_date;と書くと、表示時の日付に置換されます。<br/>
+行中で&_time;と書くと、表示時の時刻に置換されます。<br/>
+行中で&_now;と書くと、表示時の日時に置換されます。<br/>
+行中で&lastmod;と書くと、そのページの最終更新日時に置換されます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>&_date;、&_time;、&_now;、&lastmod;は、記事が表示されるときに置換されて表示されます。</li>
+<li>&_date;、&_time;、&_now;、&lastmod;は、他のインライン要素の子要素になることができます。</li>
+<li>&_date;、&_time;、&_now;、&lastmod;は、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_37">文字参照文字  <a class="anchor_super" id="oc8e0c4c" href="../samurai/index_naonao.html#oc8e0c4c" title="oc8e0c4c">&dagger;</a></h4>
+<p>文字参照は、SGMLで定義されている文字参照文字(&copy;や&reg;など)のほか、下記の独自の文字参照文字が使用できます。</p>
+<pre>&heart;</pre>
+<p>行中で&heart;と書くと、ハートマーク  <img alt="[heart]" src="../samurai/image/face/heart.png"/> に置換されて出力されます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>文字参照文字は、表示されるときに置換されます。</li>
+<li>文字参照文字は、他のインライン要素の子要素になることができます。</li>
+<li>文字参照文字は、他のインライン要素を子要素にはできません。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_38">数値参照文字  <a class="anchor_super" id="ibd49862" href="../samurai/index_naonao.html#ibd49862" title="ibd49862">&dagger;</a></h4>
+<pre>&#10進数;
+&#x16進数;</pre>
+<p>行中で&#と ;の間に10進数を、&#xと ;の間に16進数を書くと、Unicodeを数値参照して表示します。キーボードから直接入力できない文字やJIS第3水準・第4水準の文字などの表示に使用します。たとえば、内田百&#38290;と入力すると、内田百&#38290;と表示されます。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>数値参照文字は、表示されるときに置換されます。</li>
+<li>数値参照文字は、他のインライン要素の子要素になることができます。</li>
+<li>数値参照文字は、他のインライン要素を子要素にはできません。</li>
+<li>16進数は半角小文字で指定する必要があります(XHTML 1.0 第2版から小文字に限定されました)。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_39">その他  <a class="anchor_super" id="w8d0fa5a" href="../samurai/index_naonao.html#w8d0fa5a" title="w8d0fa5a">&dagger;</a></h3>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h4 id="content_1_40">コメント行  <a class="anchor_super" id="fa693c95" href="../samurai/index_naonao.html#fa693c95" title="fa693c95">&dagger;</a></h4>
+<pre>// コメント</pre>
+<p>行頭で // を指定すると、コメント行になります。コメント行は出力されない行です。</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>コメント行は、他の要素と無関係に行単位でどの位置にも記述できます。</li>
+<li>コメント行は、前後の他の要素に何ら影響を及ぼしません。</li></ul>
+<br/><br/><script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="3323290003";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script></div>
+<div id="note">
+<hr class="note_hr"/><a id="notefoot_1" href="#notetext_1" class="note_super">*1</a>
+<span class="small">#brをブロック要素の直後の空行の次に指定すればブロック要素間の行間、ブロック要素の直後に指定すればそのブロック要素内での行間を開けることになります。#brは、行末改行と違って、次の行の行頭書式を無効にはしません。</span>
+<br/>
+<a id="notefoot_2" href="#notetext_2" class="note_super">*2</a>
+<span class="small">クリップボードからの貼り付けの場合はタブコードを直接入力できます。</span>
+<br/></div>
+<hr class="full_hr"/><div id="toolbar">
+ <a href="../samurai/index_naonao.html"><img src="../samurai/image/reload.png" width="20" height="20" alt="Reload" title="Reload"/></a>
+ &nbsp;
+ <a href="../samurai/index_plugin_newpage.html"><img src="../samurai/image/new.png" width="20" height="20" alt="New" title="New"/></a>
+ <a href="../samurai/index_cmd_edit_page_naonao.html"><img src="../samurai/image/edit.png" width="20" height="20" alt="Edit" title="Edit"/></a>
+ <a href="../samurai/index_cmd_diff_page_naonao.html"><img src="../samurai/image/diff.png" width="20" height="20" alt="Diff" title="Diff"/></a>
+ <a href="../samurai/index_plugin_attach_pcmd_upload_page_naonao.html"><img src="../samurai/image/file.png" width="20" height="20" alt="Upload" title="Upload"/></a>
+ <a href="../samurai/index_plugin_template_refer_naonao.html"><img src="../samurai/image/copy.png" width="20" height="20" alt="Copy" title="Copy"/></a>
+ <a href="../samurai/index_plugin_rename_refer_naonao.html"><img src="../samurai/image/rename.png" width="20" height="20" alt="Rename" title="Rename"/></a>
+ &nbsp;
+ <a href="../samurai/index_Samurai.html"><img src="../samurai/image/top.png" width="20" height="20" alt="Front page" title="Front page"/></a>
+ <a href="../samurai/index_cmd_list.html"><img src="../samurai/image/list.png" width="20" height="20" alt="List of pages" title="List of pages"/></a>
+ <a href="../samurai/index_cmd_search.html"><img src="../samurai/image/search.png" width="20" height="20" alt="Search" title="Search"/></a>
+ <a href="../samurai/index_RecentChanges.html"><img src="../samurai/image/recentchanges.png" width="20" height="20" alt="Recent changes" title="Recent changes"/></a>
+ <a href="../samurai/index_cmd_backup_page_naonao.html"><img src="../samurai/image/backup.png" width="20" height="20" alt="Backup" title="Backup"/></a>
+ &nbsp;
+ <a href="../samurai/index__A5_D8_A5_EB_A5_D7.html"><img src="../samurai/image/help.png" width="20" height="20" alt="Help" title="Help"/></a>
+ &nbsp;
+ <a href="../samurai/index_cmd_rss10.html"><img src="../samurai/image/rss.png" width="36" height="14" alt="RSS of recent changes" title="RSS of recent changes"/></a>
+</div>
+<div id="footer">
+ Modified by <a href="../samurai.html">yusuke</a>
+ <br/><br/>
+ <strong>PukiWiki 1.4.4_php5</strong> Copyright &copy; 2001-2004 <a href="http://pukiwiki.org/">PukiWiki Developers Team</a>. License is <a href="http://www.gnu.org/licenses/gpl.html">GPL</a>.<br/> Based on "PukiWiki" 1.3 by <a href="http://factage.com/yu-ji/">yu-ji</a> <br/>
+ <br/><br/>
+ HTML convert time to 2.436 sec.
+</div>
+<script src="../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</body>
+</html>

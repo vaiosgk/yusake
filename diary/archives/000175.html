@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: JavaScript のテストのコツ</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/000174.html" title="そば改善要望"/>
+<link rel="next" href="/" title="Text Wrangler2.0"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000175.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/175"
+    dc:title="JavaScript のテストのコツ"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000175.html"
+    dc:subject="Java"
+    dc:description="を尋ねられたので一つ。 最近は JavaScript の開発はそばでやっている。..."
+    dc:creator="yusuke"
+    dc:date="2005-02-02T15:31:05+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/000174.html">&laquo; そば改善要望</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="/">Text Wrangler2.0 &raquo;</a>
+</p>
+<h2>2005&#24180;02&#26376;02&#26085;</h2>
+<h3>JavaScript のテストのコツ</h3>
+を尋ねられたので一つ。<br>
+最近は JavaScript の開発は<a href="../../soba.html">そば</a>でやっている。リアルタイムに結果がわかるので便利。<br>
+ただ、ブラウザ間の互換性をテストするのに、「スクリプトのコピー-&gt;ブラウザの切り替え-&gt;ペースト-&gt;何か操作」では面倒なのでちょっと工夫をしている。<br>
+<div id="a000175more"><div id="more">
+今のとこ、ページをロードしたら自動的にテストさせるように作って、起動してあるブラウザで再ロードだけすれば良いようにしている。将来的にはそばで編集中の html を各ブラウザで自動ロードさせるような仕組みを作る予定。<br>
+実際のコードはこんな感じ。JavaScriptUnitね。assertEquals に何かの実行結果と、期待値を渡す。<br>
+・足し算関数 add と 1 加えた値を返す inc関数のテスト<br>
+----
+<br>&lt;html&gt;&nbsp;
+<br>&lt;head&gt;&nbsp;
+<br>&lt;Script&gt;&nbsp;
+<br>function&nbsp;add(var1,var2){
+<br>&nbsp;&nbsp;return&nbsp;var1+var2;
+<br>}
+<br>function&nbsp;inc(var1){
+<br>&nbsp;&nbsp;//return&nbsp;var1+1;
+<br>&nbsp;&nbsp;return&nbsp;var1-1;
+<br>}
+<br>function&nbsp;test(){&nbsp;
+<br>&nbsp;&nbsp;initTest();&nbsp;
+<br>&nbsp;&nbsp;assertEquals(2,add(1,1));&nbsp;
+<br>&nbsp;&nbsp;assertEquals(3,add(2,1));&nbsp;
+<br>&nbsp;&nbsp;assertEquals(3,inc(2));&nbsp;
+<br>&nbsp;&nbsp;showResult();&nbsp;
+<br>}
+<br>var&nbsp;testResult,successCount,errorCount,errorMessage;&nbsp;
+<br>function&nbsp;initTest(){&nbsp;
+<br>&nbsp;&nbsp;testResult&nbsp;=&nbsp;"";&nbsp;
+<br>&nbsp;&nbsp;successCount&nbsp;=&nbsp;0;&nbsp;
+<br>&nbsp;&nbsp;errorCount&nbsp;=&nbsp;0;&nbsp;
+<br>&nbsp;&nbsp;errorMessage&nbsp;=&nbsp;"";&nbsp;
+<br>}&nbsp;
+<br>function&nbsp;assertEquals(var1,var2){&nbsp;
+<br>&nbsp;&nbsp;if(var1&nbsp;==&nbsp;var2){&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;successCount++;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;testResult+=".";&nbsp;
+<br>&nbsp;&nbsp;}else{&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;errorCount++;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;testResult+="F";
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;errorMessage&nbsp;+=&nbsp;(successCount+errorCount)+")&nbsp;expected:&lt;"+var1+"&gt;&nbsp;but&nbsp;was:&lt;"+var2+"&gt;&lt;br&gt;";&nbsp;
+<br>&nbsp;&nbsp;&nbsp;}
+<br>}
+<br>function&nbsp;showResult(){
+<br>&nbsp;&nbsp;if(errorCount&nbsp;==&nbsp;0){
+<br>&nbsp;&nbsp;&nbsp;&nbsp;testResult+="&lt;br&gt;OK&nbsp;("+successCount+"&nbsp;tests)"
+<br>&nbsp;&nbsp;}else{
+<br>&nbsp;&nbsp;&nbsp;&nbsp;if(errorCount&nbsp;&gt;1){
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;testResult+="&lt;br&gt;There&nbsp;were&nbsp;"+errorCount+"&nbsp;failures:&lt;br&gt;";
+<br>&nbsp;&nbsp;&nbsp;&nbsp;}else{
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;testResult&nbsp;+="&lt;br&gt;There&nbsp;was&nbsp;"+errorCount+"&nbsp;failure:&lt;br&gt;";&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>&nbsp;&nbsp;&nbsp;&nbsp;testResult+=errorMessage;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;testResult+="&lt;br&gt;FAILURES!!!&lt;br&gt;&nbsp;Tests&nbsp;run:&nbsp;"+(successCount+errorCount)+",&nbsp;Failures:&nbsp;"+errorCount;
+<br>&nbsp;&nbsp;}
+<br>&nbsp;&nbsp;document.getElementById("resultArea").innerHTML&nbsp;=&nbsp;&nbsp;testResult;
+<br>}
+<br>&lt;/Script&gt;&nbsp;
+<br>&lt;/head&gt;
+<br>&lt;body&nbsp;onload="test()"&gt;&nbsp;
+<br>&nbsp;&nbsp;&lt;div&nbsp;id="resultArea"&gt;&lt;/div&gt;&nbsp;
+<br>&lt;/body&gt;&nbsp;
+<br>&lt;/html&gt;
+<br>--------<br>
+この例では inc()関数では１足さずに１引いているのでテスト3は失敗することになる<br>
+実行結果↓(実際にスクリプトが埋め込まれてる)<br><br>
+ <html> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script> 
+   function add(var1,var2){
+     return var1+var2;
+   }
+   function inc(var1){
+     //return var1+1;
+     return var1-1;
+   }
+   function test(){ 
+     initTest(); 
+     assertEquals(2,add(1,1)); 
+     assertEquals(3,add(2,1)); 
+     assertEquals(3,inc(2)); 
+     showResult(); 
+   } 
+   var testResult,successCount,errorCount,errorMessage; 
+   function initTest(){ 
+     testResult = ""; 
+     successCount = 0; 
+     errorCount = 0; 
+     errorMessage = ""; 
+   } 
+   function assertEquals(var1,var2){ 
+     if(var1 == var2){ 
+         successCount++; 
+         testResult+="."; 
+     }else{ 
+         errorCount++; 
+         testResult+="F";
+         errorMessage += (successCount+errorCount)+") expected:<"+var1+"> but was:<"+var2+"><br>"; 
+     } 
+   }    
+   function showResult(){ 
+     if(errorCount == 0){
+       testResult+="<br>OK ("+successCount+" tests)"
+     }else{
+       if(errorCount >1){
+          testResult+="<br>There were "+errorCount+" failures:<br>";
+       }else{
+          testResult +="<br>There was "+errorCount+" failure:<br>"; 
+       }
+       testResult+=errorMessage;
+       testResult+="<br>FAILURES!!!<br> Tests run: "+(successCount+errorCount)+", Failures: "+errorCount;
+    }
+document.getElementById("resultArea").innerHTML =  testResult;
+ } 
+</script> 
+</head>
+<body onload="test()"> 
+ <div id="resultArea"> 
+ </div> 
+</body> 
+</html>
+<br>2005/2/6追記<br>
+<a href="http://secure.ddo.jp/~kaku/tdiary/20050207.html">オレンジニュース</a>からリンクを頂いたので今使ってる最新版をダウンロード出来るように。<br>テストの最初、最後に initTest()/showResult() を呼び出す以外は JUnit っぽい assert メソッドを呼び出すだけ。<br>
+<br>
+テスト開始 : initTest()<br>
+テスト終了、結果表示 : showResult()<br>
+等しいかどうかのテスト : assertEquals(テスト名,値1,値2)<br>
+Trueを返すかどうかのテスト : assertTrue(テスト名,値)<br>
+Falseを返すかどうかのテスト : assertFalse(テスト名,値)<br>
+テスト失敗する : fail(テスト名)<br>
+デバッグメッセージを記録(テスト失敗時のみ赤字で表示される) : debug(メッセージ)<br>
+<br>
+展開すると common.js にクッキー、XMLHttpRequest、ブラウザ判定関連の関数が入ってます。commontest.html がテスト用コード。JavaScriptUnit.js がJavaScriptUnit の本体。<br>
+<a href="http://yusuke.homeip.net/diary/archives/files/2005/02/06/javascriptunit.zip">javascriptunit.zip</a><br>
+ライセンス:好きに使ってください/改変再配布可/商用非商用問わず無償利用可<br>
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;02&#26376;02&#26085; 15:31</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/175</p>
+<p>このリストは、次のエントリーを参照しています:  <a href="../../diary/archives/000175.html">JavaScript のテストのコツ</a>:</p>
+<p id="p15">
+&raquo; <a href="http://d.hatena.ne.jp/sshi/20050204/p3"> 複数ブラウザに対応するJavascriptの書き方</a> from 希望と知識と戯言と<br/>
+そばの作者さんに質問したら、丁寧に解説してもらえた。 http://yusuke.homeip.net/diary/archives/000175.html 基... <a href="http://d.hatena.ne.jp/sshi/20050204/p3">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;02&#26376;04&#26085; 06:28</p>
+<p id="p17">
+&raquo; <a href="http://drikin.com/blogentry.2005-02-11.2233900021">sobaの活用</a> from Drift Diary2<br/>
+なるほど <a href="http://drikin.com/blogentry.2005-02-11.2233900021">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;02&#26376;10&#26085; 20:07</p>
+<p id="p20">
+&raquo; <a href="http://garyo.boy.jp/SBM/index.php?%A4%CF%A4%C6%A4%CA%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%CE%E3">はてなブックマーク例</a> from PukiWiki/TrackBack 0.2<br/>
+ Counter:   1, today:     1, yesterday: 0  はてなブックマークを開く  2005-02-24  stroll::blo... <a href="http://garyo.boy.jp/SBM/index.php?%A4%CF%A4%C6%A4%CA%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%CE%E3">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;02&#26376;24&#26085; 04:17</p>
+<p id="p71">
+&raquo; <a href="http://blog.goo.ne.jp/tkskkc/e/b4cf1a3136fa4649ff37228070960355">JavaScriptUnit UnitTestingフレームワーク</a> from 開発系(?)日記<br/>
+JavaScript のテストのコツ
+便利。
+昔TestファーストでJavaを書いていたことがあったのだが、JavaScriptは慣れないだけにありがたかった... <a href="http://blog.goo.ne.jp/tkskkc/e/b4cf1a3136fa4649ff37228070960355">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;08&#26376;14&#26085; 23:46</p>
+<h2 id="comments">コメント</h2>
+<div id="c934">
+<p>こういうネタはコメントに困る。</p>
+</div>
+<p class="posted">投稿者 <a target="_blank" title="http://kdaiji.jugem.cc/" href="http://yusuke.homeip.net/diary/mt/kakikomi.cgi?__mode=red;id=934">Danny</a>  : 2005&#24180;02&#26376;04&#26085; 00:47</p>
+<div id="c935">
+<p>なんかここ一週間そば開発日誌みたいですね。</p>
+</div>
+<p class="posted">投稿者 裕介  : 2005&#24180;02&#26376;04&#26085; 14:36</p>
+<div id="c937">
+<p>ちょっと探してみたら本家（？）を発見。<br/>
+触ってみようかな。<br/>
+<a href="http://sourceforge.net/projects/jsunit/">http://sourceforge.net/projects/jsunit/</a></p>
+</div>
+<p class="posted">投稿者 裕介  : 2005&#24180;02&#26376;07&#26085; 00:15</p>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

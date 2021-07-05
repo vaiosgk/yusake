@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム | Samuraism</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaと映画と</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2008/02/28/1204164963552.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2008/02/28/1204162578812.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2008/02/28/1204160508160.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2008/02/24/1203862202404.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2008/02/24/1203854652433.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2008/02/24/1203832969665.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2008/02/23/1203697826673.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2008/02/28/1204164963552.html">
+    <title>JavaScriptメモ - スタイルシート、JavaScript で特定要素の表示/非表示を切り替え</title>
+    <link>http://yusuke.homeip.net/diary/2008/02/28/1204164963552.html</link>
+    
+      
+        <description>
+          &lt;p&gt;Webページ中の特定の要素の表示、非表示を切り替えるなんて処理は頻繁に必要になります。&lt;br/&gt;&lt;br/&gt;頻繁に必要になるけれども、いっつも忘れてしまうのでメモ。&lt;br/&gt;&lt;br/&gt;要は visible 属性を block (特定の領域を占有する)か、none (表示しない)かに設定すれば良いわけですね。&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;動作サンプル：&lt;br/&gt;
+&lt;input type=&#034;button&#034; onclick=&#034;setVisibility(&#039;test&#039;,true)&#034; value=&#034;make visible&#034;/&gt;&lt;br&gt;
+&lt;input type=&#034;button&#034; onclick=&#034;setVisibility(&#039;test&#039;,false)&#034; value=&#034;make invisible&#034;/&gt;
+&lt;script&gt;
+function setVisibility(id,visible){
+ document.getElementById(id).style.display = visible ? &#034;block&#034; : &#034;none&#034;;
+}
+&lt;/script&gt;&lt;br/&gt;&lt;div id=&#034;test&#034;&gt;&lt;font color=&#034;blue&#034;&gt;The quick brown fox jumps over the lazy dog.&lt;/font&gt;&lt;/div&gt;&lt;br/&gt;コードサンプル：&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;&amp;lt;input type=&#034;button&#034; onclick=&#034;setVisibility(&#039;test&#039;,true)&#034; value=&#034;make visible&#034;/&amp;gt;&amp;lt;br&amp;gt;&lt;br/&gt;&amp;lt;input type=&#034;button&#034; onclick=&#034;setVisibility(&#039;test&#039;,false)&#034; value=&#034;make invisible&#034;/&amp;gt;&lt;br/&gt;&amp;lt;script&amp;gt;&lt;br/&gt;function setVisibility(id,visible){&lt;br/&gt; document.getElementById(id).style.display = visible ? &#034;block&#034; : &#034;none&#034;;&lt;br/&gt;}&lt;br/&gt;&amp;lt;/script&amp;gt;&lt;br/&gt;&amp;lt;div id=&#034;test&#034;&amp;gt;The quick brown fox jumps over the lazy dog.&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;br/&gt;
+
+
+&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2008/02/28/1204162578812.html">
+    <title>ドコモが iモード ID 発表 - セキュリティは？</title>
+    <link>http://yusuke.homeip.net/diary/2008/02/28/1204162578812.html</link>
+    
+      
+        <description>
+          &lt;p&gt;ドコモから iモードID という仕組みが発表されました。&lt;br/&gt;・&lt;a href=&#034;http://www.nttdocomo.co.jp/info/notice/page/080228_00.html&#034;&gt;重要なお知らせ : 『iモードID』の提供開始について | お知らせ | NTTドコモ&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://japan.cnet.com/mobile/story/0,3800078151,20368352,00.htm&#034;&gt;ドコモ、iモードサイトに共通の利用者ID機能「iモードID」の提供を開始:モバイルチャンネル - CNET Japan&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;リクエストに契約者毎にユニークなIDを降ることで、パーソナライズされたポータルや、セッション維持が容易に行えるというものです。&lt;br/&gt;&lt;br/&gt;#セッション維持に用いる場合はなりすましを防止するため接続元 IP アドレスの範囲を限定する必要があると思いますが&lt;br/&gt;&lt;br/&gt;既にソフトバンクの一部の携帯でも端末固有のIDを送ってくるものがあるようですが、iモード契約者全員、デフォルトで送信するようになるようなのでとても普及しそうですね。&lt;br/&gt;&lt;br/&gt;IDは電話番号やメールアドレスとは無関係なランダムの文字列なので、ユーザーから登録しない限りは基本的に個人情報流出の恐れはありません。&lt;br/&gt;&lt;br/&gt;ただ、個人情報を登録したサイトが ID とのひもつけを行い、その情報が流出した場合はいとも簡単にアクセス者を特定することができるようになってしまいます。&lt;br/&gt;&lt;br/&gt;もちろん、設定をすれば ID の送信を停止することもできるようです。&lt;br/&gt;・ドコモ - 重要なお知らせ -『iモードID』の提供開始について&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;●iモードIDの通知について&lt;br/&gt;iモード対応サイトにおいて、アクセス先URL内に予めiモードID用のパラメータを記述しておくことにより、お客様がサイトアクセスした際にiモードIDの通知が行われます。1&lt;br/&gt;&lt;br/&gt;●iモードIDの通知設定について&lt;br/&gt;お客様がiモードIDの通知可否を選択できます。&lt;br/&gt;iモードから&lt;br/&gt;「iMenu」→「料金＆お申込・設定」→「オプション設定」→「iモードID通知設定」&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;ID が変更されるのは「名義変更、改番、iモード契約の解約」のタイミングとのことでです。&lt;br/&gt;つまり普通に契約し続けている場合は ID が変わらないわけです。&lt;br/&gt;一度 ID と個人情報のひもつけが流出してしまえば個人情報垂れ流しでアクセスするのと同様になってしまうので注意が必要ですね。&lt;br/&gt;&lt;br/&gt;変なサイトにアクセスしただけで、後日電話がかかってきて「アクセスしましたよね？ね？XXXX万円になりますから振り込みよろしく」なんてことにもなりかねません。&lt;br/&gt;&lt;br/&gt;安全性がやや高く、利便性も損なわないためには&lt;br/&gt;・契約者毎に ID を振るのではなく、アクセスするドメイン毎に契約者固有の ID を振る&lt;br/&gt;・契約変更などを伴わず、容易に ID をリセットできる仕組みを用意する&lt;br/&gt;といった対策が望ましいのではないかと思います。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2008/02/28/1204160508160.html">
+    <title>Oracle のBEA Systems 買収、当局が承認</title>
+    <link>http://yusuke.homeip.net/diary/2008/02/28/1204160508160.html</link>
+    
+      
+        <description>
+          &lt;p&gt;BEA Systems のプレスリリースによると、Oracle による BEA の買収は司法省により認可されたとのことです。&lt;br/&gt;&lt;br/&gt;Q2中には買収完了するでしょうかね。&lt;br/&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.bea.com/framework.jsp?CNT=pr01904.htm&amp;FP=/content/news_events/press_releases/2008&#034;&gt;Press Releases - Department of Justice Clears Oracle&#039;s Acquisition of BEA&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;関連記事:&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/01/17/1200500475220.html&#034;&gt;BEA Systems, Oracle の買収提案に合意&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2007/11/06/1194280361408.html&#034;&gt;BEA Systems, Ichan に機密情報を提供 &lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2007/10/30/1193680764910.html&#034;&gt;BEA Systems, Ichan の書簡に回答&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2007/10/29/1193623754752.html&#034;&gt;Oracle のBEA Systems 買収オファー、期限切れる&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2007/10/26/1193325974843.html&#034;&gt;BEA Systems for Sale&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2007/10/23/1193151436771.html&#034;&gt;Oracle、BEA Systems の買収提案が拒否されたことを発表&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2007/10/14/1192290019296.html&#034;&gt;Oracle、BEA Systems 買収に未練 &lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2007/10/13/1192212346405.html&#034;&gt;Oracle による BEA Systems 買収回避 &lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2007/10/13/1192205263196.html&#034;&gt;Oracle が BEA Systemsを買収？？？&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2008/02/24/1203862202404.html">
+    <title>重罪と軽罪</title>
+    <link>http://yusuke.homeip.net/diary/2008/02/24/1203862202404.html</link>
+    
+      
+        <description>
+          &lt;p&gt;を観た。&lt;br/&gt;・&lt;a href=&#034;http://www.amazon.co.jp/dp/B00005G0MM/samuraism-22&#034;&gt;Amazon.co.jp： ウディ・アレンの重罪と軽罪: DVD&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;妻との離婚を執拗に迫る愛人を殺してしまった社会的にも地位のある目医者、ひょんなコトから気の合うプロデューサーと恋に落ちてしまう売れない映画監督。&lt;br/&gt;境遇はちょっと似ているけれども取った行動は大きく違う２人。&lt;br/&gt;&lt;br/&gt;↓ややネタバレ&lt;br/&gt;殺人が出てくるけれども、残虐な絵はなくあくまでストーリー上の小道具に過ぎません。&lt;br/&gt;最終的には「色んな人生があるけれども人それぞれに、自分なりの解釈で楽しく生きればいいんだよ」という劇中のドキュメンタリのメッセージに行き着くほのぼのとしたお話。&lt;br/&gt;&lt;br/&gt;ウディ・アレンの映画はあまりみたことがないんですが、押しつけがましいメッセージ性がなくすんなりと楽しむことが出来ました。&lt;br/&gt;&lt;br/&gt;ちょっと面白かったのが劇中に出てくる &amp;quot;You really know how to get my goat&amp;quot; という不思議な表現。&lt;br/&gt;&lt;br/&gt;もちろん「オマエは山羊の奪い方を知っている」ではなく、「頭に来る奴だな」というイディオムだそうです。&lt;br/&gt;・&lt;a href=&#034;http://www.talkabouteducation.com/group/alt.languages.english/messages/391.html&#034;&gt;[Idioms #16] You get my goat - Languages English&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;もうひとつは &amp;quot;That is music to my ears&amp;quot;&lt;br/&gt;&lt;a href=&#034;http://www.google.com/search?client=safari&amp;rls=ja-jp&amp;q=%22that+is+music+to+my+ears%22&amp;ie=UTF-8&amp;oe=UTF-8&#034;&gt;結構良く使われる表現みたい&lt;/a&gt;。&lt;br/&gt;字幕では「そりゃとってもいいニュースだ」とか出ていました。&lt;br/&gt;&lt;br/&gt;最近他に観た映画：&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/02/24/1203854652433.html&#034;&gt;戦国自衛隊1549&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/02/24/1203832969665.html&#034;&gt;ムーラン・ルージュ&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=122713.10000024&amp;type=4&amp;subid=0&#034;&gt;&lt;IMG alt=&#034;WOWOW&#034; border=&#034;0&#034; src=&#034;http://www.wowow.co.jp/stock/linkshare/movie.gif&#034;&gt;&lt;/a&gt;&lt;IMG border=&#034;0&#034; width=&#034;1&#034; height=&#034;1&#034; src=&#034;http://ad.linksynergy.com/fs-bin/show?id=hxCejh1j00I&amp;bids=122713.10000024&amp;type=4&amp;subid=0&#034;&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2008/02/24/1203854652433.html">
+    <title>戦国自衛隊1549</title>
+    <link>http://yusuke.homeip.net/diary/2008/02/24/1203854652433.html</link>
+    
+      
+        <description>
+          &lt;p&gt;を観た。&lt;br/&gt;&lt;br/&gt;演習中の自衛隊が戦国時代にタイムスリップして一波乱起こすという内容。&lt;br/&gt;&lt;br/&gt;ちょっとネタバレすると、歴史の流れを変えようとする先発隊と、それを防ごうとする後発隊が当時の武士、武将たちも交えて交戦・・。なんて感じ。&lt;br/&gt;&lt;br/&gt;突飛な設定にリアリティを持たせる鎧甲冑の衣装、そして現代の技術が取り入れられてしまった城の造りなど、絵的には面白かったです。&lt;br/&gt;&lt;br/&gt;ストーリーの方は・・・「ながら見」だったのでよく分かっていません。&lt;br/&gt;&lt;br/&gt;最近観た他の映画：&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/02/24/1203832969665.html&#034;&gt;ムーラン・ルージュ&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/02/23/1203697826673.html&#034;&gt;麗しのサブリナ&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=122713.10000024&amp;type=4&amp;subid=0&#034;&gt;&lt;IMG alt=&#034;WOWOW&#034; border=&#034;0&#034; src=&#034;http://www.wowow.co.jp/stock/linkshare/movie.gif&#034;&gt;&lt;/a&gt;&lt;IMG border=&#034;0&#034; width=&#034;1&#034; height=&#034;1&#034; src=&#034;http://ad.linksynergy.com/fs-bin/show?id=hxCejh1j00I&amp;bids=122713.10000024&amp;type=4&amp;subid=0&#034;&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2008/02/24/1203832969665.html">
+    <title>ムーラン・ルージュ</title>
+    <link>http://yusuke.homeip.net/diary/2008/02/24/1203832969665.html</link>
+    
+      
+        <description>
+          &lt;p&gt;を観た。&lt;br/&gt;・&lt;a href=&#034;http://www.amazon.co.jp/dp/B00005BJ2O/samuraism-22&#034;&gt;Amazon.co.jp： MOULIN ROUGE: Original Soundtrack: 音楽&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://www.amazon.co.jp/dp/B0000U27FQ/samuraism-22&#034;&gt;Amazon.co.jp： ムーラン・ルージュ アルティメット・エディション: DVD&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;今も観光スポットとして人気がある劇場、Moulin Rouge を舞台にしたミュージカル。&lt;br/&gt;&lt;br/&gt;誰でも聞いたことのあるような名曲が散りばめられ、またそれらの歌詞もストーリー上かみ合うように配置されるという面白い作りになっています。&lt;br/&gt;&lt;br/&gt;また、劇中劇が出来ていく過程と愛を貫く２人の思いが重なっていく流れも逸品。&lt;br/&gt;&lt;br/&gt;一度映画館で観ましたが、ユアン・マクレガーとニコール・キッドマンの歌声は何度聴いても良いですね。&lt;br/&gt;サウンドトラックも持っていますが劇中で印象的な曲がうまくピックアップされていてオススメです。&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;最近他にみた映画：&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/02/23/1203697826673.html&#034;&gt;麗しのサブリナ&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/02/19/1203352078299.html&#034;&gt;スピード&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=122713.10000024&amp;type=4&amp;subid=0&#034;&gt;&lt;IMG alt=&#034;WOWOW&#034; border=&#034;0&#034; src=&#034;http://www.wowow.co.jp/stock/linkshare/movie.gif&#034;&gt;&lt;/a&gt;&lt;IMG border=&#034;0&#034; width=&#034;1&#034; height=&#034;1&#034; src=&#034;http://ad.linksynergy.com/fs-bin/show?id=hxCejh1j00I&amp;bids=122713.10000024&amp;type=4&amp;subid=0&#034;&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2008/02/23/1203697826673.html">
+    <title>麗しのサブリナ</title>
+    <link>http://yusuke.homeip.net/diary/2008/02/23/1203697826673.html</link>
+    
+      
+        <description>
+          &lt;p&gt;を観た。&lt;br/&gt;・&lt;a href=&#034;http://www.amazon.co.jp/dp/B000EPFQ50/samuraism-22/&#034;&gt;Amazon.co.jp： 麗しのサブリナ: DVD&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;恥ずかしながらオードリー・ヘプバーンの映画を見るのは初めてです。&lt;br/&gt;&lt;br/&gt;長年人気があるだけあって、かわいらしく、美しい女性ですね。惚れました。&lt;br/&gt;&lt;br/&gt;映画の内容はというと、いわゆるラブコメディ / シンデレラストーリーなわけですがなかなか想像通りには進まない展開が良かったです。&lt;br/&gt;最後スフレ作りを止めなかったらどのような焼き上がりになったか気になるところ。&lt;br/&gt;&lt;br/&gt;一昔の映画なだけに、複雑な伏線ははられず極めてストレートに描写されているのが今時の映画と違って良かったです。&lt;br/&gt;私はかなりニブいので、凝った作りの映画はたくさん伏線を見逃していて、２度目３度目にみるときに「あぁ、これそういうことだったのね」と気がつくことがしばしばありますので・・・。&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;最近はバイオプラスチックなどといって、良くトウモロコシから作った樹脂でパソコンや携帯を作ったという話を聞きます。&lt;br/&gt;劇中ではサトウキビからプラスチックを作る話が頻繁に話題になっていますが、&lt;a href=&#034;http://tinyurl.com/2vp373&#034;&gt;本当に出来る&lt;/a&gt;みたいですね。&lt;br/&gt;昨今の原油の高騰化や環境問題を見据えていたわけではないと思いますが大変先見の明のある話です。&lt;br/&gt;&lt;br/&gt;ローマの休日、ティファニーで朝食を、など他のヘプバーン作品も観たくなりました。&lt;br/&gt;&lt;br/&gt;最近他に観た映画：&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/02/19/1203352078299.html&#034;&gt;スピード&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2008/02/16/1203169536797.html&#034;&gt;Doom&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://click.linksynergy.com/fs-bin/click?id=hxCejh1j00I&amp;offerid=122713.10000009&amp;type=4&amp;subid=0&#034;&gt;&lt;IMG alt=&#034;WOWOW&#034; border=&#034;0&#034; src=&#034;http://www.wowow.co.jp/stock/linkshare/movie_anime.gif&#034;&gt;&lt;/a&gt;&lt;IMG border=&#034;0&#034; width=&#034;1&#034; height=&#034;1&#034; src=&#034;http://ad.linksynergy.com/fs-bin/show?id=hxCejh1j00I&amp;bids=122713.10000009&amp;type=4&amp;subid=0&#034;&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+
+</rdf:RDF>

@@ -1,0 +1,816 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Issue Navigator - JIRA </title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/images/icons/favicon.png">
+<link rel="stylesheet" type="text/css" media="print" href="../../jira/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/235/1/0/_/styles/global.css"/>
+    <script language="JavaScript" type="text/javascript" src="../../jira/includes/js/combined-javascript.js"></script>
+        <script type="text/javascript" src="../../jira/s/235/1/_/includes/js/calendar/calendar.js"></script>
+        <script type="text/javascript" src="../../jira/s/235/1/_/includes/js/calendar/lang/calendar-en.js"></script>
+        <script type="text/javascript" src="../../jira/s/235/1/_/includes/js/calendar/calendar-setup.js"></script>
+        <script type="text/javascript">
+            // Hack to avoid bug in jscalendar - JRA-7713
+            if (!Calendar._TT["WEEKEND"]) { Calendar._TT["WEEKEND"] = "0,6";}
+            if (!Calendar._TT["DAY_FIRST"]) { Calendar._TT["DAY_FIRST"] = "Display %s first";}
+        </script>
+</head>
+<body bgcolor="#f0f0f0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#003366" vlink="#003366" alink="#660000">
+<script type="text/javascript" src="../../jira/s/235/1/_/includes/js/quicksearch.js"></script>
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+      <td bgcolor="#003366">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+            <td valign="top" width="5%" nowrap><a href="../../jira/secure/Dashboard.html"></a></td>
+            <td valign="bottom" width="65%" nowrap>&nbsp;</td>
+            <td valign="bottom" align="right" width="30%" nowrap>
+<font class="toptext" size="1">
+                        <a rel="nofollow" href="../../jira/secure/Dashboard_os_destination_/secure/IssueNavigator_jspa.html">Log In</a>
+&nbsp; &nbsp;
+                        <a rel="nofollow" href="../../jira/secure/IssueNavigator_decorator_printable_.html"></a>
+                    <a class="helpLink" href="http://www.atlassian.com/software/jira/docs/v3.9/index.html?clicked=jirahelp" target="_jirahelp">
+        </a>
+&nbsp;
+</font>
+            </td>
+        </tr></table>
+      </td>
+  </tr>
+</table>
+<table class="menu" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td bgcolor="#3c78b5">
+    <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="5"></td>
+                        <td nowrap onclick="window.document.location='/jira/secure/Dashboard.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../jira/secure/Dashboard.html" id="home_link" title="A configurable overview of JIRA" accesskey="h"><u>H</u>OME</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/BrowseProject.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../jira/secure/BrowseProject.html" id="browse_link" title="Browse the projects you have permissions to view" accesskey="b"><u>B</u>ROWSE PROJECTS</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa'" align="center" valign="middle" class="navItemOver">&nbsp;&nbsp;
+            <a href="../../jira/secure/IssueNavigator.html" id="find_link" title="Find issues in the projects you have permissions to view" accesskey="f"><u>F</u>IND ISSUES</a> &nbsp;&nbsp;
+    </td>
+        <td align="right" class="navItem" valign="middle" bgcolor="#3c78b5" width="100%">
+            <form name="quicksearch" action="../../jira/secure/QuickSearch.html" method="post" style="padding: 0; margin: 0;">
+                <span class="navItem" onmouseover="showToolTip()" onmouseout="hideToolTip()">&nbsp; &nbsp;
+                    <u>Q</u>UICK SEARCH:
+                </span>
+                <span class="navItem">
+                    <input class="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." type="text" size="25" name="searchString" accesskey="q" id="quickSearchInput" valign="absmiddle">&nbsp;
+                </span>
+            </form>
+        </td>
+        <td width="5"></td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+<div class="alertHeader">
+<script src="../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<div onmouseover="recordInTip()" onmouseout="recordOutTip()" id="quicksearchhelp" class="informationBox" style="display: none; text-align: center; width: 20em; position: absolute; top: 55px; right: 10px; padding: 0.5em;">
+    Learn more about <a href="http://www.atlassian.com/software/jira/docs/v3.9/quicksearch.html?clicked=jirahelp" target="_jirahelp">Quick Search</a>
+</div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="ffffff">
+    <tr class="hidden">
+            <td class="filterFormCell">&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+<tr>
+    <td class="filterFormCell">
+<!-- JRA-4345 - need to statically include the javascript to address IE6 refresh issue -->
+<script language="javascript" type="text/javascript">
+function openDateRangePicker(formName, previousFieldName, nextFieldName, fieldId)
+{
+    var previousFieldValue = document.forms[formName].elements[previousFieldName].value;
+    var nextFieldValue = document.forms[formName].elements[nextFieldName].value;
+    var url = '/jira/secure/popups/DateRangePicker.jspa?';
+    url += 'formName=' + formName + '&';
+    url += 'previousFieldName=' + escape(previousFieldName) + '&';
+    url += 'nextFieldName=' + escape(nextFieldName) + '&';
+    url += 'previousFieldValue=' + escape(previousFieldValue) + '&';
+    url += 'nextFieldValue=' + escape(nextFieldValue) + '&';
+    url += 'fieldId=' + escape(fieldId);
+    var vWinUsers = window.open(url, 'DateRangePopup', 'status=no,resizable=yes,top=100,left=200,width=580,height=400,scrollbars=yes');
+    vWinUsers.opener = self;
+    vWinUsers.focus();
+}
+function show_calendar2(formName, fieldName)
+{
+    var form = document.forms[formName];
+    var element = form.elements[fieldName];
+    var vWinCal = window.open('/jira/secure/popups/Calendar.jspa?form=' + formName + '&field=' + fieldName + '&value=' + escape(element.value) + '&decorator=none', 'Calendar','width=230,height=170,status=no,resizable=yes,top=220,left=200');
+    vWinCal.opener = self;
+    vWinCal.focus();
+}
+</script>
+<script language="JavaScript" type="text/javascript" src="http://yusuke.homeip.net/jira/includes/js/cascadingUtil.js"></script>
+<form action="../../jira/secure/IssueNavigator.html" name="filterform" method="post">
+<input type="hidden" name="refreshFilter" id="refreshFilter" value="false"/>
+<input type="hidden" name="reset" id="reset" value="update"/>
+<table cellpadding="4" cellspacing="0" width="100%" border="0" id="filterForm">
+<tr>
+    <td colspan="2" style="padding: 0px;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="dddddd" align="center">
+<tr><td></td></tr>
+<tr><td><table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" id="filterFormHeader">
+<tr>
+    <td width="1%" align="center">
+        Filter:
+    </td>
+        <td width="1%">
+            <a href="../../jira/secure/IssueNavigator_mode_hide.html" class="item" title="View the issues in your current search / filter" accesskey="V">View</a>
+        </td>
+        <td width="1%">
+            <a id="new_filter" href="../../jira/secure/IssueNavigator_mode_show_createNew_true.html" class="item" title="Create new search / filter" accesskey="N">New</a>
+        </td>
+        <td width="1%">
+            <a id="managefilters" href="../../jira/secure/ManageFilters.html" class="item" title="View, edit, share and delete your saved filters" accesskey="M">Manage</a>
+        </td>
+    <td width="100%" align="right">&nbsp;</td>
+</tr>
+</table>
+</td></tr></table>
+<table cellpadding="3" cellspacing="0" border="0">
+        <tr>
+            <td>
+            You do not currently have a search or filter selected.
+                <br>
+                <b><a href="../../jira/secure/IssueNavigator_mode_show_createNew_true.html">Create new</a></b> search
+            </td>
+        </tr>
+</table>
+<p>
+    </td>
+</tr>
+	<tr>
+	<td class="rowHeader fullyCentered" colspan="2">
+        <input type="submit" name="show" value="View >>" class="hiddenButton"/>
+		<input type="submit" name="hide" value="<< View &amp; Hide" id="searchAndHide"/>
+		<input type="submit" name="show" value="View >>" id="searchButton" accesskey="S" title="Press Alt+S to submit form"/>
+	</td>
+	</tr>
+    <tr class="fieldArea" id="pidFieldArea">
+    <td class="fieldLabelArea">
+            <label for="pid">
+                    Project:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+    <select name="pid" id="pid" class="standardInputField" multiple="multiple" size="5">
+        <option class="headerOption" value="" selected="selected">All projects</option>
+                    <option title="Komuso" value="10000">Komuso</option>
+                    <option title="Log4Twitter" value="10001">Log4Twitter</option>
+                    <option title="Samurai" value="10010">Samurai</option>
+                    <option title="Twitter4J" value="10002">Twitter4J</option>
+            </select>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="typeFieldArea">
+    <td class="fieldLabelArea">
+            <label for="type">
+                    Issue Type:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+    <select name="type" id="type" class="standardInputField" multiple="multiple" size="5">
+        <option class="headerOption" value="" selected>Any</option>
+                <option value="1" title="Bug" id="type_1" class="imagebacked 10000 " style="background-image: url('http://yusuke.homeip.net/jira/images/icons/bug.gif');">Bug</option>
+                <option value="4" title="Improvement" id="type_4" class="imagebacked 10000 " style="background-image: url('http://yusuke.homeip.net/jira/images/icons/improvement.gif');">Improvement</option>
+                <option value="2" title="New Feature" id="type_2" class="imagebacked 10000 " style="background-image: url('http://yusuke.homeip.net/jira/images/icons/newfeature.gif');">New Feature</option>
+                <option value="3" title="Task" id="type_3" class="imagebacked 10000 " style="background-image: url('http://yusuke.homeip.net/jira/images/icons/task.gif');">Task</option>
+            </select>
+                    <a class="localHelp" href="../../jira/secure/ShowConstantsHelp_decorator_popup.html#IssueTypes" onclick="var child = window.open('../../jira/secure/ShowConstantsHelp_decorator_popup.html', 'jiraLocalHelp', 'width=600, height=500, resizable, scrollbars=yes'); child.focus(); return false;">
+        </a>
+    <div id="projectRefreshPanel" class="infoBox" style="display:none;" onclick="refreshDependentFields();">
+        Newly selected projects or issue types may have different versions, components or custom fields. <a href="#" onclick="refreshDependentFields();return false;">Click here</a> to refresh the search menu.
+    </div>
+    <script language="JavaScript" type="text/javascript">
+    <!--
+        var projectSelectList   = document.getElementById("pid");
+        var originalProjectValue = getMultiSelectValues(projectSelectList);
+        var issueTypeSelectList = document.getElementById("type");
+        var originalIssueTypeValue = getMultiSelectValues(issueTypeSelectList);
+        function refreshDependentFields()
+        {
+            var refreshFilter = document.getElementById("refreshFilter");
+            refreshFilter.value = 'true';
+            refreshFilter.form.submit();
+        }
+        function toggleRefresh()
+        {
+            if(originalProjectValue   == getMultiSelectValues(projectSelectList) && 
+               originalIssueTypeValue == getMultiSelectValues(issueTypeSelectList))
+            {
+                document.getElementById("projectRefreshPanel").style.display = 'none';
+            }
+            else
+            {
+                document.getElementById("projectRefreshPanel").style.display = '';         
+            }
+        }
+        projectSelectList.onchange = toggleRefresh;
+        issueTypeSelectList.onchange = toggleRefresh;
+        toggleRefresh();
+    //-->
+    </script>
+    <script language="JavaScript" type="text/javascript" src="http://yusuke.homeip.net/jira/includes/js/issuetypes-search.js"></script>
+    <script language="JavaScript" type="text/javascript">
+    <!--
+                   addEntry('10000','10000');
+                   addEntry('10001','10000');
+                   addEntry('10010','10000');
+                   addEntry('10002','10000');
+                dynamicMultiIssueTypeSelect("pid", "type");
+    //-->
+</script>
+                    </td>
+    </tr>
+            <tr class="spacer">
+                <td class="fieldLabelArea">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            </tbody>
+            <tr>
+                <th id="navigator.filter.subheading.textsearchheader" class="rowHeader" colspan="2" onclick="GuiPrefs.toggleVisibility('navigator.filter.subheading.textsearch');" title="Click to hide / show section Text Search">
+                    Text Search
+                </th>
+            </tr>
+            <tbody id="navigator.filter.subheading.textsearch">
+    <tr class="fieldArea" id="queryFieldArea">
+    <td class="fieldLabelArea">
+            <label for="query">
+                    Query:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+    <input type="text" id="query" name="query" class="standardInputField" value=""/> 
+                    <a class="helpLink" href="http://www.atlassian.com/software/jira/docs/v3.9/querysyntax.html?clicked=jirahelp" target="_jirahelp">
+        </a>
+                    </td>
+    </tr>
+<tr>
+    <td class="fieldLabelArea" style="width:30%;">
+        Query Fields:
+    </td>
+    <td class="fieldValueArea" style="width:70%;">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+        <td nowrap width="50%">
+            <input type="checkbox" id="summaryId" name="summary" value="true" checked="checked">
+            <label for="summaryId">Summary</label>
+        </td>
+        <td nowrap width="50%">
+                            <input type="checkbox" id="descriptionId" name="description" value="true" checked="checked">
+                <label for="descriptionId">Description</label>
+                    </td>
+        </tr>
+        <tr>
+        <td nowrap width="50%">
+            <input type="checkbox" id="bodyId" name="body" value="true">
+            <label for="bodyId">Comments</label>
+        </td>
+        <td nowrap width="50%">
+                            <input type="checkbox" id="environmentId" name="environment" value="true">
+                <label for="environmentId">Environment</label>
+                    </td>
+        </tr>
+        </table>
+        </td>
+</tr>
+            <tr class="spacer">
+                <td class="fieldLabelArea">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            </tbody>
+            <script language="JavaScript" type="text/javascript">
+            <!--
+                restore('navigator.filter.subheading.textsearch');
+            //-->
+            </script>
+            <tr>
+                <th id="navigator.filter.subheading.issueattributesheader" class="rowHeader" colspan="2" onclick="GuiPrefs.toggleVisibility('navigator.filter.subheading.issueattributes');" title="Click to hide / show section Issue Attributes">
+                    Issue Attributes
+                </th>
+            </tr>
+            <tbody id="navigator.filter.subheading.issueattributes">
+            <script language="JavaScript" type="text/javascript">
+<!--
+var reporterSelect = new Array();
+reporterSelect[reporterSelect.length] = new Array("","select.list.none");
+reporterSelect[reporterSelect.length] = new Array("issue_no_reporter","select.list.none");
+reporterSelect[reporterSelect.length] = new Array("specificuser","select.list.user");
+reporterSelect[reporterSelect.length] = new Array("specificgroup","select.list.group");
+function openreporterWindow()
+{
+    var vWinUsers = window.open('/jira/secure/popups/UserPickerBrowser.jspa?formName=filterform&element=reporter', 'UserPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=750,scrollbars=yes');
+    vWinUsers.opener = self;
+	vWinUsers.focus();
+}
+function openreporterGroupWindow()
+{
+    var vWinUsers = window.open('/jira/secure/popups/GroupPickerBrowser.jspa?formName=filterform&element=reporter', 'GroupPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=750,scrollbars=yes');
+    vWinUsers.opener = self;
+	vWinUsers.focus();
+}
+function togglereporterField ()
+{
+    var userSelectList = document.getElementById("reporterSelect");
+    var userField = document.getElementById("reporter");
+    var userPickerImage = document.getElementById("reporterImage");
+    var userPickerGroupImage = document.getElementById("reporterGroupImage");
+    var selectedOption = reporterSelect[userSelectList.selectedIndex][1];
+    if (selectedOption == "select.list.none")
+    {
+        if (userField)
+        {
+            userField.value = "";
+            userField.disabled = true;
+        }
+        if (userPickerImage)
+        {
+            userPickerImage.style.display = "none";
+        }
+        if (userPickerGroupImage)
+        {
+            userPickerGroupImage.style.display = "none";
+        }
+    }
+    else
+    {
+        if (userField)
+        {
+            userField.disabled = false;
+        }
+        if (selectedOption == "select.list.group")
+        {
+            if (userPickerImage)
+            {
+                userPickerImage.style.display = "none";
+            }
+            if (userPickerGroupImage)
+            {
+                userPickerGroupImage.style.display = "";
+            }
+        }
+        else
+        {
+            if (userPickerImage)
+            {
+                userPickerImage.style.display = "";
+            }
+            if (userPickerGroupImage)
+            {
+                userPickerGroupImage.style.display = "none";
+            }
+        }
+    }
+}
+//-->
+</script>
+    <tr class="fieldArea" id="reporterSelectFieldArea">
+    <td class="fieldLabelArea">
+            <label for="reporterSelect">
+                    Reporter:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+    <select name="reporterSelect" id="reporterSelect" onchange="togglereporterField();">
+                    <option value="">Any User</option>
+                    <option value="issue_no_reporter">No Reporter</option>
+                    <option value="specificuser">Specify User</option>
+                    <option value="specificgroup">Specify Group</option>
+            </select>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="reporterFieldArea">
+    <td class="fieldLabelArea">
+          &nbsp;
+        </td>
+            <td class="fieldValueArea">
+    <input type="text" name="reporter" id="reporter" class="standardInputField" value=""/>
+<script language="JavaScript" type="text/javascript">
+<!--
+    togglereporterField();
+//-->
+</script>
+                    </td>
+    </tr>
+            <script language="JavaScript" type="text/javascript">
+<!--
+var assigneeSelect = new Array();
+assigneeSelect[assigneeSelect.length] = new Array("","select.list.none");
+assigneeSelect[assigneeSelect.length] = new Array("unassigned","select.list.none");
+assigneeSelect[assigneeSelect.length] = new Array("specificuser","select.list.user");
+assigneeSelect[assigneeSelect.length] = new Array("specificgroup","select.list.group");
+function openassigneeWindow()
+{
+    var vWinUsers = window.open('/jira/secure/popups/UserPickerBrowser.jspa?formName=filterform&element=assignee', 'UserPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=750,scrollbars=yes');
+    vWinUsers.opener = self;
+	vWinUsers.focus();
+}
+function openassigneeGroupWindow()
+{
+    var vWinUsers = window.open('/jira/secure/popups/GroupPickerBrowser.jspa?formName=filterform&element=assignee', 'GroupPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=750,scrollbars=yes');
+    vWinUsers.opener = self;
+	vWinUsers.focus();
+}
+function toggleassigneeField ()
+{
+    var userSelectList = document.getElementById("assigneeSelect");
+    var userField = document.getElementById("assignee");
+    var userPickerImage = document.getElementById("assigneeImage");
+    var userPickerGroupImage = document.getElementById("assigneeGroupImage");
+    var selectedOption = assigneeSelect[userSelectList.selectedIndex][1];
+    if (selectedOption == "select.list.none")
+    {
+        if (userField)
+        {
+            userField.value = "";
+            userField.disabled = true;
+        }
+        if (userPickerImage)
+        {
+            userPickerImage.style.display = "none";
+        }
+        if (userPickerGroupImage)
+        {
+            userPickerGroupImage.style.display = "none";
+        }
+    }
+    else
+    {
+        if (userField)
+        {
+            userField.disabled = false;
+        }
+        if (selectedOption == "select.list.group")
+        {
+            if (userPickerImage)
+            {
+                userPickerImage.style.display = "none";
+            }
+            if (userPickerGroupImage)
+            {
+                userPickerGroupImage.style.display = "";
+            }
+        }
+        else
+        {
+            if (userPickerImage)
+            {
+                userPickerImage.style.display = "";
+            }
+            if (userPickerGroupImage)
+            {
+                userPickerGroupImage.style.display = "none";
+            }
+        }
+    }
+}
+//-->
+</script>
+    <tr class="fieldArea" id="assigneeSelectFieldArea">
+    <td class="fieldLabelArea">
+            <label for="assigneeSelect">
+                    Assignee:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+    <select name="assigneeSelect" id="assigneeSelect" onchange="toggleassigneeField();">
+                    <option value="">Any User</option>
+                    <option value="unassigned">Unassigned</option>
+                    <option value="specificuser">Specify User</option>
+                    <option value="specificgroup">Specify Group</option>
+            </select>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="assigneeFieldArea">
+    <td class="fieldLabelArea">
+          &nbsp;
+        </td>
+            <td class="fieldValueArea">
+    <input type="text" name="assignee" id="assignee" class="standardInputField" value=""/>
+<script language="JavaScript" type="text/javascript">
+<!--
+    toggleassigneeField();
+//-->
+</script>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="statusFieldArea">
+    <td class="fieldLabelArea">
+            <label for="status">
+                    Status:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+<select name="status" id="status" class="standardInputField" multiple="multiple" size="3">
+    <option class="headerOption" value="">Any</option>
+            <option value="1" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/status_open.gif);">Open</option>
+        <option value="3" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/status_inprogress.gif);">In Progress</option>
+        <option value="4" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/status_reopened.gif);">Reopened</option>
+        <option value="5" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/status_resolved.gif);">Resolved</option>
+        <option value="6" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/status_closed.gif);">Closed</option>
+    </select>
+                    <a class="localHelp" href="../../jira/secure/ShowConstantsHelp_decorator_popup.html#StatusTypes" onclick="var child = window.open('../../jira/secure/ShowConstantsHelp_decorator_popup.html', 'jiraLocalHelp', 'width=600, height=500, resizable, scrollbars=yes'); child.focus(); return false;">
+        </a>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="resolutionFieldArea">
+    <td class="fieldLabelArea">
+            <label for="resolution">
+                    Resolutions:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+<select name="resolution" id="resolution" class="standardInputField" multiple="multiple" size="3">
+    <option class="headerOption" value="">Any</option>
+     <option class="headerOption" value="-1">Unresolved</option>         <option value="1">Fixed</option>
+        <option value="2">Won't Fix</option>
+        <option value="3">Duplicate</option>
+        <option value="4">Incomplete</option>
+        <option value="5">Cannot Reproduce</option>
+    </select>
+                    <a class="localHelp" href="../../jira/secure/ShowConstantsHelp_decorator_popup.html#ResolutionTypes" onclick="var child = window.open('../../jira/secure/ShowConstantsHelp_decorator_popup.html', 'jiraLocalHelp', 'width=600, height=500, resizable, scrollbars=yes'); child.focus(); return false;">
+        </a>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="priorityFieldArea">
+    <td class="fieldLabelArea">
+            <label for="priority">
+                    Priorities:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+<select name="priority" id="priority" class="standardInputField" multiple="multiple" size="3">
+    <option class="headerOption" value="">Any</option>
+            <option value="1" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/priority_blocker.gif);">Blocker</option>
+        <option value="2" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/priority_critical.gif);">Critical</option>
+        <option value="3" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/priority_major.gif);">Major</option>
+        <option value="4" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/priority_minor.gif);">Minor</option>
+        <option value="5" class="imagebacked" style="background-image: url(http://yusuke.homeip.net/jira/images/icons/priority_trivial.gif);">Trivial</option>
+    </select>
+                    <a class="localHelp" href="../../jira/secure/ShowConstantsHelp_decorator_popup.html#PriorityLevels" onclick="var child = window.open('../../jira/secure/ShowConstantsHelp_decorator_popup.html', 'jiraLocalHelp', 'width=600, height=500, resizable, scrollbars=yes'); child.focus(); return false;">
+        </a>
+                    </td>
+    </tr>
+            <tr class="spacer">
+                <td class="fieldLabelArea">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            </tbody>
+            <script language="JavaScript" type="text/javascript">
+            <!--
+                restore('navigator.filter.subheading.issueattributes');
+            //-->
+            </script>
+            <tr>
+                <th id="navigator.filter.subheading.datesandtimesheader" class="rowHeader" colspan="2" onclick="GuiPrefs.toggleVisibility('navigator.filter.subheading.datesandtimes');" title="Click to hide / show section Dates and Times">
+                    Dates and Times
+                </th>
+            </tr>
+            <tbody id="navigator.filter.subheading.datesandtimes">
+    <tr class="fieldArea" id="created:afterFieldArea">
+    <td class="fieldLabelArea">
+            <label for="created:after">
+                    Created After:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+  <div class="calendarPicker"></div>
+<input type="text" class="dateSearcher" name="created:after" id="created:after" value="" title="Retrieves issues created after or on this date"/>
+<script type="text/javascript">
+    Calendar.setup({
+        firstDay       :    0,                  // first day of the week
+        inputField     :    "created:after",     // id of the input field
+        button         :    "created:after_trigger_c",  // trigger for the calendar (button ID)
+        align          :    "Tl",           // alignment (defaults to "Bl")
+        singleClick    :    true,
+             ifFormat       : "%e/%b/%y"      // our date only format
+         });
+</script>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="created:beforeFieldArea">
+    <td class="fieldLabelArea">
+            <label for="created:before">
+                    Created Before:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+  <div class="calendarPicker"></div>
+<input type="text" class="dateSearcher" name="created:before" id="created:before" value="" title="Retrieves issues created before or on this date"/>
+<script type="text/javascript">
+    Calendar.setup({
+        firstDay       :    0,                  // first day of the week
+        inputField     :    "created:before",     // id of the input field
+        button         :    "created:before_trigger_c",  // trigger for the calendar (button ID)
+        align          :    "Tl",           // alignment (defaults to "Bl")
+        singleClick    :    true,
+             ifFormat       : "%e/%b/%y"      // our date only format
+         });
+</script>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="created:previousFieldArea">
+    <td class="fieldLabelArea">
+            <label for="created:previous">
+                    Created:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+<a class="calendarPicker" href="javascript:openDateRangePicker('filterform', 'created:previous', 'created:next', 'created')"></a>
+<label for="created:previous" class="label">From</label>
+<input type="text" name="created:previous" id="created:previous" class="periodSearcher" value=""/>
+<label for="created:next" class="label">To</label>
+<input type="text" name="created:next" id="created:next" class="periodSearcher" value=""/>
+                            <div class="fieldDescription">Use this picker for relative dates</div>
+    </td>
+    </tr>
+    <tr class="fieldArea" id="updated:afterFieldArea">
+    <td class="fieldLabelArea">
+            <label for="updated:after">
+                    Updated After:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+  <div class="calendarPicker"></div>
+<input type="text" class="dateSearcher" name="updated:after" id="updated:after" value="" title="Retrieves issues updated after or on this date"/>
+<script type="text/javascript">
+    Calendar.setup({
+        firstDay       :    0,                  // first day of the week
+        inputField     :    "updated:after",     // id of the input field
+        button         :    "updated:after_trigger_c",  // trigger for the calendar (button ID)
+        align          :    "Tl",           // alignment (defaults to "Bl")
+        singleClick    :    true,
+             ifFormat       : "%e/%b/%y"      // our date only format
+         });
+</script>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="updated:beforeFieldArea">
+    <td class="fieldLabelArea">
+            <label for="updated:before">
+                    Updated Before:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+  <div class="calendarPicker"></div>
+<input type="text" class="dateSearcher" name="updated:before" id="updated:before" value="" title="Retrieves issues updated before or on this date"/>
+<script type="text/javascript">
+    Calendar.setup({
+        firstDay       :    0,                  // first day of the week
+        inputField     :    "updated:before",     // id of the input field
+        button         :    "updated:before_trigger_c",  // trigger for the calendar (button ID)
+        align          :    "Tl",           // alignment (defaults to "Bl")
+        singleClick    :    true,
+             ifFormat       : "%e/%b/%y"      // our date only format
+         });
+</script>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="updated:previousFieldArea">
+    <td class="fieldLabelArea">
+            <label for="updated:previous">
+                    Updated:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+<a class="calendarPicker" href="javascript:openDateRangePicker('filterform', 'updated:previous', 'updated:next', 'updated')"></a>
+<label for="updated:previous" class="label">From</label>
+<input type="text" name="updated:previous" id="updated:previous" class="periodSearcher" value=""/>
+<label for="updated:next" class="label">To</label>
+<input type="text" name="updated:next" id="updated:next" class="periodSearcher" value=""/>
+                            <div class="fieldDescription">Use this picker for relative dates</div>
+    </td>
+    </tr>
+    <tr class="fieldArea" id="duedate:afterFieldArea">
+    <td class="fieldLabelArea">
+            <label for="duedate:after">
+                    Due After:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+  <div class="calendarPicker"></div>
+<input type="text" class="dateSearcher" name="duedate:after" id="duedate:after" value="" title="Retrieves issues due after or on this date"/>
+<script type="text/javascript">
+    Calendar.setup({
+        firstDay       :    0,                  // first day of the week
+        inputField     :    "duedate:after",     // id of the input field
+        button         :    "duedate:after_trigger_c",  // trigger for the calendar (button ID)
+        align          :    "Tl",           // alignment (defaults to "Bl")
+        singleClick    :    true,
+             ifFormat       : "%e/%b/%y"      // our date only format
+         });
+</script>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="duedate:beforeFieldArea">
+    <td class="fieldLabelArea">
+            <label for="duedate:before">
+                    Due Before:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+  <div class="calendarPicker"></div>
+<input type="text" class="dateSearcher" name="duedate:before" id="duedate:before" value="" title="Retrieves issues due before or on this date"/>
+<script type="text/javascript">
+    Calendar.setup({
+        firstDay       :    0,                  // first day of the week
+        inputField     :    "duedate:before",     // id of the input field
+        button         :    "duedate:before_trigger_c",  // trigger for the calendar (button ID)
+        align          :    "Tl",           // alignment (defaults to "Bl")
+        singleClick    :    true,
+             ifFormat       : "%e/%b/%y"      // our date only format
+         });
+</script>
+                    </td>
+    </tr>
+    <tr class="fieldArea" id="duedate:previousFieldArea">
+    <td class="fieldLabelArea">
+            <label for="duedate:previous">
+                    Due Date:
+                </label>
+        </td>
+            <td class="fieldValueArea">
+<a class="calendarPicker" href="javascript:openDateRangePicker('filterform', 'duedate:previous', 'duedate:next', 'duedate')"></a>
+<label for="duedate:previous" class="label">From</label>
+<input type="text" name="duedate:previous" id="duedate:previous" class="periodSearcher" value=""/>
+<label for="duedate:next" class="label">To</label>
+<input type="text" name="duedate:next" id="duedate:next" class="periodSearcher" value=""/>
+                            <div class="fieldDescription">Use this picker for relative dates</div>
+    </td>
+    </tr>
+</tbody>
+<script language="JavaScript" type="text/javascript">
+<!--
+    restore('navigator.filter.subheading.datesandtimes');
+//-->
+</script>
+	<tr>
+	<td class="rowHeader fullyCentered" colspan="2">
+		<input type="submit" name="hide" value="<< View &amp; Hide">
+		<input type="submit" name="show" value="View >>">
+	</td>
+	</tr>
+</table>
+</form>
+    </td>
+<td valign="top">
+    <table cellspacing="0" cellpadding="10" border="0" width="100%"><tr><td>
+<table class="jiraform  maxWidth">
+<tr>
+    <td class="jiraformheader">
+    <h3 class="formtitle">Issue Navigator</h3></td>
+</tr>
+    <tr>
+    <td class="jiraformbody">
+        <p>
+            The Issue Navigator allows you to browse all the issues in the system. Filters allow you to limit the issues that you see.
+        </p>
+        <p>
+            Using the panel on the left, you can create and edit new filters.
+        </p>
+    </td>
+    </tr>
+</table>
+<p>
+</p>
+    </td></tr></table>
+</td></tr>
+</table>
+<div class="footer">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td bgcolor="#bbbbbb"></td>
+</tr>
+<tr><td class="licensemessage">
+    Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+</td></tr>
+<tr>
+    <td height="12" style="background-image:url(http://yusuke.homeip.net/jira/images/border/border_bottom.gif)"></td>
+</tr>
+</table>
+<span class="poweredbymessage">
+<a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+the Professional <a href="http://www.atlassian.com/software/jira">Issue Tracker</a>.
+<span style="color: #666666;">(Enterprise Edition, Version: 3.9.2-#235)</span>
+- <a href="http://jira.atlassian.com/default.jsp?clicked=footer">Bug/feature request</a>
+- <a href="../../jira/secure/Administrators.html">Contact Administrators</a>
+</span>
+</div>
+</body>
+</html>

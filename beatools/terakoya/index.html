@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>寺子屋</title>
+</head>
+<body background="http://yusuke.homeip.net/bbs/imgs/backTile.jpg">
+<center><h1>寺子屋</h1></center>
+WebLogicって日本語のマニュアルが充実しててすばらしいです。翻訳もしっかりしていて、どっかのベンダみたいに明らかに「翻訳しました」的な文章じゃないのもステキ。<br/>
+ただ、英語版に微妙に遅れて日本語版が更新されるので、時には英語のドキュメントを参照する必要もあります。<br/><br/>
+そこで、このツールをブックマークに登録すると１クリックでe-docsの言語を切り替えることができるんです。<br/>
+一部のブラウザでは登録時に安全でない旨のメッセージが表示されますがそんなことはありません。いやなにをそんなに心配してるんですか？<br/>
+<br/>
+・ツール本体<br/>
+同じウィンドウで日英切り替え→<a onclick="javascript:alert('直接クリックしないでブックマークしてください');return false;" href="javascript:var l=document.location.href;if(l.substring(7,13)==(&quot;e-docs&quot;)){if(l.substring(30,31)<&quot;7&quot;){location.href=(&quot;http://edocs.beasys.co.jp/e-docs/wls&quot;+l.substring(30))}else{location.href=(&quot;http://edocs.beasys.co.jp/e-docs/&quot;+l.substring(22))}}else{if(l.substring(36,37)==&quot;6&quot;){location.href=(&quot;http://e-docs.bea.com/wls/docs&quot;+l.substring(36))}else{location.href=(&quot;http://e-docs.bea.com/&quot;+l.substring(33))}}">edocs E&lt;-&gt;J</a>
+<br/>
+・インストールの仕方<br/>
+リンクを右クリックでブックマークするか、ドラッグアンドドロップでツールバーやブックマークエリアに登録してください。<br/>
+あとは、好きなedocsのページを開いた状態で、登録済みのブックマークをクリックするだけです。
+<br/>
+・既知の問題<br/>
+現在のところ WLS 6.1,7.0,8.1 のドキュメントにのみ対応しています。Tuxedoは未対応<br/>
+<font color="red">Workshopのページ、edocs.bea.comのドメインには対応していません。</font><br/>
+アンカには対応していません。無理です。<br/>
+<br/>
+<center>
+<a href="../../bbs/list_bbsId_scripts.html">要望、バグ、感想を寄せる</a>
+</center><br/>
+<a href="http://edocs.beasys.co.jp/e-docs/wls/docs81/index.html">WLS8.1 e-docs(J)へ</a><br/>
+<a href="http://e-docs.bea.com/wls/docs81/index.html">WLS8.1 e-docs(E)へ</a><br/>
+<pre>
+Release Note v1- Resolved problems/enhancement requests
+CR1: does not work with Opera Browser
+CR2: need compatibility with WLS6.1 docs
+CR3: window.open() does not work with Opera/Netscape Browser?
+Pending issues
+Enhancement request(s)
+CR4: need alert when try to use outside e-docs
+CR5: need compatibility with TUX docs
+Known limitation(s)
+CR6: does not work with Lunascape/MDI browser
+CR7: does not work on Workshop contents
+CR8: does not work on "edocs.bea.com" domain
+</pre>
+</body>
+</html>

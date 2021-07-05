@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム - 車 category</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaとアーチェリーと</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/01/05/1167928588687.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/07/01/1151765519000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/06/30/1151677505000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/06/10/1149933652000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/06/09/1149843307000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/06/07/1149668901000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/06/04/1149432178000.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/01/05/1167928588687.html">
+    <title>リッジレーサー７クリア</title>
+    <link>http://yusuke.homeip.net/diary/2007/01/05/1167928588687.html</link>
+    
+      
+        <description>
+          &lt;p&gt;チコチコと遊んでましたが、リッジレーサー７のメインであるグランプリ14戦全戦をクリアしました。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/ridge.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/02/ridge-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;今のとこプレステ３で持っているゲームはこれだけですがなかなか楽しめてます。&lt;br/&gt;&lt;br/&gt;ゲーム内容はPSPのリッジレーサーズと似ていて、何故かドリフトをすると溜まって、消費すると一気に加速できるニトロシステムがあります。&lt;br/&gt;それから新しいのは後方車の最高速度が上がるスリップストリーム。&lt;br/&gt;車の真後ろに付くほど加速しやすくなるので、邪魔をしてやろうとしっかりブロックするとライバルが一気に加速して抜かれてしまうかも、という良い具合のジレンマを生み出してくれます。&lt;br/&gt;アクセルを踏んでいればそう簡単にはスリップしない強固なグリップと、危ない！と思ったらドリフトすればなんとなくコースの通りに走ってくれる、リアルさよりも爽快さを重視した車の挙動は健在。&lt;br/&gt;普通前後輪ともグリグリ滑るのようなドリフトしていたら曲がれるコーナーも曲がれないと思いますが、やはりリッジレーサーはドリフトした者勝ちです。&lt;br/&gt;ゲームの難易度はグッと高く、普通にノーミスで走っていても勝てないレースが平気であります。コーナリングやスリップストリーム、ニトロ発動のタイミングなどうまくやらないと全然勝てません。&lt;br/&gt;&lt;br/&gt;画面はさすがにプレイステーション３なだけあってメチャメチャキレイ！&lt;br/&gt;リアル、というよりも「イカニモCG」的なキレイさを追究しているのかもしれません。&lt;br/&gt;写実感でいうと&lt;a href=&#034;http://www.gran-turismo.com/jp/gthdc/&#034;&gt;無料でダウンロードして遊べるグランツーリスモHD&lt;/a&gt;の方がよりリアルです。&lt;br/&gt;&lt;br/&gt;あと、オンラインで対戦できるのは嬉しい誤算でした。さすがにコンピュータ相手と違って手に汗握る勝負が楽しめます。&lt;br/&gt;見知らぬ人々はとても上手で全く相手になりませんが・・。&lt;br/&gt;友達のIDを登録しておくとオン・オフライン状況がわかり、その場で対戦を誘って勝負する、といったことが気軽にできるようになっています。&lt;br/&gt;ネットゲーム特有のタイムラグもうまく気にならないようにできていて、車がワープしてしまったり、あらぬ方向へ走り続けてしまったりということもありません。&lt;br/&gt;当たり判定もうまい具合にごまかして自然に感じられます。&lt;br/&gt;&lt;br/&gt;ちょっと残念なのはリッジレーサーの「いつもの」曲とコースが選べないこと。&lt;br/&gt;「いつものコース」はグランプリ全戦クリアで選択できるようになりましたが、曲は出てきません。&lt;br/&gt;もう少しゲームを進めると出てくるんでしょうか？&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/07/01/1151765519000.html">
+    <title>ナビに iPod 接続 - 音が出ない</title>
+    <link>http://yusuke.homeip.net/diary/2006/07/01/1151765519000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;さて、iPod の音が出ない件ですが、担当セールスマンに電話しました。&lt;br/&gt;問題はたぶんこれ、配線ミス。&lt;br/&gt;・パイオニア  カーAV&amp;オーディオ&gt;ｉＰｏｄ® アダプター　CD-IB10/CD-IB10II&gt;故障かなと思ったら&lt;br/&gt;&lt;a href=&#034;http://faq.pioneer.co.jp/faqnavi/piofaq/ib10/faq.cgi?parent=3584;id=13776;session=bf1ad458cbaa35d621dd5326339183f7;linksource=3586&#034;&gt; 接続して操作はできますが、音が出ません。故障ですか？&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;「１ヶ月点検で直します」とか言われる覚悟をしてたけど速攻整備工場に連絡してくれて、当日中に整備士の予定を確保してくれて直して貰いました。 &lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/07/01/nissan.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/07/01/nissan-thumb.jpg&#034; title=&#034;修理中&#034;/&gt;&lt;/a&gt;&lt;br/&gt;修理中&lt;br/&gt;&lt;br/&gt;HDDナビなんでCDを取り込むこともできるけどやっぱりiPodから直接再生できるのは便利！&lt;br/&gt;整備工場に車もってく手間はかかったけど、修理を見学させてもらってコンパネの開け方がわかったので良しとします。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/07/01/ipod.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/07/01/ipod-thumb.jpg&#034; title=&#034;ナビで iPod 再生中&#034;/&gt;&lt;/a&gt;&lt;br/&gt;ナビで iPod 再生中&lt;br/&gt;&lt;br/&gt;ちなみに載っけたナビはパイオニアの HDD の楽ナビで MD プレーヤがついてないタイプ - AIVC-HRZ08。&lt;br/&gt;・&lt;a href=&#034;http://pioneer.jp/carrozzeria/rakunavi/lineup/hdd/hrz08.html&#034;&gt;AVIC-HRZ08&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/06/30/1151677505000.html">
+    <title>新車購入記 - 納車！</title>
+    <link>http://yusuke.homeip.net/diary/2006/06/30/1151677505000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;首を３パーセクくらいに長くしながら待ちつつ３週間。&lt;br/&gt;ようやく納車となりました。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/06/30/P6305172.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/06/30/P6305172-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;日産自慢のキングフィッシャーブルーはまるでドラえもん色！&lt;br/&gt;駐車場でも目立って良いです。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/06/30/P6305185.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/06/30/P6305185-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;納車時にチェックしたのは&lt;br/&gt;&lt;codeSample&gt;・色、オプション等は条件を満たしてる？&lt;br/&gt;色はもちろんのこと、今回オプションとしてつけたフロアマット、HIDランプ、トノカバーが装備されていることを確認。&lt;br/&gt;あと約束通り満タン納車となっていることも確認。&lt;br/&gt;・走行距離は？&lt;br/&gt;あんま長い(50km以上とか)ようだったら一応説明を求めるべきだそうで。&lt;br/&gt;12kmくらいだったので特に問題なし。&lt;br/&gt;・外装、内装に問題はない？&lt;br/&gt;塗装ハゲ、シワ、キズ、シートのほつれなどないかざっとみました。&lt;br/&gt;ドアのエッジ部分に２カ所塗装ハゲを発見！あらら・・。&lt;br/&gt;１ヶ月点検時に補修してもらうことに。&lt;br/&gt;・ナビ等の取り付けに問題はない？&lt;br/&gt;取り付けをお願いしていたナビ(ビーコンユニット、GPSアンテナ、バックカメラ、iPodケーブル、携帯ケーブル、マイクも）、ETCユニットがついていることを確認。&lt;br/&gt;バックカメラは一応シフトをバックにして写ることも確認。&lt;br/&gt;&lt;/codeSample&gt;&lt;br/&gt;といった点。&lt;br/&gt;&lt;br/&gt;その後ドライブを始めて気が付いた点としてはナビに接続した iPod がコントロールはできるけど音がでないこと。&lt;br/&gt;ボリュームを最大にしても何にも聞こえない・・・。&lt;br/&gt;調べてみると iPod を最新版にすることで解消されるという話があったので早速アップデート。&lt;br/&gt;・CD-IB10についてのクチコミ&lt;br/&gt;&lt;a href=&#034;http://www.kakaku.com/bbs/Main.asp?PrdKey=70203510729&#034;&gt;http://www.kakaku.com/bbs/Main.asp?PrdKey=70203510729&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;しかし解消されない。さて、外れをつかんだかと思いもう少し調べてみると本家ホームページに見つけました。&lt;br/&gt;・接続して操作はできますが、音が出ません。故障ですか？&lt;br/&gt;&lt;a href=&#034;http://faq.pioneer.co.jp/faqnavi/piofaq/ib10/faq.cgi?parent=3584;id=13776;session=bf1ad458cbaa35d621dd5326339183f7;linksource=3586&#034;&gt;http://faq.pioneer.co.jp/faqnavi/piofaq/ib10/faq.cgi?parent=3584;id=13776;session=bf1ad458cbaa35d621dd5326339183f7;linksource=3586&lt;/a&gt;&lt;br/&gt;どうも接続ミスのようで。&lt;br/&gt;明日ディーラーに電話して直して貰おうっと。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/06/10/1149933652000.html">
+    <title>新車購入記 その９ - ウィングロード試乗その２ / 契約</title>
+    <link>http://yusuke.homeip.net/diary/2006/06/10/1149933652000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;今日はウィングロードの試乗２回目。&lt;br/&gt;乗る車は希望色のキングフィッシャーブルーで、エアロじゃない CVT モデル。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/06/10/index.html&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/06/10/index-Thumbnails/0.jpg&#034;&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;水色と青の中間くらい、うっすら黄色がまざったような（気のせい？）色はカタログでみた以上に綺麗！&lt;br/&gt;今日は荷物を積まずに乗ってみたけどもやはり CVT はスムースで気持ちよいです。&lt;br/&gt;排気量が現在のブルーバードの2.0リットルに比べ、1.5リットルとやや少なめなものの信号待ちからのスタート時にややがんばっている感じがする程度で遜色ないです。&lt;br/&gt;&lt;br/&gt;さて、値引き交渉は「トヨタもがんばってくれてるので迷わずに済む値段を出してください！」とお願いしました。&lt;br/&gt;やはり「いくらなら決めてもらえます？」と聞かれ「165万！」&lt;br/&gt;「ははは・・。それは無理ですががんばります」&lt;br/&gt;しばらく待たされると 185 万という値段が出てきました。&lt;br/&gt;いきなり許容範囲内の値段です。&lt;br/&gt;もう一声いけるかなー？ということで&lt;br/&gt;「うーん、175万にはならない？」-&gt;「183万」&lt;br/&gt;「うーん、177万にはならない？」 -&gt; 「180万！もう勘弁！」&lt;br/&gt;「ではその値段でヨロシクお願いします！」と言いながらガシっと握手を交わしました。&lt;br/&gt;で、握手を交わしたまま「ETC機器の載せ替えもその値段でお願いします」と最後のおねだり。&lt;br/&gt;苦笑しながらも Ok してくれました。&lt;br/&gt;&lt;br/&gt;車庫証明はなんとしてもやらせてください、ということなのでお願いしてしまいましたが、ガソリン満タン納車、持ち込みナビ取り付けにはしてくれることに。&lt;br/&gt;実質31万円引き位となり満足。&lt;br/&gt;もっと粘りたければ Blue Stage と Red Stage で合い見積もりをすれば良いのでしょうが、早く決めたいので今回はやりませんでした。&lt;br/&gt;&lt;br/&gt;納車は６月末から７月頭になるとのこと。楽しみ楽しみ。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/06/09/1149843307000.html">
+    <title>新車購入記 その８ - 決戦は土曜日</title>
+    <link>http://yusuke.homeip.net/diary/2006/06/09/1149843307000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;車の値引き交渉は期間が長ければ長いほどがんばってくれるでしょうが、消耗戦で時間を消費しすぎるのも「ケチケチ顧客リスト」入りしてしまうのもつまらないので土曜日には決めてしまうつもりです。&lt;br/&gt;&lt;br/&gt;ボーナス商戦終盤まで待つとかすれば状況は変わるでしょうが、フィールダーはこれ以上の大幅な値引きはないものと踏んで、あとは日産からの値引き交渉の準備にかかりました。&lt;br/&gt;&lt;br/&gt;まず、カローラフィールダーとウィングロードの見積書の項目を excel のシートに並べて、車両本体以外にどこに値段の差があるのか比較しました。&lt;br/&gt;手数料的な値段が含まれている諸経費分などは特に同程度まで値引きしてくれるはずです。&lt;br/&gt;で、項目を比較してトヨタの方が安くなっている項目はトヨタの値段を、日産の方が安くなっている項目は日産の値段を集め、ウィングロードの車両価格と、より多めにでているトヨタの値引き分を合わせた希望見積もりを作りました。&lt;br/&gt;&lt;br/&gt;例えば現在出ている見積書がこんな感じだったら&lt;br/&gt;・カローラフィールダー / ウィングロード&lt;br/&gt;1. 車両本体 150万 / 160万&lt;br/&gt;2. 車両本体値引き 23万 / 15万&lt;br/&gt;3. ブルーバード下取り 3万 / 4千&lt;br/&gt;4. 諸経費30万 / 諸経費29万&lt;br/&gt;計 154万円 / 計173.6万円&lt;br/&gt;&lt;br/&gt;こんな感じに合わせた希望の見積もりを作ります。&lt;br/&gt;・ウィングロード希望見積もり&lt;br/&gt;1. 車両本体 160万&lt;br/&gt;2. &lt;font color=&#034;red&#034;&gt;車両本体値引き 23万&lt;/font&gt;&lt;br/&gt;3. &lt;font color=&#034;red&#034;&gt;ブルーバード下取り 3万&lt;/font&gt;&lt;br/&gt;4. 諸経費29万円&lt;br/&gt;&lt;font color=&#034;red&#034;&gt;計163万&lt;/font&gt;&lt;br/&gt;#実際には諸経費の明細も全項目並べて計算しました&lt;br/&gt;&lt;br/&gt;で、オプションにHIDランプに加えインテリジェントキー、ポリマーコーティング、３年間のメンテナンス代をまとめて安くするメンテプロパック等を合わせ、値引きを含まない希望見積もりを作ると210万くらいになりました。&lt;br/&gt;交渉の最終段階では「車両・オプションの値引き額」ではなく、総額いくらにするかで交渉することが多いようです。&lt;br/&gt;「全部合わせていくらなら決めて頂けますか？」と聞かれればまず無理であろう安すぎる値段を言うことにし、最終的に納得するラインは別に設定しました。&lt;br/&gt;というわけで、「165万なら決めます」と言いつつ、185万くらいでたら決めることにするいったとかんじ。&lt;br/&gt;実質25万引き程度を目標設定です。&lt;br/&gt;&lt;br/&gt;さらに、最後にお願いする実質値引き手段のリストを作っておきます&lt;br/&gt;・ガソリン満タン納車&lt;br/&gt;-&gt;何も言わなければ20リットルくらいしかガソリン入れてくれないそうです&lt;br/&gt;・引き取りに行くので納車代サービス&lt;br/&gt;-&gt;ディーラーが近ければ大抵自分で取りに行くと思いますが&lt;br/&gt;・車庫証明は自分でとるので法廷預かり代金、手数料引いてください&lt;br/&gt;とかとか。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/06/07/1149668901000.html">
+    <title>新車購入記 その７ - 東京カローラで競合見積もり</title>
+    <link>http://yusuke.homeip.net/diary/2006/06/07/1149668901000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;フィールダーを買うことになれば親がひいきにしている東京カローラで買うことは決めています。&lt;br/&gt;しかし実家近くのそのディーラーまでは１時間くらいかかるので最終段階に入るまでは埼玉のカローラに通うつもりでした。&lt;br/&gt;が、「がんばりますので是非とも相談させてください！」とのセールスマンのお願いがありウィングロードかカローラフィールダーか定まらないうちに行くことにしました。&lt;br/&gt;&lt;br/&gt;車は赤の４０周年特別仕様車を用意してくれました。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/06/7/filder-red.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/06/7/filder-red-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;青が本命だけど、赤もなかなか鮮やかで良い感じ。&lt;br/&gt;&lt;br/&gt;で、肝心のお値段だけれども埼玉カローラでだしてもらった値段はそこそこがんばっているようで、「今日決めてもらえるなら一層勉強できます！」の一点張り。&lt;br/&gt;うーん、「お子さんがご購入ということであれば勉強させて頂きます！」といつも繰り返していると聞いていたけどイマイチな対応でがっかり。&lt;br/&gt;具体的な値段が出てこないことには検討のしようがないので、お断りして家路に着きました。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/06/04/1149432178000.html">
+    <title>新車購入記 その６ - カローラフィールダー試乗その２</title>
+    <link>http://yusuke.homeip.net/diary/2006/06/04/1149432178000.html</link>
+    
+      
+        <description>
+          &lt;p&gt;今日は午前日産、午後は昨日に続き再度トヨタ。&lt;br/&gt;今度は妻と一緒で、昨日と同じ黒のフィールダーに試乗させてもらいました。&lt;br/&gt;妻の印象はだいたい自分と同じで「悪くはない。」&lt;br/&gt;&lt;br/&gt;ウィングロードと同じく弓をドカドカ積んでみました。&lt;br/&gt;ラゲッジスペースのゆとりに違いはまり感じられず、十分ゆったり。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/06/04/fielder/index.html&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/06/04/fielder/index-Thumbnails/0.jpg&#034;&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;フィールダーと比べてみてウィングロードの細かい使い勝手の良さが目立ちました、特に後部座席周り。&lt;br/&gt;スライド機構があったり、ワンタッチで格納できたり、リクライニングが１０段階あったり。&lt;br/&gt;よほど値段に差をつけてもらえるのであればフィールダーに、同程度だったら断然ウィングロードにという方向性が確実になりました。&lt;br/&gt;「日産に負けないようがんばってください！」とお願いしたら、実質23万円引きくらいの値段が提示されました。&lt;br/&gt;さて、日産はどれくらいがんばってくれるでしょうか。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+
+</rdf:RDF>

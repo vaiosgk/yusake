@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="../../../../../maps_file_api_v_1_key_ABQIAAAAtS2fi_RnBiuUs4BlVHjt6BRABsBgP8wqQh7kS3FgnXJL7vMCZhRCUVBp4cfEBxevDEQRKjj9DJC-Yg.js" type="text/javascript" charset="UTF-8"></script>
+</head>
+<body>
+    <div id="map" style="width: 300px; height: 300px"></div>
+    <script type="text/javascript">
+    //<![CDATA[
+    var map = new GMap(document.getElementById("map"));
+map.addControl(new GLargeMapControl());
+        map.centerAndZoom(new GPoint(-122.3976,37.7837), 0);
+    map.setMapType(G_SATELLITE_TYPE);
+map.addControl(new GMapTypeControl());
+    GEvent.addListener(map, 'move', function(){
+    var latlang = map.getCenterLatLng();
+    document.myform.x.value = latlang.x;
+    document.myform.y.value = latlang.y;
+    });
+function centerize(){
+map.recenterOrPanToLatLng(new GPoint(document.myform.x.value,document.myform.y.value));
+}
+        //]]>
+    </script>
+<form name="myform" onsubmit="centerize();return false">
+  <input type="text" name="x" value="-122.3976"/>
+  <input type="text" name="y" value="37.7837"/>
+  <input type="button" onclick="centerize()" value="Go!"/>
+</form>
+</body>
+</html>

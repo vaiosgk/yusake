@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム - Mac category</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaとアーチェリーと</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/15/1181870319806.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/14/1181750937995.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/14/1181747472036.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/13/1181745888257.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/12/1181575922878.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/08/1181265404891.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/06/05/1181008112831.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/15/1181870319806.html">
+    <title>Safari 2 と Safari 3 を同居させる方法!?</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/15/1181870319806.html</link>
+    
+      
+        <description>
+          &lt;p&gt;&lt;a href=&#034;http://lifehacker.com/software/mac-tip/install-safari-3-beta-and-safari-2-on-the-same-computer-268689.php&#034;&gt;lifehacker&lt;/a&gt;に Safari2 と Safari 3 を同居させる方法が紹介されていました。&lt;br/&gt;・&lt;a href=&#034;http://macenstein.com/default/archives/659&#034;&gt;Tips/How To: Run Safari 3 Beta and Safari 2 at the same time&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;Safari 3 のインストーラは既存のSafariを上書きしてしまいます。&lt;br/&gt;一旦別ドライブにコピーしておき、Safari 3 をインストール後、Safari v2.app といった名前にリネームして書き戻すと同居できるとのこと。&lt;br/&gt;ちなみに Safari 3 のインストーラは Safari.app が存在しないとインストールできないのでコピーでなくリネームではだめだそうです。&lt;br/&gt;&lt;br/&gt;私も、似たようなことをしていて、最初にインストールするときに別ドライブではなく同じドライブにコピーをとっておきました。&lt;br/&gt;一応旧 Safari を起動できるのですがレンダリング性能は Safari 3 と同等になってしまいます。&lt;br/&gt;JavaScript や CSS の検証用にという意味では残念ながらこのテクニックは役に立ちません。&lt;br/&gt;そもそも Safari.app には WebKit が含まれていませんので・・。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/14/1181750937995.html">
+    <title>JBuilder 2007 インストール</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/14/1181750937995.html</link>
+    
+      
+        <description>
+          &lt;p&gt;インストールから起動に至るまでのスクリーンショットをとってみました。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder1-large.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder1-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;インストーラ初期画面&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder2.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder2-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;ライセンス&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder3.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder3-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;いつものところにインストール&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder4.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder4-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;各種オープンソースのサーバを一緒にインストールできるみたい&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder5.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder5-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;確認画面&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder6.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder6-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;インストール中&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder7.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder7-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Macintosh HD 直下の Applications フォルダを指定したつもりだけれどもユーザディレクトリ以下に Applications フォルダを掘ってインストールしてくれた・・・&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder9.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder9-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;起動直後。Eclipse でお馴染みのワークスペースを選択するダイアログが。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder10-large.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder10-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;起動後。ん！？まったくもって Eclipse だ！！&lt;br/&gt;「よぉ！久しぶり」&lt;br/&gt;「ん？誰？」&lt;br/&gt;「俺だよ、オ・レ！ JBuilder！」&lt;br/&gt;「え？ Eclipse じゃなくて？」&lt;br/&gt;「Eclipse のパワーを得てより強力になったのさ！」&lt;br/&gt;「そ、そぉ・・・。君もなんだか変わっちゃったね・・・」&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder11.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder11-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;About 画面。アイコンをクリックすると各種プラグインの説明が表示される。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder12.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/06/14/jbuilder12-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;もちろん過去の JBuilder プロジェクトを移行することもできます。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/14/1181747472036.html">
+    <title>JBuilder 2007 for Mac OSX リリース</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/14/1181747472036.html</link>
+    
+      
+        <description>
+          &lt;p&gt;JBuilder 2007 の Mac 版がリリースされました。&lt;br/&gt;&lt;a href=&#034;http://www.codegear.com/products/jbuilder&#034;&gt;http://www.codegear.com/products/jbuilder&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;Windows 版、なんだかんだと試せていませんでした。&lt;br/&gt;とりあえずインストールしてみます。&lt;br/&gt;&lt;br/&gt;念のために説明しておくと、JBuilder とはDelphi で有名な Borland がリリースすｒマルチプラットフォームの Java 開発環境です。&lt;br/&gt;&lt;br/&gt;会社名が Inprise に変わったり、Borland に戻ったり、IDE 部門の身売りが検討されたりと紆余曲折を経て IDE 部門の別会社化を昨年果たしました。&lt;br/&gt;・&lt;a href=&#034;http://www.codegear.com/&#034;&gt;CodeGear&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;元々は OpenTools という独自のプラットフォーム上に構築された非常に軽くて使いやすい IDE でしたが、JBuilder 2007 はかねてより計画されていた Eclipse ベースの初のバージョンとなります。&lt;br/&gt;&lt;br/&gt;今は Eclipse, NetBeans, IDEA の３強で影が薄くなっていますが、適応力に乏しい私は幾度となく Eclipse, NetBeans に手を染めては挫折し、手慣れた JBuilder がどうしても手放せません・・。&lt;br/&gt;&lt;br/&gt;ちょっと調べたら楽天でも売っていました↓&lt;br/&gt;・&lt;a href=&#034;http://pt.afl.rakuten.co.jp/c/038479a6.db691fb3/?url=http%3a%2f%2fitem.rakuten.co.jp%2fplusyu%2f4988725405217%2f&#034; target=&#034;_blank&#034;&gt;JBuilder 2007&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;無償版の Turbo もあるみたいなんで、購入するかどうか検討します。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/13/1181745888257.html">
+    <title>Parallels Desktop 3 リリース</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/13/1181745888257.html</link>
+    
+      
+        <description>
+          &lt;p&gt;Prallels Desktop 3 が正式にリリースされました。&lt;br/&gt;６月１０日にでたビルド番号 4128 がそのまま正式版になったようです。&lt;br/&gt;・&lt;a href=&#034;http://www.parallels.com/en/download/desktop/&#034;&gt;Download Parallels Desktop for Mac&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;私は年末の１年間フリーアップグレードキャンペーン中に買ったので info@parallels.com から新しいアクティベーションコードが届きました。&lt;br/&gt;&lt;br/&gt;VMWare の追い上げも激しいですががんばってほしいですね。&lt;br/&gt;じゃんじゃん活用させていただきます！&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/12/1181575922878.html">
+    <title>Mac OSX に MySQL インストール &amp; 自動起動設定メモ</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/12/1181575922878.html</link>
+    
+      
+        <description>
+          &lt;p&gt;最近仕事でちょくちょく触るので自宅サーバに MySQL を入れてみました。&lt;br/&gt;PostgreSQL から移行します。&lt;br/&gt;&lt;br/&gt;ので、メモ。&lt;br/&gt;&lt;br/&gt;・MySQL(バイナリ版)のインストール&lt;br/&gt;このテのソフトをバイナリからインストールしたのは初めてかも！？&lt;br/&gt;楽ちんですね。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;# cd /usr/local&lt;br/&gt;# gunzip &lt; mysql-5.0.41-osx10.4-i686.tar.gz | tar xvf -&lt;br/&gt;# ln -s mysql-5.0.41-osx10.4-i686 mysql&lt;br/&gt;# cd mysql&lt;br/&gt;# chown -R mysql .&lt;br/&gt;# chgrp -R mysql .&lt;br/&gt;# scripts/mysql_install_db --user=mysql&lt;br/&gt;# chown -R root .&lt;br/&gt;# chown -R mysql data&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;・自動起動の設定。&lt;br/&gt;/Library/StartupItems/ 以下にあるアイテムはシステム起動時に勝手に呼び出して起動してくれます。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;# mkdir /Library/StartupItems/mysql&lt;br/&gt;# cd /Library/StartupItems/mysql&lt;br/&gt;# vi StartupParameters.plist&lt;br/&gt;----------------------------------&lt;br/&gt;{&lt;br/&gt;  Description   = &amp;quot;mysql&amp;quot;;&lt;br/&gt;  Provides      = (&amp;quot;mysql&amp;quot;);&lt;br/&gt;  Requires      = (&amp;quot;Disks&amp;quot;);&lt;br/&gt;  Preference    = &amp;quot;Late&amp;quot;;&lt;br/&gt;  Messages =&lt;br/&gt;  {&lt;br/&gt;    start = &amp;quot;Starting mysql&amp;quot;;&lt;br/&gt;    stop  = &amp;quot;Stopping mysql&amp;quot;;&lt;br/&gt;  };&lt;br/&gt;}&lt;br/&gt;----------------------------------&lt;br/&gt;&lt;br/&gt;# vi mysql&lt;br/&gt;----------------------------------&lt;br/&gt;#!/bin/sh&lt;br/&gt;&lt;br/&gt;. /etc/rc.common&lt;br/&gt;&lt;br/&gt;StartService ()&lt;br/&gt;{&lt;br/&gt;        ConsoleMessage &amp;quot;Starting MySQL server&amp;quot;&lt;br/&gt;        su - mysql -c &#039;/usr/local/mysql/bin/safe_mysqld -u mysql &amp;&#039;&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;StopService()&lt;br/&gt;{&lt;br/&gt;        ConsoleMessage &amp;quot;Stopping MySQL server&amp;quot;&lt;br/&gt;        su - mysql -c &#039;/usr/local/mysql/bin/mysqladmin -u mysql shutdown&#039;&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;RestartService ()&lt;br/&gt;{&lt;br/&gt;    StopService&lt;br/&gt;    StartService&lt;br/&gt;}&lt;br/&gt;&lt;br/&gt;RunService &amp;quot;$1&amp;quot;&lt;br/&gt;----------------------------------&lt;br/&gt;&lt;br/&gt;# pwd&lt;br/&gt;/Library/StartupItems/mysql&lt;br/&gt;# ls&lt;br/&gt;StartupParameters.plist mysql&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;以上。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/2007/06/13/1181660717569.html&#034;&gt;次回は PostgreSQL べったりの自家用掲示板アプリの移植で気がついたことを記します。&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/08/1181265404891.html">
+    <title>Parallels Desktop 3.0 RC リリース</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/08/1181265404891.html</link>
+    
+      
+        <description>
+          &lt;p&gt;Parallels Desktop 3.0 の存在が明らかになってから一週間。&lt;br/&gt;もう RC 版がダウンロードできるようになっています。&lt;br/&gt; ・Parallels Desktop 3.0 is LIVE!&lt;br/&gt;&lt;a href=&#034;http://parallelsvirtualization.blogspot.com/2007/06/parallels-desktop-30-is-live.html&#034;&gt;http://parallelsvirtualization.blogspot.com/2007/06/parallels-desktop-30-is-live.html&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;・Download Parallels Desktop for Mac&lt;br/&gt;&lt;a href=&#034;http://www.parallels.com/en/download/desktop/&#034;&gt;http://www.parallels.com/en/download/desktop/&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;動作の様子がわかるビデオも色々とアップされています。&lt;br/&gt;・3D Graphics&lt;br/&gt;&lt;object width=&#034;425&#034; height=&#034;350&#034;&gt;&lt;param name=&#034;movie&#034; value=&#034;http://www.youtube.com/v/JqTkouiT3lw&#034;&gt;&lt;/param&gt;&lt;param name=&#034;wmode&#034; value=&#034;transparent&#034;&gt;&lt;/param&gt;&lt;embed src=&#034;http://www.youtube.com/v/JqTkouiT3lw&#034; type=&#034;application/x-shockwave-flash&#034; wmode=&#034;transparent&#034; width=&#034;425&#034; height=&#034;350&#034;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;br/&gt;&lt;br/&gt;・SmartSelect&lt;br/&gt;&lt;object width=&#034;425&#034; height=&#034;350&#034;&gt;&lt;param name=&#034;movie&#034; value=&#034;http://www.youtube.com/v/thpcL-MazDc&#034;&gt;&lt;/param&gt;&lt;param name=&#034;wmode&#034; value=&#034;transparent&#034;&gt;&lt;/param&gt;&lt;embed src=&#034;http://www.youtube.com/v/thpcL-MazDc&#034; type=&#034;application/x-shockwave-flash&#034; wmode=&#034;transparent&#034; width=&#034;425&#034; height=&#034;350&#034;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;br/&gt;&lt;br/&gt;・SnapShots&lt;br/&gt;&lt;object width=&#034;425&#034; height=&#034;350&#034;&gt;&lt;param name=&#034;movie&#034; value=&#034;http://www.youtube.com/v/tCcKeMTJ2TM&#034;&gt;&lt;/param&gt;&lt;param name=&#034;wmode&#034; value=&#034;transparent&#034;&gt;&lt;/param&gt;&lt;embed src=&#034;http://www.youtube.com/v/tCcKeMTJ2TM&#034; type=&#034;application/x-shockwave-flash&#034; wmode=&#034;transparent&#034; width=&#034;425&#034; height=&#034;350&#034;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;br/&gt;&lt;br/&gt;ビルド番号は3188から大きく飛んで4124。&lt;br/&gt;&lt;br/&gt;追記：&lt;br/&gt;クリスマスセール時に１年間フリーアップグレードライセンスを買ったのですが新バージョンのライセンスを発行するインターフェースが当たりません。&lt;br/&gt;サポートに問いあわせたところ、正式版リリース後に自動的に発行されるとのことです。&lt;br/&gt;もしリリース後数日してもライセンスが発行されない場合は再度問いあわせてくれとのこと。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/06/05/1181008112831.html">
+    <title>Steve Jobs and Bill Gates at D5 Conference</title>
+    <link>http://yusuke.homeip.net/diary/2007/06/05/1181008112831.html</link>
+    
+      
+        <description>
+          &lt;p&gt;最近ちょっと話題になってた JobsとGates のやりとり。&lt;br/&gt;iTunes で配信されていました。&lt;br/&gt;オーディオ版(83.3MB)と映像版(997.4MB)があります。&lt;br/&gt;・&lt;a href=&#034;http://phobos.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=256972720&#034;&gt;Steve Jobs and Bill Gates at D5 Conference&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+
+</rdf:RDF>

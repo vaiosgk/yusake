@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>[#TFJ-149] OAuth fails with &quot;Invalid / expired Token&quot; after May 13, 2009 - JIRA </title>
+    <meta content="issuesummary" name="decorator"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/s/466/1/_/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/s/466/1/_/images/icons/favicon.png">
+<link rel="stylesheet" type="text/css" media="print" href="../../jira/s/466/1/_/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/466/1/_/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/466/1/6/_/styles/global.css"/>
+    <script type="text/javascript">var contextPath = '/jira';</script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/1.2.2/_/download/batch/com.atlassian.auiplugin_ajs/com.atlassian.auiplugin_ajs.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/jira/s/466/1/1.2.2/_/download/batch/com.atlassian.auiplugin:ajs/com.atlassian.auiplugin:ajs.css?ieonly=true" media="all">
+<![endif]-->
+<script type="text/javascript" src="../../jira/s/466/1/1.2.2/_/download/batch/com.atlassian.auiplugin_ajs/com.atlassian.auiplugin_ajs.js"></script>
+<script type="text/javascript" src="../../jira/s/466/1/1.0/_/download/batch/jira.webresources_jira-global/jira.webresources_jira-global.js"></script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/1.0/_/download/batch/jira.webresources_jira-global/jira.webresources_jira-global.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/jira/s/466/1/1.0/_/download/batch/jira.webresources:jira-global/jira.webresources:jira-global.css?ieonly=true" media="all">
+<![endif]-->
+<script type="text/javascript" src="../../jira/s/466/1/1.0/_/download/batch/jira.webresources_header/jira.webresources_header.js"></script>
+</head>
+<body id="jira">
+<div id="header">
+    <div id="header-top">
+        <a id="logo" href="../../jira/secure/Dashboard.html">
+                    </a>
+                <form id="quicksearch" action="../../jira/secure/QuickSearch.html" method="post">
+            <label for="quickSearchInput" class="overlabel">Quick Search
+                <span id="quicksearchhelp" class="informationBox">
+                                                 Learn more about <a href="http://docs.atlassian.com/jira/docs-040/Using+Quick+Search?clicked=jirahelp" target="_jirahelp">Quick Search</a>
+                </span>
+            </label>
+            <input id="quickSearchInput" class="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." type="text" size="25" name="searchString" accesskey="q" valign="absmiddle"/>
+        </form>
+        <div id="header-details-user" class="aui-dd-parent header-link-container">
+         <a class="lnk" rel="nofollow" href="/">Log In</a>
+        <span class="drop-wrap">
+        <a class="drop aui-dd-link" href="#"><span>Access more options</span>
+        </a>
+    </span>
+    <div class="aui-dropdown standard hidden">
+                                                                <ul id="jira-help" class="  first     last  ">
+                                            <li><a id="view_help" class="" title="Goto the online documentation for JIRA" href="http://docs.atlassian.com/jira/docs-040/Home?clicked=jirahelp">Online Help</a></li>
+                                            <li><a id="user_history" class="" title="Get more information about JIRA" href="http://www.atlassian.com/software/jira">About JIRA</a></li>
+                                    </ul>
+                        </div>
+</div>
+    </div>
+    <div id="header-bottom">
+                <div id="menu">
+<ul id="main-nav" class="menu-bar">
+                        <li class="aui-dd-parent lazy  ">
+                    <a class="lnk" href="../../jira/secure/Dashboard.html" id="home_link" accesskey="h" title="View your current Dashboard">Dashboards</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="home_link_drop" rel="home_link" accesskey="d" title="Access more options (Alt+D)" href="#"><span>Access more options (Alt+D)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+                        <li class="aui-dd-parent lazy  ">
+                    <a class="lnk" href="../../jira/browse/TFJ.html" id="browse_link" accesskey="b" title="Browse currently active project 'Twitter4J'">Projects</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="browse_link_drop" rel="browse_link" accesskey="p" title="Access more options (Alt+P)" href="#"><span>Access more options (Alt+P)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+                        <li class="aui-dd-parent lazy  selected  ">
+                    <a class="lnk" href="../../jira/secure/IssueNavigator.html" id="find_link" accesskey="f" title="View your current filter">Issues</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="find_link_drop" rel="find_link" accesskey="i" title="Access more options (Alt+I)" href="#"><span>Access more options (Alt+I)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+    </ul>
+        </div>
+    </div>
+</div>
+<fieldset class="hidden parameters">
+    <input type="hidden" id="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost.">
+</fieldset>
+<!--This should always be included as it is not part of a themable plugin, instead it is core functionality-->
+<div class="alertHeader">
+<script src="../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td width="200" bgcolor="#f0f0f0" valign="top" style="border-right:1px solid #bbb">
+            <table cellpadding="0" cellspacing="0" border="0" width="200">
+<tr><td>
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+    <tr><td bgcolor="#dddddd">
+        <span style="float:left"><b>Issue Details</b></span>
+        <span class="small" style="float:right">
+                                        (<a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-xml/TFJ-149/TFJ-149.xml">XML</a> | <a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-word/TFJ-149/TFJ-149.doc">Word</a> | <a rel="nofollow" class="small" href="/">Printable</a>)
+                    </span>
+    </td></tr>
+    </table>
+                        <br>
+                <table id="issuedetails" cellpadding="3" cellspacing="0" border="0">
+            <tr>
+                <td valign="top"><b>Key:</b></td>
+                <td valign="top">
+                    <b><a id="issue_key_TFJ-149" href="../../jira/browse/TFJ-149.html">TFJ-149</a></b>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Type:</b></td>
+                <td valign="top">
+             Bug
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Status:</b></td>
+                <td valign="top">
+             Closed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Resolution:</b></td>
+                <td valign="top">
+                                             Fixed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Priority:</b></td>
+                <td valign="top">
+             Major
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Assignee:</b></td>
+                <td valign="top">
+                            <a id="issue_summary_assignee_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Reporter:</b></td>
+                <td valign="top">
+                            <a id="issue_summary_reporter_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Votes:</b></td>
+                <td valign="top">
+                                                                        0
+                                                            </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Watchers:</b></td>
+                <td valign="top">
+                                                                                    0
+                                    </td>
+            </tr>
+                    </table>
+                <div class="operations">
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+        <tr><td bgcolor="#dddddd">
+            <b>Operations</b>
+        </td></tr>
+        </table>
+        <br>
+        <table cellpadding="3" cellspacing="0" border="0" id="operationsSection">
+                    <tr><td class="issueOperation lazyOperation">
+                If you were <a class="lnk" rel="nofollow" href="/">logged in</a> you would be able to see more operations.
+            </td></tr>
+                </table>
+        </div>
+            </td></tr>
+</table>
+        </td>
+        <td bgcolor="#ffffff" valign="top">
+            <div style="padding:1em" id="issueContent">
+                <style type="text/css">
+<!--
+.fieldArea .fieldLabelArea { width: 10%; }
+.fieldArea .fieldValueArea { width: 90%; }
+#pinCommentContainer { float: right; font-size: 10px; }
+#pinCommentContainer a { margin: 0 0.2em; }
+-->
+</style>
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="#bbbbbb" width="100%" align="center">
+<tr><td width="100%" colspan="2" valign="top">
+<table id="issue_header" cellpadding="4" cellspacing="0" border="0" width="100%" bgcolor="#ffffff">
+<tr>
+    <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+    <table id="issue_header_summary" width="100%" cellpadding="0" cellspacing="0">
+        <tr><td bgcolor="#f0f0f0" width="80%" valign="top">
+            <b><a href="../../jira/browse/TFJ.html">
+                Twitter4J</a></b><br>
+            <h3 class="formtitle"> OAuth fails with &quot;Invalid / expired Token&quot; after May 13, 2009</h3>
+            <font size="1">
+                Created: <span class="date">16/May/09 07:57 PM</span> &nbsp;
+                Updated: <span class="date">19/May/09 01:13 AM</span>
+                    &nbsp; Resolved: <span class="date">19/May/09 01:13 AM</span>
+            </font>
+        </td>
+        </tr></table>
+</tr>
+        <tr>
+            <td width="20%"><b>Component/s:</b></td>
+            <td width="80%">
+        <a href="../../jira/browse/TFJ/component/10003.html" title="Core ">Core</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Affects Version/s:</b></td>
+            <td width="80%">
+    None
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Fix Version/s:</b></td>
+            <td width="80%">
+        <a href="/" title="2.0.4 ">2.0.4</a>
+            </td>
+        </tr>
+</table>
+</td></tr></table>
+<br>
+<br>
+<div id="description-open">
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	<td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+	</td>
+    <td align="right"><a id="description-hide" href="" onclick="toggleDivsWithCookie('description-closed', 'description-open'); return false;" class="smallgrey">&laquo; Hide</a></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+	<td id="descriptionArea">
+        <div id="description_full">
+            After May 13, the API returns screen_name and user_id with the access token and Twitter4J fails to parse the return properly.<br/>
+------<br/>
+May 13, 2009<br/>
+Fixed (REST): Background images uploaded via the API now take effect immediately (issue 451)<br/>
+Fixed (OAuth): Using the authenticate method with force_login=true incorrectly returned the old users token.<br/>
+There is still a known issue where the user is asked to accept the application each time. A fix is pending.<br/>
+Feature (OAuth): When retrieving the access token via the access_token call the screen_name and user_id are returned as well.<br/>
+------<br/>
+<br/>
+Twitter4J fails with following error.<br/>
+---------------<br/>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br/>
+&lt;hash&gt;<br/>
+&nbsp;&nbsp;&lt;request&gt;/statuses/update.xml&lt;/request&gt;<br/>
+&nbsp;&nbsp;&lt;error&gt;Invalid / expired Token&lt;/error&gt;<br/>
+&lt;/hash&gt;<br/>
+---------------<br/>
+<br/>
+<br/>
+        </div>
+    </td>
+</tr>
+</table>
+</div>
+<div id="description-closed" style="display:none;">
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center" class="table-layout: fixed;">
+<tr>
+	<td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+	</td>
+    <td style="padding: 1px; margin: 0px; border-bottom: #bbb 1px solid;"><div style="height: 1.2em; overflow: hidden; text-overflow: ellipsis;">&nbsp; &nbsp;After May 13, the API returns screen_name and user_id with the access token and Twitter4J fails to parse the return properly.
+------
+May 13, 2009
+Fixed (REST): Background images uploaded via the API now take effect immediately (issue 451)
+Fixed (OAuth): Using the authenticate method with force_login=true incorrectly returned the old users token.
+There is still a known issue where the user is asked to accept the application each time. A fix is pending.
+Feature (OAuth): When retrieving the access token via the access_token call the screen_name and user_id are returned as well.
+------
+Twitter4J fails with following error.
+---------------
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;hash&gt;
+&nbsp;&nbsp;&lt;request&gt;/statuses/update.xml&lt;/request&gt;
+&nbsp;&nbsp;&lt;error&gt;Invalid / expired Token&lt;/error&gt;
+&lt;/hash&gt;
+---------------
+</div></td>
+    <td width="1%" align="right" nowrap style="padding: 1px; margin: 0px; border-bottom: #bbb 1px solid;"><a id="description-show" href="" onclick="toggleDivsWithCookie('description-open', 'description-closed'); return false;" class="smallgrey">Show &raquo;</a></td>
+</tr>
+</table>
+</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+    restoreDivFromCookie('description-open', 'jira.viewissue.cong.cookie', '1');
+    restoreDivFromCookie('description-closed', 'jira.viewissue.cong.cookie', '0');
+//-->
+</script>
+<br>
+    <div class="tabwrap">
+        <ul class="tabs horizontal">
+                <li><a href="../../jira/browse/TFJ-149_page_com_atlassian_jira_plugin_system_issuetabpanels_all-tabpanel.html"><strong>All</strong></a></li>
+                <li><a href="/"><strong>Comments</strong></a></li>
+                <li><a href="../../jira/browse/TFJ-149_page_com_atlassian_jira_plugin_system_issuetabpanels_changehistory-tabpanel.html"><strong>Change History</strong></a></li>
+                <li><a href="../../jira/browse/TFJ-149_page_com_atlassian_streams_streams-jira-plugin_activity-stream-issue-tab.html"><strong>Activity Stream</strong></a></li>
+                <li class="active"><strong>Source</strong></li>
+        </ul>
+    </div>
+        <div class="issuePanelContainer" id="issue_actions_container">
+                <div class="actionContainer">
+    <table cellpadding="2" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td>No related commits found.
+            </td>
+        </tr>
+    </table>
+</div>
+        </div>
+            </div>
+        </td>
+    </tr>
+</table>
+<div class="footer">
+<div class="poweredbymessage">
+        <a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+        <span id="footer-build-information" style="color: #666666;">(v4.0#466)</span>        | <a href="http://support.atlassian.com/secure/CreateIssue.jspa?issuetype=1&amp;pid=10000">Report a problem</a>
+        | <a href="http://jira.atlassian.com/secure/CreateIssue.jspa?pid=10240&amp;issuetype=2">Request a feature</a>
+        | <a href="../../jira/secure/Administrators.html">Contact administrators</a>
+    </div>
+                        <div class="licensemessage">
+                Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+            </div>
+</div>
+<!--
+	                 REQUEST ID : 1781x35095x1
+	          REQUEST TIMESTAMP : [31/Oct/2009:00:29:41 +0900]
+	               REQUEST TIME : 0.6610
+	                 ASESSIONID : 1q9scz5
+-->
+</body>
+</html>

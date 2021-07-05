@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Issue Navigator - JIRA </title>
+    <link rel="alternate" title="" href="http://yusuke.homeip.net/jira/secure/IssueNavigator.jspa?view=rss&amp;&amp;pid=10002&amp;fixfor=10010&amp;sorter/field=priority&amp;sorter/order=ASC&amp;tempMax=100&amp;reset=true&amp;decorator=none" type="application/rss+xml">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/images/icons/favicon.png">
+<link rel="stylesheet" type="text/css" media="print" href="../../../../jira/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../../../../jira/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../../../../jira/s/235/1/0/_/styles/global.css"/>
+    <script language="JavaScript" type="text/javascript" src="../../../../jira/includes/js/combined-javascript.js"></script>
+        <script type="text/javascript" src="../../../../jira/s/235/1/_/includes/js/calendar/calendar.js"></script>
+        <script type="text/javascript" src="../../../../jira/s/235/1/_/includes/js/calendar/lang/calendar-en.js"></script>
+        <script type="text/javascript" src="../../../../jira/s/235/1/_/includes/js/calendar/calendar-setup.js"></script>
+        <script type="text/javascript">
+            // Hack to avoid bug in jscalendar - JRA-7713
+            if (!Calendar._TT["WEEKEND"]) { Calendar._TT["WEEKEND"] = "0,6";}
+            if (!Calendar._TT["DAY_FIRST"]) { Calendar._TT["DAY_FIRST"] = "Display %s first";}
+        </script>
+<script type="text/javascript" src="../../../../jira/s/235/1/1.0/_/download/resources/jira.webresources_prototype/prototype.js"></script>
+<script type="text/javascript" src="../../../../jira/s/235/1/1.0/_/download/resources/jira.webresources_scriptaculous/scriptaculous.js"></script>
+<script type="text/javascript" src="../../../../jira/s/235/1/1.0/_/download/resources/jira.webresources_scriptaculous/effects.js"></script>
+<script type="text/javascript" src="../../../../jira/s/235/1/1.0/_/download/resources/jira.webresources_scriptaculous/dragdrop.js"></script>
+<script type="text/javascript" src="../../../../jira/s/235/1/1.0/_/download/resources/jira.webresources_scriptaculous/controls.js"></script>
+<!-- Error loading resource "com.atlassian.jira.ext.charting:searchrequestview-includes".  Resource not found -->
+</head>
+<body bgcolor="#f0f0f0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#003366" vlink="#003366" alink="#660000">
+<script type="text/javascript" src="../../../../jira/s/235/1/_/includes/js/quicksearch.js"></script>
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+      <td bgcolor="#003366">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+            <td valign="top" width="5%" nowrap><a href="../../../../jira/secure/Dashboard.html"></a></td>
+            <td valign="bottom" width="65%" nowrap>&nbsp;</td>
+            <td valign="bottom" align="right" width="30%" nowrap>
+<font class="toptext" size="1">
+                        <a rel="nofollow" href="/">Log In</a>
+&nbsp; &nbsp;
+                        <a rel="nofollow" href="/"></a>
+                    <a class="helpLink" href="http://www.atlassian.com/software/jira/docs/v3.9/index.html?clicked=jirahelp" target="_jirahelp">
+        </a>
+&nbsp;
+</font>
+            </td>
+        </tr></table>
+      </td>
+  </tr>
+</table>
+<table class="menu" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td bgcolor="#3c78b5">
+    <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="5"></td>
+                        <td nowrap onclick="window.document.location='/jira/secure/Dashboard.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../../../jira/secure/Dashboard.html" id="home_link" title="A configurable overview of JIRA" accesskey="h"><u>H</u>OME</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/BrowseProject.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../../../../jira/secure/BrowseProject.html" id="browse_link" title="Browse currently active project 'Twitter4J'" accesskey="b"><u>B</u>ROWSE PROJECT</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa'" align="center" valign="middle" class="navItemOver">&nbsp;&nbsp;
+            <a href="../../../../jira/secure/IssueNavigator.html" id="find_link" title="Find issues in the projects you have permissions to view" accesskey="f"><u>F</u>IND ISSUES</a> &nbsp;&nbsp;
+    </td>
+        <td align="right" class="navItem" valign="middle" bgcolor="#3c78b5" width="100%">
+            <form name="quicksearch" action="../../../../jira/secure/QuickSearch.html" method="post" style="padding: 0; margin: 0;">
+                <span class="navItem" onmouseover="showToolTip()" onmouseout="hideToolTip()">&nbsp; &nbsp;
+                    <u>Q</u>UICK SEARCH:
+                </span>
+                <span class="navItem">
+                    <input class="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." type="text" size="25" name="searchString" accesskey="q" id="quickSearchInput" valign="absmiddle">&nbsp;
+                </span>
+            </form>
+        </td>
+        <td width="5"></td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+<div class="alertHeader">
+<script src="../../../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<div onmouseover="recordInTip()" onmouseout="recordOutTip()" id="quicksearchhelp" class="informationBox" style="display: none; text-align: center; width: 20em; position: absolute; top: 55px; right: 10px; padding: 0.5em;">
+    Learn more about <a href="http://www.atlassian.com/software/jira/docs/v3.9/quicksearch.html?clicked=jirahelp" target="_jirahelp">Quick Search</a>
+</div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="ffffff">
+    <tr class="hidden">
+            <td class="filterSummaryCell">&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+<tr>
+    <td class="filterSummaryCell">
+<div id="filterForm">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="dddddd" align="center">
+<tr><td></td></tr>
+<tr><td><table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" id="filterFormHeader">
+<tr>
+    <td width="1%" align="center">
+        Filter:
+    </td>
+        <td width="1%">
+            <span class="selectedItem">View</span>
+        </td>
+            <td width="1%">
+                <a href="/" class="item" title="Edit your current search / filter" accesskey="E">Edit</a>
+            </td>
+        <td width="1%">
+            <a id="new_filter" href="../../../../jira/secure/IssueNavigator_mode_show_createNew_true.html" class="item" title="Create new search / filter" accesskey="N">New</a>
+        </td>
+        <td width="1%">
+            <a id="managefilters" href="../../../../jira/secure/ManageFilters.html" class="item" title="View, edit, share and delete your saved filters" accesskey="M">Manage</a>
+        </td>
+    <td width="100%" align="right"></td>
+</tr>
+</table>
+</td></tr></table>
+<table cellpadding="3" cellspacing="0" border="0">
+        <tr>
+            <td>
+            You are currently using a new, unsaved search.<br>
+            </td>
+        </tr>
+</table>
+<p>
+<table cellpadding="3" cellspacing="0" border="0" class="tableUnderline">
+<tr><td bgcolor="dddddd">
+    <b>Summary</b>
+</td></tr>
+</table>
+<table cellpadding="3" cellspacing="0" border="0">
+    <tr>
+        <td valign="top">
+        <div class="searcherValue">
+<label class="fieldLabel" for="fieldpid">Project:</label><span id="fieldpid" class="fieldValue">
+                <a href="/" title="Browse Project Twitter4J">Twitter4J</a>            </span></div>
+    <div class="searcherValue">
+<label class="fieldLabel" for="fieldfixfor">Fix For:</label><span id="fieldfixfor" class="fieldValue">
+        1.0.1    </span></div>
+    <b>Sorted by:</b>
+    Priority ascending
+<br>
+        </td>
+    </tr>
+</table>
+<p>
+    <table cellpadding="3" cellspacing="0" border="0" class="tableUnderline">
+    <tr><td bgcolor="dddddd">
+        <b>Operations</b>
+    </td></tr>
+    </table>
+    <table cellpadding="3" cellspacing="0" border="0">
+    <tr><td>
+            <a href="/"><b>Save</b></a><br>
+</table>
+</p>
+<br/>
+</div>
+    </td>
+<td valign="top">
+    <table cellspacing="0" cellpadding="10" border="0" width="100%"><tr><td>
+<table class="jiraform  maxWidth">
+<tr>
+    <td class="jiraformheader">
+    <h3 class="formtitle">Issue Navigator</h3></td>
+</tr>
+<tr>
+    <td class="jiraformheader">
+    <div class="perm-link subText">
+        [ <a id="permlink" href="/" title="A URL for this search">Permlink</a> ]
+    </div>
+        Displaying issues <b>1</b> to <b>6</b> of <b>6</b> matching issues.&nbsp;<br>
+    </td>
+</tr>
+    <tr>
+    <td class="jiraformbody">
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td valign="bottom" width="80%"><b>Current View:</b><br>
+                        Browser
+                    <script type="text/javascript">
+                        lbContextPath = '/jira';
+                    </script>
+                    <span class="subText">
+                        (
+                        <strong>Current Fields </strong>
+                            | <a id="printable" rel="nofollow" href="../../../../files/der_ASC_tempMax_1000_08zhqzyzy037iiukd8ff6s.html">Printable</a>
+                            | <a id="fullContent" rel="nofollow" href="../../../../files/der_ASC_tempMax_1000_evprrkkefg564getubqsjb.html">Full Content</a>
+                        )
+                    </span>
+                        | <a id="xml" rel="nofollow" href="http://yusuke.homeip.net/jira/sr/jira.issueviews:searchrequest-xml/temp/SearchRequest.xml?&amp;pid=10002&amp;fixfor=10010&amp;sorter/field=priority&amp;sorter/order=ASC&amp;tempMax=1000">XML</a>
+                        | RSS
+                        <span class="subText">
+                            (
+                                <a id="rssIssues" rel="nofollow" href="http://yusuke.homeip.net/jira/sr/jira.issueviews:searchrequest-rss/temp/SearchRequest.xml?&amp;pid=10002&amp;fixfor=10010&amp;sorter/field=priority&amp;sorter/order=ASC&amp;tempMax=1000">Issues</a>
+                                |
+                                <a id="rssComments" rel="nofollow" href="http://yusuke.homeip.net/jira/sr/jira.issueviews:searchrequest-comments-rss/temp/SearchRequest.xml?&amp;pid=10002&amp;fixfor=10010&amp;sorter/field=priority&amp;sorter/order=ASC&amp;tempMax=1000">Comments</a>
+                            )
+                        </span>
+                        | <a id="word" rel="nofollow" href="http://yusuke.homeip.net/jira/sr/jira.issueviews:searchrequest-word/temp/SearchRequest.doc?&amp;pid=10002&amp;fixfor=10010&amp;sorter/field=priority&amp;sorter/order=ASC&amp;tempMax=1000">Word</a>
+                        | Excel
+                        <span class="subText">
+                            (
+                                <a id="allExcelFields" rel="nofollow" href="http://yusuke.homeip.net/jira/sr/jira.issueviews:searchrequest-excel-all-fields/temp/SearchRequest.xls?&amp;pid=10002&amp;fixfor=10010&amp;sorter/field=priority&amp;sorter/order=ASC&amp;tempMax=1000">All fields</a>
+                            |
+                                <a id="currentExcelFields" rel="nofollow" href="http://yusuke.homeip.net/jira/sr/jira.issueviews:searchrequest-excel-current-fields/temp/SearchRequest.xls?&amp;pid=10002&amp;fixfor=10010&amp;sorter/field=priority&amp;sorter/order=ASC&amp;tempMax=1000">Current fields</a>
+                            )
+                        </span>
+                    <!-- We don't want to show this link if you are not logged in since the charting plugin portlets do not show to non-->
+                    <br>
+            <a href="http://www.atlassian.com/software/jira/docs/v3.9/navigatorviews.html?clicked=jirahelp" target="_jirahelp">
+            </a>
+                </td>
+                <td valign="bottom" align="left" width="20%" nowrap>
+                    <ul class="square">
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </td>
+    </tr>
+</table>
+<p>
+                            <p align="center">
+                </p>
+                            <table bgcolor="bbbbbb" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr><td>
+                                    <table id="issuetable" border="0" cellpadding="3" cellspacing="1" width="100%">
+    <tr bgcolor="f0f0f0">
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=issuetype&amp;sorter/order=DESC'">
+                        <span title="Sort By T"><b>T</b></span></td>
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=issuekey&amp;sorter/order=ASC'">
+                        <span title="Sort By Key"><b>Key</b></span></td>
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=summary&amp;sorter/order=ASC'">
+                        <span title="Sort By Summary"><b>Summary</b></span></td>
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=assignee&amp;sorter/order=ASC'">
+                        <span title="Sort By Assignee"><b>Assignee</b></span></td>
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=reporter&amp;sorter/order=ASC'">
+                        <span title="Sort By Reporter"><b>Reporter</b></span></td>
+                                                                                <td class="colHeaderOver" width="1%" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=priority&amp;sorter/order=DESC'">
+                            <span title="Sort By Pr"><b>Pr</b></span>
+                            </td>
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=status&amp;sorter/order=DESC'">
+                        <span title="Sort By Status"><b>Status</b></span></td>
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=resolution&amp;sorter/order=ASC'">
+                        <span title="Sort By Res"><b>Res</b></span></td>
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=created&amp;sorter/order=DESC'">
+                        <span title="Sort By Created"><b>Created</b></span></td>
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=updated&amp;sorter/order=DESC'">
+                        <span title="Sort By Updated"><b>Updated</b></span></td>
+                                                        <td class="colHeaderLink" width="1%" onmouseover="this.className='colHeaderOver'" onmouseout="this.className='colHeaderLink'" nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa?sorter/field=duedate&amp;sorter/order=DESC'">
+                        <span title="Sort By Due"><b>Due</b></span></td>
+                                            </tr>
+            <tr id="issuerow10041" class="rowNormal">
+            <td class="nav issuetype">    <a href="../../../../jira/browse/TFJ-4.html"> </a></td>
+            <td class="nav issuekey">    <a href="../../../../jira/browse/TFJ-4.html">TFJ-4</a>
+</td>
+            <td class="nav summary">                <a href="../../../../jira/browse/TFJ-4.html" style="text-decoration: none; ">getDirectMessages() throws TwitterException when response contains no messages</a>
+    </td>
+            <td class="nav assignee">    Yusuke Yamamoto
+</td>
+            <td class="nav reporter">Yusuke Yamamoto</td>
+            <td class="nav priority">            
+    </td>
+            <td class="nav status">            
+    Closed
+</td>
+            <td class="nav resolution">    Fixed
+</td>
+            <td class="nav created">            22/Jun/07
+    </td>
+            <td class="nav updated">            22/Jun/07
+    </td>
+            <td class="nav duedate">    &nbsp;
+</td>
+        </tr>
+        <tr id="issuerow10040" class="rowAlternate">
+            <td class="nav issuetype">    <a href="../../../../jira/browse/TFJ-3.html"> </a></td>
+            <td class="nav issuekey">    <a href="../../../../jira/browse/TFJ-3.html">TFJ-3</a>
+</td>
+            <td class="nav summary">                <a href="../../../../jira/browse/TFJ-3.html" style="text-decoration: none; ">some methods of User instance retrieved from Twitter#getFriends() throw NullPointerException</a>
+    </td>
+            <td class="nav assignee">    Yusuke Yamamoto
+</td>
+            <td class="nav reporter">Yusuke Yamamoto</td>
+            <td class="nav priority">            
+    </td>
+            <td class="nav status">            
+    Closed
+</td>
+            <td class="nav resolution">    Fixed
+</td>
+            <td class="nav created">            21/Jun/07
+    </td>
+            <td class="nav updated">            22/Jun/07
+    </td>
+            <td class="nav duedate">    &nbsp;
+</td>
+        </tr>
+        <tr id="issuerow10043" class="rowNormal">
+            <td class="nav issuetype">    <a href="../../../../jira/browse/TFJ-6.html"> </a></td>
+            <td class="nav issuekey">    <a href="../../../../jira/browse/TFJ-6.html">TFJ-6</a>
+</td>
+            <td class="nav summary">                <a href="../../../../jira/browse/TFJ-6.html" style="text-decoration: none; ">NullPointerException throwed during Twitter service maintenance</a>
+    </td>
+            <td class="nav assignee">    Yusuke Yamamoto
+</td>
+            <td class="nav reporter">Yusuke Yamamoto</td>
+            <td class="nav priority">            
+    </td>
+            <td class="nav status">            
+    Closed
+</td>
+            <td class="nav resolution">    Fixed
+</td>
+            <td class="nav created">            22/Jun/07
+    </td>
+            <td class="nav updated">            22/Jun/07
+    </td>
+            <td class="nav duedate">    &nbsp;
+</td>
+        </tr>
+        <tr id="issuerow10042" class="rowAlternate">
+            <td class="nav issuetype">    <a href="../../../../jira/browse/TFJ-5.html"> </a></td>
+            <td class="nav issuekey">    <a href="../../../../jira/browse/TFJ-5.html">TFJ-5</a>
+</td>
+            <td class="nav summary">                <a href="../../../../jira/browse/TFJ-5.html" style="text-decoration: none; ">Twitter#getReplies() throws TwitterException</a>
+    </td>
+            <td class="nav assignee">    Yusuke Yamamoto
+</td>
+            <td class="nav reporter">Yusuke Yamamoto</td>
+            <td class="nav priority">            
+    </td>
+            <td class="nav status">            
+    Closed
+</td>
+            <td class="nav resolution">    Fixed
+</td>
+            <td class="nav created">            22/Jun/07
+    </td>
+            <td class="nav updated">            23/Jun/07
+    </td>
+            <td class="nav duedate">    &nbsp;
+</td>
+        </tr>
+        <tr id="issuerow10020" class="rowNormal">
+            <td class="nav issuetype">    <a href="../../../../jira/browse/TFJ-1.html"> </a></td>
+            <td class="nav issuekey">    <a href="../../../../jira/browse/TFJ-1.html">TFJ-1</a>
+</td>
+            <td class="nav summary">                <a href="../../../../jira/browse/TFJ-1.html" style="text-decoration: none; ">need support for destroying directmessage</a>
+    </td>
+            <td class="nav assignee">    Yusuke Yamamoto
+</td>
+            <td class="nav reporter">Yusuke Yamamoto</td>
+            <td class="nav priority">            
+    </td>
+            <td class="nav status">            
+    Closed
+</td>
+            <td class="nav resolution">    Fixed
+</td>
+            <td class="nav created">            15/Jun/07
+    </td>
+            <td class="nav updated">            23/Jun/07
+    </td>
+            <td class="nav duedate">    &nbsp;
+</td>
+        </tr>
+        <tr id="issuerow10030" class="rowAlternate">
+            <td class="nav issuetype">    <a href="../../../../jira/browse/TFJ-2.html"> </a></td>
+            <td class="nav issuekey">    <a href="../../../../jira/browse/TFJ-2.html">TFJ-2</a>
+</td>
+            <td class="nav summary">                <a href="../../../../jira/browse/TFJ-2.html" style="text-decoration: none; ">Twitter#getUserDetail() throws NullPointerException</a>
+    </td>
+            <td class="nav assignee">    Yusuke Yamamoto
+</td>
+            <td class="nav reporter">Yusuke Yamamoto</td>
+            <td class="nav priority">            
+    </td>
+            <td class="nav status">            
+    Closed
+</td>
+            <td class="nav resolution">    Fixed
+</td>
+            <td class="nav created">            18/Jun/07
+    </td>
+            <td class="nav updated">            21/Jun/07
+    </td>
+            <td class="nav duedate">    &nbsp;
+</td>
+        </tr>
+            </table>
+                    </td></tr>
+            </table>
+                            <p align="center">
+                </p>
+</p>
+    </td></tr></table>
+</td></tr>
+</table>
+<div class="footer">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td bgcolor="#bbbbbb"></td>
+</tr>
+<tr><td class="licensemessage">
+    Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+</td></tr>
+<tr>
+    <td height="12" style="background-image:url(http://yusuke.homeip.net/jira/images/border/border_bottom.gif)"></td>
+</tr>
+</table>
+<span class="poweredbymessage">
+<a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+the Professional <a href="http://www.atlassian.com/software/jira">Issue Tracker</a>.
+<span style="color: #666666;">(Enterprise Edition, Version: 3.9.2-#235)</span>
+- <a href="http://jira.atlassian.com/default.jsp?clicked=footer">Bug/feature request</a>
+- <a href="../../../../jira/secure/Administrators.html">Contact Administrators</a>
+</span>
+</div>
+</body>
+</html>

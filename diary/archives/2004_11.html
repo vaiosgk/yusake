@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: 2004&#24180;11&#26376; アーカイブ</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/2004_10.html" title="2004&amp;#24180;10&amp;#26376;"/>
+<link rel="next" href="../../diary/archives/2004_12.html" title="2004&amp;#24180;12&amp;#26376;"/>
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/2004_10.html">&laquo; 2004&#24180;10&#26376;</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/2004_12.html">2004&#24180;12&#26376; &raquo;</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000145"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/145"
+    dc:title="ddclient の OSX へのインストールメモ"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000145"
+    dc:subject="雑多"
+    dc:description="自宅サーバ WebLogic化計画に向けてちょこちょこ設定。 古い Linux ..."
+    dc:creator="yusuke"
+    dc:date="2004-11-30T01:27:11+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;30&#26085;</h2>
+<h3 id="a000145">ddclient の OSX へのインストールメモ</h3>
+<p>自宅サーバ WebLogic化計画に向けてちょこちょこ設定。<br/>
+古い Linux ベースのサーバから OSX へ移行。まずは手始めに Dynamic DNS の更新クライアント - <a href="http://ddclient.sourceforge.net/">ddclient</a> を移行する。最新版は 3.6.5。</p>
+<p>Google で"ddclient を OSX へインストール！"みたいなのを調べたけどもぴったりの記事がないのでちょっと苦労した。ひとまず<a href="http://yatsu.info/archives/000634.html">ココ</a>から辿って起動スクリプトのマナーを勉強。</p>
+<p>OSX のブートストラップは特殊でユーザ独自の起動スクリプトは  /Library/StartupItems 以下に配置するらしい。/etc/rcn.d みたいなもん。ランレベルみたいのはないけども、StartupParameters.plist でNTのサービスみたいに簡単に依存関係を設定できる。</p>
+<p># mkdir /Library/StartupItems/ddclient<br/>
+# cp ddclient3.6.5/sample-etc_ddclient.conf /Libary/StartupItems/ddclient/ddclient.conf<br/>
+# cp ddclient3.6.5/ddclient /Libary/StartupItems/ddclient/ddclient.pl</p>
+<p>StartupParameters.plist の作成<br/>
+# vi StartupParameters.plist <br/>
+------------<br/>
+{<br/>
+  Description     = "Dynamic DNS Updating client";<br/>
+  Provides        = ("Dynamic DNS Updater");<br/>
+  Requires        = ("Disks");<br/>
+  Uses            = ("Disks");<br/>
+  OrderPreference = "None";<br/>
+}<br/>
+---------</p>
+<p>ddclient.conf の編集</p>
+<p>#use=web, web=checkip.dyndns.org/, web-skip='IP Address' # found after IP Address<br/>
+#protocol=dyndns2  <br/>
+#server=members.dyndns.org<br/>
+有効化↓<br/>
+use=web, web=checkip.dyndns.org/, web-skip='IP Address' # found after IP Address</p>
+<p></p>
+<p>pid=/var/run/ddclient.pid               # record PID in file.<br/>
+#login=your-login                            # default login<br/>
+#password=test                                  # default password<br/>
+#mx=mx.for.your.host                            # default MX<br/>
+#backupmx=yes|no                                # host is primary MX?<br/>
+#wildcard=yes|no                                # add wildcard CNAME?<br/>
+↓以下のように編集<br/>
+pid=/Library/StartupItems/ddclient/ddclient.pid         # record PID in file.<br/>
+login=Dynamic DNS ユーザID                            # default login<br/>
+password=Dynamic DNS パスワード                                      # default password<br/>
+#mx=mx.for.your.host                            # default MX<br/>
+backupmx=no                             # host is primary MX?<br/>
+wildcard=no                             # add wildcard CNAME?</p>
+<p>#以下登録してあるホスト名だけ繰り返し<br/>
+server=members.dyndns.org,              ¥<br/>
+protocol=dyndns2                        ¥<br/>
+yusuke.homeip.net<br/>
+#server=members.dyndns.org,              ¥<br/>
+#protocol=dyndns2                        ¥<br/>
+#morehostname.dyndns.org</p>
+<p>起動スクリプトの配置<br/>
+--------/Library/StartupItems/ddclient<br/>
+#!/bin/sh</p>
+<p>##<br/>
+# ddclient<br/>
+##</p>
+<p>. /etc/rc.common</p>
+<p>StartService ()<br/>
+{<br/>
+        ConsoleMessage "Starting ddclient"<br/>
+cd /Library/StartupItems/ddclient<br/>
+./ddclient.pl -file ./ddclient.conf -cache ./ddclient.cache<br/>
+}</p>
+<p>StopService ()<br/>
+{<br/>
+    ConsoleMessage "Stopping ddclient"<br/>
+cd /Library/StartupItems/ddclient<br/>
+kill `cat ./ddclient.pid`<br/>
+}</p>
+<p>RestartService ()<br/>
+{<br/>
+    ConsoleMessage "Restarting ddclient"<br/>
+cd /Library/StartupItems/ddclient<br/>
+kill `cat ./ddclient.pid`<br/>
+./ddclient.pl -file ./ddclient.conf -cache ./ddclient.cache<br/>
+}</p>
+<p>RunService "$1"<br/>
+-----------------</p>
+<p>Linux で動いてる ddclient を止めて、サービス起動の確認<br/>
+-------<br/>
+# SystemStarter start "Dynamic DNS Updater"<br/>
+Welcome to Macintosh.<br/>
+Initializing network<br/>
+Starting ddclient<br/>
+Startup complete.<br/>
+Hangup<br/>
+# ps -U root|grep ddclient<br/>
+  591  ??  S      0:00.10 ddclient.pl - sleeping for 139 seconds  <br/>
+------<br/>
+これでOk。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000145.html">01:27</a>
+| <a href="../../diary/archives/000145.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000145.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000144"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/144"
+    dc:title="たらこたっぷり"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000144"
+    dc:subject="雑多"
+    dc:description="遊園地にいるような、Tommy February のような。 頭から離れない。 ..."
+    dc:creator="yusuke"
+    dc:date="2004-11-24T11:03:01+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;24&#26085;</h2>
+<h3 id="a000144">たらこたっぷり</h3>
+<p>遊園地にいるような、Tommy February のような。<br/>
+頭から離れない。<br/>
+<a href="http://www.kewpie.co.jp/channel/cm_52.html">http://www.kewpie.co.jp/channel/cm_52.html</a></p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000144.html">11:03</a>
+| <a href="../../diary/archives/000144.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000144.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000143"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/143"
+    dc:title="「このページを翻訳する」"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000143"
+    dc:subject="雑多"
+    dc:description="Googleにいつのまにか翻訳機能が実装されている。 http://www.go..."
+    dc:creator="yusuke"
+    dc:date="2004-11-19T12:47:54+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;19&#26085;</h2>
+<h3 id="a000143">「このページを翻訳する」</h3>
+<p>Googleにいつのまにか翻訳機能が実装されている。<br/>
+<a href="http://www.google.com/search?hl=ja&amp;c2coff=1&amp;q=weblogic+&amp;btnG=Google+検索&amp;lr=">http://www.google.com/search?hl=ja&c2coff;=1&q;=weblogic+&btnG;=Google+検索&lr;=</a><br/>
+小技で人を幸せにするニクい会社だ。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000143.html">12:47</a>
+| <a href="../../diary/archives/000143.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000143.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000142"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/142"
+    dc:title="部長は腰痛持ち"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000142"
+    dc:subject="雑多"
+    dc:description="先日試合で腰を痛めたのでマッサージへ行った。 骨盤が曲がっているのでしばらく治ら..."
+    dc:creator="yusuke"
+    dc:date="2004-11-19T01:06:04+09:00" />
+</rdf:RDF>
+-->
+<h3 id="a000142">部長は腰痛持ち</h3>
+<p>先日試合で腰を痛めたので<a href="http://www.body-iq.net/ASR/">マッサージ</a>へ行った。<br/>
+骨盤が曲がっているのでしばらく治らないようなら医者へ行けとヘコむことを言われた。治るといいんだけども。<br/>
+でもなんでも直せます、みたいな適当なことを言われないので逆に信頼できる。</p>
+<p>具合が良くなったらまたしっかり鍛えよう。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000142.html">01:06</a>
+| <a href="../../diary/archives/000142.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000142.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000141"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/141"
+    dc:title="WebLogic Platform on 自宅サーバ"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000141"
+    dc:subject="Java"
+    dc:description="WebLogic Platform on 自宅サーバ WebLogic は非商用..."
+    dc:creator="yusuke"
+    dc:date="2004-11-18T13:45:49+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;18&#26085;</h2>
+<h3 id="a000141">WebLogic Platform on 自宅サーバ</h3>
+<p>WebLogic Platform on 自宅サーバ</p>
+<p>WebLogic は非商用なら無償、無サポートで利用できるらしい。</p>
+<p>・範囲が限定された製品ライセンス<br/>
+<a href="http://edocs.beasys.co.jp/e-docs/platform/docs81/install/license.html#1050372">http://edocs.beasys.co.jp/e-docs/platform/docs81/install/license.html#1050372</a><br/>
+近いうちに移行しよう。<br/>
+「範囲が限定された」って微妙な言葉遣いだけども英語では scale-limited とのこと。<br/>
+<a href="http://e-docs.bea.com/platform/docs81/relnotes/relnotes.html#1199884">http://e-docs.bea.com/platform/docs81/relnotes/relnotes.html#1199884</a><br/>
+一定以上接続があると拒否されるらしい。接続IPアドレス数は無制限。<br/>
+<a href="http://e-docs.bea.com/platform/docs81/install/license.html#1050372">http://e-docs.bea.com/platform/docs81/install/license.html#1050372</a></p>
+<p>Webサーバのプラグインなんかは Tomcat と一緒でも使えると思うので便利そう。<br/>
+Mac OSX で使いたければネイティブの部分は以下からダウンロードできる。Pure Java でも動くけども。<br/>
+<a href="http://www.oreillynet.com/pub/wlg/4091">http://www.oreillynet.com/pub/wlg/4091</a><br/>
+→Mac OSX をサポート対象にして欲しければコンタクトしろ！とのこと。cool</p>
+<p>追記:<br/>
+BEAの社員が自宅の blog サーバとかで使うのは問題ないよ、っと太鼓判を押してる。<br/>
+Tomcat なんかよりよっぽどドキュメントやサンプル充実してるし、これなら初心者にも勧められるな。<br/>
+<a href="../../diary/archives/000189.html">http://yusuke.homeip.net/diary/archives/000189.html</a></p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000141.html">13:45</a>
+| <a href="../../diary/archives/000141.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000141.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000140"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/140"
+    dc:title="BEA powered by Google"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000140"
+    dc:subject="Java"
+    dc:description="BEAのWebLogi c ServerやTuxedoのドキュメント、ソリューシ..."
+    dc:creator="yusuke"
+    dc:date="2004-11-15T10:36:07+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;15&#26085;</h2>
+<h3 id="a000140">BEA powered by Google</h3>
+<p>BEAのWebLogi c ServerやTuxedoのドキュメント、ソリューションを検索できる。<br/>
+日本語も対応。</p>
+<p><a href="http://google.bea.com/">http://google.bea.com</a></p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000140.html">10:36</a>
+| <a href="../../diary/archives/000140.html#comments">コメント (1)</a>
+| <a href="../../diary/archives/000140.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000139"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/139"
+    dc:title="一人暮らしって"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000139"
+    dc:subject="雑多"
+    dc:description="風邪引いたときも自分で飯を用意しないといけないのか！（当たり前だけれども。） そ..."
+    dc:creator="yusuke"
+    dc:date="2004-11-12T09:12:23+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;12&#26085;</h2>
+<h3 id="a000139">一人暮らしって</h3>
+<p>風邪引いたときも自分で飯を用意しないといけないのか！（当たり前だけれども。）<br/>
+そんなことに今更気が付く自分はなかなか箱入り息子だ。<br/>
+さーて、日記で遊んでないでも少し寝よ・・・・。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000139.html">09:12</a>
+| <a href="../../diary/archives/000139.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000139.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000138"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/138"
+    dc:title="The CORE"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000138"
+    dc:subject="movie"
+    dc:description="を見た。 THE CORE アルマゲドンの地中版。 無名な役者を起用するかわりに..."
+    dc:creator="yusuke"
+    dc:date="2004-11-12T00:26:03+09:00" />
+</rdf:RDF>
+-->
+<h3 id="a000138">The CORE</h3>
+<p>を見た。<br/>
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00009RG44/samuraism-22">THE CORE</a></p>
+<p>アルマゲドンの地中版。<br/>
+無名な役者を起用するかわりにCGに力を入れている感じ。<br/>
+絵は綺麗だが展開的に無理な箇所がありすぎ。アルマゲドン以上の奇跡の連続。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000138.html">00:26</a>
+| <a href="../../diary/archives/000138.html#comments">コメント (2)</a>
+| <a href="../../diary/archives/000138.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000137"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/137"
+    dc:title="チヂミ Vol.2"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000137"
+    dc:subject="cooking"
+    dc:description="今日は昨日の残り物。 昨日はにんにくがきつかったので今日は醤油、ごま油、酢だけの..."
+    dc:creator="yusuke"
+    dc:date="2004-11-11T23:02:56+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;11&#26085;</h2>
+<h3 id="a000137">チヂミ Vol.2</h3>
+<p>今日は昨日の残り物。<br/>
+昨日はにんにくがきつかったので今日は醤油、ごま油、酢だけのタレに。<br/>
+ちょっと味がシンプルになったけどまぁ食べられる。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000137.html">23:02</a>
+| <a href="../../diary/archives/000137.html#comments">コメント (2)</a>
+| <a href="../../diary/archives/000137.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000136"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/136"
+    dc:title="今日のお料理"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000136"
+    dc:subject="cooking"
+    dc:description="今日はチヂミを作ってみた。 レシピはいつも通り google で検索。 →超簡単..."
+    dc:creator="yusuke"
+    dc:date="2004-11-10T23:59:27+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;10&#26085;</h2>
+<h3 id="a000136">今日のお料理</h3>
+<p>今日はチヂミを作ってみた。<br/>
+レシピはいつも通り google で検索。<br/>
+→超簡単！うさうさレシピ：チヂミ<br/>
+<a href="http://hama.way-nifty.com/usa/2004/10/post_27.html">http://hama.way-nifty.com/usa/2004/10/post_27.html</a><br/>
+なんだかこのサイトいろいろ参考になりそうだ:D</p>
+<p>まぁ、思ったほど難しくなかったけどタマネギやニンニクの分量が多いためかちょっと辛ーい。<br/>
+ついでに酢豚の時に買って余っていた竹の子で竹の子ご飯も作ってみた。ダシや酒とかを適当にいれて炊飯しただけ。</p>
+<p><a href="../../diary/archives/images/041110/chijimi.jpg"><img alt="chijimi.jpg" src="../../diary/archives/images/041110/chijimi-thumb.jpg" width="320" height="240" border="0"/></a><br/>
+食べかけのチヂミ、竹の子ご飯、もつ味噌汁</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000136.html">23:59</a>
+| <a href="../../diary/archives/000136.html#comments">コメント (2)</a>
+| <a href="../../diary/archives/000136.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000135"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/135"
+    dc:title="もつ味噌汁"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000135"
+    dc:subject="cooking"
+    dc:description="今日はカレー（日曜日の残り）、サラダ（最近高級なレタスは９９円ショップでゲット！..."
+    dc:creator="yusuke"
+    dc:date="2004-11-09T23:47:59+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;09&#26085;</h2>
+<h3 id="a000135">もつ味噌汁</h3>
+<p>今日はカレー（日曜日の残り）、サラダ（最近高級なレタスは９９円ショップでゲット！）、もつ・キャベツ・にんじんの味噌汁。</p>
+<p><a href="../../diary/archives/images/041109/curry2.JPG"><img alt="curry2.JPG" src="../../diary/archives/images/041109/curry2-thumb.JPG" width="320" height="240" border="0"/></a><br/>
+モツうまーい</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000135.html">23:47</a>
+| <a href="../../diary/archives/000135.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000135.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000134"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/134"
+    dc:title="Kill Bill Vol.2"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000134"
+    dc:subject="movie"
+    dc:description="を観た。 Ehterealで遊びながらなのであまり集中していなかったけども。 B..."
+    dc:creator="yusuke"
+    dc:date="2004-11-09T00:58:06+09:00" />
+</rdf:RDF>
+-->
+<h3 id="a000134">Kill Bill Vol.2</h3>
+<p>を観た。<br/>
+Ehterealで遊びながらなのであまり集中していなかったけども。<br/>
+B.B.の演技はかなりのものだ。子供的な突拍子もない発言と、大人同士のちょっと小難しい会話は聞こえていない具合がなんともリアル。</p>
+<p>キドーの投げたナイフはリサの腕にささっているものだとてっきり思っていたけども銃身（木の部分）に刺さっていることがわかった。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000134.html">00:58</a>
+| <a href="../../diary/archives/000134.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000134.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000133"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/133"
+    dc:title="Just married!"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000133"
+    dc:subject="雑多"
+    dc:description="初めて入籍というものをしてみた。 ちょっと都合により書類上の手続きだけ早めに。 ..."
+    dc:creator="yusuke"
+    dc:date="2004-11-07T17:10:41+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;07&#26085;</h2>
+<h3 id="a000133">Just married!</h3>
+<p>初めて入籍というものをしてみた。<br/>
+ちょっと都合により書類上の手続きだけ早めに。<br/>
+自分の中で結婚というイメージは<br/>
+・結婚式<br/>
+・入籍<br/>
+・共同生活<br/>
+・結婚指輪<br/>
+がセットになっているので手続き上の話だけでは結婚したという実感はいまひとつ。少しずつ積み重ねていこう。</p>
+<p>ほとんど口頭で報告できていないけどお世話になっている方々には追々・・・・。</p>
+<p><img alt="justmarried.jpg" src="../../diary/archives/images/041107/justmarried.jpg" width="320" height="240" border="0"/><br/>
+17:10 提出の瞬間(ジャージ姿でかなりラフ)</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000133.html">17:10</a>
+| <a href="../../diary/archives/000133.html#comments">コメント (6)</a>
+| <a href="../../diary/archives/000133.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000132"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/132"
+    dc:title="しゃけホイル焼き"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000132"
+    dc:subject="cooking"
+    dc:description="ホイルを敷いてシャケを乗っけてバターを乗っけて適当に切ったタマネギを乗っけてトー..."
+    dc:creator="yusuke"
+    dc:date="2004-11-05T01:00:09+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;05&#26085;</h2>
+<h3 id="a000132">しゃけホイル焼き</h3>
+<p>ホイルを敷いてシャケを乗っけてバターを乗っけて適当に切ったタマネギを乗っけてトースターへ。</p>
+<p>簡単にウマイ！<br/>
+<br/>
+醤油をたらして召し上がれ</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000132.html">01:00</a>
+| <a href="../../diary/archives/000132.html#comments">コメント (2)</a>
+| <a href="../../diary/archives/000132.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000131"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/131"
+    dc:title="大統領はブッシュに"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000131"
+    dc:subject="雑多"
+    dc:description="個人的には言うことがコロコロ変わって、単にアンチブッシュ票集めしかしていないケチ..."
+    dc:creator="yusuke"
+    dc:date="2004-11-04T02:07:19+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;04&#26085;</h2>
+<h3 id="a000131">大統領はブッシュに</h3>
+<p>個人的には言うことがコロコロ変わって、単にアンチブッシュ票集めしかしていないケチャップくさい人よりは良かったかな。</p>
+<p>会社はアメリカ大使館のすぐそばなのでまた検問が厳しくなるだろう。テロとか発生しないと良いけど・・・。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000131.html">02:07</a>
+| <a href="../../diary/archives/000131.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000131.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000130"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/130"
+    dc:title="献血"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000130"
+    dc:subject="雑多"
+    dc:description="今日は新宿へ献血をしに行った。 海外に行っていた場合は帰国から３週間経たないとい..."
+    dc:creator="yusuke"
+    dc:date="2004-11-02T23:08:23+09:00" />
+</rdf:RDF>
+-->
+<h2>2004&#24180;11&#26376;02&#26085;</h2>
+<h3 id="a000130">献血</h3>
+<p>今日は新宿へ献血をしに行った。<br/>
+海外に行っていた場合は帰国から３週間経たないといけない事を知っていた。前回10月3日に帰国したので大丈夫だろうと思っていたんだけどもルールが変わって帰国から４週間空ける必要があるとのこと。あれ？今日は11月2日だ・・・門前払い？<br/>
+針を刺される覚悟をしながら刺されないのは刺されるよりも心臓に悪い、勘弁してくれ。<br/>
+・日本赤十字社ホーム ＞ 参加・協力のご案内 ＞ 献血 ＞ 献血条件 &gt; 帰国日（入国日）当日から4週間以内の方<br/>
+<a href="http://www.jrc.or.jp/sanka/blood/terms/terms08.html">http://www.jrc.or.jp/sanka/blood/terms/terms08.html</a></p>
+<p>、と思ったけども４週間とは28日の事らしくぎりぎり献血できることに。<br/>
+針を刺されるところ、抜かれた血など怖くてみられなかったけども、５回目になる今回はさすがに、ようやく余裕がでてきて抜き取った血が入っているバッグを見ることができた。400mlってかなりの量だ！当たり前だけれども500mlのペットボトルに近い量がある！今まで2リットル抜かれたと思うとぞっとする。役立ててください、赤十字。</p>
+<p>このバッグがそのまま吊されて輸血されるイメージがあるけど実際は遠心分離器にかけられて成分別に分離して利用されるそうだ。<br/>
+白血球とかはそのまま輸血され、血小板は成分献血で結構まにあうので血液製剤とかのお薬になるのだとか。ふむふむ</p>
+<p>献血のあとのお楽しみはいつもドーナッツ＆アイスクリーム。<br/>
+アイスクリームはいつものハーゲンダッツではない銘柄になっていた。残念。</p>
+<p>赤十字社では献血以外にも貢献する方法を用意しているらしい。<br/>
+・日本赤十字社ホーム ＞ 参加・協力のご案内 ＞ 赤十字ボランティア<br/>
+<a href="http://www.jrc.or.jp/sanka/volunteer/index.html">http://www.jrc.or.jp/sanka/volunteer/index.html</a><br/>
+献血は自分の身を切り取って他人に献上するというある意味究極のボランティア活動だと思うけど針が刺さる、血を見るのは怖いのでためらう人も多いだろう。<br/>
+っていうか私はかなりダメな方。まじ怖い。機会があったらこちらも参加してみようかしら。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000130.html">23:08</a>
+| <a href="../../diary/archives/000130.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000130.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2004_11.html#000129"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/129"
+    dc:title="自動車保険は年末調整の保険料控除対象？"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2004_11.html#000129"
+    dc:subject="雑多"
+    dc:description="ではないらしい。 毎年忘れているのでメモ。 ・三井ダイレクトTOP  &gt; Q&amp;A..."
+    dc:creator="yusuke"
+    dc:date="2004-11-02T11:15:03+09:00" />
+</rdf:RDF>
+-->
+<h3 id="a000129">自動車保険は年末調整の保険料控除対象？</h3>
+<p>ではないらしい。<br/>
+毎年忘れているのでメモ。<br/>
+・三井ダイレクトTOP  &gt; Q&A; &gt; その他 &gt; 自動車保険の保険料は損害保険料控除の対象になりますか？<br/>
+<a href="http://www.mitsui-direct.co.jp/help/webra/hel05_01.htm">http://www.mitsui-direct.co.jp/help/webra/hel05_01.htm</a></p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000129.html">11:15</a>
+| <a href="../../diary/archives/000129.html#comments">コメント (2)</a>
+| <a href="../../diary/archives/000129.html#trackbacks">トラックバック</a>
+</p>
+</div>
+</div>
+</body>
+</html>

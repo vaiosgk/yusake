@@ -1,0 +1,506 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>JIRA</title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/images/icons/favicon.png">
+<link rel="stylesheet" type="text/css" media="print" href="../jira/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../jira/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../jira/s/235/1/0/_/styles/global.css"/>
+    <script language="JavaScript" type="text/javascript" src="../jira/includes/js/combined-javascript.js"></script>
+        <script type="text/javascript" src="../jira/s/235/1/_/includes/js/calendar/calendar.js"></script>
+        <script type="text/javascript" src="../jira/s/235/1/_/includes/js/calendar/lang/calendar-en.js"></script>
+        <script type="text/javascript" src="../jira/s/235/1/_/includes/js/calendar/calendar-setup.js"></script>
+        <script type="text/javascript">
+            // Hack to avoid bug in jscalendar - JRA-7713
+            if (!Calendar._TT["WEEKEND"]) { Calendar._TT["WEEKEND"] = "0,6";}
+            if (!Calendar._TT["DAY_FIRST"]) { Calendar._TT["DAY_FIRST"] = "Display %s first";}
+        </script>
+<script type="text/javascript" src="http://yusuke.homeip.net/jira/s/235/1/1.0/_/download/resources/jira.webresources:prototype/prototype.js"></script>
+<script type="text/javascript" src="http://yusuke.homeip.net/jira/s/235/1/1.0/_/download/resources/jira.webresources:scriptaculous/scriptaculous.js"></script>
+<script type="text/javascript" src="http://yusuke.homeip.net/jira/s/235/1/1.0/_/download/resources/jira.webresources:scriptaculous/effects.js"></script>
+<script type="text/javascript" src="http://yusuke.homeip.net/jira/s/235/1/1.0/_/download/resources/jira.webresources:scriptaculous/dragdrop.js"></script>
+<script type="text/javascript" src="http://yusuke.homeip.net/jira/s/235/1/1.0/_/download/resources/jira.webresources:scriptaculous/controls.js"></script>
+</head>
+<body bgcolor="#f0f0f0" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" link="#003366" vlink="#003366" alink="#660000">
+<script type="text/javascript" src="../jira/s/235/1/_/includes/js/quicksearch.js"></script>
+<table class="header" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+      <td bgcolor="#003366">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+            <td valign="top" width="5%" nowrap><a href="../jira/secure/Dashboard.html"></a></td>
+            <td valign="bottom" width="65%" nowrap>&nbsp;</td>
+            <td valign="bottom" align="right" width="30%" nowrap>
+<font class="toptext" size="1">
+                        <a rel="nofollow" href="../jira/secure/Dashboard_os_destination_/secure/Dashboard_jspa.html">Log In</a>
+&nbsp; &nbsp;
+                        <a rel="nofollow" href="/"></a>
+                    <a class="helpLink" href="http://www.atlassian.com/software/jira/docs/v3.9/index.html?clicked=jirahelp" target="_jirahelp">
+        </a>
+&nbsp;
+</font>
+            </td>
+        </tr></table>
+      </td>
+  </tr>
+</table>
+<table class="menu" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td bgcolor="#3c78b5">
+    <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="5"></td>
+                        <td nowrap onclick="window.document.location='/jira/secure/Dashboard.jspa'" align="center" valign="middle" class="navItemOver">&nbsp;&nbsp;
+            <a href="../jira/secure/Dashboard.html" id="home_link" title="A configurable overview of JIRA" accesskey="h"><u>H</u>OME</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/BrowseProject.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../jira/secure/BrowseProject.html" id="browse_link" title="Browse the projects you have permissions to view" accesskey="b"><u>B</u>ROWSE PROJECTS</a> &nbsp;&nbsp;
+    </td>
+                        <td nowrap onclick="window.document.location='/jira/secure/IssueNavigator.jspa'" align="center" valign="middle" class="navItem" onmouseover="this.className='navItemOver'" onmouseout="this.className='navItem'">&nbsp;&nbsp;
+            <a href="../jira/secure/IssueNavigator.html" id="find_link" title="Find issues in the projects you have permissions to view" accesskey="f"><u>F</u>IND ISSUES</a> &nbsp;&nbsp;
+    </td>
+        <td align="right" class="navItem" valign="middle" bgcolor="#3c78b5" width="100%">
+            <form name="quicksearch" action="../jira/secure/QuickSearch.html" method="post" style="padding: 0; margin: 0;">
+                <span class="navItem" onmouseover="showToolTip()" onmouseout="hideToolTip()">&nbsp; &nbsp;
+                    <u>Q</u>UICK SEARCH:
+                </span>
+                <span class="navItem">
+                    <input class="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." type="text" size="25" name="searchString" accesskey="q" id="quickSearchInput" valign="absmiddle">&nbsp;
+                </span>
+            </form>
+        </td>
+        <td width="5"></td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+<div class="alertHeader">
+<script src="../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<div onmouseover="recordInTip()" onmouseout="recordOutTip()" id="quicksearchhelp" class="informationBox" style="display: none; text-align: center; width: 20em; position: absolute; top: 55px; right: 10px; padding: 0.5em;">
+    Learn more about <a href="http://www.atlassian.com/software/jira/docs/v3.9/quicksearch.html?clicked=jirahelp" target="_jirahelp">Quick Search</a>
+</div>
+<table border="0" cellpadding="5" cellspacing="0" width="100%" bgcolor="ffffff">
+<td valign="top">
+		<h1 class="pagetitle">JIRA</h1>
+		<script language="JavaScript" type="text/javascript" src="http://yusuke.homeip.net/jira/includes/js/cookieUtil.js"></script>
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center" style="border-bottom: 1px solid #bbb;">
+    <tr>
+    	<td align="right">
+            &nbsp;
+        </td>
+    </tr>
+    </table>
+    <table cellpadding="5" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td valign="top" width="50%">
+                <p>
+<table class="tableBorder maxWidth" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
+<tr class="rowHeader">
+        <td class="colHeaderLink" colspan="2">
+        Project :
+        <b><a href="../jira/browse/KMS.html">Komuso</a></b>
+        <font size="1">(KMS)</font>
+        </td>
+</tr>
+    <tbody id="project_10001_10000">
+    <tr class="rowClear">
+        <td colspan="2">
+                <b>Lead:</b> <a href="../jira/secure/ViewProfile_name_yusuke.html">
+                Yusuke Yamamoto</a><br>
+            <b>Reports:</b>
+                <a href="/">
+                    Open Issues</a>
+                |
+                <a href="/">
+                    Road Map</a>
+                |
+                <a href="/">
+                    Change Log</a>
+                |
+                <a href="../jira/browse/KMS_report_com_atlassian_jira_plugin_system_project_popularissues-panel.html">
+                    Popular Issues</a>
+                |
+                <a href="/">
+                    Subversion Commits</a>
+        </td>
+    </tr>
+                <tr class="rowClear">
+                    <td>
+                        <b>Open Issues:</b> <font size="1">(By Priority)</font>
+                    </td>
+                    <td valign="middle">
+                        <table width="100" valign="middle" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td width="100" bgcolor="#009900"><a href="../jira/secure/IssueNavigator_reset_true_resolution_-1_priority_3_pid_10000.html" title="Major - 100% (1 issues)"></a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        <tr class="rowClear">
+            <td colspan="2">
+                <style type="text/css">
+                    .presetfiltertable { width: 100%}
+                    .presetfilter { font-size:10px;}
+                </style>
+                <b>Filter Issues:</b><br>
+                <table cellpadding="2" cellspacing="0" border="0" align="center" class="presetfiltertable">
+    <tr>
+        <td width="50%" valign="top" nowrap>
+                                            <span class="presetfilter">- <a id="filter_all" href="/">All</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_outstanding" href="/">Outstanding</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_unscheduled" href="/">Unscheduled</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_mostimportant" href="/">Most important</a><br/></span>
+                                    </td>
+        <td width="50%" valign="top" nowrap>
+                                                                        <span class="presetfilter">- <a id="filter_resolvedrecently" href="/">Resolved recently</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_addedrecently" href="/">Added recently</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_updatedrecently" href="../files/order_DESC_7orvpa0juhnyanjwse3emv.html">Updated recently</a><br/></span>
+                                                                </td>
+    </tr>
+</table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td></tr></table>
+<script type="text/javascript">
+    <!-- //this script shows or hides the project category based on a cookie
+    var id = "project_10001_10000";
+    cookieHide(id, '[show >>]');
+    //-->
+</script>
+            <p>
+<table class="tableBorder maxWidth" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
+<tr class="rowHeader">
+        <td class="colHeaderLink" colspan="2">
+        Project :
+        <b><a href="../jira/browse/LFT.html">Log4Twitter</a></b>
+        <font size="1">(LFT)</font>
+        </td>
+</tr>
+    <tbody id="project_10001_10001">
+    <tr class="rowClear">
+        <td colspan="2">
+                <b>Lead:</b> <a href="../jira/secure/ViewProfile_name_yusuke.html">
+                Yusuke Yamamoto</a><br>
+            <b>Reports:</b>
+                <a href="/">
+                    Open Issues</a>
+                |
+                <a href="../jira/browse/LFT_report_com_atlassian_jira_plugin_system_project_roadmap-panel.html">
+                    Road Map</a>
+                |
+                <a href="../jira/browse/LFT_report_com_atlassian_jira_plugin_system_project_changelog-panel.html">
+                    Change Log</a>
+                |
+                <a href="../jira/browse/LFT_report_com_atlassian_jira_plugin_system_project_popularissues-panel.html">
+                    Popular Issues</a>
+                |
+                <a href="../jira/browse/LFT_report_com_atlassian_jira_plugin_ext_subversion_subversion-project-tab.html">
+                    Subversion Commits</a>
+        </td>
+    </tr>
+                <tr class="rowClear">
+                    <td>
+                        <b>Open Issues:</b> <font size="1">(By Priority)</font>
+                    </td>
+                    <td valign="middle">
+                        <table width="100" valign="middle" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                    <font size="1">No open Issues</font>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        <tr class="rowClear">
+            <td colspan="2">
+                <style type="text/css">
+                    .presetfiltertable { width: 100%}
+                    .presetfilter { font-size:10px;}
+                </style>
+                <b>Filter Issues:</b><br>
+                <table cellpadding="2" cellspacing="0" border="0" align="center" class="presetfiltertable">
+    <tr>
+        <td width="50%" valign="top" nowrap>
+                                            <span class="presetfilter">- <a id="filter_all" href="../jira/secure/IssueNavigator_reset_true_mode_hide_pid_10001.html">All</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_outstanding" href="../jira/secure/IssueNavigator_reset_true_mode_hide_pid_10001_resolution_-1_sorter/field_updated_sorter/order_DESC.html">Outstanding</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_unscheduled" href="../files/order_DESC_fixfor_-1_ffqbvq78c45n430nsmmdrz.html">Unscheduled</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_mostimportant" href="../jira/secure/IssueNavigator_reset_true_mode_hide_pid_10001_resolution_-1_sorter/field_priority_sorter/order_DESC.html">Most important</a><br/></span>
+                                    </td>
+        <td width="50%" valign="top" nowrap>
+                                                                        <span class="presetfilter">- <a id="filter_resolvedrecently" href="../files/order_DESC_jyyijaugsc43036sauhb24.html">Resolved recently</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_addedrecently" href="/">Added recently</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_updatedrecently" href="/">Updated recently</a><br/></span>
+                                                                </td>
+    </tr>
+</table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td></tr></table>
+<script type="text/javascript">
+    <!-- //this script shows or hides the project category based on a cookie
+    var id = "project_10001_10001";
+    cookieHide(id, '[show >>]');
+    //-->
+</script>
+            <p>
+<table class="tableBorder maxWidth" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
+<tr class="rowHeader">
+        <td class="colHeaderLink" colspan="2">
+        Project :
+        <b><a href="../jira/browse/SMR.html">Samurai</a></b>
+        <font size="1">(SMR)</font>
+        </td>
+</tr>
+    <tbody id="project_10001_10010">
+    <tr class="rowClear">
+        <td colspan="2">
+                <b>Lead:</b> <a href="../jira/secure/ViewProfile_name_yusuke.html">
+                Yusuke Yamamoto</a><br>
+            <b>Reports:</b>
+                <a href="../jira/browse/SMR_report_com_atlassian_jira_plugin_system_project_openissues-panel.html">
+                    Open Issues</a>
+                |
+                <a href="../jira/browse/SMR_report_com_atlassian_jira_plugin_system_project_roadmap-panel.html">
+                    Road Map</a>
+                |
+                <a href="../jira/browse/SMR_report_com_atlassian_jira_plugin_system_project_changelog-panel.html">
+                    Change Log</a>
+                |
+                <a href="/">
+                    Popular Issues</a>
+                |
+                <a href="../jira/browse/SMR_report_com_atlassian_jira_plugin_ext_subversion_subversion-project-tab.html">
+                    Subversion Commits</a>
+        </td>
+    </tr>
+                <tr class="rowClear">
+                    <td>
+                        <b>Open Issues:</b> <font size="1">(By Priority)</font>
+                    </td>
+                    <td valign="middle">
+                        <table width="100" valign="middle" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td width="100" bgcolor="#009900"><a href="/" title="Major - 100% (3 issues)"></a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        <tr class="rowClear">
+            <td colspan="2">
+                <style type="text/css">
+                    .presetfiltertable { width: 100%}
+                    .presetfilter { font-size:10px;}
+                </style>
+                <b>Filter Issues:</b><br>
+                <table cellpadding="2" cellspacing="0" border="0" align="center" class="presetfiltertable">
+    <tr>
+        <td width="50%" valign="top" nowrap>
+                                            <span class="presetfilter">- <a id="filter_all" href="/">All</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_outstanding" href="/">Outstanding</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_unscheduled" href="/">Unscheduled</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_mostimportant" href="/">Most important</a><br/></span>
+                                    </td>
+        <td width="50%" valign="top" nowrap>
+                                                                        <span class="presetfilter">- <a id="filter_resolvedrecently" href="../files/order_DESC_8esq5aoteetwsfbm2tbznn.html">Resolved recently</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_addedrecently" href="/">Added recently</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_updatedrecently" href="/">Updated recently</a><br/></span>
+                                                                </td>
+    </tr>
+</table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td></tr></table>
+<script type="text/javascript">
+    <!-- //this script shows or hides the project category based on a cookie
+    var id = "project_10001_10010";
+    cookieHide(id, '[show >>]');
+    //-->
+</script>
+            <p>
+<table class="tableBorder maxWidth" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
+<tr class="rowHeader">
+        <td class="colHeaderLink" colspan="2">
+        Project :
+        <b><a href="../jira/browse/TFJ.html">Twitter4J</a></b>
+        <font size="1">(TFJ)</font>
+        </td>
+</tr>
+    <tbody id="project_10001_10002">
+    <tr class="rowClear">
+        <td colspan="2">
+                <b>Lead:</b> <a href="../jira/secure/ViewProfile_name_yusuke.html">
+                Yusuke Yamamoto</a><br>
+            <b>Reports:</b>
+                <a href="/">
+                    Open Issues</a>
+                |
+                <a href="../jira/browse/TFJ_report_com_atlassian_jira_plugin_system_project_roadmap-panel.html">
+                    Road Map</a>
+                |
+                <a href="../jira/browse/TFJ_report_com_atlassian_jira_plugin_system_project_changelog-panel.html">
+                    Change Log</a>
+                |
+                <a href="/">
+                    Popular Issues</a>
+                |
+                <a href="/">
+                    Subversion Commits</a>
+        </td>
+    </tr>
+                <tr class="rowClear">
+                    <td>
+                        <b>Open Issues:</b> <font size="1">(By Priority)</font>
+                    </td>
+                    <td valign="middle">
+                        <table width="100" valign="middle" align="center" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td width="100" bgcolor="#009900"><a href="../jira/secure/IssueNavigator_reset_true_resolution_-1_priority_3_pid_10002.html" title="Major - 100% (1 issues)"></a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+        <tr class="rowClear">
+            <td colspan="2">
+                <style type="text/css">
+                    .presetfiltertable { width: 100%}
+                    .presetfilter { font-size:10px;}
+                </style>
+                <b>Filter Issues:</b><br>
+                <table cellpadding="2" cellspacing="0" border="0" align="center" class="presetfiltertable">
+    <tr>
+        <td width="50%" valign="top" nowrap>
+                                            <span class="presetfilter">- <a id="filter_all" href="../jira/secure/IssueNavigator_reset_true_mode_hide_pid_10002.html">All</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_outstanding" href="/">Outstanding</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_unscheduled" href="../files/order_DESC_fixfor_-1_iv7py50ftwm0wqp0c48ra3.html">Unscheduled</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_mostimportant" href="../jira/secure/IssueNavigator_reset_true_mode_hide_pid_10002_resolution_-1_sorter/field_priority_sorter/order_DESC.html">Most important</a><br/></span>
+                                    </td>
+        <td width="50%" valign="top" nowrap>
+                                                                        <span class="presetfilter">- <a id="filter_resolvedrecently" href="../files/order_DESC_yz0ev3jgkntnh5dha4xo6r.html">Resolved recently</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_addedrecently" href="/">Added recently</a><br/></span>
+                                                                                        <span class="presetfilter">- <a id="filter_updatedrecently" href="/">Updated recently</a><br/></span>
+                                                                </td>
+    </tr>
+</table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</td></tr></table>
+<script type="text/javascript">
+    <!-- //this script shows or hides the project category based on a cookie
+    var id = "project_10001_10002";
+    cookieHide(id, '[show >>]');
+    //-->
+</script>
+            <p>
+                <p>
+            <p>
+        </td>
+        <td valign="top" width="50%">
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="#003366" width="100%" align="center">
+<tr><td>
+<table cellpadding="4" cellspacing="0" border="0" width="100%">
+<tr>
+    <td colspan="2" bgcolor="#3c78b5" class="colHeaderLink">
+    <b><font color="#ffffff">Login</font></b>
+    </td>
+</tr>
+<tr>
+    <td class="rowClear">
+	<form method="POST" action="../jira/login.html" name="loginform">
+		<table align="center" cellpadding="4" cellspacing="0" border="0">
+		<tr>
+			<td valign="middle" align="right" width="25%"><b><u>U</u>sername</b></td>
+			<td valign="middle">
+				<input style="width: 12em;" type="text" name="os_username" size="25" tabindex="1" accesskey="u" value="">
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" align="right" width="25%"><b><u>P</u>assword</b></td>
+			<td valign="middle">
+				<input style="width: 12em;" type="password" name="os_password" size="25" tabindex="2" accesskey="p"> &nbsp;
+            </td>
+		</tr>
+		<tr>
+			<td valign="middle" align="right" width="25%"><input type="checkbox" name="os_cookie" id="os_cookie_id" value="true" tabindex="4"></td>
+			<td valign="middle">
+				<label for="os_cookie_id" accesskey="r"><u>R</u>emember my login on this computer</label>
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" align="center" colspan="2">
+				<input id="login" type="submit" value="Log In" tabindex="4">
+			</td>
+		</tr>
+		<tr>
+			<td valign="middle" align="right" width="25%">&nbsp;</td>
+			<td valign="top"><font size="1"><a href="../jira/secure/ForgotPassword_default.html">Forgot Password</a></font></td>
+		</tr>
+		<tr>
+			<td valign="middle" colspan="2">
+				<br>
+                        Not a member? <b><a id="signup" href="../jira/secure/Signup_default.html">Signup</a></b> for an account.
+			</td>
+		</tr>
+		</table>
+		<input type="hidden" name="os_destination" value="/secure/">
+	</form>
+    </td>
+</tr>
+</table>
+</td></tr></table>
+                    <div id="portletcc-10002">    </div>
+<script type="text/javascript">
+new Ajax.Updater('portletcc-10002', '/jira/lazyLoader?portletId=10002', {asynchronous:true, evalScripts:true} );
+</script>
+                <p>
+                <p>
+                <p>
+                <p>
+                <p>
+            <p>
+        </td>
+    </tr>
+    </table>
+</td></tr>
+</table>
+<div class="footer">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+	<td bgcolor="#bbbbbb"></td>
+</tr>
+<tr><td class="licensemessage">
+    Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+</td></tr>
+<tr>
+    <td height="12" style="background-image:url(http://yusuke.homeip.net/jira/images/border/border_bottom.gif)"></td>
+</tr>
+</table>
+<span class="poweredbymessage">
+<a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+the Professional <a href="http://www.atlassian.com/software/jira">Issue Tracker</a>.
+<span style="color: #666666;">(Enterprise Edition, Version: 3.9.2-#235)</span>
+- <a href="http://jira.atlassian.com/default.jsp?clicked=footer">Bug/feature request</a>
+- <a href="../jira/secure/Administrators.html">Contact Administrators</a>
+</span>
+</div>
+</body>
+</html>

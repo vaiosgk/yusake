@@ -1,0 +1,451 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href=".">
+    <title>侍ズム | Samuraism - ログイン</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/rss.xml"/>
+    <link rel="alternate" type="application/rdf+xml" title="RDF" href="http://yusuke.homeip.net/diary/../diary/rdf.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+        <style>
+        body {
+  font-family: Lucida Grande, Verdana, Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  background : darkgray;
+  color : black;
+  text-align: left;
+  border-top: solid black 1px;
+  border-right: solid black 1px;
+  border-bottom: solid black 1px;
+  border-left: solid black 1px;
+  margin: 16px;
+}
+blockquote {
+  border-left: solid silver 4px;
+  padding-left: 8px;
+}
+.small {
+  font-size: 11px;
+}
+.header {
+  background : #4169AA;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  background-image: url(http://yusuke.homeip.net/diary/common/images/header.jpg);
+  background-position: top;
+  background-repeat: repeat-x;
+  position: relative;
+}
+.header a:link, .header a:visited, .header a:active {
+  color : white;
+}
+.search {
+  float: right;
+  position: relative;
+  text-align: right;
+}
+.headerLinks, .footerLinks {
+  float: right;
+  position: relative;
+  width: 50%;
+  text-align: right;
+}
+.headerLinks a:link, .headerLinks a:visited, .headerLinks a:active,
+.footerLinks a:link, .footerLinks a:visited, .footerLinks a:active {
+  color : white;
+}
+#categories {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color : white;
+  font-weight: bold;
+}
+.category a:link, .category a:visited, .category a:active {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  color : white;
+}
+.category {
+}
+.category a:hover, .selectedCategory {
+  color: #4169AA;
+  background: white;
+  text-decoration: none;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.tags {
+  border: solid #F0F0F0 1px;
+  margin: 16px;
+  padding: 4px;
+  background: #F8F8F8;
+  font-weight: normal;
+}
+.tags a:link, .tags a:visited, .tags a:active {
+  color : gray;
+  font-weight: normal;
+}
+.photo {
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border-top: solid black 1px;
+  border-right: solid black 1px;
+  border-bottom: solid black 1px;
+  border-left: solid black 1px;
+  text-align: center;
+}
+.codeSample {
+  font-family: Courier, sans-serif;
+  border-top: solid #F0F0F0 1px;
+  border-right: solid #F0F0F0 1px;
+  border-bottom: solid #F0F0F0 1px;
+  border-left: solid #F0F0F0 1px;
+  text-align: left;
+  background: #F8F8F8;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding: 16px;
+  overflow: auto;
+}
+a:link, a:visited, a:active {
+  color: #4169AA;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+.content {
+  background : white;
+  padding-top: 16px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  margin-right: 220px;
+}
+.bodyContent {
+  background : white;
+}
+.sidebar {
+  text-align: center;
+  float: right;
+  position: relative;
+  width: 200px;
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 32px;
+}
+.footer {
+  background: #4169AA;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  clear: both;
+  background-image: url(http://yusuke.homeip.net/diary/common/images/footer.jpg);
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+.footer a:link, .footer a:visited, .footer a:active {
+  color : white;
+}
+.blogName, .blogName a:link, .blogName a:visited, .blogName a:active {
+  font-size: 24px;
+  font-weight: bold;
+}
+.blogDescription {
+  font-weight: none;
+  padding-bottom: 32px;
+}
+.linearNavigationLinks {
+  text-align: center;
+  padding-bottom: 8px;
+  position: relative;
+}
+.calendar {
+  text-align: center;
+}
+.calendarDayHeader {
+  font-weight: bold;
+  text-align: right;
+}
+.calendarDay {
+  text-align: right;
+  border: solid white 1px;
+}
+.calendarDayWithEntries {
+  text-align: right;
+  border: solid #F0F0F0 1px;
+}
+.calendarDayWithEntries a:link, .calendarDayWithEntries a:visited, .calendarDayWithEntries a:active {
+  border: solid white 0px;
+}
+.calendarToday, .calendarToday a:link, .calendarToday a:visited, .calendarToday a:active {
+  background : #4169AA;
+  color: white;
+  font-weight: bold;
+  text-align: right;
+}
+.help, .help a:link, .help a:visited, .help a:active {
+  color: gray;
+  font-weight: bold;
+  text-align: right;
+}
+.validationError {
+  color: #B20D1C;
+}
+.blogEntry, .item {
+  text-align: left;
+  border-top: dotted silver 1px;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.comment, .trackback {
+  padding: 8px;
+}
+.blogEntryHeader, .blogEntryHeader a:link, .blogEntryHeader a:visited, .blogEntryHeader a:active {
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+.itemHeader, .itemHeader a:link, .itemHeader a:visited, .itemHeader a:active {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+}
+.commentHeader, .commentHeader a:link, .commentHeader a:visited, .commentHeader a:active, .trackbackHeader,
+.trackbackHeader a:link, .trackbackHeader a:visited, .trackbackHeader a:active {
+  font-weight: bold;
+  color: black;
+}
+.blogEntryTitle, .blogEntryTitle a:link, .blogEntryTitle a:visited, .blogEntryTitle a:active {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+.blogEntrySubtitle, .blogEntrySubtitle a:link, .blogEntrySubtitle a:visited, .blogEntrySubtitle a:active {
+  color: black;
+  font-weight: bold;
+}
+.blogEntryBody, .itemBody {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  line-height: 1.5;
+}
+.itemBodyEven {
+  background: #F4F4F4;
+}
+.itemBodyOdd {
+  background: white;
+}
+.commentBody, .trackbackBody {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.5;
+}
+.blogEntryLinks, .itemLinks, .commentLinks, .trackbackLinks {
+  float: right;
+  position: relative;
+  color: gray;
+  font-weight: bold;
+  text-align: right;
+  font-size: 11px;
+}
+.blogEntryLinks a:link, .blogEntryLinks a:visited, .blogEntryLinks a:active,
+.itemLinks a:link, .itemLinks a:visited, .itemLinks a:active,
+.commentLinks a:link, .commentLinks a:visited, .commentLinks a:active,
+.trackbackLinks a:link, .trackbackLinks a:visited, .trackbackLinks a:active {
+  color: gray;
+  font-weight: normal;
+  font-size: 11px;
+}
+.blogEntryMetadata, .blogEntryMetadata a:link, .blogEntryMetadata a:visited, .blogEntryMetadata a:active,
+.itemMetadata, .itemMetadata a:link, .itemMetadata a:visited, .itemMetadata a:active,
+.commentMetadata, .commentMetadata a:link, .commentMetadata a:visited, .commentMetadata a:active,
+.trackbackMetadata, .trackbackMetadata a:link, .trackbackMetadata a:visited, .trackbackMetadata a:active {
+  color: gray;
+  font-weight: normal;
+}
+.floatRight {
+  float: right;
+  position: relative;
+}
+.approved {
+}
+.pending {
+  border-left: solid #FF9900 4px;
+}
+.rejected {
+  border-left: solid red 4px;
+}
+thead {
+  background : white;
+  color: black;
+  font-weight: bold;
+  padding: 8px;
+}
+thead a:link, thead a:visited, thead a:active {
+}
+.tagCloud {
+  line-height: 40px;
+}
+.tagCloud1 {
+  font-size: 10px;
+}
+.tagCloud2 {
+  font-size: 12px;
+}
+.tagCloud3 {
+  font-size: 14px;
+}
+.tagCloud4 {
+  font-size: 16px;
+}
+.tagCloud5 {
+  font-size: 18px;
+}
+.tagCloud6 {
+  font-size: 20px;
+}
+.tagCloud7 {
+  font-size: 22px;
+}
+.tagCloud8 {
+  font-size: 24px;
+}
+.tagCloud9 {
+  font-size: 26px;
+}
+.tagCloud10 {
+  font-size: 28px;
+}
+        </style>
+    <script type="text/javascript">
+    function openWindow(url, windowName, width, height) {
+  popup = window.open(url, windowName, 'width='+width+',height='+height+',toolbar=0,resizable=1,scrollbars=1,menubar=0,status=1');
+  popup.focus();
+}
+function confirmRemove(url) {
+  if (confirm("Are you sure?")) {
+    window.location = url;
+  }
+}
+function populateFilename(fromField, toField) {
+  var indexOfSlash = fromField.value.lastIndexOf("/");
+  if (indexOfSlash < 0) {
+    indexOfSlash= fromField.value.lastIndexOf("\\");
+  }
+  if (indexOfSlash < 0) {
+    indexOfSlash = 0;
+  }
+  toField.value = fromField.value.substring(indexOfSlash+1, fromField.value.length);
+}
+function checkAll(checkboxes) {
+  for (i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = true;
+  }
+}
+function uncheckAll(checkboxes) {
+  for (i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = false;
+  }
+}
+    </script>
+  </head>
+  <body>
+    <div class="bodyContent">
+<div class="header">
+  <div class="search">
+    <form method="post" action="../diary/search.html" accept-charset="UTF-8">
+    <table cellpadding="4" cellspacing="0">
+      <tr>
+        <td align="right">
+          <a href="../diary/today.html">今日</a> |
+          <a href="rss.xml">RSS</a> |
+          <a href="../diary/rdf.xml">RDF</a> |
+          <a href="atom.xml">Atom</a>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" align="right">
+          <input type="text" name="query"/>&nbsp;<input type="submit" value="検索"/>
+        </td>
+      </tr>
+    </table>
+    </form>
+  </div>
+  <div class="blogName">
+    <a href="../diary.html">侍ズム | Samuraism</a>
+  </div>
+  <div class="blogDescription">
+    MacとJavaと映画と
+  </div>
+  <br/>
+  <div class="small">
+    &nbsp;
+  </div>
+</div>
+<div class="sidebar">
+  <div class="calendar"><table width="100%"><tr><td colspan="7" align="center"><b><a href="../diary/2008/03.html">3月 2008</a></b></td></tr><tr><td class="calendarDayHeader" width="14%">日</td><td class="calendarDayHeader" width="14%">月</td><td class="calendarDayHeader" width="14%">火</td><td class="calendarDayHeader" width="14%">水</td><td class="calendarDayHeader" width="14%">木</td><td class="calendarDayHeader" width="14%">金</td><td class="calendarDayHeader" width="14%">土</td></tr><tr><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;1&nbsp;</td></tr><tr><td class="calendarToday">&nbsp;2&nbsp;</td><td class="calendarDay">&nbsp;3&nbsp;</td><td class="calendarDay">&nbsp;4&nbsp;</td><td class="calendarDay">&nbsp;5&nbsp;</td><td class="calendarDay">&nbsp;6&nbsp;</td><td class="calendarDay">&nbsp;7&nbsp;</td><td class="calendarDay">&nbsp;8&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;9&nbsp;</td><td class="calendarDay">&nbsp;10&nbsp;</td><td class="calendarDay">&nbsp;11&nbsp;</td><td class="calendarDay">&nbsp;12&nbsp;</td><td class="calendarDay">&nbsp;13&nbsp;</td><td class="calendarDay">&nbsp;14&nbsp;</td><td class="calendarDay">&nbsp;15&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;16&nbsp;</td><td class="calendarDay">&nbsp;17&nbsp;</td><td class="calendarDay">&nbsp;18&nbsp;</td><td class="calendarDay">&nbsp;19&nbsp;</td><td class="calendarDay">&nbsp;20&nbsp;</td><td class="calendarDay">&nbsp;21&nbsp;</td><td class="calendarDay">&nbsp;22&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;23&nbsp;</td><td class="calendarDay">&nbsp;24&nbsp;</td><td class="calendarDay">&nbsp;25&nbsp;</td><td class="calendarDay">&nbsp;26&nbsp;</td><td class="calendarDay">&nbsp;27&nbsp;</td><td class="calendarDay">&nbsp;28&nbsp;</td><td class="calendarDay">&nbsp;29&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;30&nbsp;</td><td class="calendarDay">&nbsp;31&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td></tr><tr><td colspan="7" align="center"><a href="../diary/2008/02.html">2</a>&nbsp; | &nbsp;<a href="../diary/2008/03/02.html">今日</a>&nbsp; | &nbsp;4</td></tr></table></div>
+</div>
+<div class="content">
+<div class="item">
+  <div class="itemHeader">
+    ログイン
+  </div>
+  <div class="itemBody">
+    <form name="loginForm" method="post" action="/">
+    <input type="hidden" name="j_uri" value="http://yusuke.homeip.net/diary/"/>
+    <table>
+      <tr>
+        <td align="left"><b>ユーザー名</b></td>
+        <td align="left"><input type="text" name="j_username"/></td>
+      </tr>
+      <tr>
+        <td align="left"><b>パスワード</b></td>
+        <td align="left"><input type="password" name="j_password"/></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right">
+          <input type="submit" value="ログイン"/>
+        </td>
+      </tr>
+    </table>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+window.onload = function()
+{
+  document.loginForm.j_username.focus()
+}
+</script>
+</div>
+<div class="footer">
+  <span class="footerLinks">
+    Powered by <a href="http://pebble.sourceforge.net/"><b>Pebble 1.9</b></a>
+    [
+        <a href="../diary/login.html">ログイン</a>
+    ]
+  </span>
+  <span>
+    Content (c) yusuke
+  </span>
+</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:yusuke.homeip.net,0000-00-00:blog</id>
+  <title>Samuraism</title>
+  <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/blog/"/>
+  <link rel="self" type="application/atom+xml" href="http://yusuke.homeip.net/blog/atom.xml"/>
+  <updated>2009-01-31T16:46:00Z</updated>
+  <author>
+    <name>Yusuke Yamamoto</name>
+  </author>
+  
+  <subtitle></subtitle>
+  <rights>Yusuke Yamamoto</rights>
+  <generator uri="http://pebble.sourceforge.net" version="2.3.1">Pebble</generator>
+
+  
+  <entry>
+    <title>Sakasa-Fuji in the sky</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/blog/2009/02/01/sakasa_fuji_in_the_sky.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2009-01-31:blog/1233420360000</id>
+    <updated>2009-01-31T16:46:00Z</updated>
+    <published>2009-01-31T16:46:00Z</published>
+    
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;It is no doubt that Mt. Fuji is the most beautiful mountain in Japan. Therefore many photographers, and painters love Mt. Fuji.&lt;br/&gt;There is a quite popular composition of the mountain which is called &amp;quot;逆さ富士&amp;quot;(Sakasa-Fuji) - meaning &#034;inverted Fuji&#034; in Japanese.&lt;br/&gt;There are five lakes near Mt. Fuji and you can see inverted, or reflected image of the mountain on a water surface when you are walking beside one of those lakes.&lt;br/&gt;- &lt;a href=&#034;http://tinyurl.com/aou4n9&#034;&gt;Google Image Search - Sakasa-fuji&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;On Jan 2nd, I took two phenomenal Sakasa-fuji pictures.&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2009/01/31/P1025991-large.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2009/01/31/P1025991-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Mt. Fuji with its silhouette&lt;br/&gt;&lt;br/&gt;In this picture, a projected outline of the mountain can be seen in the atmosphere.&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2009/01/31/P1026023-large.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2009/01/31/P1026023-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Sakasa-Fuji in the sky&lt;br/&gt;&lt;br/&gt;You can see an upside-down shadow of the mountain on the cloud.&lt;br/&gt;&lt;br/&gt;How mystic it is!&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>Twitter4J 1.1.4 released</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/blog/2009/01/12/twitter4j_1_1_4_released.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2009-01-11:blog/1231690740000</id>
+    <updated>2009-01-11T16:19:00Z</updated>
+    <published>2009-01-11T16:19:00Z</published>
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/blog/tags/java/" />
+    
+    <category term="twitter" label="twitter" scheme="http://yusuke.homeip.net/blog/tags/twitter/" />
+    
+    <category term="twitter4j" label="twitter4j" scheme="http://yusuke.homeip.net/blog/tags/twitter4j/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;Twitter4J 1.1.4 is now available for download.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/en/index.html#download&#034;&gt;http://yusuke.homeip.net/twitter4j/en/index.html#download&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;Projects using getUserDetail() need to apply this version in order to avoid NPE with protected users(TFJ-70).&lt;br/&gt;This version will also be available in the Maven central repository in 24 hours.&lt;br/&gt;Here are the list of fixes included in version 1.1.4.&lt;br/&gt;Recompilation of your project is suggested before you update your twitter4j jar file.&lt;br/&gt;
+&lt;h2&gt;        Bug
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-70&#039;&gt;TFJ-70&lt;/a&gt;] -         getting a protected user profile causes a NullPointerException
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+&lt;h2&gt;        Improvement
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-69&#039;&gt;TFJ-69&lt;/a&gt;] -         some async methods are declared to throw TwitterException mistakenly
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+&lt;h2&gt;        New Feature
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-48&#039;&gt;TFJ-48&lt;/a&gt;] -         support update_delivery_device method
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-52&#039;&gt;TFJ-52&lt;/a&gt;] -         support exists method
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-53&#039;&gt;TFJ-53&lt;/a&gt;] -         support rate_limit_status method
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>Twitter4J 1.1.2 released</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/blog/2008/12/02/twitter4j_1_1_2_released.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-12-01:blog/1228145632389</id>
+    <updated>2008-12-01T15:33:52Z</updated>
+    <published>2008-12-01T15:33:52Z</published>
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/blog/tags/java/" />
+    
+    <category term="twitter" label="twitter" scheme="http://yusuke.homeip.net/blog/tags/twitter/" />
+    
+    <category term="twitter4j" label="twitter4j" scheme="http://yusuke.homeip.net/blog/tags/twitter4j/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;Twitter4J 1.1.2 has just been released and will be available from the maven central repository soon.&lt;br/&gt;&lt;br/&gt;Twitter4J is an open-sourced and mavenizable Java library for the Twitter API which is released under a BSD-style license.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/en/index.html&#034;&gt;http://yusuke.homeip.net/twitter4j/index.html&lt;/a&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/en/index.html&#034;&gt;&lt;img border=&#034;2&#034; src=&#034;http://yusuke.homeip.net/diary/images/2007/06/09/twitter4j.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;With Twitter4J, you can easily integrate your application with twitter.com.&lt;br/&gt;&lt;br/&gt;This release contains a couple of bug fixes for AsyncTwitter.&lt;br/&gt;Users using AsyncTwitter may want to apply this apply this release.&lt;br/&gt;Here are the list of fixes included in version 1.1.2.&lt;br/&gt;
+&lt;h2&gt;        Bug
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-61&#039;&gt;TFJ-61&lt;/a&gt;] -         AsyncTwitter#createFavoriteAsync(), destoryStatusAsync(), destroyFavoriteAsync() should take long instead of int
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-64&#039;&gt;TFJ-64&lt;/a&gt;] -         AsyncTwitter#show(long) fails with ClassCastException
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+&lt;h2&gt;        Improvement
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-63&#039;&gt;TFJ-63&lt;/a&gt;] -         typo: detroy -&amp;gt; destory
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>Twitter4J 1.1.1 released</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/blog/2008/11/22/twitter4j_1_1_1_released.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-11-22:blog/1227327345143</id>
+    <updated>2008-11-22T04:15:45Z</updated>
+    <published>2008-11-22T04:15:45Z</published>
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/blog/tags/java/" />
+    
+    <category term="twitter" label="twitter" scheme="http://yusuke.homeip.net/blog/tags/twitter/" />
+    
+    <category term="twitter4j" label="twitter4j" scheme="http://yusuke.homeip.net/blog/tags/twitter4j/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;Twitter4J 1.1.1 has just been released and will be available from the maven central repository soon.&lt;br/&gt;&lt;br/&gt;Twitter4J is an open-sourced and mavenizable Java library for the Twitter API which is released under a BSD-style license.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/en/index.html&#034;&gt;http://yusuke.homeip.net/twitter4j/index.html&lt;/a&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/en/index.html&#034;&gt;&lt;img border=&#034;2&#034; src=&#034;http://yusuke.homeip.net/diary/images/2007/06/09/twitter4j.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;With Twitter4J, you can easily integrate your application with twitter.com.&lt;br/&gt;&lt;br/&gt;This release contains several bug fixes and all users are strongly suggested to update.&lt;br/&gt;Here are the list of fixes included in version 1.1.1.&lt;br/&gt;
+&lt;h2&gt;        Bug
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-54&#039;&gt;TFJ-54&lt;/a&gt;] -         Show method should take long instead of int
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-55&#039;&gt;TFJ-55&lt;/a&gt;] -         Show method shouldn&#039;t require userid and password
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-56&#039;&gt;TFJ-56&lt;/a&gt;] -         TwitterResponse from AsyncTwitter is not Serializable
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-57&#039;&gt;TFJ-57&lt;/a&gt;] -         Date is encoded twice, and therefore &amp;quot;since&amp;quot; doesn&#039;t work
+&lt;/li&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-60&#039;&gt;TFJ-60&lt;/a&gt;] -         hashCode and equals are not properly implemented
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+&lt;h2&gt;        Improvement
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[&lt;a href=&#039;http://yusuke.homeip.net/jira/browse/TFJ-47&#039;&gt;TFJ-47&lt;/a&gt;] -         implement toString()
+&lt;/li&gt;
+&lt;/ul&gt;&lt;br/&gt;releated:&lt;br/&gt;- &lt;a href=&#034;http://blog.richardadamdean.com/?p=89&#034;&gt;  Post to Twitter using Java: Twitter4J - Richard’s World&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>Decoding the Mars Phoenix&#039;s last Tweet using Twitter4J on IntelliJ IDEA 8</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/blog/2008/11/16/decoding_the_mars_phoenixs_last_tweet_using_twitter4j_on_intellij_idea_8.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-11-15:blog/1226765599075</id>
+    <updated>2008-11-15T16:13:19Z</updated>
+    <published>2008-11-15T16:13:19Z</published>
+    
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;Mars Phoenix had been &lt;a href=&#034;http://twitter.com/MarsPhoenix&#034;&gt;Tweeting about everything she discovered on the red planet&lt;/a&gt;. On November 11th, she posted her last tweet in a &lt;a href=&#034;http://twitter.com/MarsPhoenix/statuses/999383469&#034;&gt;cryptic binary form&lt;/a&gt; which ends with a heart emoticon. How romantic it is!&lt;br/&gt;&lt;br/&gt;Some of those people who follow her tweets might be able to understand it natively, but my decimal based brain couldn&#039;t. So I decided to write down a tiny code that decodes it using the fresh, and yummy  IntelliJ IDEA 8.&lt;br/&gt;&lt;br/&gt;Here&#039;s the steps I followed.&lt;br/&gt;&lt;br/&gt;1. Create a project&lt;br/&gt;From the File menu, you can create a mavenized project very easily.&lt;br/&gt;[File &amp;gt; New Project...]&lt;br/&gt;[Create project from scratch &amp;gt; Next]&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_01.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;Project wizard&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_01-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Project wizard&lt;br/&gt;&lt;br/&gt;Name: marsphoenix&lt;br/&gt;Select type: Maven Module&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_02-large.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;Project wizard-2&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_02-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Projec wizard-2&lt;br/&gt;&lt;br/&gt;Press [Next] to proceed.&lt;br/&gt;&lt;br/&gt;You can choose an archetype at this point if you like. &lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_03-large.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_03-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;Press [Finish] to finish the project wizard.&lt;br/&gt;&lt;br/&gt;A mavenized project was created.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_06-large.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;a typical mavenized empty project&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_06-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;a typical mavenized empty project&lt;br/&gt;&lt;br/&gt;2. Create a class&lt;br/&gt;right-click  marsphoenix/src/main/java node and choose [New &amp;gt; Class]&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_09-large.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_09-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;I named it DecodeLastTweet.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_10.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;entering the class name&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_10-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;entering the class name&lt;br/&gt;&lt;br/&gt;3. Using Twitter4J&lt;br/&gt;I feel it&#039;s not interesting if I hard code the message as a String literal. So why don&#039;t we grab it using Twitter4J?&lt;br/&gt;&lt;br/&gt;Twitter4J is super easy to use. You can just pass your userid and password to create a Twitter instance as follows:&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;    public static void main(String[] args){&lt;br/&gt;        Twitter twitter = new Twitter(&amp;quot;userid&amp;quot;,&amp;quot;password&amp;quot;);&lt;br/&gt;    }&lt;/pre&gt;&lt;br/&gt;Oops, Twitter doesn&#039;t resolve.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_13.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;red alarming font&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_13-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;red alarming font&lt;br/&gt;&lt;br/&gt;Of course the reason why Twitter cannot be resolved is because the class hasn&#039;t been imported and it&#039;s not even declared in the dependencies in the pom.xml. In such a case, all you have to do is just moving the cursor to the appealing part. Then you&#039;ll see a bulb, which indicates that IntelliJ is offering you to do something for you.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_14.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;an eye-catching bulb&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_14-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;an eye-catching bulb&lt;br/&gt;&lt;br/&gt;Click the bulb to see the options:&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_17.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;[IDEA] What do you want me to do?&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_17-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;[IDEA] What do you want me to do?&lt;br/&gt;&lt;br/&gt;The best choice should be &amp;quot;Add Maven Dependency&amp;quot;.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_18.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;Dependency selection dialog&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_18-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Dependency selection dialog&lt;br/&gt;&lt;br/&gt;Adding the dependency to the latest version of Twitter4J is as simple as just selecting it. Then IDEA will automagically add dependency declaration to the pom.xml, and import statement for twitter4j.Twitter class.&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_19-large.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;automatically managed pom.xml and import statement&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_19-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;automatically managed pom.xml and import statement&lt;br/&gt;&lt;br/&gt;Pretty smart.&lt;br/&gt;Let&#039;s move on to next.&lt;br/&gt;&lt;br/&gt;4. Getting the status&lt;br/&gt;The status id of her last tweet is 999383469.&lt;br/&gt;So the code to get it should be like this:&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;    Status status = twitter.show(999383469);&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;And of course, IDEA is smart enough to add the import statement for twitter4j.Status automatically. Since show method throws TwitterException, you are either to choose rethrowing the Exception, or enclose the method with a try - catch block.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_21.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;To catch, or not to catch, that is the problem.&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_21-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;To catch, or not to catch, that is the problem.&lt;br/&gt;&lt;br/&gt;This isn&#039;t a serious code and I chose the latter one - &amp;quot;Add Exception(s) to Method Signature&amp;qout; this time.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_22.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;throws signature added&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_22-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;throws signature added&lt;br/&gt;&lt;br/&gt;5. Finish the code!&lt;br/&gt;Lastly, I added following steps:&lt;br/&gt;- split the tweet with space&lt;br/&gt;- decode each binary strings to int type&lt;br/&gt;- cast them to char type&lt;br/&gt;- print them&lt;br/&gt;&lt;br/&gt;The complete code looks like this:&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;public class DecodeLastTweet {&lt;br/&gt;    public static void main(String[] args) throws TwitterException {&lt;br/&gt;        Twitter twitter = new Twitter(&#034;yourid&#034;, &#034;password&#034;);&lt;br/&gt;        Status status = twitter.show(999383469);&lt;br/&gt;        String text = status.getText();&lt;br/&gt;        String[] split = text.split(&#034; &#034;);&lt;br/&gt;        for (String token : split) {&lt;br/&gt;            try {&lt;br/&gt;                System.out.print((char) Integer.parseInt(token, 2));&lt;br/&gt;            } catch (NumberFormatException ignore) {}&lt;br/&gt;        }&lt;br/&gt;    }&lt;br/&gt;}&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_23.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;the complete code&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_23-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;the complete code&lt;br/&gt;&lt;br/&gt;6. Run it&lt;br/&gt;You can run the class by just pressing the &amp;quot;Play&amp;quot; button.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_24-large.jpg&#034; rel=&#034;lightbox[idea]&#034; title=&#034;IDEA is showing the decoded message&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/12/screenshot_24-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;IDEA is showing the decoded message&lt;br/&gt;&lt;br/&gt;- Conclusion&lt;br/&gt;I intentionally hidden the decoded message.&lt;br/&gt;You can download the &lt;a href=&#034;http://yusuke.homeip.net/diary/files/toyprograms/marsphoenix.zip&#034;&gt;BSD licensed code&lt;/a&gt;, build it, and run it on your own box if you want.&lt;br/&gt;&lt;br/&gt;I also hope you glanced how productive the latest IntelliJ IDEA is. As you know, IDEA is a commercial product.&lt;br/&gt;It&#039;s not free, but life is short. Don&#039;t hesitate to invest on your productivity.&lt;br/&gt;I believe that very soon after you bought the product, you&#039;ll reach the break-even point because of the super-productiveness.&lt;br/&gt;&lt;a href=&#034;http://www.jetbrains.com/idea/?261008_36957&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2008/11/04/160_120-1.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;just FYI: Jetbrains is also offering a free license for open source developers.&lt;br/&gt;&lt;br/&gt;Related:&lt;br/&gt;- &lt;a href=&#034;http://yusuke.homeip.net/blog/2008/11/02/twitter4j_1_1_0_released.html&#034;&gt;Twitter4J 1.1.0 released - Samuraism&lt;/a&gt;&lt;br/&gt;- &lt;a href=&#034;http://maromago.blogspot.com/2008/11/mars-phoenix-tweet-python-python.html&#034;&gt;decoding the Mars Phoenix&#039;s last Tweet using Python and python-twitter&lt;/a&gt;&lt;br/&gt;- &lt;a href=&#034;http://blogs.jetbrains.com/idea/2008/11/meet-jetbrains-release-of-the-year-intellij-idea-8/&#034;&gt;JetBrains IntelliJ IDEA Blog  » Blog Archive   » Meet JetBrains’ Release of the Year: IntelliJ IDEA 8&lt;/a&gt;&lt;br/&gt;- &lt;a href=&#034;http://www.appliweb.net/index.php/blog/viewpost/69&#034;&gt;IntelliJ IDEA, Why I like | Appliweb&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>Twitter4J 1.1.0 released</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/blog/2008/11/02/twitter4j_1_1_0_released.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-11-02:blog/1225612800000</id>
+    <updated>2008-11-02T08:00:00Z</updated>
+    <published>2008-11-02T08:00:00Z</published>
+    
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;Twitter4J 1.1.0 has just been released and is available at the maven central repository.&lt;br/&gt;&lt;br/&gt;Twitter4J is an open-sourced and mavenizable Java library for the Twitter API which is released under a BSD-style license.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/en/index.html&#034;&gt;http://yusuke.homeip.net/twitter4j/index.html&lt;/a&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/en/index.html&#034;&gt;&lt;img border=&#034;2&#034; src=&#034;http://yusuke.homeip.net/diary/images/2007/06/09/twitter4j.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;With Twitter4J, you can easily integrate your application with twitter.com.&lt;br/&gt;&lt;br/&gt;Twitter4J 1.1.0 includes small bug fixes and its memory foot print has been dramatically improved.&lt;br/&gt;Please take extra care upon migration since the release is slightly incompatible with prior versions.&lt;br/&gt;So it is strongly recommended to recompile your application instead of just replacing the jar file.&lt;br/&gt;&lt;br/&gt;Methods updated:&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/jira/browse/TFJ-41&#034;&gt;TFJ-41&lt;/a&gt;: Following methods now return long instead of int since the status id will reach Integer.MAX_VALUE(2147483647).&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;  long Status.getId()&lt;br/&gt;  long UserWithStatus.getStatusId() &lt;br/&gt;  long getInReplyToStatusId()&lt;/div&gt;&lt;a href=&#034;http://yusuke.homeip.net/jira/browse/TFJ-34&#034;&gt;TFJ-34&lt;/a&gt;: Following methods now return java.util.Date instead of String.&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;  java.util.Date Status.getCreatedAt()&lt;br/&gt;  java.util.Date DirectMessage#getCreatedAt()&lt;/div&gt;&lt;br/&gt;Methods added:&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/jira/browse/TFJ-45&#034;&gt;TFJ-45&lt;/a&gt;:&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;  List&amp;lt;User&amp;gt; getFollowers(int page)&lt;br/&gt;  List&amp;lt;User&amp;gt; getFollowers(String id)&lt;br/&gt;  List&amp;lt;User&amp;gt; getFollowers(String id, int page)&lt;/div&gt;&lt;br/&gt;Methods removed:&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/jira/browse/TFJ-43&#034;&gt;TFJ-43&lt;/a&gt;: Following methods are no longer supported by the Twitter API and removed as of release 1.1.0.&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;  Twitter.getPublicTimeline(String sinceID) &lt;br/&gt;  Twitter.archive() &lt;br/&gt;  Twitter.archive(int page)&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;You can check the complete list of changes at the Twitter4J Jira site.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/jira/browse/TFJ/fixforversion/10100&#034;&gt;http://yusuke.homeip.net/jira/browse/TFJ/fixforversion/10100&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+  <entry>
+    <title>releasing Twitter4J 1.0.6</title>
+    <link rel="alternate" type="text/html" href="http://yusuke.homeip.net/blog/2008/10/29/releasing_twitter4j_1_0_6.html"/>
+    <author>
+      <name>Yusuke Yamamoto</name>
+    </author>
+    <id>tag:yusuke.homeip.net,2008-10-28:blog/1225236360000</id>
+    <updated>2008-10-28T23:26:00Z</updated>
+    <published>2008-10-28T23:26:00Z</published>
+    
+    
+    <category term="java" label="java" scheme="http://yusuke.homeip.net/blog/tags/java/" />
+    
+    <category term="twitter" label="twitter" scheme="http://yusuke.homeip.net/blog/tags/twitter/" />
+    
+    <category term="twitter4j" label="twitter4j" scheme="http://yusuke.homeip.net/blog/tags/twitter4j/" />
+    
+    
+      
+        <content type="html">
+          &lt;p&gt;I&#039;m glad to announce the release of Twitter4J 1.0.6.&lt;br/&gt;Twitter4J is an open-sourced and mavenized Java library for the Twitter API which is released under a BSD-style license.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/twitter4j/index.html&#034;&gt;http://yusuke.homeip.net/twitter4j/index.html&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;With Twitter4J, you can easily integrate your application with twitter.com.&lt;br/&gt;&lt;br/&gt;Twitter4J 1.0.6 fixes some compatibility issues.&lt;br/&gt;All projects depending on Twitter4J are strongly suggested to update the library.&lt;br/&gt;You can check the complete list of changes at the Twitter4J Jira site.&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/jira/secure/IssueNavigator.jspa?reset=true&amp;pid=10002&amp;fixfor=10090&#034;&gt;http://yusuke.homeip.net/jira/secure/IssueNavigator.jspa?reset=true&amp;pid=10002&amp;fixfor=10090&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </content>
+      
+      
+    
+  </entry>
+  
+</feed>

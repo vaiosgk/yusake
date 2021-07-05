@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: サーバ移行 -&gt; OSX</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/000145.html" title="ddclient の OSX へのインストールメモ"/>
+<link rel="next" href="../../diary/archives/000147.html" title="Diabloを手に入れろ！"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000146.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/146"
+    dc:title="サーバ移行 -&gt; OSX"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000146.html"
+    dc:subject="Java"
+    dc:description="と思ったがimagemagickのインストールが実はうまくいってなかったぽくサムネイル作成で文句を言われるので NETPBMってのを入れてみる。 
+$fink install netpbm
+あと IPC::Run ってのをインストール。
+&lt;a href=&quot;http://www.perl.com/CPAN/modules/by-module/IPC/IPC-Run-0.78.tar.gz&quot;&gt;IPC-Run-0.78.tar.gz&lt;/a&gt;
+# perl Makefile.PL
+# make
+# make test
+# make install
+テストに失敗するが無視した。 
+mt.cfg には以下のように設定。 
+ImageDriver NetPBM
+NetPBMPath /sw/bin"
+    dc:creator="yusuke"
+    dc:date="2004-12-04T01:30:19+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/000145.html">&laquo; ddclient の OSX へのインストールメモ</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/000147.html">Diabloを手に入れろ！ &raquo;</a>
+</p>
+<h2>2004&#24180;12&#26376;04&#26085;</h2>
+<h3>サーバ移行 -&gt; OSX</h3>
+<p>Linux(PowerBook2400) -&gt; OSX(iBook) へ移行したのでメモ<br/>
+-sshの設定<br/>
+-Apacheのインストール<br/>
+-PostgreSQLのインストール<br/>
+-PHPのインストール<br/>
+-Imagemagickのインストール<br/>
+-DBIのインストール<br/>
+-DBD-Pgのインストール<br/>
+-Movabletypeのインストール<br/>
+をした。</p>
+<div id="a000146more"><div id="more">
+<p>・SSH の設定<br/>
+参考サイト:<br/>
+<a href="http://homepage3.nifty.com/toralu/MEMO/ssh.html">http://homepage3.nifty.com/toralu/MEMO/ssh.html</a></p>
+<p>鍵の作成</p>
+<p>$ ssh-keygen -t rsa(クライアントで)<br/>
+-&gt;~/.ssh/id_rsa.pub に公開鍵が作成される<br/>
+id_rsa.pub をサーバにコピーしてサーバに登録</p>
+<p>$ cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys(サーバ側で)</p>
+<p>ssh による接続<br/>
+$ ssh ユーザ名@IPホスト名</p>
+<p>・Apache 2.0.52 のコンパイル/インストール<br/>
+$ ./configure --enable-deflate --enable-proxy --enable-proxy-http --enable-so --with-module-dav --with-module-dav-fs<br/>
+$ make<br/>
+# make install</p>
+<p>・Apache の自動起動設定<br/>
+<a href="http://www.macdevcenter.com/pub/a/mac/2003/10/21/startup.html">http://www.macdevcenter.com/pub/a/mac/2003/10/21/startup.html</a></p>
+<p># mkdir /Library/StartupItems/Apache2<br/>
+# cd /Library/StartupItems/Apache2<br/>
+# vi Apache2<br/>
+-------<br/>
+#!/bin/sh</p>
+<p>##<br/>
+# Apache HTTP Server<br/>
+##</p>
+<p>. /etc/rc.common</p>
+<p>StartService ()<br/>
+{<br/>
+        ConsoleMessage "Starting Apache web server"<br/>
+        apachectl start<br/>
+}</p>
+<p>StopService ()<br/>
+{<br/>
+    ConsoleMessage "Stopping Apache web server"<br/>
+    apachectl stop<br/>
+}</p>
+<p>RestartService ()<br/>
+{<br/>
+        ConsoleMessage "Restarting Apache web server"<br/>
+        apachectl restart<br/>
+}</p>
+<p>RunService "$1"<br/>
+----</p>
+<p># vi StartupParameters.plist<br/>
+-------<br/>
+{<br/>
+  Description     = "Apache web server";<br/>
+  Provides        = ("Web Server");<br/>
+  Requires        = ("DirectoryServices");<br/>
+  Uses            = ("Disks", "NFS");<br/>
+  OrderPreference = "None";<br/>
+}<br/>
+---------</p>
+<p><br/>
+・PostgreSQL のインストール<br/>
+平田直毅さんという方がOSX用のインストーラを作成してくださっているので利用。楽チン♪<br/>
+<a href="http://www.heavyrain.jp/mac/postgrex/">http://www.heavyrain.jp/mac/postgrex/</a><br/>
+また Magic Postgre ってツールでデータベースを作成。<br/>
+データベース名は mt、文字コードは Unicode で。</p>
+<p>・PHPのコンパイル/インストール<br/>
+PHP5.0.2 を使ったらなんだか遅かったので結局4.3.9を使うことにした。<br/>
+なんとなくPostgreSQL を有効にしてコンパイル。<br/>
+$ ./configure --with-apxs2=/usr/local/apache2/bin/apxs --with-pgsql=/usr/local/pgsql/ --enable-mbstring<br/>
+$ make<br/>
+# make install</p>
+<p>・Imagemagick のインストール<br/>
+OSXでなコンパイルがうまくいかないという話題が良く見つかったけど問題なくインストールできた。<br/>
+Movabletypeでアップロードした画像のサムネイル作成に必要<br/>
+$ cd ImageMagick-6.1.5<br/>
+$ ./configure<br/>
+$ make<br/>
+$ sudo make install</p>
+<p>・DBI(PerlのDBインターフェース？)のインストール<br/>
+<a href="http://www.ring.gr.jp/archives/lang/perl/CPAN/modules/by-category/07_Database_Interfaces/DBI/DBI-1.46.tar.gz">DBI-1.46.tar.gz</a>をダウンロード<br/>
+$ perl Makefile.PL<br/>
+$ make<br/>
+# make install</p>
+<p>・DBD-Pgのインストール(DBIのPotgreSQL用ドライバ？)のインストール<br/>
+<a href="http://www.ring.gr.jp/archives/lang/perl/CPAN/modules/by-category/07_Database_Interfaces/DBD/DBD-Pg-1.32.tar.gz">DBD-Pg-1.32.tar.gz</a>をダウンロード<br/>
+$ perl Makefile.PL<br/>
+$ make<br/>
+$ make test<br/>
+# make install</p>
+<p>・Movabletypeのインストール<br/>
+<a href="http://www.movabletype.jp/product_overview.shtml">3.1日本語版</a>をダウンロード<br/>
+mt.cfgを編集</p>
+<p>-CGIを公開するパスを登録<br/>
+18: CGIPath http://WWW.YOUR-SITE.COM/PATH/TO/MT/<br/>
+↓<br/>
+CGIPath http://yusuke.homeip.net/diary/mt/<br/>
+-静的コンテンツを配置するパスを登録<br/>
+63: StaticWebPath /path/to/static-files/<br/>
+↓<br/>
+StaticWebPath /diary/<br/>
+-データベースの設定<br/>
+38: # ObjectDriver DBI::mysql<br/>
+39: # Database <database-name><br/>
+40: # DBUser <database-username><br/>
+41: # DBHost localhost<br/>
+↓<br/>
+ObjectDriver DBI::postgres<br/>
+Database データベース名<br/>
+DBUser DBユーザ名<br/>
+DBHost localhost</p>
+<p>mt-db-pass.cgi にデータベースのパスワードを記述</p>
+<p>-権限の設定<br/>
+chmod 755 path/to/mtroot/mt*.cgi</p>
+<p>/usr/local/apache2/cgi-bin/ へ全てのファイルを移動<br/>
+/usr/local/apache2/htdocs/ に diary という名前のフォルダを掘る<br/>
+cgi-bin フォルダより docs,images,index.html,styles.css,mt.js を diary フォルダへ移動</p>
+<p>-httpd.conf を編集<br/>
+追加<br/>
+ScriptAlias /diary/mt/ "/usr/local/apache2/cgi-bin/"</p>
+<p>http://localhost/diary/mt/mt-load.cgi にアクセスして初期化</p>
+<p>mt-load.cgi を見えないところへ移動</p>
+<p>http://localhost/diary/mt/mt.cgi にアクセスしてWebLogの初期設定</p>
+<p><br/>
+ウェブログの名前:侍ズム</p>
+<p>ローカル・サイト・パス:/usr/local/apache2/htdocs/diary<br/>
+サイトのURL:http://yusuke.homeip.net/diary/<br/>
+ローカル・アーカイブ・パス:/usr/local/apache2/htdocs/diary/archives</p>
+<p>アーカイブのURL:http://yusuke.homeip.net/diary/archives/<br/>
+時間帯:UTC+9 (日本時間)</p>
+<p><br/>
+過去のログのインポート<br/>
+cgi-bin  以下に  import ディレクトリを作成<br/>
+以前の movabletype よりエクスポートしたファイル(mt.html) を配置してインポートを実行<br/>
+おかしな文字列が含まれているのかSQLのエラー(invalid byte sequence for encoding "UNICODE": 0xd601)がでた。エディタで開いて UTF-8 で保存したら正常にインポートできた。</p>
+<p>再構築して開いてみると文字化けする。パケットキャプチャしてみるとレスポンスにウソのエンコードが記載されている。<br/>
+httpd.conf をちょっといじったら直った。</p>
+<p>AddDefaultCharset ISO-8859-1<br/>
+↓<br/>
+AddDefaultCharset Off</p>
+</div></div>
+<p class="posted">投稿者 yusuke : 2004&#24180;12&#26376;04&#26085; 01:30</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/146</p>
+<h2 id="comments">コメント</h2>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

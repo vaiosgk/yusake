@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <base href=".">
+    <meta name="description" content="Samuraism"/>
+    <meta name="abstract" content=""/>
+    <meta name="author" content="Yusuke Yamamoto"/>
+    <meta name="generator" content="Pebble (http://pebble.sourceforge.net)"/>
+    <title>Running WebLogic Server 10g Release 3 on a Mac - Samuraism</title>
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/blog/../../../../blog/rss.xml"/>
+    <link rel="alternate" type="application/rdf+xml" title="RDF" href="http://yusuke.homeip.net/blog/rdf.xml"/>
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="../../../../blog/atom.xml"/>
+    <link rel="stylesheet" href="../../../../blog/pebble.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../../../blog/themes/user-blog/screen.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../../../../blog/themes/_pebble/print.css" type="text/css" media="print"/>
+    <link rel="stylesheet" href="../../../../blog/themes/_pebble/handheld.css" type="text/css" media="handheld"/>
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/themes/user-blog/images/favicon.ico" type="image/x-icon"/>
+    <script type="text/javascript" src="../../../../FCKeditor/fckeditor.js"></script>
+    <script type="text/javascript" src="../../../../scripts/pebble.js"></script>
+    <script type="text/javascript" src="../../../../scripts/prototype.js"></script>
+    <script type="text/javascript" src="../../../../scripts/scriptaculous.js"></script>
+    <script type="text/javascript" src="../../../../scripts/dwr-engine.js"></script>
+    <script type="text/javascript" src="../../../../dwr/util.js"></script>
+    <script type="text/javascript" src="../../../../dwr/interface/Pebble.js"></script>
+  </head>
+  <body>
+  <div id="body">
+    <script src="../../../../maps_file_api_v_1_key_ABQIAAAAtS2fi_RnBiuUs4BlVHjt6BRABsBgP8wqQh7kS3FgnXJL7vMCZhRCUVBp4cfEBxevDEQRKjj9DJC-Yg.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript" src="../../../../blog/themes/user-diary/lightbox/lightbox.js"></script>
+    <div id="header">
+      <div id="blogName"><a href="../../../../blog.html">Samuraism</a></div>
+      <div id="blogDescription"><span></span></div>
+    </div>
+    <div id="linearNavigation">
+      <a href="/">&lt;&lt; Installing Apache 2.0.63</a> |
+    <a href="../../../../blog.html">Home</a>
+      | <a href="/">Java for Mac OS X 10.5 Update 2 &gt;&gt;</a>
+    </div>
+    <div id="sidebar">
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>About</span></div>
+  <div class="sidebarItemBody">
+    <a href="http://www.linkedin.com/in/yusuke"><img src="../../../../img/webpromo/btn_viewmy_160x33.gif" width="160" height="33" border="0" alt="View Yusuke Yamamoto's profile on LinkedIn"/></a>
+<br>
+Follow me on Twitter: <a href="http://twitter.com/yusukeyamamoto">yusukeyamamoto</a>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Search</span></div>
+  <div class="sidebarItemBody">
+    <form name="searchForm" method="post" action="../../../../blog/search.html" accept-charset="UTF-8">
+  <input type="text" name="query" size="15" value=""/>
+  <input type="submit" value="Search"/>
+</form>
+    <a href="../../../../blog/tags.html">Tags</a> |
+    <a href="../../../../blog/search.html">Advanced Search</a>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Ad</span></div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+/* 200x200, ä½ææ¸ã¿ 08/09/06 */
+google_ad_slot = "3834106799";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript" src="../../../../pagead/show_ads.js">
+</script>  <div class="sidebarItemBody">
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Tools & Utilities</span></div>
+  <div class="sidebarItemBody">
+    <ul>
+      <li><a href="../../../../samurai.html">Samurai</a></li>
+      <li><a href="../../../../komuso.html">Komuso</a></li>
+      <li><a href="../../../../waraji.html">Waraji</a></li>
+      <li><a href="../../../../twitter4j.html">Twitter4J</a></li>
+      <li><a href="../../../../log4twitter.html">Log4Twitter</a></li>
+    </ul>  
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Recent Responses <a href="../../../../blog/responses/../../../../blog/rss.xml"></a></span></div>
+  <div class="sidebarItemBody">
+    <ul>
+      <li><a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1240405665212" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1240405665212">Insufficient Disk Space Exception</a><br/>I've reflected your comment to the entry body.</li>
+      <li><a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1238592241427" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1238592241427">Insufficient Disk Space Exception</a><br/>Very helpful guide. Especially the part with the Eclipse version since there is big room for confusion there with the different Eclipse versions and builds. Me I downloaded a prepared Eclipse WTP package from here that helped making things faster:  ...</li>
+      <li><a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237925396161" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237925396161">Re: Running WebLogic Server 10g Release 3 on a Mac</a><br/>Anyone know how to solve this? I am trying to run config.sh so I can configure my domain, and I get this error:  /config.sh: Don't know how to set the shared library path for Darwin.  The commEnv.sh doesn't know how to handle Darwin and I am not sure ...</li>
+      <li><a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237915875073" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237915875073">Re: Running WebLogic Server 10g Release 3 on a Mac</a><br/>Anyone managed to launch Weblogic Workshop from Quicklaunch?   If I run it I get not supported on this platform?  I can launch Eclipse with the Oracle stuff installed into it for workshop but I get an error &quot;The custom launcher required by workshop ...</li>
+      <li><a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237915492409" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237915492409">Re: Running WebLogic Server 10g Release 3 on a Mac</a><br/>For any of you struggling with eclipse here are the more detailed instructions:  To install eclipse get base eclipse from: http://archive.eclip...</li>
+      <li><a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237874253778" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237874253778">Re: Running WebLogic Server 10g Release 3 on a Mac</a><br/>Thanks for the post. I am going to try to set up my WL according to your instructions. Could You please explain the following statement: "The only applicable version is Eclipse 3.3.2(Europa) with WTP2.0.3. The latest version is 3.4(Ganymede) and it is not ...</li>
+      <li><a href="/#comment1237873806965" title="http://yusuke.homeip.net/blog/2008/09/25/java_for_mac_os_x_10_5_update_2.html#comment1237873806965">Re: Java for Mac OS X 10.5 Update 2</a><br/>Thanks for the post. I am going to try to set up my WL according to your instructions.   Could You please explain the following statement: "The only applicable version is Eclipse 3.3.2(Europa) with WTP2.0.3. The latest version is 3.4(Ganymede) and it is ...</li>
+    </ul>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Recent Blog Entries <a href="../../../../blog/rss.xml"></a></span></div>
+  <div class="sidebarItemBody">
+    <ul>
+      <li><a href="/" title="http://yusuke.homeip.net/blog/2009/04/19/twitter4j_2_0_0_released_now_officially_supports_oauth_authorization_scheme.html">Twitter4J 2.0.0 released, now officially supports OAuth authorization scheme</a>
+        <br/>Twitter4J is an open-sourced, mavenized and Google App Engine safe New! Java library for the Twitter API which is released under the BSD license.Twitter4J 2.0.0 is now available for download.This version is already available in the Maven central ...
+      </li>
+      <li><a href="/" title="http://yusuke.homeip.net/blog/2009/04/15/twitter4j_now_supports_oauth_authentication_scheme.html">Twitter4J now supports OAuth authentication scheme</a>
+        <br/>The time has come.Twitter4J now supports OAuth authentication scheme in the latest build.It's not available in the central repo yet and you can download the  latest build at ...
+      </li>
+      <li><a href="/" title="http://yusuke.homeip.net/blog/2009/04/08/twitter4j_1_1_8_released.html">Twitter4J 1.1.8 released</a>
+        <br/>Twitter4J 1.1.8 is now available for download.This version is already available in the Maven central repository.Here are the list of fixes included in version 1.1.8.Recompilation of your project is suggested before you update your twitter4j library.       ...
+      </li>
+      <li><a href="../../../../blog/2009/02/01/sakasa_fuji_in_the_sky.html" title="http://yusuke.homeip.net/blog/2009/02/01/sakasa_fuji_in_the_sky.html">Sakasa-Fuji in the sky</a>
+        <br/>It is no doubt that Mt. Fuji is the most beautiful mountain in Japan. Therefore many photographers, and painters love Mt. Fuji.There is a quite popular composition of the mountain which is called &quot;逆さ富士&quot;(Sak...
+      </li>
+      <li><a href="../../../../blog/2009/01/12/twitter4j_1_1_4_released.html" title="http://yusuke.homeip.net/blog/2009/01/12/twitter4j_1_1_4_released.html">Twitter4J 1.1.4 released</a>
+        <br/>Twitter4J 1.1.4 is now available for download.http://yusu...
+      </li>
+      <li><a href="../../../../blog/2008/12/02/twitter4j_1_1_2_released.html" title="http://yusuke.homeip.net/blog/2008/12/02/twitter4j_1_1_2_released.html">Twitter4J 1.1.2 released</a>
+        <br/>Twitter4J 1.1.2 has just been released and will be available from the maven central repository soon.Twitter4J is an open-sourced and mavenizable Java library for the Twitter API which is released under a BSD-style ...
+      </li>
+      <li><a href="../../../../blog/2008/11/22/twitter4j_1_1_1_released.html" title="http://yusuke.homeip.net/blog/2008/11/22/twitter4j_1_1_1_released.html">Twitter4J 1.1.1 released</a>
+        <br/>Twitter4J 1.1.1 has just been released and will be available from the maven central repository soon.Twitter4J is an open-sourced and mavenizable Java library for the Twitter API which is released under a BSD-style ...
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Tags</span></div>
+  <div class="sidebarItemBody">
+    <div class="sidebarTagCloud">
+    <ul>
+      <li><span class="tagCloud1"><a href="../../../../blog/tags/apache.html" title="rank=1, blog entries=1">apache</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../blog/tags/bea.html" title="rank=1, blog entries=1">bea</a></span></li>
+      <li><span class="tagCloud10"><a href="../../../../blog/tags/java.html" title="rank=10, blog entries=10">java</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../blog/tags/jboss.html" title="rank=1, blog entries=1">jboss</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../blog/tags/jdbc.html" title="rank=1, blog entries=1">jdbc</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../blog/tags/jdk.html" title="rank=1, blog entries=1">jdk</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../blog/tags/mac.html" title="rank=1, blog entries=1">mac</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../blog/tags/oracle.html" title="rank=1, blog entries=1">oracle</a></span></li>
+      <li><span class="tagCloud1"><a href="/" title="rank=1, blog entries=1">pebble</a></span></li>
+      <li><span class="tagCloud7"><a href="../../../../blog/tags/twitter.html" title="rank=7, blog entries=7">twitter</a></span></li>
+      <li><span class="tagCloud7"><a href="../../../../blog/tags/twitter4j.html" title="rank=7, blog entries=7">twitter4j</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../blog/tags/type4.html" title="rank=1, blog entries=1">type4</a></span></li>
+      <li><span class="tagCloud1"><a href="../../../../blog/tags/weblogic.html" title="rank=1, blog entries=1">weblogic</a></span></li>
+    </ul>
+    </div>
+   </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Navigate</span></div>
+  <div class="sidebarItemBody">
+    <div class="calendar"><table width="100%"><tr><td colspan="7" align="center"><b><a href="../../../../blog/2008/09.html">September 2008</a></b></td></tr><tr><td class="calendarDayHeader" width="14%">Sun</td><td class="calendarDayHeader" width="14%">Mon</td><td class="calendarDayHeader" width="14%">Tue</td><td class="calendarDayHeader" width="14%">Wed</td><td class="calendarDayHeader" width="14%">Thu</td><td class="calendarDayHeader" width="14%">Fri</td><td class="calendarDayHeader" width="14%">Sat</td></tr><tr><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;1&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;2&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;3&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;4&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;5&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;6&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;&nbsp;7&nbsp;</td><td class="calendarDay">&nbsp;&nbsp;8&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="/">&nbsp;9</a>&nbsp;</td><td class="calendarDay">&nbsp;10&nbsp;</td><td class="calendarDay">&nbsp;11&nbsp;</td><td class="calendarDay">&nbsp;12&nbsp;</td><td class="calendarDay">&nbsp;13&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;14&nbsp;</td><td class="calendarDay">&nbsp;15&nbsp;</td><td class="calendarDay">&nbsp;16&nbsp;</td><td class="calendarDay">&nbsp;17&nbsp;</td><td class="calendarDay">&nbsp;18&nbsp;</td><td class="calendarDay">&nbsp;19&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="/">20</a>&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;21&nbsp;</td><td class="calendarDay">&nbsp;22&nbsp;</td><td class="calendarDay">&nbsp;23&nbsp;</td><td class="calendarDay">&nbsp;24&nbsp;</td><td class="calendarDayWithEntries">&nbsp;<a href="/">25</a>&nbsp;</td><td class="calendarDay">&nbsp;26&nbsp;</td><td class="calendarDay">&nbsp;27&nbsp;</td></tr><tr><td class="calendarDay">&nbsp;28&nbsp;</td><td class="calendarDay">&nbsp;29&nbsp;</td><td class="calendarDay">&nbsp;30&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td><td class="calendarDay">&nbsp;</td></tr><tr><td colspan="7" align="center"><a href="../../../../blog/2008/08.html">Aug</a>&nbsp; | &nbsp;<a href="/">Today</a>&nbsp; | &nbsp;<a href="../../../../blog/2008/10.html">Oct</a></td></tr></table></div>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Archives</span></div>
+  <div class="sidebarItemBody">
+    <table width="99%" cellpadding="0" cellspacing="0">
+        <tr>
+        <td valign="top">
+          <b>2009</b><br/>
+          <a href="/">May</a> (0)
+          <br/>
+          <a href="/">April</a> (3)
+          <br/>
+          <a href="/">March</a> (0)
+          <br/>
+          <a href="../../../../blog/2009/02.html">February</a> (1)
+          <br/>
+          <a href="../../../../blog/2009/01.html">January</a> (1)
+          <br/>
+          <br/>
+        </td>
+        <td valign="top">
+          <b>2008</b><br/>
+          <a href="../../../../blog/2008/12.html">December</a> (1)
+          <br/>
+          <a href="../../../../blog/2008/11.html">November</a> (3)
+          <br/>
+          <a href="../../../../blog/2008/10.html">October</a> (1)
+          <br/>
+          <a href="../../../../blog/2008/09.html">September</a> (4)
+          <br/>
+          <a href="../../../../blog/2008/08.html">August</a> (2)
+          <br/>
+          <br/>
+        </td>
+        </tr>
+    </table>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Subscribe <a href="../../../../blog/rss.xml"></a></span></div>
+  <div class="sidebarItemBody">
+    <a href="http://yusuke.homeip.net/blog/../../../../blog/rss.xml">RSS</a> |
+    <a href="../../../../blog/atom.xml">Atom</a> |
+    <a href="../../../../blog/subscribe.html">E-mail</a>
+  </div>
+</div>
+<div class="sidebarItem">
+  <div class="sidebarItemTitle"><span>Login</span></div>
+  <form id="loginForm" name="loginForm" method="post" action="../../../../j_acegi_security_check.html">
+    <div class="sidebarItemBody">
+    <input type="hidden" name="redirectUrl" value="/blog/"/>
+      <table>
+        <tr>
+          <td>Username</td>
+          <td><input id="j_username" name="j_username" type="text" size="16"/></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="j_password" size="16"/></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            Remember me<input type="checkbox" name="_acegi_security_remember_me"/>
+            <input type="submit" value="Login"/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+<script type="text/javascript">
+//  $('loginForm').style.display = 'none';
+</script>
+    </div>
+    <div id="content">
+<div class="contentItem published">
+  <div class="contentItemLinks">
+</div>
+  <a name="a1221842784297"></a>
+  <h1><a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html">Running WebLogic Server 10g Release 3 on a Mac</a></h1>
+  <h2></h2>
+  <div class="contentItemBody">
+        <p>Running WebLogic Server on Mac OSX is not supported. But it doesn't mean that you cannot install, run and evaluate WebLogic Server on your most favorite Mac under <a href="http://www.oracle.com/technology/software/popup-license/standard-license.html">the terms of license</a>. Actually it is very possible and here I am writing a detailed instructions.<br/><br/>1. download the installer<br/>Download the installer from the OTN site.<br/>- <a href="http://www.oracle.com/technology/software/products/ias/bea_main.html">Oracle BEA Product Downloads</a><br/><br/>You are required to login with a pre-registered OTN account, not a BEA login-id.<br/>Currently the only installer suitable for Mac OSX is the one shipped for HPUX.<br/>Choose : Oracle WebLogic Server 10.3 - Package Installer &gt; HP &gt; Itanium: 473 MB &gt; <a href="http://download.oracle.com/otn/bea/weblogic/server103/server103_generic.jar">server103.generic.jar</a>(login required)<br/><br/>2. tweak the JVM<br/>The WebLogic Server 10.3 installer doesn't recognize Mac OSX's JDK as a valid JDK by default.<br/>You need to create jre/lib/rt.jar and jre/lib/core.jar under your JAVA_HOME as followings:<br/><div class="codeSample">$ cd /System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home <br/>$ sudo mkdir jre<br/>$ sudo mkdir jre/lib<br/>$ sudo mkdir jre/lib<br/>$ sudo touch jre/lib/rt.jar<br/>$ sudo touch jre/lib/core.jar</div><br/><br/>3. install Eclipse<br/>WebLogic Workshop is an Eclipse based IDE.<br/>On Mac OSX you need to install Eclipse manually prior to the WLS installation.<br/>The only applicable version is Eclipse 3.3.2(Europa) with WTP2.0.3.<br/>- <a href="http://download.eclipse.org/eclipse/downloads/">Eclipse Project Downloads</a><br/>The latest version is 3.4(Ganymede) and it is not supported.<br/><br/><a href="#"></a><br/>WTP installation<br/><br/>4. install WebLogic Server<br/>You can run the installer with following command.<br/><pre class="codeSample"> $/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/binjava -Xmx1024  -Dos.name=unix -jar server103.generic.jar</pre><br/>The installer jar is a double-clickable jar file, but you may hit OutOfMemoryError with that way.<br/><br/><br/><a href="#"></a><br/>running the installer<br/><br/><a href="#"></a><br/>installer - 1<br/><br/><a href="#"></a><br/>installer - 2 : the BEA home can be anywhere you want<br/><br/><a href="#"></a><br/>installer - 3 : &quot;Complete&quot; should be the best choice<br/><br/><a href="#"></a><br/>just FYI, the choicees you'll see with &quot;Cumstom&quot; installation<br/><br/><a href="#"></a><br/>installer - 4 : selecting Eclipse home<br/><br/><a href="#"></a><br/>You'll see this dialog if you selected non 3.3.2 + WTP 2.0.3 version of Eclipse<br/><br/><a href="#"></a><br/>installer - 5 : product installation directories - leave the default values<br/><br/><a href="#"></a><br/>installer - 6 : confirmation of the installation<br/><br/><a href="#">1" rel="lightbox[wls103]"></a><br/>installation in progress - 1<br/><br/><a href="#">" rel="lightbox[wls103]"></a><br/>installation in progress - 2<br/><br/><a href="#">3" rel="lightbox[wls103]"></a><br/>installation in progress - 3<br/><br/><a href="#">4" rel="lightbox[wls103]"></a><br/>installation in progress - 4<br/><br/><a href="#">5" rel="lightbox[wls103]"></a><br/>installation in progress - 5<br/><br/><a href="#">6" rel="lightbox[wls103]"></a><br/>installation in progress - 6<br/><br/><a href="#">7" rel="lightbox[wls103]"></a><br/>installation in progress - 7<br/><br/><a href="#">8" rel="lightbox[wls103]"></a><br/>installation in progress - 8<br/><br/><a href="#">9" rel="lightbox[wls103]"></a><br/>installation in progress - 9<br/><br/><a href="#">10" rel="lightbox[wls103]"></a><br/>installation in progress - 10<br/><br/><a href="#"></a><br/>installation finished - click &quot;Done&quot; to run the QuickStart app if you want<br/><br/><a href="#"></a><br/>QuickStart<br/><br/>5. configuring the script<br/>The super heavy administration console eats up the permanent generation easily and you'll see OutOfMemoryError with the default script on Mac OSX.<br/>It is as simple as just modify $BEA_HOME/user_projects/domains/base_domain/binsetDomainEnv.sh to tell WLS that you're using a taste of Sun's JVM in order to avoid OOM.<br/><div class="codeSample">diff setDomainEnv.sh setDomainEnv.sh.bak <br/>85c85<br/>&lt; 		JAVA_VENDOR="Unknown"<br/>---<br/>&gt; 		JAVA_VENDOR="Sun"</div><br/><br/>6. run WLS<br/>use startWebLogic.sh to start WebLogic Server<br/><div class="codeSample">/Users/yusukey/bea103/user_projects/domains/base_domain/bin$ ./startWebLogic.sh <br/>./startWebLogic.sh: Don't know how to set the shared library path for Darwin.  <br/>.<br/>.<br/>JAVA Memory arguments: -Xms256m -Xmx512m -XX:CompileThreshold=8000 -XX:PermSize=48m  -XX:MaxPermSize=128m<br/>.<br/>WLS Start Mode=Development<br/>.<br/>CLASSPATH=:/Users/yusukey/bea103/patch_wlw1030/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/Users/yusukey/bea103/patch_wls1030/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/Users/yusukey/bea103/patch_cie660/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/lib/tools.jar:/Users/yusukey/bea103/wlserver_10.3/server/lib/weblogic_sp.jar:/Users/yusukey/bea103/wlserver_10.3/server/lib/weblogic.jar:/Users/yusukey/bea103/modules/features/weblogic.server.modules_10.3.0.0.jar:/Users/yusukey/bea103/wlserver_10.3/server/lib/webservices.jar:/Users/yusukey/bea103/modules/org.apache.ant_1.6.5/lib/ant-all.jar:/Users/yusukey/bea103/modules/net.sf.antcontrib_1.0.0.0_1-0b2/lib/ant-contrib.jar::/Users/yusukey/bea103/wlserver_10.3/common/eval/pointbase/lib/pbclient57.jar:/Users/yusukey/bea103/wlserver_10.3/server/lib/xqrl.jar::<br/>.<br/>PATH=/Users/yusukey/bea103/wlserver_10.3/server/bin:/Users/yusukey/bea103/modules/org.apache.ant_1.6.5/bin:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/jre/bin:/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/bin:/sw/bin:/sw/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/yusukey/bin:/Library/Java/Home/bin:/Users/yusukey/maven-2.0.6/bin:/usr/X11R6/bin<br/>.<br/>***************************************************<br/>*  To start WebLogic Server, use a username and   *<br/>*  password assigned to an admin-level user.  For *<br/>*  server administration, use the WebLogic Server *<br/>*  console at http://hostname:port/console        *<br/>***************************************************<br/>starting weblogic with Java version:<br/>java version "1.6.0_05"<br/>Java(TM) SE Runtime Environment (build 1.6.0_05-b13-120)<br/>Java HotSpot(TM) 64-Bit Server VM (build 1.6.0_05-b13-52, mixed mode)<br/>Starting WLS with line:<br/>/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/bin/java -client   -Xms256m -Xmx512m -XX:CompileThreshold=8000 -XX:PermSize=48m  -XX:MaxPermSize=128m  -Xverify:none  -da -Dplatform.home=/Users/yusukey/bea103/wlserver_10.3 -Dwls.home=/Users/yusukey/bea103/wlserver_10.3/server -Dweblogic.home=/Users/yusukey/bea103/wlserver_10.3/server   -Dweblogic.management.discover=true  -Dwlw.iterativeDev= -Dwlw.testConsole= -Dwlw.logErrorsToConsole= -Dweblogic.ext.dirs=/Users/yusukey/bea103/patch_wlw1030/profiles/default/sysext_manifest_classpath:/Users/yusukey/bea103/patch_wls1030/profiles/default/sysext_manifest_classpath:/Users/yusukey/bea103/patch_cie660/profiles/default/sysext_manifest_classpath -Dweblogic.Name=AdminServer -Djava.security.policy=/Users/yusukey/bea103/wlserver_10.3/server/lib/weblogic.policy   weblogic.Server<br/>&lt;2008/09/20 1??38??18?b JST&gt; &lt;Info&gt; &lt;WebLogicServer&gt; &lt;BEA-000377&gt; &lt;Starting WebLogic Server with Java HotSpot(TM) 64-Bit Server VM Version 1.6.0_05-b13-52 from Apple Inc.&gt; <br/>&lt;2008/09/20 1??38??19?b JST&gt; &lt;Info&gt; &lt;Management&gt; &lt;BEA-141107&gt; &lt;Version: WebLogic Server 10.3  Fri Jul 25 16:30:05 EDT 2008 1137967 &gt; <br/>&lt;2008/09/20 1??38??20?b JST&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;BEA-000365&gt; &lt;Server state changed to STARTING&gt; <br/>&lt;2008/09/20 1??38??20?b JST&gt; &lt;Info&gt; &lt;WorkManager&gt; &lt;BEA-002900&gt; &lt;Initializing self-tuning thread pool&gt; <br/>&lt;2008/09/20 1??38??20?b JST&gt; &lt;Notice&gt; &lt;Log Management&gt; &lt;BEA-170019&gt; &lt;The server log file /Users/yusukey/bea103/user_projects/domains/base_domain/servers/AdminServer/logs/AdminServer.log is opened. All server side log events will be written to this file.&gt; <br/>&lt;2008/09/20 1??38??20?b JST&gt; &lt;Error&gt; &lt;Socket&gt; &lt;BEA-000438&gt; &lt;Unable to load performance pack. Using Java I/O instead. Please ensure that libmuxer library is in :'.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java'<br/>&gt; <br/>&lt;2008/09/20 1??38??23?b JST&gt; &lt;Notice&gt; &lt;Security&gt; &lt;BEA-090082&gt; &lt;Security initializing using security realm myrealm.&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;BEA-000365&gt; &lt;Server state changed to STANDBY&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;BEA-000365&gt; &lt;Server state changed to STARTING&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;Log Management&gt; &lt;BEA-170027&gt; &lt;The Server has established connection with the Domain level Diagnostic Service successfully.&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;BEA-000365&gt; &lt;Server state changed to ADMIN&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;BEA-000365&gt; &lt;Server state changed to RESUMING&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;Server&gt; &lt;BEA-002613&gt; &lt;Channel "Default" is now listening on 10.211.55.2:7001 for protocols iiop, t3, ldap, snmp, http.&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;Server&gt; &lt;BEA-002613&gt; &lt;Channel "Default[1]" is now listening on 10.37.129.2:7001 for protocols iiop, t3, ldap, snmp, http.&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;Server&gt; &lt;BEA-002613&gt; &lt;Channel "Default[3]" is now listening on 127.0.0.1:7001 for protocols iiop, t3, ldap, snmp, http.&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;Server&gt; &lt;BEA-002613&gt; &lt;Channel "Default[2]" is now listening on 192.168.1.97:7001 for protocols iiop, t3, ldap, snmp, http.&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;BEA-000331&gt; &lt;Started WebLogic Admin Server "AdminServer" for domain "base_domain" running in Development Mode&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Warning&gt; &lt;Server&gt; &lt;BEA-002611&gt; &lt;Hostname "rfvsdoc001.nrt1.fastsearch.net", maps to multiple IP addresses: 10.***.**.2, 10.**.***.2, 192.168.*.**, 127.0.0.1&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Warning&gt; &lt;Server&gt; &lt;BEA-002611&gt; &lt;Hostname "10.***.**.2", maps to multiple IP addresses: 10.***.**.2, 10.**.***.2, 192.168.*.**, 127.0.0.1&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Warning&gt; &lt;Server&gt; &lt;BEA-002611&gt; &lt;Hostname "10.**.***.2", maps to multiple IP addresses: 10.***.**.2, 10.**.***.2, 192.168.*.**, 127.0.0.1&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Warning&gt; &lt;Server&gt; &lt;BEA-002611&gt; &lt;Hostname "192.168.*.**", maps to multiple IP addresses: 10.***.**.2, 10.**.***.2, 192.168.*.**, 127.0.0.1&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;BEA-000365&gt; &lt;Server state changed to RUNNING&gt; <br/>&lt;2008/09/20 1??38??25?b JST&gt; &lt;Notice&gt; &lt;WebLogicServer&gt; &lt;BEA-000360&gt; &lt;Server started in RUNNING mode&gt;</div><br/><br/>7. accessing the administration console<br/>just hit http://localhost:7001/console<br/>The default UserID / password combination is weblogic / weblogic, not scott / tiger.<br/><br/><a href="#"></a><br/>login form<br/><br/><a href="#"></a><br/>administration console on a Mac<br/><br/>Please note that the super-handy dev2dev free license is no longer shipped.<br/>The Redwood Shores-based company is requesting you to buy a license in order to develop your application with WLS.(sigh)<br/></p>
+    <div class="metadata">
+      <div class="contentItemLinks">
+      <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#responses">Responses[11]</a>
+      <a href="http://yusuke.homeip.net/blog/../../../../blog/responses/../../../../blog/rss.xml?entry=1221842784297"></a>
+</div>
+      Posted by <a href="../../../../diary.html">山本 裕介</a> on September 20, 2008 1:46:24 AM JST
+      <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html">#</a>
+    </div>
+  </div>
+    <br/><br/>
+    <a name="responses"></a>
+<a name="comments"></a>
+      <div class="odd">
+<div id="comment1227596929375" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1227596929375.title"><a name="comment1227596929375"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1227596929375.author" class="unauthenticated">Huang</span> on November 25, 2008 4:08:49 PM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1227596929375" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1227596929375">#</a>
+  </div>
+  <div id="comment1227596929375.body" class="responseBody">
+    Thanks a lot !<br/>
+<br/>
+I am writing Java EE applications on Oracle BEA Weblogic Server 10g 3 and I believe if my mac could run the heavy application server and workshop, I will feel more satisfied when I spend a lot of time on these code. <br/>
+<br/>
+anyway, thank you very much.
+  </div>
+</div>
+      </div>
+      <div class="even">
+<div id="comment1228409531836" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1228409531836.title"><a name="comment1228409531836"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1228409531836.author" class="unauthenticated">Anonymous</span> on December 5, 2008 1:52:11 AM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1228409531836" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1228409531836">#</a>
+  </div>
+  <div id="comment1228409531836.body" class="responseBody">
+    thank you man!&nbsp; You saved me from having to develop on windows!
+  </div>
+</div>
+      </div>
+      <div class="odd">
+<div id="comment1229020126455" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1229020126455.title"><a name="comment1229020126455"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1229020126455.author" class="unauthenticated">Piotr Wyrwinski</span> on December 12, 2008 3:28:46 AM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1229020126455" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1229020126455">#</a>
+  </div>
+  <div id="comment1229020126455.body" class="responseBody">
+    Thanks for posting it. It's a great resource.<br/>
+One note: <br/>
+I had to add -Dos.name=unix to &quot;java ...server_103generic.jar&quot; command to avoid having out of space error during install.<br/>
+Once again- thanks for the post.
+  </div>
+</div>
+      </div>
+      <div class="even">
+<div id="comment1229508838000" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1229508838000.title"><a name="comment1229508838000"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1229508838000.author" class="unauthenticated"><a href="http://blog.xebia.com/" target="_blank" title="http://blog.xebia.com" rel="nofollow">Jeroen van Wilgenburg</a></span> on December 17, 2008 7:13:58 PM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1229508838000" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1229508838000">#</a>
+  </div>
+  <div id="comment1229508838000.body" class="responseBody">
+    Thanks a lot!<br/>
+<br/>
+I also had to add the os.name argument and add the following line to my startWebLogic.sh:<br/>
+<pre>USER_MEM_ARGS=&quot;-Xms256m -Xmx512m -XX:MaxPermSize=256m&quot;&</pre>
+<br/>
+<br/>
+<br/>
+There is also a small typo at point 4: -Xmx1024 should be -Xmx102<strong>m</strong>
+  </div>
+</div>
+      </div>
+      <div class="odd">
+<div id="comment1236914849399" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1236914849399.title"><a name="comment1236914849399"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1236914849399.author" class="unauthenticated">roger</span> on March 13, 2009 12:27:29 PM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1236914849399" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1236914849399">#</a>
+  </div>
+  <div id="comment1236914849399.body" class="responseBody">
+    Excellent document, I get WLS up and running, but I have problems finding Eclipse 3.3.2 &  WTP 2.0.3 ..  
+From the Eclipse site I have downloaded 3.3.2 & WTP 2.0.3  separately but I get errors... Also When I try to start Workshop I get the message:  Weblogic WorkShop is not supported on this plataform. Any Ideas?
+  </div>
+</div>
+      </div>
+      <div class="even">
+<div id="comment1237874253778" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1237874253778.title"><a name="comment1237874253778"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1237874253778.author" class="unauthenticated">Fat Bold Cyclop</span> on March 24, 2009 2:57:33 PM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237874253778" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237874253778">#</a>
+  </div>
+  <div id="comment1237874253778.body" class="responseBody">
+    Thanks for the post. I am going to try to set up my WL according to your instructions. Could You please explain the following statement: "The only applicable version is Eclipse 3.3.2(Europa) with WTP2.0.3. The latest version is 3.4(Ganymede) and it is not supported. " You meant 3.4 is not supported (by Eclipse) for Mac OS X or WL Workshop won't start on Ganymede?
+P.S. Sorry, I put a wrong comment button and the same comment to your Java for Mac OS X 10.5 Update 2. Sorry for that.
+  </div>
+</div>
+      </div>
+      <div class="odd">
+<div id="comment1237915492409" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1237915492409.title"><a name="comment1237915492409"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1237915492409.author" class="unauthenticated">Peter Anning</span> on March 25, 2009 2:24:52 AM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237915492409" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237915492409">#</a>
+  </div>
+  <div id="comment1237915492409.body" class="responseBody">
+    For any of you struggling with eclipse here are the more detailed instructions:<br/>
+<br/>
+To install eclipse get base eclipse from:<br/>
+http://archive.eclipse.org/eclipse/downloads/drops/R-3.3.2-200802211800/index.php<br/>
+&nbsp;Then install WTP dependencies:<br/>
+http://archive.eclipse.org/webtools/downloads/drops/R2.0/R-2.0.2-20080223205547/<br/>
+<br/>
+in this order:<br/>
+http://www.eclipse.org/downloads/download.php?file=/modeling/emf/emf/downloads/drops/2.3.2/R200802051830/emf-sdo-xsd-SDK-2.3.2.zip<br/>
+<br/>
+http://www.eclipse.org/downloads/download.php?file=/tools/gef/downloads/drops/3.3.2/R200802211602/GEF-SDK-3.3.2.zip<br/>
+<br/>
+http://www.eclipse.org/downloads/download.php?file=/datatools/downloads/1.5/dtp-sdk_1.5.2_022008.zip<br/>
+<br/>
+Then use the WTP update site (http://download.eclipse.org/webtools/updates/) to install WTP first install the enabling features 2.0.3 then install the Web Tools Platform WTP 2.0.3
+  </div>
+</div>
+      </div>
+      <div class="even">
+<div id="comment1237915875073" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1237915875073.title"><a name="comment1237915875073"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1237915875073.author" class="unauthenticated">Peter Anning</span> on March 25, 2009 2:31:15 AM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237915875073" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237915875073">#</a>
+  </div>
+  <div id="comment1237915875073.body" class="responseBody">
+    Anyone managed to launch Weblogic Workshop from Quicklaunch? <br/>
+<br/>
+If I run it I get not supported on this platform?<br/>
+<br/>
+I can launch Eclipse with the Oracle stuff installed into it for workshop but I get an error &quot;The custom launcher required by workshop has not been run. Several Workshop features will not be available. If you do not have the required -startup jar specified in your ini file this will happen.
+  </div>
+</div>
+      </div>
+      <div class="odd">
+<div id="comment1237925396161" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1237925396161.title"><a name="comment1237925396161"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1237925396161.author" class="unauthenticated">Anonymous</span> on March 25, 2009 5:09:56 AM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237925396161" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1237925396161">#</a>
+  </div>
+  <div id="comment1237925396161.body" class="responseBody">
+    Anyone know how to solve this? I am trying to run config.sh so I can configure my domain, and I get this error:<br/>
+<br/>
+/config.sh: Don't know how to set the shared library path for Darwin.<br/>
+<br/>
+The commEnv.sh doesn't know how to handle Darwin and I am not sure which libraries it is wanting to load. (native java libraries I guess). Is there another way to configure a domain? Why is no one else having this problem?
+  </div>
+</div>
+      </div>
+      <div class="even">
+<div id="comment1238592241427" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1238592241427.title"><a name="comment1238592241427"></a>Insufficient Disk Space Exception</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1238592241427.author" class="unauthenticated">Kyriakos</span> on April 1, 2009 10:24:01 PM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1238592241427" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1238592241427">#</a>
+  </div>
+  <div id="comment1238592241427.body" class="responseBody">
+    Very helpful guide. Especially the part with the Eclipse version since there is big room for confusion there with the different Eclipse versions and builds. Me I downloaded a prepared Eclipse WTP package from here that helped making things faster:
+<a href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/europa/winter/eclipse-jee-europa-winter-macosx-carbon.tar.gz"> http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/europa/winter/eclipse-jee-europa-winter-macosx-carbon.tar.gz</a>
+<p>Just one thing though, you need to add an extra argument for specifying the os.name. Otherwise it will not work and you get an Insufficient Disk Space Exception. So in my case the full command is:
+<p>
+/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/bin/java -Xmx1024m -Dos.name=unix -jar server103_generic.jar 
+  </div>
+</div>
+      </div>
+      <div class="odd">
+<div id="comment1240405665212" class="response approved" style="padding-left: 46px;">
+  <div class="contentItemLinks">
+      <a href="/">Reply</a>
+</div>
+  <h1>
+    <span id="comment1240405665212.title"><a name="comment1240405665212"></a>Insufficient Disk Space Exception</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="comment1240405665212.author" class="authenticated"><a href="../../../../diary.html" target="_blank" title="http://yusuke.homeip.net/diary/" rel="nofollow">山本 裕介</a></span> on April 22, 2009 10:07:45 PM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1240405665212" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1240405665212">#</a>
+  </div>
+  <div id="comment1240405665212.body" class="responseBody">
+    I've reflected your comment to the entry body.
+  </div>
+</div>
+      </div>
+<a name="trackbacks"></a>
+    <div align="center">
+      <br/>
+        <a href="/" onclick="showCommentForm(); return false;">Add a comment</a>
+        <a href="/">Send a TrackBack</a>
+    </div>
+    <div id="commentFormDiv" style="display:none;">
+  <script type="text/javascript" src="../../../../FCKeditor/fckeditor.js"></script>
+  <script type="text/javascript">
+  window.onload = function()
+  {
+    var oFCKeditor = new FCKeditor( 'commentBody' ) ;
+    oFCKeditor.BasePath = '/FCKeditor/' ;
+    oFCKeditor.Config["CustomConfigurationsPath"] = '/fckconfig_pebble.js';
+    oFCKeditor.ToolbarSet = 'Comment' ;
+    oFCKeditor.ReplaceTextarea() ;
+  }
+  </script>
+<form id="commentForm" name="commentForm" action="/" method="post" accept-charset="UTF-8">
+  <input type="hidden" name="blogId" value="blog"/>
+  <input type="hidden" name="entry" value="1221842784297"/>
+  <input type="hidden" name="comment" value=""/>
+<table width="99%">
+  <tr>
+    <td colspan="2">
+      <div id="previewComment">
+<div id="previewComment" class="response approved" style="padding-left: 30px;">
+  <div class="contentItemLinks">
+</div>
+  <h1>
+    <span id="previewComment.title"><a name="comment1241435814901"></a>Re: Running WebLogic Server 10g Release 3 on a Mac</span>
+  </h1>
+  <div class="metadata">
+    Comment from <span id="previewComment.author" class="unauthenticated">Anonymous</span> on May 4, 2009 8:16:54 PM JST
+    <a href="../../../../blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1241435814901" title="http://yusuke.homeip.net/blog/2008/09/20/running_weblogic_server_10g_release_3_on_a_mac.html#comment1241435814901">#</a>
+  </div>
+  <div id="previewComment.body" class="responseBody">
+  </div>
+</div>
+</div>
+      <br/>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Title</b></td>
+    <td><input type="text" name="title" size="40" value="Re: Running WebLogic Server 10g Release 3 on a Mac"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Body</b></td>
+    <td>
+      <textarea id="commentBody" name="commentBody" rows="8" cols="40"></textarea>
+      <div class="small"><b>HTML</b> : b, strong, i, em, blockquote, br, p, pre, a href="", ul, ol, li, sub, sup</div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Name</b></td>
+    <td><input type="text" id="author" name="author" size="40" value="Anonymous"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>E-mail address</b></td>
+    <td>
+      <input type="text" name="email" size="40" value=""/>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Website</b></td>
+    <td><input type="text" name="website" size="40" value=""/></td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Remember me</b></td>
+    <td>
+      Yes&nbsp;
+      <input type="radio" name="rememberMe" value="true"/>
+      No&nbsp;<input type="radio" name="rememberMe" value="false" checked="checked"/>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <p>
+      <b>E-mail addresses are not publicly displayed</b>, so please only leave your e-mail address if you would like to be notified when new comments are added to this blog entry (you can opt-out later).
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="right">
+      <input name="submit" type="submit" value="Preview" onclick="previewComment(); return false;"/>
+      <input name="submit" type="submit" value="Add Comment"/>
+    </td>
+  </tr>
+</table>
+</form></div>
+</div>
+    </div>
+    <div id="footer">
+Powered by <a href="http://pebble.sourceforge.net/">Pebble 2.3.1</a>
+      |
+      <a href="../../../../blog/login.html">Login</a>
+    </div>
+  </div>
+<script src="../../../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+  </body>
+</html>

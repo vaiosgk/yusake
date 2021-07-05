@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP"/>
+ <meta http-equiv="content-style-type" content="text/css"/>
+ <title>MovableType</title>
+ <link rel="stylesheet" href="skin/default.en.css" type="text/css" media="screen" charset="EUC-JP"/>
+ <link rel="stylesheet" href="skin/print.en.css" type="text/css" media="print" charset="EUC-JP"/>
+</head>
+<body>
+<div id="header">
+ <a href="/"><img id="logo" src="pukiwiki.png" width="512" height="64" alt="[PukiWiki]" title="[PukiWiki]"/></a>
+ <h1 class="title"><a href="/">MovableType</a> </h1>
+ <a href="index_MovableType.html"><span class="small">http://yusuke.homeip.net/index.html?MovableType</span></a>
+</div>
+<div id="navigator">
+ [ <a href="index_MovableType.html">Reload</a> ]
+ &nbsp;
+ [ <a href="/">New</a>
+ | <a href="/">Edit</a>
+ | <a href="/">Freeze</a>
+ | <a href="/">Diff</a>
+ | <a href="/">Upload</a>
+ ]
+ &nbsp;
+ [ <a href="index_Samuraism.html">Front page</a>
+ | <a href="index_cmd_list.html">List of pages</a>
+ | <a href="index_cmd_search.html">Search</a>
+ | <a href="index_RecentChanges.html">Recent changes</a>
+ | <a href="/">Backup</a>
+ | <a href="index__A5_D8_A5_EB_A5_D7.html">Help</a>
+ ]
+ [ <a href="/">Referer</a> ]
+</div>
+<hr class="full_hr"/>
+<table border="0" style="width:100%">
+ <tr>
+  <td class="menubar">
+   <div id="menubar">
+<ul><li><a href="/">top</a>&nbsp;&gt;
+<br/>
+<br/>
+&nbsp;<a href="tools.html">ツール</a>&nbsp;/&nbsp;<a href="index_tools.html" title="tools (60d)">tools</a>
+<br/>
+<br/>
+&nbsp;<a href="diary.html">日記</a></li></ul>
+   </div>
+  </td>
+  <td valign="top">
+   <div id="body">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="pagead/show_ads.js">
+</script>
+<p><a href="index_MovableType.html" title="MovableType (9d)">MovableType</a>のインストールメモ</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>本体
+<a href="http://www.movabletype.org/">http://www.movabletype.org/</a></li>
+<li>日本語化パッチ
+<a href="http://rebecca.ac/milano/mt/readme/">http://rebecca.ac/milano/mt/readme/</a>
+<a href="http://rebecca.ac/milano/mt/archives/000168.html">http://rebecca.ac/milano/mt/archives/000168.html</a></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>mt.cfgに設定したパラメータ
+<pre> CGIPath http://yusuke.homeip.net:9000/diary/mt/
+ StaticWebPath /diary/
+ NoHTMLEntities 1 (アンコメント)
+ PublishCharset utf8
+ #PostgreSQLにつなげるので
+ ObjectDriver DBI::postgres
+ Database mt
+ DBUser postgres</pre></li></ul>
+<p>パスワードは mt-db-pass.cgi に書く</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>PostgreSQL でデータベース作成
+<pre> $ createdb -E unicode  mt
+ CREATE DATABASE</pre></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Apacheに配置
+<pre> cp -R MT-2.661-full-lib/* /usr/local/apache2/cgi-bin/
+ cd /usr/local/apache2/cgi-bin/
+ chown -R nobody *
+ chgrp -R nobody *</pre></li></ul>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>httpd.conf を書き換え
+<pre> ScriptAlias /diary/mt/ &quot;/usr/local/apache2/cgi-bin/&quot;</pre></li></ul>
+<pre> &lt;Directory &quot;/usr/local/apache2/diary/mt&quot;&gt;
+     AllowOverride None
+     Options None
+     Order allow,deny
+     Allow from all
+ &lt;/Directory&gt;</pre>
+<p>動いた動いた
+<a href="/">http://yusuke.homeip.net:9000/diary/index.html</a></p>
+<p><a href="diary.html">http://yusuke.homeip.net:9000/diary/</a> からアクセスすると文字化けしちゃうけど後回し。</p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="pagead/show_ads.js">
+</script>
+</div>
+  </td>
+ </tr>
+</table>
+<div id="attach">
+<hr class="full_hr"/>添付ファイル: <a href="/" title="2007/07/14 18:49:11 22.2KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-20.html</a> <span class="small">5件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:49:09 17.5KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-19.html</a> <span class="small">6件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:49:05 45.3KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-18.html</a> <span class="small">6件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:49:02 31.8KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-17.html</a> <span class="small">3件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:49:00 64.7KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-16.html</a> <span class="small">4件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:57 13.3KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-15.html</a> <span class="small">5件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:54 33.9KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-14.html</a> <span class="small">3件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:51 33.3KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-13.html</a> <span class="small">5件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:48 47.1KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-12.html</a> <span class="small">5件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:46 65.4KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-11.html</a> <span class="small">5件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:43 20.9KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-10.html</a> <span class="small">6件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:41 41.1KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-9.html</a> <span class="small">3件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:39 28.1KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-8.html</a> <span class="small">3件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:37 27.8KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-7.html</a> <span class="small">5件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:35 35.2KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-6.html</a> <span class="small">6件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:33 28.9KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-5.html</a> <span class="small">5件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:31 40.4KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-4.html</a> <span class="small">5件</span>
+<span class="small">[<a href="index_plugin_attach_pcmd_info_file_14-07-4_html_refer_MovableType.html" title="添付ファイルの情報">詳細</a>]</span> <a href="index_plugin_attach_pcmd_open_file_14-07-3_html_refer_MovableType.html" title="2007/07/14 18:48:29 29.2KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-3.html</a> <span class="small">4件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:26 44.5KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-2.html</a> <span class="small">4件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/14 18:48:23 20.1KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>14-07-1.html</a> <span class="small">5件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/09 01:55:24 22.2KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>08-07-4.html</a> <span class="small">6件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="index_plugin_attach_pcmd_open_file_08-07-3_html_refer_MovableType.html" title="2007/07/09 01:55:22 14.7KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>08-07-3.html</a> <span class="small">3件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/09 01:55:20 12.9KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>08-07-2.html</a> <span class="small">5件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/09 01:55:19 13.6KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>08-07-1.html</a> <span class="small">3件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/07/09 01:55:17 16.0KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>index.html</a> <span class="small">7件</span>
+<span class="small">[<a href="index_plugin_attach_pcmd_info_file_index_html_refer_MovableType.html" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/03/15 10:07:24 16.2KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>403te.html</a> <span class="small">68件</span>
+<span class="small">[<a href="index_plugin_attach_pcmd_info_file_403te_html_refer_MovableType.html" title="添付ファイルの情報">詳細</a>]</span> <a href="index_plugin_attach_pcmd_open_file_367sh_html_refer_MovableType.html" title="2007/03/15 10:07:24 16.0KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>367sh.html</a> <span class="small">92件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/03/15 10:07:24 17.1KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>1220.html</a> <span class="small">90件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/03/15 10:07:24 16.1KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>296ma.html</a> <span class="small">111件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> <a href="/" title="2007/03/15 10:07:24 17.3KB"><img src="image/file.png" width="20" height="20" alt="file" style="border-width:0px"/>330pa.html</a> <span class="small">104件</span>
+<span class="small">[<a href="/" title="添付ファイルの情報">詳細</a>]</span> 
+</div>
+<hr class="full_hr"/><div id="toolbar">
+ <a href="index_MovableType.html"><img src="image/reload.png" width="20" height="20" alt="Reload" title="Reload"/></a>
+ &nbsp;
+ <a href="index_plugin_newpage.html"><img src="image/new.png" width="20" height="20" alt="New" title="New"/></a>
+ <a href="/"><img src="image/edit.png" width="20" height="20" alt="Edit" title="Edit"/></a>
+ <a href="/"><img src="image/freeze.png" width="20" height="20" alt="Freeze" title="Freeze"/></a>
+ <a href="/"><img src="image/diff.png" width="20" height="20" alt="Diff" title="Diff"/></a>
+ <a href="/"><img src="image/file.png" width="20" height="20" alt="Upload" title="Upload"/></a>
+ <a href="/"><img src="image/copy.png" width="20" height="20" alt="Copy" title="Copy"/></a>
+ <a href="/"><img src="image/rename.png" width="20" height="20" alt="Rename" title="Rename"/></a>
+ &nbsp;
+ <a href="index_Samuraism.html"><img src="image/top.png" width="20" height="20" alt="Front page" title="Front page"/></a>
+ <a href="index_cmd_list.html"><img src="image/list.png" width="20" height="20" alt="List of pages" title="List of pages"/></a>
+ <a href="index_cmd_search.html"><img src="image/search.png" width="20" height="20" alt="Search" title="Search"/></a>
+ <a href="index_RecentChanges.html"><img src="image/recentchanges.png" width="20" height="20" alt="Recent changes" title="Recent changes"/></a>
+ <a href="/"><img src="image/backup.png" width="20" height="20" alt="Backup" title="Backup"/></a>
+ &nbsp;
+ <a href="index__A5_D8_A5_EB_A5_D7.html"><img src="image/help.png" width="20" height="20" alt="Help" title="Help"/></a>
+ &nbsp;
+ <a href="index_cmd_rss10.html"><img src="image/rss.png" width="36" height="14" alt="RSS of recent changes" title="RSS of recent changes"/></a>
+</div>
+<div id="lastmodified">
+ Last-modified: Sat, 14 Jul 2007 18:49:11 JST  (9d)</div>
+<div id="footer">
+ Modified by <a href="/">yusuke</a>
+ <br/><br/>
+<strong>"PukiWiki" 1.4.3</strong> Copyright &copy; 2001,2002,2003
+<a href="http://pukiwiki.org/">PukiWiki Developers Team</a>.
+License is <a href="http://www.gnu.org/">GNU/GPL</a>.<br/>
+Based on "PukiWiki" 1.3 by <a href="http://factage.com/sng/">sng</a>
+ <br/>
+ Powered by PHP 4.3.9 <br/><br/>
+ HTML convert time to 4.633 sec.
+</div>
+<script src="urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script></body>
+</html>

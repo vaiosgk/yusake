@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: WebLogic Platform on 自宅サーバその２</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/000188.html" title="bloglines"/>
+<link rel="next" href="../../diary/archives/000194.html" title="ベガスへ！"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000189.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/189"
+    dc:title="WebLogic Platform on 自宅サーバその２"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000189.html"
+    dc:subject="Java"
+    dc:description="まじめに自宅サーバで WebLogic Server を使いたくなったのでライセ..."
+    dc:creator="yusuke"
+    dc:date="2005-02-25T18:42:18+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/000188.html">&laquo; bloglines</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/000194.html">ベガスへ！ &raquo;</a>
+</p>
+<h2>2005&#24180;02&#26376;25&#26085;</h2>
+<h3>WebLogic Platform on 自宅サーバその２</h3>
+<p>まじめに自宅サーバで WebLogic Server を使いたくなったのでライセンスについて調べてみた。<br/>
+ドキュメントを見る限り非商用で使うぶんには大丈夫なはずだけれども、いまいちはっきりしないので。</p>
+<p>結果からいえば Ok。<br/>
+WebLogic Workshop の Product Manager というタイトルで自宅サーバでの利用については go サインがでてる。<br/>
+・Professional edition と Free Edition について<br/>
+<a href="http://theserverside.com/common/printthread.tss?thread_id=24651#115012">http://theserverside.com/common/printthread.tss?thread_id=24651#115012</a><br/>
+----<br/>
+The $1000 Professional edition lets you use key this for anything you want, including commerial applications, and includes 1 year of dev support. The Free Edition enables you to deploy the scale-limited server for non-commercial or accademic purposes, such as a private blog server, an app for a non-profit, or teaching a class, and doesn't include support. <br/>
+----<br/>
+Professional Edition($1,000)<br/>
+・商用アプリケーションに使える<br/>
+・１年間の開発サポートつき<br/>
+・パフォーマンスが制限されている(同時３ソケット接続まで)<br/>
+・開発ライセンスみたいに接続するクライアントのIPアドレス数に制限はない<br/>
+Free Edition<br/>
+・非商用、または学術目的 - 個人的な blog サーバ、非営利目的、教育目的利用向け<br/>
+・サポートなし<br/>
+・パフォーマンスが制限されている(同時３ソケット接続まで)<br/>
+・開発ライセンスみたいに接続するクライアントのIPアドレス数に制限はない</p>
+<p>同時接続ソケット数は3つまで、ということで同時ユーザ数は５人から１５人程度までいけるだろうとのこと。<br/>
+自宅サーバに負荷があっても困るから逆にちょうどよいのかもしれない。</p>
+<p>ちなみに scale-limited ライセンスで負荷をかけるとこんな見慣れない警告がログに記録される↓<br/>
+--------<br/>
+&lt;2005/02/25 17時30分03秒 JST&gt; &lt;Warning&gt; &lt;WebLogicServer&gt; &lt;BEA-000340&gt; &lt;Max Threshold Reached for Open Sockets [Total Open Sockets: 3, Allowed Max: 3], No More Connections allowed.&gt;<br/>
+--------</p>
+<p>ちなみに「開発ライセンスでも間にプロキシを挟むことで接続IPアドレス制限を回避できる！、けどもライセンス違反になるぞ」、と敢えて裏技を紹介してくれている。</p>
+<div id="a000189more"><div id="more">
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;02&#26376;25&#26085; 18:42</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/189</p>
+<p>このリストは、次のエントリーを参照しています:  <a href="../../diary/archives/000189.html">WebLogic Platform on 自宅サーバその２</a>:</p>
+<p id="p22">
+&raquo; <a href="../../diary/archives/000192.html">WebLogic Server + MacOSX = ∞</a> from 侍ズム-blog<br/>
+随分前にいれたんだけどインストールメモ まずはここを参考にインストール。 run... <a href="../../diary/archives/000192.html">[続きを読む]</a>
+</p>
+<p class="posted">トラックバック時刻:  2005&#24180;02&#26376;25&#26085; 23:10</p>
+<h2 id="comments">コメント</h2>
+<h2>コメントしてください</h2>
+<form method="post" action="http://yusuke.homeip.net/diary/mt/kakikomi.cgi" name="comments_form" onsubmit="if (this.bakecookie[0].checked) rememberMe(this)">
+<input type="hidden" name="static" value="1"/>
+<input type="hidden" name="entry_id" value="189"/>
+<div id="name_email">
+<p><label for="author">名前:</label><br/>
+<input tabindex="1" id="author" name="author"/></p>
+<p><label for="email">メールアドレス:</label><br/>
+<input tabindex="2" id="email" name="email"/></p>
+</div>
+<p><label for="url">URL:</label><br/>
+<input tabindex="3" type="text" name="url" id="url"/>
+保存しますか?
+<input type="radio" id="remember" onclick="rememberMe(this.form)" name="bakecookie"/><label for="remember">はい</label><input type="radio" id="forget" name="bakecookie" onclick="forgetMe(this.form)" value="Forget Info" style="margin-left: 15px;"/><label for="forget">いいえ</label><br style="clear: both;"/>
+</p>
+<p><label for="text">コメント:</label> <br/>
+<textarea tabindex="4" id="text" name="text" rows="10" cols="50"></textarea></p>
+<div align="center">
+<input type="submit" name="preview" tabindex="5" value=" 確認 "/>
+<input style="font-weight: bold;" type="submit" name="post" tabindex="6" value=" 投稿 "/>
+</div>
+</form>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

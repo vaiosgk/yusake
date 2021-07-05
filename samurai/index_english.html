@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP"/>
+ <meta http-equiv="content-style-type" content="text/css"/>
+ <!--title>english - PukiWiki</title-->
+<title>Samurai</title>
+ <link rel="stylesheet" href="../samurai/skin/default.en.css" type="text/css" media="screen" charset="EUC-JP"/>
+ <link rel="stylesheet" href="../samurai/skin/print.en.css" type="text/css" media="print" charset="EUC-JP"/>
+</head>
+<body>
+<div id="header">
+ <a href="../samurai.html"><img id="logo" src="../samurai/image/pukiwiki.png" width="80" height="80" alt="[PukiWiki]" title="[PukiWiki]"/></a>
+ <h1 class="title"><a href="../samurai/index_cmd_search_word_english.html">english</a> </h1>
+ <a href="../samurai/index_english.html"><span class="small">index.php?english</span></a>
+</div>
+<div id="navigator">
+ [ <a href="../samurai/index_english.html">Reload</a> ]
+ &nbsp;
+ [ <a href="/">New</a>
+ | <a href="/">Edit</a>
+ | <a href="../samurai/index_cmd_unfreeze_page_english.html">Unfreeze</a>
+ | <a href="../samurai/index_cmd_diff_page_english.html">Diff</a>
+ | <a href="../samurai/index_plugin_attach_pcmd_upload_page_english.html">Upload</a>
+ ]
+ &nbsp;
+ [ <a href="../samurai/index_Samurai.html">Front page</a>
+ | <a href="../samurai/index_cmd_list.html">List of pages</a>
+ | <a href="../samurai/index_cmd_search.html">Search</a>
+ | <a href="../samurai/index_RecentChanges.html">Recent changes</a>
+ | <a href="../samurai/index_cmd_backup_page_english.html">Backup</a>
+ | <a href="../samurai/index__A5_D8_A5_EB_A5_D7.html">Help</a>
+ ]
+ [ <a href="/">Referer</a> ]
+</div>
+<hr class="full_hr"/>
+<table border="0" style="width:100%">
+ <tr>
+  <td class="menubar">
+   <div id="menubar">
+<p>&nbsp;<a href="../samurai/english.html">English</a>&nbsp;/&nbsp;<a href="../samurai/index.html">Japanese</a></p>
+   </div>
+  </td>
+  <td valign="top">
+   <div id="body"><script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="3323290003";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script>
+<h2 id="content_1_0">Samurai 2.1.1  <a class="anchor_super" id="i8700d15" href="../samurai/index_english.html#i8700d15" title="i8700d15">&dagger;</a></h2>
+<p><a href="../samurai/samurai.html"><img src="../samurai/launchSamuraiAni.gif" alt="http://yusuke.homeip.net/samurai/samurai.jnlp"/></a>
+launch(requires JDK1.4 or later)</p>
+<div class="contents">
+<a id="contents_1"></a><ul class="list1" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_0"> Samurai 2.1.1 </a></li>
+<li><a href="#content_1_1">  What is &quot;Samurai&quot; </a></li>
+<li><a href="#content_1_2">  System requirement </a></li>
+<li><a href="#content_1_3">  How to launch </a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_4">  Launch Samurai using Java Web Start </a></li>
+<li><a href="#content_1_5">  Launch from the command prompt </a></li></ul></li>
+<li><a href="#content_1_6">  Analyzing thread dumps </a>
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li><a href="#content_1_7">  Initial view </a></li>
+<li><a href="#content_1_8">  &quot;Thread dump&quot; tab </a></li></ul></li>
+<li><a href="#content_1_9">  Analyzing heap usage </a></li>
+<li><a href="#content_1_10">  Visualizing CSV files </a></li>
+<li><a href="#content_1_11">  Customizing the graph view </a></li>
+<li><a href="#content_1_12">  Search incrementally </a></li>
+<li><a href="#content_1_13">  FAQ </a></li>
+<li><a href="#content_1_14">  License </a></li>
+<li><a href="#content_1_15">  Disclaimer notice </a></li>
+<li><a href="#content_1_16"> What's new </a></li>
+<li><a href="#content_1_17">  Feedback </a></li>
+<li><a href="#content_1_18">  Paypal Donation </a></li></ul></div>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_1">What is &quot;Samurai&quot;  <a class="anchor_super" id="zc650023" href="../samurai/index_english.html#zc650023" title="zc650023">&dagger;</a></h2>
+<p>Samurai is a tabbed GUI tail tool.<br/>
+The three major things Samurai does for you are<br/></p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Works as a GUI based and multil tabbed &quot;tail -f&quot;</li>
+<li>Picking thread dumps from std/stderr output and colorize them.</li>
+<li>Visualizing the &quot;-verbose:gc&quot; log.</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_2">System requirement  <a class="anchor_super" id="t9524bec" href="../samurai/index_english.html#t9524bec" title="t9524bec">&dagger;</a></h2>
+<p>OS: Windows and any flavor of Unix like OS supports  JDK 1.4 or later<br/>
+Tested JVM to inspect: JDK 1.3.x,JDK 1.4.x,JDK5.0 based JVM provided by Apple, BEA, HP, Sun and IBM<br/>
+Automatic JRE installation is available <a href="../samurai/samurai_jre_autoinstall.html">here</a>(IE only and ActiveX required to be enabled)</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_3">How to launch  <a class="anchor_super" id="k0a038ec" href="../samurai/index_english.html#k0a038ec" title="k0a038ec">&dagger;</a></h2>
+<p>There are two way to launch Samurai. Choose suitable one.</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_4">Launch Samurai using Java Web Start  <a class="anchor_super" id="r6a01494" href="../samurai/index_english.html#r6a01494" title="r6a01494">&dagger;</a></h3>
+<p>Samurai can be launched via the Internet. This enables</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>creating a desktop shortcut or a start menu item with this.</li>
+<li>downloading, installing automatically and keeping it latest.</li></ul>
+<p>You can just launch Samurai by clicking the icon below. (requires J2SDK1.4.0 or later installed)<br/>
+I you don't have any JRE installed on your system, you can simply click <a href="../samurai/samurai_jre_autoinstall.html">here</a>(IE only and ActiveX required to be enabled) to install JRE1.5.</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Launch Samurai-&gt;<a href="../samurai/samurai.html"><img src="../samurai/launchSamuraiAni.gif" alt="http://yusuke.homeip.net/samurai/samurai.jnlp"/></a></li></ul>
+<p>Java Web Start system will pop up a warning dialog on the first launch which alerts that the application could violate your PC's security. Please click &quot;Start&quot; to proceed.
+It's because Samurai needs to get a permission to access your local filesystem which is necessary in reading log files and caching analized data on the temporary directory.
+I am very sure that Samurai does NOT contain any vicious code. Please see the source code if you concerns security much. Or, you can decompile the code and look into them.
+I am NOT suggesting that you may launch any Java Web Start application. You need to be aware that technically a Java Web Start application could crack your PC and cause a fatal casualty.</p>
+<p><a href="../samurai/alert.gif"><img src="../samurai/alert.gif" alt="http://yusuke.homeip.net/samurai/alert.gif"/></a><br/>
+fig. 1 Security alert dialog in Japanese</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_5">Launch from the command prompt  <a class="anchor_super" id="r99af7a6" href="../samurai/index_english.html#r99af7a6" title="r99af7a6">&dagger;</a></h3>
+<p>The binary is available for download at <a href="../samurai/samurai.html">http://yusuke.homeip.net/samurai/samurai.jar</a> <br/>
+You can simply double-click to launch Samurai on your desktop or type as following in your command prompt<br/></p>
+<blockquote><p class="quotation">java -jar samurai.jar<br/></p></blockquote>
+<p>Automatic update is not available with this way.<br/>
+Please check and download latest version manually.<br/></p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_6">Analyzing thread dumps  <a class="anchor_super" id="l01983e6" href="../samurai/index_english.html#l01983e6" title="l01983e6">&dagger;</a></h2>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_7">Initial view  <a class="anchor_super" id="b5441e73" href="../samurai/index_english.html#b5441e73" title="b5441e73">&dagger;</a></h3>
+<p>You'll see a window like fig.2. A tab named &quot;Thread dump&quot; will appear after you drag and drop a log file onto the window.</p>
+<p><a href="../samurai/first_en.gif"><img src="../samurai/first_en.gif" alt="http://yusuke.homeip.net/samurai/first_en.gif"/></a><br/>
+fig. 2 an initial view</p>
+<p><a href="../samurai/logDropped_en.gif"><img src="../samurai/logDropped_en.gif" alt="http://yusuke.homeip.net/samurai/logDropped_en.gif"/></a><br/>
+fig. 3 the &quot;Thread dump&quot; tab</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_8">&quot;Thread dump&quot; tab  <a class="anchor_super" id="f5e930ac" href="../samurai/index_english.html#f5e930ac" title="f5e930ac">&dagger;</a></h3>
+<p>You'll see the analized result by clicking the &quot;Thread dump&quot; tab.<br/>
+Samurai colorize idle threads in gray, blocked threds in red.<br/>
+There are three result view.</p>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>table view(fig. 4)</li>
+<li>all threads view(fig. 5)</li>
+<li>chronological view(fig. 6)
+In many case you'll use the table view to decide which thread be inspected, the chronological view to understand the thread's behavior.<br/>
+You should take care especially threds always in red.</li></ul>
+<p><a href="../samurai/threadTab_en.gif"><img src="../samurai/threadTab_en.gif" alt="http://yusuke.homeip.net/samurai/threadTab_en.gif"/></a><br/>
+fig. 4 Table view</p>
+<p><a href="#"></a><br/>
+fig. 5 All thread view</p>
+<p><a href="#"></a><br/>
+fig. 6 Chronological view</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_9">Analyzing heap usage  <a class="anchor_super" id="if78d52e" href="../samurai/index_english.html#if78d52e" title="if78d52e">&dagger;</a></h2>
+<p>Every JVM accepts &quot;-verbose:gc&quot; option which will show you GC behavior precisely.<br/>
+This is necessary when you detect memory leaks and decide if heap is reserved enough.<br/>
+Samurai gives you a nice and understandable view of although the original text  is very hard to read. <br/>
+Red line stands for the heap usage before a GC.<br/>
+Yellow one stands for the heap usage after a GC.<br/>
+Gray one stands for the time spent for a GC.<br/>
+You can copy the graph to the system clipboard by pressing Ctrl+C (Mac -&gt; Cmd+C).</p>
+<p><a href="../samurai/memory_en.gif"><img src="../samurai/memory_en.gif" alt="http://yusuke.homeip.net/samurai/memory_en.gif"/></a><br/>
+fig. 7 Memory tab</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_10">Visualizing CSV files  <a class="anchor_super" id="n23b45a6" href="../samurai/index_english.html#n23b45a6" title="n23b45a6">&dagger;</a></h2>
+<p>Samurai provides you a realtime and visualized look for CSV files.<br/>
+You can copy the graph to the system clipboard by pressing Ctrl+C (Mac -&gt; Cmd+C).</p>
+<p><a href="../samurai/komuso_en.gif"><img src="../samurai/komuso_en.gif" alt="http://yusuke.homeip.net/samurai/komuso_en.gif"/></a><br/>
+fig. 8 CSV graph</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_11">Customizing the graph view  <a class="anchor_super" id="vfccbdbb" href="../samurai/index_english.html#vfccbdbb" title="vfccbdbb">&dagger;</a></h2>
+<p>You can customize these graph views.<br/>
+Just click the label located left most above and choose any color and label you like.</p>
+<p><a href="../samurai/graphCustomize_en.gif"><img src="../samurai/graphCustomize_en.gif" alt="http://yusuke.homeip.net/samurai/graphCustomize_en.gif"/></a><br/>
+fig. 9 customizing the graph view</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_12">Search incrementally  <a class="anchor_super" id="v8335bcd" href="../samurai/index_english.html#v8335bcd" title="v8335bcd">&dagger;</a></h2>
+<p>Samurai is not only thread dump and Komuso analyzer but a convenient log viewr.<br/>
+It works just like Unix's &quot;tail -f filename&quot;, and you can search the text.<br/>
+The searching function will be triggered when you type any texts.<br/>
+A search result will be hilighted if there is a match. You can press Ctrl+G(Mac -Cmd+G) or F3 for forward search, Shift+Ctrl+G(Mac- Shift+Cmd+G) for backward search.<br/>
+You can also enable / disable the case sensitivity and regular expression.</p>
+<p><a href="../samurai/highlight_en.gif"><img src="../samurai/highlight_en.gif" alt="http://yusuke.homeip.net/samurai/highlight_en.gif"/></a><br/>
+fig. 10 hilighting a match</p>
+<p><a href="../samurai/config_en.gif"><img src="../samurai/config_en.gif" alt="http://yusuke.homeip.net/samurai/config_en.gif"/></a><br/>
+fig.11 config dialog</p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_13">FAQ  <a class="anchor_super" id="rb155f7e" href="../samurai/index_english.html#rb155f7e" title="rb155f7e">&dagger;</a></h2>
+<pre>Q1. Is Samurai built especially for WebLogic?
+A1. No. Samurai can analize any kind of Java program. But note that Samurai is tested on ly with Apple SDK1.4.2_05, BEA JRockit 7.0SP4 / 8.1SP2 / 8.1SP4 and Sun SDK 1.3.1_08 /1.4.1_05
+Q2. How does Samurai named after?
+A2. I just didn't want to name it like &quot;Thread analyzer&quot;.
+Q3. Can I launch Samurai using  JDK1.3.x or earlier?
+A3. No, you can't. It's because Samurai uses specific API comes with JDK1.4 or later. But note that it doesn't suggest Samurai can't analyze logs output by JDK1.3 or earlier.
+Q4. CSV visualization looks pretty useful. Is it possible to visualize CSV files that are containing not only numerals but strings.
+A4. Yes. A string data will be protted using is hash value.
+Q5. How does Samurai recognize a CSV file as a CSV file?
+A5. By its extension.
+Q6. What is &quot;Kill Bill&quot; mode?
+A6. With Kill Bill mode, you'll feel like you became a Katana sword master. Type &quot;kill bill&quot; to enter the mode.
+Q7. What is &quot;Kill Bill2&quot; mode?
+A7. With Kill Bill2 mode, you'll feel like you mastered the Five point palm exploading heart technique.
+Q8. &quot;What is the Matrix&quot; mode?
+A8. With the Matrix mode, you'll feel like you can see an another world through your log file. Type &quot;what is the matrix&quot; to enter the matrix.
+</pre>
+<p><br/></p>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_14">License  <a class="anchor_super" id="jc4575fe" href="../samurai/index_english.html#jc4575fe" title="jc4575fe">&dagger;</a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Anyone can use Samurai for commercial and non commercial way. Anyone can redestribute the Samurai's copy without any modification.</li>
+<li>You can modify the Samurai's code but you can't distribute modified codes across internet.</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_15">Disclaimer notice  <a class="anchor_super" id="me4e32c5" href="../samurai/index_english.html#me4e32c5" title="me4e32c5">&dagger;</a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>You need  specialized Java knowledge in order to analyze thread thread dumps. Samurai will help you to decide the cause of hungup or slowdown, I don't guarantee the resolution of bottlenecks.</li>
+<li>Yusuke Yamamoto don't  accept any responsibility regarding this software.</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_16">What's new  <a class="anchor_super" id="xd9f521e" href="../samurai/index_english.html#xd9f521e" title="xd9f521e">&dagger;</a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>2.1.1 released(2006/5/12)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>added support for -verbosegc log generated by IBM JDK1.4.2(tested with JDK1.4.2_08)</li>
+<li>fixed: some blocked threads in IBM Javacore files were not detected</li></ul></li>
+<li>2.1 released(2006/5/11)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>added automatic Deadlock detection feature</li>
+<li>added &quot;Clear thread dump&quot; button</li>
+<li>added anchor and hyperlink to the stack lines which are waiting to lock certain object and holding certain object</li>
+<li>lock information is added to IBM Javacore stacktraces</li></ul></li>
+<li>2.0.6 released(2006/5/5)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>added &quot;Save thread dump As HTML&quot;</li>
+<li>added support for JRockit thread dumps triggered by weblogic.Admin command</li></ul></li>
+<li>2.0.5 released(2006/4/29)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>improved rendering performance on thread dump view</li>
+<li>improved incremental search performance</li>
+<li>added support for <span class="noexists">WebLogic<a href="../samurai/index_cmd_edit_page_WebLogic_refer_english.html">?</a></span> Server 9.x thread name</li>
+<li>fixed: graph view was unable to copy it's graph</li>
+<li>fixed: inverse behavior of search panel's &quot;Match Case&quot; checkbox</li></ul></li>
+<li>2.0.4 released(2006/1/16)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>added support for JRockit1.4.2_08 verbosegc log</li>
+<li>optimized searching performance</li></ul></li>
+<li>2.0.3 released(2006/1/13)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>added search field</li></ul></li>
+<li>2.0.2 released(2006/1/6)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>added visual feedbacks for drag events</li>
+<li>fixed garbled characteres in CSV Panel when using multibyte characters</li></ul></li>
+<li>2.0.1 released(2006/1/3)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>now Memory Panel works with log files output by -Xloggc option</li></ul></li>
+<li>2.00 released(2005/12/31)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>added multil file monitoring feature</li>
+<li>supported Application menu on Mac OSX environment</li>
+<li>added &quot;open recently used&quot; feature</li>
+<li>now CSV graph panel works only for those files that end with &quot;.csv&quot;</li>
+<li>non-existing threads are dyed black in table view</li>
+<li>added Matrix mode</li></ul></li>
+<li>released 1.2.9(2005/10/19)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>fixed multiple file input issue to support IBM's javacore.</li>
+<li>added kill bill mode</li></ul></li>
+<li>released 1.2.7(2005/8/26)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>fixed parsing issue when thread dump contains duplicated thread names</li>
+<li>supported multiple file input for IBM's javacore. Multiple files will be read by lexicographical order.</li>
+<li>supported Mac OS X's screen menubar(need a relaunch from jnlp not from Application)</li>
+<li>supported Mac OS X's brush metal LAF(need a relaunch from jnlp not from Application)<br/>
+screen menubar and brush metal LAF are not supported with Applicationized samurai due to an OS limitation. You need to launch from .jnlp in order to enable these feature.</li></ul></li>
+<li>released 1.2.6(2005/8/23)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>supported IBM JDK1.4.0/1.3.1 javacore files</li></ul></li>
+<li>released 1.2.5(8/18/2005)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>supported JRockit1.5.0_03(Bundled with WLS9.0GA)</li></ul></li>
+<li>released 1.2.4(8/17/2005)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>supported JRockit1.4.2_05(Bundled with WLS8.1SP4)</li></ul></li>
+<li>released 1.2(4/4/2004)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>Now Samurai can visualize <a href="http://dev2dev.bea.com/resourcelibrary/utilitiestools/monitoring.jsp">Komuso</a> and CSV data. It should be convenient in case you are tuning or profiling <a href="http://dev2dev.bea.com/products/wlserver81/index.jsp">WebLogic</a> and Java applications.</li></ul></li>
+<li>released 1.1(3/31/2004)
+<ul class="list2" style="padding-left:16px;margin-left:16px"><li>Implemented verbose:gc log analyzing function which is necessary when you decide the heap size and tune garbage collection parameters.</li></ul></li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_17">Feedback  <a class="anchor_super" id="o8ac6808" href="../samurai/index_english.html#o8ac6808" title="o8ac6808">&dagger;</a></h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>Any feedback is highly appreciated
+<br/>
+<a href="http://www.versiontracker.com/php/feedback/submit.php?login=1&amp;TID=feedback&amp;contentDB=macosx&amp;contentID=28918&amp;pName=Samurai&amp;submit.x=98&amp;submit.y=8&amp;submit=Add+Your+Feedback">Post Comment</a></li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h2 id="content_1_18">Paypal Donation  <a class="anchor_super" id="w62f3271" href="../samurai/index_english.html#w62f3271" title="w62f3271">&dagger;</a></h2>
+<p>If you feel Samurai makes your life easier, please do consider making a donation!<br/>
+<br/>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=yusuke%40mac%2ecom&amp;item_name=Samurai2%2e0&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8"><img src="../en_US/i/btn/x-click-but04.gif" alt="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=yusuke%40mac%2ecom&amp;item_name=Samurai2%2e0&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8"/></a></p>
+<div class="counter">
+Counter: 51732,
+today: 42,
+yesterday: 15
+</div>
+<p>Copyright 2003-2006 (c) Yusuke Yamamoto All rights reserved.</p>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="3323290003";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript" src="../pagead/show_ads.js">
+</script></div>
+  </td>
+ </tr>
+</table>
+<hr class="full_hr"/><div id="toolbar">
+ <a href="../samurai/index_english.html"><img src="../samurai/image/reload.png" width="20" height="20" alt="Reload" title="Reload"/></a>
+ &nbsp;
+ <a href="../samurai/index_plugin_newpage.html"><img src="../samurai/image/new.png" width="20" height="20" alt="New" title="New"/></a>
+ <a href="/"><img src="../samurai/image/edit.png" width="20" height="20" alt="Edit" title="Edit"/></a>
+ <a href="../samurai/index_cmd_unfreeze_page_english.html"><img src="../samurai/image/unfreeze.png" width="20" height="20" alt="Unfreeze" title="Unfreeze"/></a>
+ <a href="../samurai/index_cmd_diff_page_english.html"><img src="../samurai/image/diff.png" width="20" height="20" alt="Diff" title="Diff"/></a>
+ <a href="../samurai/index_plugin_attach_pcmd_upload_page_english.html"><img src="../samurai/image/file.png" width="20" height="20" alt="Upload" title="Upload"/></a>
+ <a href="../samurai/index_plugin_template_refer_english.html"><img src="../samurai/image/copy.png" width="20" height="20" alt="Copy" title="Copy"/></a>
+ <a href="../samurai/index_plugin_rename_refer_english.html"><img src="../samurai/image/rename.png" width="20" height="20" alt="Rename" title="Rename"/></a>
+ &nbsp;
+ <a href="../samurai/index_Samurai.html"><img src="../samurai/image/top.png" width="20" height="20" alt="Front page" title="Front page"/></a>
+ <a href="../samurai/index_cmd_list.html"><img src="../samurai/image/list.png" width="20" height="20" alt="List of pages" title="List of pages"/></a>
+ <a href="../samurai/index_cmd_search.html"><img src="../samurai/image/search.png" width="20" height="20" alt="Search" title="Search"/></a>
+ <a href="../samurai/index_RecentChanges.html"><img src="../samurai/image/recentchanges.png" width="20" height="20" alt="Recent changes" title="Recent changes"/></a>
+ <a href="../samurai/index_cmd_backup_page_english.html"><img src="../samurai/image/backup.png" width="20" height="20" alt="Backup" title="Backup"/></a>
+ &nbsp;
+ <a href="../samurai/index__A5_D8_A5_EB_A5_D7.html"><img src="../samurai/image/help.png" width="20" height="20" alt="Help" title="Help"/></a>
+ &nbsp;
+ <a href="../samurai/index_cmd_rss10.html"><img src="../samurai/image/rss.png" width="36" height="14" alt="RSS of recent changes" title="RSS of recent changes"/></a>
+</div>
+<div id="lastmodified">
+ Last-modified: Wed, 27 Sep 2006 14:23:56 JST  (313d)</div>
+<div id="footer">
+ Modified by <a href="../samurai.html">yusuke</a>
+ <br/><br/>
+ <strong>PukiWiki 1.4.4_php5</strong> Copyright &copy; 2001-2004 <a href="http://pukiwiki.org/">PukiWiki Developers Team</a>. License is <a href="http://www.gnu.org/licenses/gpl.html">GPL</a>.<br/> Based on "PukiWiki" 1.3 by <a href="http://factage.com/yu-ji/">yu-ji</a> <br/>
+ <br/><br/>
+ HTML convert time to 1.320 sec.
+</div>
+<script src="../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</body>
+</html>

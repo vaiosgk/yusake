@@ -1,0 +1,1018 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>[#TFJ-83] OAuth support - JIRA </title>
+    <meta content="issuesummary" name="decorator"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+    <link rel="shortcut icon" href="http://yusuke.homeip.net/jira/s/466/1/_/favicon.ico">
+    <link rel="icon" type="image/png" href="http://yusuke.homeip.net/jira/s/466/1/_/images/icons/favicon.png">
+<link rel="stylesheet" type="text/css" media="print" href="../../jira/s/466/1/_/styles/combined-printable.css">
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/466/1/_/styles/combined.css"/>
+<link type="text/css" rel="StyleSheet" media="all" href="../../jira/s/466/1/6/_/styles/global.css"/>
+    <script type="text/javascript">var contextPath = '/jira';</script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/1.2.2/_/download/batch/com.atlassian.auiplugin_ajs/com.atlassian.auiplugin_ajs.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/jira/s/466/1/1.2.2/_/download/batch/com.atlassian.auiplugin:ajs/com.atlassian.auiplugin:ajs.css?ieonly=true" media="all">
+<![endif]-->
+<script type="text/javascript" src="../../jira/s/466/1/1.2.2/_/download/batch/com.atlassian.auiplugin_ajs/com.atlassian.auiplugin_ajs.js"></script>
+<script type="text/javascript" src="../../jira/s/466/1/1.0/_/download/batch/jira.webresources_jira-global/jira.webresources_jira-global.js"></script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/1.0/_/download/batch/jira.webresources_jira-global/jira.webresources_jira-global.css" media="all">
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" href="/jira/s/466/1/1.0/_/download/batch/jira.webresources:jira-global/jira.webresources:jira-global.css?ieonly=true" media="all">
+<![endif]-->
+<script type="text/javascript" src="../../script/com.atlassian.streams.streams-jira-plugin_streamsWebResources.js"></script>
+<link type="text/css" rel="stylesheet" href="../../css/com.atlassian.streams.streams-jira-plugin_streamsWebResources.css" media="all">
+<script type="text/javascript" src="../../script/com.atlassian.gadgets.embedded_gadget-core-resources.js"></script>
+<script type="text/javascript" src="../../script/com.atlassian.gadgets.embedded_gadget-container-resources.js"></script>
+<script type="text/javascript" src="../../script/com.atlassian.gadgets.embedded_gadget-standalone-resources.js"></script>
+<script type="text/javascript" src="../../jira/s/466/1/1.0/_/download/batch/jira.webresources_header/jira.webresources_header.js"></script>
+</head>
+<body id="jira">
+<div id="header">
+    <div id="header-top">
+        <a id="logo" href="../../jira/secure/Dashboard.html">
+                    </a>
+                <form id="quicksearch" action="../../jira/secure/QuickSearch.html" method="post">
+            <label for="quickSearchInput" class="overlabel">Quick Search
+                <span id="quicksearchhelp" class="informationBox">
+                                                 Learn more about <a href="http://docs.atlassian.com/jira/docs-040/Using+Quick+Search?clicked=jirahelp" target="_jirahelp">Quick Search</a>
+                </span>
+            </label>
+            <input id="quickSearchInput" class="quickSearchInput" title="Go directly to an issue by typing a valid issue key, or run a free-text search." type="text" size="25" name="searchString" accesskey="q" valign="absmiddle"/>
+        </form>
+        <div id="header-details-user" class="aui-dd-parent header-link-container">
+         <a class="lnk" rel="nofollow" href="/">Log In</a>
+        <span class="drop-wrap">
+        <a class="drop aui-dd-link" href="#"><span>Access more options</span>
+        </a>
+    </span>
+    <div class="aui-dropdown standard hidden">
+                                                                <ul id="jira-help" class="  first     last  ">
+                                            <li><a id="view_help" class="" title="Goto the online documentation for JIRA" href="http://docs.atlassian.com/jira/docs-040/Home?clicked=jirahelp">Online Help</a></li>
+                                            <li><a id="user_history" class="" title="Get more information about JIRA" href="http://www.atlassian.com/software/jira">About JIRA</a></li>
+                                    </ul>
+                        </div>
+</div>
+    </div>
+    <div id="header-bottom">
+                <div id="menu">
+<ul id="main-nav" class="menu-bar">
+                        <li class="aui-dd-parent lazy  ">
+                    <a class="lnk" href="../../jira/secure/Dashboard.html" id="home_link" accesskey="h" title="View your current Dashboard">Dashboards</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="home_link_drop" rel="home_link" accesskey="d" title="Access more options (Alt+D)" href="#"><span>Access more options (Alt+D)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+                        <li class="aui-dd-parent lazy  ">
+                    <a class="lnk" href="../../jira/browse/TFJ.html" id="browse_link" accesskey="b" title="Browse currently active project 'Twitter4J'">Projects</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="browse_link_drop" rel="browse_link" accesskey="p" title="Access more options (Alt+P)" href="#"><span>Access more options (Alt+P)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+                        <li class="aui-dd-parent lazy  selected  ">
+                    <a class="lnk" href="../../jira/secure/IssueNavigator.html" id="find_link" accesskey="f" title="View your current filter">Issues</a>
+                    <span class="drop-wrap">
+            <a class="drop aui-dd-link" id="find_link_drop" rel="find_link" accesskey="i" title="Access more options (Alt+I)" href="#"><span>Access more options (Alt+I)</span></a></span>
+            <div class="aui-dropdown standard hidden"></div>
+                </li>
+    </ul>
+        </div>
+    </div>
+</div>
+<fieldset class="hidden parameters">
+    <input type="hidden" id="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost.">
+</fieldset>
+<!--This should always be included as it is not part of a themable plugin, instead it is core functionality-->
+<div class="alertHeader">
+<script src="../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td width="200" bgcolor="#f0f0f0" valign="top" style="border-right:1px solid #bbb">
+            <table cellpadding="0" cellspacing="0" border="0" width="200">
+<tr><td>
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+    <tr><td bgcolor="#dddddd">
+        <span style="float:left"><b>Issue Details</b></span>
+        <span class="small" style="float:right">
+                                        (<a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-xml/TFJ-83/TFJ-83.xml">XML</a> | <a rel="nofollow" class="small" href="http://yusuke.homeip.net/jira/si/jira.issueviews:issue-word/TFJ-83/TFJ-83.doc">Word</a> | <a rel="nofollow" class="small" href="/">Printable</a>)
+                    </span>
+    </td></tr>
+    </table>
+                        <br>
+                <table id="issuedetails" cellpadding="3" cellspacing="0" border="0">
+            <tr>
+                <td valign="top"><b>Key:</b></td>
+                <td valign="top">
+                    <b><a id="issue_key_TFJ-83" href="../../jira/browse/TFJ-83.html">TFJ-83</a></b>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Type:</b></td>
+                <td valign="top">
+             New Feature
+                </td>
+            </tr>
+            <tr>
+                <td valign="top"><b>Status:</b></td>
+                <td valign="top">
+             Closed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Resolution:</b></td>
+                <td valign="top">
+                                             Fixed
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Priority:</b></td>
+                <td valign="top">
+             Major
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Assignee:</b></td>
+                <td valign="top">
+                            <a id="issue_summary_assignee_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Reporter:</b></td>
+                <td valign="top">
+                            <a id="issue_summary_reporter_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a>
+                </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Votes:</b></td>
+                <td valign="top">
+                                                                        0
+                                                            </td>
+            </tr>
+                        <tr>
+                <td valign="top"><b>Watchers:</b></td>
+                <td valign="top">
+                                                                                    0
+                                    </td>
+            </tr>
+                    </table>
+                <div class="operations">
+        <table cellpadding="3" cellspacing="0" border="0" width="100%">
+        <tr><td bgcolor="#dddddd">
+            <b>Operations</b>
+        </td></tr>
+        </table>
+        <br>
+        <table cellpadding="3" cellspacing="0" border="0" id="operationsSection">
+                    <tr><td class="issueOperation lazyOperation">
+                If you were <a class="lnk" rel="nofollow" href="/">logged in</a> you would be able to see more operations.
+            </td></tr>
+                </table>
+        </div>
+            </td></tr>
+</table>
+        </td>
+        <td bgcolor="#ffffff" valign="top">
+            <div style="padding:1em" id="issueContent">
+                <style type="text/css">
+<!--
+.fieldArea .fieldLabelArea { width: 10%; }
+.fieldArea .fieldValueArea { width: 90%; }
+#pinCommentContainer { float: right; font-size: 10px; }
+#pinCommentContainer a { margin: 0 0.2em; }
+-->
+</style>
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="#bbbbbb" width="100%" align="center">
+<tr><td width="100%" colspan="2" valign="top">
+<table id="issue_header" cellpadding="4" cellspacing="0" border="0" width="100%" bgcolor="#ffffff">
+<tr>
+    <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+    <table id="issue_header_summary" width="100%" cellpadding="0" cellspacing="0">
+        <tr><td bgcolor="#f0f0f0" width="80%" valign="top">
+            <b><a href="../../jira/browse/TFJ.html">
+                Twitter4J</a></b><br>
+            <h3 class="formtitle"> OAuth support</h3>
+            <font size="1">
+                Created: <span class="date">09/Mar/09 10:41 AM</span> &nbsp;
+                Updated: <span class="date">17/Apr/09 12:04 PM</span>
+                    &nbsp; Resolved: <span class="date">17/Apr/09 12:04 PM</span>
+            </font>
+        </td>
+        </tr></table>
+</tr>
+        <tr>
+            <td width="20%"><b>Component/s:</b></td>
+            <td width="80%">
+        <a href="../../jira/browse/TFJ/component/10003.html" title="Core ">Core</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Affects Version/s:</b></td>
+            <td width="80%">
+    None
+            </td>
+        </tr>
+        <tr>
+            <td width="20%"><b>Fix Version/s:</b></td>
+            <td width="80%">
+        <a href="/" title="2.0.0 ">2.0.0</a>
+            </td>
+        </tr>
+</table>
+</td></tr></table>
+<br>
+<br>
+<div id="description-open">
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+	<td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+	</td>
+    <td align="right"><a id="description-hide" href="" onclick="toggleDivsWithCookie('description-closed', 'description-open'); return false;" class="smallgrey">&laquo; Hide</a></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+	<td id="descriptionArea">
+        <div id="description_full">
+            <a href="http://apiwiki.twitter.com/OAuth-FAQ">http://apiwiki.twitter.com/OAuth-FAQ</a><br/>
+<br/>
+<a href="http://docs.google.com/Doc?id=ajmd9vnthtq9_64ctxkqvfm">http://docs.google.com/Doc?id=ajmd9vnthtq9_64ctxkqvfm</a><br/>
+<br/>
+        </div>
+    </td>
+</tr>
+</table>
+</div>
+<div id="description-closed" style="display:none;">
+<table cellpadding="2" cellspacing="0" border="0" width="100%" align="center" class="table-layout: fixed;">
+<tr>
+	<td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+			&nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+	</td>
+    <td style="padding: 1px; margin: 0px; border-bottom: #bbb 1px solid;"><div style="height: 1.2em; overflow: hidden; text-overflow: ellipsis;">&nbsp; &nbsp;<a href="http://apiwiki.twitter.com/OAuth-FAQ">http://apiwiki.twitter.com/OAuth-FAQ</a>
+<a href="http://docs.google.com/Doc?id=ajmd9vnthtq9_64ctxkqvfm">http://docs.google.com/Doc?id=ajmd9vnthtq9_64ctxkqvfm</a>
+</div></td>
+    <td width="1%" align="right" nowrap style="padding: 1px; margin: 0px; border-bottom: #bbb 1px solid;"><a id="description-show" href="" onclick="toggleDivsWithCookie('description-open', 'description-closed'); return false;" class="smallgrey">Show &raquo;</a></td>
+</tr>
+</table>
+</div>
+<script language="JavaScript" type="text/javascript">
+<!--
+    restoreDivFromCookie('description-open', 'jira.viewissue.cong.cookie', '1');
+    restoreDivFromCookie('description-closed', 'jira.viewissue.cong.cookie', '0');
+//-->
+</script>
+<br>
+    <div class="tabwrap">
+            <div class="sortwrap">
+                Sort Order:
+                    <a rel="nofollow" href="/"></a>
+            </div>
+        <ul class="tabs horizontal">
+                <li class="active"><strong>All</strong></li>
+                <li><a href="/"><strong>Comments</strong></a></li>
+                <li><a href="../../jira/browse/TFJ-83_page_com_atlassian_jira_plugin_system_issuetabpanels_changehistory-tabpanel.html"><strong>Change History</strong></a></li>
+                <li><a href="/"><strong>Activity Stream</strong></a></li>
+                <li><a href="../../jira/browse/TFJ-83_page_com_atlassian_jirafisheyeplugin_fisheye-issuepanel.html"><strong>Source</strong></a></li>
+        </ul>
+    </div>
+        <div class="issuePanelContainer" id="issue_actions_container">
+                <div class="actionContainer">
+    <div class="action-details" id="changehistorydetails_10452">
+    <a name="action_10452"/>
+                <a id="ch_header_10452_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> made changes  - <font size="-2"><font color="#336699">08/Apr/09 11:25 AM</font></font>
+    </div>
+    <div id="changehistory" class="action-body">
+        <table cellpadding="2" cellspacing="0" border="0" width="100%" class="blank" id="changehistory_10452">
+                    <tr>
+                <td bgcolor="#dddddd" width="20%"><b>Field</b></td>
+                <td bgcolor="#dddddd" width="40%"><b>Original Value</b></td>
+                <td bgcolor="#dddddd" width="40%"><b>New Value</b></td>
+            </tr>
+                    <tr>
+            <td bgcolor="#ffffff" width="20%"><b>
+                            Description
+                        </b></td>
+            <td bgcolor="#ffffff" width="40%">
+                                                    <a href="http://apiwiki.twitter.com/OAuth-FAQ">http://apiwiki.twitter.com/OAuth-FAQ</a>
+                                                    </td>
+            <td bgcolor="#ffffff" width="40%">
+                                                    <a href="http://apiwiki.twitter.com/OAuth-FAQ">http://apiwiki.twitter.com/OAuth-FAQ</a><br/>
+<br/>
+<a href="http://docs.google.com/Doc?id=ajmd9vnthtq9_64ctxkqvfm">http://docs.google.com/Doc?id=ajmd9vnthtq9_64ctxkqvfm</a><br/>
+                                                    </td>
+            </tr>
+                </table>
+    </div>
+</div>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/_/download/resources/com.atlassian.jirafisheyeplugin_crucible-projectpanel/fisheye.css"/>
+<style type="text/css">
+    .msgPreview {
+        white-space:nowrap;
+        overflow:hidden;
+    }
+</style>
+<!-- Degrade gracefully in IE: can't overflow, so wrap instead! -->
+<!--[if IE]>
+<style type="text/css">
+.msgPreview {
+    white-space:normal !important;
+    overflow:auto !important;
+}
+</style>
+<![endif]-->
+<div class="actionContainer">
+    <div class="action-details selectable" onclick="toggleCSDivByButtonId('iconsvn210', 'svn210');">
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="85%">
+                <div class="msgPreview">
+                    <a class="fe_csid" href="/">210</a>
+                            by &nbsp;<strong><a href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a></strong>
+                    (14 files)
+                                                            <span class="selectable" width="100%">
+                    <font id="presvn210" color="gray" style="display:none;">
+                        - TFJ-83 OAuth support OAuth support initial implementation</font>
+                    </span>        
+                </div>
+            </td>
+            <td nowrap width="15%" class="reviewsActionHeader"><font size="-2" color="336699">15/Apr/09 01:54 AM (6 months, 30 days ago)</font>
+                            </td>
+        </tr>
+    </table>
+    </div>
+    <div id="cssvn210">
+                <div class="changesetMessage">
+                        <a href="../../jira/browse/TFJ-83.html" title="OAuth support"><strike>TFJ-83</strike></a> OAuth support<br/>
+OAuth support initial implementation
+                </div>
+                        <table id="changeset_210" cellpadding="2" cellspacing="0" border="0" width="100%" class="changesetRevisions">
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/Twitter.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                                                                         (+58 -12) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/test/java/twitter4j/TwitterBasicAuthTestUnit.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                             (+18)  <em>new</em>
+                                                                                                </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/Status.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                                                                         (+22 -22) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/PostParameter.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                                                                         (+16 -3) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/examples/GetTimelines.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                                                                         (+1 -1) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/RequestToken.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                             (+72)  <em>new</em>
+                                                                                                </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/test/java/twitter4j/TwitterTestUnit.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                                                                         (+5 -13) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/OAuth.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                             (+290)  <em>new</em>
+                                                                                                </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/test/java/twitter4j/http/OAuthTestUnit.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                             (+182)  <em>new</em>
+                                                                                                </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/AccessToken.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                             (+40)  <em>new</em>
+                                                                                                </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/examples/OAuthUpdate.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                             (+90)  <em>new</em>
+                                                                                                </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/HttpClient.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                                                                         (+135 -11) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/test.properties</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                                                                         (+8 -1) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/OAuthToken.java</a> 
+                            <span class="small">
+                                <a href="/">210</a>
+                                <a href="/#r210"></a>
+                                                                                                        <a href="/#r210"></a>
+                                                                             (+101)  <em>new</em>
+                                                                                                </span>
+                        </td>
+                    </tr>
+                                                </table>
+                <br>
+    </div>
+</div>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/_/download/resources/com.atlassian.jirafisheyeplugin_crucible-projectpanel/fisheye.css"/>
+<style type="text/css">
+    .msgPreview {
+        white-space:nowrap;
+        overflow:hidden;
+    }
+</style>
+<!-- Degrade gracefully in IE: can't overflow, so wrap instead! -->
+<!--[if IE]>
+<style type="text/css">
+.msgPreview {
+    white-space:normal !important;
+    overflow:auto !important;
+}
+</style>
+<![endif]-->
+<div class="actionContainer">
+    <div class="action-details selectable" onclick="toggleCSDivByButtonId('iconsvn211', 'svn211');">
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="85%">
+                <div class="msgPreview">
+                    <a class="fe_csid" href="/">211</a>
+                            by &nbsp;<strong><a href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a></strong>
+                    (2 files)
+                                                            <span class="selectable" width="100%">
+                    <font id="presvn211" color="gray" style="display:none;">
+                        - TFJ-83 OAuth support added some javadoc comments</font>
+                    </span>        
+                </div>
+            </td>
+            <td nowrap width="15%" class="reviewsActionHeader"><font size="-2" color="336699">15/Apr/09 11:58 PM (6 months, 29 days ago)</font>
+                            </td>
+        </tr>
+    </table>
+    </div>
+    <div id="cssvn211">
+                <div class="changesetMessage">
+                        <a href="../../jira/browse/TFJ-83.html" title="OAuth support"><strike>TFJ-83</strike></a> OAuth support<br/>
+added some javadoc comments
+                </div>
+                        <table id="changeset_211" cellpadding="2" cellspacing="0" border="0" width="100%" class="changesetRevisions">
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/Twitter.java</a> 
+                            <span class="small">
+                                <a href="/">211</a>
+                                <a href="/#r211"></a>
+                                                                                                        <a href="/#r211"></a>
+                                                                                                                         (+30 -15) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/OAuth.java</a> 
+                            <span class="small">
+                                <a href="/">211</a>
+                                <a href="/#r211"></a>
+                                                                                                        <a href="/#r211"></a>
+                                                                                                                         (+5 -4) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                                </table>
+                <br>
+    </div>
+</div>
+                <div id="comment-10291-open">
+<div class="actionContainer">
+    <div class="action-links subText smallgrey">
+    [
+        <a href="../../jira/browse/TFJ-83_focusedCommentId_10291_page_com_atlassian_jira_plugin_system_issuetabpanels_comment-tabpanel.html#action_10291" title="A permanent link to this comment." class="smallgrey">Permalink</a>
+                      | <a id="comment-10291-hide" href="" onclick="toggleDivsWithCookie('comment-10291-closed', 'comment-10291-open'); return false;" class="smallgrey">&laquo; Hide</a>
+    ]
+    </div>
+    <div class="action-details">    <a name="action_10291"/>
+                <a id="comment_10291_header_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> added a comment  - <span class="subText"><span class="date">16/Apr/09 03:35 PM</span></span>  </div>
+    <div class="action-body">Initial implementation committed.<br/>
+<a href="/">http://yusuke.homeip.net/fisheye/changelog/svn/twitter4j/trunk?cs=210</a> </div>
+</div>
+</div>
+<div id="comment-10291-closed" style="display: none;">
+<div class="actionContainer" style="background-color:#f0f0f0;">
+    <div class="action-links subText smallgrey">
+    [ <a id="comment-10291-show" href="" onclick="toggleDivsWithCookie('comment-10291-open', 'comment-10291-closed'); return false;" class="smallgrey">Show &raquo;</a> ]
+    </div>
+    <div class="action-details" style="overflow: hidden; height: 1em;">
+                <a name="action_10291"/>
+                <a id="comment_10291_header_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> added a comment  - <span class="subText"><span class="date">16/Apr/09 03:35 PM</span></span>               Initial implementation committed.
+<a href="/">http://yusuke.homeip.net/fisheye/changelog/svn/twitter4j/trunk?cs=210</a>     </div>
+</div>
+</div>
+<br clear="all"/>
+<script language="JavaScript" type="text/javascript">
+<!--
+    restoreDivFromCookie('comment-10291-open', 'jira.viewissue.cong.cookie', '1');
+    restoreDivFromCookie('comment-10291-closed', 'jira.viewissue.cong.cookie', '0');
+//-->
+</script>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/_/download/resources/com.atlassian.jirafisheyeplugin_crucible-projectpanel/fisheye.css"/>
+<style type="text/css">
+    .msgPreview {
+        white-space:nowrap;
+        overflow:hidden;
+    }
+</style>
+<!-- Degrade gracefully in IE: can't overflow, so wrap instead! -->
+<!--[if IE]>
+<style type="text/css">
+.msgPreview {
+    white-space:normal !important;
+    overflow:auto !important;
+}
+</style>
+<![endif]-->
+<div class="actionContainer">
+    <div class="action-details selectable" onclick="toggleCSDivByButtonId('iconsvn215', 'svn215');">
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="85%">
+                <div class="msgPreview">
+                    <a class="fe_csid" href="/">215</a>
+                            by &nbsp;<strong><a href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a></strong>
+                    (2 files)
+                                                            <span class="selectable" width="100%">
+                    <font id="presvn215" color="gray" style="display:none;">
+                        - TFJ-83 fixed OAuth compatibility</font>
+                    </span>        
+                </div>
+            </td>
+            <td nowrap width="15%" class="reviewsActionHeader"><font size="-2" color="336699">17/Apr/09 01:55 AM (6 months, 28 days ago)</font>
+                            </td>
+        </tr>
+    </table>
+    </div>
+    <div id="cssvn215">
+                <div class="changesetMessage">
+                        <a href="../../jira/browse/TFJ-83.html" title="OAuth support"><strike>TFJ-83</strike></a> fixed OAuth compatibility
+                </div>
+                        <table id="changeset_215" cellpadding="2" cellspacing="0" border="0" width="100%" class="changesetRevisions">
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/OAuth.java</a> 
+                            <span class="small">
+                                <a href="/">215</a>
+                                <a href="/#r215"></a>
+                                                                                                        <a href="/#r215"></a>
+                                                                                                                         (+19 -2) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/test/java/twitter4j/http/OAuthTestUnit.java</a> 
+                            <span class="small">
+                                <a href="/">215</a>
+                                <a href="/#r215"></a>
+                                                                                                        <a href="/#r215"></a>
+                                                                                                                         (+2 -8) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                                </table>
+                <br>
+    </div>
+</div>
+                <div class="actionContainer">
+    <div class="action-details" id="changehistorydetails_10463">
+    <a name="action_10463"/>
+                <a id="ch_header_10463_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> made changes  - <font size="-2"><font color="#336699">17/Apr/09 12:04 PM</font></font>
+    </div>
+    <div id="changehistory" class="action-body">
+        <table cellpadding="2" cellspacing="0" border="0" width="100%" class="blank" id="changehistory_10463">
+                    <tr>
+            <td bgcolor="#ffffff" width="20%"><b>
+                            Fix Version/s
+                        </b></td>
+            <td bgcolor="#ffffff" width="40%">
+                                                    3.0.0
+                                                                            <font size="1">[    10154
+]</font>
+                                        </td>
+            <td bgcolor="#ffffff" width="40%">
+                                    </td>
+            </tr>
+                    <tr>
+            <td bgcolor="#ffffff" width="20%"><b>
+                            Fix Version/s
+                        </b></td>
+            <td bgcolor="#ffffff" width="40%">
+                                    </td>
+            <td bgcolor="#ffffff" width="40%">
+                                                    2.0.0
+                                                                           <font size="1">[    10170
+]</font>
+                                        </td>
+            </tr>
+                </table>
+    </div>
+</div>
+                <div class="actionContainer">
+    <div class="action-details" id="changehistorydetails_10464">
+    <a name="action_10464"/>
+                <a id="ch_header_10464_yusuke" href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a> made changes  - <font size="-2"><font color="#336699">17/Apr/09 12:04 PM</font></font>
+    </div>
+    <div id="changehistory" class="action-body">
+        <table cellpadding="2" cellspacing="0" border="0" width="100%" class="blank" id="changehistory_10464">
+                    <tr>
+            <td bgcolor="#ffffff" width="20%"><b>
+                            Resolution
+                        </b></td>
+            <td bgcolor="#ffffff" width="40%">
+                                    </td>
+            <td bgcolor="#ffffff" width="40%">
+                                                    Fixed
+                                                                           <font size="1">[    1
+]</font>
+                                        </td>
+            </tr>
+                    <tr>
+            <td bgcolor="#ffffff" width="20%"><b>
+                            Status
+                        </b></td>
+            <td bgcolor="#ffffff" width="40%">
+                                                    Open
+                                                                            <font size="1">[    1
+]</font>
+                                        </td>
+            <td bgcolor="#ffffff" width="40%">
+                                                    Closed
+                                                                           <font size="1">[    6
+]</font>
+                                        </td>
+            </tr>
+                </table>
+    </div>
+</div>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/_/download/resources/com.atlassian.jirafisheyeplugin_crucible-projectpanel/fisheye.css"/>
+<style type="text/css">
+    .msgPreview {
+        white-space:nowrap;
+        overflow:hidden;
+    }
+</style>
+<!-- Degrade gracefully in IE: can't overflow, so wrap instead! -->
+<!--[if IE]>
+<style type="text/css">
+.msgPreview {
+    white-space:normal !important;
+    overflow:auto !important;
+}
+</style>
+<![endif]-->
+<div class="actionContainer">
+    <div class="action-details selectable" onclick="toggleCSDivByButtonId('iconsvn222', 'svn222');">
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="85%">
+                <div class="msgPreview">
+                    <a class="fe_csid" href="/">222</a>
+                            by &nbsp;<strong><a href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a></strong>
+                    (4 files)
+                                                            <span class="selectable" width="100%">
+                    <font id="presvn222" color="gray" style="display:none;">
+                        - TFJ-83 method name refactors</font>
+                    </span>        
+                </div>
+            </td>
+            <td nowrap width="15%" class="reviewsActionHeader"><font size="-2" color="336699">18/Apr/09 06:31 PM (6 months, 27 days ago)</font>
+                            </td>
+        </tr>
+    </table>
+    </div>
+    <div id="cssvn222">
+                <div class="changesetMessage">
+                        <a href="../../jira/browse/TFJ-83.html" title="OAuth support"><strike>TFJ-83</strike></a> method name refactors
+                </div>
+                        <table id="changeset_222" cellpadding="2" cellspacing="0" border="0" width="100%" class="changesetRevisions">
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/RequestToken.java</a> 
+                            <span class="small">
+                                <a href="/">222</a>
+                                <a href="/#r222"></a>
+                                                                                                        <a href="/#r222"></a>
+                                                                                                                         (+2 -2) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/test/java/twitter4j/http/OAuthTest.java</a> 
+                            <span class="small">
+                                <a href="/">222</a>
+                                <a href="/#r222"></a>
+                                                                                                        <a href="/#r222"></a>
+                                                                                                                         (+3 -3) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/examples/OAuthUpdate.java</a> 
+                            <span class="small">
+                                <a href="/">222</a>
+                                <a href="/#r222"></a>
+                                                                                                        <a href="/#r222"></a>
+                                                                                                                         (+1 -1) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/http/HttpClient.java</a> 
+                            <span class="small">
+                                <a href="/">222</a>
+                                <a href="/#r222"></a>
+                                                                                                        <a href="/#r222"></a>
+                                                                                                                         (+3 -3) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                                </table>
+                <br>
+    </div>
+</div>
+<link type="text/css" rel="stylesheet" href="../../jira/s/466/1/_/download/resources/com.atlassian.jirafisheyeplugin_crucible-projectpanel/fisheye.css"/>
+<style type="text/css">
+    .msgPreview {
+        white-space:nowrap;
+        overflow:hidden;
+    }
+</style>
+<!-- Degrade gracefully in IE: can't overflow, so wrap instead! -->
+<!--[if IE]>
+<style type="text/css">
+.msgPreview {
+    white-space:normal !important;
+    overflow:auto !important;
+}
+</style>
+<![endif]-->
+<div class="actionContainer">
+    <div class="action-details selectable" onclick="toggleCSDivByButtonId('iconsvn224', 'svn224');">
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td width="85%">
+                <div class="msgPreview">
+                    <a class="fe_csid" href="/">224</a>
+                            by &nbsp;<strong><a href="../../jira/secure/ViewProfile_name_yusuke.html">Yusuke Yamamoto</a></strong>
+                    (1 file)
+                                                            <span class="selectable" width="100%">
+                    <font id="presvn224" color="gray" style="display:none;">
+                        - TFJ-83 method name refactors</font>
+                    </span>        
+                </div>
+            </td>
+            <td nowrap width="15%" class="reviewsActionHeader"><font size="-2" color="336699">18/Apr/09 06:37 PM (6 months, 27 days ago)</font>
+                            </td>
+        </tr>
+    </table>
+    </div>
+    <div id="cssvn224">
+                <div class="changesetMessage">
+                        <a href="../../jira/browse/TFJ-83.html" title="OAuth support"><strike>TFJ-83</strike></a> method name refactors
+                </div>
+                        <table id="changeset_224" cellpadding="2" cellspacing="0" border="0" width="100%" class="changesetRevisions">
+                                    <tr>
+                        <td width="100%">
+                            <a href="/">svn:</a><a href="/">
+                                twitter4j/trunk/src/main/java/twitter4j/Twitter.java</a> 
+                            <span class="small">
+                                <a href="/">224</a>
+                                <a href="/#r224"></a>
+                                                                                                        <a href="/#r224"></a>
+                                                                                                                         (+8 -24) <a href="/">diffs</a>
+                                                                                                                                        </span>
+                        </td>
+                    </tr>
+                                                </table>
+                <br>
+    </div>
+</div>
+<script type="text/javascript" language="JavaScript">
+function showElements(ids)
+{
+    for (var i=0; i<ids.length; i++)
+    {
+        showElement(ids[i]);
+    }
+}
+function hideElements(ids)
+{
+    for (var i=0; i<ids.length; i++)
+    {
+        hideElement(ids[i]);
+    }
+}
+function hideElement(id)
+{
+    document.getElementById(id).style.display = 'none';
+}
+function showElement(id)
+{
+    document.getElementById(id).style.display = '';
+}
+function toggleCSDivByButtonId(buttonId, csid)
+{    
+    toggleCSDiv(document.getElementById(buttonId), csid);
+}
+function toggleCSDiv(e, csid)
+{
+    var display;
+    if (e.src.indexOf("plus.gif") != -1)
+    {
+        e.src;
+        showElement('cs' + csid);
+        hideElement('pre' + csid);
+    }
+    else
+    {
+        e.src;
+        hideElement('cs' + csid);
+        showElement('pre' + csid);
+    }
+}
+//if show == true, expand all divs
+//if show == false, collapse all divs
+function changeAllCSDivsVisibility(show)
+{    
+    var divs = document.getElementsByTagName("div");
+    for (var i = 0; i < divs.length; i++)
+    {
+        var div = divs[i];
+        if (div.id.indexOf("cs") == 0)
+        {
+            var icon = document.getElementById("icon" + div.id.substring(2));
+            var csid = div.id.substring(2);
+            if (show)
+            {
+                if (icon.src.indexOf("plus.gif") > -1)
+                {
+                    toggleCSDiv(icon, csid);
+                }
+            }
+            else //hide
+            {
+                if (icon.src.indexOf("minus.gif") > -1)
+                {
+                    toggleCSDiv(icon, csid);
+                }
+            }
+        }
+    }
+}
+</script>
+        </div>
+            </div>
+        </td>
+    </tr>
+</table>
+<div class="footer">
+<div class="poweredbymessage">
+        <a href="http://www.atlassian.com/software/jira" class="smalltext">Atlassian JIRA</a>
+        <span id="footer-build-information" style="color: #666666;">(v4.0#466)</span>        | <a href="http://support.atlassian.com/secure/CreateIssue.jspa?issuetype=1&amp;pid=10000">Report a problem</a>
+        | <a href="http://jira.atlassian.com/secure/CreateIssue.jspa?pid=10240&amp;issuetype=2">Request a feature</a>
+        | <a href="../../jira/secure/Administrators.html">Contact administrators</a>
+    </div>
+                        <div class="licensemessage">
+                Powered by a free Atlassian <a href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Yusuke Yamamoto. Try JIRA - <a href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team.
+            </div>
+</div>
+<!--
+	                 REQUEST ID : 71891x6424x1
+	          REQUEST TIMESTAMP : [17/Nov/2009:19:58:11 +0900]
+	               REQUEST TIME : 0.9840
+	                 ASESSIONID : 1wi1h14
+-->
+</body>
+</html>

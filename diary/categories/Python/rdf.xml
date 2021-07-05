@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム - Python category</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaとアーチェリーと</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/11/16/1163606061276.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/09/27/1159367275705.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/09/23/1158972224163.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/09/23/1158945225780.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/09/23/1158940464262.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/11/16/1163606061276.html">
+    <title>Java屋が触る C# / その1 - Visual Studio Express で Hello World</title>
+    <link>http://yusuke.homeip.net/diary/2006/11/16/1163606061276.html</link>
+    
+      
+        <description>
+          &lt;p&gt;・ Java 屋が触る C# / その1 - Visual Studio Express で Hello World&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2006/11/17/1163689537951.html&#034;&gt; Java屋が触る C# / その2 - コマンドラインでコンパイル・実行&lt;/a&gt;&lt;br/&gt;・&lt;a href=&#034;http://yusuke.homeip.net/diary/2006/11/18/1163821446467.html&#034;&gt;その3 - Mono のインストール・実行&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;C# は Microsoft が主導して規格制定している Java によく似た言語です。&lt;br/&gt;コンパイルされたクラスは Windows ネイティブではなく、.NetFramework 上で動作するための中間コードになります。&lt;br/&gt;最近では Windows 以外の環境で .Net のコードを動作させる環境 - &lt;a href=&#034;http://www.mono-project.com/&#034;&gt;Mono&lt;/a&gt; が盛り上がっており、マルチプラットフォームのアプリケーションを開発する基盤として Java に次ぐ選択肢となり得ます。&lt;br/&gt;それどころか Mono の上で Java や Python, Ruby を動かすこともできるようです。&lt;br/&gt;言語に依存しない実行環境である .NetFramework の特徴をうまく利用していますね。&lt;br/&gt;- &lt;a href=&#034;http://www.mono-project.com/Languages&#034;&gt;http://www.mono-project.com/Languages&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://primates.ximian.com/~miguel/images/eclipse-mono.png&#034;&gt;Mono の上で Eclipse を動かしているというスクリーンショット&lt;/a&gt;もあります。Java との互換性は相当進んでいるのではないでしょうか。&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Mono を使ったマルチプラットフォームアプリケーションとしては&lt;a href=&#034;http://www.imeem.com/&#034;&gt;imeem&lt;/a&gt;があります。&lt;br/&gt;これは &#034;Social Media&#034; を謳うアプリケーションで、基本は Yahoo! Messenger、Windows Live Messenger、AIM といった各プロトコルに対応するチャットクライアントです。&lt;br/&gt;面白いのはチャットクライアントをベースに写真や動画を共有することができたり、友達の友達、といった形で辿ったりすることができる新しいコンセプトのツールです。&lt;br/&gt;もともと Windows 用に作ったアプリケーションですが、Mac 版を１から作らなくて済むよう Mono を利用してコードの大幅な共通化を図っているとのことです。&lt;br/&gt;ダウンロードして動かしてみれば分かりますが、Cocoa のネイティブアプリケーションと変わらないルック＆フィールで自然に動きます。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/11/15/imeem.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/11/15/imeem-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Mac OS X 上で動く imeem&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;というわけで、個人的に注目していたのですが、なかなか手がつけられないでいました。&lt;br/&gt;そんなところ、ちょうど最近仕事で C# の API を触る機会があり、さらに Paralles Desktop 上で Windows XP が快適に動くという状況なので C# プログラミングを楽しんでみることにしました。&lt;br/&gt;Java エンジニアの視点で、今回はひとまず Hello World を実行するところまでやってみたいと思います。&lt;br/&gt;&lt;br/&gt;・Visual Studio Express のインストール&lt;br/&gt;Visual Stuidio Express は Microsoft が提供する無償のプログラミング環境で、商用利用もできるそうです。&lt;br/&gt;&lt;br/&gt;まず、ダウンロードしたのは CD イメージ。&lt;br/&gt;- Visual Studio 2005 Express Edition - &lt;a href=&#034;http://www.microsoft.com/japan/msdn/vstudio/express/maninstall/&#034;&gt;CD イメージからのインストール方法&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;上記ページには CD イメージを焼かずに Windows で直接マウントする方法が書かれていますが、今回は Mac 側に iso イメージをダウンロードして Parallels Desktop で指定してマウントしました。&lt;br/&gt;インストール自体は特に迷うことなく簡単にできました。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/11/15/vs.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/11/15/vs-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;・Hello World の作成&lt;br/&gt;とりあえず Hello World を作ります。GUIを持たないアプリケーションを作るには[ファイル&gt;新しいプロジェクト&gt;コンソール アプリケーション] を選択します。&lt;br/&gt;すると、以下のようなアプリケーションの雛形が作成されました。&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;using System;&lt;br/&gt;using System.Collections.Generic;&lt;br/&gt;using System.Text;&lt;br/&gt;&lt;br/&gt;namespace ConsoleApplication1&lt;br/&gt;{&lt;br/&gt;&amp;nbsp;class Program&lt;br/&gt;&amp;nbsp;{&lt;br/&gt;&amp;nbsp;&amp;nbsp;static void Main(string[] args)&lt;br/&gt;&amp;nbsp;&amp;nbsp;{&lt;br/&gt;&amp;nbsp;&amp;nbsp;}&lt;br/&gt;&amp;nbsp;}&lt;br/&gt;}&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;Java との大きな違いは import が using に、package が namespace に、クラス名だけじゃなくメソッド名も大文字になっているといったところでしょうか。&lt;br/&gt;Hello World とコンソールに表示させるのは簡単。&lt;br/&gt;以下のメソッドを Main メソッドに追加するだけです。&lt;br/&gt;&lt;span class=&#034;codeSample&#034;&gt;System.Console.WriteLine(&#034;Hello World&#034;);&lt;/span&gt;&lt;br/&gt;太古の昔にどこかの雑誌で読んだ記事の記憶を頼りに、特にリファレンスを見ることなく書けてしまいました。&lt;br/&gt;&lt;br/&gt;実行ボタンを押すと・・・一瞬コマンドプロンプトが表示されたかと思うとすぐ消えてしまいますが、一応動いているようです。&lt;br/&gt;あまりに一瞬なのでスクリーンショットは撮れませんでした。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/11/15/helloworld.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/11/15/helloworld-thumb.jpg&#034; title=&#034;Visual Studio で Hello World&#034;/&gt;&lt;/a&gt;&lt;br/&gt;Visual Studio で Hello World&lt;br/&gt;&lt;br/&gt;とりあえず C# に触れることが出来ました。&lt;br/&gt;最後に比較のため、C# と Java の同等のコードを載せます。&lt;br/&gt;&lt;br/&gt;- C# のコード: Program.cs&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;namespace ConsoleApplication1&lt;br/&gt;{&lt;br/&gt;&amp;nbsp;class Program&lt;br/&gt;&amp;nbsp;{&lt;br/&gt;&amp;nbsp;&amp;nbsp;static void Main(string[] args)&lt;br/&gt;&amp;nbsp;&amp;nbsp;{&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;System.Console.WriteLine(&#034;Hello World&#034;);&lt;br/&gt;&amp;nbsp;&amp;nbsp;}&lt;br/&gt;&amp;nbsp;}&lt;br/&gt;}&lt;/div&gt;&lt;br/&gt;デフォルトで宣言されていた using System; は省略してもコンパイルできました。&lt;br/&gt;Java でいう java.lang.* のパッケージと同じく暗黙的に使えるようになっているようです。&lt;br/&gt;&lt;br/&gt;- Java のコード: Program.java&lt;br/&gt;&lt;div class=&#034;codeSample&#034;&gt;package ConsoleApplication1;&lt;br/&gt;&lt;br/&gt;&amp;nbsp;class Program&lt;br/&gt;&amp;nbsp;{&lt;br/&gt;&amp;nbsp;&amp;nbsp;public static void main(String[] args)&lt;br/&gt;&amp;nbsp;&amp;nbsp;{&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;System.out.println(&#034;Hello World&#034;);&lt;br/&gt;&amp;nbsp;&amp;nbsp;}&lt;br/&gt;&amp;nbsp;}&lt;br/&gt;}&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;なぜだかよく分かりませんが C# は Main メソッドは public でなくても良いようです。&lt;br/&gt;&lt;br/&gt;次回はたぶんコマンドプロンプトからコンパイル・実行する方法を調べてみます。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/09/27/1159367275705.html">
+    <title>Python 修行 - 4 / アンチョコ探し</title>
+    <link>http://yusuke.homeip.net/diary/2006/09/27/1159367275705.html</link>
+    
+      
+        <description>
+          &lt;p&gt;チュートリアルを最初から読んでいくのは早速飽きました。&lt;br/&gt;まぁ文法さえわかればあとは API リファレンスを見れば良いだろうということでアンチョコ(Cheat Sheet)を探しました。&lt;br/&gt;パッと見つかったのは以下の２つ。&lt;br/&gt;・Python 101 cheat sheet&lt;br/&gt;&lt;a href=&#034;http://www-128.ibm.com/developerworks/library/l-cheatsheet3.html&#034;&gt;http://www-128.ibm.com/developerworks/library/l-cheatsheet3.html&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;・Python Cheat Sheet&lt;br/&gt;&lt;a href=&#034;http://www.yukoncollege.yk.ca/~ttopper/COMP118/rCheatSheet.html&#034;&gt;http://www.yukoncollege.yk.ca/~ttopper/COMP118/rCheatSheet.html&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;ざっとコレを見ながら何か作ってみれば覚えも早いかな？&lt;br/&gt;&lt;br/&gt;ついでに見つけたのが Java や HTML、vi、Oracle などエンジニアに役立ちそうなアンチョコへのリンクが 30 以上も掲載されているページ。&lt;br/&gt;良く触る言語・製品のはプリントアウトして手元に置いておくと良いかもしれません。&lt;br/&gt;・Cheat Sheet Roundup - Over 30 Cheatsheets for developers&lt;br/&gt;&lt;a href=&#034;http://www.petefreitag.com/item/455.cfm&#034;&gt;http://www.petefreitag.com/item/455.cfm&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/09/23/1158972224163.html">
+    <title>Python 修行 - 3 / WebLogic と Python と Jython</title>
+    <link>http://yusuke.homeip.net/diary/2006/09/23/1158972224163.html</link>
+    
+      
+        <description>
+          &lt;p&gt;WebLogic Server 9.x には Java ベースの Python 実装、Jython が含まれています。&lt;br/&gt;Jython は Python のコードを Java のバイトコードに変換して実行します。結果的には Python コードが (JVM の実装、判断次第では)ネイティブコードで動くことになります。&lt;br/&gt;使い方は簡単、setEnv.sh/cmd で環境変数を整えて weblogic.WLST クラスを起動するだけ。引数を指定しなければインタラクティブモードになり、Pythonコードが書かれたファイルを指定すれば直接起動します。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;~/bea92/weblogic92/samples/domains/wl_server$ . bin/setDomainEnv.sh &lt;br/&gt;-bash: Don&#039;t know how to set the shared library path for Darwin.  &lt;br/&gt;~/bea92/weblogic92/samples/domains/wl_server$ java weblogic.WLST&lt;br/&gt;&lt;br/&gt;Initializing WebLogic Scripting Tool (WLST) ...&lt;br/&gt;&lt;br/&gt;Welcome to WebLogic Server Administration Scripting Shell&lt;br/&gt;&lt;br/&gt;Type help() for help on available commands&lt;br/&gt;&lt;br/&gt;wls:/offline&amp;gt; 1+2&lt;br/&gt;3&lt;br/&gt;wls:/offline&amp;gt; _&lt;br/&gt;3&lt;br/&gt;wls:/offline&amp;gt; hello = &#034;hello&#034;&lt;br/&gt;wls:/offline&amp;gt; hello[0:2]&lt;br/&gt;&#039;he&#039;&lt;br/&gt;wls:/offline&amp;gt; ^D&lt;br/&gt;~/bea92/weblogic92/samples/domains/wl_server$ cat hello.py &lt;br/&gt;print &#034;hello&#034;&lt;br/&gt;~/bea92/weblogic92/samples/domains/wl_server$ java weblogic.WLST hello.py &lt;br/&gt;&lt;br/&gt;Initializing WebLogic Scripting Tool (WLST) ...&lt;br/&gt;&lt;br/&gt;Welcome to WebLogic Server Administration Scripting Shell&lt;br/&gt;&lt;br/&gt;Type help() for help on available commands&lt;br/&gt;&lt;br/&gt;hello$ cat hello.py &lt;br/&gt;print &#034;hello&#034;&lt;br/&gt;~/bea92/weblogic92/samples/domains/wl_server$ java weblogic.WLST hello.py &lt;br/&gt;&lt;br/&gt;Initializing WebLogic Scripting Tool (WLST) ...&lt;br/&gt;&lt;br/&gt;Welcome to WebLogic Server Administration Scripting Shell&lt;br/&gt;&lt;br/&gt;Type help() for help on available commands&lt;br/&gt;&lt;br/&gt;hello&lt;br/&gt;~/bea92/weblogic92/samples/domains/wl_server$ &lt;br/&gt;&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;Jython について詳しくはこちら。&lt;br/&gt;&lt;a href=&#034;http://www.jython.jp/&#034;&gt;http://www.jython.jp/&lt;/a&gt;&lt;br/&gt;&lt;a href=&#034;http://www.jython.org/Project/index.html&#034;&gt;http://www.jython.org/Project/index.html&lt;/a&gt;&lt;br/&gt;&lt;a href=&#034;http://sourceforge.net/projects/jython/&#034;&gt;http://sourceforge.net/projects/jython/&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/09/23/1158945225780.html">
+    <title>Python 修行 - 2</title>
+    <link>http://yusuke.homeip.net/diary/2006/09/23/1158945225780.html</link>
+    
+      
+        <description>
+          &lt;p&gt;今回は &lt;a href=&#034;http://docs.python.org/tut/node5.html&#034;&gt;3. An Informal Introduction to Python&lt;/a&gt;。&lt;br/&gt;斬新な文法だらけでほとんど丸写しに近いメモになってしまいました。&lt;br/&gt;&lt;br/&gt;インタラクティブモードでは式を評価した結果が即座に表示されます。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;$ python&lt;br/&gt;Python 2.3.5 (#1, Mar 20 2005, 20:38:20) &lt;br/&gt;[GCC 3.3 20030304 (Apple Computer, Inc. build 1809)] on darwin&lt;br/&gt;Type &#034;help&#034;, &#034;copyright&#034;, &#034;credits&#034; or &#034;license&#034; for more information.&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; 1+1&lt;br/&gt;2&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; &#034;hello&#034;&lt;br/&gt;&#039;hello&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;最後に評価された値は &#034;_&#034; で参照できます。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;&amp;gt;&amp;gt;&amp;gt; 2*3&lt;br/&gt;6&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; _*4&lt;br/&gt;24&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; &#034;hello&#034;&lt;br/&gt;&#039;hello&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; _+&#034; world&#034;&lt;br/&gt;&#039;hello world&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;ダブル(シングル)クオーテーション３つで囲むと改行やダブル(シングル)クオーテーションをエスケープせずに記述できます。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;&amp;gt;&amp;gt;&amp;gt; &#034;&#034;&#034;&lt;br/&gt;... This&lt;br/&gt;...  is&lt;br/&gt;...  &#034;a&#034;&lt;br/&gt;... sentence&lt;br/&gt;... &#034;&#034;&#034;&lt;br/&gt;&#039;\nThis\n is\n &#034;a&#034;\nsentence\n&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; _&lt;br/&gt;&#039;\nThis\n is\n &#034;a&#034;\nsentence\n&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; print _&lt;br/&gt;&lt;br/&gt;This&lt;br/&gt; is&lt;br/&gt; &#034;a&#034;&lt;br/&gt;sentence&lt;br/&gt;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;ダブルクオーテーションで囲むとシングルクオーテーションをエスケープせずに掛けます。逆も然り。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;&amp;gt;&amp;gt;&amp;gt; &#034;It&#039;s a SONY&#034;&lt;br/&gt;&#034;It&#039;s a SONY&#034;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; &#039;It\&#039;s a &#034;SONY&#034;&#039;&lt;br/&gt;&#039;It\&#039;s a &#034;SONY&#034;&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; print _&lt;br/&gt;It&#039;s a &#034;SONY&#034;&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;r&amp;quot; で始めると &lt;b&gt;R&lt;/b&gt;aw text として認識され、エスケープが行われません。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;&amp;gt;&amp;gt;&amp;gt; hello = r&#034;This is a raw text\&lt;br/&gt;...  &#039;\n&#039; won&#039;t be converted.&#034;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; print hello&lt;br/&gt;This is a raw text\&lt;br/&gt; &#039;\n&#039; won&#039;t be converted.&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;サブストリングの抽出はこんな感じ。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;&amp;gt;&amp;gt;&amp;gt; hello = &#034;hello&#034;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; hello[0]&lt;br/&gt;&#039;h&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; hello[10]&lt;br/&gt;Traceback (most recent call last):&lt;br/&gt;  File &#034;&lt;stdin&gt;&#034;, line 1, in ?&lt;br/&gt;IndexError: string index out of range&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; hello[0:2]&lt;br/&gt;&#039;he&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; hello[:2]&lt;br/&gt;&#039;he&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; hello[2:]&lt;br/&gt;&#039;llo&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; hello[-2]&lt;br/&gt;&#039;l&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; hello[-2:]&lt;br/&gt;&#039;lo&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt; hello[:-2]&lt;br/&gt;&#039;hel&#039;&lt;br/&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/pre&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/09/23/1158940464262.html">
+    <title>Python 修行</title>
+    <link>http://yusuke.homeip.net/diary/2006/09/23/1158940464262.html</link>
+    
+      
+        <description>
+          &lt;p&gt;Python に手をつけてみました。&lt;br/&gt;とりあえず本家のチュートリアルベースに勉強しながら忘れそうなことをメモしていくことにします。&lt;br/&gt;・Python Tutorial&lt;br/&gt;&lt;a href=&#034;http://docs.python.org/tut/tut.html&#034;&gt;http://docs.python.org/tut/tut.html&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;- Mac OS X の Python&lt;br/&gt;Mac OS X は標準で Python がインストールされてます。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;$ py[tab]&lt;br/&gt;pydoc       pydoc2.4    python2.3   pythonw     &lt;br/&gt;pydoc2.3    python      python2.4   pythonw2.3&lt;br/&gt;$ whereis python&lt;br/&gt;/usr/bin/python&lt;br/&gt;$ ls -la /usr/bin/python&lt;br/&gt;lrwxr-xr-x   1 root  wheel  9 May  1  2005 /usr/bin/python -&gt; python2.3&lt;br/&gt;$ python2.3&lt;br/&gt;Python 2.3.5 (#1, Feb 19 2006, 00:26:06) &lt;br/&gt;[GCC 4.0.1 (Apple Computer, Inc. build 5250)] on darwin&lt;br/&gt;Type &#034;help&#034;, &#034;copyright&#034;, &#034;credits&#034; or &#034;license&#034; for more information.&lt;br/&gt;&gt;&gt;&gt; quit&lt;br/&gt;&#039;Use Ctrl-D (i.e. EOF) to exit.&#039;&lt;br/&gt;&gt;&gt;&gt; ^D&lt;br/&gt;$ python2.4&lt;br/&gt;Python 2.4.2 (#1, Feb 18 2006, 23:37:11) &lt;br/&gt;[GCC 4.0.1 (Apple Computer, Inc. build 5250)] on darwin&lt;br/&gt;Type &#034;help&#034;, &#034;copyright&#034;, &#034;credits&#034; or &#034;license&#034; for more information.&lt;br/&gt;&gt;&gt;&gt; ^D&lt;/pre&gt;&lt;br/&gt;どうやら Python2.3.5 / 2.4.2 がインストールされていて、python は python2.3 へリンクが張られてるらしい。&lt;br/&gt;&lt;br/&gt;というわけで &lt;a href=&#034;http://docs.python.org/tut/node4.html&#034;&gt;2. Using the Python&lt;/a&gt; あたりを実践。&lt;br/&gt;&lt;br/&gt;- Python の実行方法&lt;br/&gt;・インタラクティブモード&lt;br/&gt;コマンドラインから python とうつだけ&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;$ python&lt;br/&gt;Python 2.3.5 (#1, Mar 20 2005, 20:38:20) &lt;br/&gt;[GCC 3.3 20030304 (Apple Computer, Inc. build 1809)] on darwin&lt;br/&gt;Type &#034;help&#034;, &#034;copyright&#034;, &#034;credits&#034; or &#034;license&#034; for more information.&lt;br/&gt;&gt;&gt;&gt; print &#034;hello&#034;&lt;br/&gt;hello&lt;br/&gt;&gt;&gt;&gt; ^D&lt;/pre&gt;&lt;br/&gt;・ファイルに保存して&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;$ cat hello.py &lt;br/&gt;print &#034;hello&#034;&lt;br/&gt;$ python hello.py &lt;br/&gt;hello&lt;/pre&gt;&lt;br/&gt;・直接実行&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;$ cat hello.py &lt;br/&gt;#! /usr/bin/env python&lt;br/&gt;print &#034;hello&#034;&lt;br/&gt;$ chmod +x hello.py &lt;br/&gt;$ ./hello.py &lt;br/&gt;hello&lt;/pre&gt;&lt;br/&gt;&lt;br/&gt;- エンコーディングの指定方法&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;$ cat hello.py &lt;br/&gt;#! /usr/bin/env python&lt;br/&gt;# -*- coding: Shift_JIS -*-&lt;br/&gt;print &#034;こんにちは&#034;&lt;br/&gt;$ ./hello.py &lt;br/&gt;  File &#034;./hello.py&#034;, line 2&lt;br/&gt;SyntaxError: &#039;unknown encoding: Shift_JIS&#039;&lt;/pre&gt;&lt;br/&gt;そんなエンコーディングは知らないとエラーがでた。&lt;br/&gt;&#034;SyntaxError&#034; ってのはなんかニュアンスがおかしいけど・・。&lt;br/&gt;&lt;a href=&#034;http://www.google.com/search?hl=ja&amp;client=safari&amp;rls=ja-jp&amp;q=%23+-*-+coding%3A+eucjp+-*-+python&amp;btnG=Google+検索&amp;lr=&#034;&gt;調べてみると&lt;/a&gt;、&lt;a href=&#034;http://www.python.jp/Zope/download/JapaneseCodecs&#034;&gt;JapaneseCodecs&lt;/a&gt;っていうパッケージ（？）が必要らしい。&lt;br/&gt;&lt;a href=&#034;http://www.python.jp/Zope/articles/japanese/Python4Japanese-2&#034;&gt;日本語環境でのPython (for Python 2.3 or later)&lt;/a&gt;&lt;br/&gt;Python2.4 ではデフォルトで含まれているそう。&lt;br/&gt;また、エンコーディングの指定はもうちょっとシンプルに、&lt;br/&gt;&lt;span class=&#034;codeSample&#034;&gt;# coding: エンコーディング名&lt;/span&gt;&lt;br/&gt;で良いらしい。&lt;br/&gt;使えるエンコーディングの一覧はこちら&lt;br/&gt;&lt;a href=&#034;http://docs.python.org/lib/standard-encodings.html&#034;&gt;http://docs.python.org/lib/standard-encodings.html&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;というわけで Python2.4 で動かしてみる。&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;$ cat hello.py &lt;br/&gt;#! /usr/bin/env python&lt;br/&gt;# -*- coding: shiftjis -*-&lt;br/&gt;print &#034;日本語&#034;&lt;br/&gt;$ python2.4 hello.py &lt;br/&gt;Bus error&lt;/pre&gt;&lt;br/&gt;バスエラーが発生。なんとなく euc にしてみたら・・&lt;br/&gt;&lt;pre class=&#034;codeSample&#034;&gt;$ cat hello.py &lt;br/&gt;#! /usr/bin/env python&lt;br/&gt;# -*- coding: eucjp -*-&lt;br/&gt;print &#034;日本語&#034;&lt;br/&gt;$ python2.4 hello.py &lt;br/&gt;日本語&lt;/pre&gt;&lt;br/&gt;動いた。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+
+</rdf:RDF>

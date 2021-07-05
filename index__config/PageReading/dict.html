@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+ <meta http-equiv="content-type" content="application/xhtml+xml; charset=EUC-JP"/>
+ <meta http-equiv="content-style-type" content="text/css"/>
+ <title>:config/PageReading/dict</title>
+ <link rel="stylesheet" href="../../skin/default.en.css" type="text/css" media="screen" charset="EUC-JP"/>
+ <link rel="stylesheet" href="../../skin/print.en.css" type="text/css" media="print" charset="EUC-JP"/>
+</head>
+<body>
+<div id="header">
+ <a href="/"><img id="logo" src="../../pukiwiki.png" width="512" height="64" alt="[PukiWiki]" title="[PukiWiki]"/></a>
+ <h1 class="title"><a href="../../index_cmd_search_word__config/PageReading/dict.html">:config/PageReading/dict</a> </h1>
+ <a href="../../index__config/PageReading/dict.html"><span class="small">http://yusuke.homeip.net/index.html?%3Aconfig%2FPageReading%2Fdict</span></a>
+</div>
+<div id="navigator">
+ [ <a href="../../index__config/PageReading/dict.html">Reload</a> ]
+ &nbsp;
+ [ <a href="../../index_plugin_newpage_refer__config/PageReading/dict.html">New</a>
+ | <a href="../../index_cmd_edit_page__config/PageReading/dict.html">Edit</a>
+ | <a href="../../index_cmd_unfreeze_page__config/PageReading/dict.html">Unfreeze</a>
+ | <a href="../../index_cmd_diff_page__config/PageReading/dict.html">Diff</a>
+ | <a href="/">Upload</a>
+ ]
+ &nbsp;
+ [ <a href="../../index_Samuraism.html">Front page</a>
+ | <a href="../../index_cmd_list.html">List of pages</a>
+ | <a href="../../index_cmd_search.html">Search</a>
+ | <a href="../../index_RecentChanges.html">Recent changes</a>
+ | <a href="../../index_cmd_backup_page__config/PageReading/dict.html">Backup</a>
+ | <a href="../../index__A5_D8_A5_EB_A5_D7.html">Help</a>
+ ]
+ [ <a href="/">Referer</a> ]
+</div>
+<hr class="full_hr"/>
+<table border="0" style="width:100%">
+ <tr>
+  <td class="menubar">
+   <div id="menubar">
+<ul><li><a href="/">top</a>&nbsp;&gt;
+<br/>
+<br/>
+&nbsp;<a href="../../tools.html">ツール</a>&nbsp;/&nbsp;<a href="../../index_tools.html" title="tools (767d)">tools</a>
+<br/>
+<br/>
+&nbsp;<a href="../../diary.html">日記</a></li></ul>
+   </div>
+  </td>
+  <td valign="top">
+   <div id="body">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../../pagead/show_ads.js">
+</script>
+<p><a href="../../index__config/PageReading.html" title=":config/PageReading (1079d)">:config/PageReading</a></p>
+<h2 id="content_1_0"><span class="noexists">ChaSen<a href="/">?</a></span>/Kakasi無しで<a href="../../index__config/PageReading.html" title=":config/PageReading (1079d)">:config/PageReading</a>を半自動作成するための辞書（サンプル）</h2>
+<ul class="list1" style="padding-left:16px;margin-left:16px"><li>ページの一覧を表示すると、<a href="../../index__config/PageReading.html" title=":config/PageReading (1079d)">:config/PageReading</a> に登録されていないページ名にこのページのルールを適用して読みに変換し、一覧分類します。</li>
+<li>既に <a href="../../index__config/PageReading.html" title=":config/PageReading (1079d)">:config/PageReading</a> に登録されているページには適用されません</li>
+<li>ルールの書式：半角スペース＋半角スラッシュ＋正規表現パターン＋半角スラッシュ＋半角コンマ＋読み（全角仮名）</li>
+<li>上記書式でない行は、無視されます。</li>
+<li>ルールは、上から順に適用されます。</li>
+<li>正規表現は、mb_ereg_replace 関数で処理されます。</li>
+<li>mbstring モジュール必須です。</li>
+<li>漢字以外も変換可能です。たとえば、「ABC」を「エービーシー」と変換することもできます。</li></ul>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_1">単純な置換ルール</h3>
+<pre> /日本語/,ニホンゴ
+ /整形/,セイケイ</pre>
+<div class="jumpmenu"><a href="#navigator">&uarr;</a></div><h3 id="content_1_2">JIS第一水準が読みの順になっていることを利用したルール</h3>
+<pre> /[亜-杏]/,ア
+ /[以-吋]/,イ
+ /[右-雲]/,ウ
+ /[荏-塩]/,エ
+ /[於-音]/,オ
+ /[下-願]/,カ
+ /[企-銀]/,キ
+ /[九-郡]/,ク
+ /[卦-乎]/,ケ
+ /[乎-魂]/,コ
+ /[些-残]/,サ
+ /[仕-靭]/,シ
+ /[笥-寸]/,ス
+ /[世-糎]/,セ
+ /[噌-遜]/,ソ
+ /[他-談]/,タ
+ /[値-陳]/,チ
+ /[津-鶴]/,ツ
+ /[亭-電]/,テ
+ /[兎-鈍]/,ト
+ /[奈-汝]/,ナ
+ /[二-認]/,ニ
+ /濡/,ヌ
+ /[禰-粘]/,ネ
+ /[乃-蚤]/,ノ
+ /[巴-蛮]/,ハ
+ /[匪-瓶]/,ヒ
+ /[不-聞]/,フ
+ /[丙-鞭]/,ヘ
+ /[保-盆]/,ホ
+ /[摩-蔓]/,マ
+ /[味-眠]/,ミ
+ /[務-娘]/,ム
+ /[冥-麺]/,メ
+ /[摸-匁]/,モ
+ /[也-鑓]/,ヤ
+ /[愉-夕]/,ユ
+ /[予-淀]/,ヨ
+ /[羅-覧]/,ラ
+ /[利-麟]/,リ
+ /[瑠-類]/,ル
+ /[令-錬]/,レ
+ /[呂-論]/,ロ
+ /[倭-腕]/,ワ</pre>
+<script type="text/javascript"><!--
+google_ad_client = "pub-3583922429486444";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="../../pagead/show_ads.js">
+</script>
+</div>
+  </td>
+ </tr>
+</table>
+<hr class="full_hr"/><div id="toolbar">
+ <a href="../../index__config/PageReading/dict.html"><img src="../../image/reload.png" width="20" height="20" alt="Reload" title="Reload"/></a>
+ &nbsp;
+ <a href="../../index_plugin_newpage.html"><img src="../../image/new.png" width="20" height="20" alt="New" title="New"/></a>
+ <a href="../../index_cmd_edit_page__config/PageReading/dict.html"><img src="../../image/edit.png" width="20" height="20" alt="Edit" title="Edit"/></a>
+ <a href="../../index_cmd_unfreeze_page__config/PageReading/dict.html"><img src="../../image/unfreeze.png" width="20" height="20" alt="Unfreeze" title="Unfreeze"/></a>
+ <a href="../../index_cmd_diff_page__config/PageReading/dict.html"><img src="../../image/diff.png" width="20" height="20" alt="Diff" title="Diff"/></a>
+ <a href="/"><img src="../../image/file.png" width="20" height="20" alt="Upload" title="Upload"/></a>
+ <a href="/"><img src="../../image/copy.png" width="20" height="20" alt="Copy" title="Copy"/></a>
+ <a href="/"><img src="../../image/rename.png" width="20" height="20" alt="Rename" title="Rename"/></a>
+ &nbsp;
+ <a href="../../index_Samuraism.html"><img src="../../image/top.png" width="20" height="20" alt="Front page" title="Front page"/></a>
+ <a href="../../index_cmd_list.html"><img src="../../image/list.png" width="20" height="20" alt="List of pages" title="List of pages"/></a>
+ <a href="../../index_cmd_search.html"><img src="../../image/search.png" width="20" height="20" alt="Search" title="Search"/></a>
+ <a href="../../index_RecentChanges.html"><img src="../../image/recentchanges.png" width="20" height="20" alt="Recent changes" title="Recent changes"/></a>
+ <a href="../../index_cmd_backup_page__config/PageReading/dict.html"><img src="../../image/backup.png" width="20" height="20" alt="Backup" title="Backup"/></a>
+ &nbsp;
+ <a href="../../index__A5_D8_A5_EB_A5_D7.html"><img src="../../image/help.png" width="20" height="20" alt="Help" title="Help"/></a>
+ &nbsp;
+ <a href="../../index_cmd_rss10.html"><img src="../../image/rss.png" width="36" height="14" alt="RSS of recent changes" title="RSS of recent changes"/></a>
+</div>
+<div id="lastmodified">
+ Last-modified: Sat, 20 Mar 2004 22:43:58 JST  (1079d)</div>
+<div id="footer">
+ Modified by <a href="/">yusuke</a>
+ <br/><br/>
+<strong>"PukiWiki" 1.4.3</strong> Copyright &copy; 2001,2002,2003
+<a href="http://pukiwiki.org/">PukiWiki Developers Team</a>.
+License is <a href="http://www.gnu.org/">GNU/GPL</a>.<br/>
+Based on "PukiWiki" 1.3 by <a href="http://factage.com/sng/">sng</a>
+ <br/>
+ Powered by PHP 4.3.9 <br/><br/>
+ HTML convert time to 0.283 sec.
+</div>
+<script src="../../urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262260-1";
+urchinTracker();
+</script></body>
+</html>

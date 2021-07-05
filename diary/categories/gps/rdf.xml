@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム - GPS category</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaとアーチェリーと</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/14/1142325346061.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/13/1142243307609.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/11/1142008362000.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/09/1141893379163.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/09/1141891413989.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/02/26/1140938175264.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/02/25/1140856229021.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/14/1142325346061.html">
+    <title>続簡単Google Maps</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/14/1142325346061.html</link>
+    
+      
+      
+        <description>
+          blog に貼り付ける Google Maps のスクリプト自動生成ツールをアップデート
+          &lt;p&gt;&lt;a href="http://yusuke.homeip.net/diary/2006/03/14/1142325346061.html"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+        </description>
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/13/1142243307609.html">
+    <title>Foretrex101ゲット</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/13/1142243307609.html</link>
+    
+      
+      
+        <description>
+          ポータブル GPS レシーバが届いた
+          &lt;p&gt;&lt;a href="http://yusuke.homeip.net/diary/2006/03/13/1142243307609.html"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+        </description>
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/11/1142008362000.html">
+    <title>ポータブル GPSレシーバを選ぶ</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/11/1142008362000.html</link>
+    
+      
+      
+        <description>
+          ポータブル GPSレシーバの選択と注文っ
+          &lt;p&gt;&lt;a href="http://yusuke.homeip.net/diary/2006/03/11/1142008362000.html"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+        </description>
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/09/1141893379163.html">
+    <title>Streets &amp; Trips 2006 in action</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/09/1141893379163.html</link>
+    
+      
+      
+        <description>
+          MS製のナビゲーションソフト、Streets &amp; Trips 2006 の感想
+          &lt;p&gt;&lt;a href="http://yusuke.homeip.net/diary/2006/03/09/1141893379163.html"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+        </description>
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/09/1141891413989.html">
+    <title>GPSLib4j で GPS に接続</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/09/1141891413989.html</link>
+    
+      
+      
+        <description>
+          オープンソースの Java 用 GPS ライブラリ、 GPSLib4j で GPS レシーバの接続テスト
+          &lt;p&gt;&lt;a href="http://yusuke.homeip.net/diary/2006/03/09/1141891413989.html"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+        </description>
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/02/26/1140938175264.html">
+    <title>Mac / Java で GPS!</title>
+    <link>http://yusuke.homeip.net/diary/2006/02/26/1140938175264.html</link>
+    
+      
+      
+        <description>
+          Windows 用の GPS ソフト、Streets &amp; Trips 2006 に付属 GPS レシーバを Mac OS X で使えるか、また Java からアクセスできるかどうか調査
+          &lt;p&gt;&lt;a href="http://yusuke.homeip.net/diary/2006/02/26/1140938175264.html"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+        </description>
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/02/25/1140856229021.html">
+    <title>GPS! GPS! GPS!</title>
+    <link>http://yusuke.homeip.net/diary/2006/02/25/1140856229021.html</link>
+    
+      
+      
+        <description>
+          GPS 製品の調査、導入 &amp; 開発(?)&lt;br&gt;
+&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/02/24/wingps-large.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/02/24/wingps-thumb.jpg&#034; title=&#034;Microsoft Streets &amp; Trips 2006 - パッケージ外観&#034;/&gt;&lt;/a&gt;
+          &lt;p&gt;&lt;a href="http://yusuke.homeip.net/diary/2006/02/25/1140856229021.html"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+        </description>
+      
+    
+  </item>
+  
+
+</rdf:RDF>

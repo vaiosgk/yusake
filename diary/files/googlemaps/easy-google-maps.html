@@ -1,0 +1,130 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<!--
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<rdf:Description rdf:about="http://yusuke.homeip.net/diary/files/googlemaps/easy-google-maps.html">
+   <foaf:maker rdf:parseType="Resource">
+     <foaf:holdsAccount>
+       <foaf:OnlineAccount foaf:accountName="yusukey">
+         <foaf:accountServiceHomepage rdf:resource="http://www.hatena.ne.jp/" />
+       </foaf:OnlineAccount>
+     </foaf:holdsAccount>
+   </foaf:maker>
+</rdf:Description>
+</rdf:RDF>
+-->
+  <title>easy-maps</title> 
+     <script src="../../../maps_file_api_v_1_key_ABQIAAAAtS2fi_RnBiuUs4BlVHjt6BRABsBgP8wqQh7kS3FgnXJL7vMCZhRCUVBp4cfEBxevDEQRKjj9DJC-Yg.js" type="text/javascript" charset="UTF-8"></script>
+   <script src="http://yusuke.homeip.net/diary/files/googlemaps/common.js" type="text/javascript" charset="UTF-8"></script>
+    <script type="text/javascript">
+function createHtml(){
+    var latlng = map.getCenterLatLng();
+    document.myform.x.value = latlng.x;
+    document.myform.y.value = latlng.y;
+map.removeOverlay(marker);
+marker = new GMarker(map.getCenterLatLng());
+map.addOverlay(marker);
+var d = new Date();
+var num = (1900+d.getYear())+""+(d.getMonth()+1)+""+d.getDay()+""+d.getHours()+""+d.getMinutes()+""+d.getSeconds();
+var maptypes = map.getMapTypes();
+var type;
+for(type=0;i<maptypes.length;type++){
+  if(maptypes[type] == map.getCurrentMapType()){
+   setPreference("mapType",type);
+   break;
+  }
+}
+var html ="<div id='map"+num+"' style='width: 300px; height: 300px'></div>";
+html=html+"<script type='text/javascript'>";
+html=html+"var func"+num+" = document.body.onload;";
+html=html+"function init"+num+"(){";
+html=html+"var map"+num+" = new GMap(document.getElementById('map"+num+"'));";
+html=html+"map"+num+".addControl(new GLargeMapControl());";
+html=html+"map"+num+".centerAndZoom(new GPoint("+document.myform.x.value+","+document.myform.y.value+"),"+map.getZoomLevel()+");";
+if(type==0){
+html=html+"map"+num+".setMapType(G_MAP_TYPE);";
+}
+if(type==1){
+html=html+"map"+num+".setMapType(G_SATELLITE_TYPE);";
+}
+if(type==2){
+html=html+"map"+num+".setMapType(G_HYBRID_TYPE);";
+}
+html=html+"map"+num+".addControl(new GMapTypeControl());";
+html=html+"map"+num+".addOverlay(new GMarker(map"+num+".getCenterLatLng()));";
+html=html+"if(func"+num+"){func"+num+"();}";
+html=html+"}";
+html=html+"if(-1 != navigator.userAgent.indexOf('MSIE')){";
+html=html+"document.body.onload=init"+num+";";
+html=html+"}else{";
+html=html+"func"+num+"=null;";
+html=html+"init"+num+"();";
+html=html+"}";
+html=html+String.fromCharCode(60)+"/script"+String.fromCharCode(62);
+document.myform.output.value = html;
+setPreference("x",document.myform.x.value);
+setPreference("y",document.myform.y.value);
+setPreference("zoomLevel",map.getZoomLevel());
+document.getElementById('currentlocation').href="?lng="+latlng.x+"&lat="+latlng.y+"&mapType="+type+"&zoomLevel="+map.getZoomLevel();
+document.getElementById('gotogooglemaps').href="http://maps.google.com/maps?f=q&q="+document.myform.y.value+","+document.myform.x.value;
+}
+var map;
+var marker;
+function init(){
+setDefaultPreference("x","-122.3976");
+setDefaultPreference("y","37.7837");
+setDefaultPreference("zoomLevel","0");
+setDefaultPreference("mapType","0");
+map = new GMap(document.getElementById("map"));
+map.addControl(new GLargeMapControl());
+var lat = getParameter(document.location.href,"lat");
+if(""==lat){
+  lat=getPreference("y");
+}
+document.myform.y.value = lat;
+var lng = getParameter(document.location.href,"lng");
+if(""==lng){
+  lng=getPreference("x");
+}
+document.myform.x.value = lng;
+var type = getParameter(document.location.href,"mapType");
+if(""==type){
+  type=getPreference("mapType");
+}
+var zoomLevel = getParameter(document.location.href,"zoomLevel");
+if(""==zoomLevel){
+  zoomLevel=getPreference("zoomLevel");
+}
+map.centerAndZoom(new GPoint(lng,lat), eval(zoomLevel));
+map.setMapType(map.getMapTypes()[eval(type)]);
+map.addControl(new GMapTypeControl());
+marker = new GMarker(map.getCenterLatLng());
+map.addOverlay(marker);
+createHtml();
+GEvent.addListener(map, 'moveend', createHtml);
+}
+  </script>
+</head>
+<body onload="init()">
+<a id="currentlocation" href="#"/>link</a>&nbsp;&nbsp;
+<a id="gotogooglemaps" href="#"/>Go to Google Maps</a>
+    <div id="map" style="width: 300px; height: 300px"></div>
+<form name="myform" onsubmit="centerize();return false">
+  Latitude:<input type="text" name="y" value="37.7837"/>
+  Longitude:<input type="text" name="x" value="-122.3976"/>
+<br/>
+<textarea style="width:100%" rows="10" name="output"></textarea>
+</form>
+<form action="http://local.google.com/local" method="GET">
+<hidden name="f" value="q"/>
+<input type="text" size="50" name="q"/>
+<input type="submit" value="Search Google Maps"/>
+</form><br/>
+bookmarklet:<a href="javascript:(function(){var%20v=document.getElementById(&quot;link&quot;).href;var%20lat=v.substring(v.indexOf(&quot;ll=&quot;)+3,v.indexOf(&quot;,&quot;,v.indexOf(&quot;ll=&quot;)));var%20lng=v.substring(v.indexOf(&quot;,&quot;,v.indexOf(&quot;ll=&quot;))+1,v.indexOf(&quot;&amp;spn&quot;));document.location.href=&quot;http://yusuke.homeip.net/diary/files/googlemaps/easy-google-maps.html?lat=&quot;+lat+&quot;&amp;lng=&quot;+lng;})()">簡単Google Maps</a>
+<br/>
+<img src="../../../images/tipjarok_banner88x31_blue.gif"/>
+</body>
+</html>

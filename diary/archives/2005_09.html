@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: 2005&#24180;09&#26376; アーカイブ</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/2005_08.html" title="2005&amp;#24180;08&amp;#26376;"/>
+<link rel="next" href="../../diary/archives/2005_10.html" title="2005&amp;#24180;10&amp;#26376;"/>
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/2005_08.html">&laquo; 2005&#24180;08&#26376;</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/2005_10.html">2005&#24180;10&#26376; &raquo;</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2005_09.html#000305"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/305"
+    dc:title="Swing技術メモ"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2005_09.html#000305"
+    dc:subject="Java"
+    dc:description="JTextArea とかで、String 以外のオブジェクトを表示してもらいたけ..."
+    dc:creator="yusuke"
+    dc:date="2005-09-22T01:06:34+09:00" />
+</rdf:RDF>
+-->
+<h2>2005&#24180;09&#26376;22&#26085;</h2>
+<h3 id="a000305">Swing技術メモ</h3>
+<p>JTextArea とかで、String 以外のオブジェクトを表示してもらいたければ  Document インターフェースを実装したクラスを渡してやれば良いらしい。侍でヒープに収まりきらないようなでかいドキュメントを閲覧できるようにするために調査した。<br/>
+JTextArea とかにかなり激しいhackを施さないといけないかと思ったけど結構簡単そうだ。<br/>
+<a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/swing/text/Document.html">javax.swing.text.Document</a><br/>
+<a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/swing/JTextArea.html#JTextArea(javax.swing.text.Document)">javax.swing.JTextArea(Document doc) </a></p>
+<p>テキストを選択せず、任意の箇所をハイライトさせるには JTextPane と AttributeSet を使えば良いらしい。<br/>
+侍でログの種類とかに応じて色づけをしたいなーと思い調査。<br/>
+<a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/swing/JTextPane.html">javax.swing.JTextPane</a><br/>
+<a href="http://java.sun.com/j2se/1.4.2/docs/api/javax/swing/text/AttributeSet.html">javax.swing.text.AttributeSet</a></p>
+<p>Swing は奥が深いなー。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000305.html">01:06</a>
+| <a href="../../diary/archives/000305.html#comments">コメント (0)</a>
+| <a href="../../diary/archives/000305.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2005_09.html#000304"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/304"
+    dc:title="おい！こんなとこで自殺すんな！！！"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2005_09.html#000304"
+    dc:subject="雑多"
+    dc:description="深夜に車を運転していたらびっくり！交差点手前のガードレールにもたれかかってL字型..."
+    dc:creator="yusuke"
+    dc:date="2005-09-20T00:36:48+09:00" />
+</rdf:RDF>
+-->
+<h2>2005&#24180;09&#26376;20&#26085;</h2>
+<h3 id="a000304">おい！こんなとこで自殺すんな！！！</h3>
+<p>深夜に車を運転していたら<font size="big">びっくり！</font>交差点手前のガードレールにもたれかかってL字型になってる人がいた。<br/>
+しかもガードレールから吊られるような形でポーチが首に掛かってる。</p>
+<p>あれれ・・もしかして死んでる？</p>
+<p>死んでなくてもこの姿勢じゃすぐに足轢かれちゃうよ・・・。</p>
+<p>ハザードを焚いて車を止め、おそるおそる近づいた。<br/>
+目をつぶってピクりとも動かない・・・。よくみたらポーチはガードレールには掛かってなかった。<br/>
+「トントン、大丈夫ですか？」<br/>
+肌を触っていきなり冷たかったらかなり衝撃的なので、まずはジーパンを叩いた。<br/>
+全然反応がない。</p>
+<p>ちなみにすぐそばにマウンテンバイクがはやりガードレールにもたれかかってる。<br/>
+変形してないので轢き逃げではなさそうだ。</p>
+<p>「ドンドン、大丈夫ですか？」<br/>
+全然反応がない。しかしジーパンから温もりは感じられてないが、若干湿り気があるので生きているか、少なくとも死んでしばらくたった様子ではない。</p>
+<p>「ぴしゃぴしゃ、大丈夫ですか？」・・・ほっぺたを叩き、冷たくないことを確認してから一応脈を見る。ん、生きてる。</p>
+<p>ナゾの物体X「うぅ・・ぐぐ・・・」<br/>
+おぉ、反応があった。<br/>
+「ほら、こんなとこで寝てたら危ないですよ、とりあえず歩道にいきましょう」<br/>
+ナゾの物体X「んぅぅ、いや、大丈夫だから・・・ｽﾋﾟｰ」<br/>
+こらこら、寝るな。大丈夫じゃないから。今実際轢きそうになったし・・・。</p>
+<p>ちょうどそこへお巡りさん登場。後で妻に聞いた話によると、「おぉーここにいたかー」とか言ってたとのこと。誰かが通報してくれたらしい。<br/>
+通報するのはいいけど危ないから路上に足のばしたままの人放っておくなよ・・・。でも死んでるように見えるから怖くて通報してすぐどっかいっちゃったのかな？通報したら駆けつけるまでその場にいるよう言われるはずだけど。</p>
+<p>とりあえずお巡りさんの職質開始。<br/>
+お巡りさん「ほら、どうしたの？だいじょうぶ？」<br/>
+X「んん・・・」<br/>
+お巡りさん「みんな心配してるじゃないの。危ないよこんなとこいたら」<br/>
+X「あぁ、大丈夫ですから」<br/>
+立ち上がったものの目はまだ半開き。<br/>
+お巡りさん「この自転車乗ってきたの？どこに行くの？」<br/>
+X「武蔵浦和・・・」<br/>
+え？ここ高島平だぞ・・・。武蔵浦和まで自転車でいったら3、４０分かかるぞ・・・。<br/>
+お巡りさん「名前と住所教えてくれる？」<br/>
+X「んん、大丈夫ですから・・」<br/>
+どうやら盗難自転車かどうか疑いはじめたらしい。もうどうでもいいのでその場を後にした。</p>
+<p>自殺現場発見、じゃなくて良かった。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000304.html">00:36</a>
+| <a href="../../diary/archives/000304.html#comments">コメント (3)</a>
+| <a href="../../diary/archives/000304.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2005_09.html#000303"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/303"
+    dc:title="JBuilder 2006"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2005_09.html#000303"
+    dc:subject="Java"
+    dc:description="がリリースされた。 なんだかんだで最強の Java IDE と思ってるのでどんな..."
+    dc:creator="yusuke"
+    dc:date="2005-09-18T12:42:38+09:00" />
+</rdf:RDF>
+-->
+<h2>2005&#24180;09&#26376;18&#26085;</h2>
+<h3 id="a000303">JBuilder 2006</h3>
+<p>がリリースされた。<br/>
+なんだかんだで最強の Java IDE と思ってるのでどんな具合か期待大。<br/>
+ロードマップでは Borland 製の IDE フレームワークベースではこれが最後になる。<br/>
+来年リリースのバージョンではいよいよ Eclipse ベースとなるはず。JBulider ならではの使い心地や既存の Opentools との互換性が気になるところ。<br/>
+実際プラグインの移植なんてたいしたことないと思うのでやはり使い心地が気になる。</p>
+<p>今のところ Solaris,Windows,Linux プラットフォームのみ。<br/>
+<a href="http://www.borland.com/downloads/download_jbuilder.html">http://www.borland.com/downloads/download_jbuilder.html</a><br/>
+Mac OSX 版がしばらくでないようなら Windows 版を無理矢理こってこようか・・・・。Solaris 版より Mac OSX 版の方が需要あるような気がするんだが、Solaris で開発してる人ってそんなにいるのか？？？</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000303.html">12:42</a>
+| <a href="../../diary/archives/000303.html#comments">コメント (2)</a>
+| <a href="../../diary/archives/000303.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2005_09.html#000302"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/302"
+    dc:title="BEAWorld 2005 事前登録開始"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2005_09.html#000302"
+    dc:subject="Java"
+    dc:description="eWorld から BEAWorld に名前が変わったみたい。 Diablog ..."
+    dc:creator="yusuke"
+    dc:date="2005-09-16T17:42:26+09:00" />
+</rdf:RDF>
+-->
+<h2>2005&#24180;09&#26376;16&#26085;</h2>
+<h3 id="a000302">BEAWorld 2005 事前登録開始</h3>
+<p>eWorld から BEAWorld に名前が変わったみたい。</p>
+<p>Diablog とか AquaLogic とか新製品出荷直後だからそこそこ重要。<br/>
+・BEAWorld 2005 Tokyo（10月25日〜10月26日）<br/>
+<a href="http://www.bea.com/beaworld/jp/index.html">http://www.bea.com/beaworld/jp/index.html</a><br/>
+</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000302.html">17:42</a>
+| <a href="../../diary/archives/000302.html#comments">コメント (2)</a>
+| <a href="../../diary/archives/000302.html#trackbacks">トラックバック</a>
+</p>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/2005_09.html#000301"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/301"
+    dc:title="Sun Java 2 SDK 1.3.1 End-of-Life Announcement"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/2005_09.html#000301"
+    dc:subject="Java"
+    dc:description="Sun の J2SDK1.3.1 が来年の６月でサポートが切れるのに伴い BEA..."
+    dc:creator="yusuke"
+    dc:date="2005-09-02T15:21:30+09:00" />
+</rdf:RDF>
+-->
+<h2>2005&#24180;09&#26376;02&#26085;</h2>
+<h3 id="a000301">Sun Java 2 SDK 1.3.1 End-of-Life Announcement</h3>
+<p>Sun の J2SDK1.3.1 が来年の６月でサポートが切れるのに伴い BEA のサポートポリシーが発表された。<br/>
+・BEA Support for Third-Party Products Reaching End-of-Life<br/>
+   &gt; Sun Java 2 SDK 1.3.1 End-of-Life Announcement<br/>
+<a href="http://e-docs.bea.com/platform/suppconfigs/configs/mature.html#51193">http://e-docs.bea.com/platform/suppconfigs/configs/mature.html#51193</a></p>
+<p>BEA の製品では主に WebLogic Server 6.1、 WebLogic Platform 7.0 で JDK1.3.1 が使われているけれども、マイグレーションプランはこう。<br/>
+-------------------<br/>
+WLS6.1 : 現在の構成でサポート延長してもらうよう JVM ベンダに要求する。<br/>
+または完全にサポートされている製品へ移行する。WebLogic Server 8.1 なら JDK1.4.2、WebLogic Server 9.0 なら JDK5.0。</p>
+<p>WLPlat7.0 : JDK1.4.2(でのみ)をサポートする WebLogic Platform 7.0 SP7 へ移行する。<br/>
+または完全にサポートされている製品へ移行する。WebLogic Platform 8.1 なら JDK1.4.2、WebLogic Server 9.0 なら JDK5.0。<br/>
+-------------------</p>
+<p>で、WLPlat 7.0SP7 のリリース予定日は・・・<br/>
+<a href="http://support.bea.com/product_news/wls_sp_sched.jsp">http://support.bea.com/product_news/wls_sp_sched.jsp</a><br/>
+TBD（to be determined、未定)だ・・・。コラコラ、さっさと発表しなさい。</p>
+<p class="posted">
+投稿者 yusuke : <a href="../../diary/archives/000301.html">15:21</a>
+| <a href="../../diary/archives/000301.html#comments">コメント (2)</a>
+| <a href="../../diary/archives/000301.html#trackbacks">トラックバック</a>
+</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: PostgreSQLのバックアップ</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/000190.html" title="フィットネス"/>
+<link rel="next" href="../../diary/archives/000192.html" title="WebLogic Server + MacOSX = ∞"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000191.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/191"
+    dc:title="PostgreSQLのバックアップ"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000191.html"
+    dc:subject="Server"
+    dc:description="PowerBook2400の古いサーバにあるPostgreSQLのデータをバック..."
+    dc:creator="yusuke"
+    dc:date="2005-02-25T22:15:41+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/000190.html">&laquo; フィットネス</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/000192.html">WebLogic Server + MacOSX = ∞ &raquo;</a>
+</p>
+<h2>2005&#24180;02&#26376;25&#26085;</h2>
+<h3>PostgreSQLのバックアップ</h3>
+<p>PowerBook2400の古いサーバにあるPostgreSQLのデータをバックアップ、のメモ<br/>
+# su - postgres <br/>
+$ pg_ctl -w start<br/>
+waiting for postmaster to start...FATAL 2:  control file context is broken<br/>
+/usr/local/pgsql/bin/postmaster: Startup proc 1206 exited with status 512 - abort<br/>
+あれ、postmaster を起動できない。以前停電になったときに壊れてしまったのだろうか。<br/>
+調べてみると pg_control ってファイルにあり得ない値が記録されていると発生するとのこと。前回シャットダウンしたときにシステムクロックがおかしな値になっていないか？と。確かに時計用の電池はもう切れてるので時々時間が狂ってる。<br/>
+確認してみるとタイムスタンプは 1904 年に。<br/>
+cd /usr/local/pgsql/data/global<br/>
+$ ls -la pg_control <br/>
+-rw-------    1 postgres postgres     8192 Jan  1  1904 pg_control</p>
+<div id="a000191more"><div id="more">
+<p><a href="http://www.mail-archive.com/pgsql-admin@postgresql.org/msg05176.html">http://www.mail-archive.com/pgsql-admin@postgresql.org/msg05176.html</a><br/>
+src/backend/access/transam/xlog.c でチェックしている箇所をコメントアウトすれば復活できるかも、とのこと。C言語なんて読みたくないけれどもしかたない。<br/>
+なんとなくここっぽい。<br/>
+------<br/>
+        if (ControlFile-&gt;logSeg == 0 ||<br/>
+                ControlFile-&gt;time &lt;= 0 ||<br/>
+                ControlFile-&gt;state &lt; DB_SHUTDOWNED ||<br/>
+                ControlFile-&gt;state &gt; DB_IN_PRODUCTION ||<br/>
+                !XRecOffIsValid(ControlFile-&gt;checkPoint.xrecoff))<br/>
+                elog(STOP, "control file context is broken");<br/>
+------<br/>
+"ControlFile-&gt;time &lt;= 0 ||" の部分をコメントアウト、data フォルダをバックアップして再インストールしてみた<br/>
+$  ./configure --enable-multibyte=EUC_JP<br/>
+$ make<br/>
+$ make check<br/>
+====================================================<br/>
+ 2 of 76 tests failed, 1 of these failures ignored. <br/>
+====================================================<br/>
+なんかテストが失敗してるけど無視。もうこの環境で運用する訳じゃないし。</p>
+<p>$ make install<br/>
+$ pg_ctl -w start<br/>
+$ pg_ctl -w start<br/>
+waiting for postmaster to start....DEBUG:  database system was interrupted at 1904-01-01 00:05:22 CJT<br/>
+DEBUG:  CheckPoint record at (0, 18009432)<br/>
+DEBUG:  Redo record at (0, 18009432); Undo record at (0, 0); Shutdown TRUE<br/>
+DEBUG:  NextTransactionId: 72060; NextOid: 77273<br/>
+DEBUG:  database system was not properly shut down; automatic recovery in progress...<br/>
+DEBUG:  ReadRecord: record with zero len at (0, 18009496)<br/>
+DEBUG:  redo is not required<br/>
+The Data Base System is starting up<br/>
+.The Data Base System is starting up<br/>
+.INSERT @ 0/18009496: prev 0/18009432; xprev 0/0; xid 0: XLOG - checkpoint: redo 0/18009496; undo 0/0; sui 75; xid 72060; oid 77273; shutdown<br/>
+XLogFlush: rqst 0/18009560; wrt 0/18009496; flsh 0/18009496<br/>
+DEBUG:  database system is in production state<br/>
+done<br/>
+postmaster successfully started<br/>
+無理矢理起動成功！<br/>
+$ pg_dump ${バックアップデータベース名} &gt; backup.dump</p>
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;02&#26376;25&#26085; 22:15</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/191</p>
+<h2 id="comments">コメント</h2>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

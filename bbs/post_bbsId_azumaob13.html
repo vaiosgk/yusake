@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>投稿</title>
+    <script type="text/javascript" src="http://yusuke.homeip.net/bbs/common.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+  <meta http-equiv="Pragma" content="nocache">
+ <style type="text/css">
+.inputarea{
+  width: 400;
+}
+textarea {
+  width: 400;
+  height: 200; 
+}
+</style>
+<script language="JavaScript">
+function init(){
+  document.postform.postname.value = getCookie("name");
+  document.postform.mail.value = getCookie("mail");
+  if(document.postform.postname.value==""){
+    document.postform.postname.focus();
+  }else{
+    document.postform.title.focus();
+  }
+}
+</script>
+</head>
+<body background="http://yusuke.homeip.net/bbs/imgs/backTile.jpg" onload="init()">
+<br>
+  <center>
+   <table>
+      <form name="postform" action="/" method="post">
+        <tr>
+          <td width="70" align="right">名前</td>
+          <td>*</td>
+          <td width="400">
+            <input class="inputarea" type="TEXT" name="postname" value="">
+          </td>
+        </tr>
+        <tr>
+          <td align="right">E-mail</td>
+          <td></td>
+          <td>
+            <input class="inputarea" type="TEXT" name="mail" value="">
+          </td>
+        </tr>
+        <tr>
+          <td align="right">タイトル</td>
+          <td>*</td>
+          <td>
+            <input class="inputarea" type="TEXT" name="title" value="">
+          </td>
+        </tr>
+        <tr>
+          <td align="right">本文</td>
+          <td>*</td>
+          <td>
+            <textarea name="content"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td align="right" colspan="2">*入力必須
+          </td>
+          <td align="center">
+            <input type="SUBMIT" name="submit" value="確認">
+            <input type="BUTTON" name="submit" value="キャンセル" onclick="JavaScript:document.location.href='./list.jsp?bbsId=azumaob13'">          </td>
+        </tr>
+      </form>
+    </table>
+  </center>
+</body>
+</html>

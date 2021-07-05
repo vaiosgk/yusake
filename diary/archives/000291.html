@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="http://www.movabletype.org/"/>
+<title>侍ズム: 侍1.2.6リリース</title>
+<link rel="stylesheet" href="../../diary/styles-site.css" type="text/css"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://yusuke.homeip.net/diary/index.rdf"/>
+<link rel="alternate" type="application/atom+xml" title="Atom" href="http://yusuke.homeip.net/diary/atom.xml"/>
+<link rel="start" href="http://yusuke.homeip.net/diary/" title="Home"/>
+<link rel="prev" href="../../diary/archives/000290.html" title="Toast Titanium 7"/>
+<link rel="next" href="../../diary/archives/000292.html" title="侍1.2.7リリース"/>
+<script type="text/javascript" language="javascript">
+<!--
+var HOST = 'yusuke.homeip.net';
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + (expires ? "; expires=" + expires : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "secure" : "");
+    document.cookie = curCookie;
+}
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    now = now.toGMTString();
+    if (f.author != undefined)
+       setCookie('mtcmtauth', f.author.value, now, '/', '', '');
+    if (f.email != undefined)
+       setCookie('mtcmtmail', f.email.value, now, '/', '', '');
+    if (f.url != undefined)
+       setCookie('mtcmthome', f.url.value, now, '/', '', '');
+}
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '/', '');
+    deleteCookie('mtcmthome', '/', '');
+    deleteCookie('mtcmtauth', '/', '');
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+//-->
+</script>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://yusuke.homeip.net/diary/archives/000291.html"
+    trackback:ping="http://yusuke.homeip.net/diary/mt/mt-tb.cgi/291"
+    dc:title="侍1.2.6リリース"
+    dc:identifier="http://yusuke.homeip.net/diary/archives/000291.html"
+    dc:subject="Java"
+    dc:description="要望の多かった IBM JDK に対応した、つもり。 手元にあった1.3.1/1..."
+    dc:creator="yusuke"
+    dc:date="2005-08-23T02:13:18+09:00" />
+</rdf:RDF>
+-->
+</head>
+<body>
+<div id="container">
+<div id="banner">
+<h1><a href="../../diary.html" accesskey="1">侍ズム</a></h1>
+<h2></h2>
+</div>
+<div class="content">
+<p align="right">
+<a href="../../diary/archives/000290.html">&laquo; Toast Titanium 7</a> |
+<a href="../../diary.html">メイン</a>
+| <a href="../../diary/archives/000292.html">侍1.2.7リリース &raquo;</a>
+</p>
+<h2>2005&#24180;08&#26376;23&#26085;</h2>
+<h3>侍1.2.6リリース</h3>
+<p>要望の多かった IBM JDK に対応した、つもり。<br/>
+手元にあった1.3.1/1.4.0のjavacoreでしか検証していないのでうまくいかないバージョンがあるかも。<br/>
+ダウンロードはこちら -&gt; <a href="http://www.google.com/search?client=safari&amp;rls=ja-jp&amp;q=スレッドダンプ&amp;ie=UTF-8&amp;oe=UTF-8">侍1.2.6</a></p>
+<p>起動はこちらから -&gt; <a href="../../samurai/samurai.html"><img src="../../samurai/launchSamuraiAni.gif" alt="http://yusuke.homeip.net/samurai/samurai.jnlp"/></a><br/>
+(要JDK1.4以降)</p>
+<p>他の JVM とのスレッドダンプとのフォーマットの違いからあまりにもあんまりな力業の実装になってるのでちょっとでも想定外の出力があると解析できない可能性アリ。<br/>
+面倒だけど、複数のjavacoreを解析するときはあらかじめ手動でマージしておく必要アリ。今後複数まとめてドロップできるようにする予定。<br/>
+うまく解析できない javacore があれば送って欲しいです。</p>
+<p>IBM JDK は毎回ファイルに出力してくれるからそういう心配はないけど、他のJVM使っててDOSプロンプトからコピペしたスレッドダンプが解析できないー！てな場合は<a href="http://kdaiji.jugem.cc/?eid=178">my-pretty-thread-dump</a>で。</p>
+<div id="a000291more"><div id="more">
+</div></div>
+<p class="posted">投稿者 yusuke : 2005&#24180;08&#26376;23&#26085; 02:13</p>
+<h2 id="trackbacks">トラックバック</h2>
+<p class="techstuff">このエントリーのトラックバックURL:<br/>
+http://yusuke.homeip.net/diary/mt/mt-tb.cgi/291</p>
+<h2 id="comments">コメント</h2>
+<script type="text/javascript" language="javascript">
+<!--
+if (document.comments_form.email != undefined)
+    document.comments_form.email.value = getCookie("mtcmtmail");
+if (document.comments_form.author != undefined)
+    document.comments_form.author.value = getCookie("mtcmtauth");
+if (document.comments_form.url != undefined)
+    document.comments_form.url.value = getCookie("mtcmthome");
+if (getCookie("mtcmtauth") || getCookie("mtcmthome")) {
+    document.comments_form.bakecookie[0].checked = true;
+} else {
+    document.comments_form.bakecookie[1].checked = true;
+}
+//-->
+</script>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/">
+
+  <channel rdf:about="http://yusuke.homeip.net/diary/">
+    <title>侍ズム - アーチェリー category</title>
+    <link>http://yusuke.homeip.net/diary/</link>
+    <description>MacとJavaとアーチェリーと</description>
+    <items>
+      <rdf:Seq>
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2007/01/14/1168782957466.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/09/17/1158419970212.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/04/20/1145468354642.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/30/1143709229083.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/18/1142666358114.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/03/14/1142325346061.html" />
+        
+        <rdf:li resource="http://yusuke.homeip.net/diary/2006/02/23/1140680603629.html" />
+        
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2007/01/14/1168782957466.html">
+    <title>射初め</title>
+    <link>http://yusuke.homeip.net/diary/2007/01/14/1168782957466.html</link>
+    
+      
+        <description>
+          &lt;p&gt;ちょっと前、1月5日になりますが射初めをしてきました。&lt;br/&gt;&lt;br/&gt;ちょっと風邪気味だったので70本チョットだけうって退散。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2007/01/14/izome.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2007/01/14/izome-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;30mで8点までうち分けてますが、フィーリングは上々（？）&lt;br/&gt;&lt;br/&gt;今年もがんばります。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/09/17/1158419970212.html">
+    <title>文葡両萄</title>
+    <link>http://yusuke.homeip.net/diary/2006/09/17/1158419970212.html</link>
+    
+      
+        <description>
+          &lt;p&gt;近所のアーチェリー場で管理人さん達が一生懸命育てている葡萄が綺麗に実っていました。&lt;br/&gt;&lt;br/&gt;市販されている葡萄みたいな強烈な甘さはないですがちょっと酸っぱくて素朴な味わいです。&lt;br/&gt;もちろん無農薬。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/09/16/budo.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/09/16/budo-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/04/20/1145468354642.html">
+    <title>アーチェリー場にて</title>
+    <link>http://yusuke.homeip.net/diary/2006/04/20/1145468354642.html</link>
+    
+      
+        <description>
+          &lt;p&gt;東京農工大学のアーチェリー場にて。&lt;br/&gt;ここは毎年桜が素晴らしい。&lt;br/&gt;&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/04/18/tonodai.jpg&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/04/18/tonodai-thumb.jpg&#034; title=&#034;東京農工大学のアーチェリー場にて&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;誤って前日に設定した ISO1600 のまま撮影。&lt;br/&gt;ややざらついた画質になってしまった。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/30/1143709229083.html">
+    <title>ラスト近射！</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/30/1143709229083.html</link>
+    
+      
+        <description>
+          &lt;p&gt;ゴールデンゲートパークへ行ったり、アパートで近射したりと出張中の身ながらもそこそこ練習してきました。&lt;br/&gt;サンフランシスコ滞在もいよいよあさってで終わり。&lt;br/&gt;明日には船便で&lt;a href=&#034;http://yusuke.homeip.net/diary/2006/02/23/1140680603629.html&#034;&gt;ターゲットマット&lt;/a&gt;を発送したいので近射は今日で最後。&lt;br/&gt;&lt;br/&gt;近射の習慣は日本に帰ってもしっかり続ける所存です。&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/03/27/kinsha.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/03/27/kinsha-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/18/1142666358114.html">
+    <title>続続簡単Google Maps</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/18/1142666358114.html</link>
+    
+      
+      
+        <description>
+          blog に貼り付ける Google Maps のスクリプト自動生成ツールをまたアップデート
+          &lt;p&gt;&lt;a href="http://yusuke.homeip.net/diary/2006/03/18/1142666358114.html"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+        </description>
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/03/14/1142325346061.html">
+    <title>続簡単Google Maps</title>
+    <link>http://yusuke.homeip.net/diary/2006/03/14/1142325346061.html</link>
+    
+      
+      
+        <description>
+          blog に貼り付ける Google Maps のスクリプト自動生成ツールをアップデート
+          &lt;p&gt;&lt;a href="http://yusuke.homeip.net/diary/2006/03/14/1142325346061.html"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+        </description>
+      
+    
+  </item>
+  
+  <item rdf:about="http://yusuke.homeip.net/diary/2006/02/23/1140680603629.html">
+    <title>ブラックホールに撃ち込め！</title>
+    <link>http://yusuke.homeip.net/diary/2006/02/23/1140680603629.html</link>
+    
+      
+        <description>
+          &lt;p&gt;&lt;br/&gt;近射用のカタマリ、Black-Hole がついに我が家に到着！&lt;br/&gt;これで練習し放題！&lt;br/&gt;&lt;a href=&#034;http://yusuke.homeip.net/diary/images/2006/02/22/blackhole-large.JPG&#034; rel=&#034;lightbox&#034;&gt;&lt;img src=&#034;http://yusuke.homeip.net/diary/images/2006/02/22/blackhole-thumb.jpg&#034;/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;今日は171本うちました。&lt;br/&gt;&lt;br/&gt;貫通することもなく、抜きにくくもなく、良い感じ。&lt;br/&gt;&lt;/p&gt;
+        </description>
+      
+      
+    
+  </item>
+  
+
+</rdf:RDF>
